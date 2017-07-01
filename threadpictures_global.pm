@@ -1,4 +1,4 @@
-package threadpictures_defaults;
+package threadpictures_global;
 use strict;
 use warnings;
 use Exporter;
