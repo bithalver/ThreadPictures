@@ -14,15 +14,13 @@ use threadpictures_draw;
 
 print scalar @TP_all,"\n";
 
-net4(1,2,3,4,5,6,7,8);
-foreach my $i (2..9) {print $TP_all[scalar(@TP_all)-1][$i]," ";} print "\n";
+add_net4(1,2,3,4,5,6,7,8); # foreach my $i (2..9) {print $TP_all[scalar(@TP_all)-1][$i]," ";} print "\n";
+add_net3(11,22,33,44,55,66);
 
-net3(11,22,33,44,55,66);
-foreach my $i (2..9) {print $TP_all[scalar(@TP_all)-1][$i]," ";} print "\n";
-
-print join(',',@{$TP_all[scalar(@TP_all)-1]})."\n";
-# print scalar @{$TP_all[scalar(@TP_all)-1]}."\n";
-print scalar @TP_all,"\n";
+print join(',',@{$TP_all[0]})."\n";                  # Elements of the 1st piece in TP_all
+my @a=@{$TP_all[scalar(@TP_all)-1]} ; print join(',',@a)."\n";  # Elements of the last piece in TP_all, copied to a temp array
+print scalar @{$TP_all[scalar(@TP_all)-1]}."\n"; # Length of the last piece in TP_all
+print scalar @TP_all,"\n"; # Number of elemets in TP_all
 
 #array of arrays test
 #my @blah=(1.2.3);

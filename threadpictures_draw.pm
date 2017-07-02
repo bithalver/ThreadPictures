@@ -5,8 +5,7 @@ use threadpictures_global;
 use Exporter;
 
 our @ISA= qw( Exporter );
-
-our @EXPORT = qw( draw_line net4 net3);
+our @EXPORT = qw( draw_line add_net4 add_net3);
 
 #To oprimize the whole drawing to fit the page, minimum and maximum X and Y has to be determined
 our ($TP_minX,$TP_minY,$TP_maxX,$TP_maxY);
@@ -33,14 +32,17 @@ sub TP_weight {
 #   2nd line inner X,Y
 #   2nd line outer X,Y
 # 8 parameters altogether
-sub net4 {
+sub add_net4 {
   my ($line1oX,$line1oY,$line1iX,$line1iY,$line2iX,$line2iY,$line2oX,$line2oY)=@_;
-  $TP_all[scalar(@TP_all)] = ['net',$TP_style,$line1oX,$line1oY,$line1iX,$line1iY,$line2iX,$line2iY,$line2oX,$line2oY];
+  # Let's push the new net at the end of @TP_all array (increasing it's size)
+  $TP_all[scalar(@TP_all)] = ['net',$TP_style,$line1oX,$line1oY,$line1iX,$line1iY,$line2iX,$line2iY,$line2oX,$line2oY,$TP_threads,$TP_firstthread,$TP_lastthread==-1?$TP_threads:$TP_lastthread];
 }
 
-sub net3 {
-  net4($_[0],$_[1],$_[2],$_[3],$_[2],$_[3],$_[4],$_[5]);
+sub add_net3 {
+  add_net4($_[0],$_[1],$_[2],$_[3],$_[2],$_[3],$_[4],$_[5]);
 }
+
+
 
 1;
 
