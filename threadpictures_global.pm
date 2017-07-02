@@ -22,7 +22,7 @@ our $TP_style = $ENV{'TP_style'} //=0;
 
 # What should be written on the bottom of the page
 # Default is not to write anything
-our $TP_pagename = $ENV('TP_pagename'} //="";
+our $TP_pagename = $ENV{'TP_pagename'} //="";
 
 1;
 
