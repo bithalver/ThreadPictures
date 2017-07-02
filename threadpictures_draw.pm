@@ -3,9 +3,11 @@ use strict;
 use warnings;
 use threadpictures_global;
 use Exporter;
+use 5.010;
+no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
-our @EXPORT = qw( draw_line add_net4 add_net3);
+our @EXPORT = qw( draw_all draw_line add_net4 add_net3 );
 
 #To oprimize the whole drawing to fit the page, minimum and maximum X and Y has to be determined
 our ($TP_minX,$TP_minY,$TP_maxX,$TP_maxY);
@@ -42,7 +44,26 @@ sub add_net3 {
   add_net4($_[0],$_[1],$_[2],$_[3],$_[2],$_[3],$_[4],$_[5]);
 }
 
+# This is the main function to draw a page from @TP_all
+sub draw_all {
 
+# page preface
+# find min and max X and Y; do the page transformation to fit the drawing best
+# iterate over @TP_all
+foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element
+  my @ATPAE=@{$ATPAE};
+  # print join(',',@ATPAE)."\n";
+  given ($ATPAE[0]) {
+    when (/^net$/) {
+	  # print "net\n";
+	}
+	default {warn "drawing element '$_' not implemented (yet); other parameters were:\n".join(' ',@ATPAE[1..scalar(@ATPAE)-1])."\n" ;}
+  } ;
+}
+# page footer
+# empty @TP_all for the possible next page
+  undef @TP_all;
+}
 
 1;
 
