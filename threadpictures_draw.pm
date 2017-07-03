@@ -86,6 +86,39 @@ sub draw_net {
   }
 }
 
+=begin comment
+/fitto1page {
+  minmaxXYfind [/minx /maxx /miny /maxy] params
+
+  /rr xA4size rightmargin sub def % realright
+  /ru yA4size topmargin sub def   % realtop
+  /rxhf rr leftmargin add 2 div def   % real x halfpoint
+  /ryhf ru bottommargin add 2 div def % real y halfpoint
+  /wxhf maxx minx add 2 div def % wanted x halfpoint
+  /wyhf maxy miny add 2 div def % wanted y halfpoint
+rxhf ryhf translate
+wtf {[rxhf ryhf (translate)] wss } if
+  /rxs rr leftmargin sub def % real x size
+  /rys ru bottommargin sub def % real y size
+  /wxs maxx minx sub def % wanted x size
+  /wys maxy miny sub def % wanted y size
+  /xscale rxs wxs div def
+  /yscale rys wys div def
+  /wscale xscale yscale lt {xscale} {yscale} ifelse def
+wscale dup scale
+wtf {[wscale (dup) (scale)] wss} if
+wxhf neg wyhf neg translate
+wtf { [wxhf (neg) wyhf (neg) (translate)] wsl } if
+
+end /defaultunit 1 def } def
+=end comment
+
+=cut
+
+sub fitto1page{
+  my ($minX,$maxX,$minY,$maxY)=@_;
+}
+
 # This is the main function to draw a page from the collected info in @TP_all
 sub draw_all {
 
