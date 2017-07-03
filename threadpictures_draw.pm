@@ -17,7 +17,7 @@ sub draw_line {
   print( "$_[0] $_[1] moveto $_[2] $_[3] lineto stroke\n") ;
 }
 
-# TP_weight returns an array consisting of X,Y coordinates of the weighted point between frm and to coordinates; last parameters is the weight
+# TP_weight returns an array consisting of X,Y coordinates of the weighted point between from and to coordinates; last parameter is the weight
 # test: 
 #    my ($a,$b)= TP_weight(10,10,20,20,3),"\n" ; print "$a,$b\n";
 sub TP_weight {
@@ -42,6 +42,7 @@ sub add_net4 {
     line1oX => $line1oX, line1oY => $line1oY, line1iX => $line1iX, line1iY => $line1iY,
     line2iX => $line2iX, line2iY => $line2iY, line2oX => $line2oX, line2oY => $line2oY,
     threads => $TP_threads
+    # ext line is not needed as these are the defaults
     #, firstthread => $TP_firstthread, lastthread => $TP_lastthread==-1?$TP_threads:$TP_lastthread
   };
   return $#TP_all;
@@ -49,6 +50,40 @@ sub add_net4 {
 
 sub add_net3 {
   return add_net4($_[0],$_[1],$_[2],$_[3],$_[2],$_[3],$_[4],$_[5]);
+}
+
+# To draw one element of the 'net' type
+sub draw_net {
+  my (%AN)=@_; # AN like Actual Net
+  $AN{firstthread} //= 0; $AN{lastthread} //= $AN{threads} //= $TP_threads;
+  given ($AN{'style'}) {
+  when (/^normal$/i){
+    for my $weight ($AN{'firstthread'} .. $AN{'lastthread'}) {
+      # my ($fromX,$fromY,$toX,$toY);
+      #($fromX,$fromY)=TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$weight);
+      #($toX,$toY)    =TP_weight($AN{line2iX},$AN{line2iY},$AN{line2oX},$AN{line2oY},$weight); draw_line($fromX,$fromY,$toX,$toY);
+      draw_line(TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$weight),TP_weight($AN{line2iX},$AN{line2iY},$AN{line2oX},$AN{line2oY},$weight));
+	}
+  }
+  when (/^holes$/i) {
+    my ($firstX,$firstY)=TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},1);
+    my ($line1vectorX,$line1vectorY) = ($firstY-$AN{line1oY}, $AN{line1oX}-$firstX);
+    ($firstX,$firstY)=TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},1);
+    my ($line2vectorX,$line2vectorY) = ($firstY-$AN{line2oY}, $AN{line2oX}-$firstX);
+
+    draw_line($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY});
+    draw_line($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY});
+
+    for my $weight (1 .. $AN{'threads'}-1) {
+      my ($X,$Y);
+      ($X,$Y)=TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$weight);
+      draw_line($X+$line1vectorX,$Y+$line1vectorY,$X-$line1vectorX,$Y-$line1vectorY);
+      ($X,$Y)=TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},$weight);
+      draw_line($X+$line2vectorX,$Y+$line2vectorY,$X-$line2vectorX,$Y-$line2vectorY);
+    }
+  }
+  default {warn "style $AN{'style'} is not (yet) supported.\n";return}
+  }
 }
 
 # This is the main function to draw a page from the collected info in @TP_all
@@ -61,6 +96,8 @@ sub draw_all {
   }
 
 # page preface
+say "%%Page: \"$TP_pagenumber\" $TP_pagenumber";
+say "gsave";
 # find min and max X and Y
   my ($minX,$maxX,$minY,$maxY);
 
@@ -75,7 +112,7 @@ sub draw_all {
       }
     }
   }
-  print "minX is $minX, maxX is $maxX, minY is $minY, maxY is $maxY\n";
+  # print "minX is $minX, maxX is $maxX, minY is $minY, maxY is $maxY\n";
 
 # do the page transformation to fit the drawing best
 # iterate over @TP_all to draw every piece
@@ -85,13 +122,17 @@ sub draw_all {
     given ($ATPAE{'type'}) {
       when (/^net$/) {
 	    # print "net\n";
-  	}
+		draw_net(%ATPAE);
+    }
 	  default {warn "type '$_' not implemented (yet); parameters were:\n".join(", ", map { "$_ => $ATPAE{$_}" } keys %ATPAE)."\n" ;}
     } ;
   }
 # page footer
-# empty @TP_all for the possible next page
-  undef @TP_all;
+say "showpage grestore";
+say "%%EndPage: \"$TP_pagenumber\" $TP_pagenumber";
+
+# prepare for the next page:empty @TP_all and increase page number
+  undef @TP_all; $TP_pagenumber++;
 }
 
 
