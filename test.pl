@@ -12,9 +12,9 @@ use threadpictures_draw;
 #    perl test.pl                # Output is 10
 # print $TP_threads,"\n";
 
-#print scalar @TP_all,"\n";
+#print scalar @TP_all,"\n"; # Number of elemets in TP_all
 
-add_net4(1,2,3,4,5,6,7,8,{'a'=>'b'}); # foreach my $i (2..9) {print $TP_all[scalar(@TP_all)-1][$i]," ";} print "\n";
+add_net4(1,2,3,4,5,6,7,8); # foreach my $i (2..9) {print $TP_all[scalar(@TP_all)-1][$i]," ";} print "\n";
 add_net3(11,22,33,44,55,66);
 
 print join(',',@{$TP_all[0]})."\n";                  # Elements of the 1st piece in TP_all
@@ -34,6 +34,3 @@ draw_all;
 #print $blah[scalar(@blah)-1][0],"\n";
 
 # exit 3;
-
-# A small test for references
-# my $a,$b; $b= \$a ; $a=2; print $$b,"\n";
