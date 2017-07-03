@@ -51,7 +51,6 @@ sub add_net3 {
   return add_net4($_[0],$_[1],$_[2],$_[3],$_[2],$_[3],$_[4],$_[5]);
 }
 
-
 # This is the main function to draw a page from @TP_all
 sub draw_all {
 
