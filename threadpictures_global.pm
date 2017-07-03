@@ -1,11 +1,13 @@
 package threadpictures_global;
 use strict;
 use warnings;
+use 5.10.0;
+
 use Exporter;
 
 our @ISA= qw( Exporter );
 
-our @EXPORT = qw( $TP_threads @TP_all $TP_style $TP_pagename $TP_firstthread $TP_lastthread);
+our @EXPORT = qw( $TP_threads @TP_all $TP_style $TP_pagename $TP_firstthread $TP_lastthread minmax sayarray sayhash);
 
 # TP_threads is how many segment should exist in a net
 # Could be overwritten with the same name env var
@@ -27,5 +29,13 @@ our $TP_style = $ENV{'TP_style'} //=0;
 # Default is not to write anything
 our $TP_pagename = $ENV{'TP_pagename'} //="";
 
-1;
+# Returns an array of two values: the minimum and the maximum of an input array
+sub minmax {
+  return (sort { $a <=> $b } @_)[0,-1];
+}
 
+sub sayarray { say join(',',@_); return @_;}
+
+sub sayhash {my (%a)=@_; say join(", ", map { "$_ => $a{$_}" } keys %a); ;return %a;}
+
+1;

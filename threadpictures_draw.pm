@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use threadpictures_global;
 use Exporter;
-use 5.010;
+use 5.10.0;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
@@ -38,35 +38,57 @@ sub TP_weight {
 sub add_net4 {
   my ($line1oX,$line1oY,$line1iX,$line1iY,$line2iX,$line2iY,$line2oX,$line2oY)=@_;
   # Let's push the new net at the end of @TP_all array (increasing it's size)
-  $TP_all[scalar(@TP_all)] = { type => 'net', style=> $TP_style,
+  $TP_all[@TP_all] = { type => 'net', style=> $TP_style,
     line1oX => $line1oX, line1oY => $line1oY, line1iX => $line1iX, line1iY => $line1iY,
     line2iX => $line2iX, line2iY => $line2iY, line2oX => $line2oX, line2oY => $line2oY,
     threads => $TP_threads
     #, firstthread => $TP_firstthread, lastthread => $TP_lastthread==-1?$TP_threads:$TP_lastthread
   };
-  return scalar(@TP_all)-1;
+  return $#TP_all;
 }
 
 sub add_net3 {
   return add_net4($_[0],$_[1],$_[2],$_[3],$_[2],$_[3],$_[4],$_[5]);
 }
 
-# This is the main function to draw a page from @TP_all
+# This is the main function to draw a page from the collected info in @TP_all
 sub draw_all {
 
+# if @TP_all is empty, warn and return
+  if (not @TP_all) {
+    warn '@TP_all is empty: nothing added so nothing to draw'."\n";
+    return;
+  }
+
 # page preface
-# find min and max X and Y; do the page transformation to fit the drawing best
-# iterate over @TP_all
-foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element
-  my %ATPAE=%{$ATPAE};
-  # print join(',',@ATPAE)."\n";
-  given ($ATPAE{'type'}) {
-    when (/^net$/) {
-	  # print "net\n";
-	}
-	default {warn "type '$_' not implemented (yet); parameters were:\n".join(", ", map { "$_ => $ATPAE{$_}" } keys %ATPAE)."\n" ;}
-  } ;
-}
+# find min and max X and Y
+  my ($minX,$maxX,$minY,$maxY);
+
+  foreach my $ATPAE_ (@TP_all) { # ATPAE stands for Actual TP_all Element
+    my %ATPAE=%{$ATPAE_};
+    # sayhash %ATPAE;
+    given ($ATPAE{'type'}) {
+      when (/^net$/) {
+        $minX//=$TP_all[0]{line1oX}; $maxX//=$TP_all[0]{line1oX}; $minY//=$TP_all[0]{line1oY}; $maxY//=$TP_all[0]{line1oY};
+	    ($minX,$maxX)=minmax($minX,$maxX,$ATPAE{line1oX},$ATPAE{line1iX},$ATPAE{line2oX},$ATPAE{line2iX});
+        ($minY,$maxY)=minmax($minY,$maxY,$ATPAE{line1oY},$ATPAE{line1iY},$ATPAE{line2oY},$ATPAE{line2iY});
+      }
+    }
+  }
+  print "minX is $minX, maxX is $maxX, minY is $minY, maxY is $maxY\n";
+
+# do the page transformation to fit the drawing best
+# iterate over @TP_all to draw every piece
+  foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element
+    my %ATPAE=%{$ATPAE};
+    # print join(',',@ATPAE)."\n";
+    given ($ATPAE{'type'}) {
+      when (/^net$/) {
+	    # print "net\n";
+  	}
+	  default {warn "type '$_' not implemented (yet); parameters were:\n".join(", ", map { "$_ => $ATPAE{$_}" } keys %ATPAE)."\n" ;}
+    } ;
+  }
 # page footer
 # empty @TP_all for the possible next page
   undef @TP_all;
