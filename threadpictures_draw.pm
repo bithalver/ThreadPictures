@@ -86,35 +86,6 @@ sub draw_net {
   }
 }
 
-=begin comment
-/fitto1page {
-  minmaxXYfind [/minx /maxx /miny /maxy] params
-
-  /rr xA4size rightmargin sub def % realright
-  /ru yA4size topmargin sub def   % realtop
-  /rxhf rr leftmargin add 2 div def   % real x halfpoint
-  /ryhf ru bottommargin add 2 div def % real y halfpoint
-  /wxhf maxx minx add 2 div def % wanted x halfpoint
-  /wyhf maxy miny add 2 div def % wanted y halfpoint
-rxhf ryhf translate
-wtf {[rxhf ryhf (translate)] wss } if
-  /rxs rr leftmargin sub def % real x size
-  /rys ru bottommargin sub def % real y size
-  /wxs maxx minx sub def % wanted x size
-  /wys maxy miny sub def % wanted y size
-  /xscale rxs wxs div def
-  /yscale rys wys div def
-  /wscale xscale yscale lt {xscale} {yscale} ifelse def
-wscale dup scale
-wtf {[wscale (dup) (scale)] wss} if
-wxhf neg wyhf neg translate
-wtf { [wxhf (neg) wyhf (neg) (translate)] wsl } if
-
-end /defaultunit 1 def } def
-=end comment
-
-=cut
-
 sub fitto1page{
   my ($minX,$maxX,$minY,$maxY)=@_;
 }
@@ -146,8 +117,39 @@ say "gsave";
     }
   }
   # print "minX is $minX, maxX is $maxX, minY is $minY, maxY is $maxY\n";
+  if ($minX == $maxX or $minY == $maxY ) {
+    warn "even X or Y minimum or maximum values are the same, can not draw\n";
+    return;
+  }
 
 # do the page transformation to fit the drawing best
+
+=begin comment
+
+  
+
+  /rr xA4size rightmargin sub def % realright
+  /ru yA4size topmargin sub def   % realtop
+  /rxhf rr leftmargin add 2 div def   % real x halfpoint
+  /ryhf ru bottommargin add 2 div def % real y halfpoint
+  /wxhf maxx minx add 2 div def % wanted x halfpoint
+  /wyhf maxy miny add 2 div def % wanted y halfpoint
+wtf {[rxhf ryhf (translate)] wss } if
+  /rxs rr leftmargin sub def % real x size
+  /rys ru bottommargin sub def % real y size
+  /wxs maxx minx sub def % wanted x size
+  /wys maxy miny sub def % wanted y size
+  /xscale rxs wxs div def
+  /yscale rys wys div def
+  /wscale xscale yscale lt {xscale} {yscale} ifelse def
+wtf {[wscale (dup) (scale)] wss} if
+wtf { [wxhf (neg) wyhf (neg) (translate)] wsl } if
+
+=end comment
+
+=cut
+
+
 # iterate over @TP_all to draw every piece
   foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element
     my %ATPAE=%{$ATPAE};

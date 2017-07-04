@@ -21,25 +21,17 @@ sub cm {
 # warn cm(1);
 
 # page defaults, all in cm
-
-our $pageXsize = $ENV{'TP_pageXsize'} //=21;
-our $pageYsize = $ENV{'TP_pageYsize'} //=29.7;
-
-our $leftmargin = $ENV{'TP_leftmargin'} //=2;
-our $rightmargin = $ENV{'TP_rightmargin'} //=2;
-our $topmargin = $ENV{'TP_topmargin'} //=2.5;
-our $bottommargin = $ENV{'TP_bottomargin'} //=2.5;
-
 our %PageSizeMargins=(
-# pageXsize => cm($pageXsize),
-# pageYsize => cm($pageYsize),
+pageXsize => cm($ENV{'TP_pageXsize'}//=21),
+pageYsize => cm($ENV{'TP_pageYsize'}//=29.7),
 
-#leftmargin => $ENV{'TP_leftmargin'} //=2;
-#rightmargin => $ENV{'TP_rightmargin'} //=2;
-#topmargin => $ENV{'TP_topmargin'} //=2.5;
-#bottommargin => $ENV{'TP_bottomargin'} //=2.5;
+leftmargin => cm($ENV{'TP_leftmargin'}//=2),
+rightmargin => cm($ENV{'TP_rightmargin'}//=2),
+topmargin => cm($ENV{'TP_topmargin'}//=2.5),
+bottommargin => cm($ENV{'TP_bottomargin'}//=2.5),
 
 );
+# sayhash(%PageSizeMargins);
 
 # This variable collects everything (including all nets) to be drawn on one page
 our @TP_all;
