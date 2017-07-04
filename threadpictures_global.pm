@@ -65,7 +65,6 @@ sub sayhash {my (%a)=@_; say hash2str(%a);}
 print
 "%!PS-Adobe-3.0
 %%DocumentData: Clean7Bit
-%%BoundingBox: 0 0 595 842
 %%EndComments
 
 << /PageSize [$PageSizeMargins{pageXsize} $PageSizeMargins{pageYsize}] >> setpagedevice
