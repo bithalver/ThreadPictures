@@ -7,7 +7,7 @@ use Exporter;
 
 our @ISA= qw( Exporter );
 
-our @EXPORT = qw( $TP_threads @TP_all $TP_style $TP_pagevisiblename $TP_pagenumber $TP_firstthread $TP_lastthread minmax sayarray sayhash cm);
+our @EXPORT = qw( $TP_threads @TP_all $TP_style $TP_pagevisiblename $TP_pagenumber $TP_firstthread $TP_lastthread minmax sayarray sayhash cm %PageSizeMargins min max);
 
 # TP_threads is how many segment should exist in a net
 # Could be overwritten with the same name env var
@@ -15,10 +15,12 @@ our $TP_threads = $ENV{'TP_threads'} //=10;
 our $TP_firstthread = $ENV{'TP_firstthread'} //=0;
 our $TP_lastthread = $ENV{'TP_lastthread'} //= -1; # -1 is a special flag meaning real last one
 
+sub max ($$) { $_[$_[0] < $_[1]] }
+sub min ($$) { $_[$_[0] > $_[1]] }
+
 sub cm {
   my ($i)=@_; return $i*28.34645;
 }
-# warn cm(1);
 
 # page defaults, all in cm
 our %PageSizeMargins=(
@@ -28,10 +30,10 @@ pageYsize => cm($ENV{'TP_pageYsize'}//=29.7),
 leftmargin => cm($ENV{'TP_leftmargin'}//=2),
 rightmargin => cm($ENV{'TP_rightmargin'}//=2),
 topmargin => cm($ENV{'TP_topmargin'}//=2.5),
-bottommargin => cm($ENV{'TP_bottomargin'}//=2.5),
+bottommargin => cm($ENV{'TP_bottommargin'}//=2.5),
 
 );
-# sayhash(%PageSizeMargins);
+# warn hash2str(%PageSizeMargins);
 
 # This variable collects everything (including all nets) to be drawn on one page
 our @TP_all;
@@ -54,14 +56,19 @@ sub minmax {
 }
 
 sub sayarray { say join(',',@_); return @_;}
-sub sayhash {my (%a)=@_; say join(", ", map { "$_ => $a{$_}" } keys %a); ;return %a;}
+
+sub hash2str {my (%a)=@_; return join(", ", map { "$_ => $a{$_}" } keys %a); ;return %a;}
+sub sayhash {my (%a)=@_; say hash2str(%a);}
+
 
 # Print the PS file start
 print
 "%!PS-Adobe-3.0
 %%DocumentData: Clean7Bit
+%%BoundingBox: 0 0 595 842
 %%EndComments
 
+<< /PageSize [$PageSizeMargins{pageXsize} $PageSizeMargins{pageYsize}] >> setpagedevice
 0 setlinewidth
 
 ";

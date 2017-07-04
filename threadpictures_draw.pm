@@ -7,7 +7,7 @@ use 5.10.0;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
-our @EXPORT = qw( draw_all draw_line add_net4 add_net3 );
+our @EXPORT = qw( draw_all draw_line add_net4 add_net3 modify_element );
 
 #To oprimize the whole drawing to fit the page, minimum and maximum X and Y has to be determined
 our ($TP_minX,$TP_minY,$TP_maxX,$TP_maxY);
@@ -55,6 +55,7 @@ sub add_net3 {
 # To draw one element of the 'net' type
 sub draw_net {
   my (%AN)=@_; # AN like Actual Net
+  # sayhash %AN;
   $AN{firstthread} //= 0; $AN{lastthread} //= $AN{threads} //= $TP_threads;
   given ($AN{'style'}) {
   when (/^normal$/i){
@@ -116,39 +117,20 @@ say "gsave";
       }
     }
   }
-  # print "minX is $minX, maxX is $maxX, minY is $minY, maxY is $maxY\n";
+  # warn "minX is $minX, maxX is $maxX, minY is $minY, maxY is $maxY\n";
   if ($minX == $maxX or $minY == $maxY ) {
     warn "even X or Y minimum or maximum values are the same, can not draw\n";
     return;
   }
 
 # do the page transformation to fit the drawing best
-
-=begin comment
-
-  
-
-  /rr xA4size rightmargin sub def % realright
-  /ru yA4size topmargin sub def   % realtop
-  /rxhf rr leftmargin add 2 div def   % real x halfpoint
-  /ryhf ru bottommargin add 2 div def % real y halfpoint
-  /wxhf maxx minx add 2 div def % wanted x halfpoint
-  /wyhf maxy miny add 2 div def % wanted y halfpoint
-wtf {[rxhf ryhf (translate)] wss } if
-  /rxs rr leftmargin sub def % real x size
-  /rys ru bottommargin sub def % real y size
-  /wxs maxx minx sub def % wanted x size
-  /wys maxy miny sub def % wanted y size
-  /xscale rxs wxs div def
-  /yscale rys wys div def
-  /wscale xscale yscale lt {xscale} {yscale} ifelse def
-wtf {[wscale (dup) (scale)] wss} if
-wtf { [wxhf (neg) wyhf (neg) (translate)] wsl } if
-
-=end comment
-
-=cut
-
+say(
+  ($PageSizeMargins{pageXsize}-$PageSizeMargins{rightmargin}+$PageSizeMargins{leftmargin})/2," ",
+  ($PageSizeMargins{pageYsize}-$PageSizeMargins{topmargin}+$PageSizeMargins{bottommargin})/2," translate");
+say(min(
+  ($PageSizeMargins{pageXsize}-$PageSizeMargins{leftmargin}-$PageSizeMargins{rightmargin})/($maxX-$minX),
+  ($PageSizeMargins{pageYsize}-$PageSizeMargins{topmargin}-$PageSizeMargins{bottommargin})/($maxY-$minY))," dup scale");
+say(($maxX-$minX)/2," neg ",($maxY-$minY)/2," neg translate");
 
 # iterate over @TP_all to draw every piece
   foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element
@@ -170,8 +152,12 @@ say "%%EndPage: \"$TP_pagenumber\" $TP_pagenumber";
   undef @TP_all; $TP_pagenumber++;
 }
 
-
-
+# adds/replaces attributes to the last element in TP_all
+sub modify_element {
+  # @adds contains the new key/value pairs (should contain elements in key1,value1,key2,value2,... order)
+  my @adds=@_;
+  while (@adds) { my ($key, $value)=(shift @adds,shift @adds); $TP_all[-1]{$key} = $value ;}
+}
 
 1;
 

@@ -19,7 +19,18 @@ use threadpictures_draw;
 # add_net3(11,22,33,44,55,66);
 # add_net3(1,11,1,1,11,1);
 # add_net4(-20,20,0,0,1,1,11,21);$TP_all[-1]{'style'}='holes';
-add_net3(2,12,2,2,12,2);# $TP_all[-1]{'style'}='holes';
+# add_net3(2,12,2,2,12,2); $TP_all[-1]{'style'}='holes';
+
+#Test left and right margins:
+# add_net3(0,10,0,0,10,0);
+# add_net3(0,10,10,10,10,0);
+# Add next one to test top and bottom margin
+# add_net3(0,30,10,30,10,20);
+
+# add_net3(0,10,10,10,10,0); modify_element('style','holes');
+add_net3(0,10,10,10,10,0); modify_element('firstthread',1,'lastthread',9);
+
+
 # print the last element in @TP_all
 # my %a = %{$TP_all[scalar(@TP_all)-1]}; foreach my $b (keys %a) {print "$b => $a{$b}\n"}
 
@@ -32,6 +43,4 @@ add_net3(2,12,2,2,12,2);# $TP_all[-1]{'style'}='holes';
 draw_all;
 # print 'length of @TP_all is ',scalar @TP_all,"\n"; # Number of elemets in TP_all
 
-# my @a=(2,3,4,9,8,7,1,6,5); my ($b,$c)=minmax(@a); print "$b $c\n";
-
-# my %a=(a=>1, b=>2); sayhash %a; say $a{a}; say $a{'a'};
+# sub my_test { my ($a)=@_; if (defined $a) { say "yes";} else {say "no";} say $a//=2} my_test(); my_test(1);
