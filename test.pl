@@ -10,7 +10,7 @@ use threadpictures_draw;
 # The 2 tests are:
 #    TP_threads=2 perl test.pl   # Output is 2
 #    perl test.pl                # Output is 10
-# print $TP_threads,"\n";
+# warn $TP_GLOBAL{threads},"\n";
 
 # print 'length of @TP_all is ',scalar @TP_all,"\n"; # Number of elemets in TP_all
 
@@ -27,8 +27,8 @@ use threadpictures_draw;
 # Add next one to test top and bottom margin
 # add_net3(0,30,10,30,10,20);
 
-# add_net3(0,10,10,10,10,0); modify_element('style','holes');
-# add_net3(0,10,10,10,10,0); modify_element('firstthread',1,'lastthread',9);
+# add_net3(0,10,10,10,10,0); modify_lastelement('style','holes');
+# add_net3(0,10,10,10,10,0); modify_lastelement('firstthread',1,'lastthread',9);
 
 
 # print the last element in @TP_all
@@ -60,13 +60,18 @@ my $a=%{$config}{'net'};
 # my @b=@{$a}; warnarray @b; say $b[1];
 # my @b=@{%{$config}{'net'}}; while (@b) {say shift @b};
 
+for my $AK (keys %{$config->{global}}) {
+  # warn "$AK => $config->{global}->{$AK}\n";
+  $TP_GLOBAL{$AK}=$config->{global}->{$AK};
+}
 for (@{$config->{net}}) {
   my @AN=split ','; #warnarray @AN;
   add_net4(splice @AN,0,8);
-  while (@AN) {modify_element(shift @AN,shift @AN)}
+  while (@AN) {modify_lastelement(shift @AN,shift @AN)}
 }
-for (keys %{$config->{global}}) { warn "$_ => $config->{global}->{$_}\n"; }
+# $TP_GLOBAL{lastthread} //= $TP_GLOBAL{threads}; # We can not be sure previous 'for' handles thread early enough 
 
+# warnhash %TP_GLOBAL;
 draw_all;
 
 # my @a=(1,2,3,4,5,6,7,8,9,10,11,12);
