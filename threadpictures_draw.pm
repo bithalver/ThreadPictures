@@ -130,7 +130,7 @@ say(
 say(min(
   ($PageSizeMargins{pageXsize}-$PageSizeMargins{leftmargin}-$PageSizeMargins{rightmargin})/($maxX-$minX),
   ($PageSizeMargins{pageYsize}-$PageSizeMargins{topmargin}-$PageSizeMargins{bottommargin})/($maxY-$minY))," dup scale");
-say(($maxX-$minX)/2," neg ",($maxY-$minY)/2," neg translate");
+say(($maxX+$minX)/2," neg ",($maxY+$minY)/2," neg translate");
 
 # iterate over @TP_all to draw every piece
   foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element

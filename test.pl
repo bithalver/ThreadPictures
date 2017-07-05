@@ -28,7 +28,7 @@ use threadpictures_draw;
 # add_net3(0,30,10,30,10,20);
 
 # add_net3(0,10,10,10,10,0); modify_element('style','holes');
-add_net3(0,10,10,10,10,0); modify_element('firstthread',1,'lastthread',9);
+# add_net3(0,10,10,10,10,0); modify_element('firstthread',1,'lastthread',9);
 
 
 # print the last element in @TP_all
@@ -40,7 +40,35 @@ add_net3(0,10,10,10,10,0); modify_element('firstthread',1,'lastthread',9);
 #$TP_all[-1]{'firstthread'}=3; $TP_all[-1]{'lastthread'}=8;
 
 # print 'length of @TP_all is ',scalar @TP_all,"\n"; # Number of elemets in TP_all
-draw_all;
+# draw_all;
 # print 'length of @TP_all is ',scalar @TP_all,"\n"; # Number of elemets in TP_all
 
 # sub my_test { my ($a)=@_; if (defined $a) { say "yes";} else {say "no";} say $a//=2} my_test(); my_test(1);
+
+use YAML::XS 'LoadFile';
+use Data::Dumper;
+
+# step 1: open file
+open my $fh, '<', 'test.yaml' or die "can't open config file: $!";
+
+# step 2: convert YAML file to perl hash ref
+my $config = LoadFile($fh);
+# warn Dumper($config), "\n";
+close($fh);
+
+my $a=%{$config}{'net'};
+# my @b=@{$a}; sayarray @b; say $b[1];
+# my @b=@{%{$config}{'net'}}; while (@b) {say shift @b};
+
+for (@{$config->{net}}) {
+  my @AN=split ','; #sayarray @AN;
+  add_net4(splice @AN,0,8);
+  while (@AN) {modify_element(shift @AN,shift @AN)}
+}
+for (keys %{$config->{global}}) { warn "$_ => $config->{global}->{$_}\n"; }
+
+draw_all;
+
+# my @a=(1,2,3,4,5,6,7,8,9,10,11,12);
+# my @a=(1,2,3,4,5,6,7,8);
+# sayarray @a; splice @a,0,8; sayarray @a; while (@a) { say shift @a,',',shift @a;}
