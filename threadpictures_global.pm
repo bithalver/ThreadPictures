@@ -7,7 +7,7 @@ use Exporter;
 
 our @ISA= qw( Exporter );
 
-our @EXPORT = qw( $TP_threads @TP_all $TP_style $TP_pagevisiblename $TP_pagenumber $TP_firstthread $TP_lastthread minmax sayarray sayhash cm %PageSizeMargins min max);
+our @EXPORT = qw( $TP_threads @TP_all $TP_style $TP_pagevisiblename $TP_pagenumber $TP_firstthread $TP_lastthread minmax warnarray warnhash cm %PageSizeMargins min max);
 
 # TP_threads is how many segment should exist in a net
 # Could be overwritten with the same name env var
@@ -31,9 +31,8 @@ leftmargin => cm($ENV{'TP_leftmargin'}//=2),
 rightmargin => cm($ENV{'TP_rightmargin'}//=2),
 topmargin => cm($ENV{'TP_topmargin'}//=2.5),
 bottommargin => cm($ENV{'TP_bottommargin'}//=2.5),
-
 );
-# warn hash2str(%PageSizeMargins);
+# warnhash(%PageSizeMargins);
 
 # This variable collects everything (including all nets) to be drawn on one page
 our @TP_all;
@@ -47,19 +46,15 @@ our $TP_style = $ENV{'TP_style'} //='normal';
 # Default is not to write anything
 our $TP_pagevisiblename = $ENV{'TP_pagevisiblename'} //="";
 
-# Every page has to have a name in PS; it is an incremented number
+# Every page has to have a name in PS; it is an automatically incremented number
 our $TP_pagenumber = 1;
 
 # Returns an array of two values: the minimum and the maximum of an input numerical array
-sub minmax {
-  return (sort { $a <=> $b } @_)[0,-1];
-}
+sub minmax { return (sort { $a <=> $b } @_)[0,-1]; }
 
-sub sayarray { say join(',',@_); return @_;}
+sub warnarray { say join(',',@_); return @_;}
 
-sub hash2str {my (%a)=@_; return join(", ", map { "$_ => $a{$_}" } keys %a); ;return %a;}
-sub sayhash {my (%a)=@_; say hash2str(%a);}
-
+sub warnhash {my (%a)=@_; warn join(", ", map { "$_ => $a{$_}" } keys %a),"\n"; return %a; }
 
 # Print the PS file start
 print

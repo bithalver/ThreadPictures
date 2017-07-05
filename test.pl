@@ -57,11 +57,11 @@ my $config = LoadFile($fh);
 close($fh);
 
 my $a=%{$config}{'net'};
-# my @b=@{$a}; sayarray @b; say $b[1];
+# my @b=@{$a}; warnarray @b; say $b[1];
 # my @b=@{%{$config}{'net'}}; while (@b) {say shift @b};
 
 for (@{$config->{net}}) {
-  my @AN=split ','; #sayarray @AN;
+  my @AN=split ','; #warnarray @AN;
   add_net4(splice @AN,0,8);
   while (@AN) {modify_element(shift @AN,shift @AN)}
 }
@@ -71,4 +71,4 @@ draw_all;
 
 # my @a=(1,2,3,4,5,6,7,8,9,10,11,12);
 # my @a=(1,2,3,4,5,6,7,8);
-# sayarray @a; splice @a,0,8; sayarray @a; while (@a) { say shift @a,',',shift @a;}
+# warnarray @a; splice @a,0,8; warnarray @a; while (@a) { say shift @a,',',shift @a;}

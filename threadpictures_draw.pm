@@ -55,7 +55,7 @@ sub add_net3 {
 # To draw one element of the 'net' type
 sub draw_net {
   my (%AN)=@_; # AN like Actual Net
-  # sayhash %AN;
+  # warnhash %AN;
   $AN{firstthread} //= 0; $AN{lastthread} //= $AN{threads} //= $TP_threads;
   given ($AN{'style'}) {
   when (/^normal$/i){
@@ -108,7 +108,7 @@ say "gsave";
 
   foreach my $ATPAE_ (@TP_all) { # ATPAE stands for Actual TP_all Element
     my %ATPAE=%{$ATPAE_};
-    # sayhash %ATPAE;
+    # warnhash %ATPAE;
     given ($ATPAE{'type'}) {
       when (/^net$/) {
         $minX//=$TP_all[0]{line1oX}; $maxX//=$TP_all[0]{line1oX}; $minY//=$TP_all[0]{line1oY}; $maxY//=$TP_all[0]{line1oY};
