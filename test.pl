@@ -56,7 +56,9 @@ my $config = LoadFile($fh);
 # warn Dumper($config), "\n";
 close($fh);
 
-my $a=%{$config}{'net'};
+# exit 0;
+
+# my $a=%{$config}{'net'};
 # my @b=@{$a}; warnarray @b; say $b[1];
 # my @b=@{%{$config}{'net'}}; while (@b) {say shift @b};
 
@@ -64,15 +66,21 @@ for my $AK (keys %{$config->{global}}) {
   # warn "$AK => $config->{global}->{$AK}\n";
   $TP_GLOBAL{$AK}=$config->{global}->{$AK};
 }
-for (@{$config->{net}}) {
-  my @AN=split ','; #warnarray @AN;
-  add_net4(splice @AN,0,8);
-  while (@AN) {modify_lastelement(shift @AN,shift @AN)}
+
+for my $AP (0.. @{$config->{net}}-1) { # AP like ActualPage
+  my @AP=@{$config->{net}->[$AP]};
+  for (@{$config->{net}->[$AP]}) {
+    my @AN=split ','; #warnarray @AN;
+    add_net4(splice @AN,0,8);
+    while (@AN) {modify_lastelement(shift @AN,shift @AN)}
+  }
+  # warnarray @TP_all;
+  draw_all;
+
 }
-# $TP_GLOBAL{lastthread} //= $TP_GLOBAL{threads}; # We can not be sure previous 'for' handles thread early enough 
 
 # warnhash %TP_GLOBAL;
-draw_all;
+# draw_all;
 
 # my @a=(1,2,3,4,5,6,7,8,9,10,11,12);
 # my @a=(1,2,3,4,5,6,7,8);
