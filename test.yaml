@@ -3,10 +3,10 @@ global:
 #    firstthread: -10
 #    lastthread: 30
     threads: 20
-#    style: holes
+    style: holes
 pages:
   -
-    - pagename,this is a test pagename, other params are ignored :)
+    - pagename,this is a test pagename, other params like this are ignored :)
     - net,0,10,0,0,0,0,10,0,firstthread,1,lastthread,2
     - net,0,10,0,0,0,0,10,0,firstthread,9,lastthread,11
     - net,0,10,0,0,0,0,10,0,firstthread,18,lastthread,19
