@@ -8,7 +8,8 @@ use threadpictures_draw;
 
 use YAML::XS 'LoadFile';
 
-# step 1: open file
+# step 1: open the yaml file
+if ($#ARGV == -1) {die "Please specify the yaml file as parameter !\n";}
 open my $fh, '<', $ARGV[0] or die "can't open config file: $!";
 
 # step 2: convert YAML file to perl hash ref
@@ -18,23 +19,25 @@ close($fh);
 
 print_ps_header();
 
+# read global variables form yaml
 for my $AK (keys %{$config->{global}}) {
   # warn "$AK => $config->{global}->{$AK}\n";
   $TP_GLOBAL{$AK}=$config->{global}->{$AK};
 }
 
-for my $AP (0.. @{$config->{pages}}-1) { # AP like ActualPage
-  for (@{$config->{pages}->[$AP]}) {
-    my @AN=split ','; #warnarray @AN;
-      given (splice @AN,0,1) {
+# process every page
+for (0.. @{$config->{pages}}-1) {
+  for (@{$config->{pages}->[$_]}) {
+    my @AE=split ','; #warnarray @AE; # AE like ActualElement
+      given (splice @AE,0,1) {
       when (/^net$/i){
-        add_net4(splice @AN,0,8);
-        while (@AN) {modify_lastelement(shift @AN,shift @AN)}
+        add_net4(splice @AE,0,8);
+        while (@AE) {modify_lastelement(shift @AE,shift @AE)}
       }
       when (/^pagename$/i){
-        $TP_GLOBAL{pagename}=splice @AN,0,1
+        $TP_GLOBAL{pagename}=splice @AE,0,1
       }
-      default {warn "element '$_' is not (yet) supported\n";}
+      default {warn "element '$_' is not (yet) supported (but processing goes on)\n";}
       }
   }
   draw_all;
