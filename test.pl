@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 use 5.10.0;
+no warnings 'experimental::smartmatch';
 
 use threadpictures_global;
 use threadpictures_draw;
@@ -56,27 +57,27 @@ my $config = LoadFile($fh);
 # warn Dumper($config), "\n";
 close($fh);
 
-# exit 0;
-
-# my $a=%{$config}{'net'};
-# my @b=@{$a}; warnarray @b; say $b[1];
-# my @b=@{%{$config}{'net'}}; while (@b) {say shift @b};
-
 for my $AK (keys %{$config->{global}}) {
   # warn "$AK => $config->{global}->{$AK}\n";
   $TP_GLOBAL{$AK}=$config->{global}->{$AK};
 }
 
-for my $AP (0.. @{$config->{net}}-1) { # AP like ActualPage
-  my @AP=@{$config->{net}->[$AP]};
-  for (@{$config->{net}->[$AP]}) {
+for my $AP (0.. @{$config->{pages}}-1) { # AP like ActualPage
+  # my @AP=@{$config->{pages}->[$AP]};
+  for (@{$config->{pages}->[$AP]}) {
     my @AN=split ','; #warnarray @AN;
-    add_net4(splice @AN,0,8);
-    while (@AN) {modify_lastelement(shift @AN,shift @AN)}
+      given (splice @AN,0,1) {
+      when (/^net$/i){
+        add_net4(splice @AN,0,8);
+        while (@AN) {modify_lastelement(shift @AN,shift @AN)}
+      }
+      when (/^pagename$/i){
+      }
+      default {warn "element $_ is not (yet) supported.\n";}
+      }
   }
   # warnarray @TP_all;
   draw_all;
-
 }
 
 # warnhash %TP_GLOBAL;
