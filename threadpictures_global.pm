@@ -7,7 +7,7 @@ use Exporter;
 
 our @ISA= qw( Exporter );
 
-our @EXPORT = qw( %TP_GLOBAL @TP_all minmax warnarray warnhash cm min max );
+our @EXPORT = qw( %TP_GLOBAL @TP_all minmax warnarray warnhash cm min max print_ps_header );
 
 # %TP_GLOBAL holds all global variables
 our %TP_GLOBAL;
@@ -46,7 +46,7 @@ our @TP_all;
 # What should be written on the bottom of the page
 # Default is not to write anything
 # not yet implemented !
-$TP_GLOBAL{pagevisiblename} = $ENV{'TP_pagevisiblename'} //="";
+$TP_GLOBAL{pagename} = $ENV{'TP_pagename'} //="";
 
 # Returns an array of two values: the minimum and the maximum of an input numerical array
 sub minmax { return (sort { $a <=> $b } @_)[0,-1]; }
@@ -55,6 +55,7 @@ sub warnarray { warn join(',',@_),"\n"; return @_;}
 
 sub warnhash {my (%a)=@_; warn join(", ", map { "$_ => $a{$_}" } keys %a),"\n"; return %a; }
 
+sub print_ps_header{
 # Print the PS file start
 print
 "%!PS-Adobe-3.0
@@ -65,5 +66,5 @@ print
 0 setlinewidth
 
 ";
-
+}
 1;

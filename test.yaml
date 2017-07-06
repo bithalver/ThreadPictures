@@ -6,6 +6,7 @@ global:
 #    style: holes
 pages:
   -
+    - pagename,this is a test pagename, other params are ignored :)
     - net,0,10,0,0,0,0,10,0,firstthread,1,lastthread,2
     - net,0,10,0,0,0,0,10,0,firstthread,9,lastthread,11
     - net,0,10,0,0,0,0,10,0,firstthread,18,lastthread,19
@@ -15,6 +16,7 @@ pages:
     - net,10,10,0,10,0,10,0,0,firstthread,1,lastthread,2
     - net,10,10,0,10,0,10,0,0,firstthread,9,lastthread,11
     - net,10,10,0,10,0,10,0,0,firstthread,18,lastthread,19
+#    - notsupported,rest is ignored,whatever
   -
     - net,0,10,0,0,0,0,10,0,firstthread,1,lastthread,2
     - net,0,10,0,0,0,0,10,0,firstthread,9,lastthread,11
@@ -23,6 +25,7 @@ pages:
     - net,10,0,10,10,10,10,0,10,firstthread,9,lastthread,11
     - net,10,0,10,10,10,10,0,10,firstthread,18,lastthread,19
   -
+    - pagename,this is the 2nd test pagename
     - net,0,10,0,0,0,0,10,0
     - net,0,20,0,10,0,10,10,10
     - net,0,30,10,30,10,30,10,20

@@ -103,9 +103,6 @@ sub draw_all {
     return;
   }
 
-# page preface
-say "%%Page: \"$TP_GLOBAL{pagenumber}\" $TP_GLOBAL{pagenumber}";
-say "gsave";
 # find min and max X and Y
   my ($minX,$maxX,$minY,$maxY);
 
@@ -123,17 +120,24 @@ say "gsave";
   # warn "minX is $minX, maxX is $maxX, minY is $minY, maxY is $maxY\n";
   if ($minX == $maxX or $minY == $maxY ) {
     warn "even X or Y minimum or maximum values are the same, can not draw\n";
-    return;
+    exit 1;
   }
 
+# page preface
+  say "%%Page: \"$TP_GLOBAL{pagenumber}\" $TP_GLOBAL{pagenumber}";
+  say "gsave";
+
+# Print the pagename before the transformation - TODO
+  # warn $TP_GLOBAL{pagename},"\n"; $TP_GLOBAL{pagename}='';
+
 # do the page transformation to fit the drawing best
-say(
-  ($TP_GLOBAL{pageXsize}-$TP_GLOBAL{rightmargin}+$TP_GLOBAL{leftmargin})/2," ",
-  ($TP_GLOBAL{pageYsize}-$TP_GLOBAL{topmargin}+$TP_GLOBAL{bottommargin})/2," translate");
-say(min(
-  ($TP_GLOBAL{pageXsize}-$TP_GLOBAL{leftmargin}-$TP_GLOBAL{rightmargin})/($maxX-$minX),
-  ($TP_GLOBAL{pageYsize}-$TP_GLOBAL{topmargin}-$TP_GLOBAL{bottommargin})/($maxY-$minY))," dup scale");
-say(($maxX+$minX)/2," neg ",($maxY+$minY)/2," neg translate");
+  say(
+    ($TP_GLOBAL{pageXsize}-$TP_GLOBAL{rightmargin}+$TP_GLOBAL{leftmargin})/2," ",
+    ($TP_GLOBAL{pageYsize}-$TP_GLOBAL{topmargin}+$TP_GLOBAL{bottommargin})/2," translate");
+  say(min(
+    ($TP_GLOBAL{pageXsize}-$TP_GLOBAL{leftmargin}-$TP_GLOBAL{rightmargin})/($maxX-$minX),
+    ($TP_GLOBAL{pageYsize}-$TP_GLOBAL{topmargin}-$TP_GLOBAL{bottommargin})/($maxY-$minY))," dup scale");
+  say(($maxX+$minX)/2," neg ",($maxY+$minY)/2," neg translate");
 
 # iterate over @TP_all to draw every piece
   foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element
@@ -148,9 +152,8 @@ say(($maxX+$minX)/2," neg ",($maxY+$minY)/2," neg translate");
     } ;
   }
 # page footer
-say "showpage grestore";
-say "%%EndPage: \"$TP_GLOBAL{pagenumber}\" $TP_GLOBAL{pagenumber}";
-
+  say "showpage grestore";
+  say "%%EndPage: \"$TP_GLOBAL{pagenumber}\" $TP_GLOBAL{pagenumber}";
 # prepare for the next page:empty @TP_all and increase page number
   undef @TP_all; $TP_GLOBAL{pagenumber}++;
 }
