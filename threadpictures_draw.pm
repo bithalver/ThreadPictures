@@ -86,6 +86,10 @@ sub draw_net {
       draw_line($X+$line2vectorX,$Y+$line2vectorY,$X-$line2vectorX,$Y-$line2vectorY);
     }
   }
+  when (/^border$/i) {
+    draw_line($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY});
+    draw_line($AN{line2iX},$AN{line2iY},$AN{line2oX},$AN{line2oY});
+  }
   default {warn "style $AN{'style'} is not (yet) supported.\n";return}
   }
 }

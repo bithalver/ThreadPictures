@@ -3,7 +3,7 @@ global:
 #    firstthread: -10
 #    lastthread: 30
     threads: 20
-    style: holes
+    style: border
 pages:
   -
     - pagename,this is a test pagename, other params like this are ignored :)
