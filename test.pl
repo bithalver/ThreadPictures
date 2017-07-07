@@ -8,6 +8,9 @@ use threadpictures_draw;
 
 use YAML::XS 'LoadFile';
 
+
+# for ($ARGV[0]) { say 'c' if /c/; say 'a' if /a/; say 'b' if /b/; } exit 0;
+
 # step 1: open the yaml file
 if ($#ARGV == -1) {die "Please specify the yaml file as parameter !\n";}
 open my $fh, '<', $ARGV[0] or die "can't open config file: $!";
@@ -30,8 +33,12 @@ for (0.. @{$config->{pages}}-1) {
   for (@{$config->{pages}->[$_]}) {
     my @AE=split ','; #warnarray @AE; # AE like ActualElement
       given (splice @AE,0,1) {
-      when (/^net$/i){
+      when (/^net$|^net4$/i){
         add_net4(splice @AE,0,8);
+        while (@AE) {modify_lastelement(shift @AE,shift @AE)}
+      }
+      when (/^net3$/i){
+        add_net3(splice @AE,0,6);
         while (@AE) {modify_lastelement(shift @AE,shift @AE)}
       }
       when (/^pagename$/i){
@@ -42,3 +49,5 @@ for (0.. @{$config->{pages}}-1) {
   }
   draw_all;
 }
+
+# print possible ps footer; none by default

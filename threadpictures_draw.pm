@@ -7,14 +7,21 @@ use 5.10.0;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
-our @EXPORT = qw( draw_all draw_line add_net4 add_net3 modify_lastelement );
+our @EXPORT = qw( draw_all add_net4 add_net3 modify_lastelement );
 
 #To oprimize the whole drawing to fit the page, minimum and maximum X and Y has to be determined
 our ($TP_minX,$TP_minY,$TP_maxX,$TP_maxY);
 
+
+sub my_moveto {print( "$_[0] $_[1] moveto ");}
+sub my_lineto {print( "$_[0] $_[1] lineto ");}
+sub my_stroke {print( "stroke\n");}
+
+sub my_curveto { print( "$_[0] $_[1] moveto $_[2] $_[3] $_[4] $_[5] $_[6] $_[7] curveto stroke\n");}
+
 # draw_line waits 4 parameters: StartX, StartY, EndX, EndY
 sub draw_line {
-  print( "$_[0] $_[1] moveto $_[2] $_[3] lineto stroke\n") ;
+  print( "$_[0] $_[1] moveto $_[2] $_[3] lineto stroke\n");
 }
 
 # TP_weight returns an array consisting of X,Y coordinates of the weighted point between from and to coordinates; last parameter is the weight
@@ -37,7 +44,7 @@ sub TP_weight {
 # returns the index of the newly added net
 sub add_net4 {
   my ($line1oX,$line1oY,$line1iX,$line1iY,$line2iX,$line2iY,$line2oX,$line2oY)=@_;
-  # Let's push the new net at the end of @TP_all array (increasing it's size)
+  # Let's push the new net at the end of @TP_all array (increasing it's size by one)
   $TP_all[@TP_all] = { type => 'net',
     line1oX => $line1oX, line1oY => $line1oY, line1iX => $line1iX, line1iY => $line1iY,
     line2iX => $line2iX, line2iY => $line2iY, line2oX => $line2oX, line2oY => $line2oY,
@@ -61,7 +68,7 @@ sub draw_net {
   $AN{lastthread} //= $TP_GLOBAL{lastthread};
   $AN{lastthread} //= $AN{threads};
   given ($AN{'style'}//=$TP_GLOBAL{style}) {
-  when (/^normal$/i){
+  when (/^normal$/i){ # old style was 0
     for my $weight ($AN{'firstthread'} .. $AN{'lastthread'}) {
       # my ($fromX,$fromY,$toX,$toY);
       #($fromX,$fromY)=TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$weight);
@@ -69,7 +76,7 @@ sub draw_net {
       draw_line(TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$weight,$AN{threads}),TP_weight($AN{line2iX},$AN{line2iY},$AN{line2oX},$AN{line2oY},$weight,$AN{threads}));
 	}
   }
-  when (/^holes$/i) {
+  when (/^holes$/i) { # old style was 1
     my ($firstX,$firstY)=TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},1,$AN{threads});
     my ($line1vectorX,$line1vectorY) = ($firstY-$AN{line1oY}, $AN{line1oX}-$firstX);
     ($firstX,$firstY)=TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},1,$AN{threads});
@@ -86,16 +93,27 @@ sub draw_net {
       draw_line($X+$line2vectorX,$Y+$line2vectorY,$X-$line2vectorX,$Y-$line2vectorY);
     }
   }
-  when (/^border$/i) {
+  when (/^border$/i) { # old style was 4
     draw_line($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY});
     draw_line($AN{line2iX},$AN{line2iY},$AN{line2oX},$AN{line2oY});
   }
+  when (/^emptytriangle$/i) { # old style was 8
+    draw_line($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY});
+    draw_line($AN{line2iX},$AN{line2iY},$AN{line2oX},$AN{line2oY});
+    draw_line($AN{line2oX},$AN{line2oY},$AN{line1oX},$AN{line1oY});
+    if ($AN{line1iX} != $AN{line2iX} or $AN{line1iY} != $AN{line2iY} ) { draw_line($AN{line1iX},$AN{line1iY},$AN{line2iX},$AN{line2iY}); }
+  }
+  when (/^curve$/i) { # old style was 9, originally added on 20030312
+    # This kind is NOT interested in the value of threads, firstthread, lastthread
+    my_curveto(
+      $AN{line1oX},$AN{line1oY},
+      TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},2,3),
+      TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},2,3),
+      $AN{line2oX},$AN{line2oY},
+    );
+  }
   default {warn "style $AN{'style'} is not (yet) supported.\n";return}
   }
-}
-
-sub fitto1page{
-  my ($minX,$maxX,$minY,$maxY)=@_;
 }
 
 # This is the main function to draw a page from the collected info in @TP_all
@@ -109,7 +127,6 @@ sub draw_all {
 
 # find min and max X and Y
   my ($minX,$maxX,$minY,$maxY);
-
   foreach my $ATPAE_ (@TP_all) { # ATPAE stands for Actual TP_all Element
     my %ATPAE=%{$ATPAE_};
     # warnhash %ATPAE;
