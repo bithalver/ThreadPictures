@@ -16,8 +16,10 @@ our ($TP_minX,$TP_minY,$TP_maxX,$TP_maxY);
 sub my_moveto {print( "$_[0] $_[1] moveto ");}
 sub my_lineto {print( "$_[0] $_[1] lineto ");}
 sub my_stroke {print( "stroke\n");}
+sub my_fill {print( "fill \n");}
 
-sub my_curveto { print( "$_[0] $_[1] moveto $_[2] $_[3] $_[4] $_[5] $_[6] $_[7] curveto stroke\n");}
+# sub my_curveto { print( "$_[0] $_[1] moveto $_[2] $_[3] $_[4] $_[5] $_[6] $_[7] curveto ");}
+sub my_curveto { print( "$_[0] $_[1] $_[2] $_[3] $_[4] $_[5] curveto ");}
 
 # draw_line waits 4 parameters: StartX, StartY, EndX, EndY
 sub draw_line {
@@ -55,9 +57,7 @@ sub add_net4 {
   return $#TP_all;
 }
 
-sub add_net3 {
-  return add_net4($_[0],$_[1],$_[2],$_[3],$_[2],$_[3],$_[4],$_[5]);
-}
+sub add_net3 { return add_net4($_[0],$_[1],$_[2],$_[3],$_[2],$_[3],$_[4],$_[5]);}
 
 # To draw one element of the 'net' type
 sub draw_net {
@@ -105,12 +105,30 @@ sub draw_net {
   }
   when (/^curve$/i) { # old style was 9, originally added on 20030312
     # This kind is NOT interested in the value of threads, firstthread, lastthread
+    my_moveto($AN{line1oX},$AN{line1oY});
     my_curveto(
-      $AN{line1oX},$AN{line1oY},
       TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},2,3),
       TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},2,3),
-      $AN{line2oX},$AN{line2oY},
-    );
+      $AN{line2oX},$AN{line2oY}); my_stroke;
+  }
+  when (/^filledcurve$/i) { # old style was 10
+    # This kind is NOT interested in the value of threads, firstthread, lastthread
+    my_moveto($AN{line2oX},$AN{line2oY});
+    my_lineto($AN{line2iX},$AN{line2iY});
+    if ($AN{line1iX} != $AN{line2iX} or $AN{line1iY} != $AN{line2iY} ) {my_lineto($AN{line1iX},$AN{line1iY});}
+    my_lineto($AN{line1oX},$AN{line1oY});
+    my_curveto(
+      TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},2,3),
+      TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},2,3),
+      $AN{line2oX},$AN{line2oY}); my_fill; my_stroke;
+  }
+  when (/^inversefilledcurve$/i) { # new
+    # This kind is NOT interested in the value of threads, firstthread, lastthread
+    my_moveto($AN{line1oX},$AN{line1oY});
+    my_curveto(
+      TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},2,3),
+      TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},2,3),
+      $AN{line2oX},$AN{line2oY}); my_fill; my_stroke;
   }
   default {warn "style $AN{'style'} is not (yet) supported.\n";return}
   }
