@@ -3,7 +3,7 @@ global:
 #    firstthread: -10
 #    lastthread: 30
     threads: 20
-#    style: border
+#    style: parallel
 pages:
   -
     - pagename,this is the 2nd test pagename

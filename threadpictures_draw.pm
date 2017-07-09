@@ -67,7 +67,7 @@ sub draw_net {
   $AN{firstthread} //= $TP_GLOBAL{firstthread};
   $AN{lastthread} //= $TP_GLOBAL{lastthread};
   $AN{lastthread} //= $AN{threads};
-  given ($AN{'style'}//=$TP_GLOBAL{style}) {
+  for ($AN{'style'}//=$TP_GLOBAL{style}) {
   when (/^normal$/i){ # old style was 0
     for my $weight ($AN{'firstthread'} .. $AN{'lastthread'}) {
       # my ($fromX,$fromY,$toX,$toY);
@@ -97,11 +97,19 @@ sub draw_net {
     draw_line($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY});
     draw_line($AN{line2iX},$AN{line2iY},$AN{line2oX},$AN{line2oY});
   }
-  when (/^emptytriangle$/i) { # old style was 8
-    draw_line($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY});
-    draw_line($AN{line2iX},$AN{line2iY},$AN{line2oX},$AN{line2oY});
-    draw_line($AN{line2oX},$AN{line2oY},$AN{line1oX},$AN{line1oY});
-    if ($AN{line1iX} != $AN{line2iX} or $AN{line1iY} != $AN{line2iY} ) { draw_line($AN{line1iX},$AN{line1iY},$AN{line2iX},$AN{line2iY}); }
+  when (/^triangle$/i) { # old style was 8
+    my_moveto($AN{line2oX},$AN{line2oY});
+    my_lineto($AN{line2iX},$AN{line2iY});
+    if ($AN{line1iX} != $AN{line2iX} or $AN{line1iY} != $AN{line2iY} ) {my_lineto($AN{line1iX},$AN{line1iY});}
+    my_lineto($AN{line1oX},$AN{line1oY});
+    my_lineto($AN{line2oX},$AN{line2oY}); my_stroke;
+  }
+  when (/^filledtriangle$/i) { # old style was 7
+    my_moveto($AN{line2oX},$AN{line2oY});
+    my_lineto($AN{line2iX},$AN{line2iY});
+    if ($AN{line1iX} != $AN{line2iX} or $AN{line1iY} != $AN{line2iY} ) {my_lineto($AN{line1iX},$AN{line1iY});}
+    my_lineto($AN{line1oX},$AN{line1oY});
+    my_lineto($AN{line2oX},$AN{line2oY}); my_fill; my_stroke;
   }
   when (/^curve$/i) { # old style was 9, originally added on 20030312
     # This kind is NOT interested in the value of threads, firstthread, lastthread
@@ -130,7 +138,12 @@ sub draw_net {
       TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},2,3),
       $AN{line2oX},$AN{line2oY}); my_fill; my_stroke;
   }
-  default {warn "style $AN{'style'} is not (yet) supported.\n";return}
+  when (/^parallel$/i){ # old style was @
+    for my $weight ($AN{'firstthread'} .. $AN{'lastthread'}) {
+      draw_line(TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$weight,$AN{threads}),TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},$weight,$AN{threads}));
+	}
+  }
+  default {warn "style $AN{'style'} is not (yet) implemented\n";return}
   }
 }
 
@@ -148,7 +161,7 @@ sub draw_all {
   foreach my $ATPAE_ (@TP_all) { # ATPAE stands for Actual TP_all Element
     my %ATPAE=%{$ATPAE_};
     # warnhash %ATPAE;
-    given ($ATPAE{'type'}) {
+    for ($ATPAE{'type'}) {
       when (/^net$/) {
         $minX//=$TP_all[0]{line1oX}; $maxX//=$TP_all[0]{line1oX}; $minY//=$TP_all[0]{line1oY}; $maxY//=$TP_all[0]{line1oY};
 	    ($minX,$maxX)=minmax($minX,$maxX,$ATPAE{line1oX},$ATPAE{line1iX},$ATPAE{line2oX},$ATPAE{line2iX});
@@ -182,7 +195,7 @@ sub draw_all {
   foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element
     my %ATPAE=%{$ATPAE};
     # print join(',',@ATPAE)."\n";
-    given ($ATPAE{'type'}) {
+    for ($ATPAE{'type'}) {
       when (/^net$/) {
 	    # print "net\n";
 		draw_net(%ATPAE);
