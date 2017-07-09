@@ -1,21 +1,11 @@
+# command line is: 
+# inputfile=20170709.yaml; outfile=20170709.ps; perl test.pl $inputfile >$outfile ; ps2pdf $outfile ; rm $outfile
 ---
 global:
-#    firstthread: -10
-#    lastthread: 30
     threads: 20
-#    style: parallel
 pages:
   -
-    - pagename,this is the 2nd test pagename
-    - net4,0,10,0,0,0,0,10,0,threads,4,style,curve
-    - net3,0,9,0,-1,10,-1,style,filledcurve
-    - net,0,20,0,10,0,10,10,10
-    - net,0,30,10,30,10,30,10,20
-    - net,10,30,20,30,20,30,20,20
-    - net,1,10,1,0,1,0,11,0,threads,4,style,inversefilledcurve
-#    - notsupported,rest is ignored,whatever
-  -
-    - pagename,this is a test pagename, other params like this are ignored :)
+    - pagename,20170709
     - net,0,10,0,0,0,0,10,0,firstthread,2,lastthread,4
     - net,0,10,0,0,0,0,10,0,firstthread,9,lastthread,11
     - net,0,10,0,0,0,0,10,0,firstthread,16,lastthread,18
@@ -26,13 +16,10 @@ pages:
     - net,10,10,0,10,0,10,0,0,firstthread,9,lastthread,11
     - net,10,10,0,10,0,10,0,0,firstthread,16,lastthread,18
   -
+    - pagename,20170709 variant
     - net,0,10,0,0,0,0,10,0,firstthread,2,lastthread,4
     - net,0,10,0,0,0,0,10,0,firstthread,9,lastthread,11
     - net,0,10,0,0,0,0,10,0,firstthread,16,lastthread,18
     - net,10,0,10,10,10,10,0,10,firstthread,2,lastthread,4
     - net,10,0,10,10,10,10,0,10,firstthread,9,lastthread,11
     - net,10,0,10,10,10,10,0,10,firstthread,16,lastthread,18
-#  -
-#    - net,0,10,0,0,1,1,11,1,style,border
-#  -
-#    - net,0,10,0,0,1,1,11,1,style,emptytriangle

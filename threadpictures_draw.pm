@@ -138,7 +138,7 @@ sub draw_net {
       TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},2,3),
       $AN{line2oX},$AN{line2oY}); my_fill; my_stroke;
   }
-  when (/^parallel$/i){ # old style was @
+  when (/^parallel$/i){ # old style was 2
     for my $weight ($AN{'firstthread'} .. $AN{'lastthread'}) {
       draw_line(TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$weight,$AN{threads}),TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},$weight,$AN{threads}));
 	}
