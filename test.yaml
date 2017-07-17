@@ -1,5 +1,6 @@
 # command line is:
-# inputfile=test.yaml; outfile=test.ps; perl test.pl $inputfile >$outfile ; ps2pdf $outfile ; rm $outfile
+#   inputfile=test.yaml; outfile=test.ps; perl test.pl $inputfile >$outfile ; ps2pdf $outfile ; rm $outfile
+# provides test.pdf
 ---
 global:
 #    firstthread: -10

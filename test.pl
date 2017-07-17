@@ -11,11 +11,11 @@ use YAML::XS 'LoadFile';
 
 # for ($ARGV[0]) { say 'c' if /c/; say 'a' if /a/; say 'b' if /b/; } exit 0;
 
-# step 1: open the yaml file
+# open the yaml file
 if ($#ARGV == -1) {die "Please specify the yaml file as parameter !\n";}
 open my $fh, '<', $ARGV[0] or die "can't open config file: $!";
 
-# step 2: convert YAML file to perl hash ref
+# convert YAML file to perl hash ref
 my $config = LoadFile($fh);
 # use Data::Dumper; warn Dumper($config), "\n"; # This line is heavily for testing: prints out the whole structure from yaml
 close($fh);
@@ -29,7 +29,7 @@ for my $AK (keys %{$config->{global}}) {
 }
 
 # process every page
-for (0.. @{$config->{pages}}-1) {
+for (0 .. @{$config->{pages}}-1) {
   for (@{$config->{pages}->[$_]}) {
     my @AE=split ','; #warnarray @AE; # AE like ActualElement
       given (splice @AE,0,1) {
