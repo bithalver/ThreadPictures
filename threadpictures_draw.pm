@@ -77,6 +77,7 @@ sub draw_net {
 	}
   }
   when (/^holes$/i) { # old style was 1
+    # This kind is NOT interested in the value of firstthread, lastthread
     my ($firstX,$firstY)=TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},1,$AN{threads});
     my ($line1vectorX,$line1vectorY) = ($firstY-$AN{line1oY}, $AN{line1oX}-$firstX);
     ($firstX,$firstY)=TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},1,$AN{threads});
@@ -94,10 +95,12 @@ sub draw_net {
     }
   }
   when (/^border$/i) { # old style was 4
+    # This kind is NOT interested in the value of threads, firstthread, lastthread
     draw_line($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY});
     draw_line($AN{line2iX},$AN{line2iY},$AN{line2oX},$AN{line2oY});
   }
   when (/^triangle$/i) { # old style was 8
+    # This kind is NOT interested in the value of threads, firstthread, lastthread
     my_moveto($AN{line2oX},$AN{line2oY});
     my_lineto($AN{line2iX},$AN{line2iY});
     if ($AN{line1iX} != $AN{line2iX} or $AN{line1iY} != $AN{line2iY} ) {my_lineto($AN{line1iX},$AN{line1iY});}
@@ -105,6 +108,7 @@ sub draw_net {
     my_lineto($AN{line2oX},$AN{line2oY}); my_stroke;
   }
   when (/^filledtriangle$/i) { # old style was 7
+    # This kind is NOT interested in the value of threads, firstthread, lastthread
     my_moveto($AN{line2oX},$AN{line2oY});
     my_lineto($AN{line2iX},$AN{line2iY});
     if ($AN{line1iX} != $AN{line2iX} or $AN{line1iY} != $AN{line2iY} ) {my_lineto($AN{line1iX},$AN{line1iY});}
@@ -142,6 +146,10 @@ sub draw_net {
     for my $weight ($AN{'firstthread'} .. $AN{'lastthread'}) {
       draw_line(TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$weight,$AN{threads}),TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},$weight,$AN{threads}));
 	}
+  }
+  when (/^selected$/i){ # TODO: global split character have to be changed to ';' also in test.pl line 34 also in all yaml files
+     foreach my $weight (split(',',$AN{'selection'}))
+       {draw_line(TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$weight,$AN{threads}),TP_weight($AN{line2iX},$AN{line2iY},$AN{line2oX},$AN{line2oY},$weight,$AN{threads}));}
   }
   default {warn "style $AN{'style'} is not (yet) implemented\n";return}
   }
@@ -194,7 +202,6 @@ sub draw_all {
 # iterate over @TP_all to draw every piece
   foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element
     my %ATPAE=%{$ATPAE};
-    # print join(',',@ATPAE)."\n";
     for ($ATPAE{'type'}) {
       when (/^net$/) {
 	    # print "net\n";
