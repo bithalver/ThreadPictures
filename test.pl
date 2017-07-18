@@ -7,9 +7,10 @@ use threadpictures_global;
 use threadpictures_draw;
 
 use YAML::XS 'LoadFile';
+use Getopt::Std;
+my %opts;
 
-
-# for ($ARGV[0]) { say 'c' if /c/; say 'a' if /a/; say 'b' if /b/; } exit 0;
+getopts('i:o:',\%opts); # TODO: set input and output filenames; open output .ps to write
 
 # open the yaml file
 if ($#ARGV == -1) {die "Please specify the yaml file as parameter !\n";}
@@ -17,8 +18,9 @@ open my $fh, '<', $ARGV[0] or die "can't open config file: $!";
 
 # convert YAML file to perl hash ref
 my $config = LoadFile($fh);
-# use Data::Dumper; warn Dumper($config), "\n"; # This line is heavily for testing: prints out the whole structure from yaml
 close($fh);
+
+# use Data::Dumper; warn Dumper($config), "\n"; # This line is heavily for testing: prints out the whole structure from yaml
 
 print_ps_header();
 

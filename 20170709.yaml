@@ -1,7 +1,8 @@
 # command line is: 
 #   TP_source=20170709; inputfile=${TP_source}.yaml; outfile=${TP_source}.ps ; perl test.pl $inputfile >$outfile ; ps2pdf $outfile ; rm $outfile
 # provides 20170709.pdf
-# This file is an example for style 'selected'; first page usees short format, second age uses long format.
+# This file is an example for style 'selected'; first page uses short format, second age uses long format.
+# Old format kept as reference
 ---
 global:
     threads: 20
