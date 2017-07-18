@@ -147,8 +147,9 @@ sub draw_net {
       draw_line(TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$weight,$AN{threads}),TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},$weight,$AN{threads}));
 	}
   }
-  when (/^selected$/i){ # TODO: global split character have to be changed to ';' also in test.pl line 34 also in all yaml files
-     foreach my $weight (split(',',$AN{'selection'}))
+  when (/^selected$|^[0-9-]/i){ # draw lines like normal, but only selected ones
+    # This kind is NOT interested in the value of firstthread, lastthread
+     foreach my $weight (split(',',/selected/?$AN{'selection'}:$AN{'style'}))
        {draw_line(TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$weight,$AN{threads}),TP_weight($AN{line2iX},$AN{line2iY},$AN{line2oX},$AN{line2oY},$weight,$AN{threads}));}
   }
   default {warn "style $AN{'style'} is not (yet) implemented\n";return}

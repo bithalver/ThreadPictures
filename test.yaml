@@ -39,3 +39,7 @@ pages:
 #    - net;0;10;0;0;1;1;11;1;style;border
 #  -
 #    - net;0;10;0;0;1;1;11;1;style;emptytriangle
+#  -
+# Next 2 line creates the same:
+#    - net;0;10;0;0;0;0;10;0;threads;10;style;selected;selection;0,2,4,5,6,8,10
+#    - net;0;10;0;0;0;0;10;0;threads;10;style;0,2,4,5,6,8,10
