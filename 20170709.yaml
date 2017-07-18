@@ -1,25 +1,26 @@
 # command line is: 
-# inputfile=20170709.yaml; outfile=20170709.ps; perl test.pl $inputfile >$outfile ; ps2pdf $outfile ; rm $outfile
+#   TP_source=20170709; inputfile=${TP_source}.yaml; outfile=${TP_source}.ps ; perl test.pl $inputfile >$outfile ; ps2pdf $outfile ; rm $outfile
+# provides 20170709.pdf
 ---
 global:
     threads: 20
 pages:
   -
-    - pagename,20170709
-    - net,0,10,0,0,0,0,10,0,firstthread,2,lastthread,4
-    - net,0,10,0,0,0,0,10,0,firstthread,9,lastthread,11
-    - net,0,10,0,0,0,0,10,0,firstthread,16,lastthread,18
-    - net,10,0,10,10,10,10,0,10,firstthread,2,lastthread,4
-    - net,10,0,10,10,10,10,0,10,firstthread,9,lastthread,11
-    - net,10,0,10,10,10,10,0,10,firstthread,16,lastthread,18
-    - net,10,10,0,10,0,10,0,0,firstthread,2,lastthread,4
-    - net,10,10,0,10,0,10,0,0,firstthread,9,lastthread,11
-    - net,10,10,0,10,0,10,0,0,firstthread,16,lastthread,18
+    - pagename;20170709
+    - net;0;10;0;0;0;0;10;0;firstthread;2;lastthread;4
+    - net;0;10;0;0;0;0;10;0;firstthread;9;lastthread;11
+    - net;0;10;0;0;0;0;10;0;firstthread;16;lastthread;18
+    - net;10;0;10;10;10;10;0;10;firstthread;2;lastthread;4
+    - net;10;0;10;10;10;10;0;10;firstthread;9;lastthread;11
+    - net;10;0;10;10;10;10;0;10;firstthread;16;lastthread;18
+    - net;10;10;0;10;0;10;0;0;firstthread;2;lastthread;4
+    - net;10;10;0;10;0;10;0;0;firstthread;9;lastthread;11
+    - net;10;10;0;10;0;10;0;0;firstthread;16;lastthread;18
   -
-    - pagename,20170709 variant
-    - net,0,10,0,0,0,0,10,0,firstthread,2,lastthread,4
-    - net,0,10,0,0,0,0,10,0,firstthread,9,lastthread,11
-    - net,0,10,0,0,0,0,10,0,firstthread,16,lastthread,18
-    - net,10,0,10,10,10,10,0,10,firstthread,2,lastthread,4
-    - net,10,0,10,10,10,10,0,10,firstthread,9,lastthread,11
-    - net,10,0,10,10,10,10,0,10,firstthread,16,lastthread,18
+    - pagename;20170709 variant
+    - net;0;10;0;0;0;0;10;0;firstthread;2;lastthread;4
+    - net;0;10;0;0;0;0;10;0;firstthread;9;lastthread;11
+    - net;0;10;0;0;0;0;10;0;firstthread;16;lastthread;18
+    - net;10;0;10;10;10;10;0;10;firstthread;2;lastthread;4
+    - net;10;0;10;10;10;10;0;10;firstthread;9;lastthread;11
+    - net;10;0;10;10;10;10;0;10;firstthread;16;lastthread;18

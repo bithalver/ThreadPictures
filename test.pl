@@ -31,7 +31,7 @@ for my $AK (keys %{$config->{global}}) {
 # process every page
 for (0 .. @{$config->{pages}}-1) {
   for (@{$config->{pages}->[$_]}) {
-    my @AE=split ','; #warnarray @AE; # AE like ActualElement
+    my @AE=split ';'; #warnarray @AE; # AE like ActualElement
       given (splice @AE,0,1) {
       when (/^net$|^net4$/i){
         add_net4(splice @AE,0,8);
