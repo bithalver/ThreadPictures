@@ -1,5 +1,5 @@
 # command line is: 
-#   TP_source=20170709; inputfile=${TP_source}.yaml; outfile=${TP_source}.ps ; perl test.pl $inputfile >$outfile ; ps2pdf $outfile ; rm $outfile
+#   filename=20170709; ./test.pl -i ${filename}.yaml -o ${filename}.ps ; ps2pdf ${filename}.ps ; rm ${filename}.ps
 # provides 20170709.pdf
 # This file is an example for style 'selected'; first page uses short format, second age uses long format.
 # Old format kept as reference

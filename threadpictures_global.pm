@@ -7,7 +7,7 @@ use Exporter;
 
 our @ISA= qw( Exporter );
 
-our @EXPORT = qw( %TP_GLOBAL @TP_all minmax warnarray warnhash cm min max print_ps_header );
+our @EXPORT = qw( %TP_GLOBAL @TP_all minmax warnarray warnhash cm min max print_ps_filestart );
 
 # %TP_GLOBAL holds all global variables
 our %TP_GLOBAL;
@@ -55,7 +55,7 @@ sub warnarray { warn join(',',@_),"\n"; return @_;}
 
 sub warnhash {my (%a)=@_; warn join(", ", map { "$_ => $a{$_}" } keys %a),"\n"; return %a; }
 
-sub print_ps_header{
+sub print_ps_filestart{
 # Print the PS file start
 print
 "%!PS-Adobe-3.0

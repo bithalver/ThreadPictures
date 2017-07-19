@@ -1,5 +1,4 @@
-test.ps
-test.pdf
+*.pdf
 
 !Build/
 .last_cover_stats

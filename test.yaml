@@ -1,5 +1,5 @@
 # command line is:
-#   TP_source=test; inputfile=${TP_source}.yaml; outfile=${TP_source}.ps ; perl test.pl $inputfile >$outfile ; ps2pdf $outfile ; rm $outfile
+#   filename=test; ./test.pl -i ${filename}.yaml -o ${filename}.ps ; ps2pdf ${filename}.ps ; rm ${filename}.ps
 # provides test.pdf
 ---
 global:
@@ -16,25 +16,7 @@ pages:
     - net;0;30;10;30;10;30;10;20
     - net;10;30;20;30;20;30;20;20
     - net;1;10;1;0;1;0;11;0;threads;4;style;inversefilledcurve
-#    - notsupported;rest is ignored;whatever
-  -
-    - pagename;this is a test pagename; other params like this are ignored :)
-    - net;0;10;0;0;0;0;10;0;firstthread;2;lastthread;4
-    - net;0;10;0;0;0;0;10;0;firstthread;9;lastthread;11
-    - net;0;10;0;0;0;0;10;0;firstthread;16;lastthread;18
-    - net;10;0;10;10;10;10;0;10;firstthread;2;lastthread;4
-    - net;10;0;10;10;10;10;0;10;firstthread;9;lastthread;11
-    - net;10;0;10;10;10;10;0;10;firstthread;16;lastthread;18
-    - net;10;10;0;10;0;10;0;0;firstthread;2;lastthread;4
-    - net;10;10;0;10;0;10;0;0;firstthread;9;lastthread;11
-    - net;10;10;0;10;0;10;0;0;firstthread;16;lastthread;18
-  -
-    - net;0;10;0;0;0;0;10;0;firstthread;2;lastthread;4
-    - net;0;10;0;0;0;0;10;0;firstthread;9;lastthread;11
-    - net;0;10;0;0;0;0;10;0;firstthread;16;lastthread;18
-    - net;10;0;10;10;10;10;0;10;firstthread;2;lastthread;4
-    - net;10;0;10;10;10;10;0;10;firstthread;9;lastthread;11
-    - net;10;0;10;10;10;10;0;10;firstthread;16;lastthread;18
+#    - notsupported;rest is also ignored;whatever
 #  -
 #    - net;0;10;0;0;1;1;11;1;style;border
 #  -

@@ -1,3 +1,4 @@
+#!/usr/bin/perl
 use strict;
 use warnings;
 use 5.10.0;
@@ -10,33 +11,43 @@ use YAML::XS 'LoadFile';
 use Getopt::Std; $Getopt::Std::STANDARD_HELP_VERSION=1;
 my %opts;
 
-sub VERSION_MESSAGE {
-  warn "ThreadPictures version 0.6\n";
-}
+sub VERSION_MESSAGE { warn "ThreadPictures version 0.7\n"; }
 
 sub HELP_MESSAGE { # TODO: meaningful help message
-  warn "Help goes here\n";
+  warn "
+Help goes here
+Usage:
+  $0 [-i INPUT_YAML_FILE] [-o OUTPUT_PS_FILE]
+    # if -i is missing, reads yaml from stdin
+    # if -o is missing, output goes to STDOUT
+  $0 [-h|--help]      # this help
+  $0 {-v|--version}   # 1 line version info
+\n";
   exit 0;
 }
 
-getopts('i:o:hv',\%opts); # TODO: set input and output filenames; open output .ps to write
+getopts('i:o:hv',\%opts);
+# --help and --version handled by getopts automatically like 'h' and 'v'
 
 if ($opts{'h'}) {VERSION_MESSAGE; HELP_MESSAGE;}
 if ($opts{'v'}) {VERSION_MESSAGE; exit 0;}
 
-# open the yaml file
-# if ($#ARGV == -1) {die "Please specify the yaml file as parameter !\n";}
-# open my $fh, '<', $ARGV[0] or die "can't open config file: $!";
-if (! defined $opts{'i'}) {die "Please specify mandatory parameter input yaml with -i !\n";}
-open my $fh, '<', $opts{'i'} or die "can't open config file: $!";
+# read from yaml file (specified by '-i' switch) _or_ STDIN
+my $fh;
+if (! defined $opts{'i'} ) { $fh=*STDIN; }
+else {open $fh, '<', $opts{'i'} or die "can't open yaml file: $!";}
 
-# convert YAML file to perl hash ref
+# convert YAML file to %config
 my $config = LoadFile($fh); # from YAML::XS module
 close($fh);
 
+# all output goes to file (specified by '-o' switch) _or_ STDOUT
+if (defined $opts{'o'} ) { open $fh, '>', $opts{'o'} or die "can't open output file for writing: $!"; select $fh}
+
 # use Data::Dumper; warn Dumper($config), "\n"; # This line is heavily for testing: prints out the whole structure from yaml
 
-print_ps_header();
+# Do the main thing: process %config to make output
+print_ps_filestart();
 
 # read global variables form yaml
 for my $AK (keys %{$config->{global}}) {
