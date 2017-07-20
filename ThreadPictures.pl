@@ -15,7 +15,6 @@ sub VERSION_MESSAGE { warn "ThreadPictures version 1.0\n"; }
 
 sub HELP_MESSAGE { # TODO: meaningful help message
   warn "
-Help goes here
 Usage:
   $0 [-i INPUT_YAML_FILE] [-o OUTPUT_PS_FILE]
     # if -i is missing, reads yaml from stdin
