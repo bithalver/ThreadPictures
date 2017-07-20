@@ -12,14 +12,14 @@ To run:
 
  -h (or --help) will print the next text:
 (I do not guarantee this README is up-to-date all the time, run the program to get the latest)
-
+```
 Usage:
   $0 [-i INPUT_YAML_FILE] [-o OUTPUT_PS_FILE]
     # if -i is missing, reads yaml from stdin
     # if -o is missing, output goes to STDOUT
   $0 [-h|--help]      # this help
   $0 {-v|--version}   # 1 line version info
-
+```
 
 See attached yaml files for examples.
 
