@@ -12,26 +12,26 @@ To run:
 
  -h (or --help) will print the next text:
 (I do not guarantee this README is up-to-date all the time, run the program to get the latest)
-----------------
+
 Usage:
   $0 [-i INPUT_YAML_FILE] [-o OUTPUT_PS_FILE]
     # if -i is missing, reads yaml from stdin
     # if -o is missing, output goes to STDOUT
   $0 [-h|--help]      # this help
   $0 {-v|--version}   # 1 line version info
-----------------
+
 
 See attached yaml files for examples.
 
 Requirements:
-perl 5.10
-  YAML::XS module
-  Getopt::Std module
-ps2pdf command (part of ghostscript)
+ - perl 5.10
+   - YAML::XS module
+   - Getopt::Std module
+ - ps2pdf command (part of ghostscript)
 
 Tested with/on:
-  windows 7
-  cygwin 2.880
-  perl 5.22.4
-  ghostscript 9.19
-  bash and xterm (I do not think their version matter)
+  - windows 7
+  - cygwin 2.880
+  - perl 5.22.4
+  - ghostscript 9.19
+  - bash and xterm (I do not think their version matter)
