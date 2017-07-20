@@ -10,8 +10,8 @@ To run:
  - if you are on linux/*nix/cygwin : ./TP -h
  - on any OS: perl ThreadPictures.pl -h
 
--h (or --help) will print the next text:
-(I do not guarantee this README is up-to-date all the time)
+ -h (or --help) will print the next text:
+(I do not guarantee this README is up-to-date all the time, run the program to get the latest)
 ----------------
 Usage:
   $0 [-i INPUT_YAML_FILE] [-o OUTPUT_PS_FILE]
