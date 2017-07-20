@@ -1,5 +1,5 @@
 # command line is: 
-#   filename=20170709; ./test.pl -i ${filename}.yaml -o ${filename}.ps ; ps2pdf ${filename}.ps ; rm ${filename}.ps
+#   filename=20170709; ./TP -i ${filename}.yaml -o ${filename}.ps ; ps2pdf ${filename}.ps ; rm ${filename}.ps
 # provides 20170709.pdf
 # This file is an example for style 'selected'; first page uses short format, second age uses long format.
 # Old format kept as reference

@@ -11,7 +11,7 @@ use YAML::XS 'LoadFile';
 use Getopt::Std; $Getopt::Std::STANDARD_HELP_VERSION=1;
 my %opts;
 
-sub VERSION_MESSAGE { warn "ThreadPictures version 0.7\n"; }
+sub VERSION_MESSAGE { warn "ThreadPictures version 1.0\n"; }
 
 sub HELP_MESSAGE { # TODO: meaningful help message
   warn "

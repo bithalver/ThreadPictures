@@ -1,5 +1,5 @@
 # command line is:
-#   filename=test; ./test.pl -i ${filename}.yaml -o ${filename}.ps ; ps2pdf ${filename}.ps ; rm ${filename}.ps
+#   filename=test; ./TP -i ${filename}.yaml -o ${filename}.ps ; ps2pdf ${filename}.ps ; rm ${filename}.ps
 # provides test.pdf
 ---
 global:
