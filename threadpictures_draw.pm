@@ -9,7 +9,7 @@ no warnings 'experimental::smartmatch';
 our @ISA= qw( Exporter );
 our @EXPORT = qw( draw_all add_net4 add_net3 modify_lastelement );
 
-#To oprimize the whole drawing to fit the page, minimum and maximum X and Y has to be determined
+#To optimize the whole drawing to fit the page, minimum and maximum X and Y has to be determined
 our ($TP_minX,$TP_minY,$TP_maxX,$TP_maxY);
 
 
