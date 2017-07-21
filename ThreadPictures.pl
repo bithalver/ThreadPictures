@@ -17,6 +17,14 @@ my %opts;
 
 # warnarray basicplane(4,45,sqrt(2)); exit 0;
 
+# my @a=(1,2,3,4); warnarray moveplane (1,2,@a); exit 0
+
+# warnarray to_polar(-1,0); exit 0;
+
+# my @a=(1,1,2,1,2,2,1,2);
+# my @a=(0,0,1,0,1,1,0,1);
+# warnarray @a; warnarray connectplane2points(10,10,10,12,0,2,@a); exit 0;
+
 # ---[END] test section
 
 
