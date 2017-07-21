@@ -6,10 +6,19 @@ no warnings 'experimental::smartmatch';
 
 use threadpictures_global;
 use threadpictures_draw;
+use threadpictures_plane;
 
 use YAML::XS 'LoadFile';
 use Getopt::Std; $Getopt::Std::STANDARD_HELP_VERSION=1;
 my %opts;
+
+# ---[BEGIN] test section
+# on final version, the whole section should be commented out / deleted !
+
+# warnarray basicplane(4,45,sqrt(2)); exit 0;
+
+# ---[END] test section
+
 
 sub VERSION_MESSAGE { warn "ThreadPictures version 1.0\n"; }
 

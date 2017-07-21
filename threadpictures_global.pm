@@ -7,7 +7,7 @@ use Exporter;
 
 our @ISA= qw( Exporter );
 
-our @EXPORT = qw( %TP_GLOBAL @TP_all minmax warnarray warnhash cm min max print_ps_filestart );
+our @EXPORT = qw( %TP_GLOBAL @TP_all minmax warnarray warnhash cm min max print_ps_filestart pi my_round);
 
 # %TP_GLOBAL holds all global variables
 our %TP_GLOBAL;
@@ -28,9 +28,13 @@ $TP_GLOBAL{style} = $ENV{TP_style} //='normal';
 sub max ($$) { $_[$_[0] < $_[1]] }
 sub min ($$) { $_[$_[0] > $_[1]] }
 
-sub cm {
-  my ($i)=@_; return $i*28.34645;
-}
+sub round { $_[0] > 0 ? int($_[0] + .5) : -int(-$_[0] + .5) ;}
+sub round_digits{  my ($number,$digits)=@_; return round($number * 10**$digits) / 10**$digits; }
+sub my_round{my ($number)=@_; return round_digits($number,6)};
+
+sub cm { my ($i)=@_; return $i*28.34645;}
+
+sub pi {return 3.14159265359;}
 
 # page defaults, all in cm
 $TP_GLOBAL{pageXsize} = cm($ENV{'TP_pageXsize'}//=21),
