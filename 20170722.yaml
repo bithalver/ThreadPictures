@@ -1,0 +1,19 @@
+# this is the first one with points defined in planes
+# command line is:
+#   filename=20170722; ./TP -i ${filename}.yaml -o ${filename}.ps ; ps2pdf ${filename}.ps ; rm ${filename}.ps
+# provides 20170722.pdf
+---
+global:
+    threads: 20
+planes:
+  - plane1;3;90
+  - plane2;5;90
+pages:
+  -
+    - net3;plane1;0;plane1;1;plane1;2
+    - net3;plane1;0;plane1;2;plane1;1
+  -
+    - net3;plane2;0;plane2;1;plane2;2
+    - net3;plane2;1;plane2;2;plane2;3
+    - net3;plane2;2;plane2;3;plane2;4
+    - net3;plane2;3;plane2;4;plane2;0

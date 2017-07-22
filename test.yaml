@@ -8,9 +8,12 @@ global:
     threads: 20
 #    style: parallel
 planes:
-  - plane1;4;45
-  - plane2;5;0
+  - plane1;3;90
+#  - plane2;4;45
+#  - plane3;5;0
 pages:
+  -
+    - net3;plane1;0;plane1;1;plane1;2
   -
     - pagename;this is the 2nd test pagename
     - net4;0;10;0;0;0;0;10;0;threads;4;style;curve

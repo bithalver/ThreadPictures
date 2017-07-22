@@ -45,7 +45,19 @@ sub TP_weight {
 # 8 parameters altogether
 # returns the index of the newly added net
 sub add_net4 {
-  my ($line1oX,$line1oY,$line1iX,$line1iY,$line2iX,$line2iY,$line2oX,$line2oY)=@_;
+  # ---[BEGIN]--- Specify points from predefined planes
+  my (@input)=@_; my @processedinput;
+  while (@input) {
+    $_=shift @input;
+    if ( /^[0-9-]/) { push(@processedinput,$_);}
+    else {
+      my $planename=$_; my $planeindex=shift @input;
+      push @processedinput, ($TP_planes{$planename}[2*$planeindex],$TP_planes{$planename}[2*$planeindex+1]);
+    }
+  }
+  # ---[END]--- Specify points from predefined planes
+
+  my ($line1oX,$line1oY,$line1iX,$line1iY,$line2iX,$line2iY,$line2oX,$line2oY)=@processedinput;
   # Let's push the new net at the end of @TP_all array (increasing it's size by one)
   $TP_all[@TP_all] = { type => 'net',
     line1oX => $line1oX, line1oY => $line1oY, line1iX => $line1iX, line1iY => $line1iY,

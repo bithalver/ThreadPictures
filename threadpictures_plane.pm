@@ -48,7 +48,7 @@ sub to_polar { my ($x,$y)=@_;
 
 # creates a basic plane with 0,0 as center and 1,0 as first point
 # mandatory parameter: number of sides
-# optional parameters: initial angle, initial size
+# optional parameters: initial angle (first point will be rotated to the left), initial size (instead of 1)
 # returns an array of points: [x1,y1,x2,y2,...]
 # test call: 
 #      warnarray basicplane(4,45,sqrt(2));
