@@ -7,6 +7,9 @@ global:
 #    lastthread: 30
     threads: 20
 #    style: parallel
+planes:
+  - plane1;4;45
+  - plane2;5;0
 pages:
   -
     - pagename;this is the 2nd test pagename

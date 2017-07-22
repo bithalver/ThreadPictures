@@ -71,6 +71,18 @@ for my $AK (keys %{$config->{global}}) {
   $TP_GLOBAL{$AK}=$config->{global}->{$AK};
 }
 
+# read planes data EXPERIMENTAL
+if (defined $config->{planes}) {
+  for (0 .. @{$config->{planes}}-1) {
+    my @AP=split(';',$config->{planes}[$_]);
+    $TP_planes{splice @AP,0,1}=\@AP;
+    # TODO: plane raw data needs to processed to calculate points !
+  }
+  # Debug print of planes data
+  # for my $i (keys %TP_planes) { warn $i,"\n"; warnarray @{$TP_planes{$i}}; }
+}
+
+
 # process every page
 for (0 .. @{$config->{pages}}-1) {
   for (@{$config->{pages}->[$_]}) {

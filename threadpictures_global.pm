@@ -7,7 +7,7 @@ use Exporter;
 
 our @ISA= qw( Exporter );
 
-our @EXPORT = qw( %TP_GLOBAL @TP_all minmax warnarray warnhash cm min max print_ps_filestart pi my_round);
+our @EXPORT = qw( %TP_GLOBAL @TP_all %TP_planes minmax warnarray warnhash cm min max print_ps_filestart pi my_round);
 
 # %TP_GLOBAL holds all global variables
 our %TP_GLOBAL;
@@ -44,7 +44,11 @@ $TP_GLOBAL{rightmargin} = cm($ENV{'TP_rightmargin'}//=2),
 $TP_GLOBAL{topmargin} = cm($ENV{'TP_topmargin'}//=2.5),
 $TP_GLOBAL{bottommargin} = cm($ENV{'TP_bottommargin'}//=2.5),
 
-# This variable collects everything (including all nets) to be drawn on one page
+# %TP_planes holds data for regular and not regular planes; points of planes are used to build nets
+# EXPERIMENTAL
+our %TP_planes;
+
+# @TP_all array collects everything (including all nets) to be drawn on one page
 our @TP_all;
 
 # What should be written on the bottom of the page
