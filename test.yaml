@@ -11,6 +11,7 @@ planes:
   - plane1;regular;3;90
   - plane2;freeform;0;0;0;1;0;0;1;0
 #  - _plane3;r;5;0
+  - plane4;connected
 pages:
   -
     - net3;plane2;1;plane2;2;plane2;3

@@ -84,6 +84,9 @@ if (defined $config->{planes}) {
     when (/^f/i){ # freeform: x1,y1,x2,y2 ... (any number of x,y pairs)
       @AP=pointsfromplanesordirect(@AP); $TP_planes{$planename}=\@AP;
     }
+    when (/^c/i){ # connected: TODO
+      
+    }
     default {warn "plane type '$_' is not (yet) supported (but processing goes on)\n";}
     }
   }
