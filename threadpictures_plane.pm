@@ -58,7 +58,7 @@ sub basicplane {
   my ($sides,$initialangle,$initialsize)=@_; my $angle=2*pi()/$sides;
   $initialangle//=0; $initialangle=$initialangle/180*pi(); $initialsize//=1;
   my @initialvector=rotatevector($initialsize,0,$initialangle);
-  my @plane;
+  my @plane=(0,0);
   for my $side (0 .. $sides-1) { push @plane,rotatevector(@initialvector,$side*$angle); }
   return @plane;
 }
@@ -83,7 +83,7 @@ sub connectplane2points { my ($TOx1,$TOy1,$TOx2,$TOy2,$nth1,$nth2,@plane)=@_;
   return @output;
 }
 
-# leaves 'direct' points (number pairs), but transforms ones defined with planes to x,y pairs
+# leaves 'direct' points (number pairs) unmodified, but transforms ones defined with planes to x,y pairs
 sub pointsfromplanesordirect {
   my @input=@_; my @processedinput;
   # ---[BEGIN]--- Specify points from predefined planes _or_ directly

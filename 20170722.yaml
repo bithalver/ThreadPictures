@@ -12,17 +12,17 @@ planes:
   - plane4;freeform;plane1;0;plane1;1;plane1;2;0;0
 pages:
   -
-    - net3;plane4;1;plane4;3;plane4;2
-    - net3;plane4;1;plane4;0;plane4;2
+    - net3;plane1;2;plane1;1;plane1;3
+    - net3;plane4;2;plane1;0;plane1;3
   -
-    - net3;plane1;0;plane1;1;plane1;2
-    - net3;plane1;0;plane1;2;plane1;1
+    - net3;plane4;1;plane1;2;plane1;3
+    - net3;plane1;1;plane1;3;plane1;2
   -
     - net3;plane2;0;plane2;1;plane2;2
     - net3;plane2;1;plane2;2;plane2;3
     - net3;plane2;2;plane2;3;plane2;0
   -
-    - net3;plane3;0;plane3;1;plane3;2
     - net3;plane3;1;plane3;2;plane3;3
     - net3;plane3;2;plane3;3;plane3;4
-    - net3;plane3;3;plane3;4;plane3;0
+    - net3;plane3;3;plane3;4;plane3;5
+    - net3;plane3;4;plane3;5;plane3;1
