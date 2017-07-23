@@ -58,7 +58,7 @@ sub basicplane {
   my ($sides,$initialangle,$initialsize)=@_; my $angle=2*pi()/$sides;
   $initialangle//=0; $initialangle=$initialangle/180*pi(); $initialsize//=1;
   my @initialvector=rotatevector($initialsize,0,$initialangle);
-  my @plane=(0,0);
+  my @plane=(0,0); # The 0th point is the center, always
   for my $side (0 .. $sides-1) { push @plane,rotatevector(@initialvector,$side*$angle); }
   return @plane;
 }
