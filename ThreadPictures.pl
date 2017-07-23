@@ -76,11 +76,12 @@ if (defined $config->{planes}) {
   for (0 .. @{$config->{planes}}-1) {
     my @AP=split(';',$config->{planes}[$_]); # @AP like ActualPlane
     my $planename=splice @AP,0,1;
+    if ( $planename !~ /[a-z]/i ) { warn "Invalid plane name: $_\n"; next;} ;
     given (splice @AP,0,1) {
-    when (/^r/i){ # regular
+    when (/^r/i){ # regular: sides (mandatory), angle (optional), size (optional)
       my @w=basicplane(@AP); $TP_planes{$planename}=\@w;
     }
-    when (/^f/i){ # freeform
+    when (/^f/i){ # freeform: x1,y1,x2,y2 ... (any number of x,y pairs)
       $TP_planes{$planename}=\@AP;
     }
     default {warn "plane type '$_' is not (yet) supported (but processing goes on)\n";}
