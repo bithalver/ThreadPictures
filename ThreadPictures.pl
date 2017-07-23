@@ -75,7 +75,16 @@ for my $AK (keys %{$config->{global}}) {
 if (defined $config->{planes}) {
   for (0 .. @{$config->{planes}}-1) {
     my @AP=split(';',$config->{planes}[$_]); # @AP like ActualPlane
-    my @w=basicplane(@AP[1..$#AP]); $TP_planes{$AP[0]}=\@w;
+    my $planename=splice @AP,0,1;
+    given (splice @AP,0,1) {
+    when (/^r/i){ # regular
+      my @w=basicplane(@AP); $TP_planes{$planename}=\@w;
+    }
+    when (/^f/i){ # freeform
+      $TP_planes{$planename}=\@AP;
+    }
+    default {warn "plane type '$_' is not (yet) supported (but processing goes on)\n";}
+    }
   }
   # Debug print of planes data
   # for my $i (keys %TP_planes) { warn $i,"\n"; warnarray @{$TP_planes{$i}}; }

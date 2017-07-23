@@ -8,10 +8,12 @@ global:
     threads: 20
 #    style: parallel
 planes:
-  - plane1;3;90
-#  - plane2;4;45
-#  - plane3;5;0
+  - plane1;regular;3;90
+  - plane2;freeform;0;1;0;0;1;0
+#  - plane3;r;5;0
 pages:
+  -
+    - net3;plane2;0;plane2;1;plane2;2
   -
     - net3;plane1;0;plane1;1;plane1;2
   -

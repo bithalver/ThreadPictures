@@ -6,8 +6,9 @@
 global:
     threads: 20
 planes:
-  - plane1;3;90
-  - plane2;5;90
+  - plane1;regular;3;90
+  - plane2;regular;5;90
+  - plane3;freeform;0;1;0;0;1;0
 pages:
   -
     - net3;plane1;0;plane1;1;plane1;2
@@ -17,3 +18,5 @@ pages:
     - net3;plane2;1;plane2;2;plane2;3
     - net3;plane2;2;plane2;3;plane2;4
     - net3;plane2;3;plane2;4;plane2;0
+  -
+    - net3;plane3;0;plane3;1;plane3;2
