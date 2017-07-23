@@ -3,13 +3,17 @@
 #   filename=20170722; ./TP -i ${filename}.yaml -o ${filename}.ps ; ps2pdf ${filename}.ps ; rm ${filename}.ps
 # provides 20170722.pdf
 ---
-global:
-    threads: 20
+#global:
+#    threads: 20
 planes:
   - plane1;regular;3;90
   - plane2;freeform;1;2;0;1;1;0;2;1
   - plane3;regular;5;90
+  - plane4;freeform;plane1;0;plane1;1;plane1;2;0;0
 pages:
+  -
+    - net3;plane4;1;plane4;3;plane4;2
+    - net3;plane4;1;plane4;0;plane4;2
   -
     - net3;plane1;0;plane1;1;plane1;2
     - net3;plane1;0;plane1;2;plane1;1
