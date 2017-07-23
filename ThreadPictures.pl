@@ -71,7 +71,7 @@ for my $AK (keys %{$config->{global}}) {
   $TP_GLOBAL{$AK}=$config->{global}->{$AK};
 }
 
-# read planes data EXPERIMENTAL
+# read planes data
 if (defined $config->{planes}) {
   for (0 .. @{$config->{planes}}-1) {
     my @AP=split(';',$config->{planes}[$_]); # @AP like ActualPlane
@@ -81,11 +81,16 @@ if (defined $config->{planes}) {
     when (/^r/i){ # regular: sides (mandatory), angle (optional), size (optional)
       my @w=basicplane(@AP); $TP_planes{$planename}=\@w;
     }
-    when (/^f/i){ # freeform: x1,y1,x2,y2 ... (any number of x,y pairs)
+    when (/^f/i){ # freeform: x1,y1,x2,y2 ... (any number of x,y pairs _and/or_ planeI,J pairs)
       @AP=pointsfromplanesordirect(@AP); $TP_planes{$planename}=\@AP;
     }
-    when (/^c/i){ # connected: TODO
-      
+    when (/^c/i){ # connected:
+      # @AP should be : $TOx1,$TOy1,$TOx2,$TOy2,plane-to-connect,nth1,nth2
+      # ($TOx1,$TOy1) and ($TOx2,$TOy2) could be in (planeI,J) format
+      my ($TOx1,$TOy1,$TOx2,$TOy2)=pointsfromplanesordirect(splice @AP,0,4);
+      my @P2C=@{$TP_planes{splice(@AP,0,1)}}; # P2C like plane-to-connect
+      my ($nth1,$nth2)=splice(@AP,0,2);
+      @AP=connectplane2points($TOx1,$TOy1,$TOx2,$TOy2,$nth1,$nth2,@P2C); $TP_planes{$planename}=\@AP;
     }
     default {warn "plane type '$_' is not (yet) supported (but processing goes on)\n";}
     }
@@ -97,7 +102,7 @@ if (defined $config->{planes}) {
 # process every page
 for (0 .. @{$config->{pages}}-1) {
   for (@{$config->{pages}->[$_]}) {
-    my @AE=split ';'; # warnarray @AE; # AE like ActualElement
+    my @AE=split ';'; # AE like ActualElement
       given (splice @AE,0,1) {
       when (/^net$|^net4$/i){
         add_net4(splice @AE,0,8);

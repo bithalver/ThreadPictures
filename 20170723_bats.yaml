@@ -1,0 +1,56 @@
+# First connected plane file
+# command line is:
+#   filename=20170723; ./TP -i ${filename}.yaml -o ${filename}.ps ; ps2pdf ${filename}.ps ; rm ${filename}.ps
+# provides 20170723_bats.pdf
+
+---
+global:
+    threads: 10
+#    style: filledcurve
+planes:
+  - p1;regular;3;60
+  - p2;regular;4
+  - p3;connected;p1;1;p1;2;p2;2;1
+  - p4;connected;p1;2;p1;3;p2;2;1
+  - bat;freeform;p1;0;p1;1;p1;2;p1;3;p3;3;p4;4
+  - r8;regular;8
+  - b1;connected;r8;0;r8;1;bat;4;5
+  - b2;connected;r8;0;r8;2;bat;4;5
+  - b3;connected;r8;0;r8;3;bat;4;5
+  - b4;connected;r8;0;r8;4;bat;4;5
+  - b5;connected;r8;0;r8;5;bat;4;5
+  - b6;connected;r8;0;r8;6;bat;4;5
+  - b7;connected;r8;0;r8;7;bat;4;5
+  - b8;connected;r8;0;r8;8;bat;4;5
+pages:
+  -
+    - pagename;Bat
+    - net3;bat;1;bat;2;bat;3
+    - net3;bat;2;bat;1;bat;4
+    - net3;bat;2;bat;3;bat;5
+  -
+    - pagename;8 Bats
+    - net3;b1;1;b1;2;b1;3
+    - net3;b1;2;b1;1;b1;4
+    - net3;b1;2;b1;3;b1;5
+    - net3;b2;1;b2;2;b2;3
+    - net3;b2;2;b2;1;b2;4
+    - net3;b2;2;b2;3;b2;5
+    - net3;b3;1;b3;2;b3;3
+    - net3;b3;2;b3;1;b3;4
+    - net3;b3;2;b3;3;b3;5
+    - net3;b4;1;b4;2;b4;3
+    - net3;b4;2;b4;1;b4;4
+    - net3;b4;2;b4;3;b4;5
+    - net3;b5;1;b5;2;b5;3
+    - net3;b5;2;b5;1;b5;4
+    - net3;b5;2;b5;3;b5;5
+    - net3;b6;1;b6;2;b6;3
+    - net3;b6;2;b6;1;b6;4
+    - net3;b6;2;b6;3;b6;5
+    - net3;b7;1;b7;2;b7;3
+    - net3;b7;2;b7;1;b7;4
+    - net3;b7;2;b7;3;b7;5
+    - net3;b8;1;b8;2;b8;3
+    - net3;b8;2;b8;1;b8;4
+    - net3;b8;2;b8;3;b8;5

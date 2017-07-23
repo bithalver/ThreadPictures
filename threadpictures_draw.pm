@@ -182,7 +182,6 @@ sub draw_all {
       }
     }
   }
-  # warn "minX is $minX, maxX is $maxX, minY is $minY, maxY is $maxY\n";
   if ($minX == $maxX or $minY == $maxY ) {
     warn "even X or Y minimum or maximum values are the same, can not draw\n";
     exit 1;
