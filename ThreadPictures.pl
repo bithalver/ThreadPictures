@@ -76,7 +76,7 @@ if (defined $config->{planes}) {
   for (0 .. @{$config->{planes}}-1) {
     my @AP=split(';',$config->{planes}[$_]); # @AP like ActualPlane
     my $planename=splice @AP,0,1;
-    if ( $planename !~ /[a-z]/i ) { warn "Invalid plane name: $_\n"; next;} ;
+    if ( $planename !~ /^[a-z]/i ) { warn "Invalid plane name: $planename , skipped\n"; next;} ;
     given (splice @AP,0,1) {
     when (/^r/i){ # regular: sides (mandatory), angle (optional), size (optional)
       my @w=basicplane(@AP); $TP_planes{$planename}=\@w;
