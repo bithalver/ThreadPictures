@@ -14,7 +14,7 @@ our %TP_GLOBAL;
 
 # TP_threads is how many segment should exist in a net
 # Could be overwritten with the same name env var
-$TP_GLOBAL{threads} = $ENV{TP_threads} //=10;
+$TP_GLOBAL{threads} = $ENV{TP_threads} //=20;
 $TP_GLOBAL{firstthread} = $ENV{TP_firstthread} //=0;
 if (defined $ENV{TP_lastthread}) {$TP_GLOBAL{lastthread} = $ENV{TP_lastthread};}
 
