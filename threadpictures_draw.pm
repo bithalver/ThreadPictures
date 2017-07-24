@@ -156,7 +156,7 @@ sub draw_net {
      foreach my $weight (split(',',/selected/?$AN{'selection'}:$AN{'style'}))
        {draw_line(TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$weight,$AN{threads}),TP_weight($AN{line2iX},$AN{line2iY},$AN{line2oX},$AN{line2oY},$weight,$AN{threads}));}
   }
-  default {warn "style $AN{'style'} is not (yet) implemented\n";return}
+  default {warn "style $AN{'style'} is not (yet) implemented\nSupported ones: normal, holes, border, triangle, filledtriangle, curve, filledcurve, inversefilledcurve, parallel, selected\n";return}
   }
 }
 

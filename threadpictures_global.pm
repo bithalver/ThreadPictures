@@ -21,7 +21,7 @@ if (defined $ENV{TP_lastthread}) {$TP_GLOBAL{lastthread} = $ENV{TP_lastthread};}
 # Every page has to have a name in PS; it is an automatically incremented number
 $TP_GLOBAL{pagenumber} = 1;
 # Which style we draw nets
-# possible values: 'normal', 'holes'
+# possible values: normal, holes, border, triangle, filledtriangle, curve, filledcurve, inversefilledcurve, parallel, selected
 # all other strings are future expansion; you will get a warning on STDERR for using a nonimplemented one
 $TP_GLOBAL{style} = $ENV{TP_style} //='normal';
 
