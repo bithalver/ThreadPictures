@@ -7,7 +7,7 @@ use Exporter;
 
 our @ISA= qw( Exporter );
 
-our @EXPORT = qw( %TP_GLOBAL @TP_all %TP_planes minmax warnarray warnhash cm min max print_ps_filestart pi my_round);
+our @EXPORT = qw( %TP_GLOBAL @TP_all %TP_planes minmax warnarray warnhash cm min max print_ps_filestart pi my_round colorconvert);
 
 # %TP_GLOBAL holds all global variables
 our %TP_GLOBAL;
@@ -24,6 +24,9 @@ $TP_GLOBAL{pagenumber} = 1;
 # possible values: normal, holes, border, triangle, filledtriangle, curve, filledcurve, inversefilledcurve, parallel, selected
 # all other strings are future expansion; you will get a warning on STDERR for using a nonimplemented one
 $TP_GLOBAL{style} = $ENV{TP_style} //='normal';
+
+# Do we want to ignore all color specificaion ? BW is just bland-and-white: white background, black drawings
+$TP_GLOBAL{BW} = $ENV{TP_BW} //=0;
 
 sub max ($$) { $_[$_[0] < $_[1]] }
 sub min ($$) { $_[$_[0] > $_[1]] }
@@ -45,15 +48,14 @@ $TP_GLOBAL{topmargin} = cm($ENV{'TP_topmargin'}//=2.5),
 $TP_GLOBAL{bottommargin} = cm($ENV{'TP_bottommargin'}//=2.5),
 
 # %TP_planes holds data for regular and not regular planes; points of planes are used to build nets
-# EXPERIMENTAL
 our %TP_planes;
 
 # @TP_all array collects everything (including all nets) to be drawn on one page
+# most important array !
 our @TP_all;
 
 # What should be written on the bottom of the page
 # Default is not to write anything
-# not yet implemented !
 $TP_GLOBAL{pagename} = $ENV{'TP_pagename'} //="";
 
 # Returns an array of two values: the minimum and the maximum of an input numerical array
@@ -63,8 +65,8 @@ sub warnarray { warn join(',',@_),"\n"; return @_;}
 
 sub warnhash {my (%a)=@_; warn join(", ", map { "$_ => $a{$_}" } keys %a),"\n"; return %a; }
 
+# Print the mandatory PS file start
 sub print_ps_filestart{
-# Print the PS file start
 print
 "%!PS-Adobe-3.0
 %%DocumentData: Clean7Bit
@@ -74,4 +76,26 @@ print
 0 setlinewidth
 ";
 }
+
+# converts color names to 3 number as required in postscript
+# input is one string containing even 
+#   - a color name (like 'white')
+#   - 3 comma-eparated number (like '0.1,1,0.9') all numbers should be 0<=x<=1
+sub colorconvert { my ($input)=@_;
+  my %colornames=(
+    white => '1,1,1',
+    black => '0,0,0',
+    gray => '0.5,0.5,0.5',
+    red => '1,0,0',
+    green => '0,1,0',
+    blue => '0,0,1',
+    yellow => '1,1,0',
+    orange => '1,0.7,0',
+    cyan => '0,1,1',
+  );
+  if ($input =~ /^[a-z]/) { $input=$colornames{$input}; }
+  $input=~s/,/ /g; # we want to write it to PS file like '0.5 0.5 0.5'
+  return ($input);
+}
+
 1;

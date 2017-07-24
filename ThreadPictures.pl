@@ -25,6 +25,8 @@ my %opts;
 # my @a=(0,0,1,0,1,1,0,1);
 # warnarray @a; warnarray connectplane2points(10,10,10,12,0,2,@a); exit 0;
 
+# warn colorconvert('white'),"\n"; warn colorconvert('black'),"\n"; warn colorconvert('orange'),"\n"; exit 0;
+
 # ---[END] test section
 
 
