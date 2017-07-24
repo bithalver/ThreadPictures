@@ -72,7 +72,6 @@ print
 
 << /PageSize [$TP_GLOBAL{pageXsize} $TP_GLOBAL{pageYsize}] >> setpagedevice
 0 setlinewidth
-
 ";
 }
 1;

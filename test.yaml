@@ -27,8 +27,8 @@ pages:
     - net;10;30;20;30;20;30;20;20
     - net;1;10;1;0;1;0;11;0;threads;4;style;inversefilledcurve
 #    - notsupported;rest is also ignored;whatever
-#  -
-#    - net;0;10;0;0;1;1;11;1;style;border
+  -
+    - net;0;10;0;0;1;1;11;1;style;border
 #  -
 #    - net;0;10;0;0;1;1;11;1;style;emptytriangle
 #  -

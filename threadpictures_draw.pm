@@ -188,11 +188,21 @@ sub draw_all {
   }
 
 # page preface
-  say "%%Page: \"$TP_GLOBAL{pagenumber}\" $TP_GLOBAL{pagenumber}";
+  say "\n%%Page: \"$TP_GLOBAL{pagenumber}\" $TP_GLOBAL{pagenumber}";
   say "gsave";
 
-# Print the pagename before the transformation - TODO
-  # warn $TP_GLOBAL{pagename},"\n"; $TP_GLOBAL{pagename}='';
+# Print the pagename before the transformation
+  if ($TP_GLOBAL{pagename} !~ /^\s*$/) { # print pagename only if it contains a non-whitespace character
+    say "/Times-Roman 12 selectfont";
+    say  cm(10.5)," ",cm(1.5)," moveto";
+    say "($TP_GLOBAL{pagename}) dup stringwidth pop neg 2 div 0 rmoveto show";
+    $TP_GLOBAL{pagename}=''; # pagename is only for actual page; next oane starts with empty one
+  }
+
+ #  1 1 PN length { /i exch def
+ #    10.5 cm 2 cm moveto 0 PN length i sub 12 mul rmoveto
+ #    PN i nth dup stringwidth pop neg 2 div 0 rmoveto show
+ #  } for
 
 # do the page transformation to fit the drawing best
   say(
