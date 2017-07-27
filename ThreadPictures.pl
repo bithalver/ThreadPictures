@@ -72,6 +72,8 @@ for my $AK (keys %{$config->{global}}) {
   # warn "$AK => $config->{global}->{$AK}\n";
   $TP_GLOBAL{$AK}=$config->{global}->{$AK};
 }
+$TP_GLOBAL{background} = colorconvert($TP_GLOBAL{background});
+$TP_GLOBAL{color} = colorconvert($TP_GLOBAL{color});
 
 # read planes data
 if (defined $config->{planes}) {

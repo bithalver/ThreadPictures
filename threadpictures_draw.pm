@@ -196,7 +196,7 @@ sub draw_all {
   say "gsave";
 
   # drawing the background, if needed (white BG is the default, so we do not draw it)
-  if (! $TP_GLOBAL{BW} and $ENV{TP_background} ne '1,1,1' ) { say "currentrgbcolor\n$TP_GLOBAL{background} setrgbcolor\n0 0 $TP_GLOBAL{pageXsize} $TP_GLOBAL{pageYsize} rectfill stroke\nsetrgbcolor\n"; }
+  if (! $TP_GLOBAL{BW} and $TP_GLOBAL{background} ne '1,1,1' ) { say "currentrgbcolor\n$TP_GLOBAL{background} setrgbcolor\n0 0 $TP_GLOBAL{pageXsize} $TP_GLOBAL{pageYsize} rectfill stroke\nsetrgbcolor\n"; }
 
 # Print the pagename before the transformation
   if ($TP_GLOBAL{pagename} !~ /^\s*$/) { # print pagename only if it contains a non-whitespace character
