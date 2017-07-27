@@ -28,6 +28,9 @@ $TP_GLOBAL{style} = $ENV{TP_style} //='normal';
 # Do we want to ignore all color specificaion ? BW is just bland-and-white: white background, black drawings
 $TP_GLOBAL{BW} = $ENV{TP_BW} //=0;
 
+# What color is the background ?
+$ENV{TP_background} //='white'; $TP_GLOBAL{background} = colorconvert($ENV{TP_background});
+
 sub max ($$) { $_[$_[0] < $_[1]] }
 sub min ($$) { $_[$_[0] > $_[1]] }
 

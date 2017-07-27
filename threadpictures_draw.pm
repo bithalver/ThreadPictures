@@ -191,12 +191,15 @@ sub draw_all {
   say "\n%%Page: \"$TP_GLOBAL{pagenumber}\" $TP_GLOBAL{pagenumber}";
   say "gsave";
 
+  # drawing the background, if needed (white BG is the default, so we do not draw it)
+  if (! $TP_GLOBAL{BW} and $ENV{TP_background} ne '1,1,1' ) { say "currentrgbcolor\n$TP_GLOBAL{background} setrgbcolor\n0 0 $TP_GLOBAL{pageXsize} $TP_GLOBAL{pageYsize} rectfill stroke\nsetrgbcolor\n"; }
+
 # Print the pagename before the transformation
   if ($TP_GLOBAL{pagename} !~ /^\s*$/) { # print pagename only if it contains a non-whitespace character
     say "/Times-Roman 12 selectfont";
     say  cm(10.5)," ",cm(1.5)," moveto";
-    say "($TP_GLOBAL{pagename}) dup stringwidth pop neg 2 div 0 rmoveto show";
-    $TP_GLOBAL{pagename}=''; # pagename is only for actual page; next oane starts with empty one
+    say "($TP_GLOBAL{pagename}) dup stringwidth pop neg 2 div 0 rmoveto show\n";
+    $TP_GLOBAL{pagename}=''; # pagename is only for actual page; next one starts with empty one
   }
 
  #  1 1 PN length { /i exch def
