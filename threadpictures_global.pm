@@ -31,6 +31,9 @@ $TP_GLOBAL{BW} = $ENV{TP_BW} //=0;
 # What color is the background ?
 $ENV{TP_background} //='white'; $TP_GLOBAL{background} = colorconvert($ENV{TP_background});
 
+# Waht is the default color to draw ?
+$ENV{TP_color} //='black'; $TP_GLOBAL{color} = colorconvert($ENV{TP_color});
+
 sub max ($$) { $_[$_[0] < $_[1]] }
 sub min ($$) { $_[$_[0] > $_[1]] }
 

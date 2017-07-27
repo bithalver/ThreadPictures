@@ -1,5 +1,5 @@
 # command line is:
-#   NAME=test; TP_style=holes ./TP -i ${NAME}.yaml -o ${NAME}.ps ; ps2pdf ${NAME}.ps ; rm ${NAME}.ps
+#   NAME=test; TP_background=gray TP_color=green  ./TP -i ${NAME}.yaml -o ${NAME}.ps ; ps2pdf ${NAME}.ps ; rm -f ${NAME}.ps
 # provides test.pdf
 # on the place of 'TP_style=holes' you can write any global parameter in the syntax 'TP_paramatername=value'
 ---
@@ -15,9 +15,9 @@ planes:
   - plane4;connected;plane2;1;plane2;2;plane1;2;1
 pages:
   -
-    - pagename; first ever connected plane test !
-    - net3;plane2;1;plane2;2;plane2;3
-    - net3;plane4;1;plane4;2;plane4;3
+    - pagename; first ever connected plane test ! now in color !
+    - net3;plane2;1;plane2;2;plane2;3;color;yellow
+    - net3;plane4;1;plane4;2;plane4;3;color;blue
   -
     - pagename;this is the 2nd test pagename
     - net4;0;10;0;0;0;0;10;0;threads;4;style;curve

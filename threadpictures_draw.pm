@@ -71,6 +71,9 @@ sub draw_net {
   $AN{firstthread} //= $TP_GLOBAL{firstthread};
   $AN{lastthread} //= $TP_GLOBAL{lastthread};
   $AN{lastthread} //= $AN{threads};
+  $AN{color} //= $TP_GLOBAL{color}; $AN{color}=colorconvert($AN{color}); my $color_changed=0;
+  if (! $TP_GLOBAL{BW} and $AN{color} ne '0,0,0' ) { say "currentrgbcolor\n$AN{color} setrgbcolor\n"; $color_changed=1}
+  
   for ($AN{'style'}//=$TP_GLOBAL{style}) {
   when (/^normal$/i){ # old style was 0
     for my $weight ($AN{'firstthread'} .. $AN{'lastthread'}) {
@@ -158,6 +161,7 @@ sub draw_net {
   }
   default {warn "style $AN{'style'} is not (yet) implemented\nSupported ones: normal, holes, border, triangle, filledtriangle, curve, filledcurve, inversefilledcurve, parallel, selected\n";return}
   }
+  if ($color_changed) {say "setrgbcolor\n"}
 }
 
 # This is the main function to draw a page from the collected info in @TP_all
