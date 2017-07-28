@@ -1,5 +1,5 @@
 # command line is:
-#   NAME=20170728_snail; ./TP -i ${NAME}.yal -o ${NAME}.ps ; ps2pdf ${NAME}.ps ; r ${NAME}.ps
+#   NAME=20170728_snail; ./TP -i ${NAME}.yaml -o ${NAME}.ps ; ps2pdf ${NAME}.ps ; r ${NAME}.ps
 # provides 20170728_snail.pdf
 ---
 global:
@@ -11,7 +11,7 @@ planes:
   - pa3;regular;3;90
   - p4;regular;4
   - pa4;connected;pa3;1;pa3;2;p4;2;1
-  - A;freefor;pa4;3;pa3;1;pa3;2;pa3;3
+  - A;freeform;pa4;3;pa3;1;pa3;2;pa3;3
   - B;connected;A;2;A;3;A;0;2
   - C;connected;B;2;B;3;B;0;2
   - D;connected;C;2;C;3;C;0;2
@@ -21,7 +21,7 @@ planes:
   - H;connected;E;2;E;3;E;0;2
 pages:
   -
-    - pagenae;Snail
+    - pagename;Snail
     - net3;H;0;H;1;H;2;color;orange
     - net3;H;1;H;2;H;3;color;yellow
     - net3;G;0;G;1;G;2;color;orange
@@ -39,6 +39,6 @@ pages:
     - net3;A;0;A;1;A;2;color;orange
     - net3;A;1;A;2;A;3;color;yellow
   -
-    - pagenae;Snail, 1 eleent
+    - pagename;Snail, 1 eleent
     - net3;A;0;A;1;A;2
     - net3;A;1;A;2;A;3
