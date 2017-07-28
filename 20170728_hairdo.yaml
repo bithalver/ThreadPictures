@@ -1,0 +1,40 @@
+# command line is:
+#   NAME=20170728_snail; ./TP -i ${NAME}.yaml -o ${NAME}.ps ; ps2pdf ${NAME}.ps ; r ${NAME}.ps
+# provides 20170728_snail.pdf
+---
+global:
+    threads: 10
+    background: gray
+    color: orange
+    style: filledcurve
+planes:
+  - pa3;regular;3;90
+  - p4;regular;4
+  - pa4;connected;pa3;1;pa3;2;p4;2;1
+  - A;freeform;pa4;3;pa3;1;pa3;2;pa3;3
+  - B;connected;A;0;A;1;A;0;2
+  - C;connected;B;0;B;1;B;0;2
+  - D;connected;C;0;C;1;C;0;2
+  - E;connected;D;0;D;1;D;0;2
+  - F;connected;E;0;E;1;E;0;2
+  - G;connected;F;0;F;1;F;0;2
+  - H;connected;G;0;G;1;G;0;2
+pages:
+  -
+    - pagename;Hairdo
+    - net3;H;0;H;1;H;2
+    - net3;H;1;H;2;H;3
+    - net3;G;0;G;1;G;2
+    - net3;G;1;G;2;G;3
+    - net3;F;0;F;1;F;2
+    - net3;F;1;F;2;F;3
+    - net3;E;0;E;1;E;2
+    - net3;E;1;E;2;E;3
+    - net3;D;0;D;1;D;2
+    - net3;D;1;D;2;D;3
+    - net3;C;0;C;1;C;2
+    - net3;C;1;C;2;C;3
+    - net3;B;0;B;1;B;2
+    - net3;B;1;B;2;B;3
+    - net3;A;0;A;1;A;2
+    - net3;A;1;A;2;A;3
