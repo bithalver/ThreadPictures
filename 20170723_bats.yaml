@@ -4,7 +4,6 @@
 # provides 20170723_bats.pdf
 # for the holes:
 #   NAME=20170723_bats; TP_BW=1 TP_style=holes ./TP -i ${NAME}.yaml -o ${NAME}.ps ; ps2pdf ${NAME}.ps ; rm ${NAME}.ps
-
 ---
 global:
     threads: 10
