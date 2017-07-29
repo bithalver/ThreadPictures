@@ -7,34 +7,36 @@ use Exporter;
 
 our @ISA= qw( Exporter );
 
-our @EXPORT = qw( %TP_GLOBAL @TP_all %TP_planes minmax warnarray warnhash cm min max print_ps_filestart pi my_round colorconvert);
+our @EXPORT = qw( %TP_GLOBAL @TP_all %TP_planes global_init minmax warnarray warnhash cm min max print_ps_filestart pi my_round colorconvert);
 
 # %TP_GLOBAL holds all global variables
 our %TP_GLOBAL;
 
-# TP_threads is how many segment should exist in a net
-# Could be overwritten with the same name env var
-$TP_GLOBAL{threads} = $ENV{TP_threads} //=20;
-$TP_GLOBAL{firstthread} = $ENV{TP_firstthread} //=0;
-if (defined $ENV{TP_lastthread}) {$TP_GLOBAL{lastthread} = $ENV{TP_lastthread};}
+sub global_init {
+  # 'threads' is how many segment should exist in a net
+  # Could be overwritten with the same name env var
+  $TP_GLOBAL{threads} = $ENV{TP_threads} //=20;
+  $TP_GLOBAL{firstthread} = $ENV{TP_firstthread} //=0;
+  if (defined $ENV{TP_lastthread}) {$TP_GLOBAL{lastthread} = $ENV{TP_lastthread};}
 
-# Every page has to have a name in PS; it is an automatically incremented number
-$TP_GLOBAL{pagenumber} = 1;
-# Which style we draw nets
-# possible values: normal, holes, border, triangle, filledtriangle, curve, filledcurve, inversefilledcurve, parallel, selected
-# all other strings are future expansion; you will get a warning on STDERR for using a nonimplemented one
-$TP_GLOBAL{style} = $ENV{TP_style} //='normal';
+  # Every page has to have a name in PS; it is an automatically incremented number
+  $TP_GLOBAL{pagenumber} = 1;
+  # Which style we draw nets
+  # possible values: normal, holes, border, triangle, filledtriangle, curve, filledcurve, inversefilledcurve, parallel, selected
+  # all other strings are future expansion; you will get a warning on STDERR for using a nonimplemented one
+  $TP_GLOBAL{style} = $ENV{TP_style} //='normal';
 
-# Do we want to ignore all color specificaion ? BW is just bland-and-white: white background, black drawings
-$TP_GLOBAL{BW} = $ENV{TP_BW} //=0;
+  # Do we want to ignore all color specificaion ? BW is just white background, black drawings
+  $TP_GLOBAL{BW} = $ENV{TP_BW} //=0;
 
-# What color is the background ?
-$ENV{TP_background} //='white';
-$TP_GLOBAL{background} //= $ENV{TP_background};
+  # What color is the background ?
+  $ENV{TP_background} //='white';
+  $TP_GLOBAL{background} //= $ENV{TP_background};
 
-# Waht is the default color to draw ?
-$ENV{TP_color} //='black';
-$TP_GLOBAL{color} //= $ENV{TP_color};
+  # What is the default color to draw ?
+  $ENV{TP_color} //='black';
+  $TP_GLOBAL{color} //= $ENV{TP_color};
+}
 
 sub max ($$) { $_[$_[0] < $_[1]] }
 sub min ($$) { $_[$_[0] > $_[1]] }

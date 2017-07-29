@@ -35,16 +35,18 @@ sub VERSION_MESSAGE { warn "ThreadPictures version 1.0\n"; }
 sub HELP_MESSAGE { # TODO: meaningful help message
   warn "
 Usage:
-  $0 [-i INPUT_YAML_FILE] [-o OUTPUT_PS_FILE]
+  $0 [-i INPUT_YAML_FILE] [-o OUTPUT_PS_FILE] [-p PARAMETER_STRING]
     # if -i is missing, reads yaml from stdin
     # if -o is missing, output goes to STDOUT
+    # PARAMETER_STRING should be in the format 'key1;value1[;keyN;valueN]*'
+    #   (any number of key-value pair could be specified)
   $0 [-h|--help]      # this help
   $0 {-v|--version}   # 1 line version info
 \n";
   exit 0;
 }
 
-getopts('i:o:hv',\%opts);
+getopts('i:o:hvp:',\%opts);
 # --help and --version handled by getopts automatically like 'h' and 'v'
 
 if ($opts{'h'}) {VERSION_MESSAGE; HELP_MESSAGE;}
@@ -67,11 +69,26 @@ if (defined $opts{'o'} ) { open $fh, '>', $opts{'o'} or die "can't open output f
 # Do the main thing: process %config to make output
 print_ps_filestart();
 
+# set the defaults or use the environment variables
+global_init;
+
 # read global variables form yaml
 for my $AK (keys %{$config->{global}}) {
   # warn "$AK => $config->{global}->{$AK}\n";
   $TP_GLOBAL{$AK}=$config->{global}->{$AK};
 }
+
+# command line options processing have to be AFTER global paramters processed
+# priority is (lowest to highest:
+#   - defaults (set in stone in _global.pm)
+#   - environment variables start with TP_
+#   - global parameters from yaml file
+#   - options specified with -p
+if ($opts{'p'}) { # warn $opts{'p'},"\n";
+  my @OPTS=split(';',$opts{'p'});
+  while (@OPTS) {my ($key,$value)=splice @OPTS,0,2; $TP_GLOBAL{$key}=$value}
+}
+
 $TP_GLOBAL{background} = colorconvert($TP_GLOBAL{background});
 $TP_GLOBAL{color} = colorconvert($TP_GLOBAL{color});
 
