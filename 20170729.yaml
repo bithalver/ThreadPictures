@@ -1,12 +1,12 @@
 # command line is:
-#   NAME=20170729; ./TP -i ${NAME}.yaml -o ${NAME}.ps ; ps2pdf ${NAME}.ps ; r ${NAME}.ps
+#   NAME=20170729; ./TP -i ${NAME}.yaml -o ${NAME}.ps ; ps2pdf ${NAME}.ps ; rm ${NAME}.ps
 # provides 20170729
 ---
 global:
     threads: 10
     background: gray
     color: orange
-#    style: filledcurve
+    style: filledcurve
 planes:
   - p6;regular;6
   - p4;regular;4

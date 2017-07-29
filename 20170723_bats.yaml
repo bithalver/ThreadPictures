@@ -1,15 +1,15 @@
 # First connected plane file
 # command line is:
-#   NAME=20170723_bats; TP_style=filledcurve ./TP -i ${NAME}.yaml -o ${NAME}.ps ; ps2pdf ${NAME}.ps ; rm ${NAME}.ps
+#   NAME=20170723_bats; ./TP -i ${NAME}.yaml -o ${NAME}.ps ; ps2pdf ${NAME}.ps ; rm ${NAME}.ps
 # provides 20170723_bats.pdf
 # for the holes:
-#   NAME=20170723_bats; TP_BW=1 TP_style=holes ./TP -i ${NAME}.yaml -o ${NAME}.ps ; ps2pdf ${NAME}.ps ; rm ${NAME}.ps
+#   NAME=20170723_bats; ./TP -i ${NAME}.yaml -o ${NAME}.ps  -p 'BW;1;style;holes'; ps2pdf ${NAME}.ps; rm ${NAME}.ps
 ---
 global:
     threads: 10
     background: black
     color: red
-#    style: filledcurve
+    style: filledcurve
 planes:
   - p1;regular;3;60
   - p2;regular;4

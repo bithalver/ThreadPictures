@@ -1,5 +1,5 @@
 # command line is:
-#   NAME=20170728_snail; ./TP -i ${NAME}.yaml -o ${NAME}.ps ; ps2pdf ${NAME}.ps ; r ${NAME}.ps
+#   NAME=20170728_snail; ./TP -i ${NAME}.yaml -o ${NAME}.ps ; ps2pdf ${NAME}.ps ; rm ${NAME}.ps
 # provides 20170728_snail.pdf
 ---
 global:
