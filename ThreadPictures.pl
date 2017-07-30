@@ -12,9 +12,6 @@ use YAML::XS 'LoadFile';
 use Getopt::Long qw(GetOptions);
 Getopt::Long::Configure qw(gnu_getopt);
 
-# my %opts;
-my ($opts_input, $opts_output, $opts_params, $opts_help, $opts_version, $opts_debug) = ('stdin','stdout','','','','');
-
 # ---[BEGIN] test section
 # on final version, the whole section should be commented out / deleted !
 
@@ -38,10 +35,10 @@ sub HELP_MESSAGE { # TODO: meaningful help message
   warn "Usage:
   $0 [-h|--help|-?]   # this help and exit
   $0 {-v|--version}   # 1 line version info and exit
-  $0 [-i INPUT_YAML_FILE] [-o OUTPUT_PS_FILE] [-p PARAMETER_STRING]
+  $0 [-i INPUT_YAML_FILE] [-o OUTPUT_PS_FILE] [-p PARAMETER_STRING]*
     # if -i is missing, reads yaml from stdin
     # if -o is missing, output goes to STDOUT
-    # PARAMETER_STRING should be in the format 'key1;value1[;keyN;valueN]*'
+    # PARAMETER_STRING should be in the format key=value'
     #   (any number of key-value pair could be specified)
   $0 {-d|--debug}   # turns on debud messages EXPERIMENTAL
 ";
@@ -51,7 +48,7 @@ sub HELP_MESSAGE { # TODO: meaningful help message
 GetOptions(
     'input|i=s' => \$opts_input,
     'output|o=s' => \$opts_output,
-    'params|p=s' => \$opts_params,
+    'param|p=s' => \%TP_LOCAL,
     'help|h|?' => \$opts_help,
     'version|v' => \$opts_version,
     'debug|d' => \$opts_debug,
@@ -90,13 +87,13 @@ for my $AK (keys %{$config->{global}}) {
   $TP_GLOBAL{$AK}=$config->{global}->{$AK};
 }
 
-if ($opts_params) { if ($opts_debug)  {warn "Optional parameters are: $opts_params\n";}
-  my @OPTS=split(';',$opts_params);
-  while (@OPTS) {my ($key,$value)=splice @OPTS,0,2; $TP_GLOBAL{$key}=$value}
-}
-
 $TP_GLOBAL{background} = colorconvert($TP_GLOBAL{background});
 $TP_GLOBAL{color} = colorconvert($TP_GLOBAL{color});
+
+if ($TP_LOCAL{background}) {$TP_LOCAL{background} = colorconvert($TP_LOCAL{background});}
+if ($TP_LOCAL{color}) {$TP_LOCAL{color} = colorconvert($TP_LOCAL{color});}
+
+if ($opts_debug) { warn "Optional parameters are\n  (possible color names are converted to postscript numerical values): \n"; warnhash %TP_LOCAL; }
 
 # read planes data
 if (defined $config->{planes}) {

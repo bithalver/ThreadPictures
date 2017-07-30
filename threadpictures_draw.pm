@@ -177,7 +177,7 @@ sub draw_all {
   my ($minX,$maxX,$minY,$maxY);
   foreach my $ATPAE_ (@TP_all) { # ATPAE stands for Actual TP_all Element
     my %ATPAE=%{$ATPAE_};
-    # warnhash %ATPAE;
+    # if ($opts_debug) { warn "Actual TP_all element is:\n"; warnhash %ATPAE };
     for ($ATPAE{'type'}) {
       when (/^net$/) {
         $minX//=$TP_all[0]{line1oX}; $maxX//=$TP_all[0]{line1oX}; $minY//=$TP_all[0]{line1oY}; $maxY//=$TP_all[0]{line1oY};
