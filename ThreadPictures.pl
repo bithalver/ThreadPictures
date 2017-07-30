@@ -9,8 +9,11 @@ use threadpictures_draw;
 use threadpictures_plane;
 
 use YAML::XS 'LoadFile';
-use Getopt::Std; $Getopt::Std::STANDARD_HELP_VERSION=1;
-my %opts;
+use Getopt::Long qw(GetOptions);
+Getopt::Long::Configure qw(gnu_getopt);
+
+# my %opts;
+my ($opts_input, $opts_output, $opts_params, $opts_help, $opts_version, $opts_debug) = ('stdin','stdout','','','','');
 
 # ---[BEGIN] test section
 # on final version, the whole section should be commented out / deleted !
@@ -29,63 +32,66 @@ my %opts;
 
 # ---[END] test section
 
-
-sub VERSION_MESSAGE { warn "ThreadPictures version 1.0\n"; }
+sub VERSION_MESSAGE { warn "ThreadPictures version 1.1\n"; exit 0}
 
 sub HELP_MESSAGE { # TODO: meaningful help message
-  warn "
-Usage:
+  warn "Usage:
+  $0 [-h|--help|-?]   # this help and exit
+  $0 {-v|--version}   # 1 line version info and exit
   $0 [-i INPUT_YAML_FILE] [-o OUTPUT_PS_FILE] [-p PARAMETER_STRING]
     # if -i is missing, reads yaml from stdin
     # if -o is missing, output goes to STDOUT
     # PARAMETER_STRING should be in the format 'key1;value1[;keyN;valueN]*'
     #   (any number of key-value pair could be specified)
-  $0 [-h|--help]      # this help
-  $0 {-v|--version}   # 1 line version info
-\n";
+  $0 {-d|--debug}   # turns on debud messages EXPERIMENTAL
+";
   exit 0;
 }
 
-getopts('i:o:hvp:',\%opts);
-# --help and --version handled by getopts automatically like 'h' and 'v'
+GetOptions(
+    'input|i=s' => \$opts_input,
+    'output|o=s' => \$opts_output,
+    'params|p=s' => \$opts_params,
+    'help|h|?' => \$opts_help,
+    'version|v' => \$opts_version,
+    'debug|d' => \$opts_debug,
+);
 
-if ($opts{'h'}) {VERSION_MESSAGE; HELP_MESSAGE;}
-if ($opts{'v'}) {VERSION_MESSAGE; exit 0;}
+if ($opts_help) {HELP_MESSAGE;}
+if ($opts_version) {VERSION_MESSAGE;}
 
 # read from yaml file (specified by '-i' switch) _or_ STDIN
 my $fh;
-if (! defined $opts{'i'} ) { $fh=*STDIN; }
-else {open $fh, '<', $opts{'i'} or die "can't open yaml file: $!";}
+if ( $opts_input =~ /stdin/i ) { $fh=*STDIN; }
+else {open $fh, '<', $opts_input or die "can't open yaml file: $!";}
 
 # convert YAML file to %config
 my $config = LoadFile($fh); # from YAML::XS module
 close($fh);
 
 # all output goes to file (specified by '-o' switch) _or_ STDOUT
-if (defined $opts{'o'} ) { open $fh, '>', $opts{'o'} or die "can't open output file for writing: $!"; select $fh}
+if ( $opts_output !~ /stdout/i ) { open $fh, '>', $opts_output or die "can't open output file for writing: $!"; select $fh}
 
-# use Data::Dumper; warn Dumper($config), "\n"; # This line is heavily for testing: prints out the whole structure from yaml
+if ($opts_debug) {use Data::Dumper; warn "Full input structure ---[BEGIN]---\n"; warn Dumper($config), "\n"; warn "Full input structure ---[END]---\n";}
 
-# Do the main thing: process %config to make output
 print_ps_filestart();
 
-# set the defaults or use the environment variables
+# command line options processing have to be AFTER global paramters processed
+# priority is (lowest to highest:
+#   - defaults (set in global_init)
+#   - environment variables start with TP_ (also set in global_init)
+#   - global parameters from yaml file
+#   - options specified with -p 
+
 global_init;
 
-# read global variables form yaml
 for my $AK (keys %{$config->{global}}) {
   # warn "$AK => $config->{global}->{$AK}\n";
   $TP_GLOBAL{$AK}=$config->{global}->{$AK};
 }
 
-# command line options processing have to be AFTER global paramters processed
-# priority is (lowest to highest:
-#   - defaults (set in stone in _global.pm)
-#   - environment variables start with TP_
-#   - global parameters from yaml file
-#   - options specified with -p
-if ($opts{'p'}) { # warn $opts{'p'},"\n";
-  my @OPTS=split(';',$opts{'p'});
+if ($opts_params) { if ($opts_debug)  {warn "Optional parameters are: $opts_params\n";}
+  my @OPTS=split(';',$opts_params);
   while (@OPTS) {my ($key,$value)=splice @OPTS,0,2; $TP_GLOBAL{$key}=$value}
 }
 

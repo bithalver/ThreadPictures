@@ -26,7 +26,8 @@ See attached yaml files for examples.
 Requirements:
  - perl 5.10
    - YAML::XS module
-   - Getopt::Std module
+   - Getopt::Long module
+   - Data::Dumper (only for debug)
  - ps2pdf command (part of ghostscript): only if you want a pdf output
 
 Tested with/on:
