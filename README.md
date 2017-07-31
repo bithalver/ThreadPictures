@@ -14,11 +14,14 @@ To run:
 (I do not guarantee this README is up-to-date all the time, run the program to get the latest)
 ```
 Usage:
-  $0 [-i INPUT_YAML_FILE] [-o OUTPUT_PS_FILE]
+  $0 [-h|--help|-?]   # this help and exit
+  $0 {-v|--version}   # 1 line version info and exit
+  $0 [-i INPUT_YAML_FILE] [-o OUTPUT_PS_FILE] [-p PARAMETER_STRING]*
     # if -i is missing, reads yaml from stdin
     # if -o is missing, output goes to STDOUT
-  $0 [-h|--help]      # this help
-  $0 {-v|--version}   # 1 line version info
+    # PARAMETER_STRING should be in the format key=value
+    #   (any number of key-value pair could be specified, each one needs it's own -p )
+  $0 {-d|--debug}   # turns on debud messages EXPERIMENTAL
 ```
 
 See attached yaml files for examples.
