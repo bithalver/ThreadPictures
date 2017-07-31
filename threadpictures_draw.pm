@@ -71,8 +71,8 @@ sub draw_net {
   $AN{firstthread} //= $TP_GLOBAL{firstthread};
   $AN{lastthread} //= $TP_GLOBAL{lastthread};
   $AN{lastthread} //= $AN{threads};
-  $AN{color} //= $TP_GLOBAL{color}; $AN{color}=colorconvert($AN{color}); my $color_changed=0;
-  if (! $TP_GLOBAL{BW} and $AN{color} ne '0,0,0' ) { say "currentrgbcolor\n$AN{color} setrgbcolor\n"; $color_changed=1}
+  $AN{color} //= $TP_GLOBAL{color}; if ($TP_PARAMS{color}) {$AN{color}=$TP_PARAMS{color}} ; $AN{color}=colorconvert($AN{color});
+  my $color_changed=0; if (! $TP_GLOBAL{BW} and $AN{color} ne '0,0,0' ) { say "currentrgbcolor\n$AN{color} setrgbcolor\n"; $color_changed=1}
   
   for ($AN{'style'}//=$TP_GLOBAL{style}) {
   when (/^normal$/i){ # old style was 0
@@ -196,18 +196,34 @@ sub draw_all {
   say "gsave";
 
   # drawing the background, if needed (white BG is the default, so we do not draw it)
-  if (! $TP_GLOBAL{BW} and $TP_GLOBAL{background} ne '1,1,1' ) { say "currentrgbcolor\n$TP_GLOBAL{background} setrgbcolor\n0 0 $TP_GLOBAL{pageXsize} $TP_GLOBAL{pageYsize} rectfill stroke\nsetrgbcolor\n"; }
+  if (! $TP_GLOBAL{BW}) {
+    my $bg=$TP_GLOBAL{background};
+    foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element
+      my %ATPAE=%{$ATPAE};
+      given ($ATPAE{'type'}) { when (/^background$/) { $bg=$ATPAE{'color'} ;} }
+    }
+    if (defined $TP_PARAMS{background}) {$bg=$TP_PARAMS{background};}
+
+    if ($bg ne '1 1 1') {
+      # warn "bg is: $bg\n";
+      say "currentrgbcolor\n$bg setrgbcolor\n0 0 $TP_GLOBAL{pageXsize} $TP_GLOBAL{pageYsize} rectfill stroke\nsetrgbcolor\n";
+    }
+  }
 
 # Print the pagename before the transformation
   if ($TP_GLOBAL{pagename} !~ /^\s*$/) { # print pagename only if it contains a non-whitespace character
     say "/Times-Roman 12 selectfont";
     say  cm(10.5)," ",cm(1.5)," moveto"; my $color_changed=0;
-    if (! $TP_GLOBAL{BW} and $TP_GLOBAL{color} ne '0,0,0' ) { say "currentrgbcolor\n$TP_GLOBAL{color} setrgbcolor\n"; $color_changed=1}
-    say "($TP_GLOBAL{pagename}) dup stringwidth pop neg 2 div 0 rmoveto show\n";
-    if ($color_changed) {say "setrgbcolor\n"}
+    if (! $TP_GLOBAL{BW} ) {
+      my $color=$TP_GLOBAL{color}; if ($TP_PARAMS{color}) {$color=$TP_PARAMS{color}}
+      if ($color ne '0 0 0') { say "currentrgbcolor\n$color setrgbcolor\n"; $color_changed=1}
+      say "($TP_GLOBAL{pagename}) dup stringwidth pop neg 2 div 0 rmoveto show\n";
+      if ($color_changed) { say "setrgbcolor\n";}
+    }
     $TP_GLOBAL{pagename}=''; # pagename is only for actual page; next one starts with empty one
   }
 
+ # Original PS code to write a multi-line pagename:
  #  1 1 PN length { /i exch def
  #    10.5 cm 2 cm moveto 0 PN length i sub 12 mul rmoveto
  #    PN i nth dup stringwidth pop neg 2 div 0 rmoveto show
@@ -225,11 +241,9 @@ sub draw_all {
 # iterate over @TP_all to draw every piece
   foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element
     my %ATPAE=%{$ATPAE};
-    for ($ATPAE{'type'}) {
-      when (/^net$/) {
-	    # print "net\n";
-		draw_net(%ATPAE);
-    }
+    given ($ATPAE{'type'}) {
+      when (/^net$/) { draw_net(%ATPAE); }
+      when (/^background$/) { }
 	  default {warn "type '$_' not implemented (yet); parameters were:\n".join(", ", map { "$_ => $ATPAE{$_}" } keys %ATPAE)."\n" ;}
     } ;
   }

@@ -7,13 +7,13 @@ use Exporter;
 
 our @ISA= qw( Exporter );
 
-our @EXPORT = qw( %TP_GLOBAL %TP_LOCAL @TP_all %TP_planes global_init minmax warnarray warnhash cm min max print_ps_filestart pi my_round colorconvert $opts_input $opts_output $opts_help $opts_version $opts_debug);
+our @EXPORT = qw( %TP_GLOBAL %TP_PARAMS @TP_all %TP_planes global_init minmax warnarray warnhash cm min max print_ps_filestart pi my_round colorconvert $opts_input $opts_output $opts_help $opts_version $opts_debug);
 
 # %TP_GLOBAL holds all global variables (even built-in defaults _or_ environment variable values
 our %TP_GLOBAL;
 
-# %TP_LOCAL holds parameters specified with -p command line options; starts empty
-our %TP_LOCAL;
+# %TP_PARAMS holds parameters specified with -p command line options; starts empty
+our %TP_PARAMS;
 
 our ($opts_input, $opts_output, $opts_help, $opts_version, $opts_debug)=('stdin','stdout');
 

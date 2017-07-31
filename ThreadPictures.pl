@@ -48,7 +48,7 @@ sub HELP_MESSAGE { # TODO: meaningful help message
 GetOptions(
     'input|i=s' => \$opts_input,
     'output|o=s' => \$opts_output,
-    'param|p=s' => \%TP_LOCAL,
+    'param|p=s' => \%TP_PARAMS,
     'help|h|?' => \$opts_help,
     'version|v' => \$opts_version,
     'debug|d' => \$opts_debug,
@@ -73,12 +73,12 @@ if ($opts_debug) {use Data::Dumper; warn "Full input structure ---[BEGIN]---\n";
 
 print_ps_filestart();
 
-# command line options processing have to be AFTER global paramters processed
+# command line options processing have to be AFTER global parameters processed
 # priority is (lowest to highest:
-#   - defaults (set in global_init)
-#   - environment variables start with TP_ (also set in global_init)
+#   - defaults (set in global_init) %TP_GLOBAL
+#   - environment variables start with TP_ (also set in global_init) %TP_GLOBAL
 #   - global parameters from yaml file
-#   - options specified with -p 
+#   - options specified with -p %TP_PARAMS
 
 global_init;
 
@@ -87,13 +87,15 @@ for my $AK (keys %{$config->{global}}) {
   $TP_GLOBAL{$AK}=$config->{global}->{$AK};
 }
 
+if ($TP_PARAMS{BW}) {$TP_GLOBAL{BW}=1;} # Being black'n'white is global: even all pages are or not
+
 $TP_GLOBAL{background} = colorconvert($TP_GLOBAL{background});
 $TP_GLOBAL{color} = colorconvert($TP_GLOBAL{color});
 
-if ($TP_LOCAL{background}) {$TP_LOCAL{background} = colorconvert($TP_LOCAL{background});}
-if ($TP_LOCAL{color}) {$TP_LOCAL{color} = colorconvert($TP_LOCAL{color});}
+if ($TP_PARAMS{background}) {$TP_PARAMS{background} = colorconvert($TP_PARAMS{background});}
+if ($TP_PARAMS{color}) {$TP_PARAMS{color} = colorconvert($TP_PARAMS{color});}
 
-if ($opts_debug) { warn "Optional parameters are\n  (possible color names are converted to postscript numerical values): \n"; warnhash %TP_LOCAL; }
+if ($opts_debug) { warn "Optional parameters are\n  (possible color names are converted to postscript numerical values): \n"; warnhash %TP_PARAMS; }
 
 # read planes data
 if (defined $config->{planes}) {
@@ -137,7 +139,10 @@ for (0 .. @{$config->{pages}}-1) {
         while (@AE) {modify_lastelement(shift @AE,shift @AE)}
       }
       when (/^pagename$/i){
-        $TP_GLOBAL{pagename}=splice @AE,0,1
+        $TP_GLOBAL{pagename}=splice(@AE,0,1);
+      }
+      when (/^background$/i){
+        $TP_all[@TP_all] = { type => 'background', color => colorconvert(splice(@AE,0,1)) }
       }
       default {warn "element '$_' is not (yet) supported (but processing goes on)\n";}
       }
