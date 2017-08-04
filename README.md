@@ -2,7 +2,7 @@
 
 Under construction !
 
-These files help me to generate a very special graphic, which I call ThreadPictures (because I sewt mos of them on hard paper with real needle and sewing thread).
+These files help me to generate a very special graphic, which I call ThreadPictures (because I sew most of them on hard paper with real needle and sewing thread).
 
 If you are interested, all scanned pictures are visible at https://www.dropbox.com/sh/1w6j79di8yzphq6/AADA3nOPkDXy6Ndc15HN8FBLa?dl=0 .
 
