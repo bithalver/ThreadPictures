@@ -218,9 +218,9 @@ sub draw_all {
     if (! $TP_GLOBAL{BW} ) {
       my $color=$TP_GLOBAL{color}; if ($TP_PARAMS{color}) {$color=$TP_PARAMS{color}}
       if ($color ne '0 0 0') { say "currentrgbcolor\n$color setrgbcolor\n"; $color_changed=1}
-      say "($TP_GLOBAL{pagename}) dup stringwidth pop neg 2 div 0 rmoveto show\n";
-      if ($color_changed) { say "setrgbcolor\n";}
     }
+    say "($TP_GLOBAL{pagename}) dup stringwidth pop neg 2 div 0 rmoveto show\n";
+    if ($color_changed) { say "setrgbcolor\n"; $color_changed=0;}
     $TP_GLOBAL{pagename}=''; # pagename is only for actual page; next one starts with empty one
   }
 
