@@ -54,6 +54,8 @@ GetOptions(
     'debug|d' => \$opts_debug,
 );
 
+# warnhash %TP_PARAMS;
+
 if ($opts_help) {HELP_MESSAGE;}
 if ($opts_version) {VERSION_MESSAGE;}
 
@@ -87,7 +89,7 @@ for my $AK (keys %{$config->{global}}) {
   $TP_GLOBAL{$AK}=$config->{global}->{$AK};
 }
 
-if ($TP_PARAMS{BW}) {$TP_GLOBAL{BW}=1;} # Being black'n'white is global: even all pages are or not
+if ($TP_PARAMS{BW}) {$TP_GLOBAL{BW}=1;} # Being black'n'white is global: even all pages are BW or not
 
 $TP_GLOBAL{background} = colorconvert($TP_GLOBAL{background});
 $TP_GLOBAL{color} = colorconvert($TP_GLOBAL{color});

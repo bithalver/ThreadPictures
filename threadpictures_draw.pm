@@ -74,7 +74,8 @@ sub draw_net {
   $AN{color} //= $TP_GLOBAL{color}; if ($TP_PARAMS{color}) {$AN{color}=$TP_PARAMS{color}} ; $AN{color}=colorconvert($AN{color});
   my $color_changed=0; if (! $TP_GLOBAL{BW} and $AN{color} ne '0,0,0' ) { say "currentrgbcolor\n$AN{color} setrgbcolor\n"; $color_changed=1}
   
-  for ($AN{'style'}//=$TP_GLOBAL{style}) {
+  if ($TP_PARAMS{style}) {$AN{'style'}=$TP_PARAMS{style};}
+  for ($AN{'style'}//=$TP_GLOBAL{style}) { # warn $AN{'style'},"\n";
   when (/^normal$/i){ # old style was 0
     for my $weight ($AN{'firstthread'} .. $AN{'lastthread'}) {
       # my ($fromX,$fromY,$toX,$toY);
@@ -93,7 +94,7 @@ sub draw_net {
     draw_line($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY});
     draw_line($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY});
 
-    for my $weight (1 .. $AN{'threads'}-1) {
+    for my $weight (0 .. $AN{'threads'}) {
       my ($X,$Y);
       ($X,$Y)=TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$weight,$AN{threads});
       draw_line($X+$line1vectorX,$Y+$line1vectorY,$X-$line1vectorX,$Y-$line1vectorY);
