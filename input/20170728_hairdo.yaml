@@ -4,8 +4,8 @@
 ---
 global:
     threads: 10
-    background: gray
-    color: orange
+    background: lightblue
+    color: black
     style: filledcurve
 planes:
   - pa3;regular;3;90
@@ -21,20 +21,20 @@ planes:
   - H;connected;G;0;G;1;G;0;2
 pages:
   -
-    - pagename;Hairdo
+    - pagename;Atlassian punk hairdo / Atlantiszi punk frizura
     - net3;H;0;H;1;H;2
-    - net3;H;1;H;2;H;3
+    - net3;H;1;H;2;H;3;color;yellow
     - net3;G;0;G;1;G;2
-    - net3;G;1;G;2;G;3
+    - net3;G;1;G;2;G;3;color;yellow
     - net3;F;0;F;1;F;2
-    - net3;F;1;F;2;F;3
+    - net3;F;1;F;2;F;3;color;yellow
     - net3;E;0;E;1;E;2
-    - net3;E;1;E;2;E;3
+    - net3;E;1;E;2;E;3;color;yellow
     - net3;D;0;D;1;D;2
-    - net3;D;1;D;2;D;3
+    - net3;D;1;D;2;D;3;color;yellow
     - net3;C;0;C;1;C;2
-    - net3;C;1;C;2;C;3
+    - net3;C;1;C;2;C;3;color;yellow
     - net3;B;0;B;1;B;2
-    - net3;B;1;B;2;B;3
+    - net3;B;1;B;2;B;3;color;yellow
     - net3;A;0;A;1;A;2
-    - net3;A;1;A;2;A;3
+    - net3;A;1;A;2;A;3;color;yellow
