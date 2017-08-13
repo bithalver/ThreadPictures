@@ -1,0 +1,86 @@
+---
+global:
+    background: lightgray
+    style: filledcurve
+planes:
+  - pa31;regular;3;90
+  - pa32;connected;pa31;2;pa31;3;pa31;3;2
+  - p10;freeform;0;0;1;0;2;0;3;0;4;0;5;0;6;0;7;0;8;0;9;0;10;0
+  - A;connected;pa31;1;pa31;2;p10;0;10
+  - B;connected;pa31;3;pa31;2;p10;0;10
+  - C;connected;pa32;1;pa32;3;p10;0;10
+  - D;connected;pa32;1;pa32;2;p10;0;10
+  - E;connected;pa32;1;pa31;1;p10;0;10
+pages:
+  -
+    - pagename;Fish / Hal
+    - net3;A;0;B;0;C;0;threads;20;color;blue
+    - net3;A;1;B;1;C;1;threads;18;color;yellow
+    - net3;A;2;B;2;C;2;threads;16;color;blue
+    - net3;A;3;B;3;C;3;threads;14;color;yellow
+    - net3;A;4;B;4;C;4;threads;12;color;blue
+    - net3;A;5;B;5;C;5;threads;10;color;yellow
+    - net3;A;6;B;6;C;6;threads;8;color;blue
+    - net3;A;7;B;7;C;7;threads;6;color;yellow
+    - net3;A;8;B;8;C;8;threads;4;color;blue
+    - net3;A;9;B;9;C;9;threads;2;color;yellow
+  -
+    - pagename;Fish going up / Hal felfele
+    - net3;C;9;E;9;D;9;threads;20;color;yellow
+    - net3;C;8;E;8;D;8;threads;18;color;blue
+    - net3;C;7;E;7;D;7;threads;16;color;yellow
+    - net3;C;6;E;6;D;6;threads;14;color;blue
+    - net3;C;5;E;5;D;5;threads;12;color;yellow
+    - net3;C;4;E;4;D;4;threads;10;color;blue
+    - net3;C;3;E;3;D;3;threads;8;color;yellow
+    - net3;C;2;E;2;D;2;threads;6;color;blue
+    - net3;C;1;E;1;D;1;threads;4;color;yellow
+    - net3;C;0;E;0;D;0;threads;2;color;blue
+  -
+    - pagename;Chaosfish 1 / Kaoszhal 1
+    - net3;A;0;B;0;D;0;threads;20;color;blue
+    - net3;A;1;B;1;D;1;threads;18;color;yellow
+    - net3;A;2;B;2;D;2;threads;16;color;blue
+    - net3;A;3;B;3;D;3;threads;14;color;yellow
+    - net3;A;4;B;4;D;4;threads;12;color;blue
+    - net3;A;5;B;5;D;5;threads;10;color;yellow
+    - net3;A;6;B;6;D;6;threads;8;color;blue
+    - net3;A;7;B;7;D;7;threads;6;color;yellow
+    - net3;A;8;B;8;D;8;threads;4;color;blue
+    - net3;A;9;B;9;D;9;threads;2;color;yellow
+  -
+    - pagename;Chaosfish 2 / Kaoszhal 2
+    - net3;A;0;B;0;C;9;threads;20;color;blue
+    - net3;A;1;B;1;C;8;threads;18;color;yellow
+    - net3;A;2;B;2;C;7;threads;16;color;blue
+    - net3;A;3;B;3;C;6;threads;14;color;yellow
+    - net3;A;4;B;4;C;5;threads;12;color;blue
+    - net3;A;5;B;5;C;4;threads;10;color;yellow
+    - net3;A;6;B;6;C;3;threads;8;color;blue
+    - net3;A;7;B;7;C;2;threads;6;color;yellow
+    - net3;A;8;B;8;C;1;threads;4;color;blue
+    - net3;A;9;B;9;C;0;threads;2;color;yellow
+  -
+    - pagename;Chaosfish 3 side 'a' / Kaoszhal 3 'a' oldal
+    - net3;A;0;B;9;C;0;threads;20;color;blue
+    - net3;A;1;B;8;C;1;threads;18;color;yellow
+    - net3;A;2;B;7;C;2;threads;16;color;blue
+    - net3;A;3;B;6;C;3;threads;14;color;yellow
+    - net3;A;4;B;5;C;4;threads;12;color;blue
+    - net3;A;5;B;4;C;5;threads;10;color;yellow
+    - net3;A;6;B;3;C;6;threads;8;color;blue
+    - net3;A;7;B;2;C;7;threads;6;color;yellow
+    - net3;A;8;B;1;C;8;threads;4;color;blue
+    - net3;A;9;B;0;C;9;threads;2;color;yellow
+  -
+    - pagename;Chaosfish 3 side 'b' / Kaoszhal 3 'b' oldal
+    - net3;A;9;B;0;C;9;threads;2;color;yellow
+    - net3;A;8;B;1;C;8;threads;4;color;blue
+    - net3;A;7;B;2;C;7;threads;6;color;yellow
+    - net3;A;6;B;3;C;6;threads;8;color;blue
+    - net3;A;5;B;4;C;5;threads;10;color;yellow
+    - net3;A;4;B;5;C;4;threads;12;color;blue
+    - net3;A;3;B;6;C;3;threads;14;color;yellow
+    - net3;A;2;B;7;C;2;threads;16;color;blue
+    - net3;A;1;B;8;C;1;threads;18;color;yellow
+    - net3;A;0;B;9;C;0;threads;20;color;blue

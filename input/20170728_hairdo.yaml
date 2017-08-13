@@ -1,6 +1,6 @@
 # command line is:
-#   NAME=20170728_snail; ./TP -i ${NAME}.yaml -o ${NAME}.ps ; ps2pdf ${NAME}.ps ; rm ${NAME}.ps
-# provides 20170728_snail.pdf
+#   NAME=20170728_hairdo; ./TP -i ${NAME}.yaml -o ${NAME}.ps ; ps2pdf ${NAME}.ps ; rm ${NAME}.ps
+# provides 20170728_hairdo.pdf
 ---
 global:
     threads: 10
@@ -21,7 +21,7 @@ planes:
   - H;connected;G;0;G;1;G;0;2
 pages:
   -
-    - pagename;Atlassian punk hairdo / Atlantiszi punk frizura
+    - pagename;Atlantis punk hairdo / Atlantiszi punk frizura
     - net3;H;0;H;1;H;2
     - net3;H;1;H;2;H;3;color;yellow
     - net3;G;0;G;1;G;2
