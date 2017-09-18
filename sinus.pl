@@ -16,22 +16,28 @@ sub my_sin {return  my_round(sin($_[0]/180*pi()))*90};
 my $pieces=6;
 my $sides=6;
 my $opts_help;
+my $start_angle=0;
+my $end_angle=360;
 
 sub HELP_MESSAGE { # TODO: meaningful help message
   warn 'This code just provides a yaml file for ThreadPictures.pl
 Usage:
   $0 [-h|--help|-?]   # this help and exit
-  $0 [-p|--pieces pieces_number] [-s|--sides sides_number]
+  $0 [-p|--pieces pieces_number] [-i|--sides sides_number] [-s|-start_angle start_angle_number] [-e|-end_angle end_angle_number]
 
 Example:
 
-export PIECES=100 ; export SIDES=100 ; ./sinus.pl --pieces $PIECES -s $SIDES| ./TP -o sinus.ps  -p background=black -p color=red -p style=filledcurve; ps2pdf sinus.ps "sinus $PIECES $SIDES".pdf ; rm sinus.ps',"\n";
+export PIECES=100 ; export SIDES=100 ; export START_ANGLE=000 ; export END_ANGLE=540 ; ./sinus.pl -p $PIECES -i $SIDES -s $START_ANGLE -e $END_ANGLE | ./TP -o sinus.ps  -p background=black -p color=red -p style=filledcurve; ps2pdf sinus.ps "sinus $PIECES $SIDES $START_ANGLE $END_ANGLE".pdf ; rm sinus.ps
+export PIECES=150 ; export SIDES=100 ; export START_ANGLE=000 ; export END_ANGLE=540 ; ./sinus.pl -p $PIECES -i $SIDES -s $START_ANGLE -e $END_ANGLE | ./TP -o sinus.ps  -p background=black -p color=red -p style=filledcurve; ps2pdf sinus.ps "sinus $START_ANGLE $END_ANGLE $PIECES $SIDES".pdf ; rm sinus.ps
+'; 
   exit 0;
 }
 
 GetOptions(
     'pieces|p=s' => \$pieces,
-    'sides|s=s' => \$sides,
+    'sides|i=s' => \$sides,
+    'start|s=s' => \$start_angle,
+    'end|e=s' => \$end_angle,
     'help|h|?' => \$opts_help,
 );
 
@@ -46,21 +52,19 @@ planes:
   - s;freeform";
 
 for my $i (0 .. $pieces) {
+#  my $angle=$start_angle+($end_angle-$start_angle)/$pieces*$i; print ';',-my_sin($angle),';',$angle;
   print ';',-my_sin(360/$pieces*$i),';',360/$pieces*$i;
+
 } print "\n";
 
 for my $i (0 .. $pieces-1) {
-#  print "  - p$i;connected;b;1;b;2;s;",$i,";",$i+1,"\n"
   print "  - p$i;connected;s;",$i,";s;",$i+1,";b;1;2\n"
 }
 
 print 
 "pages:
   -
-    - pagename;sinus - $pieces part, $sides sides start
+    - pagename;sinus - start and end angles:$start_angle,$end_angle , $pieces part, $sides sides
 " ;
 
-for my $i (0 .. $pieces-1) {
-#  print "    - net3;plane2;1;plane2;2;plane2;3\n";
-  print "    - net3;p$i;1;p$i;0;p$i;2\n";
-}
+for my $i (0 .. $pieces-1) { print "    - net3;p$i;1;p$i;0;p$i;2\n"; }
