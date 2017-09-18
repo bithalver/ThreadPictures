@@ -25,9 +25,9 @@ Usage:
   $0 [-h|--help|-?]   # this help and exit
   $0 [-p|--pieces pieces_number] [-i|--sides sides_number] [-s|-start_angle start_angle_number] [-e|-end_angle end_angle_number]
 
-Example:
+Examples:
 
-export PIECES=100 ; export SIDES=100 ; export START_ANGLE=000 ; export END_ANGLE=540 ; ./sinus.pl -p $PIECES -i $SIDES -s $START_ANGLE -e $END_ANGLE | ./TP -o sinus.ps  -p background=black -p color=red -p style=filledcurve; ps2pdf sinus.ps "sinus $PIECES $SIDES $START_ANGLE $END_ANGLE".pdf ; rm sinus.ps
+export PIECES=100 ; export SIDES=100 ; export START_ANGLE=000 ; export END_ANGLE=360 ; ./sinus.pl -p $PIECES -i $SIDES -s $START_ANGLE -e $END_ANGLE | ./TP -o sinus.ps  -p background=black -p color=red -p style=filledcurve; ps2pdf sinus.ps "sinus $PIECES $SIDES $START_ANGLE $END_ANGLE".pdf ; rm sinus.ps
 export PIECES=150 ; export SIDES=100 ; export START_ANGLE=000 ; export END_ANGLE=540 ; ./sinus.pl -p $PIECES -i $SIDES -s $START_ANGLE -e $END_ANGLE | ./TP -o sinus.ps  -p background=black -p color=red -p style=filledcurve; ps2pdf sinus.ps "sinus $START_ANGLE $END_ANGLE $PIECES $SIDES".pdf ; rm sinus.ps
 '; 
   exit 0;
