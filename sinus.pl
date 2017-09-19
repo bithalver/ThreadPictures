@@ -29,6 +29,7 @@ Examples:
 
 export PIECES=100 ; export SIDES=100 ; export START_ANGLE=000 ; export END_ANGLE=360 ; ./sinus.pl -p $PIECES -i $SIDES -s $START_ANGLE -e $END_ANGLE | ./TP -o sinus.ps  -p background=black -p color=red -p style=filledcurve; ps2pdf sinus.ps "sinus $PIECES $SIDES $START_ANGLE $END_ANGLE".pdf ; rm sinus.ps
 export PIECES=150 ; export SIDES=100 ; export START_ANGLE=000 ; export END_ANGLE=540 ; ./sinus.pl -p $PIECES -i $SIDES -s $START_ANGLE -e $END_ANGLE | ./TP -o sinus.ps  -p background=black -p color=red -p style=filledcurve; ps2pdf sinus.ps "sinus $START_ANGLE $END_ANGLE $PIECES $SIDES".pdf ; rm sinus.ps
+export PIECES=150 ; export SIDES=100 ; export START_ANGLE=180 ; export END_ANGLE=720 ; ./sinus.pl -p $PIECES -i $SIDES -s $START_ANGLE -e $END_ANGLE | ./TP -o sinus.ps  -p background=black -p color=red -p style=filledcurve; ps2pdf sinus.ps "output/sinus $START_ANGLE $END_ANGLE $PIECES $SIDES".pdf ; rm sinus.ps
 '; 
   exit 0;
 }
@@ -52,8 +53,8 @@ planes:
   - s;freeform";
 
 for my $i (0 .. $pieces) {
-#  my $angle=$start_angle+($end_angle-$start_angle)/$pieces*$i; print ';',-my_sin($angle),';',$angle;
-  print ';',-my_sin(360/$pieces*$i),';',360/$pieces*$i;
+  my $angle=$start_angle+($end_angle-$start_angle)/$pieces*$i; print ';',-my_sin($angle),';',$angle;
+#  print ';',-my_sin(360/$pieces*$i),';',360/$pieces*$i;
 
 } print "\n";
 
