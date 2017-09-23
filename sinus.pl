@@ -18,6 +18,7 @@ my $sides=6;
 my $opts_help;
 my $start_angle=0;
 my $end_angle=360;
+my $double_sided;
 
 sub HELP_MESSAGE { # TODO: meaningful help message
   warn 'This code just provides a yaml file for ThreadPictures.pl
@@ -30,6 +31,8 @@ Examples:
 export PIECES=100 ; export SIDES=100 ; export START_ANGLE=000 ; export END_ANGLE=360 ; ./sinus.pl -p $PIECES -i $SIDES -s $START_ANGLE -e $END_ANGLE | ./TP -o sinus.ps  -p background=black -p color=red -p style=filledcurve; ps2pdf sinus.ps "sinus $PIECES $SIDES $START_ANGLE $END_ANGLE".pdf ; rm sinus.ps
 export PIECES=150 ; export SIDES=100 ; export START_ANGLE=000 ; export END_ANGLE=540 ; ./sinus.pl -p $PIECES -i $SIDES -s $START_ANGLE -e $END_ANGLE | ./TP -o sinus.ps  -p background=black -p color=red -p style=filledcurve; ps2pdf sinus.ps "sinus $START_ANGLE $END_ANGLE $PIECES $SIDES".pdf ; rm sinus.ps
 export PIECES=150 ; export SIDES=100 ; export START_ANGLE=180 ; export END_ANGLE=720 ; ./sinus.pl -p $PIECES -i $SIDES -s $START_ANGLE -e $END_ANGLE | ./TP -o sinus.ps  -p background=black -p color=red -p style=filledcurve; ps2pdf sinus.ps "output/sinus $START_ANGLE $END_ANGLE $PIECES $SIDES".pdf ; rm sinus.ps
+
+export END_ANGLE=360 ; ./sinus.pl -p $PIECES -i $SIDES -s $START_ANGLE -e $END_ANGLE -d | ./TP -o sinus.ps  -p background=black -p color=red -p style=filledcurve; ps2pdf sinus.ps "output/sinus $START_ANGLE $END_ANGLE $PIECES $SIDES D".pdf ; rm sinus.ps
 '; 
   exit 0;
 }
@@ -40,6 +43,7 @@ GetOptions(
     'start|s=s' => \$start_angle,
     'end|e=s' => \$end_angle,
     'help|h|?' => \$opts_help,
+    'd|double-sided|?' => \$double_sided,
 );
 
 if ($opts_help) {HELP_MESSAGE;}
@@ -59,13 +63,25 @@ for my $i (0 .. $pieces) {
 } print "\n";
 
 for my $i (0 .. $pieces-1) {
-  print "  - p$i;connected;s;",$i,";s;",$i+1,";b;1;2\n"
+  print "  - p$i;connected;s;",$i,";s;",$i+1,";b;1;2\n" ;
+  if ($double_sided) {
+    print "  - d$i;connected;s;",$i,";s;",$i+1,";b;2;1\n"
+  }
 }
 
 print 
 "pages:
   -
-    - pagename;sinus - start and end angles:$start_angle,$end_angle , $pieces part, $sides sides
+    - pagename;sinus - start and end angles:$start_angle-$end_angle , $pieces part, $sides sides";
+if ($double_sided) {
+  print ", Double"
+}
+print "
 " ;
 
-for my $i (0 .. $pieces-1) { print "    - net3;p$i;1;p$i;0;p$i;2\n"; }
+for my $i (0 .. $pieces-1) {
+  print "    - net3;p$i;1;p$i;0;p$i;2\n";
+  if ($double_sided) {
+    print "    - net3;d$i;1;d$i;0;d$i;2\n";
+  }
+}
