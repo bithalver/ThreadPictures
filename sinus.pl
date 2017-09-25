@@ -51,7 +51,7 @@ if ($opts_help) {HELP_MESSAGE;}
 print "# This is a generated yaml from $0
 ---
 global:
-    threads: 20
+    threads: 1
 planes:
   - b;regular;$sides;0
   - s;freeform";
