@@ -1,0 +1,24 @@
+# command line is:
+#   ./TP -i input/20171119_path.yaml -o path.ps ; ps2pdf path.ps output/20171119_path.pdf ; rm path.ps
+# provides 20171119_path.pdf
+---
+global:
+    style: filledcurve
+    background: gray
+    color: orange
+    style: filledcurve
+    slices: 20
+pages:
+  -
+    - pagename; path variants |param 0 0.25 0.33 0.4 0.5 0.6 0.75 1 1.25 |wide|asym|
+    - path;0;0;0;10;variant;param;param;0
+    - path;2;0;2;10;variant;param;param;0.25
+    - path;4;0;4;10;variant;param;param;0.33
+    - path;6;0;6;10;variant;param;param;0.4
+    - path;8;0;8;10;variant;param;param;0.5
+    - path;10;0;10;10;variant;param;param;0.6
+    - path;12;0;12;10;variant;param;param;0.75
+    - path;14;0;14;10;variant;param;param;1
+    - path;16;0;16;10;variant;param;param;1.25
+    - path;18;0;18;10;variant;wide
+    - path;20;0;20;10;variant;asym

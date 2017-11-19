@@ -15,20 +15,24 @@ planes:
   - plane4;connected;plane2;1;plane2;2;plane1;2;1
 pages:
   -
-    - pagename; first ever connected plane test ! now in color !
-    - net3;plane2;1;plane2;2;plane2;3;color;yellow
-    - net3;plane4;1;plane4;2;plane4;3;color;blue
-  -
-    - pagename;this is the 2nd test pagename
-    - net4;0;10;0;0;0;0;10;0;threads;4;style;curve
-    - net3;0;9;0;-1;10;-1;style;filledcurve
-    - net;0;20;0;10;0;10;10;10
-    - net;0;30;10;30;10;30;10;20
-    - net;10;30;20;30;20;30;20;20
-    - net;1;10;1;0;1;0;11;0;threads;4;style;inversefilledcurve
+    - pagename; path first test
+    - path;plane2;0;plane2;1;these_parameters;are_not_important;a;b;c;d
+#  -
+#    - pagename; first ever connected plane test ! now in color !
+#    - net3;plane2;1;plane2;2;plane2;3;color;yellow
+#    - net3;plane4;1;plane4;2;plane4;3;color;blue
+#    - background;gray
+#  -
+#    - pagename;this is the 2nd test pagename
+#    - net4;0;10;0;0;0;0;10;0;threads;4;style;curve
+#    - net3;0;9;0;-1;10;-1;style;filledcurve
+#    - net;0;20;0;10;0;10;10;10
+#    - net;0;30;10;30;10;30;10;20
+#    - net;10;30;20;30;20;30;20;20
+#    - net;1;10;1;0;1;0;11;0;threads;4;style;inversefilledcurve
 #    - notsupported;rest is also ignored;whatever
-  -
-    - net;0;10;0;0;1;1;11;1;style;border
+#  -
+#    - net;0;10;0;0;1;1;11;1;style;border
 #  -
 #    - net;0;10;0;0;1;1;11;1;style;emptytriangle
 #  -

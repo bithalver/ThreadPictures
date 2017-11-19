@@ -41,6 +41,18 @@ sub global_init {
   # What is the default color to draw ?
   $ENV{TP_color} //='black';
   $TP_GLOBAL{color} //= $ENV{TP_color};
+
+  # How many slices do we use in a path ?
+  $ENV{TP_slices} //=20;
+  $TP_GLOBAL{slices} //= $ENV{TP_slices};
+
+  # Which path variant do we use ? possible values are 'out' 'crossed'
+  $ENV{TP_path_variant} //='out';
+  $TP_GLOBAL{path_variant} //= $ENV{TP_path_variant};
+  
+  # For the 'param' path, what is the numerical parameter ? Default is zero, which is 'out'
+  $ENV{TP_path_param} //=0;
+  $TP_GLOBAL{path_param} //= $ENV{TP_path_param};
 }
 
 sub max ($$) { $_[$_[0] < $_[1]] }

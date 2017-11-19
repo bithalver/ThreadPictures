@@ -8,7 +8,7 @@ use 5.10.0;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
-our @EXPORT = qw( draw_all add_net4 add_net3 modify_lastelement );
+our @EXPORT = qw( draw_all add_net4 add_net3 modify_lastelement add_path );
 
 #To optimize the whole drawing to fit the page, minimum and maximum X and Y has to be determined
 our ($TP_minX,$TP_minY,$TP_maxX,$TP_maxY);
@@ -62,6 +62,73 @@ sub add_net4 {
 }
 
 sub add_net3 { return add_net4($_[0],$_[1],$_[2],$_[3],$_[2],$_[3],$_[4],$_[5]);}
+
+sub add_path {
+  my (@input)=@_; my ($startX,$startY,$endX,$endY)=pointsfromplanesordirect(splice @input,0,4);
+  my %AP; #AP like ActualPath
+  
+  if ($opts_debug) { warn "'path' coordinates and then parameters are: \n"; warnarray (($startX,$startY,$endX,$endY)); }
+  while (@input) { my ($key, $value)=(shift @input,shift @input); $AP{$key} = $value ;}
+
+  $AP{slices} //= $TP_PARAMS{slices} ;
+  $AP{slices} //= $TP_GLOBAL{slices} ;
+
+  $AP{variant} //= $TP_PARAMS{path_variant} ;
+  $AP{variant} //= $TP_GLOBAL{path_variant} ;
+
+  # this parameter controls the 'param' style ; 0 is 'out'; 1 is 'stairs'; 0.5 is 'cont'
+  $AP{param} //= $TP_PARAMS{path_param} ;
+  $AP{param} //= $TP_GLOBAL{path_param} ;
+  if ($opts_debug) { warnhash(%AP) ;}
+  
+  if ($AP{variant} =~ /^out$/i) {$AP{variant}='param' ; $AP{param}=0}
+  if ($AP{variant} =~ /^cont/i) {$AP{variant}='param' ; $AP{param}=0.5}
+  if ($AP{variant} =~ /^stair$/i) {$AP{variant}='param' ; $AP{param}=1}
+
+  for my $weight (1 .. $AP{slices}-1) {
+    ## SS like SliceStart; SM like SliceMiddle; SE like SliceEnd
+    my ($SS_x,$SS_y)=TP_weight($startX,$startY,$endX,$endY,$weight-1,$AP{slices});
+    my ($SM_x,$SM_y)=TP_weight($startX,$startY,$endX,$endY,$weight,$AP{slices});
+    my ($SE_x,$SE_y)=TP_weight($startX,$startY,$endX,$endY,$weight+1,$AP{slices});
+    
+    my $LR= ($weight & 1 ?  1 : -1); # Left or Right ?
+
+    my $OV_x=$SS_y-$SM_y; my $OV_y=$SM_x-$SS_x; #OV like OrthogonalVector
+    my $OV_x2=$OV_x/2; my $OV_y2=$OV_y/2; #Half of the above
+
+    for ($AP{variant}) {
+    when (/^param$/i){
+      $SM_x+=$LR*$OV_x; $SM_y+=$LR*$OV_y;
+      my $C=$AP{param};
+
+      $SS_x-=$LR*$OV_x*$C; $SS_y-=$LR*$OV_y*$C;
+      $SM_x-=$LR*$OV_x*$C; $SM_y-=$LR*$OV_y*$C;
+      $SE_x-=$LR*$OV_x*$C; $SE_y-=$LR*$OV_y*$C;
+      my $temp=$AP{variant}; # add_net3 somehow modifies the value of $AP{variant} ...
+      add_net3($SS_x,$SS_y,$SM_x,$SM_y,$SE_x,$SE_y);
+      $AP{variant}=$temp;
+    }
+    when (/^asym/i){
+      $SS_x-=$LR*$OV_x2; $SS_y-=$LR*$OV_y2;
+      $SM_x+=$LR*$OV_x2; $SM_y+=$LR*$OV_y2;
+      $SM_x+=$LR*$OV_x2; $SM_y+=$LR*$OV_y2;
+      my $temp=$AP{variant}; # add_net3 somehow modifies the value of $AP{variant} ...
+      add_net3($SS_x,$SS_y,$SM_x,$SM_y,$SE_x,$SE_y);
+      $AP{variant}=$temp;
+    }
+    when (/^wide$/i){
+      $SS_x-=$LR*$OV_x; $SS_y-=$LR*$OV_y;
+      $SM_x+=$LR*$OV_x*2; $SM_y+=$LR*$OV_y*2;
+      $SE_x-=$LR*$OV_x; $SE_y-=$LR*$OV_y;
+      my $temp=$AP{variant}; # add_net3 somehow modifies the value of $AP{variant} ...
+      add_net3($SS_x,$SS_y,$SM_x,$SM_y,$SE_x,$SE_y);
+      $AP{variant}=$temp;
+    }
+    default {warn "path variant $AP{variant} is not (yet) implemented\nSupported ones: out, cont, asym, wide, stair, param\n";return}
+    }
+  }
+  
+}
 
 # To draw one element of the 'net' type
 sub draw_net {

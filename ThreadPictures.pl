@@ -146,6 +146,9 @@ for (0 .. @{$config->{pages}}-1) {
       when (/^background$/i){
         $TP_all[@TP_all] = { type => 'background', color => colorconvert(splice(@AE,0,1)) }
       }
+      when (/^path$/i){
+        add_path(@AE);
+      }
       default {warn "element '$_' is not (yet) supported (but processing goes on)\n";}
       }
   }
