@@ -23,7 +23,7 @@ Usage:
     # if -o is missing, output goes to STDOUT
     # PARAMETER_STRING should be in the format key=value
     #   (any number of key-value pair could be specified, each one needs it's own -p )
-  $0 {-d|--debug}   # turns on debud messages EXPERIMENTAL
+  $0 {-d|--debug}   # turns on debug messages EXPERIMENTAL
 ```
 
 See attached yaml files for examples.
