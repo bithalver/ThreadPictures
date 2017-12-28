@@ -1,4 +1,4 @@
-# command line is:
+# command line is: 
 #   ./TP -i input/20171119_path.yaml -o path.ps ; ps2pdf path.ps output/20171119_path.pdf ; rm path.ps
 # provides 20171119_path.pdf
 ---
@@ -6,18 +6,168 @@ global:
     style: filledcurve
     background: gray
     color: orange
-    slices: 20
+    slices: 10
 pages:
   -
-    - pagename; path variants |param 0 0.25 0.33 0.4 0.5 0.6 0.75 1 1.25 |wide|asym|
-    - path;0;0;0;10;variant;param;param;0
-    - path;2;0;2;10;variant;param;param;0.25
-    - path;4;0;4;10;variant;param;param;0.33
-    - path;6;0;6;10;variant;param;param;0.4
-    - path;8;0;8;10;variant;param;param;0.5
-    - path;10;0;10;10;variant;param;param;0.6
-    - path;12;0;12;10;variant;param;param;0.75
-    - path;14;0;14;10;variant;param;param;1
-    - path;16;0;16;10;variant;param;param;1.25
-    - path;18;0;18;10;variant;wide
-    - path;20;0;20;10;variant;asym
+    - pagename; path variants |param 0 0.25 0.33 0.4 0.5 0.6 0.75 1 1.25 |wide|asym|;background;white
+    - path;0;0;0;10;variant;param;param;0;slices;20
+    - path;2;0;2;10;variant;param;param;0.25;slices;20
+    - path;4;0;4;10;variant;param;param;0.33;slices;20
+    - path;6;0;6;10;variant;param;param;0.4;slices;20
+    - path;8;0;8;10;variant;param;param;0.5;slices;20
+    - path;10;0;10;10;variant;param;param;0.6;slices;20
+    - path;12;0;12;10;variant;param;param;0.75;slices;20
+    - path;14;0;14;10;variant;param;param;1;slices;20
+    - path;16;0;16;10;variant;param;param;1.25;slices;20
+    - path;18;0;18;10;variant;wide;slices;20
+    - path;20;0;20;10;variant;asym;slices;20
+  -
+    - pagename; path test - square mixed
+    - path;0;0;10;0;variant;param;param;0.75;slices;10
+    - path;10;0;10;10;variant;param;param;0.75;slices;10
+    - path;0;10;10;10;variant;param;param;0.75;slices;10
+    - path;0;0;0;10;variant;param;param;0.75;slices;10
+    - path;2;2;8;2;variant;param;param;0.75;slices;6
+    - path;8;2;8;8;variant;param;param;0.75;slices;6
+    - path;2;8;8;8;variant;param;param;0.75;slices;6
+    - path;2;2;2;8;variant;param;param;0.75;slices;6
+    - path;4;4;6;4;variant;param;param;0.75;slices;2
+    - path;6;4;6;6;variant;param;param;0.75;slices;2
+    - path;4;6;6;6;variant;param;param;0.75;slices;2
+    - path;4;4;4;6;variant;param;param;0.75;slices;2
+  -
+    - pagename; path test - square out
+    - path;0;0;10;0;variant;param;param;0.75;slices;10
+    - path;10;0;10;10;variant;param;param;0.75;slices;10
+    - path;10;10;0;10;variant;param;param;0.75;slices;10
+    - path;0;10;0;0;variant;param;param;0.75;slices;10
+
+    - path;2;2;8;2;variant;param;param;0.75;slices;6
+    - path;8;2;8;8;variant;param;param;0.75;slices;6
+    - path;8;8;2;8;variant;param;param;0.75;slices;6
+    - path;2;8;2;2;variant;param;param;0.75;slices;6
+
+    - path;4;4;6;4;variant;param;param;0.75;slices;2
+    - path;6;4;6;6;variant;param;param;0.75;slices;2
+    - path;6;6;4;6;variant;param;param;0.75;slices;2
+    - path;4;6;4;4;variant;param;param;0.75;slices;2
+  -
+    - pagename; path test - square out THICK
+    - path;0;0;10;0;variant;param;param;0.75;slices;10
+    - path;10;0;10;10;variant;param;param;0.75;slices;10
+    - path;10;10;0;10;variant;param;param;0.75;slices;10
+    - path;0;10;0;0;variant;param;param;0.75;slices;10
+
+    - path;1;1;9;1;variant;param;param;0.75;slices;8
+    - path;9;1;9;9;variant;param;param;0.75;slices;8
+    - path;9;9;1;9;variant;param;param;0.75;slices;8
+    - path;1;9;1;1;variant;param;param;0.75;slices;8
+
+    - path;2;2;8;2;variant;param;param;0.75;slices;6
+    - path;8;2;8;8;variant;param;param;0.75;slices;6
+    - path;8;8;2;8;variant;param;param;0.75;slices;6
+    - path;2;8;2;2;variant;param;param;0.75;slices;6
+
+    - path;3;3;7;3;variant;param;param;0.75;slices;4
+    - path;7;3;7;7;variant;param;param;0.75;slices;4
+    - path;7;7;3;7;variant;param;param;0.75;slices;4
+    - path;3;7;3;3;variant;param;param;0.75;slices;4
+
+    - path;4;4;6;4;variant;param;param;0.75;slices;2
+    - path;6;4;6;6;variant;param;param;0.75;slices;2
+    - path;6;6;4;6;variant;param;param;0.75;slices;2
+    - path;4;6;4;4;variant;param;param;0.75;slices;2
+  -
+    - pagename; path test - square out THICK variant
+    - path;0;0;10;0;variant;param;param;0.75;slices;10
+    - path;10;0;10;10;variant;param;param;0.75;slices;10
+    - path;10;10;0;10;variant;param;param;0.75;slices;10
+    - path;0;10;0;0;variant;param;param;0.75;slices;10
+
+    - path;1;1;9;1;variant;param;param;0.75;slices;12
+    - path;9;1;9;9;variant;param;param;0.75;slices;12
+    - path;9;9;1;9;variant;param;param;0.75;slices;12
+    - path;1;9;1;1;variant;param;param;0.75;slices;12
+
+    - path;2;2;8;2;variant;param;param;0.75;slices;6
+    - path;8;2;8;8;variant;param;param;0.75;slices;6
+    - path;8;8;2;8;variant;param;param;0.75;slices;6
+    - path;2;8;2;2;variant;param;param;0.75;slices;6
+
+    - path;3;3;7;3;variant;param;param;0.75;slices;8
+    - path;7;3;7;7;variant;param;param;0.75;slices;8
+    - path;7;7;3;7;variant;param;param;0.75;slices;8
+    - path;3;7;3;3;variant;param;param;0.75;slices;8
+
+    - path;4;4;6;4;variant;param;param;0.75;slices;2
+    - path;6;4;6;6;variant;param;param;0.75;slices;2
+    - path;6;6;4;6;variant;param;param;0.75;slices;2
+    - path;4;6;4;4;variant;param;param;0.75;slices;2
+  -
+    - pagename; path test - square in
+    - path;10;0;0;0;variant;param;param;0.75;slices;10
+    - path;10;10;10;0;variant;param;param;0.75;slices;10
+    - path;0;10;10;10;variant;param;param;0.75;slices;10
+    - path;0;0;0;10;variant;param;param;0.75;slices;10
+
+    - path;8;2;2;2;variant;param;param;0.75;slices;6
+    - path;8;8;8;2;variant;param;param;0.75;slices;6
+    - path;2;8;8;8;variant;param;param;0.75;slices;6
+    - path;2;2;2;8;variant;param;param;0.75;slices;6
+
+    - path;6;4;4;4;variant;param;param;0.75;slices;2
+    - path;6;6;6;4;variant;param;param;0.75;slices;2
+    - path;4;6;6;6;variant;param;param;0.75;slices;2
+    - path;4;4;4;6;variant;param;param;0.75;slices;2
+  -
+    - pagename; path test - square in THICK variant
+    - path;10;0;0;0;variant;param;param;0.75;slices;10
+    - path;10;10;10;0;variant;param;param;0.75;slices;10
+    - path;0;10;10;10;variant;param;param;0.75;slices;10
+    - path;0;0;0;10;variant;param;param;0.75;slices;10
+
+    - path;9;1;1;1;variant;param;param;0.75;slices;12
+    - path;9;9;9;1;variant;param;param;0.75;slices;12
+    - path;1;9;9;9;variant;param;param;0.75;slices;12
+    - path;1;1;1;9;variant;param;param;0.75;slices;12
+
+    - path;8;2;2;2;variant;param;param;0.75;slices;6
+    - path;8;8;8;2;variant;param;param;0.75;slices;6
+    - path;2;8;8;8;variant;param;param;0.75;slices;6
+    - path;2;2;2;8;variant;param;param;0.75;slices;6
+
+    - path;7;3;3;3;variant;param;param;0.75;slices;8
+    - path;7;7;7;3;variant;param;param;0.75;slices;8
+    - path;3;7;7;7;variant;param;param;0.75;slices;8
+    - path;3;3;3;7;variant;param;param;0.75;slices;8
+
+    - path;6;4;4;4;variant;param;param;0.75;slices;2
+    - path;6;6;6;4;variant;param;param;0.75;slices;2
+    - path;4;6;6;6;variant;param;param;0.75;slices;2
+    - path;4;4;4;6;variant;param;param;0.75;slices;2
+  -
+    - pagename; path test - square in THICK variant 2
+    - path;10;0;0;0;variant;param;param;0.75;slices;12
+    - path;10;10;10;0;variant;param;param;0.75;slices;12
+    - path;0;10;10;10;variant;param;param;0.75;slices;12
+    - path;0;0;0;10;variant;param;param;0.75;slices;12
+
+    - path;9;1;1;1;variant;param;param;0.75;slices;8
+    - path;9;9;9;1;variant;param;param;0.75;slices;8
+    - path;1;9;9;9;variant;param;param;0.75;slices;8
+    - path;1;1;1;9;variant;param;param;0.75;slices;8
+
+    - path;8;2;2;2;variant;param;param;0.75;slices;8
+    - path;8;8;8;2;variant;param;param;0.75;slices;8
+    - path;2;8;8;8;variant;param;param;0.75;slices;8
+    - path;2;2;2;8;variant;param;param;0.75;slices;8
+
+    - path;7;3;3;3;variant;param;param;0.75;slices;4
+    - path;7;7;7;3;variant;param;param;0.75;slices;4
+    - path;3;7;7;7;variant;param;param;0.75;slices;4
+    - path;3;3;3;7;variant;param;param;0.75;slices;4
+
+    - path;6;4;4;4;variant;param;param;0.75;slices;4
+    - path;6;6;6;4;variant;param;param;0.75;slices;4
+    - path;4;6;6;6;variant;param;param;0.75;slices;4
+    - path;4;4;4;6;variant;param;param;0.75;slices;4
