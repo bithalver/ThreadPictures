@@ -6,7 +6,6 @@ global:
     style: filledcurve
     background: gray
     color: orange
-    style: filledcurve
     slices: 20
 pages:
   -
