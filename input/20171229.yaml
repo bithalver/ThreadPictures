@@ -1,0 +1,61 @@
+# command line is:
+#   NAME=20171229; TP_background=darkgray TP_color=green  ./TP -i input/${NAME}.yaml -o output/${NAME}.ps ; ps2pdf output/${NAME}.ps ; rm -f output/${NAME}.ps
+# provides 20171229.pdf
+# on the place of 'TP_background=darkgray' you can write any global parameter in the syntax 'TP_paramatername=value' ; example: 'TP_style=holes'
+---
+global:
+    threads: 20
+#    style: parallel
+#    style: holes
+    style: filledcurve
+    background: darkgray
+    color: green
+pages:
+  -
+    - pagename; 20171229_1 filled
+    # Top
+    - net3;0;5;0;4;1;4
+    - net3;1;3;1;4;0;4
+    # Middle
+    - net3;1;4;1;2;2;2
+    - net3;2;1;2;3;1;3
+    # Bottom
+    - net3;3;0;3;1;2;1
+    - net3;2;2;2;1;3;1
+  -
+    - pagename; 20171229_1 parallel
+    # Top
+    - net3;0;5;0;4;1;4;style;parallel
+    - net3;1;3;1;4;0;4;style;parallel
+    # Middle
+    - net3;1;4;1;2;2;2;style;parallel
+    - net3;2;1;2;3;1;3;style;parallel
+    # Bottom
+    - net3;3;0;3;1;2;1;style;parallel
+    - net3;2;2;2;1;3;1;style;parallel
+  -
+    - pagename; 20171229_2 filled
+    # Top
+    - net3;0;5;0;4;1;4
+    - net3;1;3;1;4;0;4
+    # Middle
+    - net3;1;4;1;3;2;3
+    - net3;1;3;1;2;2;2
+    - net3;2;1;2;2;1;2
+    - net3;2;2;2;3;1;3
+    # Bottom
+    - net3;3;0;3;1;2;1
+    - net3;2;2;2;1;3;1
+  -
+    - pagename; 20171229_2 parallel
+    # Top
+    - net3;0;5;0;4;1;4;style;parallel
+    - net3;1;3;1;4;0;4;style;parallel
+    # Middle
+    - net3;1;4;1;3;2;3;style;parallel
+    - net3;1;3;1;2;2;2;style;parallel
+    - net3;2;1;2;2;1;2;style;parallel
+    - net3;2;2;2;3;1;3;style;parallel
+    # Bottom
+    - net3;3;0;3;1;2;1;style;parallel
+    - net3;2;2;2;1;3;1;style;parallel

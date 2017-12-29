@@ -8,6 +8,8 @@ global:
 #    lastthread: 30
     threads: 20
 #    style: parallel
+#    style: holes
+    style: filledcurve
 planes:
   - plane1;regular;3;90
   - plane2;freeform;0;0;0;1;0;0;1;0
