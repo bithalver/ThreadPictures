@@ -9,7 +9,7 @@ global:
 #    style: holes
     style: filledcurve
     background: darkgray
-    color: blue
+    color: lightgray
 pages:
   -
     - pagename; 20180104 _1
