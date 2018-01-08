@@ -1,16 +1,17 @@
 #!/bin/bash
 
-# One parameter: input yaml file
-# checks every second if input changed, then produces test.pdf
+# One parameter: input yaml file name (in 'input' directory)
+# checks every second if input changed, then produces a pdf (to output directory)
 
 # example: 
-#    ./testrun.sh input/20171119_path.yaml
+#    ./testrun.sh 20180104
 
-export INPUTFILE=$1;
+export INPUTFILE=input/$1.yaml;
+export OUTPUTFILE=output/$1.pdf;
 
 while sleep 1; do
-  if [[ $INPUTFILE -nt test.pdf ]]; then
-    ./TP -i $INPUTFILE -o test.ps ; ps2pdf test.ps test.pdf ; rm test.ps
-    echo $INPUTFILE made at `date +'%Y %m %d %H:%M:%S'`
+  if [[ $INPUTFILE -nt $OUTPUTFILE ]]; then
+    ./TP -i $INPUTFILE -o test.ps ; ps2pdf test.ps $OUTPUTFILE ; rm test.ps
+    echo $OUTPUTFILE made at `date +'%Y %m %d %H:%M:%S'`
   fi
 done
