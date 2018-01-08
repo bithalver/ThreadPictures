@@ -1,6 +1,6 @@
 # command line is:
-#   NAME=2018010; TP_background=darkgray TP_color=green  ./TP -i input/${NAME}.yaml -o output/${NAME}.ps ; ps2pdf output/${NAME}.ps ; rm -f output/${NAME}.ps
-# provides 20171229.pdf
+#   NAME=20180104; TP_background=darkgray TP_color=green  ./TP -i input/${NAME}.yaml -o output/${NAME}.ps ; ps2pdf output/${NAME}.ps ; rm -f output/${NAME}.ps
+# provides 20180104.pdf
 # on the place of 'TP_background=darkgray' you can write any global parameter in the syntax 'TP_paramatername=value' ; example: 'TP_style=holes'
 ---
 global:
