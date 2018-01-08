@@ -1,0 +1,25 @@
+---
+global:
+    threads: 20
+#    style: parallel
+#    style: holes
+    style: filledcurve
+    background: darkgray
+    color: yellow
+pages:
+  -
+    - pagename; 20180106 _1
+    - net3;0;0;1;0;1;1
+    - net3;0;0;-1;0;-1;1
+    - net3;0;2;1;1;2;2
+    - net3;0;2;-1;1;-2;2
+    - net3;2;3;2;2;3;2
+    - net3;-2;3;-2;2;-3;2
+  -
+    - pagename; 20180106 _2
+    - net3;0;0;1;0;1;1
+    - net3;0;0;-1;0;-1;-1
+    - net3;0;2;1;1;2;2
+    - net3;0;-2;-1;-1;-2;-2
+    - net3;2;3;2;2;3;2
+    - net3;-2;-3;-2;-2;-3;-2
