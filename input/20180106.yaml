@@ -1,8 +1,11 @@
+# command line is (in the main directory):
+#   ./do 20180106
+# provides output/20180106.pdf
+# to provide holes pattern:
+#   TP_BW=1 TP_style=holes ./do 20180106
 ---
 global:
     threads: 20
-#    style: parallel
-#    style: holes
     style: filledcurve
     background: darkgray
     color: lightgray
