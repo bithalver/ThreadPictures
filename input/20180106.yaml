@@ -5,7 +5,7 @@ global:
 #    style: holes
     style: filledcurve
     background: darkgray
-    color: yellow
+    color: lightgray
 pages:
   -
     - pagename; 20180106 _1
@@ -23,3 +23,20 @@ pages:
     - net3;0;-2;-1;-1;-2;-2
     - net3;2;3;2;2;3;2
     - net3;-2;-3;-2;-2;-3;-2
+  -
+    - pagename; 20180106 _3
+    - net3;0;0;1;0;1;1;color;yellow
+    - net3;0;2;1;1;2;2;color;yellow
+    - net3;2;3;2;2;3;2;color;yellow
+
+    - net3;0;0;-1;0;-1;1
+    - net3;0;2;-1;1;-2;2
+    - net3;-2;3;-2;2;-3;2
+
+    - net3;0;0;-1;0;-1;-1
+    - net3;0;-2;-1;-1;-2;-2
+    - net3;-2;-3;-2;-2;-3;-2
+
+    - net3;0;0;1;0;1;-1
+    - net3;0;-2;1;-1;2;-2
+    - net3;2;-3;2;-2;3;-2
