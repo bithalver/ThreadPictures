@@ -3,4 +3,6 @@
 
 export NAME=$1
 
+if [ `basename $0` == 'holes' ] ; then export TP_BW=1 ; export TP_style=holes ; fi
+
 perl ThreadPictures.pl -i input/${NAME}.yaml -o output/${NAME}.ps ; ps2pdf output/${NAME}.ps output/${NAME}.pdf; rm -f output/${NAME}.ps
