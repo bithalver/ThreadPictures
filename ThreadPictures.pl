@@ -78,16 +78,23 @@ print_ps_filestart();
 # command line options processing have to be AFTER global parameters processed
 # priority is (lowest to highest:
 #   - defaults (set in global_init) %TP_GLOBAL
-#   - environment variables start with TP_ (also set in global_init) %TP_GLOBAL
 #   - global parameters from yaml file
+#   - environment variables start with TP_ (also set in global_init) %TP_GLOBAL
 #   - options specified with -p %TP_PARAMS
 
 global_init;
 
 for my $AK (keys %{$config->{global}}) {
-  # warn "$AK => $config->{global}->{$AK}\n";
-  $TP_GLOBAL{$AK}=$config->{global}->{$AK};
+  $TP_GLOBAL{$AK}//=$config->{global}->{$AK};
+  if ($opts_debug) { warn "TP_GLOBAL{$AK} => $TP_GLOBAL{$AK}\n";}
 }
+
+$TP_GLOBAL{background} //='white';
+$TP_GLOBAL{color} //='black';
+$TP_GLOBAL{slices} //= 20;
+$TP_GLOBAL{path_variant} //='out';
+$TP_GLOBAL{path_param} //= 0;
+$TP_GLOBAL{BW} //=0;
 
 if ($TP_PARAMS{BW}) {$TP_GLOBAL{BW}=1;} # Being black'n'white is global: even all pages are BW or not
 

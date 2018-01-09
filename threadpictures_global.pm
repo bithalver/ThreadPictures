@@ -29,29 +29,22 @@ sub global_init {
   # Which style we draw nets
   # possible values: normal, holes, border, triangle, filledtriangle, curve, filledcurve, inversefilledcurve, parallel, selected
   # all other strings are future expansion; you will get a warning on STDERR for using a nonimplemented one
-  $TP_GLOBAL{style} = $ENV{TP_style} //='normal';
+  $TP_GLOBAL{style} = $ENV{TP_style};
+  if ($opts_debug) {warn 'global style is '.$TP_GLOBAL{style}."\n"}
 
   # Do we want to ignore all color specificaion ? BW is just white background, black drawings
-  $TP_GLOBAL{BW} = $ENV{TP_BW} //=0;
+  $TP_GLOBAL{BW} = $ENV{TP_BW};
 
-  # What color is the background ?
-  $ENV{TP_background} //='white';
   $TP_GLOBAL{background} //= $ENV{TP_background};
-
-  # What is the default color to draw ?
-  $ENV{TP_color} //='black';
   $TP_GLOBAL{color} //= $ENV{TP_color};
 
   # How many slices do we use in a path ?
-  $ENV{TP_slices} //=20;
   $TP_GLOBAL{slices} //= $ENV{TP_slices};
 
   # Which path variant do we use ? possible values are 'out' 'crossed'
-  $ENV{TP_path_variant} //='out';
   $TP_GLOBAL{path_variant} //= $ENV{TP_path_variant};
   
   # For the 'param' path, what is the numerical parameter ? Default is zero, which is 'out'
-  $ENV{TP_path_param} //=0;
   $TP_GLOBAL{path_param} //= $ENV{TP_path_param};
 }
 
