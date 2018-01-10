@@ -1,8 +1,16 @@
 #!/bin/bash
 
 
-export NAME=$1
+export NAME=`basename $1 .yaml`
 
-if [ `basename $0` == 'holes' ] ; then export TP_BW=1 ; export TP_style=holes ; fi
+export INPUT_YAML=input/${NAME}.yaml
+export OUTPUT_PS=output/${NAME}.ps
 
-perl ThreadPictures.pl -i input/${NAME}.yaml -o output/${NAME}.ps ; ps2pdf output/${NAME}.ps output/${NAME}.pdf; rm -f output/${NAME}.ps
+if [ `basename $0` == 'holes' ] ; then
+  export TP_BW=1 ; export TP_style=holes
+  export OUTPUT_PDF=output/${NAME}_holes.pdf
+else
+  export OUTPUT_PDF=output/${NAME}.pdf
+fi
+
+perl ThreadPictures.pl -i $INPUT_YAML -o $OUTPUT_PS ; ps2pdf $OUTPUT_PS $OUTPUT_PDF; rm -f $OUTPUT_PS
