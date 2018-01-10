@@ -1,0 +1,144 @@
+---
+global:
+    background: darkgray
+    color: red
+#    style: filledcurve
+planes:
+  - r12;regular;12;90
+  - s;freeform;0;0;17;0;20;0
+  - r6;regular;6
+
+  - s01;connected;r12;0;r12;1;s;0;2
+  - t01;connected;s01;1;s01;2;r12;0;1
+  - n01;connected;t01;0;t01;12;r6;0;1
+
+  - s02;connected;r12;0;r12;2;s;0;2
+  - t02;connected;s02;1;s02;2;r12;0;1
+  - n02;connected;t02;0;t02;12;r6;0;1
+
+  - s03;connected;r12;0;r12;3;s;0;2
+  - t03;connected;s03;1;s03;2;r12;0;1
+  - n03;connected;t03;0;t03;12;r6;0;1
+
+  - s04;connected;r12;0;r12;4;s;0;2
+  - t04;connected;s04;1;s04;2;r12;0;1
+  - n04;connected;t04;0;t04;12;r6;0;1
+
+  - s05;connected;r12;0;r12;5;s;0;2
+  - t05;connected;s05;1;s05;2;r12;0;1
+  - n05;connected;t05;0;t05;12;r6;0;1
+
+  - s06;connected;r12;0;r12;6;s;0;2
+  - t06;connected;s06;1;s06;2;r12;0;1
+  - n06;connected;t06;0;t06;12;r6;0;1
+
+  - s07;connected;r12;0;r12;7;s;0;2
+  - t07;connected;s07;1;s07;2;r12;0;1
+  - n07;connected;t07;0;t07;12;r6;0;1
+
+  - s08;connected;r12;0;r12;8;s;0;2
+  - t08;connected;s08;1;s08;2;r12;0;1
+  - n08;connected;t08;0;t08;12;r6;0;1
+
+  - s09;connected;r12;0;r12;9;s;0;2
+  - t09;connected;s09;1;s09;2;r12;0;1
+  - n09;connected;t09;0;t09;12;r6;0;1
+
+  - s10;connected;r12;0;r12;10;s;0;2
+  - t10;connected;s10;1;s10;2;r12;0;1
+  - n10;connected;t10;0;t10;12;r6;0;1
+
+  - s11;connected;r12;0;r12;11;s;0;2
+  - t11;connected;s11;1;s11;2;r12;0;1
+  - n11;connected;t11;0;t11;12;r6;0;1
+
+  - s12;connected;r12;0;r12;12;s;0;2
+  - t12;connected;s12;1;s12;2;r12;0;1
+  - n12;connected;t12;0;t12;12;r6;0;1
+
+pages:
+  -
+    - pagename;Summoning of all
+    - net3;n01;1;n01;2;n01;3
+    - net3;n01;2;n01;3;n01;4
+    - net3;n01;3;n01;4;n01;5
+    - net3;n01;4;n01;5;n01;6
+    - net3;n01;5;n01;6;n01;1
+    - net3;n01;6;n01;1;n01;2
+
+    - net3;n02;1;n02;2;n02;3
+    - net3;n02;2;n02;3;n02;5
+    - net3;n02;3;n02;5;n02;4
+    - net3;n02;5;n02;4;n02;6
+    - net3;n02;4;n02;6;n02;1
+    - net3;n02;6;n02;1;n02;2
+
+    - net3;n03;1;n03;2;n03;3
+    - net3;n03;2;n03;3;n03;6
+    - net3;n03;3;n03;6;n03;4
+    - net3;n03;6;n03;4;n03;5
+    - net3;n03;4;n03;5;n03;1
+    - net3;n03;5;n03;1;n03;2
+
+    - net3;n04;2;n04;3;n04;4
+    - net3;n04;3;n04;4;n04;1
+    - net3;n04;4;n04;1;n04;6
+    - net3;n04;1;n04;6;n04;5
+    - net3;n04;6;n04;5;n04;2
+    - net3;n04;5;n04;2;n04;3
+
+    - net3;n05;1;n05;2;n05;4
+    - net3;n05;2;n05;4;n05;6
+    - net3;n05;4;n05;6;n05;3
+    - net3;n05;6;n05;3;n05;5
+    - net3;n05;3;n05;5;n05;1
+    - net3;n05;5;n05;1;n05;2
+
+    - net3;n06;1;n06;3;n06;4
+    - net3;n06;3;n06;4;n06;2
+    - net3;n06;4;n06;2;n06;6
+    - net3;n06;2;n06;6;n06;5
+    - net3;n06;6;n06;5;n06;1
+    - net3;n06;5;n06;1;n06;3
+
+    - net3;n07;1;n07;2;n07;4
+    - net3;n07;2;n07;4;n07;3
+    - net3;n07;4;n07;3;n07;6
+    - net3;n07;3;n07;6;n07;5
+    - net3;n07;6;n07;5;n07;1
+    - net3;n07;5;n07;1;n07;2
+
+    - net3;n08;1;n08;2;n08;5
+    - net3;n08;2;n08;5;n08;6
+    - net3;n08;5;n08;6;n08;3
+    - net3;n08;6;n08;3;n08;4
+    - net3;n08;3;n08;4;n08;1
+    - net3;n08;4;n08;1;n08;2
+
+    - net3;n09;1;n09;2;n09;5
+    - net3;n09;2;n09;5;n09;3
+    - net3;n09;5;n09;3;n09;6
+    - net3;n09;3;n09;6;n09;4
+    - net3;n09;6;n09;4;n09;1
+    - net3;n09;4;n09;1;n09;2
+
+    - net3;n10;1;n10;2;n10;6
+    - net3;n10;2;n10;6;n10;3
+    - net3;n10;6;n10;3;n10;5
+    - net3;n10;3;n10;5;n10;4
+    - net3;n10;5;n10;4;n10;1
+    - net3;n10;4;n10;1;n10;2
+
+    - net3;n11;1;n11;2;n11;6
+    - net3;n11;2;n11;6;n11;4
+    - net3;n11;6;n11;4;n11;5
+    - net3;n11;4;n11;5;n11;3
+    - net3;n11;5;n11;3;n11;1
+    - net3;n11;3;n11;1;n11;2
+
+    - net3;n12;1;n12;3;n12;5
+    - net3;n12;3;n12;5;n12;2
+    - net3;n12;5;n12;2;n12;6
+    - net3;n12;2;n12;6;n12;4
+    - net3;n12;6;n12;4;n12;1
+    - net3;n12;4;n12;1;n12;3
