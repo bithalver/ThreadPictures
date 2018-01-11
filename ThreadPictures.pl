@@ -139,12 +139,16 @@ for (0 .. @{$config->{pages}}-1) {
   for (@{$config->{pages}->[$_]}) {
     my @AE=split ';'; # AE like ActualElement
       given (splice @AE,0,1) {
-      when (/^net$|^net4$/i){
+      when (/^net$|^net4$/i){ # first line (startX startY endX endY) ; senond line (startX startY endX endY)
         add_net4(splice @AE,0,8);
         while (@AE) {modify_lastelement(shift @AE,shift @AE)}
       }
-      when (/^net3$/i){
+      when (/^net3$/i){ # start point X and Y; center point X and Y; end point X and Y
         add_net3(splice @AE,0,6);
+        while (@AE) {modify_lastelement(shift @AE,shift @AE)}
+      }
+      when (/^net3s$/i){ # plane; first point, center point, last point
+        add_net3s(splice @AE,0,4);
         while (@AE) {modify_lastelement(shift @AE,shift @AE)}
       }
       when (/^pagename$/i){
