@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 export NAME=`basename $1 .yaml`
 
 export INPUT_YAML=input/${NAME}.yaml
@@ -13,4 +12,6 @@ else
   export OUTPUT_PDF=output/${NAME}.pdf
 fi
 
-perl ThreadPictures.pl -i $INPUT_YAML -o $OUTPUT_PS ; ps2pdf $OUTPUT_PS $OUTPUT_PDF; rm -f $OUTPUT_PS
+perl ThreadPictures.pl -i $INPUT_YAML -o $OUTPUT_PS
+ps2pdf $OUTPUT_PS $OUTPUT_PDF 2>/dev/null
+rm -f $OUTPUT_PS
