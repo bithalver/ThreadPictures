@@ -132,6 +132,8 @@ if (defined $config->{planes}) {
   }
   # Debug print of planes data
   # for my $i (keys %TP_planes) { warn $i,"\n"; warnarray @{$TP_planes{$i}}; }
+  # Debug print of planes length
+  # for my $i (keys %TP_planes) { warn $i,' ',scalar @{$TP_planes{$i}},"\n"; }
 }
 
 # process every page
@@ -150,6 +152,10 @@ for (0 .. @{$config->{pages}}-1) {
       when (/^net3s$/i){ # plane; first point, center point, last point
         add_net3s(splice @AE,0,4);
         while (@AE) {modify_lastelement(shift @AE,shift @AE)}
+      }
+      when (/^loop$/i){ # plane; point list (0th point will not be used from plane !)
+        add_loop(@AE); # Provide the whole thing
+        # Lot of nets, no additional parameters possible !
       }
       when (/^pagename$/i){
         $TP_GLOBAL{pagename}=splice(@AE,0,1);

@@ -8,7 +8,7 @@ use 5.10.0;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
-our @EXPORT = qw( draw_all add_net4 add_net3 add_net3s modify_lastelement add_path );
+our @EXPORT = qw( draw_all add_net4 add_net3 add_net3s modify_lastelement add_path add_loop);
 
 #To optimize the whole drawing to fit the page, minimum and maximum X and Y has to be determined
 our ($TP_minX,$TP_minY,$TP_maxX,$TP_maxY);
@@ -64,6 +64,19 @@ sub add_net4 {
 sub add_net3 { return add_net4($_[0],$_[1],$_[2],$_[3],$_[2],$_[3],$_[4],$_[5]);}
 
 sub add_net3s { return add_net4($_[0],$_[1],$_[0],$_[2],$_[0],$_[2],$_[0],$_[3]);}
+
+sub add_loop {
+  my $planename=splice(@_,0,1);
+  my $planesides=(scalar @{$TP_planes{$planename}})/2-1;
+  my @points=@_;
+  
+  if (scalar @points < 3 ) { warn "loop has only ",scalar @points," elements; it needs at least 3 ! Ignored.\n"; return};
+  
+  for (my$i=0;$i<@points;$i++) {
+#    warnarray($planename,$points[(($i)%$planesides)],$points[(($i+1)%$planesides)],$points[(($i+2)%$planesides)]);
+    add_net3s($planename,$points[(($i)%$planesides)],$points[(($i+1)%$planesides)],$points[(($i+2)%$planesides)]);
+  }
+}
 
 sub add_path {
   my (@input)=@_; my ($startX,$startY,$endX,$endY)=pointsfromplanesordirect(splice @input,0,4);
