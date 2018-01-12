@@ -89,6 +89,20 @@ planes:
   - n42;connected;t42;0;t42;8;r4;0;1
 
   - n31;regular;3;90;0.15
+  # page2 things
+  - r3;regular;3
+  - p2TL;connected;0;30;0;40;r3;0;1
+  - p2r8;connected;30;30;30;40;r8;0;1
+  - p2TR;connected;p2r8;0;p2r8;8;r4;0;1
+  - p2BL;connected;0;0;0;10;r5;0;1
+  - p2r12;connected;30;0;40;0;r12;0;1
+  - p2BR;connected;p2r12;0;p2r12;12;r6;0;1
+  # page3 things
+  - p3r8;connected;0;30;0;40;r8;0;1
+  - p3T;connected;p3r8;0;p3r8;8;r4;0;1
+  - p3M;connected;0;0;0;10;r5;0;1
+  - p3r12;connected;0;-30;0;-20;r12;0;1
+  - p3B;connected;p3r12;0;p3r12;12;r6;0;1
 pages:
   -
     - pagename;Summoning of all 3,4,5 and 6
@@ -122,3 +136,19 @@ pages:
     # 3 start
     - loop;n31;1;2;3
     # 3 end
+  -
+    - pagename;|3,4,5,6| basics
+    - loop;p2TL;1;2;3
+    - loop;p2TR;1;2;3;4
+    - loop;p2BL;1;2;3;4;5
+    - loop;p2BR;1;2;3;4;5;6
+  -
+    - pagename;loop or double loop ?
+    - loop;p3T;1;2;4;3
+    - loop;p3M;1;2;4;3;5
+    - loop;p3B;2;3;4;1;6;5
+  -
+    - pagename;just for holes
+    - loop;p3T;1;2;4;3;2;1;3;4
+    - loop;p3M;1;2;3;4;5;3;1;4;2;5
+    - loop;p3B;1;2;3;4;5;6;4;2;6;5;3;1;5;2;3;6;1;4
