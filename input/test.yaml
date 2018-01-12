@@ -9,13 +9,19 @@ global:
     threads: 20
 #    style: parallel
 #    style: holes
-    style: filledcurve
+#    style: filledcurve
 planes:
   - plane1;regular;3;90
   - plane2;freeform;0;0;0;1;0;0;1;0
-#  - _plane3;r;5;0
+  - plane3;r;5;0
   - plane4;connected;plane2;1;plane2;2;plane1;2;1
+  - r3;regular;3;90
+  - r4;regular;4;135
 pages:
+  -
+    - pagename; 3 or 4 ?
+    - loop;r3;1;2;3
+    - loop;r4;1;2;3;4
   -
     - pagename; path first test
     - path;plane2;0;plane2;1;these_parameters;are_not_important;a;b;c;d

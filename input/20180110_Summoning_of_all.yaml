@@ -10,8 +10,8 @@ global:
 #    style: filledcurve
 planes:
   - r12;regular;12;90
-  # s is the scaling; 6 is at 85-100; 5 is at 55-70; 4 is at 35-50; 3 is at 0-15
-  - s;freeform;0;0;85;0;100;0;55;0;70;0;35;0;50;0;15;0
+  # s is the scaling; 6 is at 85-100; 5 is at 50-65; 4 is at 35-50; 3 is at 0-15
+  - s;freeform;0;0;85;0;100;0;50;0;65;0;35;0;50;0;15;0
   - r6;regular;6
 
   - s01;connected;r12;0;r12;1;s;0;2
@@ -93,131 +93,32 @@ pages:
   -
     - pagename;Summoning of all 3,4,5 and 6
     # 6 start
-    - net3s;n01;1;2;3
-    - net3s;n01;2;3;4
-    - net3s;n01;3;4;5
-    - net3s;n01;4;5;6
-    - net3s;n01;5;6;1
-    - net3s;n01;6;1;2
-
-    - net3s;n02;1;2;3
-    - net3s;n02;2;3;5
-    - net3s;n02;3;5;4
-    - net3s;n02;5;4;6
-    - net3s;n02;4;6;1
-    - net3s;n02;6;1;2
-
-    - net3s;n03;1;2;3
-    - net3s;n03;2;3;6
-    - net3s;n03;3;6;4
-    - net3s;n03;6;4;5
-    - net3s;n03;4;5;1
-    - net3s;n03;5;1;2
-
-    - net3s;n04;2;3;4
-    - net3s;n04;3;4;1
-    - net3s;n04;4;1;6
-    - net3s;n04;1;6;5
-    - net3s;n04;6;5;2
-    - net3s;n04;5;2;3
-
-    - net3s;n05;1;2;4
-    - net3s;n05;2;4;6
-    - net3s;n05;4;6;3
-    - net3s;n05;6;3;5
-    - net3s;n05;3;5;1
-    - net3s;n05;5;1;2
-
-    - net3s;n06;1;3;4
-    - net3s;n06;3;4;2
-    - net3s;n06;4;2;6
-    - net3s;n06;2;6;5
-    - net3s;n06;6;5;1
-    - net3s;n06;5;1;3
-
-    - net3s;n07;1;2;4
-    - net3s;n07;2;4;3
-    - net3s;n07;4;3;6
-    - net3s;n07;3;6;5
-    - net3s;n07;6;5;1
-    - net3s;n07;5;1;2
-
-    - net3s;n08;1;2;5
-    - net3s;n08;2;5;6
-    - net3s;n08;5;6;3
-    - net3s;n08;6;3;4
-    - net3s;n08;3;4;1
-    - net3s;n08;4;1;2
-
-    - net3s;n09;1;2;5
-    - net3s;n09;2;5;3
-    - net3s;n09;5;3;6
-    - net3s;n09;3;6;4
-    - net3s;n09;6;4;1
-    - net3s;n09;4;1;2
-
-    - net3s;n10;1;2;6
-    - net3s;n10;2;6;3
-    - net3s;n10;6;3;5
-    - net3s;n10;3;5;4
-    - net3s;n10;5;4;1
-    - net3s;n10;4;1;2
-
-    - net3s;n11;1;2;6
-    - net3s;n11;2;6;4
-    - net3s;n11;6;4;5
-    - net3s;n11;4;5;3
-    - net3s;n11;5;3;1
-    - net3s;n11;3;1;2
-
-    - net3s;n12;1;3;5
-    - net3s;n12;3;5;2
-    - net3s;n12;5;2;6
-    - net3s;n12;2;6;4
-    - net3s;n12;6;4;1
-    - net3s;n12;4;1;3
+    - loop;n01;1;2;3;4;5;6
+    - loop;n02;1;2;3;5;4;6
+    - loop;n03;1;2;3;6;4;5
+    - loop;n04;2;3;4;1;6;5
+    - loop;n05;1;2;4;6;3;5
+    - loop;n06;1;3;4;2;6;5
+    - loop;n07;1;2;4;3;6;5
+    - loop;n08;1;2;5;6;3;4
+    - loop;n09;1;2;5;3;6;4
+    - loop;n10;1;2;6;3;5;4
+    - loop;n11;1;2;6;4;5;3
+    - loop;n12;1;3;5;2;6;4
     # 6 end
 
     # 5 start
-    - net3s;n51;1;2;3
-    - net3s;n51;2;3;4
-    - net3s;n51;3;4;5
-    - net3s;n51;4;5;1
-    - net3s;n51;5;1;2
-
-    - net3s;n52;1;2;4
-    - net3s;n52;2;4;3
-    - net3s;n52;4;3;5
-    - net3s;n52;3;5;1
-    - net3s;n52;5;1;2
-
-    - net3s;n53;1;3;2
-    - net3s;n53;3;2;5
-    - net3s;n53;2;5;4
-    - net3s;n53;5;4;1
-    - net3s;n53;4;1;3
-
-    - net3s;n54;1;3;5
-    - net3s;n54;3;5;2
-    - net3s;n54;5;2;4
-    - net3s;n54;2;4;1
-    - net3s;n54;4;1;3
+    - loop;n51;1;2;3;4;5
+    - loop;n52;1;2;4;3;5
+    - loop;n53;1;3;2;5;4
+    - loop;n54;1;3;5;2;4
     # 5 end
 
     # 4 start
-    - net3s;n41;1;2;3
-    - net3s;n41;2;3;4
-    - net3s;n41;3;4;1
-    - net3s;n41;4;1;2
-
-    - net3s;n42;1;4;2
-    - net3s;n42;4;2;3
-    - net3s;n42;2;3;1
-    - net3s;n42;3;1;4
+    - loop;n41;1;2;3;4
+    - loop;n42;1;4;2;3
     # 4 end
 
     # 3 start
-    - net3s;n31;1;2;3
-    - net3s;n31;2;3;1
-    - net3s;n31;3;1;2
+    - loop;n31;1;2;3
     # 3 end
