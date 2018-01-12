@@ -73,8 +73,8 @@ sub add_loop {
   if (scalar @points < 3 ) { warn "loop has only ",scalar @points," elements; it needs at least 3 ! Ignored.\n"; return};
   
   for (my$i=0;$i<@points;$i++) {
-#    warnarray($planename,$points[(($i)%$planesides)],$points[(($i+1)%$planesides)],$points[(($i+2)%$planesides)]);
-    add_net3s($planename,$points[(($i)%$planesides)],$points[(($i+1)%$planesides)],$points[(($i+2)%$planesides)]);
+#    warnarray($planename,$points[(($i)%@points)],$points[(($i+1)%@points)],$points[(($i+2)%@points)]);
+    add_net3s($planename,$points[(($i)%@points)],$points[(($i+1)%@points)],$points[(($i+2)%@points)]);
   }
 }
 
