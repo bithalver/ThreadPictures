@@ -9,13 +9,24 @@ planes:
   - r6;regular;6;60
 pages:
   -
+    - background;black
+    - net4;r6;1;r6;2;r6;3;r6;4;color;orange
+    - net4;r6;3;r6;4;r6;5;r6;6;color;orange
+    - net4;r6;5;r6;6;r6;1;r6;2;color;orange
+    - net4;r6;1;r6;2;r6;3;r6;4;color;white;firstthread;10;lastthread;10
+    - net4;r6;3;r6;4;r6;5;r6;6;color;white;firstthread;10;lastthread;10
+    - net4;r6;5;r6;6;r6;1;r6;2;color;white;firstthread;10;lastthread;10
+  -
     - background;darkgray
-    - net4;r6;1;r6;2;r6;3;r6;4;color;blue;firstthread;0;lastthread;10
+    - net4;r6;1;r6;2;r6;3;r6;4;color;blue;firstthread;0;lastthread;9
     - net4;r6;1;r6;2;r6;3;r6;4;color;yellow;firstthread;11;lastthread;20
-    - net4;r6;3;r6;4;r6;5;r6;6;color;blue;firstthread;0;lastthread;10
+    - net4;r6;3;r6;4;r6;5;r6;6;color;blue;firstthread;0;lastthread;9
     - net4;r6;3;r6;4;r6;5;r6;6;color;yellow;firstthread;11;lastthread;20
-    - net4;r6;5;r6;6;r6;1;r6;2;color;blue;firstthread;0;lastthread;10
+    - net4;r6;5;r6;6;r6;1;r6;2;color;blue;firstthread;0;lastthread;9
     - net4;r6;5;r6;6;r6;1;r6;2;color;yellow;firstthread;11;lastthread;20
+    - net4;r6;1;r6;2;r6;3;r6;4;color;black;firstthread;10;lastthread;10
+    - net4;r6;3;r6;4;r6;5;r6;6;color;black;firstthread;10;lastthread;10
+    - net4;r6;5;r6;6;r6;1;r6;2;color;black;firstthread;10;lastthread;10
   -
     - net4;r6;1;r6;2;r6;3;r6;4;color;lightgray
     - net4;r6;3;r6;4;r6;5;r6;6;color;yellow
