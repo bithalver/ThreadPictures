@@ -1,0 +1,61 @@
+---
+global:
+    threads: 20
+    color: yellow
+    background: gray
+planes:
+  - r4;regular;4;135
+  - r5;regular;5;90
+  - r6;regular;6;60
+pages:
+  -
+    - pagename; 4|1
+    - loop4;r4;1;2;3;4
+  -
+    - pagename; 5|1
+    - loop4;r5;1;2;3;4;5
+  -
+    - pagename; 5|2
+    - loop4;r5;1;2;4;3;5
+  -
+    - pagename; 5|3
+    - loop4;r5;1;3;2;5;4
+  -
+    - pagename; 5|4
+    - loop4;r5;1;3;5;2;4
+  -
+    - pagename; 6|01
+    - loop4;r6;1;2;3;4;5;6
+  -
+    - pagename; 6|02
+    - loop4;r6;1;2;3;5;4;6
+  -
+    - pagename; 6|03
+    - loop4;r6;1;2;3;6;4;5
+  -
+    - pagename; 6|04
+    - loop4;r6;2;3;4;1;6;5
+  -
+    - pagename; 6|05
+    - loop4;r6;1;2;4;6;3;5
+  -
+    - pagename; 6|06
+    - loop4;r6;1;3;4;2;6;5
+  -
+    - pagename; 6|07
+    - loop4;r6;1;2;4;3;6;5
+  -
+    - pagename; 6|08
+    - loop4;r6;1;2;5;6;3;4
+  -
+    - pagename; 6|09
+    - loop4;r6;1;2;5;3;6;4
+  -
+    - pagename; 6|10
+    - loop4;r6;1;2;6;3;5;4
+  -
+    - pagename; 6|11
+    - loop4;r6;1;2;6;4;5;3
+  -
+    - pagename; 6|12
+    - loop4;r6;1;3;5;2;6;4
