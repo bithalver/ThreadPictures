@@ -21,7 +21,7 @@ pages:
   -
     - pagename; 3 or 4 ?
     - loop;r3;1;2;3
-    - loop;r4;1;2;3;4
+    - loop;r4;1;2;3;4;color;red
   -
     - pagename; path first test
     - path;plane2;0;plane2;1;these_parameters;are_not_important;a;b;c;d

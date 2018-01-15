@@ -69,12 +69,25 @@ sub add_loop {
   my $planename=splice(@_,0,1);
   my $planesides=(scalar @{$TP_planes{$planename}})/2-1;
   my @points=@_;
-  
-  if (scalar @points < 3 ) { warn "loop has only ",scalar @points," elements; it needs at least 3 ! Ignored.\n"; return};
+  my $points_len=@points;
+  my @AP; # Additional parameters; none by default
+
+  # Let's decide how much loop parameters we have and how much options we got
+  # loop parameters are numbers while first option should start with a digit
+  # all options will be given to all nets !
+  for (my$i=0;$i<@points;$i++) {
+    if ( $points[$i] =~ /^[a-z]/i ) {
+      $points_len=$i;
+      @AP=splice @points,$i;
+      last;
+    }
+  }
+  if ($points_len < 3 ) { warn "loop has only $points_len elements; it needs at least 3 ! Ignored.\n"; return};
   
   for (my$i=0;$i<@points;$i++) {
 #    warnarray($planename,$points[(($i)%@points)],$points[(($i+1)%@points)],$points[(($i+2)%@points)]);
-    add_net3s($planename,$points[(($i)%@points)],$points[(($i+1)%@points)],$points[(($i+2)%@points)]);
+    add_net3s($planename,$points[(($i)%$points_len)],$points[(($i+1)%$points_len)],$points[(($i+2)%$points_len)]);
+    my @AP1=@AP; while (@AP1) {modify_lastelement(shift @AP1,shift @AP1)}
   }
 }
 

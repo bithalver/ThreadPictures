@@ -155,7 +155,7 @@ for (0 .. @{$config->{pages}}-1) {
       }
       when (/^loop$/i){ # plane; point list (0th point will not be used from plane !)
         add_loop(@AE); # Provide the whole thing
-        # Lot of nets, no additional parameters possible !
+        # Lot of nets, additional parameters handled inside
       }
       when (/^pagename$/i){
         $TP_GLOBAL{pagename}=splice(@AE,0,1);
