@@ -8,7 +8,7 @@ use 5.10.0;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
-our @EXPORT = qw( draw_all add_net4 add_net3 add_net3s modify_lastelement add_path add_loop);
+our @EXPORT = qw( draw_all add_net4 add_net3 add_net3s modify_lastelement add_path add_loop add_loop4);
 
 #To optimize the whole drawing to fit the page, minimum and maximum X and Y has to be determined
 our ($TP_minX,$TP_minY,$TP_maxX,$TP_maxY);
@@ -75,7 +75,7 @@ sub add_loop {
   # Let's decide how much loop parameters we have and how much options we got
   # loop parameters are numbers while first option should start with a digit
   # all options will be given to all nets !
-  for (my$i=0;$i<@points;$i++) {
+  for (my $i=0;$i<@points;$i++) {
     if ( $points[$i] =~ /^[a-z]/i ) {
       $points_len=$i;
       @AP=splice @points,$i;
@@ -84,9 +84,34 @@ sub add_loop {
   }
   if ($points_len < 3 ) { warn "loop has only $points_len elements; it needs at least 3 ! Ignored.\n"; return};
   
-  for (my$i=0;$i<@points;$i++) {
+  for (my $i=0;$i<@points;$i++) {
 #    warnarray($planename,$points[(($i)%@points)],$points[(($i+1)%@points)],$points[(($i+2)%@points)]);
     add_net3s($planename,$points[(($i)%$points_len)],$points[(($i+1)%$points_len)],$points[(($i+2)%$points_len)]);
+    my @AP1=@AP; while (@AP1) {modify_lastelement(shift @AP1,shift @AP1)}
+  }
+}
+
+sub add_loop4 {
+  my $planename=splice(@_,0,1);
+  my $planesides=(scalar @{$TP_planes{$planename}})/2-1;
+  my @points=@_;
+  my $points_len=@points;
+  my @AP; # Additional parameters; none by default
+
+  # Let's decide how much loop parameters we have and how much options we got
+  # loop parameters are numbers while first option should start with a digit
+  # all options will be given to all nets !
+  for (my $i=0;$i<@points;$i++) {
+    if ( $points[$i] =~ /^[a-z]/i ) {
+      $points_len=$i;
+      @AP=splice @points,$i;
+      last;
+    }
+  }
+  if ($points_len < 4 ) { warn "loop4 has only $points_len elements; it needs at least 4 ! Ignored.\n"; return};
+
+  for (my $i=0;$i<@points;$i++) {
+    add_net4($planename,$points[(($i)%$points_len)],$planename,$points[(($i+1)%$points_len)],$planename,$points[(($i+2)%$points_len)],$planename,$points[(($i+3)%$points_len)]);
     my @AP1=@AP; while (@AP1) {modify_lastelement(shift @AP1,shift @AP1)}
   }
 }
@@ -266,6 +291,7 @@ sub draw_net {
 sub draw_all {
 
 # if @TP_all is empty, warn and return
+
   if (not @TP_all) {
     warn '@TP_all is empty: nothing added so nothing to draw'."\n";
     return;
@@ -275,10 +301,10 @@ sub draw_all {
   my ($minX,$maxX,$minY,$maxY);
   foreach my $ATPAE_ (@TP_all) { # ATPAE stands for Actual TP_all Element
     my %ATPAE=%{$ATPAE_};
-    # if ($opts_debug) { warn "Actual TP_all element is:\n"; warnhash %ATPAE };
+    if ($opts_debug) { warn "Actual TP_all element is:\n"; warnhash %ATPAE };
     for ($ATPAE{'type'}) {
       when (/^net$/) {
-        $minX//=$TP_all[0]{line1oX}; $maxX//=$TP_all[0]{line1oX}; $minY//=$TP_all[0]{line1oY}; $maxY//=$TP_all[0]{line1oY};
+        $minX//=$ATPAE{line1oX}; $maxX//=$ATPAE{line1oX}; $minY//=$ATPAE{line1oY}; $maxY//=$ATPAE{line1oY};
 	    ($minX,$maxX)=minmax($minX,$maxX,$ATPAE{line1oX},$ATPAE{line1iX},$ATPAE{line2oX},$ATPAE{line2iX});
         ($minY,$maxY)=minmax($minY,$maxY,$ATPAE{line1oY},$ATPAE{line1iY},$ATPAE{line2oY},$ATPAE{line2iY});
       }
