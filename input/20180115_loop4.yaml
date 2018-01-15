@@ -9,6 +9,25 @@ planes:
   - r6;regular;6;60
 pages:
   -
+    - background;darkgray
+    - net4;r6;1;r6;2;r6;3;r6;4;color;blue;firstthread;0;lastthread;10
+    - net4;r6;1;r6;2;r6;3;r6;4;color;yellow;firstthread;11;lastthread;20
+    - net4;r6;3;r6;4;r6;5;r6;6;color;blue;firstthread;0;lastthread;10
+    - net4;r6;3;r6;4;r6;5;r6;6;color;yellow;firstthread;11;lastthread;20
+    - net4;r6;5;r6;6;r6;1;r6;2;color;blue;firstthread;0;lastthread;10
+    - net4;r6;5;r6;6;r6;1;r6;2;color;yellow;firstthread;11;lastthread;20
+  -
+    - net4;r6;1;r6;2;r6;3;r6;4;color;lightgray
+    - net4;r6;3;r6;4;r6;5;r6;6;color;yellow
+    - net4;r6;5;r6;6;r6;1;r6;2;color;red
+  -
+    - net4;r6;1;r6;2;r6;3;r6;4;color;lightgray
+    - net4;r6;3;r6;4;r6;5;r6;6;color;lightgray
+    - net4;r6;5;r6;6;r6;1;r6;2;color;lightgray
+    - net4;r6;2;r6;3;r6;4;r6;5;color;black
+    - net4;r6;4;r6;5;r6;6;r6;1;color;black
+    - net4;r6;6;r6;1;r6;2;r6;3;color;black
+  -
     - pagename; 4|1
     - loop4;r4;1;2;3;4
   -
