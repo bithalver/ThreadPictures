@@ -1,0 +1,133 @@
+# Old format:
+#    - net3;n01;1;n01;2;n01;3
+
+# oneliner to change old format to new:
+#    cat perl -i -pe 's/net3;([a-zA-Z0-9]+);([0-9]+);([a-zA-Z0-9]+);([0-9]+);([a-zA-Z0-9]+);([0-9]+)/net3s;$1;$2;$4;$6/' input/20180110_Summoning_of_all.yaml
+---
+global:
+    background: darkgray
+    color: red
+#    style: filledcurve
+planes:
+  - r3;regular;3
+  - r2;regular;2;180
+  - r4;regular;4;135
+  - r5;regular;5
+  - r6;regular;6
+  - r7;regular;7
+  - r8;regular;8
+  - r9;regular;9
+  - r10;regular;10
+  - r12;regular;12;90
+  - r16;regular;16
+  - r20;regular;20
+  # page2 things
+  - p2TL;connected;0;30;0;40;r3;0;1
+  - p2r8;connected;30;30;30;40;r8;0;1
+  - p2TR;connected;p2r8;0;p2r8;8;r4;0;1
+  - p2BL;connected;0;0;0;10;r5;0;1
+  - p2r12;connected;30;0;40;0;r12;0;1
+  - p2BR;connected;p2r12;0;p2r12;12;r6;0;1
+  # page3 things
+  - p3r8;connected;0;25;0;35;r8;0;1
+  - p3T;connected;p3r8;0;p3r8;8;r4;0;1
+  - p3M;connected;0;0;0;10;r5;0;1
+  - p3r12;connected;0;-25;0;-15;r12;0;1
+  - p3B;connected;p3r12;0;p3r12;12;r6;0;1
+  # page4 things
+  - p4r6;connected;0;25;0;35;r6;0;1
+  - p4r6a;connected;12.5;25;12.5;35;r12;0;2
+  - p4r6b;connected;-12.5;25;-12.5;35;r6;0;1
+  - p4r7;connected;0;0;0;10;r7;0;1
+  - p4r8;connected;0;-25;0;-15;r8;0;1
+  - p4r8a;connected;12.5;-25;12.5;-15;r16;0;2
+  - p4r8b;connected;-12.5;-25;-12.5;-15;r8;0;1
+  # page5 things; r6, r7 and r8 and reused from page4
+  - p5r3;connected;0;75;0;85;r3;0;1
+  - p5r9;connected;0;-50;0;-40;r9;0;1
+  - p5r10;connected;0;-75;0;-65;r10;0;1
+  - p5r10a;connected;12.5;-75;12.5;-65;r20;0;2
+  - p5r10b;connected;-12.5;-75;-12.5;-65;r10;0;1
+  - p5r5;connected;0;50;0;60;r5;0;1
+  - p5r5a;connected;12.5;50;12.5;60;r5;0;1
+  - p5r5b;connected;-12.5;50;-12.5;60;r5;0;1
+  - p5r4;connected;0;75;0;85;r4;0;1
+  # page6
+  - p6r7a;connected;25;25;25;35;r7;0;1
+  - p6r7;connected;0;25;0;35;r7;0;1
+  - p6r7c;connected;-25;25;-25;35;r7;0;1
+  - p6r9;connected;0;-25;0;-15;r9;0;1
+  - p6r9a;connected;37.5;0;37.5;10;r9;0;1
+  - p6r9b;connected;12.5;0;12.5;10;r9;0;1
+  - p6r9c;connected;-12.5;0;-12.5;10;r9;0;1
+  - p6r9d;connected;-37.5;0;-37.5;10;r9;0;1
+#  - p6r91;connected;0;-75;0;-65;r9;0;1
+pages:
+  -
+    - pagename;|3,4,5,6| starting configuration
+    - loop;p2TL;1;2;3
+    - loop;p2TR;1;2;3;4
+    - loop;p2BL;1;2;3;4;5
+    - loop;p2BR;1;2;3;4;5;6
+#  -
+#    - pagename;loop or double loop ? 4|5|6 
+#    - loop;p3T;1;2;4;3
+#    - loop;p3M;1;2;4;3;5
+#    - loop;p3B;2;3;4;1;6;5
+#  -
+#    - pagename;loop or double loop ? 6|7|8
+#    - loop;p4r6;1;2;5;4;3;6
+#    - loop;p4r7;1;2;6;4;5;3;7
+#    - loop;p4r8;1;2;7;4;5;6;3;8
+  -
+    - pagename;loop| simple, double, triple ... 5|6|7|8|9|10
+    - loop;p5r5;1;2;4;3;5
+    - loop;p4r6a;1;3;11;7;9;5
+    - loop;p4r6b;1;2;5;4;3;6
+    - loop;p4r7;1;2;6;4;5;3;7
+    - loop;p4r8a;1;3;15;7;11;9;13;5
+    - loop;p4r8b;1;2;7;4;5;6;3;8
+    - loop;p5r9;1;2;8;4;6;5;7;3;9
+    - loop;p5r10a;1;3;19;7;15;11;13;9;17;5
+    - loop;p5r10b;1;2;9;4;7;6;5;8;3;10
+  -
+    - pagename;lightning 4|5|6|7|8|9|10
+    - loop;p5r4;1;2;4;3
+    - loop;p5r5;1;2;5;3;4
+    - loop;p4r6;1;2;6;3;5;4
+    - loop;p4r7;1;2;7;3;6;4;5
+    - loop;p4r8;1;2;8;3;7;4;6;5
+    - loop;p5r9;1;2;9;3;8;4;7;5;6
+    - loop;p5r10;1;2;10;3;9;4;8;5;7;6
+  -
+    - pagename;star 3|5|7|9
+    - loop;p5r3;1;2;3
+    - loop;p5r5a;1;3;5;2;4
+    - loop;p5r5b;1;2;3;4;5
+    - loop;p6r7a;1;4;7;3;6;2;5
+    - loop;p6r7;1;3;5;7;2;4;6
+    - loop;p6r7c;1;2;3;4;5;6;7
+    - loop;p6r9a;1;5;9;4;8;3;7;2;6
+    - loop;p6r9b;3;6;9
+    - loop;p6r9b;2;5;8
+    - loop;p6r9b;1;4;7
+    - loop;p6r9c;1;3;5;7;9;2;4;6;8
+    - loop;p6r9d;1;2;3;4;5;6;7;8;9
+  -
+    - pagename;stars 7
+    - loop;p4r7;1;4;7;3;6;2;5;style;curve
+    - loop;p4r7;1;3;5;7;2;4;6;style;curve
+    - loop;p4r7;1;2;3;4;5;6;7;style;curve
+  -
+    - pagename;stars 9
+    - loop;p6r9;1;2;3;4;5;6;7;8;9;style;curve
+    - loop;p6r9;1;3;5;7;9;2;4;6;8;style;curve
+    - loop;p6r9;1;5;9;4;8;3;7;2;6;style;curve
+    - loop;p6r9;3;6;9;style;curve
+    - loop;p6r9;2;5;8;style;curve
+    - loop;p6r9;1;4;7;style;curve
+#  -
+#    - pagename;just for holes
+#    - loop;p3T;1;2;4;3;2;1;3;4;threads;10
+#    - loop;p3M;1;2;3;4;5;3;1;4;2;5;threads;10
+#    - loop;p3B;1;2;3;4;5;6;4;2;6;5;3;1;5;2;3;6;1;4;threads;10
