@@ -100,7 +100,7 @@ pages:
     - loop;p5r9;1;2;9;3;8;4;7;5;6
     - loop;p5r10;1;2;10;3;9;4;8;5;7;6
   -
-    - pagename;star 3|5|7|9
+    - pagename;stars 3|5|7|9
     - loop;p5r3;1;2;3
     - loop;p5r5a;1;3;5;2;4
     - loop;p5r5b;1;2;3;4;5
@@ -114,12 +114,12 @@ pages:
     - loop;p6r9c;1;3;5;7;9;2;4;6;8
     - loop;p6r9d;1;2;3;4;5;6;7;8;9
   -
-    - pagename;stars 7
+    - pagename;star 7
     - loop;p4r7;1;4;7;3;6;2;5;style;curve
     - loop;p4r7;1;3;5;7;2;4;6;style;curve
     - loop;p4r7;1;2;3;4;5;6;7;style;curve
   -
-    - pagename;stars 9
+    - pagename;star 9
     - loop;p6r9;1;2;3;4;5;6;7;8;9;style;curve
     - loop;p6r9;1;3;5;7;9;2;4;6;8;style;curve
     - loop;p6r9;1;5;9;4;8;3;7;2;6;style;curve
