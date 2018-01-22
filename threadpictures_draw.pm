@@ -8,7 +8,7 @@ use 5.10.0;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
-our @EXPORT = qw( draw_all add_net4 add_net3 add_net3s modify_lastelement add_path add_loop add_loop4);
+our @EXPORT = qw( draw_all add_net4 add_net3 add_net3s modify_lastelement add_path add_loop add_loop4 add_recursive);
 
 #To optimize the whole drawing to fit the page, minimum and maximum X and Y has to be determined
 our ($TP_minX,$TP_minY,$TP_maxX,$TP_maxY);
@@ -181,6 +181,10 @@ sub add_path {
     }
   }
   
+}
+
+sub add_recursive { # Heavily under development
+  if ($opts_debug) { warn 'Type recursive; parameters are:\n' ; warnarray @_ ; }
 }
 
 # To draw one element of the 'net' type

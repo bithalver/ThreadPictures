@@ -170,6 +170,9 @@ for (0 .. @{$config->{pages}}-1) {
       when (/^path$/i){
         add_path(@AE);
       }
+      when (/^recursive$/i){
+        add_recursive(@AE);
+      }
       default {warn "element '$_' is not (yet) supported (but processing goes on)\n";}
       }
   }
