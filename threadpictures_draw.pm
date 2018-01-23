@@ -183,33 +183,30 @@ sub add_path {
   
 }
 
-sub add_recursive { # Heavily under development
+sub add_recursive {
 # parameters should include:
-#  - plane name : should already exist
-#  - deepness level : positive integer
+#  - plane name : should be already defined
+#  - level of recursion: positive integer
 #  - which points should be the one we connect FROM (for next level)
 #  - which points should be the one we connect TO   (for next level)
 #  - nets in plane (just indexes to points like 1,2,3 ; any amount ! )
-#  - generic options to all nets ( like style;filledcurve )
+#  - optional: generic options to all nets ( like style;filledcurve )
+#       these options could be mixed up in order with nets
 #  - examples:
-#      - recursive;r4;4;1;2;0;1;1,2,3;style;filledcurve
+#      - recursive;r4;4;1;2;0;1;style;filledcurve;1,2,3
 #      - recursive;r4;4;1;2;0;1;1,2,3;2,3,4;style;filledcurve
   if ($opts_debug) { warn "Type recursive; parameters are:\n" ; warnarray @_ ; }
-  my ($plane,$level,$fromA,$fromB,$toA,$toB) = splice @_,0,6;
-  my @nets;
-  my @options;
+
+  my @AP=@{$TP_planes{splice @_,0,1}} ; # @AP like Actual Plane; plane name is needed only to get the plane X,Y info
+  my ($level,$fromA,$fromB,$toA,$toB) = splice @_,0,5;
+
+  my @nets; my @options;
   while (@_) {
     my $AE=shift @_;
-    if ($AE =~ /^[0-9]/) {
-      push @nets,$AE
-    } else {
-      push @options, $AE, shift @_
-    }
+    if ($AE =~ /^[0-9]/) { push @nets,$AE } # a net is like 1,2,3 (one field)
+    else { push @options, $AE, shift @_ ; } # an option is like style;curve (two fields)
   }
-  # warnarray @nets;
-  # warnarray @options;
-  my @AP=@{$TP_planes{$plane}} ; # warnarray @AP; # @AP like Actual Plane
-  for my $i (1..$level) {
+  for my $i (1..$level) { # Recursivity level is counted from one, we are humans :)
     my @AN=@nets;
     while (@AN) { # add nets based on @AP; add optional parameters, too
       my @AO=@options;
@@ -219,7 +216,7 @@ sub add_recursive { # Heavily under development
     }
     # calculate new @AP
     # connectplane2points($TOx1,$TOy1,$TOx2,$TOy2,$nth1,$nth2,@plane)
-    @AP=connectplane2points (@AP[2*$toA],@AP[2*$toA+1],@AP[2*$toB],@AP[2*$toB+1],$fromA,$fromB,@AP)
+    @AP=connectplane2points(@AP[2*$toA],@AP[2*$toA+1],@AP[2*$toB],@AP[2*$toB+1],$fromA,$fromB,@AP)
   }
 }
 

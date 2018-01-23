@@ -17,27 +17,27 @@ planes:
   - r5;regular;5;90
 pages:
   -
-    - pagename;recursive test
-    - recursive;r4r;8;1;2;4;3;1,2,3;2,3,4;style;curve
-  -
     - pagename;first ever recursive test
-    - recursive;r4r;8;1;2;0;1;1,2,3;style;curve
-  -
-    - pagename;first ever recursive test - variant with 2
-    - recursive;r4r;8;1;2;0;1;1,2,3;2,3,4;style;curve
-  -
-    - pagename;first ever recursive test - variant with 3
-    - recursive;r4r;8;1;2;0;1;1,2,3;2,3,4;3,4,1;style;curve
-  -
-    - pagename;first ever recursive test - variant with 4
-    - recursive;r4r;8;1;2;0;1;1,2,3;2,3,4;3,4,1;4,1,2;style;curve
+    - recursive;r4r;8;1;2;0;1;style;curve;1,2,3;color;blue
 #  -
-#    - pagename; 5|1
-#    - loop4;r5;1;2;3;4;5
+#    - pagename;first ever recursive test - variant with 2
+#    - recursive;r4r;8;1;2;0;1;1,2,3;2,3,4;style;curve
 #  -
-#    - pagename; 3 or 4 ?
-#    - loop;r3;1;2;3
-#    - loop;r4;1;2;3;4;color;red
+#    - pagename;first ever recursive test - variant with 3
+#    - recursive;r4r;8;1;2;0;1;1,2,3;2,3,4;3,4,1;style;curve
+#  -
+#    - pagename;first ever recursive test - variant with 4
+#    - recursive;r4r;8;1;2;0;1;1,2,3;2,3,4;3,4,1;4,1,2;style;curve
+#  -
+#    - pagename;recursive test
+#    - recursive;r4r;8;1;2;4;3;1,2,3;2,3,4;style;curve
+  -
+    - pagename; 5|1
+    - loop4;r5;1;2;3;4;5
+  -
+    - pagename; 3 or 4 ?
+    - loop;r3;1;2;3
+    - loop;r4;1;2;3;4;color;red
 #  -
 #    - pagename; 4 or 5 ?
 #   - background;lightgray
@@ -59,14 +59,14 @@ pages:
 #    - pagename; 5|4
 #    - background;darkgray
 #    - loop4;r5;1;3;5;2;4;color;yellow
-#  -
-#    - pagename; path first test
-#    - path;plane2;0;plane2;1;these_parameters;are_not_important;a;b;c;d
-#  -
-#    - pagename; first ever connected plane test ! now in color !
-#    - net3;plane2;1;plane2;2;plane2;3;color;yellow
-#    - net3;plane4;1;plane4;2;plane4;3;color;blue
-#    - background;gray
+  -
+    - pagename; path first test
+    - path;plane2;0;plane2;1;these_parameters;are_not_important;a;b;c;d
+  -
+    - pagename; first ever connected plane test ! now in color !
+    - net3;plane2;1;plane2;2;plane2;3;color;yellow
+    - net3;plane4;1;plane4;2;plane4;3;color;blue
+    - background;gray
 #  -
 #    - pagename;this is the 2nd test pagename
 #    - net4;0;10;0;0;0;0;10;0;threads;4;style;curve
