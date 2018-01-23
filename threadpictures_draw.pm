@@ -184,7 +184,17 @@ sub add_path {
 }
 
 sub add_recursive { # Heavily under development
-  if ($opts_debug) { warn 'Type recursive; parameters are:\n' ; warnarray @_ ; }
+# parameters should include:
+#  - plane name : should already exist
+#  - deepness level : positive integer
+#  - which points should be the one we connect FROM (for next level)
+#  - which points should be the one we connect TO   (for next level)
+#  - nets in plane (just indexes to points like 1,2,3
+#  - generic options to all nets ( like style;filledcurve )
+#  - example:
+#      - recursive;r4;4;1;2;0;1;1,2,3;style;filledcurve
+#      - recursive;r4;4;1;2;0;1;1,2,3;2,3,4;style;filledcurve
+  if ($opts_debug) { warn "Type recursive; parameters are:\n" ; warnarray @_ ; }
 }
 
 # To draw one element of the 'net' type
