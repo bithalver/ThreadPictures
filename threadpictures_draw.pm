@@ -189,12 +189,38 @@ sub add_recursive { # Heavily under development
 #  - deepness level : positive integer
 #  - which points should be the one we connect FROM (for next level)
 #  - which points should be the one we connect TO   (for next level)
-#  - nets in plane (just indexes to points like 1,2,3
+#  - nets in plane (just indexes to points like 1,2,3 ; any amount ! )
 #  - generic options to all nets ( like style;filledcurve )
-#  - example:
+#  - examples:
 #      - recursive;r4;4;1;2;0;1;1,2,3;style;filledcurve
 #      - recursive;r4;4;1;2;0;1;1,2,3;2,3,4;style;filledcurve
   if ($opts_debug) { warn "Type recursive; parameters are:\n" ; warnarray @_ ; }
+  my ($plane,$level,$fromA,$fromB,$toA,$toB) = splice @_,0,6;
+  my @nets;
+  my @options;
+  while (@_) {
+    my $AE=shift @_;
+    if ($AE =~ /^[0-9]/) {
+      push @nets,$AE
+    } else {
+      push @options, $AE, shift @_
+    }
+  }
+  # warnarray @nets;
+  # warnarray @options;
+  my @AP=@{$TP_planes{$plane}} ; # warnarray @AP; # @AP like Actual Plane
+  for my $i (1..$level) {
+    my @AN=@nets;
+    while (@AN) { # add nets based on @AP; add optional parameters, too
+      my @AO=@options;
+      my ($F,$M,$L)=split(",",splice(@AN,0,1)); # First,Middle,Last point
+      add_net3(@AP[2*$F],@AP[2*$F+1],@AP[2*$M],@AP[2*$M+1],@AP[2*$L],@AP[2*$L+1]);
+      while (@AO) {modify_lastelement(shift @AO,shift @AO)}
+    }
+    # calculate new @AP
+    # connectplane2points($TOx1,$TOy1,$TOx2,$TOy2,$nth1,$nth2,@plane)
+    @AP=connectplane2points (@AP[2*$toA],@AP[2*$toA+1],@AP[2*$toB],@AP[2*$toB+1],$fromA,$fromB,@AP)
+  }
 }
 
 # To draw one element of the 'net' type
