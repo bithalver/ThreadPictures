@@ -99,8 +99,8 @@ print
 
 # converts color names to 3 number as required in postscript
 # input is one string containing even 
-#   - a color name (like 'white')
-#   - 3 comma-eparated number (like '0.1,1,0.9') all numbers should be 0<=x<=1
+#   - a color name (like 'white') , which is converted to next format
+#   - 3 comma-separated number (like '0.1,1,0.9') all numbers should be 0<=x<=1
 sub colorconvert { my ($input)=@_;
   my %colornames=(
     white => '1,1,1',
