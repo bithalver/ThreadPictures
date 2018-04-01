@@ -3,7 +3,6 @@ global:
     #style: filledcurve
     background: black
     color: red
-    slices: 10
 planes:
   - r3;regular;3
   - r3a;connected;r3;1;r3;3;r3;1;2
