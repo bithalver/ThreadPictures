@@ -2,7 +2,7 @@
 global:
     style: filledcurve
     background: gray
-    color: yellow
+    color: lightgray
 #    threads: 10
 planes:
   - r6;regular;6;-30
@@ -24,41 +24,41 @@ planes:
   - a_P5;connected;1;-4.8;2;-4.8;a_P2;0;3
 pages:
   -
-    - pagename;2018 04 01 o
-    - net3s;a_r6;1;2;0
-    - net3s;a_r6;1;0;2
-    - net3s;a_r6;1;6;0
-    - net3s;a_r6;0;1;6
+    - pagename;2018 04 01 When the flower blooms | Amikor nyilik a virag
+    - net3s;a_r6;1;2;0;color;yellow
+    - net3s;a_r6;1;0;2;color;orange
+    - net3s;a_r6;1;6;0;color;yellow
+    - net3s;a_r6;0;1;6;color;orange
 
-    - net3s;a_P2;1;0;2
-    - net3s;a_P2;1;2;0
-    - net3s;a_P2;0;1;6
-    - net3s;a_P2;1;6;7
-    - net3s;a_P2;1;7;6
+    - net3s;a_P2;1;2;0;color;yellow
+    - net3s;a_P2;1;0;2;color;orange
+    - net3s;a_P2;0;1;6;color;red
+    - net3s;a_P2;1;7;6;color;yellow
+    - net3s;a_P2;1;6;7;color;orange
 
-    - net3s;a_P3;1;0;2
-    - net3s;a_P3;1;2;0
-    - net3s;a_P3;0;1;6
-    - net3s;a_P3;1;6;7
-    - net3s;a_P3;6;8;7
-    - net3s;a_P3;6;7;8
+    - net3s;a_P3;1;2;0;color;yellow
+    - net3s;a_P3;1;0;2;color;orange
+    - net3s;a_P3;0;1;6;color;red
+    - net3s;a_P3;1;6;7;color;red
+    - net3s;a_P3;6;8;7;color;yellow
+    - net3s;a_P3;6;7;8;color;orange
 
-    - net3s;a_P4;1;0;2
-    - net3s;a_P4;1;2;0
-    - net3s;a_P4;0;1;6
-    - net3s;a_P4;1;6;7
-    - net3s;a_P4;6;7;8
-    - net3s;a_P4;7;8;9
-    - net3s;a_P4;7;9;8
+    - net3s;a_P4;1;2;0;color;yellow
+    - net3s;a_P4;1;0;2;color;orange
+    - net3s;a_P4;0;1;6;color;red
+    - net3s;a_P4;1;6;7;color;orange
+    - net3s;a_P4;6;7;8;color;red
+    - net3s;a_P4;7;9;8;color;yellow
+    - net3s;a_P4;7;8;9;color;orange
 
-    - net3s;a_P5;1;0;2
-    - net3s;a_P5;1;2;0
-    - net3s;a_P5;0;1;6
-    - net3s;a_P5;1;6;7
-    - net3s;a_P5;6;7;8
-    - net3s;a_P5;7;8;9
-    - net3s;a_P5;8;9;10
-    - net3s;a_P5;8;10;9
+    - net3s;a_P5;1;2;0;color;yellow
+    - net3s;a_P5;1;0;2;color;orange
+    - net3s;a_P5;0;1;6;color;red
+    - net3s;a_P5;1;6;7;color;orange
+    - net3s;a_P5;6;7;8;color;orange
+    - net3s;a_P5;7;8;9;color;red
+    - net3s;a_P5;8;10;9;color;yellow
+    - net3s;a_P5;8;9;10;color;orange
   -
     - pagename;2018 04 01
     - net3s;r6;1;2;0
