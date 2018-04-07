@@ -13,7 +13,52 @@ planes:
   - P3;connected;2.4;0.5;2.4;1.5;P2;0;3
   - P4;connected;3.6;0.75;3.6;1.75;P2;0;3
   - P5;connected;4.8;1;4.8;2;P2;0;3
+
+  - a_r6;regular;6;-120
+  - a_r6A1;connected;0.25;-1.2;1.25;-1.2;a_r6;0;3
+  - a_r6A2;connected;a_r6A1;1;a_r6A1;6;a_r6;3;4
+  - r6A3;connected;a_r6A2;5;a_r6A2;6;a_r6;3;2
+  - a_P2;freeform;a_r6A1;0;a_r6A1;1;a_r6A1;2;a_r6A1;3;a_r6A1;4;a_r6A1;5;a_r6A1;6;a_r6A2;0;a_r6A2;5;a_r6A2;6;r6A3;0
+  - a_P3;connected;0.5;-2.4;1.5;-2.4;a_P2;0;3
+  - a_P4;connected;0.75;-3.6;1.75;-3.6;a_P2;0;3
+  - a_P5;connected;1;-4.8;2;-4.8;a_P2;0;3
 pages:
+  -
+    - pagename;2018 04 01 o
+    - net3s;a_r6;1;2;0
+    - net3s;a_r6;1;0;2
+    - net3s;a_r6;1;6;0
+    - net3s;a_r6;0;1;6
+
+    - net3s;a_P2;1;0;2
+    - net3s;a_P2;1;2;0
+    - net3s;a_P2;0;1;6
+    - net3s;a_P2;1;6;7
+    - net3s;a_P2;1;7;6
+
+    - net3s;a_P3;1;0;2
+    - net3s;a_P3;1;2;0
+    - net3s;a_P3;0;1;6
+    - net3s;a_P3;1;6;7
+    - net3s;a_P3;6;8;7
+    - net3s;a_P3;6;7;8
+
+    - net3s;a_P4;1;0;2
+    - net3s;a_P4;1;2;0
+    - net3s;a_P4;0;1;6
+    - net3s;a_P4;1;6;7
+    - net3s;a_P4;6;7;8
+    - net3s;a_P4;7;8;9
+    - net3s;a_P4;7;9;8
+
+    - net3s;a_P5;1;0;2
+    - net3s;a_P5;1;2;0
+    - net3s;a_P5;0;1;6
+    - net3s;a_P5;1;6;7
+    - net3s;a_P5;6;7;8
+    - net3s;a_P5;7;8;9
+    - net3s;a_P5;8;9;10
+    - net3s;a_P5;8;10;9
   -
     - pagename;2018 04 01
     - net3s;r6;1;2;0
