@@ -127,14 +127,15 @@ if (defined $config->{planes}) {
       my ($nth1,$nth2)=splice(@AP,0,2);
       @AP=connectplane2points($TOx1,$TOy1,$TOx2,$TOy2,$nth1,$nth2,@P2C); $TP_planes{$planename}=\@AP;
     }
-    when (/^g/i){ # grid for triangles; one mandatory option: size
+    when (/^g/i){ # grid for triangles; two mandatory options: sizeX, sizeY
       my @w=grid3plane(@AP); $TP_planes{$planename}=\@w;
     }
     default {warn "plane type '$_' is not (yet) supported (but processing goes on)\n";}
     }
   }
-  # Debug print of planes data
-  # for my $i (keys %TP_planes) { warn $i,"\n"; warnarray @{$TP_planes{$i}}; }
+if ($opts_debug) {  warn "Planes data\n" ;
+  for my $i (keys %TP_planes) { warn "plane name: '",$i,"' content:\n"; warnarray @{$TP_planes{$i}}; }
+}
   # Debug print of planes length
   # for my $i (keys %TP_planes) { warn $i,' ',scalar @{$TP_planes{$i}},"\n"; }
 }

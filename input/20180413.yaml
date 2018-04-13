@@ -5,9 +5,11 @@ global:
     color: lightgray
 #    threads: 10
 planes:
-  - r6;regular;6;-30
-  - T;grid;3
+  - T;grid;3;3
 pages:
   -
-    - pagename;2018 04 13 test for grid plane
-    - net3s;r6;1;2;0;color;yellow
+    - pagename;2018 04 13 first test for 'grid' type plane
+    - net3s;T;201;100;1;color;yellow
+    - net3s;T;202;102;2;color;yellow
+    - net3s;T;101;201;100
+    - net3s;T;101;2;102

@@ -101,9 +101,17 @@ sub pointsfromplanesordirect {
 
 # creates a triangular grid of wanted size
 # placeholder function at the moment
-sub grid3plane { my ($size)=@_;
+sub grid3plane { my ($sizeX,$sizeY)=@_;
   my @output;
-  
+  my $s3=sqrt(3)/2;
+  # $output[0]=0;$output[1]=0;$output[100]=0;$output[101]=0;
+  for my $Y (0..$sizeY) {
+    for my $X (0..$sizeX) {
+      # warn "$Y $X\n";
+      $output[($Y*100+$X)*2]=$X+($Y&1 ? 0.5 : 0);
+      $output[($Y*100+$X)*2+1]=$Y*$s3;
+    }
+  }
   return @output;
 }
 
