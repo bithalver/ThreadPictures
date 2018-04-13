@@ -7,7 +7,7 @@ use 5.10.0;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
-our @EXPORT = qw( basicplane connectplane2points pointsfromplanesordirect );
+our @EXPORT = qw( basicplane connectplane2points pointsfromplanesordirect grid3plane );
 
 # rotates a vector counterclockwise (left) by angle
 # parameter: x,y,angle
@@ -97,6 +97,14 @@ sub pointsfromplanesordirect {
   }
   # ---[END]--- Specify points from predefined planes _or_ directly
   return @processedinput;
+}
+
+# creates a triangular grid of wanted size
+# placeholder function at the moment
+sub grid3plane { my ($size)=@_;
+  my @output;
+  
+  return @output;
 }
 
 1;
