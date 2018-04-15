@@ -1,0 +1,37 @@
+---
+global:
+    style: filledcurve
+    background: gray
+    color: lightgray
+#    threads: 10
+planes:
+  - T;grid;3;3
+pages:
+  -
+    - pagename;Windmill - 2 colors
+    - net3s;T;101;100;201
+    - net3s;T;101;201;202
+    - net3s;T;101;202;102
+    - net3s;T;101;102;2
+    - net3s;T;101;2;1
+    - net3s;T;101;1;100
+    - net3s;T;101;100;1;color;yellow
+    - net3s;T;101;1;2;color;yellow
+    - net3s;T;101;2;102;color;yellow
+    - net3s;T;101;102;202;color;yellow
+    - net3s;T;101;202;201;color;yellow
+    - net3s;T;101;201;100;color;yellow
+  -
+    - pagename;Windmill - 3 colors
+    - net3s;T;101;100;201;color;blue
+    - net3s;T;101;201;202;color;lightgray
+    - net3s;T;101;202;102;color;yellow
+    - net3s;T;101;102;2;color;blue
+    - net3s;T;101;2;1;color;lightgray
+    - net3s;T;101;1;100;color;yellow
+    - net3s;T;101;100;1;color;lightgray
+    - net3s;T;101;1;2;color;blue
+    - net3s;T;101;2;102;color;yellow
+    - net3s;T;101;102;202;color;lightgray
+    - net3s;T;101;202;201;color;blue
+    - net3s;T;101;201;100;color;yellow
