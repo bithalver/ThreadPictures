@@ -3,7 +3,7 @@ global:
     style: filledcurve
     background: gray
     color: lightgray
-#    threads: 10
+    threads: 20
 planes:
   - T;grid;3;3
 pages:
@@ -35,3 +35,56 @@ pages:
     - net3s;T;101;102;202;color;lightgray
     - net3s;T;101;202;201;color;blue
     - net3s;T;101;201;100;color;yellow
+  -
+    - pagename;Windmill variant - flowers
+    - net3s;T;101;100;201;style;normal;lastthread;50;color;green;threads;100
+    - net3s;T;101;201;202;style;normal;lastthread;50;color;green;threads;100
+    - net3s;T;101;202;102;style;normal;lastthread;50;color;green;threads;100
+    - net3s;T;101;102;002;style;normal;lastthread;50;color;green;threads;100
+    - net3s;T;101;002;001;style;normal;lastthread;50;color;green;threads;100
+    - net3s;T;101;001;100;style;normal;lastthread;50;color;green;threads;100
+    - net3s;T;101;100;001;style;normal;lastthread;50;color;green;threads;100
+    - net3s;T;101;001;002;style;normal;lastthread;50;color;green;threads;100
+    - net3s;T;101;002;102;style;normal;lastthread;50;color;green;threads;100
+    - net3s;T;101;102;202;style;normal;lastthread;50;color;green;threads;100
+    - net3s;T;101;202;201;style;normal;lastthread;50;color;green;threads;100
+    - net3s;T;101;201;100;style;normal;lastthread;50;color;green;threads;100
+    - net3s;T;101;100;201;style;normal;firstthread;101;threads;200;color;yellow
+    - net3s;T;101;201;202;style;normal;firstthread;101;threads;200;color;yellow
+    - net3s;T;101;202;102;style;normal;firstthread;101;threads;200;color;yellow
+    - net3s;T;101;102;002;style;normal;firstthread;101;threads;200;color;yellow
+    - net3s;T;101;002;001;style;normal;firstthread;101;threads;200;color;yellow
+    - net3s;T;101;001;100;style;normal;firstthread;101;threads;200;color;yellow
+    - net3s;T;101;100;001;style;normal;firstthread;101;threads;200;color;yellow
+    - net3s;T;101;001;002;style;normal;firstthread;101;threads;200;color;yellow
+    - net3s;T;101;002;102;style;normal;firstthread;101;threads;200;color;yellow
+    - net3s;T;101;102;202;style;normal;firstthread;101;threads;200;color;yellow
+    - net3s;T;101;202;201;style;normal;firstthread;101;threads;200;color;yellow
+    - net3s;T;101;201;100;style;normal;firstthread;101;threads;200;color;yellow
+#  -
+#    - pagename;Windmill variant - flowers
+#    - net3s;T;101;100;201;style;normal;lastthread;50;color;yellow;threads;100
+#    - net3s;T;101;100;201;style;normal;firstthread;21;threads;40
+#    - net3s;T;101;201;202;style;normal;lastthread;50;color;yellow;threads;100
+#    - net3s;T;101;201;202;style;normal;firstthread;21;threads;40
+#    - net3s;T;101;202;102;style;normal;lastthread;50;color;yellow;threads;100
+#    - net3s;T;101;202;102;style;normal;firstthread;21;threads;40
+#    - net3s;T;101;102;002;style;normal;lastthread;50;color;yellow;threads;100
+#    - net3s;T;101;102;002;style;normal;firstthread;21;threads;40
+#    - net3s;T;101;002;001;style;normal;lastthread;50;color;yellow;threads;100
+#    - net3s;T;101;002;001;style;normal;firstthread;21;threads;40
+#    - net3s;T;101;001;100;style;normal;lastthread;50;color;yellow;threads;100
+#    - net3s;T;101;001;100;style;normal;firstthread;21;threads;40
+#
+#    - net3s;T;101;100;001;style;normal;lastthread;50;color;yellow;threads;100
+#    - net3s;T;101;100;001;style;normal;firstthread;21;threads;40
+#    - net3s;T;101;001;002;style;normal;lastthread;50;color;yellow;threads;100
+#    - net3s;T;101;001;002;style;normal;firstthread;21;threads;40
+#    - net3s;T;101;002;102;style;normal;lastthread;50;color;yellow;threads;100
+#    - net3s;T;101;002;102;style;normal;firstthread;21;threads;40
+#    - net3s;T;101;102;202;style;normal;lastthread;50;color;yellow;threads;100
+#    - net3s;T;101;102;202;style;normal;firstthread;21;threads;40
+#    - net3s;T;101;202;201;style;normal;lastthread;50;color;yellow;threads;100
+#    - net3s;T;101;202;201;style;normal;firstthread;21;threads;40
+#    - net3s;T;101;201;100;style;normal;lastthread;50;color;yellow;threads;100
+#    - net3s;T;101;201;100;style;normal;firstthread;21;threads;40
