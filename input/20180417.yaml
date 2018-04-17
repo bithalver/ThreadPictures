@@ -1,0 +1,117 @@
+---
+global:
+#    style: filledcurve
+    background: gray
+    color: lightgray
+    threads: 10
+planes:
+  - r6;regular;6;30
+  - r4;regular;4
+  - r3;regular;3
+  - R41;connected;r6;4;r6;5;r4;2;1
+  - R42;connected;r6;5;r6;6;r4;2;1
+  - A;freeform;r6;0;r6;1;r6;2;r6;3;r6;4;r6;5;r6;6;R41;3;R41;4;R42;3;R42;4
+  - A1;connected;A;8;A;9;A;9;8
+pages:
+  -
+    - pagename;Flower variant
+    - net3s;A;4;5;6
+    - net3s;A;4;5;8
+    - net3s;A;6;5;9
+    - net3s;A;8;5;9
+
+    - net3s;A;5;6;1;color;yellow
+    - net3s;A;6;1;2;color;yellow
+    - net3s;A;1;2;3;color;yellow
+    - net3s;A;2;3;4;color;yellow
+    - net3s;A;3;4;5;color;yellow
+
+    - net3s;A;5;8;7;color;yellow
+    - net3s;A;8;7;4;color;yellow
+    - net3s;A;7;4;5;color;yellow
+
+    - net3s;A;5;9;10;color;yellow
+    - net3s;A;9;10;6;color;yellow
+    - net3s;A;10;6;5;color;yellow
+
+    - net3s;A;5;9;8;color;yellow
+    - net3s;A;9;8;5;color;yellow
+  -
+    - pagename;Flower variant 2
+    - net3s;A;0;5;4
+    - net3s;A;0;5;6
+    - net3s;A;4;5;8
+    - net3s;A;6;5;9
+    - net3s;A;8;5;9
+
+    - net3s;A;5;4;0;color;yellow
+    - net3s;A;4;0;5;color;yellow
+
+    - net3s;A;5;6;0;color;yellow
+    - net3s;A;6;0;5;color;yellow
+
+    - net3s;A;5;8;7;color;yellow
+    - net3s;A;8;7;4;color;yellow
+    - net3s;A;7;4;5;color;yellow
+
+    - net3s;A;5;9;10;color;yellow
+    - net3s;A;9;10;6;color;yellow
+    - net3s;A;10;6;5;color;yellow
+
+    - net3s;A;5;9;8;color;yellow
+    - net3s;A;9;8;5;color;yellow
+  -
+    - pagename;Flower variant 3
+    - net3s;A;0;5;4
+    - net3s;A;0;5;6
+    - net3s;A;4;5;8
+    - net3s;A;6;5;9
+    - net3s;A;8;5;9
+
+    - net3s;A;5;4;0;color;yellow
+    - net3s;A;4;0;5;color;yellow
+
+    - net3s;A;5;6;0;color;yellow
+    - net3s;A;6;0;5;color;yellow
+
+    - net3s;A;5;8;7;color;yellow
+    - net3s;A;8;7;4;color;yellow
+    - net3s;A;7;4;5;color;yellow
+
+    - net3s;A;5;9;10;color;yellow
+    - net3s;A;9;10;6;color;yellow
+    - net3s;A;10;6;5;color;yellow
+
+    - net3s;A;5;9;8;color;yellow
+    - net3s;A;9;8;5;color;yellow
+
+    - net3s;A1;0;5;4
+    - net3s;A1;0;5;6
+    - net3s;A1;4;5;8
+    - net3s;A1;6;5;9
+    - net3s;A1;8;5;9
+
+    - net3s;A1;5;4;0;color;yellow
+    - net3s;A1;4;0;5;color;yellow
+
+    - net3s;A1;5;6;0;color;yellow
+    - net3s;A1;6;0;5;color;yellow
+
+    - net3s;A1;5;8;7;color;yellow
+    - net3s;A1;8;7;4;color;yellow
+    - net3s;A1;7;4;5;color;yellow
+
+    - net3s;A1;5;9;10;color;yellow
+    - net3s;A1;9;10;6;color;yellow
+    - net3s;A1;10;6;5;color;yellow
+
+    - net3s;A1;5;9;8;color;yellow
+    - net3s;A1;9;8;5;color;yellow
+
+    - net3;A;10;A;9;A1;7
+    - net3;A;9;A1;7;A;10;color;yellow
+    - net3;A1;7;A;10;A;9;color;yellow
+
+    - net3;A1;10;A1;9;A;7
+    - net3;A1;9;A;7;A1;10;color;yellow
+    - net3;A;7;A1;10;A1;9;color;yellow
