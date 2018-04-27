@@ -1,0 +1,27 @@
+---
+global:
+#    style: filledcurve
+    background: darkgray
+    color: white
+    threads: 20
+planes:
+  - T;grid;3;4
+pages:
+  -
+    - pagename;20180427
+    - net3s;T;200;401;202;color;white
+    - net3s;T;401;202;403;color;white
+    - net3s;T;202;403;401;color;yellow
+    - net3s;T;403;401;202;color;brown
+
+    - net3s;T;201;000;002;color;white;firstthread;10
+    - net3s;T;000;002;201;color;white;lastthread;10
+
+    - net3s;T;002;203;201;color;white;firstthread;11
+    - net3s;T;203;201;002;color;white;lastthread;10
+
+    - net3s;T;203;201;002;color;yellow;firstthread;11
+    - net3s;T;201;002;203;color;yellow;lastthread;10
+
+    - net3s;T;201;002;203;color;brown;firstthread;11
+    - net3s;T;002;203;201;color;brown;lastthread;10
