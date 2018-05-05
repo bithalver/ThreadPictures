@@ -1,0 +1,26 @@
+---
+global:
+    background: lightgray
+    color: white
+    threads: 20
+planes:
+  - T;grid;2;2
+pages:
+  -
+    - pagename;20180505
+    - net3s;T;000;001;100;color;yellow;firstthread;10
+    - net3s;T;001;100;000;color;yellow;firstthread;10
+    - net3s;T;100;000;001;color;yellow;firstthread;10
+
+    - net3s;T;001;002;101;color;blue;lastthread;10
+    - net3s;T;002;101;001;color;blue;lastthread;10
+    - net3s;T;101;001;002;color;blue;lastthread;10
+
+    - net3s;T;100;101;201;color;yellow;firstthread;10
+    - net3s;T;101;201;100;color;yellow;firstthread;10
+    - net3s;T;201;100;101;color;yellow;firstthread;10
+
+    - net3s;T;100;101;201;color;blue;lastthread;10
+    - net3s;T;101;201;100;color;blue;lastthread;10
+    - net3s;T;201;100;101;color;blue;lastthread;10
+
