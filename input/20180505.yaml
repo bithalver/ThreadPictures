@@ -1,6 +1,6 @@
 ---
 global:
-    background: lightgray
+    background: darkgray
     color: white
     threads: 20
 planes:
@@ -12,15 +12,88 @@ pages:
     - net3s;T;001;100;000;color;yellow;firstthread;10
     - net3s;T;100;000;001;color;yellow;firstthread;10
 
-    - net3s;T;001;002;101;color;blue;lastthread;10
-    - net3s;T;002;101;001;color;blue;lastthread;10
-    - net3s;T;101;001;002;color;blue;lastthread;10
+    - net3s;T;001;002;101;color;lightblue;lastthread;10
+    - net3s;T;002;101;001;color;lightblue;lastthread;10
+    - net3s;T;101;001;002;color;lightblue;lastthread;10
 
     - net3s;T;100;101;201;color;yellow;firstthread;10
     - net3s;T;101;201;100;color;yellow;firstthread;10
     - net3s;T;201;100;101;color;yellow;firstthread;10
 
-    - net3s;T;100;101;201;color;blue;lastthread;10
-    - net3s;T;101;201;100;color;blue;lastthread;10
-    - net3s;T;201;100;101;color;blue;lastthread;10
+    - net3s;T;100;101;201;color;lightblue;lastthread;10
+    - net3s;T;101;201;100;color;lightblue;lastthread;10
+    - net3s;T;201;100;101;color;lightblue;lastthread;10
 
+#    - net3s;T;101;001;100;color;yellow;firstthread;11
+#    - net3s;T;101;001;100;color;lightblue;lastthread;10
+
+#    - net3s;T;101;100;001;color;yellow;lastthread;10
+#    - net3s;T;100;101;001;color;lightblue;lastthread;10
+  -
+    - pagename;20180505 variant
+    - net3s;T;000;001;100;color;yellow;firstthread;10
+    - net3s;T;001;100;000;color;yellow;firstthread;10
+    - net3s;T;100;000;001;color;yellow;firstthread;10
+
+    - net3s;T;001;002;101;color;lightblue;lastthread;10
+    - net3s;T;002;101;001;color;lightblue;lastthread;10
+    - net3s;T;101;001;002;color;lightblue;lastthread;10
+
+    - net3s;T;100;101;201;color;yellow;firstthread;10
+    - net3s;T;101;201;100;color;yellow;firstthread;10
+    - net3s;T;201;100;101;color;yellow;firstthread;10
+
+    - net3s;T;100;101;201;color;lightblue;lastthread;10
+    - net3s;T;101;201;100;color;lightblue;lastthread;10
+    - net3s;T;201;100;101;color;lightblue;lastthread;10
+
+    - net3s;T;101;001;100;color;yellow;firstthread;11
+    - net3s;T;101;001;100;color;lightblue;lastthread;10
+
+    - net3s;T;101;100;001;color;yellow;lastthread;10
+    - net3s;T;100;101;001;color;lightblue;lastthread;10
+  -
+    - pagename;20180505 | Blue skinned Atlantis people with his yellow skinned twin
+    - net3s;T;000;001;100;color;yellow
+    - net3s;T;001;100;000;color;yellow
+    - net3s;T;100;000;001;color;yellow
+
+    - net3s;T;001;002;101;color;lightblue
+    - net3s;T;002;101;001;color;lightblue
+    - net3s;T;101;001;002;color;lightblue
+
+    - net3s;T;101;201;100;color;yellow;firstthread;10
+    - net3s;T;201;100;101;color;yellow
+
+    - net3s;T;100;101;201;color;lightblue
+    - net3s;T;101;201;100;color;lightblue;lastthread;10
+
+    - net3s;T;101;001;100;color;yellow;firstthread;11
+    - net3s;T;101;001;100;color;lightblue;lastthread;10
+
+    - net3s;T;101;100;001;color;yellow
+    - net3s;T;100;101;001;color;lightblue
+  -
+    - pagename;20180505 | The yellow skinned twin
+    - net3s;T;000;001;100;color;yellow
+    - net3s;T;001;100;000;color;yellow
+    - net3s;T;100;000;001;color;yellow
+
+    - net3s;T;101;201;100;color;yellow;firstthread;10
+    - net3s;T;201;100;101;color;yellow
+
+    - net3s;T;101;001;100;color;yellow;firstthread;11
+
+    - net3s;T;101;100;001;color;yellow
+  -
+    - pagename;20180505 | The blue skinned twin
+    - net3s;T;001;002;101;color;lightblue
+    - net3s;T;002;101;001;color;lightblue
+    - net3s;T;101;001;002;color;lightblue
+
+    - net3s;T;100;101;201;color;lightblue
+    - net3s;T;101;201;100;color;lightblue;lastthread;10
+
+    - net3s;T;101;001;100;color;lightblue;lastthread;10
+
+    - net3s;T;100;101;001;color;lightblue
