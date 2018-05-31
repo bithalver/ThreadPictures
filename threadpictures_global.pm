@@ -81,7 +81,7 @@ $TP_GLOBAL{pagename} = $ENV{'TP_pagename'} //="";
 # Returns an array of two values: the minimum and the maximum of an input numerical array
 sub minmax { return (sort { $a <=> $b } @_)[0,-1]; }
 
-sub warnarray { warn join(';',@_),"\n"; return @_;}
+sub warnarray { no warnings 'uninitialized'; warn join(';',@_),"\n"; return @_;}
 
 sub warnhash {my (%a)=@_; warn join(", ", map { "$_ => $a{$_}" } keys %a),"\n"; return %a; }
 
