@@ -33,16 +33,42 @@ sub VERSION_MESSAGE { warn "ThreadPictures version 1.1\n"; exit 0}
 
 sub HELP_MESSAGE { # TODO: meaningful help message
   warn "Usage:
-  $0 [-h|--help|-?]   # this help and exit
-  $0 {-v|--version}   # 1 line version info and exit
+  $0 [-h|--help|-?] # this help and exit
+  $0 {-v|--version} # 1 line version info and exit
   $0 [-i INPUT_YAML_FILE] [-o OUTPUT_PS_FILE] [-p PARAMETER_STRING]*
     # if -i is missing, reads yaml from stdin
     # if -o is missing, output goes to STDOUT
     # PARAMETER_STRING should be in the format key=value
     #   (any number of key-value pair could be specified, each one needs it's own -p )
   $0 {-d|--debug}   # turns on debug messages EXPERIMENTAL
+  $0 --help_plane   # help on plane types and their parameters
 ";
   exit 0;
+}
+
+sub HELP_PLANES {
+  warn "Possible plane types and their parameters:
+
+  regular: sides (mandatory), angle (optional), size (optional)
+    create a centered regulars n size plane (like square)
+    0th point is the center
+  freeform: x1,y1,x2,y2 ... (any number of x,y pairs _and/or_ planeI,J pairs)
+  connected: TO_x1,TO_y1,TO_x2,TO_y2,plane-to-connect,nth1,nth2
+    (TO_x1,TO_y1) and (TO_x2,TO_y2) could be in (planeI,J) format
+    two points of 'plane_to_connect' (the nth1 and nth2 ones)
+      will be connected to given points 
+    all parameters are mandatory
+  grid for triangles; two mandatory options: sizeX, sizeY
+    result will look like when sizeX is 3, sizeY is 4:
+
+    400   401   402   403
+       300   301   302   303
+    200   201   202   203
+       100   101   102   103
+    000   001   002   003
+
+";
+  exit 0
 }
 
 GetOptions(
@@ -50,6 +76,7 @@ GetOptions(
     'output|o=s' => \$opts_output,
     'param|p=s' => \%TP_PARAMS,
     'help|h|?' => \$opts_help,
+    'help_plane' => \$opts_help_plane,
     'version|v' => \$opts_version,
     'debug|d' => \$opts_debug,
 );
@@ -57,6 +84,7 @@ GetOptions(
 if ($opts_debug) { warn "CMD params are:\n"; warnhash %TP_PARAMS; }
 
 if ($opts_help) {HELP_MESSAGE;}
+if ($opts_help_plane) {HELP_PLANES;}
 if ($opts_version) {VERSION_MESSAGE;}
 
 # read from yaml file (specified by '-i' switch) _or_ STDIN
