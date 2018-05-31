@@ -58,7 +58,7 @@ sub HELP_PLANES {
     two points of 'plane_to_connect' (the nth1 and nth2 ones)
       will be connected to given points 
     all parameters are mandatory
-  grid for triangles; two mandatory options: sizeX, sizeY
+  grid for regular triangles; two mandatory options: sizeX, sizeY
     result will look like when sizeX is 3, sizeY is 4:
 
     400   401   402   403
