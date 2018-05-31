@@ -1,0 +1,37 @@
+---
+global:
+#    style:  filledcurve
+    background: gray
+    color: lightgray
+#    threads: 10
+planes:
+  - T;grid;8;11
+pages:
+  -
+    - pagename;2018 05 31 | 1
+    - net3s;T;000;201;002
+    - net3s;T;200;100;201
+    - net3s;T;202;101;201
+  -
+    - pagename;2018 05 31 | 2
+    - net3s;T;201;002;000
+    - net3s;T;002;000;201
+    - net3s;T;000;201;002;color;yellow
+    - net3s;T;100;201;200
+    - net3s;T;201;200;100
+    - net3s;T;200;100;201;color;yellow
+    - net3s;T;101;201;202
+    - net3s;T;201;202;101
+    - net3s;T;202;101;201;color;yellow
+  -
+    - pagename;2018 05 31 | 3
+    - net3s;T;800;004;808
+    - net3s;T;602;1004;606
+  -
+    - pagename;2018 05 31 | 4
+    - net3s;T;004;808;800
+    - net3s;T;808;800;004
+    - net3s;T;800;004;808;color;yellow
+    - net3s;T;1004;606;602
+    - net3s;T;606;602;1004
+    - net3s;T;602;1004;606;color;yellow
