@@ -4,7 +4,6 @@ global:
 #    style:  curve
     background: gray
     color: lightgray
-#    threads: 10
 planes:
   - T;grid;8;11
 pages:
@@ -15,3 +14,46 @@ pages:
     - net4s;T;201;100;001;002
     - net4s;T;002;102;202;201;color;yellow
     - net4s;T;202;201;100;001;color;yellow
+  -
+    - pagename;2018 06 04 | 2
+    - net4s;T;001;002;003;103
+    - net4s;T;003;103;204;303
+    - net4s;T;204;303;403;402
+    - net4s;T;403;402;401;300
+    - net4s;T;401;300;200;100
+    - net4s;T;200;100;001;002
+
+    - net4s;T;101;102;203;302;firstthread;11
+    - net4s;T;101;102;203;302;lastthread;10;color;yellow
+    - net4s;T;203;302;301;201;firstthread;11
+    - net4s;T;203;302;301;201;lastthread;10;color;yellow
+    - net4s;T;301;201;101;102;firstthread;11
+    - net4s;T;301;201;101;102;lastthread;10;color;yellow
+
+    - net4s;T;003;002;102;101;firstthread;10;color;yellow
+    - net4s;T;003;002;102;101;lastthread;9
+    - net4s;T;403;303;302;203;firstthread;10;color;yellow
+    - net4s;T;403;303;302;203;lastthread;9
+    - net4s;T;200;300;201;301;firstthread;10;color;yellow
+    - net4s;T;200;300;201;301;lastthread;9
+  -
+    - pagename;2018 06 04 | Silk ribbons
+    - background;black
+    - net4s;T;001;002;003;103
+    - net4s;T;003;103;204;303;color;yellow
+    - net4s;T;204;303;403;402
+    - net4s;T;403;402;401;300;color;yellow
+    - net4s;T;401;300;200;100
+    - net4s;T;200;100;001;002;color;yellow
+
+    - net4s;T;101;102;203;302;firstthread;11
+    - net4s;T;101;102;203;302;lastthread;10;color;yellow
+    - net4s;T;203;302;301;201;firstthread;11
+    - net4s;T;203;302;301;201;lastthread;10;color;yellow
+    - net4s;T;301;201;101;102
+
+    - net4s;T;003;002;102;101;firstthread;10;color;yellow
+    - net4s;T;003;002;102;101;lastthread;9
+    - net4s;T;403;303;302;203
+    - net4s;T;200;300;201;301;firstthread;10;color;yellow
+    - net4s;T;200;300;201;301;lastthread;9
