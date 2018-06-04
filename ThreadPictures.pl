@@ -185,6 +185,10 @@ for (0 .. @{$config->{pages}}-1) {
         add_net3s(splice @AE,0,4);
         while (@AE) {modify_lastelement(shift @AE,shift @AE)}
       }
+      when (/^net4s$/i){ # plane; first line start and end point, second  line start and end point
+        add_net4s(splice @AE,0,5);
+        while (@AE) {modify_lastelement(shift @AE,shift @AE)}
+      }
       when (/^loop$/i){ # plane; point list (0th point will not be used from plane !)
         add_loop(@AE); # Provide the whole thing
         # Lot of nets, additional parameters handled inside

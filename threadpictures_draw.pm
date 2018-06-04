@@ -8,7 +8,7 @@ use 5.10.0;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
-our @EXPORT = qw( draw_all add_net4 add_net3 add_net3s modify_lastelement add_path add_loop add_loop4 add_recursive);
+our @EXPORT = qw( draw_all add_net4 add_net3 add_net3s add_net4s modify_lastelement add_path add_loop add_loop4 add_recursive);
 
 #To optimize the whole drawing to fit the page, minimum and maximum X and Y has to be determined
 our ($TP_minX,$TP_minY,$TP_maxX,$TP_maxY);
@@ -64,6 +64,8 @@ sub add_net4 {
 sub add_net3 { return add_net4($_[0],$_[1],$_[2],$_[3],$_[2],$_[3],$_[4],$_[5]);}
 
 sub add_net3s { return add_net4($_[0],$_[1],$_[0],$_[2],$_[0],$_[2],$_[0],$_[3]);}
+
+sub add_net4s { return add_net4($_[0],$_[1],$_[0],$_[2],$_[0],$_[3],$_[0],$_[4]);}
 
 sub add_loop {
   my $planename=splice(@_,0,1);
