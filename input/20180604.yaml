@@ -1,0 +1,17 @@
+# net4 first test
+---
+global:
+#    style:  curve
+    background: gray
+    color: lightgray
+#    threads: 10
+planes:
+  - T;grid;8;11
+pages:
+  -
+    - pagename;2018 06 04 | 1
+    - net4s;T;001;002;102;202
+    - net4s;T;102;202;201;100
+    - net4s;T;201;100;001;002
+    - net4s;T;002;102;202;201;color;yellow
+    - net4s;T;202;201;100;001;color;yellow
