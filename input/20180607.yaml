@@ -1,7 +1,7 @@
 ---
 global:
     background: lightgray
-    color: darkgray
+    color: black
 planes:
   - t;grid;1;1
   - b;freeform;t;000;t;001;t;100;1;1;0;1;1;0.932;0;0.932
@@ -11,34 +11,62 @@ pages:
 #    - pagename;2018 06 07 | 1
 #    - recursive;b;12;1;2;1;5;0,2,1
 #    - recursive;b;12;0;2;0;6;0,2,1
-  -
-    - pagename;2018 06 07 | 2
-    - recursive;c;12;1;2;1;5;0,2,1
-    - recursive;c;12;0;2;0;6;0,2,1
+#  -
+#    - pagename;2018 06 07 | 2
+#    - recursive;c;12;1;2;1;5;0,2,1
+#    - recursive;c;12;0;2;0;6;0,2,1
   -
     - pagename;2018 06 07 | 3
-    - recursive;c;12;1;2;1;5;0,2,1;3,4,5;4,3,6
-    - recursive;c;12;0;2;0;6;0,2,1;3,4,5;4,3,6
+    - recursive;c;12;1;2;1;5;0,2,1
+    - recursive;c;12;1;2;1;5;3,4,5;4,3,6;color;yellow
+    - recursive;c;12;0;2;0;6;0,2,1
+    - recursive;c;12;0;2;0;6;3,4,5;4,3,6;color;yellow
   -
     - pagename;2018 06 07 | 4
-    - recursive;c;12;1;2;1;5;2,1,0
-    - recursive;c;12;0;2;0;6;2,0,1
+    - background;darkgray
+    - recursive;c;12;1;2;1;5;2,1,0;color;yellow
+    - recursive;c;12;0;2;0;6;2,0,1;color;lightblue
   -
     - pagename;2018 06 07 | 5
-    - recursive;c;12;1;2;1;5;2,0,1
-    - recursive;c;12;0;2;0;6;2,1,0
+    - background;0,0.2,0.6
+    - recursive;c;12;1;2;1;5;2,0,1;color;0.4,0.6,1;style;normal
+    - recursive;c;12;0;2;0;6;0,2,1;color;white;style;normal
+  -
+    - pagename;2018 06 07 | 5a | Ice spider and her mirrored shadow
+    - background;0,0.2,0.6
+    - recursive;c;12;1;2;1;5;2,0,1;color;0.4,0.6,1;style;curve
+    - recursive;c;12;0;2;0;6;2,1,0;color;white;style;curve
+  -
+    - pagename;2018 06 07 | 5b
+    - background;0,0.2,0.6
+    - recursive;c;12;1;2;1;5;2,0,1;color;0.4,0.6,1;style;border
+    - recursive;c;12;0;2;0;6;2,1,0;color;white;style;border
+  -
+    - pagename;2018 06 07 | 5c
+    - background;0,0.2,0.6
+    - recursive;c;12;1;2;1;5;2,0,1;color;0.4,0.6,1;style;parallel
+    - recursive;c;12;0;2;0;6;0,2,1;color;white;style;parallel
   -
     - pagename;2018 06 07 | 6
     - recursive;c;48;1;2;1;5;0,2,3;style;filledcurve
     - recursive;c;48;0;2;0;6;1,2,4;style;filledcurve
   -
+    - pagename;2018 06 07 | Amber-Shaper Un'sok | From death comes life, and from life, death....
+    - background;darkgray
+    - recursive;c;48;1;2;1;5;0,2,3;style;inversefilledcurve;color;brown
+    - recursive;c;48;0;2;0;6;1,2,4;style;inversefilledcurve;color;darkgreen
+  -
     - pagename;2018 06 07 | 7
     - recursive;c;48;1;2;1;5;1,2,4;style;filledcurve
     - recursive;c;48;0;2;0;6;0,2,3;style;filledcurve
   -
-    - pagename;2018 06 07 | 8
-    - recursive;c;12;1;2;1;5;0,1,3
-    - recursive;c;12;0;2;0;6;1,0,4
+    - pagename;2018 06 07 | 7a
+    - recursive;c;48;1;2;1;5;1,2,4;style;inversefilledcurve
+    - recursive;c;48;0;2;0;6;0,2,3;style;inversefilledcurve
+#  -
+#    - pagename;2018 06 07 | 8
+#    - recursive;c;12;1;2;1;5;0,1,3
+#    - recursive;c;12;0;2;0;6;1,0,4
   -
     - pagename;2018 06 07 | 9
     - recursive;c;48;1;2;1;5;0,2,4;style;curve
