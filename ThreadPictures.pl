@@ -58,6 +58,8 @@ sub HELP_PLANES {
     two points of 'plane_to_connect' (the nth1 and nth2 ones)
       will be connected to given points 
     all parameters are mandatory
+  angle: one mandatory parameter: angle in degrees (where 360 degrees is full circle)
+    returns 3 points: 0,0  1,0  cos(angle),sin(angle)
   grid for regular triangles; two mandatory options: sizeX, sizeY
     result will look like when sizeX is 3, sizeY is 4:
 
@@ -157,6 +159,10 @@ if (defined $config->{planes}) {
     }
     when (/^g/i){ # grid for triangles; two mandatory options: sizeX, sizeY
       my @w=grid3plane(@AP); $TP_planes{$planename}=\@w;
+    }
+    when (/^a/i){ # angle: one mandatory option: angle in degrees (one full is 360 degrees)
+      my $angle=$AP[0]/180*pi();
+      $TP_planes{$planename}=[0,0,1,0,cos($angle),sin($angle)];
     }
     default {warn "plane type '$_' is not (yet) supported (but processing goes on)\n";}
     }
