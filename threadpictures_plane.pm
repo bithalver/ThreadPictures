@@ -12,14 +12,13 @@ our @EXPORT = qw( basicplane connectplane2points pointsfromplanesordirect grid3p
 # rotates a vector counterclockwise (left) by angle
 # parameter: x,y,angle
 # output array: [newx,newy]
-sub rotatevector { my ($x,$y,$angle)=@_;
+sub rotatevector { no warnings 'uninitialized'; my ($x,$y,$angle)=@_; 
   return (my_round($x*cos($angle)-$y*sin($angle)), my_round($x*sin($angle)+$y*cos($angle)) );
 }
 
-sub addvector { my ($x1,$y1,$x2,$y2)=@_; return ($x1+$x2,$y1+$y2); }
+sub addvector { no warnings 'uninitialized'; my ($x1,$y1,$x2,$y2)=@_; return ($x1+$x2,$y1+$y2); }
 
-sub scalevector { my ($x,$y,$scale)=@_;
-  return ($x*$scale,$y*$scale);
+sub scalevector { no warnings 'uninitialized'; my ($x,$y,$scale)=@_; return ($x*$scale,$y*$scale);
 }
 
 # moves a whole plane by a vector
