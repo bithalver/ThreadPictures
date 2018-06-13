@@ -1,0 +1,28 @@
+---
+global:
+    background: gray
+    color: black
+planes:
+  - t;grid;4;2
+  - c;connected;0;1;0;0;t;0;1
+pages:
+  -
+    - pagename;2018 06 13a | 2
+    - net3s;c;200;001;202;color;black
+    - net3s;c;202;003;204;color;black
+    - net3s;c;001;202;003;color;white
+
+    - net3s;c;100;001;101;color;white
+    - net3s;c;102;003;103;color;white
+    - net3s;c;101;202;102;color;black
+  -
+    - pagename;2018 06 13a | 1
+    - net3s;c;200;001;202;color;orange
+    - net3s;c;202;003;204;color;lightblue
+    - net3s;c;001;202;003;color;white
+
+    - net3s;c;100;001;101;color;white
+    - net3s;c;102;003;103;color;white
+    
+    - net3s;c;101;202;102;color;lightblue;firstthread;11
+    - net3s;c;101;202;102;color;orange;lastthread;10
