@@ -57,7 +57,7 @@ sub my_round{my ($number)=@_; return round_digits($number,8)};
 
 sub cm { my ($i)=@_; return $i*28.34645;}
 
-sub pi {return 3.14159265359;}
+sub pi {return 4 * atan2(1, 1);}
 
 # page defaults, all in cm
 $TP_GLOBAL{pageXsize} = cm($ENV{'TP_pageXsize'}//=21),
