@@ -1,0 +1,11 @@
+---
+global:
+    background: lightgray
+    color: black
+planes:
+  - A;angle;60
+  - B;freeform;0;0;1;0;0;1
+pages:
+  -
+    - pagename;2018 06 13 | First angle test
+    - net3s;A;2;0;1
