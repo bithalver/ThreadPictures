@@ -2,10 +2,22 @@
 global:
     background: gray
     color: black
+    threads: 10
 planes:
   - t;grid;4;2
   - c;connected;0;1;0;0;t;0;1
 pages:
+  -
+    - pagename;2018 06 13a | 1
+    - net3s;c;200;001;202;color;orange
+    - net3s;c;202;003;204;color;lightblue
+    - net3s;c;001;202;003;color;white
+
+    - net3s;c;100;001;101;color;white
+    - net3s;c;102;003;103;color;white
+    
+    - net3s;c;101;202;102;color;lightblue;firstthread;6
+    - net3s;c;101;202;102;color;orange;lastthread;5
   -
     - pagename;2018 06 13a | 2
     - net3s;c;200;001;202;color;black
@@ -16,13 +28,23 @@ pages:
     - net3s;c;102;003;103;color;white
     - net3s;c;101;202;102;color;black
   -
-    - pagename;2018 06 13a | 1
-    - net3s;c;200;001;202;color;orange
-    - net3s;c;202;003;204;color;lightblue
-    - net3s;c;001;202;003;color;white
+    - pagename;2018 06 13a | 3
+    - net3s;c;200;001;202;color;black;style;parallel;lastthread;4
+    - net3s;c;202;003;204;color;black;style;parallel;lastthread;4
+    - net3s;c;001;202;003;color;white;style;parallel;lastthread;4
 
-    - net3s;c;100;001;101;color;white
-    - net3s;c;102;003;103;color;white
-    
-    - net3s;c;101;202;102;color;lightblue;firstthread;11
-    - net3s;c;101;202;102;color;orange;lastthread;10
+    - net3s;c;100;001;101;color;white;style;parallel
+    - net3s;c;100;001;101;color;red;style;parallel;firstthread;1;lastthread;1
+    - net3s;c;102;003;103;color;white;style;parallel
+    - net3s;c;102;003;103;color;red;style;parallel;firstthread;1;lastthread;1
+    - net3s;c;101;202;102;color;black;style;parallel
+    - net3s;c;101;202;102;color;red;style;parallel;firstthread;1;lastthread;1
+  -
+    - pagename;2018 06 13a | 4
+    - net3s;c;100;001;101;style;parallel;color;red
+    - net3s;c;102;003;103;style;parallel;color;red
+    - net3s;c;101;202;102;style;parallel;color;red
+
+    - net3s;c;200;001;202;color;black;style;parallel
+    - net3s;c;202;003;204;color;black;style;parallel
+    - net3s;c;001;202;003;color;white;style;parallel
