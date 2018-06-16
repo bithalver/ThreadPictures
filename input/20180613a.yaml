@@ -48,3 +48,23 @@ pages:
     - net3s;c;200;001;202;color;black;style;parallel
     - net3s;c;202;003;204;color;black;style;parallel
     - net3s;c;001;202;003;color;white;style;parallel
+  -
+    - pagename;2018 06 13a | 5
+    - net3s;c;200;001;202;color;black
+    - net3s;c;202;200;001;color;black
+    - net3s;c;202;003;204;color;black
+    - net3s;c;003;204;202;color;black
+    - net3s;c;001;202;003;color;white
+
+    - net3s;c;100;001;101;color;white
+    - net3s;c;102;003;103;color;white
+    - net3s;c;101;202;102;color;black
+
+    - net3s;c;201;200;100;color;blue
+    - net3s;c;101;202;201;color;white
+
+    - net3s;c;103;204;203;color;blue
+    - net3s;c;203;202;102;color;white
+
+    - net3s;c;101;001;002;color;blue
+    - net3s;c;002;003;102;color;blue
