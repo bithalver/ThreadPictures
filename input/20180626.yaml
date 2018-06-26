@@ -1,0 +1,26 @@
+---
+global:
+    background: darkgray
+    color: white
+    threads: 10
+planes:
+  - t;grid;6;6
+#  - c;connected;0;1;0;0;t;0;1
+pages:
+  -
+    - pagename;2018 06 26 | 1
+    - net3s;t;201;202;301;color;red
+    - net4s;t;000;001;202;201;style;parallel
+    - net4s;t;301;202;503;603;style;parallel
+    - net4s;t;603;502;005;006;style;parallel
+    - net4s;t;100;000;006;105;style;parallel
+  -
+    - pagename;2018 06 26 | 2
+    - net3s;t;201;202;301;color;red
+    - net4s;t;100;101;202;201;style;parallel
+    - net4s;t;301;202;403;502;style;parallel
+    - net4s;t;503;403;104;105;style;parallel
+    - net4s;t;101;001;005;104;style;parallel
+    - net3s;t;100;101;001
+    - net3s;t;503;403;502
+    - net3s;t;005;104;105
