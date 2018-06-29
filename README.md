@@ -16,14 +16,15 @@ To run:
 (I do not guarantee this README is up-to-date all the time, run the program to get the latest help)
 ```
 Usage:
-  $0 [-h|--help|-?]   # this help and exit
-  $0 {-v|--version}   # 1 line version info and exit
-  $0 [-i INPUT_YAML_FILE] [-o OUTPUT_PS_FILE] [-p PARAMETER_STRING]*
+  ./TP [-h|--help|-?] # this help and exit
+  ./TP {-v|--version} # 1 line version info and exit
+  ./TP [-i INPUT_YAML_FILE] [-o OUTPUT_PS_FILE] [-p PARAMETER_STRING]*
     # if -i is missing, reads yaml from stdin
     # if -o is missing, output goes to STDOUT
     # PARAMETER_STRING should be in the format key=value
     #   (any number of key-value pair could be specified, each one needs it's own -p )
-  $0 {-d|--debug}   # turns on debug messages EXPERIMENTAL
+  ./TP {-d|--debug}   # turns on debug messages EXPERIMENTAL
+  ./TP --help_plane   # help on plane types and their parameters
 ```
 
 See attached yaml files for examples.
@@ -36,8 +37,7 @@ Requirements:
  - ps2pdf command (part of ghostscript): only if you want a pdf output
 
 Tested with/on:
-  - windows 7
-  - cygwin 2.880
-  - perl 5.22.4
-  - ghostscript 9.19
+  - windows 7 and 10 using cygwin 2.880 - 2.891
+  - perl 5.22.4 - v5.26.2
+  - ghostscript 9.19 - 9.23
   - bash and xterm (I do not think their version matter)

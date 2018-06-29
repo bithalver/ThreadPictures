@@ -50,7 +50,7 @@ sub HELP_PLANES {
   warn "Possible plane types and their parameters:
 
   regular: sides (mandatory), angle (optional), size (optional)
-    create a centered regulars n size plane (like square)
+    create a centered regular n size plane (like square)
     0th point is the center
   freeform: x1,y1,x2,y2 ... (any number of x,y pairs _and/or_ planeI,J pairs)
   connected: TO_x1,TO_y1,TO_x2,TO_y2,plane-to-connect,nth1,nth2
