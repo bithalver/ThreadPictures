@@ -13,7 +13,7 @@ export OUTPUTFILE=output/$INPUT.pdf;
 
 while sleep 0.2; do
   if [[ $INPUTFILE -nt $OUTPUTFILE ]]; then
-    ./normal $INPUT
+    bash ./normal $INPUT
     echo $OUTPUTFILE made at `date +'%Y %m %d %H:%M:%S'`
   fi
 done
