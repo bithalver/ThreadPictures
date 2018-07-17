@@ -1,0 +1,38 @@
+---
+global:
+    background: darkgray
+    color: yellow
+    threads: 20
+pages:
+  -
+    - pagename;2018 07 17 | 2
+    - net4;1;1;1;0;2;0;2;1;style;parallel;firstthread;11
+    - net4;1;1;1;0;2;0;2;1;style;parallel;lastthread;10;color;lightblue
+    - net4;1;3;1;2;2;2;2;3;style;parallel;firstthread;11
+    - net4;1;3;1;2;2;2;2;3;style;parallel;lastthread;10;color;lightblue
+    - net3;1;0;1;1;0;1;style;parallel;firstthread;10;color;lightblue
+    - net3;1;0;1;1;0;1;style;parallel;lastthread;9
+    - net3;0;2;1;2;1;3;style;parallel;firstthread;11
+    - net3;0;2;1;2;1;3;style;parallel;lastthread;10;color;lightblue
+    - net3;2;3;2;2;3;2;style;parallel;firstthread;11
+    - net3;2;3;2;2;3;2;style;parallel;lastthread;10;color;lightblue
+    - net3;3;1;2;1;2;0;style;parallel;firstthread;10;color;lightblue
+    - net3;3;1;2;1;2;0;style;parallel;lastthread;9
+    - net4;1;2;0.5;2;0;1;0.5;1;style;parallel;threads;10
+    - net4;0.5;2;0;2;0.5;1;1;1;style;parallel;threads;10;color;lightblue
+    - net4;3;2;2.5;2;2;1;2.5;1;style;parallel;threads;10;color;lightblue
+    - net4;2.5;2;2;2;2.5;1;3;1;style;parallel;threads;10
+  -
+    - pagename;2018 07 17 | 1
+    - net4;1;1;1;0;2;0;2;1;style;parallel
+    - net4;1;3;1;2;2;2;2;3;style;parallel
+    - net3;1;0;1;1;0;1;style;parallel
+    - net3;0;2;1;2;1;3;style;parallel
+    - net3;2;3;2;2;3;2;style;parallel
+    - net3;3;1;2;1;2;0;style;parallel
+#    - net4;1;2;0;2;0;1;1;1
+#    - net4;1;2;0.5;2;0.5;1;1;1
+    - net4;1;2;0.5;2;0;1;0.5;1;style;parallel;threads;10
+    - net4;0.5;2;0;2;0.5;1;1;1;style;parallel;threads;10
+    - net4;3;2;2.5;2;2;1;2.5;1;style;parallel;threads;10
+    - net4;2.5;2;2;2;2.5;1;3;1;style;parallel;threads;10
