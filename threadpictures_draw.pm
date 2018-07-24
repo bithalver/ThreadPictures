@@ -101,7 +101,7 @@ sub add_loop4 {
   my @AP; # Additional parameters; none by default
 
   # Let's decide how much loop parameters we have and how much options we got
-  # loop parameters are numbers while first option should start with a digit
+  # loop parameters are numbers while first option should start with a letter
   # all options will be given to all nets !
   for (my $i=0;$i<@points;$i++) {
     if ( $points[$i] =~ /^[a-z]/i ) {

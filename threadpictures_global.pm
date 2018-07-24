@@ -20,6 +20,11 @@ our ($opts_input, $opts_output, $opts_help, $opts_version, $opts_debug)=('stdin'
 sub global_init {
   # 'threads' is how many segment should exist in a net
   # Could be overwritten with the same name env var
+  
+  $TP_GLOBAL{slices} = 20;
+  $TP_GLOBAL{path_variant} ='out';
+  $TP_GLOBAL{path_param} = 0;
+
   $TP_GLOBAL{threads} = $ENV{TP_threads} //=20;
   $TP_GLOBAL{firstthread} = $ENV{TP_firstthread} //=0;
   if (defined $ENV{TP_lastthread}) {$TP_GLOBAL{lastthread} = $ENV{TP_lastthread};}
@@ -33,10 +38,10 @@ sub global_init {
   if ($opts_debug) {warn 'global style is '.$TP_GLOBAL{style}."\n"}
 
   # Do we want to ignore all color specificaion ? BW is just white background, black drawings
-  $TP_GLOBAL{BW} = $ENV{TP_BW};
+  $TP_GLOBAL{BW} = $ENV{TP_BW} //=0;
 
-  $TP_GLOBAL{background} //= $ENV{TP_background};
-  $TP_GLOBAL{color} //= $ENV{TP_color};
+  $TP_GLOBAL{background} = $ENV{TP_background} //='white';
+  $TP_GLOBAL{color} = $ENV{TP_color} //='black';
 
   # How many slices do we use in a path ?
   $TP_GLOBAL{slices} //= $ENV{TP_slices};
