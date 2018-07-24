@@ -109,8 +109,8 @@ print_ps_filestart();
 # priority is (lowest to highest):
 #   - defaults (set in global_init) %TP_GLOBAL
 #   - environment variables start with TP_ (also set in global_init) %TP_GLOBAL
-#   - global parameters from yaml file
-#   - "local" parameters for each net
+#   - global parameters from yaml file %TP_GLOBAL
+#   - "local" parameters for each net %TP_LOCAL
 #   - options specified with -p %TP_PARAMS
 # priority is a WiP
 
