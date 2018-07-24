@@ -60,7 +60,7 @@ sub HELP_PLANES {
     all parameters are mandatory
   angle: one mandatory parameter: angle in degrees (where 360 degrees is full circle)
     returns 3 points: 0,0  1,0  cos(angle),sin(angle)
-  grid for regular triangles; two mandatory options: sizeX, sizeY
+  grid: regular triangles; two mandatory options: sizeX, sizeY
     result will look like when sizeX is 3, sizeY is 4:
 
     400   401   402   403
@@ -106,11 +106,13 @@ if ($opts_debug) {use Data::Dumper; warn "Full input structure ---[BEGIN]---\n";
 print_ps_filestart();
 
 # command line options processing have to be AFTER global parameters processed
-# priority is (lowest to highest:
+# priority is (lowest to highest):
 #   - defaults (set in global_init) %TP_GLOBAL
-#   - global parameters from yaml file
 #   - environment variables start with TP_ (also set in global_init) %TP_GLOBAL
+#   - global parameters from yaml file
+#   - "local" parameters for each net
 #   - options specified with -p %TP_PARAMS
+# priority is a WiP
 
 global_init;
 
