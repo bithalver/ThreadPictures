@@ -9,24 +9,40 @@ our @ISA= qw( Exporter );
 
 our @EXPORT = qw( %TP_GLOBAL %TP_PARAMS @TP_all %TP_planes global_init minmax warnarray warnhash cm min max print_ps_filestart pi my_round colorconvert $opts_input $opts_output $opts_help $opts_help_plane $opts_version $opts_debug);
 
-# %TP_GLOBAL holds all global variables (even built-in defaults _or_ environment variable values
+# %TP_GLOBAL holds all global variables, has lowest priority; collected from 3 "sources":
+#   - built-in defaults
+#   - environment variables (in the form of "TP_variablename"; case DOES matter
+#   - globals specied in YAML file
 our %TP_GLOBAL;
 
-# %TP_PARAMS holds parameters specified with -p command line options; starts empty
+# %TP_PARAMS holds parameters specified with -p command line options; starts empty; has highest priority
 our %TP_PARAMS;
 
 our ($opts_input, $opts_output, $opts_help, $opts_version, $opts_debug)=('stdin','stdout');
 
 sub global_init {
+  # page defaults, all in cm
+  # default is A4 (I live in Europe ;) )
+  $TP_GLOBAL{pageXsize} = cm($ENV{'TP_pageXsize'}//=21),
+  $TP_GLOBAL{pageYsize} = cm($ENV{'TP_pageYsize'}//=29.7),
+  $TP_GLOBAL{leftmargin} = cm($ENV{'TP_leftmargin'}//=2),
+  $TP_GLOBAL{rightmargin} = cm($ENV{'TP_rightmargin'}//=2),
+  $TP_GLOBAL{topmargin} = cm($ENV{'TP_topmargin'}//=2.5),
+  $TP_GLOBAL{bottommargin} = cm($ENV{'TP_bottommargin'}//=2.5),
+
+  # What should be written on the bottom of the page
+  # Default is not to write anything
+  # value is valid only for first page !
+  $TP_GLOBAL{pagename} = $ENV{'TP_pagename'} //="";
+
   # 'threads' is how many segment should exist in a net
-  # Could be overwritten with the same name env var
-  
   $TP_GLOBAL{threads} = $ENV{TP_threads} //=20;
   $TP_GLOBAL{firstthread} = $ENV{TP_firstthread} //=0;
-  if (defined $ENV{TP_lastthread}) {$TP_GLOBAL{lastthread} = $ENV{TP_lastthread};}
+  $TP_GLOBAL{lastthread} = $ENV{TP_lastthread} //= $TP_GLOBAL{threads};
 
-  # Every page has to have a name in PS; it is an automatically incremented number
+  # Every page has to have a name in PS; because it does not matter, it is an automatically incremented number
   $TP_GLOBAL{pagenumber} = 1;
+
   # Which style we draw nets
   # possible values: normal, holes, border, triangle, filledtriangle, curve, filledcurve, inversefilledcurve, parallel, selected
   # all other strings are future expansion; you will get a warning on STDERR for using a nonimplemented one
@@ -60,24 +76,12 @@ sub cm { my ($i)=@_; return $i*28.34645;}
 
 sub pi {return 4 * atan2(1, 1);}
 
-# page defaults, all in cm
-$TP_GLOBAL{pageXsize} = cm($ENV{'TP_pageXsize'}//=21),
-$TP_GLOBAL{pageYsize} = cm($ENV{'TP_pageYsize'}//=29.7),
-$TP_GLOBAL{leftmargin} = cm($ENV{'TP_leftmargin'}//=2),
-$TP_GLOBAL{rightmargin} = cm($ENV{'TP_rightmargin'}//=2),
-$TP_GLOBAL{topmargin} = cm($ENV{'TP_topmargin'}//=2.5),
-$TP_GLOBAL{bottommargin} = cm($ENV{'TP_bottommargin'}//=2.5),
-
 # %TP_planes holds data for regular and not regular planes; points of planes are used to build nets
 our %TP_planes;
 
 # @TP_all array collects everything (including all nets) to be drawn on one page
 # most important array !
 our @TP_all;
-
-# What should be written on the bottom of the page
-# Default is not to write anything
-$TP_GLOBAL{pagename} = $ENV{'TP_pagename'} //="";
 
 # Returns an array of two values: the minimum and the maximum of an input numerical array
 sub minmax { return (sort { $a <=> $b } @_)[0,-1]; }

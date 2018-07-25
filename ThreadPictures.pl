@@ -111,8 +111,6 @@ for my $AK (keys %{$config->{global}}) {
 
 if ($TP_PARAMS{BW}) {$TP_GLOBAL{BW}=1;} # Being black'n'white is global: even all pages are BW or not
 
-if ($opts_debug) { warn "Optional parameters are:\n"; warnhash %TP_PARAMS; }
-
 # read planes data
 if (defined $config->{planes}) {
   for (0 .. @{$config->{planes}}-1) {
@@ -179,7 +177,7 @@ for (0 .. @{$config->{pages}}-1) {
         # Lot of nets, additional parameters handled inside
       }
       when (/^pagename$/i){
-        $TP_GLOBAL{pagename}=splice(@AE,0,1);
+        $TP_all[@TP_all] = { type => 'pagename', string => splice(@AE,0,1) }
       }
       when (/^background$/i){
         $TP_all[@TP_all] = { type => 'background', color => splice(@AE,0,1) }

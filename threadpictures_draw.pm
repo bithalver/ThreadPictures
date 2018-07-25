@@ -225,16 +225,14 @@ sub add_recursive {
 # To draw one element of the 'net' type
 sub draw_net {
   my (%AN)=@_; # AN like Actual Net
-  # warnhash %AN;
-  $AN{threads} //= $TP_GLOBAL{threads};
-  $AN{firstthread} //= $TP_GLOBAL{firstthread};
-  $AN{lastthread} //= $TP_GLOBAL{lastthread};
+  $AN{threads} //= $TP_GLOBAL{threads}; if ($TP_PARAMS{threads}) {$AN{threads}=$TP_PARAMS{threads};}
+  $AN{firstthread} //= $TP_GLOBAL{firstthread}; if ($TP_PARAMS{firstthread}) {$AN{firstthread}=$TP_PARAMS{firstthread};}
+  $AN{lastthread} //= $TP_GLOBAL{lastthread}; if ($TP_PARAMS{lastthread}) {$AN{lastthread}=$TP_PARAMS{lastthread};}
   $AN{lastthread} //= $AN{threads};
+  $AN{style}//=$TP_GLOBAL{style}; if ($TP_PARAMS{style}) {$AN{style}=$TP_PARAMS{style};}
   $AN{color} //= $TP_GLOBAL{color}; if ($TP_PARAMS{color}) {$AN{color}=$TP_PARAMS{color}} ; $AN{color}=colorconvert($AN{color});
   my $color_changed=0; if (! $TP_GLOBAL{BW} and $AN{color} ne '0 0 0' ) { say "currentrgbcolor\n$AN{color} setrgbcolor\n"; $color_changed=1}
   
-  if ($TP_GLOBAL{style}) {$AN{'style'}//=$TP_GLOBAL{style};}
-  if ($TP_PARAMS{style}) {$AN{'style'}=$TP_PARAMS{style};}
   for ($AN{'style'}) { # if ($opts_debug) { warn 'AN style: ',$AN{'style'},"\n";}
   when (/^normal$/i){ # old style was 0
     for my $weight ($AN{'firstthread'} .. $AN{'lastthread'}) {
@@ -338,7 +336,9 @@ sub draw_all {
     return;
   }
 
-# find min and max X and Y
+  my $pagename=$TP_GLOBAL{pagename};
+
+# find min and max X and Y _and_ get the page name, if set
   my ($minX,$maxX,$minY,$maxY);
   foreach my $ATPAE_ (@TP_all) { # ATPAE stands for Actual TP_all Element
     my %ATPAE=%{$ATPAE_};
@@ -349,8 +349,10 @@ sub draw_all {
 	    ($minX,$maxX)=minmax($minX,$maxX,$ATPAE{line1oX},$ATPAE{line1iX},$ATPAE{line2oX},$ATPAE{line2iX});
         ($minY,$maxY)=minmax($minY,$maxY,$ATPAE{line1oY},$ATPAE{line1iY},$ATPAE{line2oY},$ATPAE{line2iY});
       }
+      when (/^pagename$/) { $pagename=$ATPAE{string} ;}
     }
   }
+  if (defined $TP_PARAMS{pagename}) {$pagename=$TP_PARAMS{pagename};}
   if ($minX == $maxX or $minY == $maxY ) {
     warn "even X or Y minimum or maximum values are the same, can not draw\n";
     exit 1;
@@ -365,7 +367,8 @@ sub draw_all {
     my $bg=$TP_GLOBAL{background};
     foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element
       my %ATPAE=%{$ATPAE};
-      given ($ATPAE{'type'}) { when (/^background$/) { $bg=$ATPAE{'color'} ;} }
+      given ($ATPAE{type}) { when (/^background$/) { $bg=$ATPAE{color} ;}
+      }
     }
     if (defined $TP_PARAMS{background}) {$bg=$TP_PARAMS{background};}
     $bg=colorconvert($bg);
@@ -376,16 +379,16 @@ sub draw_all {
   }
 
 # Print the pagename before the transformation
-  if ($TP_GLOBAL{pagename} !~ /^\s*$/) { # print pagename only if it contains a non-whitespace character
+  if ($pagename !~ /^\s*$/) { # print pagename only if it contains a non-whitespace character
     say "/Times-Roman 12 selectfont";
     say  cm(10.5)," ",cm(1.5)," moveto"; my $color_changed=0;
     if (! $TP_GLOBAL{BW} ) {
       my $fontcolor=$TP_GLOBAL{color}; if ($TP_PARAMS{color}) {$fontcolor=$TP_PARAMS{color}} ; $fontcolor=colorconvert($fontcolor);
       if ($fontcolor ne '0 0 0') { say "currentrgbcolor\n$fontcolor setrgbcolor\n"; $color_changed=1}
     }
-    say "($TP_GLOBAL{pagename}) dup stringwidth pop neg 2 div 0 rmoveto show\n";
+    say "($pagename) dup stringwidth pop neg 2 div 0 rmoveto show\n";
     if ($color_changed) { say "setrgbcolor\n"; $color_changed=0;}
-    $TP_GLOBAL{pagename}=''; # pagename is only for actual page; next one starts with empty one
+    delete $TP_GLOBAL{pagename}; delete $TP_PARAMS{pagename}; # pagename is only for actual page; next one starts with empty name
   }
 
  # Original PS code to write a multi-line pagename:
@@ -409,6 +412,7 @@ sub draw_all {
     given ($ATPAE{'type'}) {
       when (/^net$/) { draw_net(%ATPAE); }
       when (/^background$/) { }
+      when (/^pagename$/) { }
 	  default {warn "type '$_' not implemented (yet); parameters were:\n".join(", ", map { "$_ => $ATPAE{$_}" } keys %ATPAE)."\n" ;}
     } ;
   }
