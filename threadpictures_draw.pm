@@ -337,8 +337,9 @@ sub draw_all {
   }
 
   my $pagename=$TP_GLOBAL{pagename};
+  my $bg=$TP_GLOBAL{background};
 
-# find min and max X and Y _and_ get the page name, if set
+# find min and max X and Y; get the page name, if set; get background color, if set
   my ($minX,$maxX,$minY,$maxY);
   foreach my $ATPAE_ (@TP_all) { # ATPAE stands for Actual TP_all Element
     my %ATPAE=%{$ATPAE_};
@@ -350,9 +351,11 @@ sub draw_all {
         ($minY,$maxY)=minmax($minY,$maxY,$ATPAE{line1oY},$ATPAE{line1iY},$ATPAE{line2oY},$ATPAE{line2iY});
       }
       when (/^pagename$/) { $pagename=$ATPAE{string} ;}
+      when (/^background$/) { $bg=$ATPAE{color} ;}
     }
   }
   if (defined $TP_PARAMS{pagename}) {$pagename=$TP_PARAMS{pagename};}
+  if (defined $TP_PARAMS{background}) {$bg=$TP_PARAMS{background};} $bg=colorconvert($bg);
   if ($minX == $maxX or $minY == $maxY ) {
     warn "even X or Y minimum or maximum values are the same, can not draw\n";
     exit 1;
@@ -362,21 +365,8 @@ sub draw_all {
   say "\n%%Page: \"$TP_GLOBAL{pagenumber}\" $TP_GLOBAL{pagenumber}";
   say "gsave";
 
-  # drawing the background, if needed (white BG is the default, so we do not draw it)
-  if (! $TP_GLOBAL{BW}) {
-    my $bg=$TP_GLOBAL{background};
-    foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element
-      my %ATPAE=%{$ATPAE};
-      given ($ATPAE{type}) { when (/^background$/) { $bg=$ATPAE{color} ;}
-      }
-    }
-    if (defined $TP_PARAMS{background}) {$bg=$TP_PARAMS{background};}
-    $bg=colorconvert($bg);
-    if ($bg ne '1 1 1') {
-      # warn "bg is: $bg\n";
-      say "currentrgbcolor\n$bg setrgbcolor\n0 0 $TP_GLOBAL{pageXsize} $TP_GLOBAL{pageYsize} rectfill stroke\nsetrgbcolor\n";
-    }
-  }
+  # drawing the background, if needed (white BG is the default, so we do not draw it); also no background in black-and-white mode
+  if (! $TP_GLOBAL{BW}  &&  $bg ne '1 1 1') { say "currentrgbcolor\n$bg setrgbcolor\n0 0 $TP_GLOBAL{pageXsize} $TP_GLOBAL{pageYsize} rectfill stroke\nsetrgbcolor\n"; }
 
 # Print the pagename before the transformation
   if ($pagename !~ /^\s*$/) { # print pagename only if it contains a non-whitespace character
