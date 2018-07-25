@@ -33,7 +33,7 @@ pages:
 #    - pagename;recursive test
 #    - recursive;r4r;8;1;2;4;3;1,2,3;2,3,4;style;curve
   -
-    - pagename; 5|1
+    - pagename;5|1
     - loop4;r5;1;2;3;4;5
   -
     - pagename; 3 or 4 ?
