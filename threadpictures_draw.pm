@@ -231,7 +231,7 @@ sub draw_net {
   $AN{lastthread} //= $TP_GLOBAL{lastthread};
   $AN{lastthread} //= $AN{threads};
   $AN{color} //= $TP_GLOBAL{color}; if ($TP_PARAMS{color}) {$AN{color}=$TP_PARAMS{color}} ; $AN{color}=colorconvert($AN{color});
-  my $color_changed=0; if (! $TP_GLOBAL{BW} and $AN{color} ne '0,0,0' ) { say "currentrgbcolor\n$AN{color} setrgbcolor\n"; $color_changed=1}
+  my $color_changed=0; if (! $TP_GLOBAL{BW} and $AN{color} ne '0 0 0' ) { say "currentrgbcolor\n$AN{color} setrgbcolor\n"; $color_changed=1}
   
   if ($TP_GLOBAL{style}) {$AN{'style'}//=$TP_GLOBAL{style};}
   if ($TP_PARAMS{style}) {$AN{'style'}=$TP_PARAMS{style};}
@@ -331,6 +331,8 @@ sub draw_all {
 
 # if @TP_all is empty, warn and return
 
+  if ($opts_debug) { warn "\nStarting page $TP_GLOBAL{pagenumber} \n\n"; }
+
   if (not @TP_all) {
     warn '@TP_all is empty: nothing added so nothing to draw'."\n";
     return;
@@ -366,7 +368,7 @@ sub draw_all {
       given ($ATPAE{'type'}) { when (/^background$/) { $bg=$ATPAE{'color'} ;} }
     }
     if (defined $TP_PARAMS{background}) {$bg=$TP_PARAMS{background};}
-
+    $bg=colorconvert($bg);
     if ($bg ne '1 1 1') {
       # warn "bg is: $bg\n";
       say "currentrgbcolor\n$bg setrgbcolor\n0 0 $TP_GLOBAL{pageXsize} $TP_GLOBAL{pageYsize} rectfill stroke\nsetrgbcolor\n";
@@ -378,8 +380,8 @@ sub draw_all {
     say "/Times-Roman 12 selectfont";
     say  cm(10.5)," ",cm(1.5)," moveto"; my $color_changed=0;
     if (! $TP_GLOBAL{BW} ) {
-      my $color=$TP_GLOBAL{color}; if ($TP_PARAMS{color}) {$color=$TP_PARAMS{color}}
-      if ($color ne '0 0 0') { say "currentrgbcolor\n$color setrgbcolor\n"; $color_changed=1}
+      my $fontcolor=$TP_GLOBAL{color}; if ($TP_PARAMS{color}) {$fontcolor=$TP_PARAMS{color}} ; $fontcolor=colorconvert($fontcolor);
+      if ($fontcolor ne '0 0 0') { say "currentrgbcolor\n$fontcolor setrgbcolor\n"; $color_changed=1}
     }
     say "($TP_GLOBAL{pagename}) dup stringwidth pop neg 2 div 0 rmoveto show\n";
     if ($color_changed) { say "setrgbcolor\n"; $color_changed=0;}
