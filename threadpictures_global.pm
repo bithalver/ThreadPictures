@@ -34,7 +34,7 @@ sub global_init {
   # Which style we draw nets
   # possible values: normal, holes, border, triangle, filledtriangle, curve, filledcurve, inversefilledcurve, parallel, selected
   # all other strings are future expansion; you will get a warning on STDERR for using a nonimplemented one
-  $TP_GLOBAL{style} = $ENV{TP_style};
+  $TP_GLOBAL{style} = $ENV{TP_style} //='normal';
   if ($opts_debug) {warn 'global style is '.$TP_GLOBAL{style}."\n"}
 
   # Do we want to ignore all color specificaion ? BW is just white background, black drawings
