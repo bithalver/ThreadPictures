@@ -15,18 +15,6 @@ Getopt::Long::Configure qw(gnu_getopt);
 # ---[BEGIN] test section
 # on final version, the whole section should be commented out / deleted !
 
-# warnarray basicplane(4,45,sqrt(2)); exit 0;
-
-# my @a=(1,2,3,4); warnarray moveplane (1,2,@a); exit 0
-
-# warnarray to_polar(-1,0); exit 0;
-
-# my @a=(1,1,2,1,2,2,1,2);
-# my @a=(0,0,1,0,1,1,0,1);
-# warnarray @a; warnarray connectplane2points(10,10,10,12,0,2,@a); exit 0;
-
-# warn colorconvert('white'),"\n"; warn colorconvert('black'),"\n"; warn colorconvert('orange'),"\n"; exit 0;
-
 # ---[END] test section
 
 sub VERSION_MESSAGE { warn "ThreadPictures version 1.1\n"; exit 0}
@@ -103,33 +91,27 @@ if ( $opts_output !~ /stdout/i ) { open $fh, '>', $opts_output or die "can't ope
 
 if ($opts_debug) {use Data::Dumper; warn "Full input structure ---[BEGIN]---\n"; warn Dumper($config), "\n"; warn "Full input structure ---[END]---\n";}
 
-print_ps_filestart();
-
 # command line options processing have to be AFTER global parameters processed
 # priority is (lowest to highest):
 #   - defaults (set in global_init) %TP_GLOBAL
 #   - environment variables start with TP_ (also set in global_init) %TP_GLOBAL
-#   - global parameters from yaml file %TP_GLOBAL
+#   - global parameters from yaml file (scroll down ~9 lines) %TP_GLOBAL
 #   - "local" parameters for each net stored in %TP_ALL one-by-one
-#   - options specified with -p %TP_PARAMS
+#   - options specified with -p (set in GetOptions) %TP_PARAMS
 # priority is a WiP
 
 global_init;
 
+print_ps_filestart();
+
 for my $AK (keys %{$config->{global}}) {
-  $TP_GLOBAL{$AK}//=$config->{global}->{$AK};
-  if ($opts_debug) { warn "TP_GLOBAL{$AK} => $TP_GLOBAL{$AK}\n";}
+  $TP_GLOBAL{$AK}=$config->{global}->{$AK}; # Always overwrite values defined as defaults or by environment variables
+  # if ($opts_debug) { warn "TP_GLOBAL{$AK} => $TP_GLOBAL{$AK}\n";} # These are written with Data::Dumper ~17 lines earlier ...
 }
 
 if ($TP_PARAMS{BW}) {$TP_GLOBAL{BW}=1;} # Being black'n'white is global: even all pages are BW or not
 
-$TP_GLOBAL{background} = colorconvert($TP_GLOBAL{background});
-$TP_GLOBAL{color} = colorconvert($TP_GLOBAL{color});
-
-if ($TP_PARAMS{background}) {$TP_PARAMS{background} = colorconvert($TP_PARAMS{background});}
-if ($TP_PARAMS{color}) {$TP_PARAMS{color} = colorconvert($TP_PARAMS{color});}
-
-if ($opts_debug) { warn "Optional parameters are\n  (possible color names are converted to postscript numerical values): \n"; warnhash %TP_PARAMS; }
+if ($opts_debug) { warn "Optional parameters are:\n"; warnhash %TP_PARAMS; }
 
 # read planes data
 if (defined $config->{planes}) {
@@ -162,11 +144,9 @@ if (defined $config->{planes}) {
     default {warn "plane type '$_' is not (yet) supported (but processing goes on)\n";}
     }
   }
-if ($opts_debug) {  warn "Planes data\n" ;
-  for my $i (keys %TP_planes) { warn "plane name: '",$i,"' content:\n"; warnarray @{$TP_planes{$i}}; }
-}
-  # Debug print of planes length
-  # for my $i (keys %TP_planes) { warn $i,' ',scalar @{$TP_planes{$i}},"\n"; }
+  if ($opts_debug) {  warn "Planes data\n" ;
+    for my $i (keys %TP_planes) { warn "plane name: '",$i,"' content:\n"; warnarray @{$TP_planes{$i}}; }
+  }
 }
 
 # process every page
@@ -202,7 +182,7 @@ for (0 .. @{$config->{pages}}-1) {
         $TP_GLOBAL{pagename}=splice(@AE,0,1);
       }
       when (/^background$/i){
-        $TP_all[@TP_all] = { type => 'background', color => colorconvert(splice(@AE,0,1)) }
+        $TP_all[@TP_all] = { type => 'background', color => splice(@AE,0,1) }
       }
       when (/^path$/i){
         add_path(@AE);
