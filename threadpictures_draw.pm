@@ -235,7 +235,7 @@ sub draw_net {
   
   if ($TP_GLOBAL{style}) {$AN{'style'}//=$TP_GLOBAL{style};}
   if ($TP_PARAMS{style}) {$AN{'style'}=$TP_PARAMS{style};}
-  for ($AN{'style'}//='normal') { # if ($opts_debug) { warn 'AN style: ',$AN{'style'},"\n";}
+  for ($AN{'style'}) { # if ($opts_debug) { warn 'AN style: ',$AN{'style'},"\n";}
   when (/^normal$/i){ # old style was 0
     for my $weight ($AN{'firstthread'} .. $AN{'lastthread'}) {
       # my ($fromX,$fromY,$toX,$toY);
@@ -245,7 +245,7 @@ sub draw_net {
 	}
   }
   when (/^holes$/i) { # old style was 1
-    # This kind is interested in the value of firstthread, lastthread
+    # This kind is NOT interested in the value of firstthread, lastthread
     # Cross lines are 1/20 of the full length of the line    
     my ($firstX,$firstY)=TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},1,20);
     my ($line1vectorX,$line1vectorY) = ($firstY-$AN{line1oY}, $AN{line1oX}-$firstX);
