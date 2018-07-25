@@ -21,10 +21,6 @@ sub global_init {
   # 'threads' is how many segment should exist in a net
   # Could be overwritten with the same name env var
   
-  $TP_GLOBAL{slices} = 20;
-  $TP_GLOBAL{path_variant} ='out';
-  $TP_GLOBAL{path_param} = 0;
-
   $TP_GLOBAL{threads} = $ENV{TP_threads} //=20;
   $TP_GLOBAL{firstthread} = $ENV{TP_firstthread} //=0;
   if (defined $ENV{TP_lastthread}) {$TP_GLOBAL{lastthread} = $ENV{TP_lastthread};}
@@ -44,13 +40,13 @@ sub global_init {
   $TP_GLOBAL{color} = $ENV{TP_color} //='black';
 
   # How many slices do we use in a path ?
-  $TP_GLOBAL{slices} //= $ENV{TP_slices};
+  $TP_GLOBAL{slices} = $ENV{TP_slices} //=20;
 
   # Which path variant do we use ? possible values are 'out' 'crossed'
-  $TP_GLOBAL{path_variant} //= $ENV{TP_path_variant};
+  $TP_GLOBAL{path_variant} = $ENV{TP_path_variant} //='out';
   
   # For the 'param' path, what is the numerical parameter ? Default is zero, which is 'out'
-  $TP_GLOBAL{path_param} //= $ENV{TP_path_param};
+  $TP_GLOBAL{path_param} = $ENV{TP_path_param} //=0;
 }
 
 sub max ($$) { $_[$_[0] < $_[1]] }
