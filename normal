@@ -6,12 +6,12 @@ export INPUT_YAML=input/${NAME}.yaml
 export OUTPUT_PS=output/${NAME}.ps
 
 if [ `basename $0` == 'holes' ] ; then
-  export TP_BW=1 ; export TP_style=holes
+  export PARAM='-p BW=1 -p style=holes'
   export OUTPUT_PDF=output/${NAME}_holes.pdf
 else
   export OUTPUT_PDF=output/${NAME}.pdf
 fi
 
-perl ThreadPictures.pl -i $INPUT_YAML -o $OUTPUT_PS
+perl ThreadPictures.pl -i $INPUT_YAML -o $OUTPUT_PS $PARAM
 ps2pdf $OUTPUT_PS $OUTPUT_PDF 2>/dev/null
 rm -f $OUTPUT_PS
