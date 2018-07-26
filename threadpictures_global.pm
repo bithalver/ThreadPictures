@@ -37,9 +37,6 @@ sub global_init {
   $TP_GLOBAL{firstthread} = $ENV{TP_firstthread} //=0;
   $TP_GLOBAL{lastthread} = $ENV{TP_lastthread} //= $TP_GLOBAL{threads};
 
-  # Every page has to have a name in PS; because it does not matter, it is an automatically incremented number
-  $TP_GLOBAL{pagenumber} = 1;
-
   $TP_GLOBAL{style} = $ENV{TP_style} //='normal';
   if ($opts_debug) {warn 'global style is '.$TP_GLOBAL{style}."\n"}
 
@@ -56,6 +53,9 @@ sub global_init {
   
   # For the 'param' path, what is the numerical parameter ? Default is zero, which is 'out'
   $TP_GLOBAL{path_param} = $ENV{TP_path_param} //=0;
+
+  # Every page has to have a name in PS; because it does not matter, it is an automatically incremented number
+  $TP_GLOBAL{pagenumber} = 1;
 }
 
 sub max ($$) { $_[$_[0] < $_[1]] }
@@ -97,26 +97,27 @@ print
 
 # converts color names to 3 number as required in postscript
 # input is one string containing even 
-#   - a color name (like 'white') , which is converted to next format
+#   - a color name (like 'white') , which is converted to last format
 #   - 3 comma-separated number (like '0.1,1,0.9') all numbers should be 0<=x<=1
+#   - 3 space-separated number (like '0.1 1 0.9') all numbers should be 0<=x<=1
 sub colorconvert { my ($input)=@_;
   my %colornames=(
-    white => '1,1,1',
-    black => '0,0,0',
-    gray => '0.5,0.5,0.5',
-    lightgray => '0.75,0.75,0.75',
-    darkgray => '0.25,0.25,0.25',
-    red => '1,0,0',
-    lightgreen => '0,1,0',
-    green => '0,0.8,0',
-    darkgreen => '0,0.4,0',
-    darkblue => '0,0,0.65',
-    blue => '0,0,1',
-    lightblue => '0.12,0.5625,1',
-    yellow => '1,1,0',
-    orange => '1,0.7,0',
-    cyan => '0,1,1',
-    brown => '0.52,0.34,0.137',
+    white => '1 1 1',
+    black => '0 0 0',
+    gray => '0.5 0.5 0.5',
+    lightgray => '0.75 0.75 0.75',
+    darkgray => '0.25 0.25 0.25',
+    red => '1 0 0',
+    lightgreen => '0 1 0',
+    green => '0 0.8 0',
+    darkgreen => '0 0.4 0',
+    darkblue => '0 0 0.65',
+    blue => '0 0 1',
+    lightblue => '0.12 0.5625 1',
+    yellow => '1 1 0',
+    orange => '1 0.7 0',
+    cyan => '0 1 1',
+    brown => '0.52 0.34 0.137',
   );
   if ($input =~ /^[a-z]/) { $input=$colornames{$input}; }
   $input=~s/,/ /g; # we want to write it to PS file like '0.5 0.5 0.5'
@@ -126,7 +127,7 @@ sub colorconvert { my ($input)=@_;
 1;
 
 =pod
-All global(looking) variables and where can be they set:
+All global(looking) variables and where can they be set:
 
 GLOBAL means the variable has a default and can be overwritten from an environment variable _or_ global parameter in YAML file
 PARAM means the variable can be overwritten from command parameter (-p option)
