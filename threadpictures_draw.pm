@@ -368,7 +368,7 @@ sub draw_all {
   $TP_GLOBAL{lastcolor}='0 0 0';
 
   # drawing the background, if needed (white BG is the default, so we do not draw it); also no background in black-and-white mode
-  if (! $TP_GLOBAL{BW}  &&  $bg ne '1 1 1') { say "$bg setrgbcolor\n0 0 $TP_GLOBAL{pageXsize} $TP_GLOBAL{pageYsize} rectfill stroke\n1 1 1 setrgbcolor\n"; }
+  if (! $TP_GLOBAL{BW}  &&  $bg ne '1 1 1') { say "$bg setrgbcolor 0 0 $TP_GLOBAL{pageXsize} $TP_GLOBAL{pageYsize} rectfill stroke 0 0 0 setrgbcolor\n"; }
 
 # Print the pagename before the transformation
   if ($pagename !~ /^\s*$/) { # print pagename only if it contains a non-whitespace character
