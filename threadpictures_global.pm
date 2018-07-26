@@ -30,9 +30,6 @@ sub global_init {
   $TP_GLOBAL{topmargin} = cm($ENV{'TP_topmargin'}//=2.5),
   $TP_GLOBAL{bottommargin} = cm($ENV{'TP_bottommargin'}//=2.5),
 
-  # What should be written on the bottom of the page
-  # Default is not to write anything
-  # value is valid only for first page !
   $TP_GLOBAL{pagename} = $ENV{'TP_pagename'} //="";
 
   # 'threads' is how many segment should exist in a net
@@ -43,13 +40,9 @@ sub global_init {
   # Every page has to have a name in PS; because it does not matter, it is an automatically incremented number
   $TP_GLOBAL{pagenumber} = 1;
 
-  # Which style we draw nets
-  # possible values: normal, holes, border, triangle, filledtriangle, curve, filledcurve, inversefilledcurve, parallel, selected
-  # all other strings are future expansion; you will get a warning on STDERR for using a nonimplemented one
   $TP_GLOBAL{style} = $ENV{TP_style} //='normal';
   if ($opts_debug) {warn 'global style is '.$TP_GLOBAL{style}."\n"}
 
-  # Do we want to ignore all color specificaion ? BW is just white background, black drawings
   $TP_GLOBAL{BW} = $ENV{TP_BW} //=0;
 
   $TP_GLOBAL{background} = $ENV{TP_background} //='white';
@@ -131,3 +124,50 @@ sub colorconvert { my ($input)=@_;
 }
 
 1;
+
+=pod
+All global(looking) variables and where can be they set:
+
+GLOBAL means the variable has a default and can be overwritten from an environment variable _or_ global parameter in YAML file
+PARAM means the variable can be overwritten from command parameter (-p option)
+PAGE means the variable is modifiable for every page
+NET means the variable is modifiable for every net
+
+After the colon there is the default value
+
+Automatic variables, should not me modified by hand:
+# Every page has to have a name in PS; because it does not matter, it is an automatically incremented number
+pagenumber: 1 # Automatically incremented
+
+GLOBAL level only:
+pageXsize: 21 cm
+pageYsize: 29.7 cm
+leftmargin: 2 cm
+rightmargin 2 cm
+topmargin: 2.5 cm
+bottommargin: 2.5 cm
+
+GLOBAL and PARAM level:
+pagename: "" # What should be written on the bottom of the page; variable is deleted after written on first page
+threads: 20 # 'threads' is how many segment should exist in a net
+firstthread: 0
+lastthread: threads}
+BW: 0 # Do we want to ignore all color specificaion ? BW is just white background, black drawings
+
+GLOBAL PARAM and NET level:
+# Which style we draw nets
+# possible values: normal, holes, border, triangle, filledtriangle, curve, filledcurve, inversefilledcurve, parallel, selected
+# all other strings are future expansion; you will get a warning on STDERR for using a nonimplemented one but processing goes on
+style: 'normal'
+color: 'black'
+slices: 20 # How many slices do we use in a path ?
+path_variant: 'out' # Which path variant do we use ? possible values are 'out' 'crossed'
+path_param: 0 # For the 'param' path, what is the numerical parameter ? Default is zero, which is 'out'
+
+GLOBAL PARAM and PAGE level:
+background: 'white'
+# fontcolor should be created TODO
+
+GLOBAL PARAM PAGE and NET level:
+# color should be here TODO
+=cut
