@@ -18,6 +18,11 @@ planes:
   - r5;regular;5;90
 pages:
   -
+    - pagename; first ever connected plane test ! now in color !
+    - net3;plane2;1;plane2;2;plane2;3;color;yellow
+    - net3;plane4;1;plane4;2;plane4;3;color;blue
+    - background;gray
+  -
     - pagename;first ever recursive test
     - recursive;r4r;8;1;2;0;1;style;curve;1,2,3;color;blue
 #  -
@@ -63,11 +68,6 @@ pages:
   -
     - pagename; path first test
     - path;plane2;0;plane2;1;these_parameters;are_not_important;a;b;c;d
-  -
-    - pagename; first ever connected plane test ! now in color !
-    - net3;plane2;1;plane2;2;plane2;3;color;yellow
-    - net3;plane4;1;plane4;2;plane4;3;color;blue
-    - background;gray
 #  -
 #    - pagename;this is the 2nd test pagename
 #    - net4;0;10;0;0;0;0;10;0;threads;4;style;curve
