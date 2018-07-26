@@ -371,7 +371,7 @@ sub draw_all {
 # Print the pagename before the transformation
   if ($pagename !~ /^\s*$/) { # print pagename only if it contains a non-whitespace character
     say "/Times-Roman 12 selectfont";
-    say  cm(10.5)," ",cm(1.5)," moveto"; my $color_changed=0;
+    say  $TP_GLOBAL{pageXsize}/2," ",cm(1.5)," moveto"; my $color_changed=0;
     if (! $TP_GLOBAL{BW} ) {
       my $fontcolor=$TP_GLOBAL{color}; if ($TP_PARAMS{color}) {$fontcolor=$TP_PARAMS{color}} ; $fontcolor=colorconvert($fontcolor);
       if ($fontcolor ne '0 0 0') { say "currentrgbcolor\n$fontcolor setrgbcolor\n"; $color_changed=1}
