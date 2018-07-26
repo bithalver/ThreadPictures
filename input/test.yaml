@@ -23,8 +23,9 @@ pages:
     - net3;plane4;1;plane4;2;plane4;3;color;blue
     - background;gray
   -
+    - color;blue
     - pagename;first ever recursive test
-    - recursive;r4r;8;1;2;0;1;style;curve;1,2,3;color;blue
+    - recursive;r4r;8;1;2;0;1;style;curve;1,2,3
 #  -
 #    - pagename;first ever recursive test - variant with 2
 #    - recursive;r4r;8;1;2;0;1;1,2,3;2,3,4;style;curve
@@ -42,9 +43,10 @@ pages:
     - pagename;5|1
     - loop4;r5;1;2;3;4;5
   -
-    - pagename; 3 or 4 ?
-    - loop;r3;1;2;3
+    - color;orange
+    - pagename; 3 or 4 ? | first ever page-wide color directive test
     - loop;r4;1;2;3;4;color;red
+    - loop;r3;1;2;3
 #  -
 #    - pagename; 4 or 5 ?
 #   - background;lightgray
