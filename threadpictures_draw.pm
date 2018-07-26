@@ -326,14 +326,11 @@ sub draw_net {
 # This is the main function to draw a page from the collected info in @TP_all
 sub draw_all {
 
-# if @TP_all is empty, warn and return
 
   if ($opts_debug) { warn "\nStarting page $TP_GLOBAL{pagenumber} \n\n"; }
 
-  if (not @TP_all) {
-    warn '@TP_all is empty: nothing added so nothing to draw'."\n";
-    return;
-  }
+# if @TP_all is empty, warn and return
+  if (not @TP_all) { warn "@TP_all is empty: nothing added so nothing to draw\n"; return; }
 
   my $pagename=$TP_GLOBAL{pagename};
   my $bg=$TP_GLOBAL{background};
@@ -397,16 +394,25 @@ sub draw_all {
     ($TP_GLOBAL{pageYsize}-$TP_GLOBAL{topmargin}-$TP_GLOBAL{bottommargin})/($maxY-$minY))," dup scale");
   say(($maxX+$minX)/2," neg ",($maxY+$minY)/2," neg translate");
 
+  my $TMP_color=$TP_GLOBAL{color}; # $TMP_color is a hack: if there is a color directive for the page we temporarily overwrite $TP_GLOBAL{color}
 # iterate over @TP_all to draw every piece
+  foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element
+    my %ATPAE=%{$ATPAE};
+    given ($ATPAE{'type'}) {
+      when (/^color$/) { $TP_GLOBAL{color}=$ATPAE{color}}
+    } ;
+  }
   foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element
     my %ATPAE=%{$ATPAE};
     given ($ATPAE{'type'}) {
       when (/^net$/) { draw_net(%ATPAE); }
       when (/^background$/) { }
       when (/^pagename$/) { }
+      when (/^color$/) { }
 	  default {warn "type '$_' not implemented (yet); parameters were:\n".join(", ", map { "$_ => $ATPAE{$_}" } keys %ATPAE)."\n" ;}
     } ;
   }
+  $TP_GLOBAL{color}=$TMP_color;
 # page footer
   say "showpage grestore";
   say "%%EndPage: \"$TP_GLOBAL{pagenumber}\" $TP_GLOBAL{pagenumber}";

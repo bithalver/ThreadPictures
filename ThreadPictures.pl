@@ -182,6 +182,9 @@ for (0 .. @{$config->{pages}}-1) {
       when (/^background$/i){
         $TP_all[@TP_all] = { type => 'background', color => splice(@AE,0,1) }
       }
+      when (/^color$/i){
+        $TP_all[@TP_all] = { type => 'color', color => splice(@AE,0,1) }
+      }
       when (/^path$/i){
         add_path(@AE);
       }
