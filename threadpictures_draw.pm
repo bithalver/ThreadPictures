@@ -231,7 +231,7 @@ sub draw_net {
   $AN{lastthread} //= $AN{threads};
   $AN{style}//=$TP_GLOBAL{style}; if ($TP_PARAMS{style}) {$AN{style}=$TP_PARAMS{style};}
   $AN{color} //= $TP_GLOBAL{color}; if ($TP_PARAMS{color}) {$AN{color}=$TP_PARAMS{color}} ; $AN{color}=colorconvert($AN{color});
-  my $color_changed=0; if (! $TP_GLOBAL{BW} and $AN{color} ne '0 0 0' ) { say "currentrgbcolor\n$AN{color} setrgbcolor\n"; $color_changed=1}
+  if (! $TP_GLOBAL{BW} and $AN{color} ne $TP_GLOBAL{lastcolor} ) { say "$AN{color} setrgbcolor\n"; $TP_GLOBAL{lastcolor}=$AN{color}}
   
   for ($AN{'style'}) { # if ($opts_debug) { warn 'AN style: ',$AN{'style'},"\n";}
   when (/^normal$/i){ # old style was 0
@@ -321,7 +321,6 @@ sub draw_net {
   }
   default {warn "style $AN{'style'} is not (yet) implemented (but processing goes on)\n";return}
   }
-  if ($color_changed) {say "setrgbcolor\n"}
 }
 
 # This is the main function to draw a page from the collected info in @TP_all
@@ -365,20 +364,22 @@ sub draw_all {
   say "\n%%Page: \"$TP_GLOBAL{pagenumber}\" $TP_GLOBAL{pagenumber}";
   say "gsave";
 
+  # What is the last color we used ? It always starts with black
+  $TP_GLOBAL{lastcolor}='0 0 0';
+
   # drawing the background, if needed (white BG is the default, so we do not draw it); also no background in black-and-white mode
-  if (! $TP_GLOBAL{BW}  &&  $bg ne '1 1 1') { say "currentrgbcolor\n$bg setrgbcolor\n0 0 $TP_GLOBAL{pageXsize} $TP_GLOBAL{pageYsize} rectfill stroke\nsetrgbcolor\n"; }
+  if (! $TP_GLOBAL{BW}  &&  $bg ne '1 1 1') { say "$bg setrgbcolor\n0 0 $TP_GLOBAL{pageXsize} $TP_GLOBAL{pageYsize} rectfill stroke\n1 1 1 setrgbcolor\n"; }
 
 # Print the pagename before the transformation
   if ($pagename !~ /^\s*$/) { # print pagename only if it contains a non-whitespace character
     say "/Times-Roman 12 selectfont";
-    say  $TP_GLOBAL{pageXsize}/2," ",cm(1.5)," moveto"; my $color_changed=0;
+    say  $TP_GLOBAL{pageXsize}/2," ",cm(1.5)," moveto";
     if (! $TP_GLOBAL{BW} ) {
       my $fontcolor=$TP_GLOBAL{color}; if ($TP_PARAMS{color}) {$fontcolor=$TP_PARAMS{color}} ; $fontcolor=colorconvert($fontcolor);
-      if ($fontcolor ne '0 0 0') { say "currentrgbcolor\n$fontcolor setrgbcolor\n"; $color_changed=1}
+      if ($fontcolor ne $TP_GLOBAL{lastcolor}) { say "$fontcolor setrgbcolor\n"; $TP_GLOBAL{lastcolor}=$fontcolor}
     }
     say "($pagename) dup stringwidth pop neg 2 div 0 rmoveto show\n";
-    if ($color_changed) { say "setrgbcolor\n"; $color_changed=0;}
-    delete $TP_GLOBAL{pagename}; delete $TP_PARAMS{pagename}; # pagename is only for actual page; next one starts with empty name
+    delete $TP_GLOBAL{pagename}; delete $TP_PARAMS{pagename}; # pagename is only for actual page; next page starts with empty name
   }
 
  # Original PS code to write a multi-line pagename:
