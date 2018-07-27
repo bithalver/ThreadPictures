@@ -68,7 +68,7 @@ sub connectplane2points { my ($TOx1,$TOy1,$TOx2,$TOy2,$nth1,$nth2,@plane)=@_;
   my ($nth1x,$nth1y)=@plane[$nth1*2,$nth1*2+1]; # FROM vector BEGIN
   my ($nth2x,$nth2y)=@plane[$nth2*2,$nth2*2+1]; # FROM vector END
   my ($FROMvectorlen,$FROMangle)=to_polar(addvector(scalevector($nth1x,$nth1y,-1),$nth2x,$nth2y)); # warnarray ($FROMvectorlen,$FROMangle/pi()*180);
-  my ($TOvectorlen,$TOangle)=to_polar(addvector(-$TOx1,-$TOy1,$TOx2,$TOy2)); # warnarray ($TOvectorlen,my_round $TOangle/pi()*180);
+  my ($TOvectorlen,$TOangle)=to_polar(addvector(-$TOx1,-$TOy1,$TOx2,$TOy2));
   # move plane so it's nth1 point is 0,0
   @output=moveplane(scalevector($nth1x,$nth1y,-1),@output);
   # rotate the plane that way the nth2 point is in the direction of (x2,y2)-(x1,y1)
