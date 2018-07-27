@@ -185,6 +185,9 @@ for (0 .. @{$config->{pages}}-1) {
       when (/^color$/i){
         $TP_all[@TP_all] = { type => 'color', color => splice(@AE,0,1) }
       }
+      when (/^fontcolor$/i){
+        $TP_all[@TP_all] = { type => 'fontcolor', color => splice(@AE,0,1) }
+      }
       when (/^path$/i){
         add_path(@AE);
       }

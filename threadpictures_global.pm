@@ -44,6 +44,7 @@ sub global_init {
 
   $TP_GLOBAL{background} = $ENV{TP_background} //='white';
   $TP_GLOBAL{color} = $ENV{TP_color} //='black';
+  $TP_GLOBAL{fontcolor} = $ENV{TP_color} //='black';
 
   # How many slices do we use in a path ?
   $TP_GLOBAL{slices} = $ENV{TP_slices} //=20;
@@ -129,7 +130,7 @@ sub colorconvert { my ($input)=@_;
 =pod
 All global(looking) variables and where can they be set:
 
-GLOBAL means the variable has a default and can be overwritten from an environment variable _or_ global parameter in YAML file
+GLOBAL means the variable has a default and can be overwritten from an environment variable and/or global parameter in YAML file
 PARAM means the variable can be overwritten from command parameter (-p option)
 PAGE means the variable is modifiable for every page
 NET means the variable is modifiable for every net
@@ -149,26 +150,25 @@ topmargin: 2.5 cm
 bottommargin: 2.5 cm
 
 GLOBAL and PARAM level:
-pagename: "" # What should be written on the bottom of the page; variable is deleted after written on first page
+pagename: "" # What should be written on the bottom of the page; variable is deleted after used for first page
 threads: 20 # 'threads' is how many segment should exist in a net
 firstthread: 0
 lastthread: threads}
-BW: 0 # Do we want to ignore all color specificaion ? BW is just white background, black drawings
+BW: 0 # Do we want to ignore all color specificaion ? BW is just white background, black drawings, black pagename
 
 GLOBAL PARAM and NET level:
 # Which style we draw nets
 # possible values: normal, holes, border, triangle, filledtriangle, curve, filledcurve, inversefilledcurve, parallel, selected
 # all other strings are future expansion; you will get a warning on STDERR for using a nonimplemented one but processing goes on
 style: 'normal'
-color: 'black'
 slices: 20 # How many slices do we use in a path ?
-path_variant: 'out' # Which path variant do we use ? possible values are 'out' 'crossed'
+path_variant: 'out' # Which path variant do we use ? possible values are 'out' 'crossed' 'param'
 path_param: 0 # For the 'param' path, what is the numerical parameter ? Default is zero, which is 'out'
 
 GLOBAL PARAM and PAGE level:
 background: 'white'
-# fontcolor should be created TODO
+fontcolor: black # What color do we use to write the pagename at the bottom of the page ?
 
 GLOBAL PARAM PAGE and NET level:
-# color should be here TODO
+color: 'black' # Which color do we use to draw the elements of a net
 =cut

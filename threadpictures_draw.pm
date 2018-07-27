@@ -52,8 +52,8 @@ sub add_net4 {
   my ($line1oX,$line1oY,$line1iX,$line1iY,$line2iX,$line2iY,$line2oX,$line2oY)=@processedinput;
   # Let's push the new net at the end of @TP_all array (increasing it's size by one)
   $TP_all[@TP_all] = { type => 'net',
-    line1oX => $line1oX, line1oY => $line1oY, line1iX => $line1iX, line1iY => $line1iY,
-    line2iX => $line2iX, line2iY => $line2iY, line2oX => $line2oX, line2oY => $line2oY,
+    line1oX => my_round($line1oX), line1oY => my_round($line1oY), line1iX => my_round($line1iX), line1iY => my_round($line1iY),
+    line2iX => my_round($line2iX), line2iY => my_round($line2iY), line2oX => my_round($line2oX), line2oY => my_round($line2oY),
     # next lines is not needed as these are the defaults
     # style=> $TP_GLOBAL{style}, threads => $TP_GLOBAL{threads},
     # firstthread => $TP_GLOBAL{firstthread}, lastthread => $TP_GLOBAL{lastthread)==-1?$TP_GLOBAL{threads}:$TP_GLOBAL{lastthread)
@@ -122,7 +122,7 @@ sub add_path {
   my (@input)=@_; my ($startX,$startY,$endX,$endY)=pointsfromplanesordirect(splice @input,0,4);
   my %AP; #AP like ActualPath
   
-  if ($opts_debug) { warn "'path' coordinates and then parameters are: \n"; warnarray (($startX,$startY,$endX,$endY)); }
+  # if ($opts_debug) { warn "'path' coordinates and then parameters are: \n"; warnarray (($startX,$startY,$endX,$endY)); }
   while (@input) { my ($key, $value)=(shift @input,shift @input); $AP{$key} = $value ;}
 
   $AP{slices} //= $TP_PARAMS{slices} ;
@@ -327,19 +327,22 @@ sub draw_net {
 sub draw_all {
 
 
-  if ($opts_debug) { warn "\nStarting page $TP_GLOBAL{pagenumber} \n\n"; }
+  if ($opts_debug) { warn "\nStarting to draw page $TP_GLOBAL{pagenumber} \n\n"; }
 
 # if @TP_all is empty, warn and return
   if (not @TP_all) { warn "@TP_all is empty: nothing added so nothing to draw\n"; return; }
 
   my $pagename=$TP_GLOBAL{pagename};
   my $bg=$TP_GLOBAL{background};
+  # $TMP_color is a hack: if there is a color directive for the page we temporarily overwrite $TP_GLOBAL{color}
+  my $TMP_color=$TP_GLOBAL{color}; my $TMP_fontcolor=$TP_GLOBAL{fontcolor}; 
 
-# find min and max X and Y; get the page name, if set; get background color, if set
+# find min and max X and Y; get the page name, if set; get background color, if set; get the page-wide color and fontcolor, if set
   my ($minX,$maxX,$minY,$maxY);
+  if ($opts_debug) { warn "TP_all elements are:\n"};
   foreach my $ATPAE_ (@TP_all) { # ATPAE stands for Actual TP_all Element
     my %ATPAE=%{$ATPAE_};
-    if ($opts_debug) { warn "Actual TP_all element is:\n"; warnhash %ATPAE };
+    if ($opts_debug) { warnhash %ATPAE };
     for ($ATPAE{'type'}) {
       when (/^net$/) {
         $minX//=$ATPAE{line1oX}; $maxX//=$ATPAE{line1oX}; $minY//=$ATPAE{line1oY}; $maxY//=$ATPAE{line1oY};
@@ -348,6 +351,8 @@ sub draw_all {
       }
       when (/^pagename$/) { $pagename=$ATPAE{string} ;}
       when (/^background$/) { $bg=$ATPAE{color} ;}
+      when (/^color$/) { $TP_GLOBAL{color}=$ATPAE{color}}
+      when (/^fontcolor$/) { $TP_GLOBAL{fontcolor}=$ATPAE{color}}
     }
   }
   if (defined $TP_PARAMS{pagename}) {$pagename=$TP_PARAMS{pagename};}
@@ -361,7 +366,7 @@ sub draw_all {
   say "\n%%Page: \"$TP_GLOBAL{pagenumber}\" $TP_GLOBAL{pagenumber}";
   say "gsave";
 
-  # What is the last color we used ? It always starts with black
+  # What is the last color we used ? Page always starts with black
   $TP_GLOBAL{lastcolor}='0 0 0';
 
   # drawing the background, if needed (white BG is the default, so we do not draw it); also no background in black-and-white mode
@@ -372,7 +377,7 @@ sub draw_all {
     say "/Times-Roman 12 selectfont";
     say  $TP_GLOBAL{pageXsize}/2," ",cm(1.5)," moveto";
     if (! $TP_GLOBAL{BW} ) {
-      my $fontcolor=$TP_GLOBAL{color}; if ($TP_PARAMS{color}) {$fontcolor=$TP_PARAMS{color}} ; $fontcolor=colorconvert($fontcolor);
+      my $fontcolor=$TP_GLOBAL{fontcolor}; if ($TP_PARAMS{fontcolor}) {$fontcolor=$TP_PARAMS{fontcolor}} ; $fontcolor=colorconvert($fontcolor);
       if ($fontcolor ne $TP_GLOBAL{lastcolor}) { say "$fontcolor setrgbcolor\n"; $TP_GLOBAL{lastcolor}=$fontcolor}
     }
     say "($pagename) dup stringwidth pop neg 2 div 0 rmoveto show\n";
@@ -394,14 +399,8 @@ sub draw_all {
     ($TP_GLOBAL{pageYsize}-$TP_GLOBAL{topmargin}-$TP_GLOBAL{bottommargin})/($maxY-$minY))," dup scale");
   say(($maxX+$minX)/2," neg ",($maxY+$minY)/2," neg translate");
 
-  my $TMP_color=$TP_GLOBAL{color}; # $TMP_color is a hack: if there is a color directive for the page we temporarily overwrite $TP_GLOBAL{color}
-# iterate over @TP_all to draw every piece
-  foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element
-    my %ATPAE=%{$ATPAE};
-    given ($ATPAE{'type'}) {
-      when (/^color$/) { $TP_GLOBAL{color}=$ATPAE{color}}
-    } ;
-  }
+
+  # iterate over @TP_all to draw every piece
   foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element
     my %ATPAE=%{$ATPAE};
     given ($ATPAE{'type'}) {
@@ -409,10 +408,12 @@ sub draw_all {
       when (/^background$/) { }
       when (/^pagename$/) { }
       when (/^color$/) { }
+      when (/^fontcolor$/) { }
 	  default {warn "type '$_' not implemented (yet); parameters were:\n".join(", ", map { "$_ => $ATPAE{$_}" } keys %ATPAE)."\n" ;}
     } ;
   }
-  $TP_GLOBAL{color}=$TMP_color;
+  $TP_GLOBAL{color}=$TMP_color; $TP_GLOBAL{fontcolor}=$TMP_fontcolor;
+
 # page footer
   say "showpage grestore";
   say "%%EndPage: \"$TP_GLOBAL{pagenumber}\" $TP_GLOBAL{pagenumber}";

@@ -44,7 +44,8 @@ pages:
     - loop4;r5;1;2;3;4;5
   -
     - color;orange
-    - pagename; 3 or 4 ? | first ever page-wide color directive test
+    - fontcolor;blue
+    - pagename; 3 or 4 ? | first ever page-wide 'color' and 'fontcolor' directive test
     - loop;r4;1;2;3;4;color;red
     - loop;r3;1;2;3
 #  -
