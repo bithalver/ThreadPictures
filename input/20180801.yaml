@@ -1,0 +1,64 @@
+---
+global:
+    background: darkgray
+    color: red
+    fontcolor: lightgray
+    threads: 20
+planes:
+  - r;regular;6
+  - A90;angle;90
+  - f1;freeform;r;4;r;0;r;2
+  - f2;connected;r;2;r;1;r;4;5
+  - fA;freeform;f1;0;f1;1;f1;2;f2;5;f2;6
+  - f3;connected;fA;3;fA;4;A90;2;0
+  - fB;connected;f3;0;f3;1;fA;0;1
+  - f4;connected;fB;3;fB;4;A90;2;0
+  - fC;connected;f4;0;f4;1;fA;0;1
+  - f5;connected;fC;3;fC;4;A90;2;0
+  - fD;connected;f5;0;f5;1;fA;0;1
+# end of page1 planes
+  - t;grid;6;6
+  - pA;freeform;t;0;t;1;t;202;t;3;t;4
+  - p1;connected;pA;3;pA;4;A90;2;0
+  - pB;connected;p1;0;p1;1;pA;0;1
+  - p2;connected;pB;3;pB;4;A90;2;0
+  - pC;connected;p2;0;p2;1;pA;0;1
+  - p3;connected;pC;3;pC;4;A90;2;0
+  - pD;connected;p3;0;p3;1;pA;0;1
+pages:
+  -
+    - pagename;2018 08 01 | Small wound
+    - color;red
+    - net3s;fA;0;1;2
+    - net3s;fA;2;3;4
+    - net3s;fA;1;2;3
+
+    - net3s;fB;0;1;2
+    - net3s;fB;2;3;4
+    - net3s;fB;1;2;3
+
+    - net3s;fC;0;1;2
+    - net3s;fC;2;3;4
+    - net3s;fC;1;2;3
+
+    - net3s;fD;0;1;2
+    - net3s;fD;2;3;4
+    - net3s;fD;1;2;3
+  -
+    - pagename;2018 08 01 | Big wound
+    - color;red
+    - net3s;pA;1;2;3
+    - net3s;pA;0;1;2
+    - net3s;pA;2;3;4
+
+    - net3s;pB;1;2;3
+    - net3s;pB;0;1;2
+    - net3s;pB;2;3;4
+
+    - net3s;pC;1;2;3
+    - net3s;pC;0;1;2
+    - net3s;pC;2;3;4
+
+    - net3s;pD;1;2;3
+    - net3s;pD;0;1;2
+    - net3s;pD;2;3;4
