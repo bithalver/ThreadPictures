@@ -6,6 +6,22 @@ global:
     threads: 20
 pages:
   -
+    - pagename;2018 10 14 | 4 CLOSE vertical 3x3
+    - net3;1;0;0;2;2;3;color;orange
+    - net3;1;0;3;1;2;3;color;lightblue
+    - net3;2;5.5;3;3.5;1;2.5;color;orange
+    - net3;2;5.5;0;4.5;1;2.5;color;lightblue
+    - net3;3.5;0;2.5;2;4.5;3;color;orange
+    - net3;3.5;0;5.5;1;4.5;3;color;lightblue
+    - net3;4.5;5.5;5.5;3.5;3.5;2.5;color;orange
+    - net3;4.5;5.5;2.5;4.5;3.5;2.5;color;lightblue
+    - net3;7;3;8;1;6;0;color;orange
+    - net3;7;3;5;2;6;0;color;lightblue
+    - net3;7;5.5;8;3.5;6;2.5;color;orange
+    - net3;7;5.5;5;4.5;6;2.5;color;lightblue
+    - net3;7;8;8;6;6;5;color;orange
+    - net3;7;8;5;7;6;5;color;lightblue
+  -
     - pagename;2018 10 14 | 1
     - net3;0;2;2;0;4;2;color;orange
     - net3;0;2;2;4;4;2;color;lightblue
