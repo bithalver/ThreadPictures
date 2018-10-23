@@ -109,6 +109,7 @@ sub colorconvert { my ($input)=@_;
     lightgray => '0.75 0.75 0.75',
     darkgray => '0.25 0.25 0.25',
     red => '1 0 0',
+    darkred => '0.5 0 0',
     lightgreen => '0 1 0',
     green => '0 0.8 0',
     darkgreen => '0 0.4 0',
