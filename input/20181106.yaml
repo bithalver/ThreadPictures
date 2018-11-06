@@ -1,0 +1,120 @@
+---
+global:
+    background: darkgray
+    fontcolor: lightgray
+    threads: 20
+#    style: curve
+planes:
+  - r1;regular;6;0;1
+  - r2;regular;6;60;2
+  - r3;regular;6;120;3
+  - r4;regular;6;180;4
+pages:
+  -
+    - pagename;2018 11 06 | 1
+    - net3s;r1;0;1;2;color;white
+    - net3s;r1;0;2;1;color;white
+    - net3s;r1;0;3;4;color;white
+    - net3s;r1;0;4;3;color;white
+    - net3s;r1;0;5;6;color;white
+    - net3s;r1;0;6;5;color;white
+    - net3s;r2;0;1;2;color;orange
+    - net3s;r2;0;2;1;color;orange
+    - net3s;r2;0;3;4;color;orange
+    - net3s;r2;0;4;3;color;orange
+    - net3s;r2;0;5;6;color;orange
+    - net3s;r2;0;6;5;color;orange
+    - net3s;r3;0;1;2;color;black
+    - net3s;r3;0;2;1;color;black
+    - net3s;r3;0;3;4;color;black
+    - net3s;r3;0;4;3;color;black
+    - net3s;r3;0;5;6;color;black
+    - net3s;r3;0;6;5;color;black
+    - net3s;r4;0;1;2;color;lightblue
+    - net3s;r4;0;2;1;color;lightblue
+    - net3s;r4;0;3;4;color;lightblue
+    - net3s;r4;0;4;3;color;lightblue
+    - net3s;r4;0;5;6;color;lightblue
+    - net3s;r4;0;6;5;color;lightblue
+  -
+    - pagename;2018 11 06 | 2
+    - net3s;r1;0;1;2;color;white;style;curve
+    - net3s;r1;0;2;1;color;white;style;curve
+    - net3s;r1;0;3;4;color;white;style;curve
+    - net3s;r1;0;4;3;color;white;style;curve
+    - net3s;r1;0;5;6;color;white;style;curve
+    - net3s;r1;0;6;5;color;white;style;curve
+    - net3s;r2;0;1;2;color;orange;style;curve
+    - net3s;r2;0;2;1;color;orange;style;curve
+    - net3s;r2;0;3;4;color;orange;style;curve
+    - net3s;r2;0;4;3;color;orange;style;curve
+    - net3s;r2;0;5;6;color;orange;style;curve
+    - net3s;r2;0;6;5;color;orange;style;curve
+    - net3s;r3;0;1;2;color;black;style;curve
+    - net3s;r3;0;2;1;color;black;style;curve
+    - net3s;r3;0;3;4;color;black;style;curve
+    - net3s;r3;0;4;3;color;black;style;curve
+    - net3s;r3;0;5;6;color;black;style;curve
+    - net3s;r3;0;6;5;color;black;style;curve
+    - net3s;r4;0;1;2;color;lightblue;style;curve
+    - net3s;r4;0;2;1;color;lightblue;style;curve
+    - net3s;r4;0;3;4;color;lightblue;style;curve
+    - net3s;r4;0;4;3;color;lightblue;style;curve
+    - net3s;r4;0;5;6;color;lightblue;style;curve
+    - net3s;r4;0;6;5;color;lightblue;style;curve
+  -
+    - pagename;2018 11 06 | 3
+    - net3s;r1;0;1;2;color;white
+    - net3s;r1;0;3;4;color;white
+    - net3s;r1;0;5;6;color;white
+    - net3s;r2;0;1;2;color;orange
+    - net3s;r2;0;3;4;color;orange
+    - net3s;r2;0;5;6;color;orange
+    - net3s;r3;0;1;2;color;black
+    - net3s;r3;0;3;4;color;black
+    - net3s;r3;0;5;6;color;black
+    - net3s;r4;0;1;2;color;lightblue
+    - net3s;r4;0;3;4;color;lightblue
+    - net3s;r4;0;5;6;color;lightblue
+  -
+    - pagename;2018 11 06 | 3, 4 or 6 ?
+    - net3s;r1;0;1;2;color;white
+    - net3s;r1;0;3;4;color;orange
+    - net3s;r1;0;5;6;color;lightblue
+    - net3s;r2;0;1;2;color;white
+    - net3s;r2;0;3;4;color;orange
+    - net3s;r2;0;5;6;color;lightblue
+    - net3s;r3;0;1;2;color;white
+    - net3s;r3;0;3;4;color;orange
+    - net3s;r3;0;5;6;color;lightblue
+    - net3s;r4;0;1;2;color;white
+    - net3s;r4;0;3;4;color;orange
+    - net3s;r4;0;5;6;color;lightblue
+  -
+    - pagename;2018 11 06 | 5
+    - net3s;r1;2;0;1;color;white
+    - net3s;r1;4;0;3;color;orange
+    - net3s;r1;6;0;5;color;lightblue
+    - net3s;r2;2;0;1;color;white
+    - net3s;r2;4;0;3;color;orange
+    - net3s;r2;6;0;5;color;lightblue
+    - net3s;r3;2;0;1;color;white
+    - net3s;r3;4;0;3;color;orange
+    - net3s;r3;6;0;5;color;lightblue
+    - net3s;r4;2;0;1;color;white
+    - net3s;r4;4;0;3;color;orange
+    - net3s;r4;6;0;5;color;lightblue
+  -
+    - pagename;2018 11 06 | 6
+    - net3s;r1;2;0;1;color;white;style;curve
+    - net3s;r1;4;0;3;color;orange;style;curve
+    - net3s;r1;6;0;5;color;lightblue;style;curve
+    - net3s;r2;2;0;1;color;white;style;curve
+    - net3s;r2;4;0;3;color;orange;style;curve
+    - net3s;r2;6;0;5;color;lightblue;style;curve
+    - net3s;r3;2;0;1;color;white;style;curve
+    - net3s;r3;4;0;3;color;orange;style;curve
+    - net3s;r3;6;0;5;color;lightblue;style;curve
+    - net3s;r4;2;0;1;color;white;style;curve
+    - net3s;r4;4;0;3;color;orange;style;curve
+    - net3s;r4;6;0;5;color;lightblue;style;curve
