@@ -9,8 +9,28 @@ global:
 #    style: curve
 planes:
   - r12;regular;12;15
-#  - U1;connected;r16;10;r16;11;r16;2;4
+  - r4;regular;4
+  - r4_0102;connected;r12;01;r12;02;r4;1;2
+  - r4_0304;connected;r12;03;r12;04;r4;1;2
+  - r4_0506;connected;r12;05;r12;06;r4;1;2
+  - r4_0708;connected;r12;07;r12;08;r4;1;2
+  - r4_0910;connected;r12;09;r12;10;r4;1;2
+  - r4_1112;connected;r12;11;r12;12;r4;1;2
 pages:
+  -
+    - pagename;2019 02 11 | 5
+    - net3s;r4_0102;1;2;3;color;lightgray
+    - net3s;r4_0304;1;2;3;color;lightgray
+    - net3s;r4_0506;1;2;3;color;lightgray
+    - net3s;r4_0708;1;2;3;color;lightgray
+    - net3s;r4_0910;1;2;3;color;lightgray
+    - net3s;r4_1112;1;2;3;color;lightgray
+    - net3s;r4_0102;3;4;1;color;lightgray
+    - net3s;r4_0304;3;4;1;color;lightgray
+    - net3s;r4_0506;3;4;1;color;lightgray
+    - net3s;r4_0708;3;4;1;color;lightgray
+    - net3s;r4_0910;3;4;1;color;lightgray
+    - net3s;r4_1112;3;4;1;color;lightgray
   -
     - pagename;2019 02 11 | 1
     - net3s;r12;11;12;01;color;lightblue
