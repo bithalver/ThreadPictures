@@ -118,3 +118,45 @@ pages:
     - net3s;r4_0708_;3;4;1;color;yellow
     - net3s;r4_0910_;3;4;1;color;yellow
     - net3s;r4_1112_;3;4;1;color;yellow
+  -
+    - pagename;2019 02 11 | 7
+    - net3s;r12;01;12;03;color;white
+    - net3s;r12;12;03;02;color;white
+    - net3s;r12;04;03;06;color;white
+    - net3s;r12;03;06;05;color;white
+    - net3s;r12;07;06;09;color;white
+    - net3s;r12;06;09;08;color;white
+    - net3s;r12;10;09;12;color;white
+    - net3s;r12;09;12;11;color;white
+  -
+    - pagename;2019 02 11 | 8
+    - net3s;r12;03;02;05;color;white
+    - net3s;r12;02;05;04;color;white
+    - net3s;r12;05;04;07;color;white
+    - net3s;r12;04;07;06;color;white
+    - net3s;r12;07;06;09;color;white
+    - net3s;r12;06;09;08;color;white
+    - net3s;r12;09;08;11;color;white
+    - net3s;r12;08;11;10;color;white
+    - net3s;r12;11;10;01;color;white
+    - net3s;r12;10;01;12;color;white
+    - net3s;r12;01;12;03;color;red
+    - net3s;r12;12;03;02;color;red
+  -
+    - pagename;2019 02 11 | 9
+    - net3s;r12;01;12;03;color;white
+    - net3s;r12;12;03;02;color;white
+    - net3s;r12;03;02;05;color;white
+    - net3s;r12;02;05;04;color;white
+    - net3s;r12;05;04;07;color;white
+    - net3s;r12;04;07;06;color;white
+    - net3s;r12;07;06;09;color;white
+    - net3s;r12;06;09;08;color;white
+    - net3s;r12;09;08;11;color;white
+    - net3s;r12;08;11;10;color;white
+    - net3s;r12;11;10;01;color;white
+    - net3s;r12;10;01;12;color;white
+    - net3s;r12;04;03;06;color;red
+    - net3s;r12;03;06;05;color;red
+    - net3s;r12;10;09;12;color;red
+    - net3s;r12;09;12;11;color;red
