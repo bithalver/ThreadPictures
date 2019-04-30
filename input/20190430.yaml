@@ -1,0 +1,44 @@
+---
+global:
+    background: darkgray
+    color: green
+    fontcolor: white
+    threads: 20
+    firstthread: 0
+    lastthread: 20
+#    style: curve
+planes:
+  - g1;grid;10;10
+  - g;connected;0;0;0;1;g1;0;1
+
+pages:
+  -
+    - pagename;2019 04 30 | for the wedding of Veronika Boza and Zsolt Recsnyik.
+    - net3s;g;200;202;003;color;green
+    - net3s;g;202;003;005;color;green
+    - net3s;g;400;402;603;color;darkgreen
+    - net3s;g;402;603;605;color;darkgreen
+    - net3s;g;304;302;505;color;green;lastthread;10
+    - net3s;g;304;302;505;color;darkgreen;firstthread;11
+    - net3s;g;304;505;105;color;green;lastthread;10
+    - net3s;g;304;505;105;color;darkgreen;firstthread;11
+    - net3s;g;304;105;302;color;green;lastthread;10
+    - net3s;g;304;105;302;color;darkgreen;firstthread;11
+#  -
+#    - pagename;2019 04 30 | 2
+#    - net3s;g;200;202;003;color;green
+#    - net3s;g;202;003;005;color;green
+#    - net3s;g;400;402;603;color;darkgreen
+#    - net3s;g;402;603;605;color;darkgreen
+#    - net3s;g;304;302;505;color;yellow
+#    - net3s;g;304;505;105;color;yellow
+#    - net3s;g;304;105;302;color;yellow
+#  -
+#    - pagename;2019 04 30 | 1
+#    - net3s;g;100;101;002;color;green
+#    - net3s;g;101;002;003;color;green
+#    - net3s;g;300;301;402;color;green
+#    - net3s;g;301;402;403;color;green
+#    - net3s;g;203;303;103;color;yellow
+#    - net3s;g;203;103;202;color;yellow
+#    - net3s;g;203;202;303;color;yellow
