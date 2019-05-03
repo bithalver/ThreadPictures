@@ -48,21 +48,46 @@ pages:
     - net3s;g;105;505;302;color;blue;firstthread;11
     - net3s;g;302;105;505;color;lightblue;lastthread;10
     - net3s;g;302;105;505;color;blue;firstthread;11
-#  -
-#    - pagename;2019 04 30 | 2
-#    - net3s;g;200;202;003;color;green
-#    - net3s;g;202;003;005;color;green
-#    - net3s;g;400;402;603;color;darkgreen
-#    - net3s;g;402;603;605;color;darkgreen
-#    - net3s;g;304;302;505;color;yellow
-#    - net3s;g;304;505;105;color;yellow
-#    - net3s;g;304;105;302;color;yellow
-#  -
-#    - pagename;2019 04 30 | 1
-#    - net3s;g;100;101;002;color;green
-#    - net3s;g;101;002;003;color;green
-#    - net3s;g;300;301;402;color;green
-#    - net3s;g;301;402;403;color;green
-#    - net3s;g;203;303;103;color;yellow
-#    - net3s;g;203;103;202;color;yellow
-#    - net3s;g;203;202;303;color;yellow
+  -
+    - pagename;2019 04 30 | 4
+    - net3s;g;200;202;003;color;white
+    - net3s;g;202;003;005;color;white
+    - net3s;g;400;402;603;color;orange
+    - net3s;g;402;603;605;color;orange
+    - net3s;g;304;302;505;color;white;lastthread;10
+    - net3s;g;304;505;105;color;white;lastthread;10
+    - net3s;g;304;105;302;color;white;lastthread;10
+    - net3s;g;304;505;302;color;orange;firstthread;11
+    - net3s;g;304;105;505;color;orange;firstthread;11
+    - net3s;g;304;302;105;color;orange;firstthread;11
+  -
+    - pagename;2019 04 30 | 5
+    - net3s;g;200;202;003;color;0.75,0.75,0.75
+    - net3s;g;202;003;005;color;0.75,0.75,0.75
+    - net3s;g;400;402;603;color;1,0.84,0
+    - net3s;g;402;603;605;color;1,0.84,0
+    - net3s;g;304;302;505;color;0.75,0.75,0.75
+    - net3s;g;304;505;105;color;0.75,0.75,0.75
+    - net3s;g;304;105;302;color;0.75,0.75,0.75
+    - net3s;g;304;505;302;color;1,0.84,0
+    - net3s;g;304;105;505;color;1,0.84,0
+    - net3s;g;304;302;105;color;1,0.84,0
+  -
+    - pagename;2019 04 30 | 6
+    - net3s;g;200;202;003;color;pink
+    - net3s;g;202;003;005;color;pink
+    - net3s;g;400;402;603;color;lightpurple
+    - net3s;g;402;603;605;color;lightpurple
+    - net3s;g;505;302;105;color;lightpurple
+    - net3s;g;304;505;105;color;pink
+    - net3s;g;304;105;505;color;pink
+  -
+    - background;lightblue
+    - pagename;2019 04 30 | 7
+    - net3s;g;200;202;003;color;white
+    - net3s;g;202;003;005;color;white
+    - net3s;g;400;402;603;color;black
+    - net3s;g;402;603;605;color;black
+    - net3s;g;304;302;505;color;white
+    - net3s;g;304;302;105;color;white
+    - net3s;g;505;302;105;color;black
