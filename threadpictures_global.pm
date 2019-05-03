@@ -121,6 +121,9 @@ sub colorconvert { my ($input)=@_;
     orange => '1 0.7 0',
     cyan => '0 1 1',
     brown => '0.52 0.34 0.137',
+    pink => '1 0.08 0.57',
+    lightpurple => '1 0 1',
+    purple => '0.5 0 0.5',
   );
   if ($input =~ /^[a-z]/) { $input=$colornames{$input}; }
   $input=~s/,/ /g; # we want to write it to PS file like '0.5 0.5 0.5'
