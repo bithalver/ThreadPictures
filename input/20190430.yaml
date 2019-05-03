@@ -24,6 +24,30 @@ pages:
     - net3s;g;304;505;105;color;darkgreen;firstthread;11
     - net3s;g;304;105;302;color;green;lastthread;10
     - net3s;g;304;105;302;color;darkgreen;firstthread;11
+  -
+    - pagename;2019 04 30 | 2
+    - net3s;g;200;202;003;color;0.6,0,0
+    - net3s;g;202;003;005;color;0.6,0,0
+    - net3s;g;400;402;603;color;1,0.4,0.4
+    - net3s;g;402;603;605;color;1,0.4,0.4
+    - net3s;g;505;304;302;color;1,0.4,0.4;lastthread;10
+    - net3s;g;505;304;302;color;0.6,0,0;firstthread;11
+    - net3s;g;105;304;505;color;1,0.4,0.4;lastthread;10
+    - net3s;g;105;304;505;color;0.6,0,0;firstthread;11
+    - net3s;g;302;304;105;color;1,0.4,0.4;lastthread;10
+    - net3s;g;302;304;105;color;0.6,0,0;firstthread;11
+  -
+    - pagename;2019 04 30 | 3
+    - net3s;g;200;202;003;color;blue
+    - net3s;g;202;003;005;color;blue
+    - net3s;g;400;402;603;color;lightblue
+    - net3s;g;402;603;605;color;lightblue
+    - net3s;g;505;302;105;color;lightblue;lastthread;10
+    - net3s;g;505;302;105;color;blue;firstthread;11
+    - net3s;g;105;505;302;color;lightblue;lastthread;10
+    - net3s;g;105;505;302;color;blue;firstthread;11
+    - net3s;g;302;105;505;color;lightblue;lastthread;10
+    - net3s;g;302;105;505;color;blue;firstthread;11
 #  -
 #    - pagename;2019 04 30 | 2
 #    - net3s;g;200;202;003;color;green
