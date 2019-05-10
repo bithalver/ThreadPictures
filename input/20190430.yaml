@@ -13,7 +13,7 @@ planes:
 
 pages:
   -
-    - pagename;2019 04 30 | for the wedding of Veronika Boza and Zsolt Recsnyik.
+    - pagename;2019 04 30 | 1 | for the wedding of Veronika Boza and Zsolt Recsnyik.
     - net3s;g;200;202;003;color;green
     - net3s;g;202;003;005;color;green
     - net3s;g;400;402;603;color;darkgreen
@@ -37,7 +37,7 @@ pages:
     - net3s;g;302;304;105;color;1,0.4,0.4;lastthread;10
     - net3s;g;302;304;105;color;0.6,0,0;firstthread;11
   -
-    - pagename;2019 04 30 | 3
+    - pagename;2019 04 30 | 3 | for Mother's day
     - net3s;g;200;202;003;color;blue
     - net3s;g;202;003;005;color;blue
     - net3s;g;400;402;603;color;lightblue
@@ -83,7 +83,7 @@ pages:
     - net3s;g;304;105;505;color;pink
   -
     - background;lightblue
-    - pagename;2019 04 30 | 7
+    - pagename;2019 04 30 | 7 | Hope
     - net3s;g;200;202;003;color;white
     - net3s;g;202;003;005;color;white
     - net3s;g;400;402;603;color;black
@@ -91,3 +91,82 @@ pages:
     - net3s;g;304;302;505;color;white
     - net3s;g;304;302;105;color;white
     - net3s;g;505;302;105;color;black
+  -
+    - pagename;2019 04 30 | Orthogonal 1
+    - net3;2;0;2;2;0;2;color;white
+    - net3;2;2;0;2;0;4;color;white
+    - net3;4;0;4;2;6;2;color;red
+    - net3;4;2;6;2;6;4;color;red
+    - net3;3;3;5;5;3;7;color;red
+    - net3;3;7;1;5;3;3;color;white
+  -
+    - pagename;2019 04 30 | Orthogonal 2
+    - net3;2;0;2;2;0;2;color;white
+    - net3;2;2;0;2;0;4;color;white
+    - net3;4;0;4;2;6;2;color;red
+    - net3;4;2;6;2;6;4;color;red
+    - net3;3;3;3;7;5;5;color;red
+    - net3;3;7;3;3;1;5;color;white
+  -
+    - pagename;2019 04 30 | Orthogonal 3
+    - net3;2;0;2;2;0;2;color;white
+    - net3;2;2;0;2;0;4;color;white
+    - net3;4;0;4;2;6;2;color;red
+    - net3;4;2;6;2;6;4;color;red
+    - net3;5;5;1;5;3;7;color;white
+    - net3;1;5;5;5;3;3;color;white
+    - net3;3;3;3;7;5;5;color;red
+    - net3;3;7;3;3;1;5;color;red
+  -
+    - pagename;2019 04 30 | Orthogonal 3a
+    - net3;2;0;2;2;0;2;color;white
+    - net3;2;2;0;2;0;4;color;white
+    - net3;0;2;0;4;-2;4;color;white
+    - net3;4;0;4;2;6;2;color;red
+    - net3;4;2;6;2;6;4;color;red
+    - net3;6;2;6;4;8;4;color;red
+
+    - net3;2;10;2;8;0;8;color;red
+    - net3;2;8;0;8;0;6;color;red
+    - net3;0;8;0;6;-2;6;color;red
+    - net3;4;10;4;8;6;8;color;white
+    - net3;4;8;6;8;6;6;color;white
+    - net3;6;8;6;6;8;6;color;white
+# Center
+    - net3;5;5;1;5;3;7;color;white
+    - net3;1;5;5;5;3;3;color;white
+    - net3;3;3;3;7;5;5;color;red
+    - net3;3;7;3;3;1;5;color;red
+  -
+    - pagename;2019 04 30 | Orthogonal 3 | Strange vision of a tetrahedron
+    - net3;5;5;1;5;3;7;color;white
+    - net3;1;5;5;5;3;3;color;white
+    - net3;3;3;3;7;5;5;color;red
+    - net3;3;7;3;3;1;5;color;red
+  -
+    - pagename;2019 04 30 | Orthogonal 4
+# Bottom
+    - net3;2;0;2;2;0;2;color;white
+    - net3;2;2;0;2;0;4;color;white
+    - net3;4;0;4;2;6;2;color;red
+    - net3;4;2;6;2;6;4;color;red
+# Top
+    - net3;4;12;4;10;6;10;color;white
+    - net3;4;10;6;10;6;8;color;white
+    - net3;2;12;2;10;0;10;color;red
+    - net3;2;10;0;10;0;8;color;red
+# Right
+    - net3;9;5;7;5;7;3;color;white
+    - net3;7;5;7;3;5;3;color;white
+    - net3;9;7;7;7;7;9;color;red
+    - net3;7;7;7;9;5;9;color;red
+# Left
+    - net3;-3;7;-1;7;-1;9;color;white
+    - net3;-1;7;-1;9;1;9;color;white
+    - net3;-3;5;-1;5;-1;3;color;red
+    - net3;-1;5;-1;3;1;3;color;red
+# Center
+    - net3;5;6;1;6;3;8;color;white
+    - net3;1;6;5;6;3;4;color;white
+    - net3;3;4;3;8;5;6;color;red
+    - net3;3;8;3;4;1;6;color;red
