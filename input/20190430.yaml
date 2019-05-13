@@ -224,3 +224,101 @@ pages:
     - net3s;GUL;505;302;105;color;brown;firstthread;11
     - net3s;GUL;304;505;105;color;orange
     - net3s;GUL;304;105;505;color;brown
+  -
+    - pagename; 2019 04 30 | Sacrifices at the altar | color variant
+    - background;black
+    - net3;2;5;5;8;5;2;color;white
+    - net3;8;5;5;2;5;8;color;white
+    - net3;2;5;8;5;5;8;color;yellow
+    - net3;8;5;2;5;5;2;color;yellow
+
+    - net3s;GDL;200;202;003;color;white
+    - net3s;GDL;202;003;005;color;white
+    - net3s;GDL;400;402;603;color;darkgreen
+    - net3s;GDL;402;603;605;color;darkgreen
+    - net3s;GDL;304;302;505;color;white;lastthread;10
+    - net3s;GDL;304;302;505;color;darkgreen;firstthread;11
+    - net3s;GDL;304;505;105;color;white;lastthread;10
+    - net3s;GDL;304;505;105;color;darkgreen;firstthread;11
+    - net3s;GDL;304;105;302;color;white;lastthread;10
+    - net3s;GDL;304;105;302;color;darkgreen;firstthread;11
+
+    - net3s;GDR;200;202;003;color;blue
+    - net3s;GDR;202;003;005;color;blue
+    - net3s;GDR;400;402;603;color;white
+    - net3s;GDR;402;603;605;color;white
+    - net3s;GDR;505;302;105;color;white;lastthread;10
+    - net3s;GDR;105;505;302;color;white;lastthread;10
+    - net3s;GDR;302;105;505;color;white;lastthread;10
+    - net3s;GDR;505;302;105;color;blue;firstthread;11
+    - net3s;GDR;105;505;302;color;blue;firstthread;11
+    - net3s;GDR;302;105;505;color;blue;firstthread;11
+
+    - net3s;GUR;200;202;003;color;0.6,0,0
+    - net3s;GUR;202;003;005;color;0.6,0,0
+    - net3s;GUR;400;402;603;color;white
+    - net3s;GUR;402;603;605;color;white
+    - net3s;GUR;505;304;302;color;white;lastthread;10
+    - net3s;GUR;505;304;302;color;0.6,0,0;firstthread;11
+    - net3s;GUR;105;304;505;color;white;lastthread;10
+    - net3s;GUR;105;304;505;color;0.6,0,0;firstthread;11
+    - net3s;GUR;302;304;105;color;white;lastthread;10
+    - net3s;GUR;302;304;105;color;0.6,0,0;firstthread;11
+
+    - net3s;GUL;200;202;003;color;white
+    - net3s;GUL;202;003;005;color;white
+    - net3s;GUL;400;402;603;color;orange
+    - net3s;GUL;402;603;605;color;orange
+    - net3s;GUL;505;302;105;color;white;lastthread;10
+    - net3s;GUL;505;302;105;color;orange;firstthread;11
+    - net3s;GUL;304;505;105;color;white
+    - net3s;GUL;304;105;505;color;orange
+  -
+    - pagename; 2019 04 30 | Sacrifices at the altar | color variant 2
+    - background;black
+    - net3;2;5;5;8;5;2;color;white
+    - net3;8;5;5;2;5;8;color;white
+    - net3;2;5;8;5;5;8;color;orange
+    - net3;8;5;2;5;5;2;color;orange
+
+    - net3s;GDL;200;202;003;color;white
+    - net3s;GDL;202;003;005;color;white
+    - net3s;GDL;400;402;603;color;orange
+    - net3s;GDL;402;603;605;color;orange
+    - net3s;GDL;304;302;505;color;white;lastthread;10
+    - net3s;GDL;304;302;505;color;orange;firstthread;11
+    - net3s;GDL;304;505;105;color;white;lastthread;10
+    - net3s;GDL;304;505;105;color;orange;firstthread;11
+    - net3s;GDL;304;105;302;color;white;lastthread;10
+    - net3s;GDL;304;105;302;color;orange;firstthread;11
+
+    - net3s;GDR;200;202;003;color;orange
+    - net3s;GDR;202;003;005;color;orange
+    - net3s;GDR;400;402;603;color;white
+    - net3s;GDR;402;603;605;color;white
+    - net3s;GDR;505;302;105;color;white;lastthread;10
+    - net3s;GDR;105;505;302;color;white;lastthread;10
+    - net3s;GDR;302;105;505;color;white;lastthread;10
+    - net3s;GDR;505;302;105;color;orange;firstthread;11
+    - net3s;GDR;105;505;302;color;orange;firstthread;11
+    - net3s;GDR;302;105;505;color;orange;firstthread;11
+
+    - net3s;GUR;200;202;003;color;orange
+    - net3s;GUR;202;003;005;color;orange
+    - net3s;GUR;400;402;603;color;white
+    - net3s;GUR;402;603;605;color;white
+    - net3s;GUR;505;304;302;color;white;lastthread;10
+    - net3s;GUR;505;304;302;color;orange;firstthread;11
+    - net3s;GUR;105;304;505;color;white;lastthread;10
+    - net3s;GUR;105;304;505;color;orange;firstthread;11
+    - net3s;GUR;302;304;105;color;white;lastthread;10
+    - net3s;GUR;302;304;105;color;orange;firstthread;11
+
+    - net3s;GUL;200;202;003;color;white
+    - net3s;GUL;202;003;005;color;white
+    - net3s;GUL;400;402;603;color;orange
+    - net3s;GUL;402;603;605;color;orange
+    - net3s;GUL;505;302;105;color;white;lastthread;10
+    - net3s;GUL;505;302;105;color;orange;firstthread;11
+    - net3s;GUL;304;505;105;color;white
+    - net3s;GUL;304;105;505;color;orange
