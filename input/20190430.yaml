@@ -1,6 +1,6 @@
 ---
 global:
-    background: gray
+    background: darkgray
     color: green
     fontcolor: white
     threads: 20
@@ -176,7 +176,8 @@ pages:
     - net3;3;4;3;8;5;6;color;red
     - net3;3;8;3;4;1;6;color;red
   -
-    - pagename; 2019 04 30 | Creation of the main 4
+    - pagename; 2019 04 30 | Sacrifices at the altar
+    - background;gray
     - net3;2;5;5;8;5;2;color;white
     - net3;8;5;5;2;5;8;color;white
     - net3;2;5;8;5;5;8;color;black
