@@ -1,6 +1,6 @@
 ---
 global:
-    background: darkgray
+    background: gray
     color: green
     fontcolor: white
     threads: 20
@@ -8,8 +8,12 @@ global:
     lastthread: 20
 #    style: curve
 planes:
-  - g1;grid;10;10
-  - g;connected;0;0;0;1;g1;0;1
+  - g_;grid;10;10
+  - g;connected;0;0;0;1;g_;0;1
+  - GDL;connected;0;3;3;0;g;505;105
+  - GDR;connected;7;0;10;3;g;505;105
+  - GUR;connected;10;7;7;10;g;505;105
+  - GUL;connected;3;10;0;7;g;505;105
 
 pages:
   -
@@ -74,13 +78,14 @@ pages:
     - net3s;g;304;302;105;color;1,0.84,0
   -
     - pagename;2019 04 30 | 6
-    - net3s;g;200;202;003;color;pink
-    - net3s;g;202;003;005;color;pink
-    - net3s;g;400;402;603;color;lightpurple
-    - net3s;g;402;603;605;color;lightpurple
-    - net3s;g;505;302;105;color;lightpurple
-    - net3s;g;304;505;105;color;pink
-    - net3s;g;304;105;505;color;pink
+    - net3s;g;200;202;003;color;orange
+    - net3s;g;202;003;005;color;orange
+    - net3s;g;400;402;603;color;brown
+    - net3s;g;402;603;605;color;brown
+    - net3s;g;505;302;105;color;orange;lastthread;10
+    - net3s;g;505;302;105;color;brown;firstthread;11
+    - net3s;g;304;505;105;color;orange
+    - net3s;g;304;105;505;color;brown
   -
     - background;lightblue
     - pagename;2019 04 30 | 7 | Hope
@@ -170,3 +175,51 @@ pages:
     - net3;1;6;5;6;3;4;color;white
     - net3;3;4;3;8;5;6;color;red
     - net3;3;8;3;4;1;6;color;red
+  -
+    - pagename; 2019 04 30 | Creation of the main 4
+    - net3;2;5;5;8;5;2;color;white
+    - net3;8;5;5;2;5;8;color;white
+    - net3;2;5;8;5;5;8;color;black
+    - net3;8;5;2;5;5;2;color;black
+
+    - net3s;GDL;200;202;003;color;green
+    - net3s;GDL;202;003;005;color;green
+    - net3s;GDL;400;402;603;color;darkgreen
+    - net3s;GDL;402;603;605;color;darkgreen
+    - net3s;GDL;304;302;505;color;green;lastthread;10
+    - net3s;GDL;304;302;505;color;darkgreen;firstthread;11
+    - net3s;GDL;304;505;105;color;green;lastthread;10
+    - net3s;GDL;304;505;105;color;darkgreen;firstthread;11
+    - net3s;GDL;304;105;302;color;green;lastthread;10
+    - net3s;GDL;304;105;302;color;darkgreen;firstthread;11
+
+    - net3s;GDR;200;202;003;color;blue
+    - net3s;GDR;202;003;005;color;blue
+    - net3s;GDR;400;402;603;color;lightblue
+    - net3s;GDR;402;603;605;color;lightblue
+    - net3s;GDR;505;302;105;color;lightblue;lastthread;10
+    - net3s;GDR;505;302;105;color;blue;firstthread;11
+    - net3s;GDR;105;505;302;color;lightblue;lastthread;10
+    - net3s;GDR;105;505;302;color;blue;firstthread;11
+    - net3s;GDR;302;105;505;color;lightblue;lastthread;10
+    - net3s;GDR;302;105;505;color;blue;firstthread;11
+
+    - net3s;GUR;200;202;003;color;0.6,0,0
+    - net3s;GUR;202;003;005;color;0.6,0,0
+    - net3s;GUR;400;402;603;color;1,0.4,0.4
+    - net3s;GUR;402;603;605;color;1,0.4,0.4
+    - net3s;GUR;505;304;302;color;1,0.4,0.4;lastthread;10
+    - net3s;GUR;505;304;302;color;0.6,0,0;firstthread;11
+    - net3s;GUR;105;304;505;color;1,0.4,0.4;lastthread;10
+    - net3s;GUR;105;304;505;color;0.6,0,0;firstthread;11
+    - net3s;GUR;302;304;105;color;1,0.4,0.4;lastthread;10
+    - net3s;GUR;302;304;105;color;0.6,0,0;firstthread;11
+
+    - net3s;GUL;200;202;003;color;orange
+    - net3s;GUL;202;003;005;color;orange
+    - net3s;GUL;400;402;603;color;brown
+    - net3s;GUL;402;603;605;color;brown
+    - net3s;GUL;505;302;105;color;orange;lastthread;10
+    - net3s;GUL;505;302;105;color;brown;firstthread;11
+    - net3s;GUL;304;505;105;color;orange
+    - net3s;GUL;304;105;505;color;brown
