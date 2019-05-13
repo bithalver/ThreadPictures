@@ -199,10 +199,10 @@ pages:
     - net3s;GDR;400;402;603;color;lightblue
     - net3s;GDR;402;603;605;color;lightblue
     - net3s;GDR;505;302;105;color;lightblue;lastthread;10
-    - net3s;GDR;505;302;105;color;blue;firstthread;11
     - net3s;GDR;105;505;302;color;lightblue;lastthread;10
-    - net3s;GDR;105;505;302;color;blue;firstthread;11
     - net3s;GDR;302;105;505;color;lightblue;lastthread;10
+    - net3s;GDR;505;302;105;color;blue;firstthread;11
+    - net3s;GDR;105;505;302;color;blue;firstthread;11
     - net3s;GDR;302;105;505;color;blue;firstthread;11
 
     - net3s;GUR;200;202;003;color;0.6,0,0
