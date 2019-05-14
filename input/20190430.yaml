@@ -14,6 +14,12 @@ planes:
   - GDR;connected;7;0;10;3;g;505;105
   - GUR;connected;10;7;7;10;g;505;105
   - GUL;connected;3;10;0;7;g;505;105
+  - G1;connected;g_;300;g_;101;g_;505;105
+  - G2;connected;g_;3;g_;5;g_;505;105
+  - G3;connected;g_;106;g_;307;g_;505;105
+  - G4;connected;g_;507;g_;706;g_;505;105
+  - G5;connected;g_;805;g_;803;g_;505;105
+  - G6;connected;g_;701;g_;500;g_;505;105
 
 pages:
   -
@@ -322,3 +328,73 @@ pages:
     - net3s;GUL;505;302;105;color;orange;firstthread;11
     - net3s;GUL;304;505;105;color;white
     - net3s;GUL;304;105;505;color;orange
+  -
+    - background;black
+    - pagename;2019 04 30 | Convention of all
+    - net3s;g_;402;203;406;color;white
+    - net3s;g_;406;605;402;color;white
+    - net3s;g_;605;603;203;color;gray
+    - net3s;g_;203;205;605;color;gray
+    - net3s;g_;603;402;205;color;darkgray
+    - net3s;g_;205;406;603;color;darkgray
+
+    - net3s;G1;200;202;003;color;green
+    - net3s;G1;202;003;005;color;green
+    - net3s;G1;400;402;603;color;darkgreen
+    - net3s;G1;402;603;605;color;darkgreen
+    - net3s;G1;304;302;505;color;green;lastthread;10
+    - net3s;G1;304;302;505;color;darkgreen;firstthread;11
+    - net3s;G1;304;505;105;color;green;lastthread;10
+    - net3s;G1;304;505;105;color;darkgreen;firstthread;11
+    - net3s;G1;304;105;302;color;green;lastthread;10
+    - net3s;G1;304;105;302;color;darkgreen;firstthread;11
+
+    - net3s;G2;200;202;003;color;blue
+    - net3s;G2;202;003;005;color;blue
+    - net3s;G2;400;402;603;color;lightblue
+    - net3s;G2;402;603;605;color;lightblue
+    - net3s;G2;505;302;105;color;lightblue;lastthread;10
+    - net3s;G2;105;505;302;color;lightblue;lastthread;10
+    - net3s;G2;302;105;505;color;lightblue;lastthread;10
+    - net3s;G2;505;302;105;color;blue;firstthread;11
+    - net3s;G2;105;505;302;color;blue;firstthread;11
+    - net3s;G2;302;105;505;color;blue;firstthread;11
+
+    - net3s;G3;200;202;003;color;lightpurple
+    - net3s;G3;202;003;005;color;lightpurple
+    - net3s;G3;400;402;603;color;purple
+    - net3s;G3;402;603;605;color;purple
+    - net3s;G3;304;302;505;color;lightpurple;lastthread;10
+    - net3s;G3;304;505;105;color;lightpurple;lastthread;10
+    - net3s;G3;304;105;302;color;lightpurple;lastthread;10
+    - net3s;G3;304;505;302;color;purple;firstthread;11
+    - net3s;G3;304;105;505;color;purple;firstthread;11
+    - net3s;G3;304;302;105;color;purple;firstthread;11
+
+    - net3s;G4;200;202;003;color;0.6,0,0
+    - net3s;G4;202;003;005;color;0.6,0,0
+    - net3s;G4;400;402;603;color;1,0.4,0.4
+    - net3s;G4;402;603;605;color;1,0.4,0.4
+    - net3s;G4;505;304;302;color;1,0.4,0.4;lastthread;10
+    - net3s;G4;505;304;302;color;0.6,0,0;firstthread;11
+    - net3s;G4;105;304;505;color;1,0.4,0.4;lastthread;10
+    - net3s;G4;105;304;505;color;0.6,0,0;firstthread;11
+    - net3s;G4;302;304;105;color;1,0.4,0.4;lastthread;10
+    - net3s;G4;302;304;105;color;0.6,0,0;firstthread;11
+
+    - net3s;G5;200;202;003;color;orange
+    - net3s;G5;202;003;005;color;orange
+    - net3s;G5;400;402;603;color;brown
+    - net3s;G5;402;603;605;color;brown
+    - net3s;G5;505;302;105;color;orange;lastthread;10
+    - net3s;G5;505;302;105;color;brown;firstthread;11
+    - net3s;G5;304;505;105;color;orange
+    - net3s;G5;304;105;505;color;brown
+
+    - net3s;G6;200;202;003;color;yellow
+    - net3s;G6;202;003;005;color;yellow
+    - net3s;G6;400;402;603;color;gray
+    - net3s;G6;402;603;605;color;gray
+    - net3s;G6;304;302;505;color;yellow
+    - net3s;G6;304;302;105;color;yellow
+    - net3s;G6;505;302;105;color;gray
