@@ -1,3 +1,4 @@
+# export TP_leftmargin=0.8;export TP_rightmargin=0.8 ;  perl ThreadPictures.pl -i input/20190430.yaml -o output/20190430_holes.ps -p BW=1 -p style=holes ; ps2pdf output/20190430_holes.ps output/20190430_holes.pdf ; rm output/20190430_holes.ps ; unset TP_leftmargin TP_rightmargin
 ---
 global:
     background: darkgray
