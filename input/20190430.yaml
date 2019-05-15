@@ -21,6 +21,18 @@ planes:
   - G4;connected;g_;507;g_;706;g_;505;105
   - G5;connected;g_;805;g_;803;g_;505;105
   - G6;connected;g_;701;g_;500;g_;505;105
+  - G1a;connected;g_;402;g_;203;g_;505;105
+  - G2a;connected;g_;203;g_;205;g_;505;105
+  - G3a;connected;g_;205;g_;406;g_;505;105
+  - G4a;connected;g_;406;g_;605;g_;505;105
+  - G5a;connected;g_;605;g_;603;g_;505;105
+  - G6a;connected;g_;603;g_;402;g_;505;105
+  - G1b;connected;g_;402;g_;203;g_;105;505
+  - G2b;connected;g_;203;g_;205;g_;105;505
+  - G3b;connected;g_;205;g_;406;g_;105;505
+  - G4b;connected;g_;406;g_;605;g_;105;505
+  - G5b;connected;g_;605;g_;603;g_;105;505
+  - G6b;connected;g_;603;g_;402;g_;105;505
 
 pages:
   -
@@ -399,3 +411,162 @@ pages:
     - net3s;G6;304;302;505;color;yellow
     - net3s;G6;304;302;105;color;yellow
     - net3s;G6;505;302;105;color;gray
+  -
+    - background;black
+    - pagename;2019 04 30 | Convention of all, no sacrifices
+    - net3s;g_;402;203;406;color;white
+    - net3s;g_;406;605;402;color;white
+    - net3s;g_;605;603;203;color;gray
+    - net3s;g_;203;205;605;color;gray
+    - net3s;g_;603;402;205;color;darkgray
+    - net3s;g_;205;406;603;color;darkgray
+
+    - net3s;G1;304;302;505;color;green;lastthread;10
+    - net3s;G1;304;302;505;color;darkgreen;firstthread;11
+    - net3s;G1;304;505;105;color;green;lastthread;10
+    - net3s;G1;304;505;105;color;darkgreen;firstthread;11
+    - net3s;G1;304;105;302;color;green;lastthread;10
+    - net3s;G1;304;105;302;color;darkgreen;firstthread;11
+
+    - net3s;G2;505;302;105;color;lightblue;lastthread;10
+    - net3s;G2;105;505;302;color;lightblue;lastthread;10
+    - net3s;G2;302;105;505;color;lightblue;lastthread;10
+    - net3s;G2;505;302;105;color;blue;firstthread;11
+    - net3s;G2;105;505;302;color;blue;firstthread;11
+    - net3s;G2;302;105;505;color;blue;firstthread;11
+
+    - net3s;G3;304;302;505;color;lightpurple;lastthread;10
+    - net3s;G3;304;505;105;color;lightpurple;lastthread;10
+    - net3s;G3;304;105;302;color;lightpurple;lastthread;10
+    - net3s;G3;304;505;302;color;purple;firstthread;11
+    - net3s;G3;304;105;505;color;purple;firstthread;11
+    - net3s;G3;304;302;105;color;purple;firstthread;11
+
+    - net3s;G4;505;304;302;color;1,0.4,0.4;lastthread;10
+    - net3s;G4;505;304;302;color;0.6,0,0;firstthread;11
+    - net3s;G4;105;304;505;color;1,0.4,0.4;lastthread;10
+    - net3s;G4;105;304;505;color;0.6,0,0;firstthread;11
+    - net3s;G4;302;304;105;color;1,0.4,0.4;lastthread;10
+    - net3s;G4;302;304;105;color;0.6,0,0;firstthread;11
+
+    - net3s;G5;505;302;105;color;orange;lastthread;10
+    - net3s;G5;505;302;105;color;brown;firstthread;11
+    - net3s;G5;304;505;105;color;orange
+    - net3s;G5;304;105;505;color;brown
+
+    - net3s;G6;304;302;505;color;yellow
+    - net3s;G6;304;302;105;color;yellow
+    - net3s;G6;505;302;105;color;gray
+  -
+    - background;black
+    - pagename;2019 04 30 | Convention of all, no sacrifices, close friends
+    - net3s;g_;402;203;406;color;white
+    - net3s;g_;406;605;402;color;white
+    - net3s;g_;605;603;203;color;gray
+    - net3s;g_;203;205;605;color;gray
+    - net3s;g_;603;402;205;color;darkgray
+    - net3s;g_;205;406;603;color;darkgray
+
+    - net3s;G1a;304;302;505;color;green;lastthread;10
+    - net3s;G1a;304;302;505;color;darkgreen;firstthread;11
+    - net3s;G1a;304;505;105;color;green;lastthread;10
+    - net3s;G1a;304;505;105;color;darkgreen;firstthread;11
+    - net3s;G1a;304;105;302;color;green;lastthread;10
+    - net3s;G1a;304;105;302;color;darkgreen;firstthread;11
+
+    - net3s;G2a;505;302;105;color;lightblue;lastthread;10
+    - net3s;G2a;105;505;302;color;lightblue;lastthread;10
+    - net3s;G2a;302;105;505;color;lightblue;lastthread;10
+    - net3s;G2a;505;302;105;color;blue;firstthread;11
+    - net3s;G2a;105;505;302;color;blue;firstthread;11
+    - net3s;G2a;302;105;505;color;blue;firstthread;11
+
+    - net3s;G3a;304;302;505;color;lightpurple;lastthread;10
+    - net3s;G3a;304;505;105;color;lightpurple;lastthread;10
+    - net3s;G3a;304;105;302;color;lightpurple;lastthread;10
+    - net3s;G3a;304;505;302;color;purple;firstthread;11
+    - net3s;G3a;304;105;505;color;purple;firstthread;11
+    - net3s;G3a;304;302;105;color;purple;firstthread;11
+
+    - net3s;G4a;505;304;302;color;1,0.4,0.4;lastthread;10
+    - net3s;G4a;505;304;302;color;0.6,0,0;firstthread;11
+    - net3s;G4a;105;304;505;color;1,0.4,0.4;lastthread;10
+    - net3s;G4a;105;304;505;color;0.6,0,0;firstthread;11
+    - net3s;G4a;302;304;105;color;1,0.4,0.4;lastthread;10
+    - net3s;G4a;302;304;105;color;0.6,0,0;firstthread;11
+
+    - net3s;G5a;505;302;105;color;orange;lastthread;10
+    - net3s;G5a;505;302;105;color;brown;firstthread;11
+    - net3s;G5a;304;505;105;color;orange
+    - net3s;G5a;304;105;505;color;brown
+
+    - net3s;G6a;304;302;505;color;yellow
+    - net3s;G6a;304;302;105;color;yellow
+    - net3s;G6a;505;302;105;color;gray
+    - background;black
+  -
+    - pagename;2019 04 30 | Convention of all, close friends
+    - background;black
+    - net3s;G1b;304;302;505;color;green;lastthread;10
+    - net3s;G1b;304;302;505;color;darkgreen;firstthread;11
+    - net3s;G1b;304;505;105;color;green;lastthread;10
+    - net3s;G1b;304;505;105;color;darkgreen;firstthread;11
+    - net3s;G1b;304;105;302;color;green;lastthread;10
+    - net3s;G1b;304;105;302;color;darkgreen;firstthread;11
+
+    - net3s;G2b;505;302;105;color;lightblue;lastthread;10
+    - net3s;G2b;105;505;302;color;lightblue;lastthread;10
+    - net3s;G2b;302;105;505;color;lightblue;lastthread;10
+    - net3s;G2b;505;302;105;color;blue;firstthread;11
+    - net3s;G2b;105;505;302;color;blue;firstthread;11
+    - net3s;G2b;302;105;505;color;blue;firstthread;11
+
+    - net3s;G3b;304;302;505;color;lightpurple;lastthread;10
+    - net3s;G3b;304;505;105;color;lightpurple;lastthread;10
+    - net3s;G3b;304;105;302;color;lightpurple;lastthread;10
+    - net3s;G3b;304;505;302;color;purple;firstthread;11
+    - net3s;G3b;304;105;505;color;purple;firstthread;11
+    - net3s;G3b;304;302;105;color;purple;firstthread;11
+
+    - net3s;G4b;505;304;302;color;1,0.4,0.4;lastthread;10
+    - net3s;G4b;505;304;302;color;0.6,0,0;firstthread;11
+    - net3s;G4b;105;304;505;color;1,0.4,0.4;lastthread;10
+    - net3s;G4b;105;304;505;color;0.6,0,0;firstthread;11
+    - net3s;G4b;302;304;105;color;1,0.4,0.4;lastthread;10
+    - net3s;G4b;302;304;105;color;0.6,0,0;firstthread;11
+
+    - net3s;G5b;505;302;105;color;orange;lastthread;10
+    - net3s;G5b;505;302;105;color;brown;firstthread;11
+    - net3s;G5b;304;505;105;color;orange
+    - net3s;G5b;304;105;505;color;brown
+
+    - net3s;G6b;304;302;505;color;yellow
+    - net3s;G6b;304;302;105;color;yellow
+    - net3s;G6b;505;302;105;color;gray
+  -
+    - background;black
+    - pagename;2019 04 30 | Colorful altar
+    - net3s;g_;402;203;406;color;green
+    - net3s;g_;406;605;402;color;red
+    - net3s;g_;605;603;203;color;purple
+    - net3s;g_;203;205;605;color;yellow
+    - net3s;g_;603;402;205;color;blue
+    - net3s;g_;205;406;603;color;orange
+  -
+    - background;black
+    - pagename;2019 04 30 | Open altar
+    - net3s;g_;402;203;406;color;white
+    - net3s;g_;406;605;402;color;white
+    - net3s;g_;605;603;203;color;gray
+    - net3s;g_;203;205;605;color;gray
+    - net3s;g_;603;402;205;color;darkgray
+    - net3s;g_;205;406;603;color;darkgray
+  -
+    - background;black
+    - pagename;2019 04 30 | Closed altar
+    - net3s;g_;402;203;605;color;white
+    - net3s;g_;406;605;203;color;white
+    - net3s;g_;605;603;205;color;gray
+    - net3s;g_;203;205;603;color;gray
+    - net3s;g_;603;402;406;color;darkgray
+    - net3s;g_;205;406;402;color;darkgray
