@@ -1,0 +1,62 @@
+---
+global:
+    background: darkgray
+    color: lightgray
+    fontcolor: white
+    threads: 10
+    firstthread: 0
+    lastthread: 10
+#    style: curve
+planes:
+  - r6;regular;6;90
+  - r9;regular;9
+  - r12;regular;12;15
+pages:
+  -
+    - pagename;2019 06 17 | 1
+    - net3s;r6;2;3;1
+    - net3s;r6;5;6;4
+  -
+    - pagename;2019 06 17 | 2
+    - net3s;r9;2;3;1
+    - net3s;r9;5;6;4
+    - net3s;r9;8;9;7
+  -
+    - pagename;2019 06 17 | 3
+    - net3s;r6;2;3;1
+    - net3s;r6;4;5;3
+    - net3s;r6;6;1;5
+  -
+    - pagename;2019 06 17 | 4
+    - net3s;r6;2;3;1
+    - net3s;r6;4;5;3
+    - net3s;r6;6;1;5
+    - net3s;r6;1;3;5
+    - net3s;r6;3;5;1
+    - net3s;r6;5;1;3
+  -
+    - pagename;2019 06 17 | 5
+    - net3s;r6;2;3;1;color;yellow
+    - net3s;r6;4;5;3
+    - net3s;r6;6;1;5
+
+    - net3s;r6;2;1;3
+    - net3s;r6;4;3;5
+    - net3s;r6;6;5;1;color;yellow
+
+    - net3s;r6;1;3;5
+    - net3s;r6;3;5;1
+    - net3s;r6;5;1;3;color;yellow
+  -
+    - pagename;2019 06 17 | 6
+    - net3s;r6;2;3;1
+    - net3s;r6;4;5;3
+    - net3s;r6;6;1;5;color;yellow
+
+    - net3s;r6;2;1;3;color;yellow
+    - net3s;r6;4;3;5
+    - net3s;r6;6;5;1
+
+    - net3s;r6;1;3;5
+    - net3s;r6;3;5;1
+    - net3s;r6;5;1;3;color;yellow
