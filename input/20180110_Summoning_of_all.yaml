@@ -4,8 +4,8 @@
 # oneliner to change old format to new:
 #    cat perl -i -pe 's/net3;([a-zA-Z0-9]+);([0-9]+);([a-zA-Z0-9]+);([0-9]+);([a-zA-Z0-9]+);([0-9]+)/net3s;$1;$2;$4;$6/' input/20180110_Summoning_of_all.yaml
 
-# export TP_leftmargin=0.2 TP_rightmargin=0.2 TP_bottommargin=0.2 TP_topmargin=0.2; perl ThreadPictures.pl -i input/20180110_Summoning_of_all.yaml -o a.ps -p BW=1 -p style=holes ; ps2pdf a.ps a.pdf ; rm a.ps
-# print a.pdf at 198% in poster mode
+# export TP_pageXsize=59.4 TP_pageYsize=41 TP_leftmargin=0 TP_rightmargin=0 TP_bottommargin=0 TP_topmargin=0; perl ThreadPictures.pl -i input/20180110_Summoning_of_all.yaml -o a.ps -p BW=1 -p style=holes ; ps2pdf a.ps a.pdf ; rm a.ps
+# print a.pdf at 100% in poster mode
 
 ---
 global:
