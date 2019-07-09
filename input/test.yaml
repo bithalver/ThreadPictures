@@ -4,6 +4,7 @@ global:
 #    lastthread: 30
     threads: 20
     color: darkgray
+    definecolor: my1color;0.1 0.9 0.1;my2color;0.3 0.7 0.3
 #    style: parallel
 #    style: holes
 #    style: filledcurve
@@ -25,6 +26,11 @@ pages:
   -
     - color;blue
     - pagename;first ever recursive test
+    - recursive;r4r;8;1;2;0;1;style;curve;1,2,3
+  -
+    - background;my1color
+    - color;my2color
+    - pagename;first ever definecolor test
     - recursive;r4r;8;1;2;0;1;style;curve;1,2,3
 #  -
 #    - pagename;first ever recursive test - variant with 2

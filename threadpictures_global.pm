@@ -7,7 +7,7 @@ use Exporter;
 
 our @ISA= qw( Exporter );
 
-our @EXPORT = qw( %TP_GLOBAL %TP_PARAMS @TP_all %TP_planes global_init minmax warnarray warnhash cm min max print_ps_filestart pi my_round colorconvert $opts_input $opts_output $opts_help $opts_help_plane $opts_version $opts_debug);
+our @EXPORT = qw( %TP_GLOBAL %TP_PARAMS @TP_all %TP_planes global_init minmax warnarray warnhash cm min max print_ps_filestart pi my_round colorconvert $opts_input $opts_output $opts_help $opts_help_plane $opts_version $opts_debug %TP_colors);
 
 # %TP_GLOBAL holds all global variables, has lowest priority; collected from 3 "sources":
 #   - built-in defaults
@@ -19,6 +19,8 @@ our %TP_GLOBAL;
 our %TP_PARAMS;
 
 our ($opts_input, $opts_output, $opts_help, $opts_version, $opts_debug)=('stdin','stdout');
+
+our %TP_colors;
 
 sub global_init {
   # page defaults, all in cm
@@ -57,6 +59,32 @@ sub global_init {
 
   # Every page has to have a name in PS; because it does not matter, it is an automatically incremented number
   $TP_GLOBAL{pagenumber} = 1;
+  
+  # color name -> value conversion table
+  %TP_colors=(
+    white => '1 1 1',
+    black => '0 0 0',
+    gray => '0.5 0.5 0.5',
+    lightgray => '0.75 0.75 0.75',
+    darkgray => '0.25 0.25 0.25',
+    lightred => '1 0.5 0.5',
+    red => '1 0 0',
+    darkred => '0.5 0 0',
+    lightgreen => '0 1 0',
+    green => '0 0.8 0',
+    darkgreen => '0 0.4 0',
+    darkblue => '0 0 0.65',
+    blue => '0 0 1',
+    lightblue => '0.12 0.5625 1',
+    yellow => '1 1 0',
+    orange => '1 0.7 0',
+    cyan => '0 1 1',
+    brown => '0.52 0.34 0.137',
+    pink => '1 0.08 0.57',
+    lightpurple => '1 0 1',
+    purple => '0.5 0 0.5',
+  );
+
 }
 
 sub max ($$) { $_[$_[0] < $_[1]] }
@@ -102,30 +130,7 @@ print
 #   - 3 comma-separated number (like '0.1,1,0.9') all numbers should be 0<=x<=1
 #   - 3 space-separated number (like '0.1 1 0.9') all numbers should be 0<=x<=1
 sub colorconvert { my ($input)=@_;
-  my %colornames=(
-    white => '1 1 1',
-    black => '0 0 0',
-    gray => '0.5 0.5 0.5',
-    lightgray => '0.75 0.75 0.75',
-    darkgray => '0.25 0.25 0.25',
-    lightred => '1 0.5 0.5',
-    red => '1 0 0',
-    darkred => '0.5 0 0',
-    lightgreen => '0 1 0',
-    green => '0 0.8 0',
-    darkgreen => '0 0.4 0',
-    darkblue => '0 0 0.65',
-    blue => '0 0 1',
-    lightblue => '0.12 0.5625 1',
-    yellow => '1 1 0',
-    orange => '1 0.7 0',
-    cyan => '0 1 1',
-    brown => '0.52 0.34 0.137',
-    pink => '1 0.08 0.57',
-    lightpurple => '1 0 1',
-    purple => '0.5 0 0.5',
-  );
-  if ($input =~ /^[a-z]/) { $input=$colornames{$input}; }
+  if ($input =~ /^[a-z]/) { $input=$TP_colors{$input}; }
   $input=~s/,/ /g; # we want to write it to PS file like '0.5 0.5 0.5'
   return ($input);
 }

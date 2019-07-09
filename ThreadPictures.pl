@@ -111,6 +111,16 @@ for my $AK (keys %{$config->{global}}) {
 
 if ($TP_PARAMS{BW}) {$TP_GLOBAL{BW}=1;} # Being black'n'white is global: even all pages are BW or not
 
+# process possible definecolor
+
+if ($TP_GLOBAL{definecolor}) {
+  my @my_colors=split(';',$TP_GLOBAL{definecolor}) ;
+  while (@my_colors) { my ($i,$v)=(shift @my_colors, shift @my_colors);  $TP_colors{$i}=$v} }
+
+if ($TP_PARAMS{definecolor}) {
+  my @my_colors=split(';',$TP_PARAMS{definecolor}) ; warnarray (@my_colors);
+}
+
 # read planes data
 if (defined $config->{planes}) {
   for (0 .. @{$config->{planes}}-1) {
