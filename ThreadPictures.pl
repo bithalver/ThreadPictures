@@ -145,7 +145,7 @@ if (defined $config->{planes}) {
     when (/^g/i){ # grid for triangles; two mandatory options: sizeX, sizeY
       my @w=grid3plane(@AP); $TP_planes{$planename}=\@w;
     }
-    when (/^a/i){ # angle: one mandatory option: angle in degrees (one full is 360 degrees)
+    when (/^a/i){ # angle: one mandatory option: angle in degrees (one full circle is 360 degrees)
       my $angle=$AP[0]/180*pi();
       $TP_planes{$planename}=[0,0,1,0,cos($angle),sin($angle)];
     }
