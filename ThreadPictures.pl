@@ -126,7 +126,7 @@ if (defined $config->{planes}) {
   for (0 .. @{$config->{planes}}-1) {
     my @AP=split(';',$config->{planes}[$_]); # @AP like ActualPlane
     my $planename=splice @AP,0,1;
-    if ( $planename !~ /^[a-z]/i ) { warn "Invalid plane name: $planename , skipped\n"; next;} ;
+    if ( $planename !~ /^[a-z]/i ) { warn "Invalid plane name: $planename (it should start with a letter), skipped\n"; next;} ;
     given (splice @AP,0,1) {
     when (/^r/i){ # regular: sides (mandatory), angle (optional), size (optional)
       my @w=basicplane(@AP); $TP_planes{$planename}=\@w;
@@ -134,13 +134,9 @@ if (defined $config->{planes}) {
     when (/^f/i){ # freeform: x1,y1,x2,y2 ... (any number of x,y pairs _and/or_ planeI,J pairs)
       @AP=pointsfromplanesordirect(@AP); $TP_planes{$planename}=\@AP;
     }
-    when (/^c/i){ # connected:
+    when (/^co/i){ # connected:
       # @AP should be : $TOx1,$TOy1,$TOx2,$TOy2,plane-to-connect,nth1,nth2
-      # ($TOx1,$TOy1) and ($TOx2,$TOy2) could be in (planeI,J) format
-      my ($TOx1,$TOy1,$TOx2,$TOy2)=pointsfromplanesordirect(splice @AP,0,4);
-      my @P2C=@{$TP_planes{splice(@AP,0,1)}}; # P2C like plane-to-connect
-      my ($nth1,$nth2)=splice(@AP,0,2);
-      @AP=connectplane2points($TOx1,$TOy1,$TOx2,$TOy2,$nth1,$nth2,@P2C); $TP_planes{$planename}=\@AP;
+      $TP_planes{$planename}=create_connected_plane(@AP);
     }
     when (/^g/i){ # grid for triangles; two mandatory options: sizeX, sizeY
       my @w=grid3plane(@AP); $TP_planes{$planename}=\@w;
@@ -148,6 +144,11 @@ if (defined $config->{planes}) {
     when (/^a/i){ # angle: one mandatory option: angle in degrees (one full circle is 360 degrees)
       my $angle=$AP[0]/180*pi();
       $TP_planes{$planename}=[0,0,1,0,cos($angle),sin($angle)];
+    }
+    when (/^ci/i){ # circle: plane-to-spin (mandatory), nth1 (mandatory), nth2 (mandatory), sides (mandatory), angle (optional), size (optional)
+	  # create a series of planes around a "circle"; names will be planes-to-spin_01 and so on
+	  my @basicplanedata=splice @AP,3;
+	  my @mybasicplane=basicplane(@basicplanedata); # if ($opts_debug) {  warn "circle basic plane:"; warnarray @w; }
     }
     default {warn "plane type '$_' is not (yet) supported (but processing goes on)\n";}
     }

@@ -7,7 +7,7 @@ use 5.10.0;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
-our @EXPORT = qw( basicplane connectplane2points pointsfromplanesordirect grid3plane );
+our @EXPORT = qw( basicplane create_connected_plane connectplane2points pointsfromplanesordirect grid3plane );
 
 # rotates a vector counterclockwise (left) by angle
 # parameter: x,y,angle
@@ -60,6 +60,16 @@ sub basicplane {
   my @plane=(0,0); # The 0th point is the center, always
   for my $side (0 .. $sides-1) { push @plane,rotatevector(@initialvector,$side*$angle); }
   return @plane;
+}
+
+sub create_connected_plane { my @AP=@_;
+  # @AP should be : $TOx1,$TOy1,$TOx2,$TOy2,plane-to-connect,nth1,nth2
+  # ($TOx1,$TOy1) and ($TOx2,$TOy2) could be in (planeI,J) format
+  my ($TOx1,$TOy1,$TOx2,$TOy2)=pointsfromplanesordirect(splice @AP,0,4);
+  my @P2C=@{$TP_planes{splice(@AP,0,1)}}; # P2C like plane-to-connect
+  my ($nth1,$nth2)=splice(@AP,0,2);
+  @AP=connectplane2points($TOx1,$TOy1,$TOx2,$TOy2,$nth1,$nth2,@P2C);
+  return \@AP;
 }
 
 # transform a plane that way it's nth1 point goes to (x1,y1) and it's nth2 point goes to (x2,y2)

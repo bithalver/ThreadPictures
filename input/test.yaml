@@ -17,6 +17,7 @@ planes:
   - r4;regular;4
   - r4r;regular;4;45
   - r5;regular;5;90
+  - A;circle;r3;1;2;6;90;2
 pages:
   -
     - pagename; first ever connected plane test ! now in color !
