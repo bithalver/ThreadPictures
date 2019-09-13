@@ -17,8 +17,18 @@ planes:
   - r4;regular;4
   - r4r;regular;4;45
   - r5;regular;5;90
-  - A;circle;r3;1;2;6;90;2
+  - Circle_test;circle;r3;1;2;6;90;2
 pages:
+  -
+    - pagename; first ever circle test
+    - color;orange
+    - net3s;Circle_test_01;1;2;3
+    - net3s;Circle_test_02;1;2;3
+    - net3s;Circle_test_03;1;2;3
+    - net3s;Circle_test_04;1;2;3
+    - net3s;Circle_test_05;1;2;3
+    - net3s;Circle_test_06;1;2;3
+    - background;gray
   -
     - pagename; first ever connected plane test ! now in color !
     - net3;plane2;1;plane2;2;plane2;3;color;yellow

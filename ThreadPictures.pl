@@ -17,7 +17,7 @@ Getopt::Long::Configure qw(gnu_getopt);
 
 # ---[END] test section
 
-sub VERSION_MESSAGE { warn "ThreadPictures version 1.1\n"; exit 0}
+sub VERSION_MESSAGE { warn "ThreadPictures version 1.2\n"; exit 0}
 
 sub HELP_MESSAGE { # TODO: meaningful help message
   warn "Usage:
@@ -57,6 +57,10 @@ sub HELP_PLANES {
        100   101   102   103
     000   001   002   003
 
+  circle: create a series of planes around a 'circle'
+    paramters: plane-to-spin (mandatory), nth1 (mandatory), nth2 (mandatory), 
+               circle_sides (mandatory), circle_initial_angle (optional), circle_size (optional)
+    freshly created plane names will be planes-to-spin_01 and so on
 ";
   exit 0
 }
@@ -126,7 +130,7 @@ if (defined $config->{planes}) {
   for (0 .. @{$config->{planes}}-1) {
     my @AP=split(';',$config->{planes}[$_]); # @AP like ActualPlane
     my $planename=splice @AP,0,1;
-    if ( $planename !~ /^[a-z]/i ) { warn "Invalid plane name: $planename (it should start with a letter), skipped\n"; next;} ;
+    if ( $planename !~ /^[a-z]/i ) { warn "Invalid plane name: $planename (should start with a letter), skipped\n"; next;} ;
     given (splice @AP,0,1) {
     when (/^r/i){ # regular: sides (mandatory), angle (optional), size (optional)
       my @w=basicplane(@AP); $TP_planes{$planename}=\@w;
@@ -145,10 +149,14 @@ if (defined $config->{planes}) {
       my $angle=$AP[0]/180*pi();
       $TP_planes{$planename}=[0,0,1,0,cos($angle),sin($angle)];
     }
-    when (/^ci/i){ # circle: plane-to-spin (mandatory), nth1 (mandatory), nth2 (mandatory), sides (mandatory), angle (optional), size (optional)
-	  # create a series of planes around a "circle"; names will be planes-to-spin_01 and so on
-	  my @basicplanedata=splice @AP,3;
-	  my @mybasicplane=basicplane(@basicplanedata); # if ($opts_debug) {  warn "circle basic plane:"; warnarray @w; }
+    when (/^ci/i){ # circle: plane-to-spin (mandatory), nth1 (mandatory), nth2 (mandatory), circle_sides (mandatory), circle_initial_angle (optional), circle_size (optional)
+	  # create a series of planes around a "circle"; freshly created plane names will be planes-to-spin_01 and so on
+	  my ($plane_to_spin, $nth1, $nth2)=@AP;
+	  my @basicplaneinfo=splice @AP,3;  my @mybasicplane=basicplane(@basicplaneinfo);
+	  for my $i (1..$basicplaneinfo[0]) { # 1 .. sides
+	    my $i1=( $i ==  $basicplaneinfo[0] ? 1 : $i+1);
+        $TP_planes{sprintf("%s_%02d",$planename,$i)}=create_connected_plane($mybasicplane[$i*2] , $mybasicplane[$i*2+1], $mybasicplane[$i1*2] , $mybasicplane[$i1*2+1], $plane_to_spin, $nth1, $nth2);
+	  }
     }
     default {warn "plane type '$_' is not (yet) supported (but processing goes on)\n";}
     }
