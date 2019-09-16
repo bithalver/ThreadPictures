@@ -5,6 +5,7 @@ global:
     threads: 20
     color: darkgray
     definecolor: my1color;0.1 0.9 0.1;my2color;0.3 0.7 0.3
+    colorgradient: CG;4;orange;blue
 #    style: parallel
 #    style: holes
 #    style: filledcurve
@@ -19,6 +20,14 @@ planes:
   - r5;regular;5;90
   - Circle_test;circle;r3;1;2;6;90;2
 pages:
+  -
+    - pagename;first ever color gradient test
+    - background;lightgray
+    - net3;0;0;1;0;1;1;color;CG_00
+    - net3;1;0;1;1;2;1;color;CG_01
+    - net3;1;1;2;1;2;2;color;CG_02
+    - net3;2;1;2;2;3;2;color;CG_03
+    - net3;2;2;3;2;3;3;color;CG_04
   -
     - pagename; first ever circle test
     - color;orange

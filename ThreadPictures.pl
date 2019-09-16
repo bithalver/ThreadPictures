@@ -93,7 +93,7 @@ close($fh);
 # all output goes to file (specified by '-o' switch) _or_ STDOUT
 if ( $opts_output !~ /stdout/i ) { open $fh, '>', $opts_output or die "can't open output file for writing: $!"; select $fh}
 
-if ($opts_debug) {use Data::Dumper; warn "Full input structure ---[BEGIN]---\n"; warn Dumper($config), "\n"; warn "Full input structure ---[END]---\n";}
+if ($opts_debug) {use Data::Dumper; warn "Full input structure ---[BEGIN]---\n"; warn Dumper($config), "\n"; warn "Full input structure ---[END]---\n\n";}
 
 # command line options processing have to be AFTER global parameters processed
 # priority is (lowest to highest):
@@ -115,14 +115,27 @@ for my $AK (keys %{$config->{global}}) {
 
 if ($TP_PARAMS{BW}) {$TP_GLOBAL{BW}=1;} # Being black'n'white is global: even all pages are BW or not
 
-# process possible definecolor
 
+if ($TP_GLOBAL{colorgradient}) { # define a list of colors creting a gradient
+  my ($namebase,$gradientcount,$startcolor,$endcolor)=split(';',$TP_GLOBAL{colorgradient}) ; # mandatory options: namebase, gradient count, start color, end color
+  my @startcolor=split(' ',colorconvert($startcolor));
+  my @endcolor=  split(' ',colorconvert($endcolor));
+  for (0 .. $gradientcount) {my $i=$_; my $g=$i/$gradientcount;
+    $TP_colors{sprintf("%s_%02d",$namebase,$i)}=sprintf("%f %f %f",weight($startcolor[0],$endcolor[0],$g),weight($startcolor[1],$endcolor[1],$g),weight($startcolor[2],$endcolor[2],$g));
+  }
+}
+
+# process possible definecolor
 if ($TP_GLOBAL{definecolor}) {
   my @my_colors=split(';',$TP_GLOBAL{definecolor}) ;
   while (@my_colors) { my ($i,$v)=(shift @my_colors, shift @my_colors);  $TP_colors{$i}=$v} }
-
 if ($TP_PARAMS{definecolor}) {
-  my @my_colors=split(';',$TP_PARAMS{definecolor}) ; warnarray (@my_colors);
+  my @my_colors=split(';',$TP_PARAMS{definecolor}) ;
+}
+
+if ($opts_debug) {  warn "Colors data (including predefined ones)\n" ;
+  for my $i (keys %TP_colors) { warn "color name: '",$i,"' value: $TP_colors{$i}\n"; }
+  warn "\n";
 }
 
 # read planes data

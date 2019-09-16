@@ -7,7 +7,7 @@ use Exporter;
 
 our @ISA= qw( Exporter );
 
-our @EXPORT = qw( %TP_GLOBAL %TP_PARAMS @TP_all %TP_planes global_init minmax warnarray warnhash cm min max print_ps_filestart pi my_round colorconvert $opts_input $opts_output $opts_help $opts_help_plane $opts_version $opts_debug %TP_colors);
+our @EXPORT = qw( %TP_GLOBAL %TP_PARAMS @TP_all %TP_planes global_init minmax warnarray warnhash cm min max print_ps_filestart pi my_round colorconvert $opts_input $opts_output $opts_help $opts_help_plane $opts_version $opts_debug %TP_colors weight);
 
 # %TP_GLOBAL holds all global variables, has lowest priority; collected from 3 "sources":
 #   - built-in defaults
@@ -40,7 +40,7 @@ sub global_init {
   $TP_GLOBAL{lastthread} = $ENV{TP_lastthread} //= $TP_GLOBAL{threads};
 
   $TP_GLOBAL{style} = $ENV{TP_style} //='normal';
-  if ($opts_debug) {warn 'global style is '.$TP_GLOBAL{style}."\n"}
+  if ($opts_debug) {warn 'global style is '.$TP_GLOBAL{style}."\n\n"}
 
   $TP_GLOBAL{BW} = $ENV{TP_BW} //=0;
 
@@ -112,6 +112,9 @@ sub warnarray { no warnings 'uninitialized'; warn join(';',@_),"\n"; return @_;}
 
 sub warnhash {my (%a)=@_; warn join(", ", map { "$_ => $a{$_}" } keys %a),"\n"; return %a; }
 
+# creates a weighted result between $from (when $weight is 0) and $to (when $weight is 1)
+sub weight {my ($from, $to, $weight)=@_ ; return ((1-$weight)*$from+$weight*$to)}
+
 # Print the mandatory PS file start
 sub print_ps_filestart{
 print
@@ -130,7 +133,7 @@ print
 #   - 3 comma-separated number (like '0.1,1,0.9') all numbers should be 0<=x<=1
 #   - 3 space-separated number (like '0.1 1 0.9') all numbers should be 0<=x<=1
 sub colorconvert { my ($input)=@_;
-  if ($input =~ /^[a-z]/) { $input=$TP_colors{$input}; }
+  if ($input =~ /^[a-zA-Z]/) { $input=$TP_colors{$input}; }
   $input=~s/,/ /g; # we want to write it to PS file like '0.5 0.5 0.5'
   return ($input);
 }
