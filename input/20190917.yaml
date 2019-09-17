@@ -1,0 +1,151 @@
+---
+global:
+    background: darkgray
+    color: lightgray
+    fontcolor: white
+    threads: 10
+    firstthread: 0
+    lastthread: 10
+    style: filledcurve
+    colorgradient: CG;6;yellow;red
+planes:
+  - r4;regular;4
+  - R;circle;r4;0;1;12;90 # second ever plane type 'circle'; this line could be replaced with the next 13 ;
+pages:
+  -
+    - pagename;2019 09 17 | 1
+    - net3s;R_01;1;0;2
+    - net3s;R_02;1;0;2
+    - net3s;R_03;1;0;2
+    - net3s;R_04;1;0;2
+    - net3s;R_05;1;0;2
+    - net3s;R_06;1;0;2
+    - net3s;R_07;1;0;2
+    - net3s;R_08;1;0;2
+    - net3s;R_09;1;0;2
+    - net3s;R_10;1;0;2
+    - net3s;R_11;1;0;2
+    - net3s;R_12;1;0;2
+  -
+    - pagename;2019 09 17 | 2
+    - net3s;R_01;2;0;3
+    - net3s;R_02;2;0;3
+    - net3s;R_03;2;0;3
+    - net3s;R_04;2;0;3
+    - net3s;R_05;2;0;3
+    - net3s;R_06;2;0;3
+    - net3s;R_07;2;0;3
+    - net3s;R_08;2;0;3
+    - net3s;R_09;2;0;3
+    - net3s;R_10;2;0;3
+    - net3s;R_11;2;0;3
+    - net3s;R_12;2;0;3
+  -
+    - pagename;2019 09 17 | 3
+    - net3s;R_01;1;2;3
+    - net3s;R_02;1;2;3
+    - net3s;R_03;1;2;3
+    - net3s;R_04;1;2;3
+    - net3s;R_05;1;2;3
+    - net3s;R_06;1;2;3
+    - net3s;R_07;1;2;3
+    - net3s;R_08;1;2;3
+    - net3s;R_09;1;2;3
+    - net3s;R_10;1;2;3
+    - net3s;R_11;1;2;3
+    - net3s;R_12;1;2;3
+  -
+    - pagename;2019 09 17 | 4
+    - net3s;R_01;3;4;1
+    - net3s;R_02;3;4;1
+    - net3s;R_03;3;4;1
+    - net3s;R_04;3;4;1
+    - net3s;R_05;3;4;1
+    - net3s;R_06;3;4;1
+    - net3s;R_07;3;4;1
+    - net3s;R_08;3;4;1
+    - net3s;R_09;3;4;1
+    - net3s;R_10;3;4;1
+    - net3s;R_11;3;4;1
+    - net3s;R_12;3;4;1
+  -
+    - pagename;2019 09 17 | 5
+    - net3s;R_01;3;4;1;color;yellow
+    - net3s;R_02;3;4;1;color;yellow
+    - net3s;R_03;3;4;1;color;yellow
+    - net3s;R_04;3;4;1;color;yellow
+    - net3s;R_05;3;4;1;color;yellow
+    - net3s;R_06;3;4;1;color;yellow
+    - net3s;R_07;3;4;1;color;yellow
+    - net3s;R_08;3;4;1;color;yellow
+    - net3s;R_09;3;4;1;color;yellow
+    - net3s;R_10;3;4;1;color;yellow
+    - net3s;R_11;3;4;1;color;yellow
+    - net3s;R_12;3;4;1;color;yellow
+
+    - net3s;R_01;1;2;3;color;orange
+    - net3s;R_02;1;2;3;color;orange
+    - net3s;R_03;1;2;3;color;orange
+    - net3s;R_04;1;2;3;color;orange
+    - net3s;R_05;1;2;3;color;orange
+    - net3s;R_06;1;2;3;color;orange
+    - net3s;R_07;1;2;3;color;orange
+    - net3s;R_08;1;2;3;color;orange
+    - net3s;R_09;1;2;3;color;orange
+    - net3s;R_10;1;2;3;color;orange
+    - net3s;R_11;1;2;3;color;orange
+    - net3s;R_12;1;2;3;color;orange
+  -
+    - pagename;2019 09 17 | 6
+    - net3s;R_01;3;4;1;color;CG_00
+    - net3s;R_02;3;4;1;color;CG_01
+    - net3s;R_03;3;4;1;color;CG_02
+    - net3s;R_04;3;4;1;color;CG_03
+    - net3s;R_05;3;4;1;color;CG_04
+    - net3s;R_06;3;4;1;color;CG_05
+    - net3s;R_07;3;4;1;color;CG_06
+    - net3s;R_08;3;4;1;color;CG_05
+    - net3s;R_09;3;4;1;color;CG_04
+    - net3s;R_10;3;4;1;color;CG_03
+    - net3s;R_11;3;4;1;color;CG_02
+    - net3s;R_12;3;4;1;color;CG_01
+
+    - net3s;R_01;1;2;3;color;CG_06
+    - net3s;R_02;1;2;3;color;CG_05
+    - net3s;R_03;1;2;3;color;CG_04
+    - net3s;R_04;1;2;3;color;CG_03
+    - net3s;R_05;1;2;3;color;CG_02
+    - net3s;R_06;1;2;3;color;CG_01
+    - net3s;R_07;1;2;3;color;CG_00
+    - net3s;R_08;1;2;3;color;CG_01
+    - net3s;R_09;1;2;3;color;CG_02
+    - net3s;R_10;1;2;3;color;CG_03
+    - net3s;R_11;1;2;3;color;CG_04
+    - net3s;R_12;1;2;3;color;CG_05
+  -
+    - pagename;2019 09 17 | 7
+    - net3s;R_01;3;4;1;color;CG_00
+    - net3s;R_02;3;4;1;color;CG_01
+    - net3s;R_03;3;4;1;color;CG_02
+    - net3s;R_04;3;4;1;color;CG_03
+    - net3s;R_05;3;4;1;color;CG_04
+    - net3s;R_06;3;4;1;color;CG_05
+    - net3s;R_07;3;4;1;color;CG_06
+    - net3s;R_08;3;4;1;color;CG_05
+    - net3s;R_09;3;4;1;color;CG_04
+    - net3s;R_10;3;4;1;color;CG_03
+    - net3s;R_11;3;4;1;color;CG_02
+    - net3s;R_12;3;4;1;color;CG_01
+
+    - net3s;R_01;1;2;3;color;CG_00
+    - net3s;R_02;1;2;3;color;CG_01
+    - net3s;R_03;1;2;3;color;CG_02
+    - net3s;R_04;1;2;3;color;CG_03
+    - net3s;R_05;1;2;3;color;CG_04
+    - net3s;R_06;1;2;3;color;CG_05
+    - net3s;R_07;1;2;3;color;CG_06
+    - net3s;R_08;1;2;3;color;CG_05
+    - net3s;R_09;1;2;3;color;CG_04
+    - net3s;R_10;1;2;3;color;CG_03
+    - net3s;R_11;1;2;3;color;CG_02
+    - net3s;R_12;1;2;3;color;CG_01
