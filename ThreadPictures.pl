@@ -116,12 +116,14 @@ for my $AK (keys %{$config->{global}}) {
 if ($TP_PARAMS{BW}) {$TP_GLOBAL{BW}=1;} # Being black'n'white is global: even all pages are BW or not
 
 
-if ($TP_GLOBAL{colorgradient}) { # define a list of colors creting a gradient
-  my ($namebase,$gradientcount,$startcolor,$endcolor)=split(';',$TP_GLOBAL{colorgradient}) ; # mandatory options: namebase, gradient count, start color, end color
-  my @startcolor=split(' ',colorconvert($startcolor));
-  my @endcolor=  split(' ',colorconvert($endcolor));
-  for (0 .. $gradientcount) {my $i=$_; my $g=$i/$gradientcount;
-    $TP_colors{sprintf("%s_%02d",$namebase,$i)}=sprintf("%f %f %f",weight($startcolor[0],$endcolor[0],$g),weight($startcolor[1],$endcolor[1],$g),weight($startcolor[2],$endcolor[2],$g));
+if ($TP_GLOBAL{colorgradient}) { # define a list of colors creating a gradient
+  my @A=split(';',$TP_GLOBAL{colorgradient});
+  while (my ($namebase,$gradientcount,$startcolor,$endcolor)=splice @A,0,4 ) { ; # mandatory options: namebase, gradient count, start color, end color
+    my @startcolor=split(' ',colorconvert($startcolor));
+    my @endcolor=  split(' ',colorconvert($endcolor));
+    for (0 .. $gradientcount) {my $i=$_; my $g=$i/$gradientcount;
+      $TP_colors{sprintf("%s_%02d",$namebase,$i)}=sprintf("%f %f %f",weight($startcolor[0],$endcolor[0],$g),weight($startcolor[1],$endcolor[1],$g),weight($startcolor[2],$endcolor[2],$g));
+    }
   }
 }
 
