@@ -12,10 +12,14 @@ global:
     colorarray7: CG7;white;CG_06;CG_05;CG_04;CG_03;CG_02;CG_01;CG_00;CG_01;CG_02;CG_03;CG_04;CG_05
     colorarray14: BW14;white;BW_00;BW_01;BW_02;BW_03;BW_04;BW_05;BW_06;BW_05;BW_04;BW_03;BW_02;BW_01
     # colorarray15: BW15;white;BW_06;BW_05;BW_04;BW_03;BW_02;BW_01;BW_00;BW_01;BW_02;BW_03;BW_04;BW_05
+    colorarray11: CGT;white;CG_00;CG_01;CG_02;CG_03;CG_04;CG_05;CG_06;CG_05;CG_04;CG_03;CG_02;CG_01;CG_00;CG_01;CG_02;CG_03;CG_04;CG_05;CG_06;CG_05;CG_04;CG_03;CG_02;CG_01
 planes:
   - r4;regular;4
-  - R;circle;r4;0;1;12;90
-  - T;circle;r4;0;1;24;90
+  - r3;regular;3
+  - r3a;connected;r4;0;r4;1;r3;1;2
+  - r4a;freeform;r4;0;r4;1;r4;2;r4;3;r4;4;r3a;3
+  - R;circle;r4a;0;1;12;90
+  - T;circle;r4a;0;1;24;90
 pages:
   -
     - pagename;2019 09 17 | 1
@@ -58,175 +62,25 @@ pages:
   -
     - pagename;2019 09 17 | Inverse frozen colorful flower
     - circular;1;12;net3s;R_{};1;0;2;color;BW14_{};style;filledcurve
-    
-    - net3;R_01;0;R_01;1;R_02;2;color;BW_01;style;filledcurve
-    - net3;R_02;0;R_02;1;R_03;2;color;BW_02;style;filledcurve
-    - net3;R_03;0;R_03;1;R_04;2;color;BW_03;style;filledcurve
-    - net3;R_04;0;R_04;1;R_05;2;color;BW_04;style;filledcurve
-    - net3;R_05;0;R_05;1;R_06;2;color;BW_05;style;filledcurve
-    - net3;R_06;0;R_06;1;R_07;2;color;BW_06;style;filledcurve
-    - net3;R_07;0;R_07;1;R_08;2;color;BW_05;style;filledcurve
-    - net3;R_08;0;R_08;1;R_09;2;color;BW_04;style;filledcurve
-    - net3;R_09;0;R_09;1;R_10;2;color;BW_03;style;filledcurve
-    - net3;R_10;0;R_10;1;R_11;2;color;BW_02;style;filledcurve
-    - net3;R_11;0;R_11;1;R_12;2;color;BW_01;style;filledcurve
-    - net3;R_12;0;R_12;1;R_01;2;color;BW_00;style;filledcurve
+    - circular;1;12;net3s;R_{};0;1;5;color;BW14_{};style;filledcurve
   -
     - pagename;2019 09 17 | 11
-    - net3s;T_13;3;4;1;color;CG_00;style;filledcurve
-    - net3s;T_14;3;4;1;color;CG_01;style;filledcurve
-    - net3s;T_15;3;4;1;color;CG_02;style;filledcurve
-    - net3s;T_16;3;4;1;color;CG_03;style;filledcurve
-    - net3s;T_17;3;4;1;color;CG_04;style;filledcurve
-    - net3s;T_18;3;4;1;color;CG_05;style;filledcurve
-    - net3s;T_19;3;4;1;color;CG_06;style;filledcurve
-    - net3s;T_20;3;4;1;color;CG_05;style;filledcurve
-    - net3s;T_21;3;4;1;color;CG_04;style;filledcurve
-    - net3s;T_22;3;4;1;color;CG_03;style;filledcurve
-    - net3s;T_23;3;4;1;color;CG_02;style;filledcurve
-    - net3s;T_24;3;4;1;color;CG_01;style;filledcurve
+    - circular;13;24;net3s;T_{};3;4;1;color;CGT_{};style;filledcurve
+    - circular;13;24;net3s;T_{};1;2;3;color;CGT_{};style;filledcurve
 
-    - net3s;T_13;1;2;3;color;CG_00;style;filledcurve
-    - net3s;T_14;1;2;3;color;CG_01;style;filledcurve
-    - net3s;T_15;1;2;3;color;CG_02;style;filledcurve
-    - net3s;T_16;1;2;3;color;CG_03;style;filledcurve
-    - net3s;T_17;1;2;3;color;CG_04;style;filledcurve
-    - net3s;T_18;1;2;3;color;CG_05;style;filledcurve
-    - net3s;T_19;1;2;3;color;CG_06;style;filledcurve
-    - net3s;T_20;1;2;3;color;CG_05;style;filledcurve
-    - net3s;T_21;1;2;3;color;CG_04;style;filledcurve
-    - net3s;T_22;1;2;3;color;CG_03;style;filledcurve
-    - net3s;T_23;1;2;3;color;CG_02;style;filledcurve
-    - net3s;T_24;1;2;3;color;CG_01;style;filledcurve
-
-    - net3s;T_01;4;1;2;color;CG_00;style;filledcurve
-    - net3s;T_02;4;1;2;color;CG_01;style;filledcurve
-    - net3s;T_03;4;1;2;color;CG_02;style;filledcurve
-    - net3s;T_04;4;1;2;color;CG_03;style;filledcurve
-    - net3s;T_05;4;1;2;color;CG_04;style;filledcurve
-    - net3s;T_06;4;1;2;color;CG_05;style;filledcurve
-    - net3s;T_07;4;1;2;color;CG_06;style;filledcurve
-    - net3s;T_08;4;1;2;color;CG_05;style;filledcurve
-    - net3s;T_09;4;1;2;color;CG_04;style;filledcurve
-    - net3s;T_10;4;1;2;color;CG_03;style;filledcurve
-    - net3s;T_11;4;1;2;color;CG_02;style;filledcurve
-    - net3s;T_12;4;1;2;color;CG_01;style;filledcurve
-
-    - net3s;T_01;2;3;4;color;CG_00;style;filledcurve
-    - net3s;T_02;2;3;4;color;CG_01;style;filledcurve
-    - net3s;T_03;2;3;4;color;CG_02;style;filledcurve
-    - net3s;T_04;2;3;4;color;CG_03;style;filledcurve
-    - net3s;T_05;2;3;4;color;CG_04;style;filledcurve
-    - net3s;T_06;2;3;4;color;CG_05;style;filledcurve
-    - net3s;T_07;2;3;4;color;CG_06;style;filledcurve
-    - net3s;T_08;2;3;4;color;CG_05;style;filledcurve
-    - net3s;T_09;2;3;4;color;CG_04;style;filledcurve
-    - net3s;T_10;2;3;4;color;CG_03;style;filledcurve
-    - net3s;T_11;2;3;4;color;CG_02;style;filledcurve
-    - net3s;T_12;2;3;4;color;CG_01;style;filledcurve
+    - circular;1;12;net3s;T_{};4;1;2;color;CGT_{};style;filledcurve
+    - circular;1;12;net3s;T_{};2;3;4;color;CGT_{};style;filledcurve
   -
     - pagename;2019 09 17 | 12
-    - net3s;T_13;3;4;1;color;CG_00;style;curve
-    - net3s;T_14;3;4;1;color;CG_01;style;curve
-    - net3s;T_15;3;4;1;color;CG_02;style;curve
-    - net3s;T_16;3;4;1;color;CG_03;style;curve
-    - net3s;T_17;3;4;1;color;CG_04;style;curve
-    - net3s;T_18;3;4;1;color;CG_05;style;curve
-    - net3s;T_19;3;4;1;color;CG_06;style;curve
-    - net3s;T_20;3;4;1;color;CG_05;style;curve
-    - net3s;T_21;3;4;1;color;CG_04;style;curve
-    - net3s;T_22;3;4;1;color;CG_03;style;curve
-    - net3s;T_23;3;4;1;color;CG_02;style;curve
-    - net3s;T_24;3;4;1;color;CG_01;style;curve
+    - circular;13;24;net3s;T_{};3;4;1;color;CGT_{};style;curve
+    - circular;13;24;net3s;T_{};1;2;3;color;CGT_{};style;curve
 
-    - net3s;T_13;1;2;3;color;CG_00;style;curve
-    - net3s;T_14;1;2;3;color;CG_01;style;curve
-    - net3s;T_15;1;2;3;color;CG_02;style;curve
-    - net3s;T_16;1;2;3;color;CG_03;style;curve
-    - net3s;T_17;1;2;3;color;CG_04;style;curve
-    - net3s;T_18;1;2;3;color;CG_05;style;curve
-    - net3s;T_19;1;2;3;color;CG_06;style;curve
-    - net3s;T_20;1;2;3;color;CG_05;style;curve
-    - net3s;T_21;1;2;3;color;CG_04;style;curve
-    - net3s;T_22;1;2;3;color;CG_03;style;curve
-    - net3s;T_23;1;2;3;color;CG_02;style;curve
-    - net3s;T_24;1;2;3;color;CG_01;style;curve
-
-    - net3s;T_01;4;1;2;color;CG_00;style;curve
-    - net3s;T_02;4;1;2;color;CG_01;style;curve
-    - net3s;T_03;4;1;2;color;CG_02;style;curve
-    - net3s;T_04;4;1;2;color;CG_03;style;curve
-    - net3s;T_05;4;1;2;color;CG_04;style;curve
-    - net3s;T_06;4;1;2;color;CG_05;style;curve
-    - net3s;T_07;4;1;2;color;CG_06;style;curve
-    - net3s;T_08;4;1;2;color;CG_05;style;curve
-    - net3s;T_09;4;1;2;color;CG_04;style;curve
-    - net3s;T_10;4;1;2;color;CG_03;style;curve
-    - net3s;T_11;4;1;2;color;CG_02;style;curve
-    - net3s;T_12;4;1;2;color;CG_01;style;curve
-
-    - net3s;T_01;2;3;4;color;CG_00;style;curve
-    - net3s;T_02;2;3;4;color;CG_01;style;curve
-    - net3s;T_03;2;3;4;color;CG_02;style;curve
-    - net3s;T_04;2;3;4;color;CG_03;style;curve
-    - net3s;T_05;2;3;4;color;CG_04;style;curve
-    - net3s;T_06;2;3;4;color;CG_05;style;curve
-    - net3s;T_07;2;3;4;color;CG_06;style;curve
-    - net3s;T_08;2;3;4;color;CG_05;style;curve
-    - net3s;T_09;2;3;4;color;CG_04;style;curve
-    - net3s;T_10;2;3;4;color;CG_03;style;curve
-    - net3s;T_11;2;3;4;color;CG_02;style;curve
-    - net3s;T_12;2;3;4;color;CG_01;style;curve
+    - circular;1;12;net3s;T_{};4;1;2;color;CGT_{};style;curve
+    - circular;1;12;net3s;T_{};2;3;4;color;CGT_{};style;curve
   -
     - pagename;2019 09 17 | 13
-    - net3s;T_13;3;4;1;color;CG_00;style;inversefilledcurve
-    - net3s;T_14;3;4;1;color;CG_01;style;inversefilledcurve
-    - net3s;T_15;3;4;1;color;CG_02;style;inversefilledcurve
-    - net3s;T_16;3;4;1;color;CG_03;style;inversefilledcurve
-    - net3s;T_17;3;4;1;color;CG_04;style;inversefilledcurve
-    - net3s;T_18;3;4;1;color;CG_05;style;inversefilledcurve
-    - net3s;T_19;3;4;1;color;CG_06;style;inversefilledcurve
-    - net3s;T_20;3;4;1;color;CG_05;style;inversefilledcurve
-    - net3s;T_21;3;4;1;color;CG_04;style;inversefilledcurve
-    - net3s;T_22;3;4;1;color;CG_03;style;inversefilledcurve
-    - net3s;T_23;3;4;1;color;CG_02;style;inversefilledcurve
-    - net3s;T_24;3;4;1;color;CG_01;style;inversefilledcurve
+    - circular;13;24;net3s;T_{};3;4;1;color;CGT_{};style;inversefilledcurve
+    - circular;13;24;net3s;T_{};1;2;3;color;CGT_{};style;inversefilledcurve
 
-    - net3s;T_13;1;2;3;color;CG_00;style;inversefilledcurve
-    - net3s;T_14;1;2;3;color;CG_01;style;inversefilledcurve
-    - net3s;T_15;1;2;3;color;CG_02;style;inversefilledcurve
-    - net3s;T_16;1;2;3;color;CG_03;style;inversefilledcurve
-    - net3s;T_17;1;2;3;color;CG_04;style;inversefilledcurve
-    - net3s;T_18;1;2;3;color;CG_05;style;inversefilledcurve
-    - net3s;T_19;1;2;3;color;CG_06;style;inversefilledcurve
-    - net3s;T_20;1;2;3;color;CG_05;style;inversefilledcurve
-    - net3s;T_21;1;2;3;color;CG_04;style;inversefilledcurve
-    - net3s;T_22;1;2;3;color;CG_03;style;inversefilledcurve
-    - net3s;T_23;1;2;3;color;CG_02;style;inversefilledcurve
-    - net3s;T_24;1;2;3;color;CG_01;style;inversefilledcurve
-
-    - net3s;T_01;4;1;2;color;CG_00;style;inversefilledcurve
-    - net3s;T_02;4;1;2;color;CG_01;style;inversefilledcurve
-    - net3s;T_03;4;1;2;color;CG_02;style;inversefilledcurve
-    - net3s;T_04;4;1;2;color;CG_03;style;inversefilledcurve
-    - net3s;T_05;4;1;2;color;CG_04;style;inversefilledcurve
-    - net3s;T_06;4;1;2;color;CG_05;style;inversefilledcurve
-    - net3s;T_07;4;1;2;color;CG_06;style;inversefilledcurve
-    - net3s;T_08;4;1;2;color;CG_05;style;inversefilledcurve
-    - net3s;T_09;4;1;2;color;CG_04;style;inversefilledcurve
-    - net3s;T_10;4;1;2;color;CG_03;style;inversefilledcurve
-    - net3s;T_11;4;1;2;color;CG_02;style;inversefilledcurve
-    - net3s;T_12;4;1;2;color;CG_01;style;inversefilledcurve
-
-    - net3s;T_01;2;3;4;color;CG_00;style;inversefilledcurve
-    - net3s;T_02;2;3;4;color;CG_01;style;inversefilledcurve
-    - net3s;T_03;2;3;4;color;CG_02;style;inversefilledcurve
-    - net3s;T_04;2;3;4;color;CG_03;style;inversefilledcurve
-    - net3s;T_05;2;3;4;color;CG_04;style;inversefilledcurve
-    - net3s;T_06;2;3;4;color;CG_05;style;inversefilledcurve
-    - net3s;T_07;2;3;4;color;CG_06;style;inversefilledcurve
-    - net3s;T_08;2;3;4;color;CG_05;style;inversefilledcurve
-    - net3s;T_09;2;3;4;color;CG_04;style;inversefilledcurve
-    - net3s;T_10;2;3;4;color;CG_03;style;inversefilledcurve
-    - net3s;T_11;2;3;4;color;CG_02;style;inversefilledcurve
-    - net3s;T_12;2;3;4;color;CG_01;style;inversefilledcurve
+    - circular;1;12;net3s;T_{};4;1;2;color;CGT_{};style;inversefilledcurve
+    - circular;1;12;net3s;T_{};2;3;4;color;CGT_{};style;inversefilledcurve
