@@ -115,9 +115,9 @@ for my $AK (keys %{$config->{global}}) {
 
 if ($TP_PARAMS{BW}) {$TP_GLOBAL{BW}=1;} # Being black'n'white is global: even all pages are BW or not
 
-
-if ($TP_GLOBAL{colorgradient}) { # define a list of colors creating a gradient
-  my @A=split(';',$TP_GLOBAL{colorgradient});
+# define a list of colors creating a gradient
+for my $k ( grep { $_ =~ /^colorgradient/i } keys %TP_GLOBAL ) {
+  my @A=split(';',$TP_GLOBAL{$k});
   while (my ($namebase,$gradientcount,$startcolor,$endcolor)=splice @A,0,4 ) { ; # mandatory options: namebase, gradient count, start color, end color
     my @startcolor=split(' ',colorconvert($startcolor));
     my @endcolor=  split(' ',colorconvert($endcolor));
@@ -127,13 +127,22 @@ if ($TP_GLOBAL{colorgradient}) { # define a list of colors creating a gradient
   }
 }
 
-# process possible definecolor
-if ($TP_GLOBAL{definecolor}) {
-  my @my_colors=split(';',$TP_GLOBAL{definecolor}) ;
-  while (@my_colors) { my ($i,$v)=(shift @my_colors, shift @my_colors);  $TP_colors{$i}=colorconvert($v)} }
-if ($TP_PARAMS{definecolor}) {
-  my @my_colors=split(';',$TP_PARAMS{definecolor}) ;
+# process possible definecolor(s)
+for my $k ( grep { $_ =~ /^definecolor/i } keys %TP_GLOBAL ) {
+    my @my_colors=split(';',$TP_GLOBAL{$k}) ;
+    while (@my_colors) { my ($i,$v)=(shift @my_colors, shift @my_colors);  $TP_colors{$i}=colorconvert($v)}
 }
+
+# define a list of colors; creates a list like colorgradient but colors are defined freeform
+for my $k ( grep { $_ =~ /^colorarray/i } keys %TP_GLOBAL ) {
+  my @A=split(';',$TP_GLOBAL{$k}); my $i=0; my $namebase=splice @A,0,1 ;
+  while (my $l=splice @A,0,1) { $TP_colors{sprintf("%s_%02d",$namebase,$i++)} = colorconvert($l); }
+}
+
+
+#if ($TP_PARAMS{definecolor}) {
+#  my @my_colors=split(';',$TP_PARAMS{definecolor}) ;
+#}
 
 if ($opts_debug) {  warn "Colors data (including predefined ones)\n" ;
   for my $i (keys %TP_colors) { warn "color name: '",$i,"' value: $TP_colors{$i}\n"; }

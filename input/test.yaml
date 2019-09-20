@@ -4,10 +4,13 @@ global:
 #    lastthread: 30
     threads: 20
     color: darkgray
-    definecolor: my1color;0.1 0.9 0.1;my2color;0.3 0.7 0.3;my3color;white
-    colorgradient: CG;4;orange;blue;T;12;orange;white;B;4;blue;white
-    # previous line tested with vommand:
-    #      ./debug test 2>&1 | grep -E "'CG|'B" | sort
+    definecolor1: my1color;0.1 0.9 0.1;my2color;0.3 0.7 0.3;my3color;white
+    definecolor2: my4color;orange
+    colorgradient1: CG;4;orange;blue;test_cg;2;white;black
+    colorgradient2: T;12;orange;white;B;4;blue;white
+    colorarray1: A;black;gray;white
+    # previous colorgradient lines tested with command:
+    #      ./debug test 2>&1 | grep -E "color name.*_" | sort
 #    style: parallel
 #    style: holes
 #    style: filledcurve
