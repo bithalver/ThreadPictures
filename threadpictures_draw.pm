@@ -223,7 +223,13 @@ sub add_recursive {
 }
 
 sub add_circular {
-  my @AP=@_; # warn "Element circular input: \n"; warnarray @AP; warn "\n";
+  my @E=@_; # warn "Element circular input: \n"; warnarray @E; warn "\n"; # AP like Element
+  my ($from,$to)=splice @E,0,2;
+  for my $i ($from .. $to) { my $I=sprintf("%02d",$i);
+    my @AE; # AE like ActualElement
+	for my $j (0 .. $#E) { push @AE, $E[$j] =~ s/{}/$I/r; } # warnarray @AE;
+	process_element(@AE);
+  }
 }
 
 # To draw one element of the 'net' type

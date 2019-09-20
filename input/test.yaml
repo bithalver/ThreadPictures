@@ -5,7 +5,7 @@ global:
     threads: 20
     color: darkgray
     definecolor: my1color;0.1 0.9 0.1;my2color;0.3 0.7 0.3
-    colorgradient: CG;4;orange;blue;B;4;blue;white
+    colorgradient: CG;4;orange;blue;T;12;orange;white;B;4;blue;white
     # previous line tested with vommand:
     #      ./debug test 2>&1 | grep -E "'CG|'B" | sort
 #    style: parallel
@@ -21,12 +21,28 @@ planes:
   - r4r;regular;4;45
   - r5;regular;5;90
   - Circle_test;circle;r3;1;2;6;90;2
+  - R;circle;r4;0;1;12;90 # needed for testing element "circular"
 pages:
+  -
+    - pagename;first ever circular AND color gradient test
+    - background;lightgray
+    - circular;1;12;net3s;R_{};1;0;2;color;T_{}
   -
     - pagename;first ever circular test
     - background;lightgray
-    - circular;1;2;3;4;5;6
-    - net3;0;0;1;0;1;1 # filler to have something on the page until element circular will be actually made :)
+    - circular;1;12;net3s;R_{};1;0;2 # this line could be replaced with the next 12 ;)
+#    - net3s;R_01;1;0;2
+#    - net3s;R_02;1;0;2
+#    - net3s;R_03;1;0;2
+#    - net3s;R_04;1;0;2
+#    - net3s;R_05;1;0;2
+#    - net3s;R_06;1;0;2
+#    - net3s;R_07;1;0;2
+#    - net3s;R_08;1;0;2
+#    - net3s;R_09;1;0;2
+#    - net3s;R_10;1;0;2
+#    - net3s;R_11;1;0;2
+#    - net3s;R_12;1;0;2
   -
     - pagename;first ever color gradient test
     - background;lightgray
