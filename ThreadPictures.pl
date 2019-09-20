@@ -184,54 +184,10 @@ if (defined $config->{planes}) {
 # process every page
 for (0 .. @{$config->{pages}}-1) {
   for (@{$config->{pages}->[$_]}) {
-    my @AE=split ';'; # AE like ActualElement
-      given (splice @AE,0,1) {
-      when (/^net$|^net4$/i){ # first line (startX startY endX endY) ; second line (startX startY endX endY)
-        add_net4(splice @AE,0,8);
-        while (@AE) {modify_lastelement(shift @AE,shift @AE)}
-      }
-      when (/^net3$/i){ # start X and Y; center X and Y; end X and Y
-        add_net3(splice @AE,0,6);
-        while (@AE) {modify_lastelement(shift @AE,shift @AE)}
-      }
-      when (/^net3s$/i){ # plane; first point, center point, last point
-        add_net3s(splice @AE,0,4);
-        while (@AE) {modify_lastelement(shift @AE,shift @AE)}
-      }
-      when (/^net4s$/i){ # plane; first line start and end point, second  line start and end point
-        add_net4s(splice @AE,0,5);
-        while (@AE) {modify_lastelement(shift @AE,shift @AE)}
-      }
-      when (/^loop$/i){ # plane; point list (0th point will not be used from plane !)
-        add_loop(@AE); # Provide the whole thing
-        # Lot of nets, additional parameters handled inside
-      }
-      when (/^loop4$/i){ # plane; point list (0th point will not be used from plane !)
-        add_loop4(@AE); # Provide the whole thing
-        # Lot of nets, additional parameters handled inside
-      }
-      when (/^pagename$/i){
-        $TP_all[@TP_all] = { type => 'pagename', string => splice(@AE,0,1) }
-      }
-      when (/^background$/i){
-        $TP_all[@TP_all] = { type => 'background', color => splice(@AE,0,1) }
-      }
-      when (/^color$/i){
-        $TP_all[@TP_all] = { type => 'color', color => splice(@AE,0,1) }
-      }
-      when (/^fontcolor$/i){
-        $TP_all[@TP_all] = { type => 'fontcolor', color => splice(@AE,0,1) }
-      }
-      when (/^path$/i){
-        add_path(@AE);
-      }
-      when (/^recursive$/i){
-        add_recursive(@AE);
-      }
-      default {warn "element '$_' is not (yet) supported (but processing goes on)\n";}
-      }
+	process_element(split ';');
   }
   draw_all;
 }
+
 
 # print possible ps footer; none by default

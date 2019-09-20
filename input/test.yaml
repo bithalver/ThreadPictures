@@ -23,6 +23,11 @@ planes:
   - Circle_test;circle;r3;1;2;6;90;2
 pages:
   -
+    - pagename;first ever circular test
+    - background;lightgray
+    - circular;1;2;3;4;5;6
+    - net3;0;0;1;0;1;1 # filler to have something on the page until element circular will be actually made :)
+  -
     - pagename;first ever color gradient test
     - background;lightgray
     - net3;0;0;1;0;1;1;color;CG_00

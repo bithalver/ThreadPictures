@@ -8,7 +8,7 @@ use 5.10.0;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
-our @EXPORT = qw( draw_all add_net4 add_net3 add_net3s add_net4s modify_lastelement add_path add_loop add_loop4 add_recursive);
+our @EXPORT = qw( draw_all process_element);
 
 #To optimize the whole drawing to fit the page, minimum and maximum X and Y has to be determined
 our ($TP_minX,$TP_minY,$TP_maxX,$TP_maxY);
@@ -222,6 +222,10 @@ sub add_recursive {
   }
 }
 
+sub add_circular {
+  my @AP=@_; # warn "Element circular input: \n"; warnarray @AP; warn "\n";
+}
+
 # To draw one element of the 'net' type
 sub draw_net {
   my (%AN)=@_; # AN like Actual Net
@@ -323,9 +327,67 @@ sub draw_net {
   }
 }
 
+# adds/replaces attributes to the last element in TP_all
+sub modify_lastelement {
+  # @adds contains the new key/value pairs (should contain elements in key1,value1,key2,value2,... order)
+  my @adds=@_;
+  while (@adds) { my ($key, $value)=(shift @adds,shift @adds); $TP_all[-1]{$key} = $value ;}
+}
+
+sub process_element {
+  my @AE=@_; # AE like ActualElement
+      given (splice @AE,0,1) {
+      when (/^net$|^net4$/i){ # first line (startX startY endX endY) ; second line (startX startY endX endY)
+        add_net4(splice @AE,0,8);
+        while (@AE) {modify_lastelement(shift @AE,shift @AE)}
+      }
+      when (/^net3$/i){ # start X and Y; center X and Y; end X and Y
+        add_net3(splice @AE,0,6);
+        while (@AE) {modify_lastelement(shift @AE,shift @AE)}
+      }
+      when (/^net3s$/i){ # plane; first point, center point, last point
+        add_net3s(splice @AE,0,4);
+        while (@AE) {modify_lastelement(shift @AE,shift @AE)}
+      }
+      when (/^net4s$/i){ # plane; first line start and end point, second  line start and end point
+        add_net4s(splice @AE,0,5);
+        while (@AE) {modify_lastelement(shift @AE,shift @AE)}
+      }
+      when (/^loop$/i){ # plane; point list (0th point will not be used from plane !)
+        add_loop(@AE); # Provide the whole thing
+        # Lot of nets, additional parameters handled inside
+      }
+      when (/^loop4$/i){ # plane; point list (0th point will not be used from plane !)
+        add_loop4(@AE); # Provide the whole thing
+        # Lot of nets, additional parameters handled inside
+      }
+      when (/^pagename$/i){
+        $TP_all[@TP_all] = { type => 'pagename', string => splice(@AE,0,1) }
+      }
+      when (/^background$/i){
+        $TP_all[@TP_all] = { type => 'background', color => splice(@AE,0,1) }
+      }
+      when (/^color$/i){
+        $TP_all[@TP_all] = { type => 'color', color => splice(@AE,0,1) }
+      }
+      when (/^fontcolor$/i){
+        $TP_all[@TP_all] = { type => 'fontcolor', color => splice(@AE,0,1) }
+      }
+      when (/^path$/i){
+        add_path(@AE);
+      }
+      when (/^recursive$/i){
+        add_recursive(@AE);
+      }
+      when (/^circular$/i){
+        add_circular(@AE);
+      }
+      default {warn "element '$_' is not (yet) supported (but processing goes on)\n";}
+      }
+}
+
 # This is the main function to draw a page from the collected info in @TP_all
 sub draw_all {
-
 
   if ($opts_debug) { warn "\nStarting to draw page $TP_GLOBAL{pagenumber} \n\n"; }
 
@@ -399,7 +461,6 @@ sub draw_all {
     ($TP_GLOBAL{pageYsize}-$TP_GLOBAL{topmargin}-$TP_GLOBAL{bottommargin})/($maxY-$minY))," dup scale");
   say(($maxX+$minX)/2," neg ",($maxY+$minY)/2," neg translate");
 
-
   # iterate over @TP_all to draw every piece
   foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element
     my %ATPAE=%{$ATPAE};
@@ -419,13 +480,6 @@ sub draw_all {
   say "%%EndPage: \"$TP_GLOBAL{pagenumber}\" $TP_GLOBAL{pagenumber}";
 # prepare for the next page:empty @TP_all and increase page number
   undef @TP_all; $TP_GLOBAL{pagenumber}++;
-}
-
-# adds/replaces attributes to the last element in TP_all
-sub modify_lastelement {
-  # @adds contains the new key/value pairs (should contain elements in key1,value1,key2,value2,... order)
-  my @adds=@_;
-  while (@adds) { my ($key, $value)=(shift @adds,shift @adds); $TP_all[-1]{$key} = $value ;}
 }
 
 1;
