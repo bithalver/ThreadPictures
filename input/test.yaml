@@ -4,7 +4,7 @@ global:
 #    lastthread: 30
     threads: 20
     color: darkgray
-    definecolor: my1color;0.1 0.9 0.1;my2color;0.3 0.7 0.3
+    definecolor: my1color;0.1 0.9 0.1;my2color;0.3 0.7 0.3;my3color;white
     colorgradient: CG;4;orange;blue;T;12;orange;white;B;4;blue;white
     # previous line tested with vommand:
     #      ./debug test 2>&1 | grep -E "'CG|'B" | sort
@@ -72,7 +72,7 @@ pages:
     - recursive;r4r;8;1;2;0;1;style;curve;1,2,3
   -
     - background;my1color
-    - color;my2color
+    - color;my3color
     - pagename;first ever definecolor test
     - recursive;r4r;8;1;2;0;1;style;curve;1,2,3
 #  -

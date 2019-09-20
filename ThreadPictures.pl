@@ -130,7 +130,7 @@ if ($TP_GLOBAL{colorgradient}) { # define a list of colors creating a gradient
 # process possible definecolor
 if ($TP_GLOBAL{definecolor}) {
   my @my_colors=split(';',$TP_GLOBAL{definecolor}) ;
-  while (@my_colors) { my ($i,$v)=(shift @my_colors, shift @my_colors);  $TP_colors{$i}=$v} }
+  while (@my_colors) { my ($i,$v)=(shift @my_colors, shift @my_colors);  $TP_colors{$i}=colorconvert($v)} }
 if ($TP_PARAMS{definecolor}) {
   my @my_colors=split(';',$TP_PARAMS{definecolor}) ;
 }
