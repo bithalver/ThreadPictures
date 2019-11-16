@@ -1,0 +1,40 @@
+global:
+    background: darkgray
+    color: lightgray
+    fontcolor: white
+    threads: 20
+    firstthread: 0
+    lastthread: 20
+    style: filledcurve
+    colorgradient: CG2;4;yellow;red;CG3;8;yellow;red;CG5;8;blue;lightgray
+pages:
+  -
+    - pagename;2019 11 16 | 1
+    - net3;-4;0;0;4;4;0;color;white
+    - net3;-4;0;0;-4;4;0;color;black
+    - net3;-2;4;0;6;2;4;color;white
+    - net3;-2;4;0;2;2;4;color;black
+    - net3;-2;-4;0;-2;2;-4;color;white
+    - net3;-2;-4;0;-6;2;-4;color;black
+  -
+    - pagename;2019 11 16 | 2
+    - net3;0;-4;4;0;0;4;color;white
+    - net3;0;-4;-4;0;0;4;color;black
+    - net3;0;2;-2;4;0;6;color;white
+    - net3;0;2;2;4;0;6;color;black
+    - net3;0;-2;-2;-4;0;-6;color;white
+    - net3;0;-2;2;-4;0;-6;color;black
+  -
+    - pagename;2019 11 16 | 3
+    - net3;0;-4;4;0;0;4;color;white
+    - net3;0;-4;-4;0;0;4;color;black
+    - net3;-4;0;0;4;4;0;color;white
+    - net3;-4;0;0;-4;4;0;color;black
+    - net3;0;2;-2;4;0;6;color;white
+    - net3;0;2;2;4;0;6;color;black
+    - net3;0;-2;-2;-4;0;-6;color;white
+    - net3;0;-2;2;-4;0;-6;color;black
+    - net3;-2;4;0;6;2;4;color;white
+    - net3;-2;4;0;2;2;4;color;black
+    - net3;-2;-4;0;-2;2;-4;color;white
+    - net3;-2;-4;0;-6;2;-4;color;black
