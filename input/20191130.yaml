@@ -1,0 +1,37 @@
+---
+global:
+    background: darkgray
+    color: darkgreen
+    fontcolor: white
+    threads: 20
+    firstthread: 0
+    lastthread: 20
+#    style: inversefilledcurve
+planes:
+  - g_;grid;10;10
+  - g;connected;0;0;0;1;g_;0;1
+pages:
+  -
+    - pagename;2019 11 30 | 1
+    - net3s;g;201;002;203;color;green
+    - net3s;g;202;003;204;color;white
+    - net3s;g;203;004;205;color;green
+    - net3s;g;201;402;203;color;white
+    - net3s;g;202;403;204;color;green
+    - net3s;g;203;404;205;color;white
+  -
+    - pagename;2019 11 30 | 2
+    - net3s;g;001;402;003;color;white
+    - net3s;g;002;403;004;color;green
+    - net3s;g;003;404;005;color;white
+    - net3s;g;201;002;203;color;green
+    - net3s;g;202;003;204;color;white
+    - net3s;g;203;004;205;color;green
+  -
+    - pagename;2019 11 30 | 3
+    - net3s;g;201;002;203;color;green
+    - net3s;g;202;003;204;color;white
+    - net3s;g;203;004;205;color;green
+    - net3s;g;001;202;003;color;white
+    - net3s;g;002;203;004;color;green
+    - net3s;g;003;204;005;color;white
