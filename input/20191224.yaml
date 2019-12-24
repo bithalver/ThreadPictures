@@ -1,0 +1,70 @@
+---
+global:
+    background: darkgray
+    color: white
+    fontcolor: white
+    threads: 20
+    firstthread: 0
+    lastthread: 20
+#    style: filledcurve
+planes:
+  - g;grid;16;16
+pages:
+  -
+    - pagename;2019 12 24 | 1
+    - net3s;g;0000;0402;0605;color;white
+    - net3s;g;0402;0605;0209;color;white
+    - net3s;g;0209;0012;0000;color;white
+    - net3s;g;0012;0000;0402;color;white
+
+    - net3s;g;0016;0012;0209;color;lightblue
+    - net3s;g;0012;0209;0810;color;lightblue
+    - net3s;g;0810;1210;0016;color;lightblue
+    - net3s;g;1210;0016;0012;color;lightblue
+
+    - net3s;g;1608;1210;0810;color;orange
+    - net3s;g;1210;0810;0605;color;orange
+    - net3s;g;0605;0402;1608;color;orange
+    - net3s;g;0402;1608;1210;color;orange
+
+    - net3s;g;0209;0605;0810;color;lightblue
+    - net3s;g;0605;0810;0209;color;white
+    - net3s;g;0810;0209;0605;color;orange
+  -
+    - pagename;2019 12 24 | 2
+    - net3s;g;0000;0402;0605;color;white
+    - net3s;g;0402;0605;0209;color;white
+    - net3s;g;0209;0012;0000;color;white
+    - net3s;g;0012;0000;0402;color;white
+
+    - net3s;g;0016;0012;0209;color;lightblue
+    - net3s;g;0012;0209;0810;color;lightblue
+    - net3s;g;0810;1210;0016;color;lightblue
+    - net3s;g;1210;0016;0012;color;lightblue
+
+    - net3s;g;1608;1210;0810;color;orange
+    - net3s;g;1210;0810;0605;color;orange
+    - net3s;g;0605;0402;1608;color;orange
+    - net3s;g;0402;1608;1210;color;orange
+
+    - net3s;g;0308;0606;0709;color;lightblue
+    - net3s;g;0606;0709;0308;color;white
+    - net3s;g;0709;0308;0606;color;orange
+  -
+    - pagename;2019 12 24 | 3
+    - net3s;g;0016;0000;1608;color;white
+    - net3s;g;1608;0016;0000;color;lightblue
+    - net3s;g;0000;1608;0016;color;orange
+
+    - net3s;g;0209;0605;0810;color;lightblue
+    - net3s;g;0605;0810;0209;color;white
+    - net3s;g;0810;0209;0605;color;orange
+  -
+    - pagename;2019 12 24 | 4
+    - net3s;g;0016;0000;1608;color;white
+    - net3s;g;1608;0016;0000;color;lightblue
+    - net3s;g;0000;1608;0016;color;orange
+
+    - net3s;g;0308;0606;0709;color;lightblue
+    - net3s;g;0606;0709;0308;color;white
+    - net3s;g;0709;0308;0606;color;orange
