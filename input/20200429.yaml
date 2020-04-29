@@ -1,0 +1,23 @@
+---
+global:
+    background: darkgray
+    color: lightgray
+    fontcolor: white
+    threads: 24
+    firstthread: 0
+    lastthread: 24
+#    style: filledcurve
+pages:
+  -
+    - pagename;2020 04 29 | 1
+    - net3;2;4;0;0;4;2
+    - net3;2;0;4;4;0;2
+
+    - net3;2;5;0;9;4;7
+    - net3;2;9;4;5;0;7
+
+    - net3;7;4;9;0;5;2
+    - net3;7;0;5;4;9;2
+
+    - net3;7;5;9;9;5;7
+    - net3;7;9;5;5;9;7
