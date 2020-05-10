@@ -1,0 +1,120 @@
+---
+global:
+    background: darkgray
+    color: white
+    fontcolor: white
+    threads: 20
+    firstthread: 0
+    lastthread: 20
+#    style: filledcurve
+planes:
+  - g_;grid;50;50
+  - g;connected;0;0;0;1;g_;0;1
+pages:
+  -
+    - pagename;2020 05 10 | 1
+    - net3s;g;004;008;804
+    - net3s;g;402;804;008
+
+    - net3s;g;008;406;414;color;orange
+    - net3s;g;012;414;406;color;orange
+
+    - net3s;g;414;410;1214
+    - net3s;g;816;1214;410
+
+    - net3s;g;1214;812;1608;color;orange
+    - net3s;g;1612;1608;812;color;orange
+
+    - net3s;g;1608;1210;1202
+    - net3s;g;1604;1202;1210
+
+    - net3s;g;1202;1206;402;color;orange
+    - net3s;g;800;402;1206;color;orange
+  -
+    - pagename;2020 05 10 | 2
+    - net3s;g;008;406;414;color;orange
+    - net3s;g;012;414;406;color;orange
+
+    - net3s;g;1214;812;1608;color;orange
+    - net3s;g;1612;1608;812;color;orange
+
+    - net3s;g;1202;1206;402;color;orange
+    - net3s;g;800;402;1206;color;orange
+    
+    - net3s;g;414;1608;402;color;orange
+    - net3s;g;1608;402;414;color;orange
+    - net3s;g;402;414;1608;color;orange
+  -
+    - pagename;2020 05 10 | 3
+    - net3s;g;004;008;804
+    - net3s;g;402;804;008
+
+    - net3s;g;414;410;1214
+    - net3s;g;816;1214;410
+
+    - net3s;g;1608;1210;1202
+    - net3s;g;1604;1202;1210
+
+    - net3s;g;008;1214;1202
+    - net3s;g;1214;1202;008
+    - net3s;g;1202;008;1214
+  -
+    - pagename;2020 05 10 | 4
+    - net3s;g;004;008;804
+    - net3s;g;402;804;008
+
+    - net3s;g;414;410;1214
+    - net3s;g;816;1214;410
+
+    - net3s;g;1608;1210;1202
+    - net3s;g;1604;1202;1210
+
+    - net3s;g;008;1214;1202
+    - net3s;g;1214;1202;008
+    - net3s;g;1202;008;1214
+
+    - net3s;g;008;406;414;color;orange
+    - net3s;g;012;414;406;color;orange
+
+    - net3s;g;1214;812;1608;color;orange
+    - net3s;g;1612;1608;812;color;orange
+
+    - net3s;g;1202;1206;402;color;orange
+    - net3s;g;800;402;1206;color;orange
+    
+    - net3s;g;414;1608;402;color;orange
+    - net3s;g;1608;402;414;color;orange
+    - net3s;g;402;414;1608;color;orange
+  -
+    - pagename;2020 05 10 | 5
+    - net3s;g;004;008;804
+    - net3s;g;402;804;008
+
+    - net3s;g;008;414;406;color;orange
+    - net3s;g;012;406;414;color;orange
+
+    - net3s;g;414;410;1214
+    - net3s;g;816;1214;410
+
+    - net3s;g;812;1214;1612;color;orange
+    - net3s;g;1608;1612;1214;color;orange
+
+    - net3s;g;1608;1210;1202
+    - net3s;g;1604;1202;1210
+
+    - net3s;g;1206;800;1202;color;orange
+    - net3s;g;402;1202;800;color;orange
+  -
+    - pagename;2020 05 10 | 6
+    - net3s;g;008;414;406;color;orange
+    - net3s;g;012;406;414;color;orange
+
+    - net3s;g;812;1214;1612;color;orange
+    - net3s;g;1608;1612;1214;color;orange
+
+    - net3s;g;1206;800;1202;color;orange
+    - net3s;g;402;1202;800;color;orange
+
+    - net3s;g;414;1608;402;color;orange
+    - net3s;g;1608;402;414;color;orange
+    - net3s;g;402;414;1608;color;orange
