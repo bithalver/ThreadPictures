@@ -8,7 +8,9 @@ global:
     lastthread: 20
 #    style: filledcurve
 planes:
-  - g;grid3;16;16
+  - g;grid3;80;80
+  - g_;connected;0;0;0;1;g;0;1
+
 pages:
   -
     - pagename;2020 03 30 | 1
@@ -253,7 +255,7 @@ pages:
     - net3s;g;202;200;401;color;lightblue
     - net3s;g;200;401;403;color;lightblue
   -
-    - pagename;2020 03 30 | 6c
+    - pagename;2020 03 30 | 6c | If the bird flies
 
     - net3s;g;000;201;203
     - net3s;g;002;000;201
@@ -266,6 +268,48 @@ pages:
 
     - net3s;g;202;200;401;color;lightblue
     - net3s;g;200;401;403;color;lightblue
+  -
+    - pagename;2020 03 30 | 6d
+
+    - net3s;g;600;801;803
+    - net3s;g;602;600;801
+    - net3s;g;1000;801;803
+    - net3s;g;1002;1000;801
+    - net3s;g;802;800;601;color;lightblue
+    - net3s;g;800;601;603;color;lightblue
+    - net3s;g;802;800;1001;color;lightblue
+    - net3s;g;800;1001;1003;color;lightblue
+
+    - net3s;g;1200;1401;1403
+    - net3s;g;1202;1200;1401
+    - net3s;g;1600;1401;1403
+    - net3s;g;1602;1600;1401
+
+    - net3s;g;202;200;001;color;lightblue
+    - net3s;g;200;001;003;color;lightblue
+    - net3s;g;202;200;401;color;lightblue
+    - net3s;g;200;401;403;color;lightblue
+  -
+    - pagename;2020 03 30 | 6e | Entering hyperspace
+
+    - net3s;g_;202;200;001;color;lightblue
+    - net3s;g_;200;001;003;color;lightblue
+    - net3s;g_;202;200;401;color;lightblue
+    - net3s;g_;200;401;403;color;lightblue
+
+    - net3s;g_;004;205;207
+    - net3s;g_;006;004;205
+    - net3s;g_;404;205;207
+    - net3s;g_;406;404;205
+    - net3s;g_;206;204;005;color;lightblue
+    - net3s;g_;204;005;007;color;lightblue
+    - net3s;g_;206;204;405;color;lightblue
+    - net3s;g_;204;405;407;color;lightblue
+
+    - net3s;g_;008;209;211
+    - net3s;g_;010;008;209
+    - net3s;g_;408;209;211
+    - net3s;g_;410;408;209
   -
     - pagename;2020 03 30 | 7
     - net3s;g;001;003;204
