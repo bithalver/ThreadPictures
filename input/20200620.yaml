@@ -1,0 +1,150 @@
+---
+global:
+    background: darkgray
+    color: white
+    fontcolor: white
+    threads: 20
+    firstthread: 0
+    lastthread: 20
+#    style: filledcurve
+planes:
+  - g;grid;50;50
+  - gr;connected;0;0;0;1;g;0;1
+  - g_;connected;2.5;0.866;3;0.866;g;0;1
+  - g1;connected;10;0;11;0;g;0;1
+  - g2;connected;5;9;6;9;g;0;1
+#  - gc;connected;13;6.928;12;6.928;g;0;1
+  - gc;connected;13;7.7;12;7.7;g;0;1
+pages:
+  -
+    - pagename;2020 06 20 | 1
+    - net3s;g;205;203;404;color;white
+    - net3s;g;103;101;302;color;yellow
+    - net3s;g;106;104;305;color;yellow
+    - net3s;g;405;403;604;color;yellow
+    - net3s;g;002;000;201;color;red
+    - net3s;g;008;006;207;color;red
+    - net3s;g;605;603;804;color;red
+  -
+    - pagename;2020 06 20 | 2
+    - net3s;g;205;203;404;color;white
+    - net3s;g;101;103;302;color;yellow
+    - net3s;g;104;106;305;color;yellow
+    - net3s;g;403;405;604;color;yellow
+    - net3s;g;002;000;201;color;red
+    - net3s;g;008;006;207;color;red
+    - net3s;g;605;603;804;color;red
+  -
+    - pagename;2020 06 20 | 3
+    - net3s;g;203;205;404;color;white
+    - net3s;g;101;103;302;color;yellow
+    - net3s;g;104;106;305;color;yellow
+    - net3s;g;403;405;604;color;yellow
+    - net3s;g;000;002;201;color;red
+    - net3s;g;006;008;207;color;red
+    - net3s;g;603;605;804;color;red
+  -
+    - pagename;2020 06 20 | 4
+    - net3s;g;203;205;404;color;yellow
+    - net3s;g;101;103;302;color;yellow
+    - net3s;g;104;106;305;color;yellow
+    - net3s;g;403;405;604;color;yellow
+    - net3s;g;000;002;201;color;yellow
+    - net3s;g;006;008;207;color;yellow
+    - net3s;g;603;605;804;color;yellow
+
+    - net3s;g_;203;205;404;color;red
+    - net3s;g_;101;103;302;color;red
+    - net3s;g_;104;106;305;color;red
+    - net3s;g_;403;405;604;color;red
+    - net3s;g_;000;002;201;color;red
+    - net3s;g_;006;008;207;color;red
+    - net3s;g_;603;605;804;color;red
+  -
+    - pagename;2020 06 20 | 5
+    - net3s;g;205;203;404;color;white
+    - net3s;g;103;101;302;color;yellow
+    - net3s;g;106;104;305;color;yellow
+    - net3s;g;405;403;604;color;yellow
+    - net3s;g;002;000;201;color;red
+    - net3s;g;008;006;207;color;red
+    - net3s;g;605;603;804;color;red
+
+    - net3s;g1;203;205;404;color;white
+    - net3s;g1;101;103;302;color;yellow
+    - net3s;g1;104;106;305;color;yellow
+    - net3s;g1;403;405;604;color;yellow
+    - net3s;g1;000;002;201;color;red
+    - net3s;g1;006;008;207;color;red
+    - net3s;g1;603;605;804;color;red
+
+    - net3s;g2;205;203;404;color;white
+    - net3s;g2;101;103;302;color;yellow
+    - net3s;g2;104;106;305;color;yellow
+    - net3s;g2;403;405;604;color;yellow
+    - net3s;g2;002;000;201;color;red
+    - net3s;g2;008;006;207;color;red
+    - net3s;g2;605;603;804;color;red
+  -
+    - pagename;2020 06 20 | 6
+    - net3s;g;205;203;404;color;white
+    - net3s;g;103;101;302;color;yellow
+    - net3s;g;106;104;305;color;yellow
+    - net3s;g;405;403;604;color;yellow
+    - net3s;g;002;000;201;color;red
+    - net3s;g;008;006;207;color;red
+    - net3s;g;605;603;804;color;red
+
+    - net3s;g1;203;205;404;color;white
+    - net3s;g1;101;103;302;color;yellow
+    - net3s;g1;104;106;305;color;yellow
+    - net3s;g1;403;405;604;color;yellow
+    - net3s;g1;000;002;201;color;red
+    - net3s;g1;006;008;207;color;red
+    - net3s;g1;603;605;804;color;red
+
+    - net3s;gc;205;203;404;color;white
+    - net3s;gc;101;103;302;color;yellow
+    - net3s;gc;104;106;305;color;yellow
+    - net3s;gc;403;405;604;color;yellow
+    - net3s;gc;002;000;201;color;red
+    - net3s;gc;008;006;207;color;red
+    - net3s;gc;605;603;804;color;red
+  -
+    - pagename;2020 06 20 | 7
+    - net3s;g;205;203;404;color;white
+    - net3s;g;103;101;302;color;yellow
+    - net3s;g;106;104;305;color;yellow
+    - net3s;g;405;403;604;color;yellow
+    - net3s;g;002;000;201;color;red
+    - net3s;g;008;006;207;color;red
+    - net3s;g;605;603;804;color;red
+
+    - net3s;g1;203;205;404;color;white
+    - net3s;g1;101;103;302;color;yellow
+    - net3s;g1;104;106;305;color;yellow
+    - net3s;g1;403;405;604;color;yellow
+    - net3s;g1;000;002;201;color;red
+    - net3s;g1;006;008;207;color;red
+    - net3s;g1;603;605;804;color;red
+
+    - net3s;gc;205;203;404;color;white
+    - net3s;gc;101;103;302;color;yellow
+    - net3s;gc;104;106;305;color;yellow
+    - net3s;gc;403;405;604;color;yellow
+    - net3s;gc;002;000;201;color;red
+    - net3s;gc;008;006;207;color;red
+    - net3s;gc;605;603;804;color;red
+
+    - net3s;g2;203;404;205;color;white
+    - net3s;g2;101;302;103;color;yellow
+    - net3s;g2;104;305;106;color;yellow
+    - net3s;g2;403;604;405;color;yellow
+    - net3s;g2;000;201;002;color;red
+    - net3s;g2;006;207;008;color;red
+    - net3s;g2;603;804;605;color;red
+  -
+    - pagename;2020 06 20 | 8
+    - net3s;g;203;205;404;color;white
+    - net3s;g;101;106;604;color;yellow
+    - net3s;g;000;008;804;color;red
