@@ -57,6 +57,10 @@ sub global_init {
   # For the 'param' path, what is the numerical parameter ? Default is zero, which is 'out'
   $TP_GLOBAL{path_param} = $ENV{TP_path_param} //=0;
 
+  # For the 'moon' style, there is a need for 2 numbers for the 2 Bezier-curves
+  $TP_GLOBAL{moon1} = $ENV{TP_moon1} //=0.6666666; # this is the curve the lines draw
+  $TP_GLOBAL{moon2} = $ENV{TP_moon2} //=0.5;
+
   # Every page has to have a name in PS; because it does not matter, it is an automatically incremented number
   $TP_GLOBAL{pagenumber} = 1;
   

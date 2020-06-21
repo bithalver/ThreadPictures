@@ -242,6 +242,10 @@ sub draw_net {
   $AN{style}//=$TP_GLOBAL{style}; if ($TP_PARAMS{style}) {$AN{style}=$TP_PARAMS{style};}
   $AN{color} //= $TP_GLOBAL{color}; if ($TP_PARAMS{color}) {$AN{color}=$TP_PARAMS{color}} ; $AN{color}=colorconvert($AN{color});
   if (! $TP_GLOBAL{BW} and $AN{color} ne $TP_GLOBAL{lastcolor} ) { say "$AN{color} setrgbcolor\n"; $TP_GLOBAL{lastcolor}=$AN{color}}
+
+  $AN{moon1}//=$TP_GLOBAL{moon1}; if ($TP_PARAMS{moon1}) {$AN{moon1}=$TP_PARAMS{moon1};}
+  $AN{moon2}//=$TP_GLOBAL{moon2}; if ($TP_PARAMS{moon2}) {$AN{moon2}=$TP_PARAMS{moon2};}
+
   
   for ($AN{'style'}) { # if ($opts_debug) { warn 'AN style: ',$AN{'style'},"\n";}
   when (/^normal$/i){ # old style was 0
@@ -328,6 +332,19 @@ sub draw_net {
     # This kind is NOT interested in the value of firstthread, lastthread
      foreach my $weight (split(',',/selected/?$AN{'selection'}:$AN{'style'}))
        {draw_line(TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$weight,$AN{threads}),TP_weight($AN{line2iX},$AN{line2iY},$AN{line2oX},$AN{line2oY},$weight,$AN{threads}));}
+  }
+  when (/^moon$/i) { # added on 20200621; based on style 'curve'
+    # This kind is NOT interested in the value of threads, firstthread, lastthread
+    my_moveto($AN{line1oX},$AN{line1oY});
+    my_curveto(
+      TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$AN{moon1},1),
+      TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},$AN{moon1},1),
+      $AN{line2oX},$AN{line2oY});
+    my_curveto(
+      TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},$AN{moon2},1),
+      TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$AN{moon2},1),
+      $AN{line1oX},$AN{line1oY});
+    my_fill; my_stroke;
   }
   default {warn "style $AN{'style'} is not (yet) implemented (but processing goes on)\n";return}
   }

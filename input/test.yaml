@@ -8,6 +8,7 @@ global:
     definecolor2: my4color;orange
     colorgradient1: CG;4;orange;blue;test_cg;2;white;black
     colorgradient2: T;12;orange;white;B;4;blue;white
+    colorgradient3: OB;10;orange;blue # used for testing style 'moon'
     colorarray1: A;black;gray;white
     # previous colorgradient lines tested with command:
     #      ./debug test 2>&1 | grep -E "color name.*_" | sort
@@ -26,6 +27,36 @@ planes:
   - Circle_test;circle;r3;1;2;6;90;2
   - R;circle;r4;0;1;12;90 # needed for testing element "circular"
 pages:
+  -
+    - pagename;first ever moon test
+    - background;darkgray
+    - net3;1;0;0;0;0;1;style;moon;moon1;0.66666;moon2;0.5;color;orange
+    - net3;1;0;0;0;0;1;style;normal;color;white
+  -
+    - pagename;second moon test
+    - background;darkgray
+    - color;orange
+
+    - net3;-1;1;0;0;1;1;style;moon;moon1;0;moon2;0.1;color;OB_01
+    - net3;-1;1;0;0;1;1;style;moon;moon1;0.1;moon2;0.2;color;OB_02
+    - net3;-1;1;0;0;1;1;style;moon;moon1;0.2;moon2;0.3;color;OB_03
+    - net3;-1;1;0;0;1;1;style;moon;moon1;0.3;moon2;0.4;color;OB_04
+    - net3;-1;1;0;0;1;1;style;moon;moon1;0.4;moon2;0.5;color;OB_05
+    - net3;-1;1;0;0;1;1;style;moon;moon1;0.5;moon2;0.6;color;OB_06
+    - net3;-1;1;0;0;1;1;style;moon;moon1;0.6;moon2;0.7;color;OB_07
+    - net3;-1;1;0;0;1;1;style;moon;moon1;0.7;moon2;0.8;color;OB_08
+    - net3;-1;1;0;0;1;1;style;moon;moon1;0.8;moon2;0.9;color;OB_09
+    - net3;-1;1;0;0;1;1;style;moon;moon1;0.9;moon2;1.0;color;OB_10
+
+    - net3;-1;1;0;0;1;1;style;moon;moon1;1.0;moon2;1.1;color;white
+    - net3;-1;1;0;0;1;1;style;moon;moon1;1.1;moon2;1.2;color;black
+    - net3;-1;1;0;0;1;1;style;moon;moon1;1.2;moon2;1.3;color;white
+    - net3;-1;1;0;0;1;1;style;moon;moon1;1.3;moon2;1.4;color;black
+    - net3;-1;1;0;0;1;1;style;moon;moon1;1.4;moon2;1.5;color;white
+    - net3;-1;1;0;0;1;1;style;moon;moon1;1.5;moon2;1.6;color;black
+    - net3;-1;1;0;0;1;1;style;moon;moon1;1.6;moon2;1.7;color;white
+    - net3;-1;1;0;0;1;1;style;moon;moon1;1.7;moon2;1.8;color;black
+    - net3;-1;1;0;0;1;1;style;moon;moon1;1.8;moon2;1.9;color;white
   -
     - pagename;first ever circular AND color gradient test
     - background;darkgray
