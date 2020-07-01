@@ -246,7 +246,6 @@ sub draw_net {
   $AN{moon1}//=$TP_GLOBAL{moon1}; if ($TP_PARAMS{moon1}) {$AN{moon1}=$TP_PARAMS{moon1};}
   $AN{moon2}//=$TP_GLOBAL{moon2}; if ($TP_PARAMS{moon2}) {$AN{moon2}=$TP_PARAMS{moon2};}
 
-  
   for ($AN{'style'}) { # if ($opts_debug) { warn 'AN style: ',$AN{'style'},"\n";}
   when (/^normal$/i){ # old style was 0
     for my $weight ($AN{'firstthread'} .. $AN{'lastthread'}) {
@@ -405,6 +404,9 @@ sub process_element {
       when (/^circular$/i){
         add_circular(@AE);
       }
+      when (/^style$/i){
+        $TP_all[@TP_all] = { type => 'style', string => splice(@AE,0,1) }
+	  }
       default {warn "element '$_' is not (yet) supported (but processing goes on)\n";}
       }
 }
@@ -420,7 +422,9 @@ sub draw_all {
   my $pagename=$TP_GLOBAL{pagename};
   my $bg=$TP_GLOBAL{background};
   # $TMP_color is a hack: if there is a color directive for the page we temporarily overwrite $TP_GLOBAL{color}
-  my $TMP_color=$TP_GLOBAL{color}; my $TMP_fontcolor=$TP_GLOBAL{fontcolor}; 
+  my $TMP_color=$TP_GLOBAL{color}; my $TMP_fontcolor=$TP_GLOBAL{fontcolor};
+  # same hack for style
+  my $TMP_style=$TP_GLOBAL{style};
 
 # find min and max X and Y; get the page name, if set; get background color, if set; get the page-wide color and fontcolor, if set
   my ($minX,$maxX,$minY,$maxY);
@@ -438,6 +442,7 @@ sub draw_all {
       when (/^background$/) { $bg=$ATPAE{color} ;}
       when (/^color$/) { $TP_GLOBAL{color}=$ATPAE{color}}
       when (/^fontcolor$/) { $TP_GLOBAL{fontcolor}=$ATPAE{color}}
+      when (/^style$/) { $TP_GLOBAL{style}=$ATPAE{string}}
     }
   }
   if (defined $TP_PARAMS{pagename}) {$pagename=$TP_PARAMS{pagename};}
@@ -493,10 +498,12 @@ sub draw_all {
       when (/^pagename$/) { }
       when (/^color$/) { }
       when (/^fontcolor$/) { }
+      when (/^style$/) { }
 	  default {warn "type '$_' not implemented (yet); parameters were:\n".join(", ", map { "$_ => $ATPAE{$_}" } keys %ATPAE)."\n" ;}
     } ;
   }
   $TP_GLOBAL{color}=$TMP_color; $TP_GLOBAL{fontcolor}=$TMP_fontcolor;
+  $TP_GLOBAL{style}=$TMP_style;
 
 # page footer
   say "showpage grestore";
