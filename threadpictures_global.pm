@@ -7,7 +7,7 @@ use Exporter;
 
 our @ISA= qw( Exporter );
 
-our @EXPORT = qw( %TP_GLOBAL %TP_PARAMS @TP_all %TP_planes global_init minmax warnarray warnhash cm min max print_ps_filestart pi my_round colorconvert $opts_input $opts_output $opts_help $opts_help_plane $opts_version $opts_debug %TP_colors weight);
+our @EXPORT = qw( %TP_GLOBAL %TP_PARAMS @TP_all %TP_planes global_init minmax warnarray warnhash cm min max print_ps_filestart pi my_round colorconvert $opts_input $opts_output $opts_help $opts_help_plane $opts_version $opts_debug %TP_colors weight my_random_order);
 
 # %TP_GLOBAL holds all global variables, has lowest priority; collected from 3 "sources":
 #   - built-in defaults
@@ -141,6 +141,21 @@ sub colorconvert { my ($input)=@_;
   $input=~s/,/ /g; # we want to write it to PS file like '0.5 0.5 0.5'
   return ($input);
 }
+
+# Returns numbers 1 .. $param in random order
+# input parameter: length
+# return value: array of integers
+sub my_random_order {
+  my $my_length=$_[0];
+  my @RA; # ReturnArray
+  my @LoN = (1..$my_length);
+  for (my $i=$my_length-1;$i>=0;$i--){
+    push(@RA,splice(@LoN,rand($i),1));
+  }
+  return @RA;
+}
+# print my_random_order(4);print "\n";
+# print my_random_order(6);print "\n";
 
 1;
 
