@@ -12,20 +12,20 @@ planes:
 pages:
   -
     - pagename;2020 08 30 | 1 | Fish, recreated
-    - net3s;g;1401;1501;1601;threads;04;lastthread;04;color;white
-    - net3s;g;1301;1502;1701;threads;06;lastthread;06;color;red
-    - net3s;g;1202;1503;1802;threads;08;lastthread;08;color;white
-    - net3s;g;1102;1504;1902;threads;10;lastthread;10;color;red
-    - net3s;g;1003;1505;2003;threads;12;lastthread;12;color;white
-    - net3s;g;0903;1506;2103;threads;14;lastthread;14;color;red
-    - net3s;g;0804;1507;2204;threads;16;lastthread;16;color;white
-    - net3s;g;0704;1508;2304;threads;18;lastthread;18;color;red
-    - net3s;g;0605;1509;2405;threads;20;lastthread;20;color;white
-    - net3s;g;0505;1510;2505;threads;22;lastthread;22;color;red
-    - net3s;g;0406;1511;2606;threads;24;lastthread;24;color;white
-    - net3s;g;0306;1512;2706;threads;26;lastthread;26;color;red
-    - net3s;g;0207;1513;2807;threads;28;lastthread;28;color;white
-    - net3s;g;0107;1514;2907;threads;30;lastthread;30;color;red
+    - net3s;g;1401;1501;1601;threads;02;lastthread;02;color;white
+    - net3s;g;1301;1502;1701;threads;04;lastthread;04;color;red
+    - net3s;g;1202;1503;1802;threads;06;lastthread;06;color;white
+    - net3s;g;1102;1504;1902;threads;08;lastthread;08;color;red
+    - net3s;g;1003;1505;2003;threads;10;lastthread;10;color;white
+    - net3s;g;0903;1506;2103;threads;12;lastthread;12;color;red
+    - net3s;g;0804;1507;2204;threads;14;lastthread;14;color;white
+    - net3s;g;0704;1508;2304;threads;16;lastthread;16;color;red
+    - net3s;g;0605;1509;2405;threads;18;lastthread;18;color;white
+    - net3s;g;0505;1510;2505;threads;20;lastthread;20;color;red
+    - net3s;g;0406;1511;2606;threads;22;lastthread;22;color;white
+    - net3s;g;0306;1512;2706;threads;24;lastthread;24;color;red
+    - net3s;g;0207;1513;2807;threads;26;lastthread;26;color;white
+    - net3s;g;0107;1514;2907;threads;28;lastthread;28;color;red
   -
     - pagename;2020 08 30 | 2
     - net3s;g;1401;1501;1601;threads;04;lastthread;02;color;white
