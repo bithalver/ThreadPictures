@@ -11,29 +11,6 @@ planes:
   - g;grid;50;50
 pages:
   -
-    - pagename;2020 08 30 | 3 | Two-way fish
-    - net3s;g;1401;1501;1601;threads;02;lastthread;02;color;yellow
-    - net3s;g;1301;1502;1701;threads;04;lastthread;04;color;yellow
-    - net3s;g;1202;1503;1802;threads;06;lastthread;06;color;yellow
-    - net3s;g;1102;1504;1902;threads;08;lastthread;08;color;yellow
-    - net3s;g;1003;1505;2003;threads;10;lastthread;10;color;yellow
-    - net3s;g;0903;1506;2103;threads;12;lastthread;12;color;yellow
-    - net3s;g;0804;1507;2204;threads;14;lastthread;14;color;yellow
-    - net3s;g;0704;1508;2304;threads;16;lastthread;16;color;yellow
-    - net3s;g;0605;1509;2405;threads;18;lastthread;18;color;yellow
-    - net3s;g;0505;1510;2505;threads;20;lastthread;20;color;yellow
-    - net3s;g;0406;1511;2606;threads;22;lastthread;22;color;yellow
-    - net3s;g;0306;1512;2706;threads;24;lastthread;24;color;yellow
-    - net3s;g;0207;1513;2807;threads;26;lastthread;26;color;yellow
-    - net3s;g;0107;1514;2907;threads;28;lastthread;28;color;yellow
-    - net3s;g;1500;0107;1514;threads;28;lastthread;28;color;red
-    - net3s;g;1501;0307;1513;threads;24;lastthread;24;color;red
-    - net3s;g;1502;0507;1512;threads;20;lastthread;20;color;red
-    - net3s;g;1503;0707;1511;threads;16;lastthread;16;color;red
-    - net3s;g;1504;0907;1510;threads;12;lastthread;12;color;red
-    - net3s;g;1505;1107;1509;threads;08;lastthread;08;color;red
-    - net3s;g;1506;1307;1508;threads;04;lastthread;04;color;red
-  -
     - pagename;2020 08 30 | 1 | Fish, recreated
     - net3s;g;1401;1501;1601;threads;02;lastthread;02;color;white
     - net3s;g;1301;1502;1701;threads;04;lastthread;04;color;red
@@ -80,3 +57,47 @@ pages:
     - net3s;g;0306;1512;2706;threads;26;firstthread;13;lastthread;26;color;red
     - net3s;g;0207;1513;2807;threads;28;firstthread;14;lastthread;28;color;red
     - net3s;g;0107;1514;2907;threads;30;firstthread;15;lastthread;30;color;red
+  -
+    - pagename;2020 08 30 | 3 | Two-way fish
+    - net3s;g;1401;1501;1601;threads;02;lastthread;02;color;yellow
+    - net3s;g;1301;1502;1701;threads;04;lastthread;04;color;yellow
+    - net3s;g;1202;1503;1802;threads;06;lastthread;06;color;yellow
+    - net3s;g;1102;1504;1902;threads;08;lastthread;08;color;yellow
+    - net3s;g;1003;1505;2003;threads;10;lastthread;10;color;yellow
+    - net3s;g;0903;1506;2103;threads;12;lastthread;12;color;yellow
+    - net3s;g;0804;1507;2204;threads;14;lastthread;14;color;yellow
+    - net3s;g;0704;1508;2304;threads;16;lastthread;16;color;yellow
+    - net3s;g;0605;1509;2405;threads;18;lastthread;18;color;yellow
+    - net3s;g;0505;1510;2505;threads;20;lastthread;20;color;yellow
+    - net3s;g;0406;1511;2606;threads;22;lastthread;22;color;yellow
+    - net3s;g;0306;1512;2706;threads;24;lastthread;24;color;yellow
+    - net3s;g;0207;1513;2807;threads;26;lastthread;26;color;yellow
+    - net3s;g;0107;1514;2907;threads;28;lastthread;28;color;yellow
+    - net3s;g;1500;0107;1514;threads;28;lastthread;28;color;red
+    - net3s;g;1601;0307;1614;threads;26;lastthread;26;color;red
+    - net3s;g;1701;0507;1713;threads;24;lastthread;24;color;red
+    - net3s;g;1802;0707;1813;threads;22;lastthread;22;color;red
+    - net3s;g;1902;0907;1912;threads;20;lastthread;20;color;red
+    - net3s;g;2003;1107;2012;threads;18;lastthread;18;color;red
+    - net3s;g;2103;1307;2111;threads;16;lastthread;16;color;red
+    - net3s;g;2204;1507;2211;threads;14;lastthread;14;color;red
+    - net3s;g;2304;1707;2310;threads;12;lastthread;12;color;red
+    - net3s;g;2405;1907;2410;threads;10;lastthread;10;color;red
+    - net3s;g;2505;2107;2509;threads;08;lastthread;08;color;red
+    - net3s;g;2606;2307;2609;threads;06;lastthread;06;color;red
+    - net3s;g;2706;2507;2708;threads;04;lastthread;04;color;red
+  -
+    - pagename;2020 08 30 | 4 | Fish down
+    - net3s;g;1500;0107;1514;threads;28;lastthread;28;color;red
+    - net3s;g;1601;0307;1614;threads;26;lastthread;26;color;white
+    - net3s;g;1701;0507;1713;threads;24;lastthread;24;color;red
+    - net3s;g;1802;0707;1813;threads;22;lastthread;22;color;white
+    - net3s;g;1902;0907;1912;threads;20;lastthread;20;color;red
+    - net3s;g;2003;1107;2012;threads;18;lastthread;18;color;white
+    - net3s;g;2103;1307;2111;threads;16;lastthread;16;color;red
+    - net3s;g;2204;1507;2211;threads;14;lastthread;14;color;white
+    - net3s;g;2304;1707;2310;threads;12;lastthread;12;color;red
+    - net3s;g;2405;1907;2410;threads;10;lastthread;10;color;white
+    - net3s;g;2505;2107;2509;threads;08;lastthread;08;color;red
+    - net3s;g;2606;2307;2609;threads;06;lastthread;06;color;white
+    - net3s;g;2706;2507;2708;threads;04;lastthread;04;color;red
