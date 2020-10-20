@@ -1,0 +1,42 @@
+---
+global:
+    threads: 20
+    background: black
+    color: green
+    fontcolor: white
+    style: normal
+planes:
+  - p1;regular;3;60
+  - p2;regular;4
+  - p3;connected;p1;1;p1;2;p2;2;1
+  - p4;connected;p1;2;p1;3;p2;2;1
+  - bat;freeform;p1;0;p1;1;p1;2;p1;3;p3;3;p4;4
+  - r24s;regular;24;0;2
+  - r24b;regular;24;0;6
+  - b_1;connected;r24s;1;r24b;1;bat;4;5
+  - b_2;connected;r24s;2;r24b;2;bat;4;5
+  - b_3;connected;r24s;3;r24b;3;bat;4;5
+  - b_24;connected;r24s;24;r24b;24;bat;4;5
+  - b_23;connected;r24s;23;r24b;23;bat;4;5
+pages:
+  -
+    - pagename;Vass Gabor es neje ajandeka
+    - net3s;b_1;2;3;5;color;darkgreen
+    - net3s;b_1;1;2;3
+    - net3s;b_1;2;1;4;color;darkgreen
+    - net3s;b_2;2;1;4;color;darkgreen
+    - net3s;b_2;3;2;1;lastthread;10
+    - net3s;b_2;3;2;1;color;darkgreen;firstthread;11
+    - net3s;b_2;5;3;2;color;darkgreen;lastthread;10
+    - net3s;b_2;5;3;2;firstthread;11
+    - net3s;b_3;2;1;4;color;darkgreen
+    - net3s;b_3;1;2;3;color;darkgreen
+    - net3s;b_3;2;3;5
+    - net3s;b_23;2;1;4
+    - net3s;b_23;1;2;3;color;darkgreen
+    - net3s;b_23;2;3;5;color;darkgreen
+    - net3s;b_24;2;1;4;lastthread;10
+    - net3s;b_24;2;1;4;color;darkgreen;firstthread;11
+    - net3s;b_24;3;2;1;color;darkgreen;lastthread;10
+    - net3s;b_24;3;2;1;firstthread;11
+    - net3s;b_24;2;3;5;color;darkgreen
