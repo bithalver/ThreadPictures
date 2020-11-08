@@ -26,7 +26,12 @@ planes:
   - r5;regular;5;90
   - Circle_test;circle;r3;1;2;6;90;2
   - R;circle;r4;0;1;12;90 # needed for testing element "circular"
+  - grid4;4;10;10
 pages:
+  -
+    - pagename;first ever 4grid test
+    - background;lightgray
+    - net3s;grid4;010;1010;1000
   -
     - pagename;first ever moon test
     - background;darkgray

@@ -7,7 +7,7 @@ use 5.10.0;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
-our @EXPORT = qw( basicplane create_connected_plane connectplane2points pointsfromplanesordirect grid3plane );
+our @EXPORT = qw( basicplane create_connected_plane connectplane2points pointsfromplanesordirect grid3plane grid4plane );
 
 # rotates a vector counterclockwise (left) by angle
 # parameter: x,y,angle
@@ -114,9 +114,19 @@ sub grid3plane { my ($sizeX,$sizeY)=@_;
   my $s3=sqrt(3)/2;
   for my $Y (0..$sizeY) {
     for my $X (0..$sizeX) {
-      # warn "$Y $X\n";
       $output[($Y*100+$X)*2]=$X+($Y&1 ? 0.5 : 0);
       $output[($Y*100+$X)*2+1]=$Y*$s3;
+    }
+  }
+  return @output;
+}
+
+sub grid4plane { my ($sizeX,$sizeY)=@_;
+  my @output;
+  for my $Y (0..$sizeY) {
+    for my $X (0..$sizeX) {
+      $output[($Y*100+$X)*2]=$X;
+      $output[($Y*100+$X)*2+1]=$Y;
     }
   }
   return @output;
