@@ -1,0 +1,96 @@
+---
+global:
+    threads: 10
+    lastthread: 10
+    background: black
+    color: lightgray
+    fontcolor: white
+    style: normal
+planes:
+  - nBL;4squares;8;8
+  - nUL;connected;0;8;4;4;nBL;000;404
+  - nBR;connected;8;0;4;4;nBL;000;404
+  - nUR;connected;8;8;4;4;nBL;000;404
+  - n2BL;connected;10;0;11;0;nBL;000;001
+  - n2UR;connected;18;8;14;4;nUR;000;404
+  - n3BL;connected;0;10;4;14;nBL;000;404
+  - n3UR;connected;8;18;4;14;nBL;000;404
+  - n4BL;connected;10;10;14;14;nBL;000;404
+  - n4UR;connected;18;18;14;14;nBL;000;404
+pages:
+  -
+    - pagename;2020 11 08 | 1
+    - net3s;nBL;100;101;001
+    - net3s;nBL;200;202;002
+    - net3s;nBL;300;303;003
+    - net3s;nBL;400;404;004
+
+    - net3s;nBR;100;101;001
+    - net3s;nBR;200;202;002
+    - net3s;nBR;300;303;003
+    - net3s;nBR;400;404;004
+
+    - net3s;nUL;100;101;001
+    - net3s;nUL;200;202;002
+    - net3s;nUL;300;303;003
+    - net3s;nUL;400;404;004
+
+    - net3s;nUR;100;101;001
+    - net3s;nUR;200;202;002
+    - net3s;nUR;300;303;003
+    - net3s;nUR;400;404;004
+  -
+    - pagename;2020 11 08 | 2
+    - net3s;nBL;100;101;001
+    - net3s;nBL;200;202;002
+    - net3s;nBL;300;303;003
+    - net3s;nBL;400;404;004
+
+    - net3s;nBR;100;101;001
+    - net3s;nBR;200;202;002
+    - net3s;nBR;300;303;003
+    - net3s;nBR;400;404;004
+
+    - net3s;nUL;100;101;001
+    - net3s;nUL;200;202;002
+    - net3s;nUL;300;303;003
+    - net3s;nUL;400;404;004
+
+    - net3s;nUR;100;101;001
+    - net3s;nUR;200;202;002
+    - net3s;nUR;300;303;003
+    - net3s;nUR;400;404;004
+    
+    - net3s;n2BL;400;404;004
+    - net3s;n2UR;400;404;004
+    
+    - net3s;n3BL;400;404;004
+    - net3s;n3UR;400;404;004
+    
+    - net3s;n4BL;400;404;004
+    - net3s;n4UR;400;404;004
+  -
+    - pagename;2020 11 08 | 3
+    - net3s;nBL;100;101;001;color;orange;threads;20;lastthread;20
+    - net3s;nBL;200;202;002;color;orange;threads;20;lastthread;20
+    - net3s;nBL;300;303;003;color;orange;threads;20;lastthread;20
+    - net3s;nBL;400;404;004;color;orange;threads;20;lastthread;20
+    - net3s;nBL;500;505;005;color;orange;threads;20;lastthread;20
+    - net3s;nBL;600;606;006;color;orange;threads;20;lastthread;20
+    - net3s;nBL;700;707;007;color;orange;threads;20;lastthread;20
+    - net3s;nBL;800;808;008;color;orange;threads;20;lastthread;20
+
+    - net3s;nBR;100;101;001
+    - net3s;nBR;200;202;002
+    - net3s;nBR;300;303;003
+    - net3s;nBR;400;404;004
+
+    - net3s;nUL;100;101;001
+    - net3s;nUL;200;202;002
+    - net3s;nUL;300;303;003
+    - net3s;nUL;400;404;004
+
+    - net3s;nUR;100;101;001
+    - net3s;nUR;200;202;002
+    - net3s;nUR;300;303;003
+    - net3s;nUR;400;404;004
