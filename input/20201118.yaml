@@ -1,0 +1,102 @@
+---
+global:
+    threads: 10
+    lastthread: 10
+    background: black
+    color: lightgray
+    fontcolor: white
+    style: normal
+planes:
+  - n;4squares;8;8
+  - n00;connected;0;0;8;8;n;000;808
+  - n10;connected;0;10;8;18;n;000;808
+  - n20;connected;0;20;8;28;n;000;808
+  - n01;connected;10;0;18;8;n;000;808
+  - n11;connected;10;10;18;18;n;000;808
+  - n21;connected;10;20;18;28;n;000;808
+  - n02;connected;20;0;28;8;n;000;808
+  - n12;connected;20;10;28;18;n;000;808
+  - n22;connected;20;20;28;28;n;000;808
+pages:
+  -
+    - pagename;2020 11 18 | Elvagyodas | Longing
+    - net3s;n00;004;404;408
+    - net3s;n00;408;404;804
+    - net3s;n00;804;404;400
+    - net3s;n00;400;404;004
+    - net3s;n00;300;303;003;color;red
+    - net3s;n00;005;305;308;color;red
+    - net3s;n00;508;505;805;color;red
+    - net3s;n00;803;503;500;color;red
+
+    - net3s;n10;004;504;408
+    - net3s;n10;408;504;804
+    - net3s;n10;804;504;400
+    - net3s;n10;400;504;004
+    - net3s;n10;300;403;003;color;red
+    - net3s;n10;005;405;308;color;red
+    - net3s;n10;508;605;805;color;red
+    - net3s;n10;803;603;500;color;red
+
+    - net3s;n20;004;604;408
+    - net3s;n20;408;604;804
+    - net3s;n20;804;604;400
+    - net3s;n20;400;604;004
+    - net3s;n20;300;503;003;color;red
+    - net3s;n20;005;505;308;color;red
+    - net3s;n20;508;705;805;color;red
+    - net3s;n20;803;703;500;color;red
+
+    - net3s;n01;004;405;408
+    - net3s;n01;408;405;804
+    - net3s;n01;804;405;400
+    - net3s;n01;400;405;004
+    - net3s;n01;300;304;003;color;red
+    - net3s;n01;005;306;308;color;red
+    - net3s;n01;508;506;805;color;red
+    - net3s;n01;803;504;500;color;red
+
+    - net3s;n11;004;505;408
+    - net3s;n11;408;505;804
+    - net3s;n11;804;505;400
+    - net3s;n11;400;505;004
+    - net3s;n11;300;404;003;color;red
+    - net3s;n11;005;406;308;color;red
+    - net3s;n11;508;606;805;color;red
+    - net3s;n11;803;604;500;color;red
+
+    - net3s;n21;004;605;408
+    - net3s;n21;408;605;804
+    - net3s;n21;804;605;400
+    - net3s;n21;400;605;004
+    - net3s;n21;300;504;003;color;red
+    - net3s;n21;005;506;308;color;red
+    - net3s;n21;508;706;805;color;red
+    - net3s;n21;803;704;500;color;red
+
+    - net3s;n02;004;406;408
+    - net3s;n02;408;406;804
+    - net3s;n02;804;406;400
+    - net3s;n02;400;406;004
+    - net3s;n02;300;305;003;color;red
+    - net3s;n02;005;307;308;color;red
+    - net3s;n02;508;507;805;color;red
+    - net3s;n02;803;505;500;color;red
+
+    - net3s;n12;004;506;408
+    - net3s;n12;408;506;804
+    - net3s;n12;804;506;400
+    - net3s;n12;400;506;004
+    - net3s;n12;300;405;003;color;red
+    - net3s;n12;005;407;308;color;red
+    - net3s;n12;508;607;805;color;red
+    - net3s;n12;803;605;500;color;red
+
+    - net3s;n22;004;606;408
+    - net3s;n22;408;606;804
+    - net3s;n22;804;606;400
+    - net3s;n22;400;606;004
+    - net3s;n22;300;505;003;color;red
+    - net3s;n22;005;507;308;color;red
+    - net3s;n22;508;707;805;color;red
+    - net3s;n22;803;705;500;color;red
