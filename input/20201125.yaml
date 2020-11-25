@@ -1,0 +1,103 @@
+---
+global:
+    background: darkgray
+    color: lightgray
+    fontcolor: lightgray
+    threads: 10
+    firstthread: 0
+    lastthread: 10
+#    style: filledcurve
+planes:
+  - g;grid;50;50
+  - a1;angle;120
+  - a2;angle;130
+  - a3;angle;140
+  - a4;angle;150
+  - a5;angle;160
+  - g1;connected;a1;0;a1;2;g;000;001
+  - g2;connected;a2;0;a2;2;g;000;001
+  - g3;connected;a3;0;a3;2;g;000;001
+  - g4;connected;a3;0;a4;2;g;000;001
+  - g5;connected;a3;0;a5;2;g;000;001
+  - gA;connected;a1;0;a1;2;g;101;201
+  - gB;connected;a2;0;a2;2;g;101;201
+  - gC;connected;a3;0;a3;2;g;101;201
+  - gD;connected;a3;0;a4;2;g;101;201
+  - gE;connected;a3;0;a5;2;g;101;201
+pages:
+  -
+    - pagename;2020 11 25 | 1 | Christmas tree top view
+#    - net3s;g;001;101;100;color;black
+    - net3s;g5;001;101;100;color;white;style;filledcurve
+    - net3s;g5;100;101;201;color;white
+    - net3s;g5;201;101;202;color;white;style;filledcurve
+    - net3s;g5;202;101;102;color;white
+    - net3s;g5;102;101;002;color;white;style;filledcurve
+    - net3s;g5;002;101;001;color;white
+
+    - net3s;g4;001;101;100;color;green
+    - net3s;g4;100;101;201;color;green;style;filledcurve
+    - net3s;g4;201;101;202;color;green
+    - net3s;g4;202;101;102;color;green;style;filledcurve
+    - net3s;g4;102;101;002;color;green
+    - net3s;g4;002;101;001;color;green;style;filledcurve
+
+    - net3s;g3;001;101;100;color;black;style;filledcurve
+    - net3s;g3;100;101;201;color;black
+    - net3s;g3;201;101;202;color;black;style;filledcurve
+    - net3s;g3;202;101;102;color;black
+    - net3s;g3;102;101;002;color;black;style;filledcurve
+    - net3s;g3;002;101;001;color;black
+
+    - net3s;g2;001;101;100;color;green
+    - net3s;g2;100;101;201;color;green;style;filledcurve
+    - net3s;g2;201;101;202;color;green
+    - net3s;g2;202;101;102;color;green;style;filledcurve
+    - net3s;g2;102;101;002;color;green
+    - net3s;g2;002;101;001;color;green;style;filledcurve
+
+    - net3s;g1;001;101;100;color;white;style;filledcurve
+    - net3s;g1;100;101;201;color;white
+    - net3s;g1;201;101;202;color;white;style;filledcurve
+    - net3s;g1;202;101;102;color;white
+    - net3s;g1;102;101;002;color;white;style;filledcurve
+    - net3s;g1;002;101;001;color;white
+  -
+    - pagename;2020 11 25 | 2 | Christmas tree top view
+#    - net3s;g;001;101;100;color;black
+    - net3s;gE;001;101;100;color;white;style;filledcurve
+    - net3s;gE;100;101;201;color;white
+    - net3s;gE;201;101;202;color;white;style;filledcurve
+    - net3s;gE;202;101;102;color;white
+    - net3s;gE;102;101;002;color;white;style;filledcurve
+    - net3s;gE;002;101;001;color;white
+
+    - net3s;gD;001;101;100;color;green
+    - net3s;gD;100;101;201;color;green;style;filledcurve
+    - net3s;gD;201;101;202;color;green
+    - net3s;gD;202;101;102;color;green;style;filledcurve
+    - net3s;gD;102;101;002;color;green
+    - net3s;gD;002;101;001;color;green;style;filledcurve
+
+    - net3s;gC;001;101;100;color;black;style;filledcurve
+    - net3s;gC;100;101;201;color;black
+    - net3s;gC;201;101;202;color;black;style;filledcurve
+    - net3s;gC;202;101;102;color;black
+    - net3s;gC;102;101;002;color;black;style;filledcurve
+    - net3s;gC;002;101;001;color;black
+
+    - net3s;gB;001;101;100;color;green
+    - net3s;gB;100;101;201;color;green;style;filledcurve
+    - net3s;gB;201;101;202;color;green
+    - net3s;gB;202;101;102;color;green;style;filledcurve
+    - net3s;gB;102;101;002;color;green
+    - net3s;gB;002;101;001;color;green;style;filledcurve
+
+    - net3s;gA;001;101;100;color;white;style;filledcurve
+    - net3s;gA;100;101;201;color;white
+    - net3s;gA;201;101;202;color;white;style;filledcurve
+    - net3s;gA;202;101;102;color;white
+    - net3s;gA;102;101;002;color;white;style;filledcurve
+    - net3s;gA;002;101;001;color;white
+
+
