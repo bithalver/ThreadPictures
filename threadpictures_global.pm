@@ -87,6 +87,8 @@ sub global_init {
     pink => '1 0.08 0.57',
     lightpurple => '1 0 1',
     purple => '0.5 0 0.5',
+	gold => '0.984 0.797 0.015',
+	silver => '0.637 0.637 0.637',
   );
 
 }
@@ -167,7 +169,7 @@ PARAM means the variable can be overwritten from command parameter (-p option)
 PAGE means the variable is modifiable for every page
 NET means the variable is modifiable for every net
 
-After the colon there is the default value
+After the colon is the default value
 
 Automatic variables, should not me modified by hand:
 # Every page has to have a name in PS; because it does not matter, it is an automatically incremented number
