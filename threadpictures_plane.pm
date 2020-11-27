@@ -7,7 +7,7 @@ use 5.10.0;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
-our @EXPORT = qw( basicplane create_connected_plane connectplane2points pointsfromplanesordirect grid3plane grid4plane smaller_plane );
+our @EXPORT = qw( basicplane create_connected_plane connectplane2points pointsfromplanesordirect grid3plane grid4plane smaller_plane_1 );
 
 # rotates a vector counterclockwise (left) by angle
 # parameter: x,y,angle
@@ -133,24 +133,19 @@ sub grid4plane { my ($sizeX,$sizeY)=@_;
   return @output;
 }
 
-# creates a super-plane consisting of the original one and series of magnified ones; points chained each after
+# creates one instance of a series of the original and list of magnified ones
 # magnification / reduction will be relative to the gravity center
-# rotation is not used now
-sub smaller_plane { my @w=@_;
-  my ($iterations,$magnification,$rotation,$centerX,$centerY)=splice @w,0,5;
+# rotation is not used by now
+sub smaller_plane_1 { my @input=@_;
+  my ($iteration,$magnification,$rotation,$centerX,$centerY)=splice @input,0,5;
   my @output;
   ($centerX,$centerY)=pointsfromplanesordirect($centerX,$centerY);
   my @originalplane;
-  while (@w) { push @originalplane, pointsfromplanesordirect(splice @w,0,2) }
-  my $my_magnification=1;
-  for my $i (1..$iterations){
-    my @originalplaneTMP=@originalplane;
-    if ($opts_debug) { warn "originalplaneTMP: \n"; warnarray (@originalplaneTMP); }
-    while (@originalplaneTMP) {
-#      push @output, splice @originalplaneTMP,0,2;
-      push @output, addvector(scalevector(splice(@originalplaneTMP,0,2),$my_magnification),scalevector($centerX,$centerY,1-$my_magnification));
-    }
-    $my_magnification=$my_magnification*$magnification;
+  while (@input) { push @originalplane, pointsfromplanesordirect(splice @input,0,2) }
+
+  my $my_magnification=$magnification**($iteration-1);
+  while (@originalplane) {
+    push @output, addvector(scalevector(splice(@originalplane,0,2),$my_magnification),scalevector($centerX,$centerY,1-$my_magnification));
   }
   return @output;
 }
