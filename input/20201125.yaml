@@ -6,7 +6,7 @@ global:
     threads: 10
     firstthread: 0
     lastthread: 10
-#    style: filledcurve
+    style: filledcurve
 planes:
   - g;grid;50;50
   - a1;angle;120
@@ -24,6 +24,8 @@ planes:
   - gC;connected;a3;0;a3;2;g;101;201
   - gD;connected;a3;0;a4;2;g;101;201
   - gE;connected;a3;0;a5;2;g;101;201
+  - a81;angle;30
+  - g81;connected;a81;0;a81;2;g;000;001
 pages:
   -
     - pagename;2020 11 25 | 1 | Christmas tree top view
@@ -99,5 +101,58 @@ pages:
     - net3s;gA;202;101;102;color;white
     - net3s;gA;102;101;002;color;white;style;filledcurve
     - net3s;gA;002;101;001;color;white
+  -
+    - pagename;2020 11 25 | 3 | Christmas tree variation
+    - background;darkgreen
+    - fontcolor;white
+#    - net3s;g;000;100;001;color;black
+#    - net3s;g81;006;408;010
+#    - net3s;g81;008;410;012
+#    - net3s;g;0018;0420;0022;color;black
+#    - net3s;g;0018;0621;0024;color;black
 
+    - net3s;g;0018;0822;0026;color;lightgreen
+    - net3s;g;0026;0822;0830;color;green
+    - net3s;g;0830;0822;1626;color;lightgreen
+    - net3s;g;1626;0822;1618;color;green
+    - net3s;g;1618;0822;0814;color;lightgreen
+    - net3s;g;0814;0822;0018;color;green
 
+    - net3s;g;0019;0622;0025;color;yellow
+    - net3s;g;0126;0723;0729;color;gold
+    - net3s;g;0929;0923;1526;color;yellow
+    - net3s;g;1625;1022;1619;color;gold
+    - net3s;g;1517;0920;0914;color;yellow
+    - net3s;g;0714;0720;0117;color;gold
+
+    - net3s;g;0020;0422;0024;color;white
+    - net3s;g;0227;0625;0629;color;silver
+    - net3s;g;1029;1025;1427;color;white
+    - net3s;g;1624;1222;1620;color;silver
+    - net3s;g;1417;1019;1015;color;white
+    - net3s;g;0615;0619;0217;color;silver
+  -
+    - pagename;2020 11 25 | 4 | Christmas tree in Chernobyl
+    - background;darkgreen
+    - fontcolor;white
+
+    - net3s;g;0018;0923;0026;color;lightgreen
+    - net3s;g;0026;0923;0830;color;green
+    - net3s;g;0830;0923;1626;color;lightgreen
+    - net3s;g;1626;0923;1618;color;green
+    - net3s;g;1618;0923;0814;color;lightgreen
+    - net3s;g;0814;0923;0018;color;green
+
+    - net3s;g;0019;0723;0025;color;yellow
+    - net3s;g;0126;0825;0729;color;gold
+    - net3s;g;0929;1025;1526;color;yellow
+    - net3s;g;1625;1123;1619;color;gold
+    - net3s;g;1517;1022;0914;color;yellow
+    - net3s;g;0714;0822;0117;color;gold
+
+    - net3s;g;0020;0523;0024;color;white
+    - net3s;g;0227;0726;0629;color;silver
+    - net3s;g;1029;1126;1427;color;white
+    - net3s;g;1624;1323;1620;color;silver
+    - net3s;g;1417;1120;1015;color;white
+    - net3s;g;0615;0720;0217;color;silver
