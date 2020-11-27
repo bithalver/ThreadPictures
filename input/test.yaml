@@ -27,7 +27,18 @@ planes:
   - Circle_test;circle;r3;1;2;6;90;2
   - R;circle;r4;0;1;12;90 # needed for testing element "circular"
   - grid4;4;10;10
+  - s;smaller;10;0.8;360;1;0;0;0;1;2;2;0
 pages:
+  -
+    - pagename; fisrt ever 'smaller' plane test
+#    - net3;0;1;0;0;1;0
+    - net3s;s;0;1;2
+    - net3s;s;3;4;5
+    - net3s;s;6;7;8
+    - net3s;s;9;10;11
+    - net3s;s;12;13;14
+    - net3s;s;15;16;17
+    - net3s;s;18;19;20
   -
     - pagename;first ever 4grid test
     - background;lightgray

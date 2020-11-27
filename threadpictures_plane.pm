@@ -7,7 +7,7 @@ use 5.10.0;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
-our @EXPORT = qw( basicplane create_connected_plane connectplane2points pointsfromplanesordirect grid3plane grid4plane );
+our @EXPORT = qw( basicplane create_connected_plane connectplane2points pointsfromplanesordirect grid3plane grid4plane smaller_plane );
 
 # rotates a vector counterclockwise (left) by angle
 # parameter: x,y,angle
@@ -121,6 +121,7 @@ sub grid3plane { my ($sizeX,$sizeY)=@_;
   return @output;
 }
 
+
 sub grid4plane { my ($sizeX,$sizeY)=@_;
   my @output;
   for my $Y (0..$sizeY) {
@@ -128,6 +129,28 @@ sub grid4plane { my ($sizeX,$sizeY)=@_;
       $output[($Y*100+$X)*2]=$X;
       $output[($Y*100+$X)*2+1]=$Y;
     }
+  }
+  return @output;
+}
+
+# creates a super-plane consisting of the original one and series of magnified ones; points chained each after
+# magnification / reduction will be relative to the gravity center
+# rotation is not used now
+sub smaller_plane { my @w=@_;
+  my ($iterations,$magnification,$rotation,$centerX,$centerY)=splice @w,0,5;
+  my @output;
+  ($centerX,$centerY)=pointsfromplanesordirect($centerX,$centerY);
+  my @originalplane;
+  while (@w) { push @originalplane, pointsfromplanesordirect(splice @w,0,2) }
+  my $my_magnification=1;
+  for my $i (1..$iterations){
+    my @originalplaneTMP=@originalplane;
+    if ($opts_debug) { warn "originalplaneTMP: \n"; warnarray (@originalplaneTMP); }
+    while (@originalplaneTMP) {
+#      push @output, splice @originalplaneTMP,0,2;
+      push @output, addvector(scalevector(splice(@originalplaneTMP,0,2),$my_magnification),scalevector($centerX,$centerY,1-$my_magnification));
+    }
+    $my_magnification=$my_magnification*$magnification;
   }
   return @output;
 }

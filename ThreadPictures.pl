@@ -58,7 +58,7 @@ sub HELP_PLANES {
     000   001   002   003
 
   circle: create a series of planes around a 'circle'
-    paramters: plane-to-spin (mandatory), nth1 (mandatory), nth2 (mandatory), 
+    parameters: plane-to-spin (mandatory), nth1 (mandatory), nth2 (mandatory), 
                circle_sides (mandatory), circle_initial_angle (optional), circle_size (optional)
     freshly created plane names will be planes-to-spin_01 and so on
 ";
@@ -171,6 +171,9 @@ if (defined $config->{planes}) {
     }
     when (/^4/i){ # grid for squares; two mandatory options: sizeX, sizeY
       my @w=grid4plane(@AP); $TP_planes{$planename}=\@w;
+    }
+    when (/^s/i){ # smaller: create a series from points , gravity point and magnification
+      my @w=smaller_plane(@AP); $TP_planes{$planename}=\@w;
     }
     when (/^a/i){ # angle: one mandatory option: angle in degrees (one full circle is 360 degrees)
       my $angle=$AP[0]/180*pi();
