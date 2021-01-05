@@ -257,10 +257,11 @@ sub draw_net {
   }
   when (/^holes$/i) { # old style was 1
     # This kind is NOT interested in the value of firstthread, lastthread
-    # Cross lines are 1/20 of the full length of the line    
-    my ($firstX,$firstY)=TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},1,20);
+    # Cross lines are 1/20 of the full length of the line EXCEPT if threads<6 then they are 1/10
+    my $laddersize = $AN{'threads'} < 6 ? 10 : 20;
+    my ($firstX,$firstY)=TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},1,$laddersize);
     my ($line1vectorX,$line1vectorY) = ($firstY-$AN{line1oY}, $AN{line1oX}-$firstX);
-    ($firstX,$firstY)=TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},1,20);
+    ($firstX,$firstY)=TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},1,$laddersize);
     my ($line2vectorX,$line2vectorY) = ($firstY-$AN{line2oY}, $AN{line2oX}-$firstX);
 
     draw_line($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY});
