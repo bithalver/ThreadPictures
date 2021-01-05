@@ -133,16 +133,16 @@ pages:
 
 
 
-    - net3;24;0;28;4;24;8;firstthread;10
+    - net3;24;0;28;4;24;8;firstthread;10;color;yellow
     - net3;24;0;20;4;24;8;color;lightblue
 
     - net3;22;6;26;10;22;14;color;lightblue
-    - net3;26;6;22;10;26;14;lastthread;9
+    - net3;26;6;22;10;26;14;lastthread;9;color;yellow
 
-    - net3;24;12;28;16;24;20;firstthread;10
+    - net3;24;12;28;16;24;20;firstthread;10;color;yellow
     - net3;24;12;20;16;24;20;color;lightblue
 
-    - net3;26;18;22;22;26;26;lastthread;9
+    - net3;26;18;22;22;26;26;lastthread;9;color;yellow
     - net3;22;18;26;22;22;26;color;lightblue
 
 
@@ -259,3 +259,8 @@ pages:
 #
 #    - net3;10;18;14;22;10;26;lastthread;10;color;orange
 #    - net3;14;18;10;22;14;26;firstthread;11;color;orange
+  -
+    - pagename;2020 12 08 | 8 | Alien alphabet, letter accented A | just for the holes
+    - net3;0;0;2;2;4;0;threads;40;lastthread;40
+    - net3;0;0;2;2;4;0;threads;2;lastthread;2;color;red
+    - net3;1;3;2;4;3;3
