@@ -318,3 +318,9 @@ pages:
 
     - net3;4;0;0;4;-4;0;lastthread;10;color;red;style;0,2,4,6,8,10
     - net3;4;4;0;0;-4;4;lastthread;10;color;red;style;0,2,4,6,8,10
+  -
+    - pagename;2020 12 08 | 12 | Alien alphabet, accent
+    - net3;10;6;14;10;10;14;color;lightblue;threads;40;style;0,2,4,6,8,10,12,14,16,18,20
+    - net3;10;6;14;10;10;14;color;yellow;threads;40;style;1,3,5,7,9,11,13,15,17,19
+    - net3;14;6;10;10;14;14;color;lightblue;threads;40;style;22,24,26,28,30,32,34,36,38,40
+    - net3;14;6;10;10;14;14;color;yellow;threads;40;style;21,23,25,27,29,31,33,35,37,39
