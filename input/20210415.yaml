@@ -13,7 +13,7 @@ pages:
     - pagename;2021 04 15 | iSRV 1
     - net3;40;12;0;52;18;70;color;lightgray
     - net3;0;52;18;70;28;60;color;lightgray
-    - net3;40;32;40;12;0;52;color;lightgray
+    - net3;40;30;40;12;0;52;color;lightgray
     - net3;54;0;54;52;18;90;color;red
     - net3;54;52;18;90;8;80;color;red
     - net3;40;0;54;0;54;52;color;red
@@ -21,7 +21,7 @@ pages:
 # right side , mirrored X to 112
     - net3;72;12;112;52;94;70;color;lightgray
     - net3;112;52;94;70;84;60;color;lightgray
-    - net3;72;32;72;12;112;52;color;lightgray
+    - net3;72;30;72;12;112;52;color;lightgray
     - net3;58;0;58;52;94;90;color;red
     - net3;58;52;94;90;104;80;color;red
     - net3;72;0;58;0;58;52;color;red
@@ -37,8 +37,8 @@ pages:
     - net3;40;12;0;52;18;70;color;lightgray
     - net3;0;52;18;70;28;60;color;lightgray
     - net3;18;70;28;60;18;50;color;lightgray
-    - net3;40;32;40;12;0;52;color;lightgray
-    - net3;18;50;40;32;40;12;color;lightgray
+    - net3;40;30;40;12;0;52;color;lightgray
+    - net3;18;50;40;30;40;12;color;lightgray
     - net3;54;0;54;52;18;90;color;red
     - net3;54;52;18;90;8;80;color;red
     - net3;18;90;8;80;40;48;color;red
@@ -49,14 +49,13 @@ pages:
     - net3;72;12;112;52;94;70;color;lightgray
     - net3;112;52;94;70;84;60;color;lightgray
     - net3;94;70;84;60;94;50;color;lightgray
-    - net3;72;32;72;12;112;52;color;lightgray
-    - net3;94;50;72;32;72;12;color;lightgray
+    - net3;72;30;72;12;112;52;color;lightgray
+    - net3;94;50;72;30;72;12;color;lightgray
     - net3;58;0;58;52;94;90;color;red
     - net3;58;52;94;90;104;80;color;red
     - net3;94;90;104;80;72;48;color;red
     - net3;72;0;58;0;58;52;color;red
     - net3;72;48;72;0;58;0;color;red
-
 
 # center
     - net3;56;68;56;84;40;84;color;red
