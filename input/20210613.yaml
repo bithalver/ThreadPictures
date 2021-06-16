@@ -1,0 +1,60 @@
+# export TP_leftmargin=0.8;export TP_rightmargin=0.8 ;  perl ThreadPictures.pl -i input/20190430.yaml -o output/20190430_holes.ps -p BW=1 -p style=holes ; ps2pdf output/20190430_holes.ps output/20190430_holes.pdf ; rm output/20190430_holes.ps ; unset TP_leftmargin TP_rightmargin
+---
+global:
+    background: darkgray
+    color: green
+    fontcolor: white
+    threads: 20
+    firstthread: 0
+    lastthread: 20
+#    style: curve
+planes:
+  - g_;grid;10;10
+  - g;connected;0;0;0;1;g_;0;1
+  - G1b;connected;g_;402;g_;203;g_;105;505
+  - G2b;connected;g_;203;g_;205;g_;105;505
+  - G3b;connected;g_;205;g_;406;g_;105;505
+  - G4b;connected;g_;406;g_;605;g_;105;505
+  - G5b;connected;g_;605;g_;603;g_;105;505
+  - G6b;connected;g_;603;g_;402;g_;105;505
+
+pages:
+  -
+    - pagename;2019 04 30 | Convention of all, close friends
+    - background;black
+    - net3s;G1b;304;302;505;color;green;lastthread;10
+    - net3s;G1b;304;302;505;color;darkgreen;firstthread;11
+    - net3s;G1b;304;505;105;color;green;lastthread;10
+    - net3s;G1b;304;505;105;color;darkgreen;firstthread;11
+    - net3s;G1b;304;105;302;color;green;lastthread;10
+    - net3s;G1b;304;105;302;color;darkgreen;firstthread;11
+
+    - net3s;G2b;505;302;105;color;lightblue;lastthread;10
+    - net3s;G2b;105;505;302;color;lightblue;lastthread;10
+    - net3s;G2b;302;105;505;color;lightblue;lastthread;10
+    - net3s;G2b;505;302;105;color;blue;firstthread;11
+    - net3s;G2b;105;505;302;color;blue;firstthread;11
+    - net3s;G2b;302;105;505;color;blue;firstthread;11
+
+    - net3s;G3b;304;302;505;color;lightpurple;lastthread;10
+    - net3s;G3b;304;505;105;color;lightpurple;lastthread;10
+    - net3s;G3b;304;105;302;color;lightpurple;lastthread;10
+    - net3s;G3b;304;505;302;color;purple;firstthread;11
+    - net3s;G3b;304;105;505;color;purple;firstthread;11
+    - net3s;G3b;304;302;105;color;purple;firstthread;11
+
+    - net3s;G4b;505;304;302;color;1,0.4,0.4;lastthread;10
+    - net3s;G4b;505;304;302;color;0.6,0,0;firstthread;11
+    - net3s;G4b;105;304;505;color;1,0.4,0.4;lastthread;10
+    - net3s;G4b;105;304;505;color;0.6,0,0;firstthread;11
+    - net3s;G4b;302;304;105;color;1,0.4,0.4;lastthread;10
+    - net3s;G4b;302;304;105;color;0.6,0,0;firstthread;11
+
+    - net3s;G5b;505;302;105;color;orange;lastthread;10
+    - net3s;G5b;505;302;105;color;brown;firstthread;11
+    - net3s;G5b;304;505;105;color;orange
+    - net3s;G5b;304;105;505;color;brown
+
+    - net3s;G6b;304;302;505;color;yellow
+    - net3s;G6b;304;302;105;color;yellow
+    - net3s;G6b;505;302;105;color;gray
