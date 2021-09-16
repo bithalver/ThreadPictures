@@ -1,0 +1,78 @@
+---
+global:
+    background: darkgray
+#    color: orange
+    fontcolor: white
+    threads: 20
+    firstthread: 0
+    lastthread: 20
+#    style: curve
+pages:
+  -
+    - pagename;2021 09 16 - Matter and antimatter - version 1
+    - net3;2;3;2;2;3;2;color;white
+    - net3;0;3;0;2;1;2;color;white
+    - net3;0;2;0;1;1;1;color;white
+    - net3;0;1;0;0;1;0;color;white
+    - net3;1;1;1;0;2;0;color;white
+    - net3;2;1;2;0;3;0;color;white
+
+    - net3;1;0;1;1;0;1;color;red
+    - net3;3;0;3;1;2;1;color;red
+    - net3;3;1;3;2;2;2;color;red
+    - net3;3;2;3;3;2;3;color;red
+    - net3;2;2;2;3;1;3;color;red
+    - net3;1;2;1;3;0;3;color;red
+  -
+    - pagename;2021 09 16 - Matter and antimatter - version 2
+    - net3;2;3;2;2;3;2;color;white
+    - net3;0;3;0;2;1;2;color;white
+    - net3;0;2;0;1;1;1;color;white
+    - net3;0;1;0;0;1;0;color;white
+    - net3;1;1;1;0;2;0;color;white
+    - net3;2;1;2;0;3;0;color;white
+    - net3;1;2;1;1;2;1;color;white
+
+    - net3;1;0;1;1;0;1;color;red
+    - net3;3;0;3;1;2;1;color;red
+    - net3;3;1;3;2;2;2;color;red
+    - net3;3;2;3;3;2;3;color;red
+    - net3;2;2;2;3;1;3;color;red
+    - net3;1;2;1;3;0;3;color;red
+    - net3;2;1;2;2;1;2;color;red
+  -
+    - pagename;2021 09 16 - Matter and antimatter - version 3
+    - net3;2;3;2;2;3;2;color;white
+    - net3;0;3;0;2;1;2;color;white
+    - net3;0;2;0;1;1;1;color;white
+    - net3;0;1;0;0;1;0;color;white
+    - net3;1;1;1;0;2;0;color;white
+    - net3;2;1;2;0;3;0;color;white
+    - net3;1;3;1;1;3;1;color;white
+
+    - net3;1;0;1;1;0;1;color;red
+    - net3;3;0;3;1;2;1;color;red
+    - net3;3;1;3;2;2;2;color;red
+    - net3;3;2;3;3;2;3;color;red
+    - net3;2;2;2;3;1;3;color;red
+    - net3;1;2;1;3;0;3;color;red
+    - net3;2;0;2;2;0;2;color;red
+  -
+    - pagename;2021 09 16 - Matter and antimatter - version 4
+    - net3;2;3;2;2;3;2;color;white
+    - net3;0;3;0;2;1;2;color;white
+    - net3;0;2;0;1;1;1;color;white
+    - net3;0;1;0;0;1;0;color;white
+    - net3;1;1;1;0;2;0;color;white
+    - net3;2;1;2;0;3;0;color;white
+    - net3;1;3;1;1;3;1;color;red;lastthread;9
+    - net3;1;3;1;1;3;1;color;white;firstthread;10
+
+    - net3;1;0;1;1;0;1;color;red
+    - net3;3;0;3;1;2;1;color;red
+    - net3;3;1;3;2;2;2;color;red
+    - net3;3;2;3;3;2;3;color;red
+    - net3;2;2;2;3;1;3;color;red
+    - net3;1;2;1;3;0;3;color;red
+    - net3;2;0;2;2;0;2;color;red;lasstthread;9
+    - net3;2;0;2;2;0;2;color;white;firstthread;10
