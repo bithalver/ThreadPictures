@@ -183,3 +183,125 @@ pages:
     - net3s;BL2;9;8;6
     - net3s;BL2;8;4;2;lastthread;10
     - net3s;BL2;1;5;7;lastthread;10
+
+
+
+
+  -
+    - pagename;2021 09 23 | 1+2
+    - net3s;O;0;1;3
+    - net3s;O;9;8;6
+    - net3s;O;0;2;3;color;white
+    - net3s;O;9;7;6;color;white
+    - net3s;O;8;4;2;firstthread;11;color;white
+    - net3s;O;8;4;2;lastthread;10
+    - net3s;O;1;5;7;firstthread;11;color;white
+    - net3s;O;1;5;7;lastthread;10
+
+    - net3s;TR0;0;1;3
+    - net3s;TR0;9;8;6
+    - net3s;TR0;0;2;3;color;white
+    - net3s;TR0;9;7;6;color;white
+    - net3s;TR0;8;4;2;firstthread;11;color;white
+    - net3s;TR0;8;4;2;lastthread;10
+    - net3s;TR0;1;5;7;firstthread;11;color;white
+    - net3s;TR0;1;5;7;lastthread;10
+
+    - net3s;TR1;0;1;3
+    - net3s;TR1;9;8;6
+    - net3s;TR1;0;2;3;color;white
+    - net3s;TR1;9;7;6;color;white
+    - net3s;TR1;8;4;2;firstthread;11;color;white
+    - net3s;TR1;8;4;2;lastthread;10
+    - net3s;TR1;1;5;7;firstthread;11;color;white
+    - net3s;TR1;1;5;7;lastthread;10
+
+    - net3s;TR2;0;1;3
+    - net3s;TR2;9;8;6
+    - net3s;TR2;0;2;3;color;white
+    - net3s;TR2;9;7;6;color;white
+    - net3s;TR2;8;4;2;firstthread;11;color;white
+    - net3s;TR2;8;4;2;lastthread;10
+    - net3s;TR2;1;5;7;firstthread;11;color;white
+    - net3s;TR2;1;5;7;lastthread;10
+
+    - net3s;BL0;0;1;3
+    - net3s;BL0;9;8;6
+    - net3s;BL0;0;2;3;color;white
+    - net3s;BL0;9;7;6;color;white
+    - net3s;BL0;8;4;2;firstthread;11;color;white
+    - net3s;BL0;8;4;2;lastthread;10
+    - net3s;BL0;1;5;7;firstthread;11;color;white
+    - net3s;BL0;1;5;7;lastthread;10
+
+    - net3s;BL1;0;1;3
+    - net3s;BL1;9;8;6
+    - net3s;BL1;0;2;3;color;white
+    - net3s;BL1;9;7;6;color;white
+    - net3s;BL1;8;4;2;firstthread;11;color;white
+    - net3s;BL1;8;4;2;lastthread;10
+    - net3s;BL1;1;5;7;firstthread;11;color;white
+    - net3s;BL1;1;5;7;lastthread;10
+
+    - net3s;BL2;0;1;3
+    - net3s;BL2;9;8;6
+    - net3s;BL2;0;2;3;color;white
+    - net3s;BL2;9;7;6;color;white
+    - net3s;BL2;8;4;2;firstthread;11;color;white
+    - net3s;BL2;8;4;2;lastthread;10
+    - net3s;BL2;1;5;7;firstthread;11;color;white
+    - net3s;BL2;1;5;7;lastthread;10
+
+    - net3s;T0;0;1;3
+    - net3s;T0;9;8;6
+    - net3s;T0;0;2;3;color;white
+    - net3s;T0;9;7;6;color;white
+    - net3s;T0;8;4;2;firstthread;11;color;white
+    - net3s;T0;8;4;2;lastthread;10
+    - net3s;T0;1;5;7;firstthread;11;color;white
+    - net3s;T0;1;5;7;lastthread;10
+
+    - net3s;T1;0;1;3
+    - net3s;T1;9;8;6
+    - net3s;T1;0;2;3;color;white
+    - net3s;T1;9;7;6;color;white
+    - net3s;T1;8;4;2;firstthread;11;color;white
+    - net3s;T1;8;4;2;lastthread;10
+    - net3s;T1;1;5;7;firstthread;11;color;white
+    - net3s;T1;1;5;7;lastthread;10
+
+    - net3s;T2;0;1;3
+    - net3s;T2;9;8;6
+    - net3s;T2;0;2;3;color;white
+    - net3s;T2;9;7;6;color;white
+    - net3s;T2;8;4;2;firstthread;11;color;white
+    - net3s;T2;8;4;2;lastthread;10
+    - net3s;T2;1;5;7;firstthread;11;color;white
+    - net3s;T2;1;5;7;lastthread;10
+
+    - net3s;B0;0;1;3
+    - net3s;B0;9;8;6
+    - net3s;B0;0;2;3;color;white
+    - net3s;B0;9;7;6;color;white
+    - net3s;B0;8;4;2;firstthread;11;color;white
+    - net3s;B0;8;4;2;lastthread;10
+    - net3s;B0;1;5;7;firstthread;11;color;white
+    - net3s;B0;1;5;7;lastthread;10
+
+    - net3s;B1;0;1;3
+    - net3s;B1;9;8;6
+    - net3s;B1;0;2;3;color;white
+    - net3s;B1;9;7;6;color;white
+    - net3s;B1;8;4;2;firstthread;11;color;white
+    - net3s;B1;8;4;2;lastthread;10
+    - net3s;B1;1;5;7;firstthread;11;color;white
+    - net3s;B1;1;5;7;lastthread;10
+
+    - net3s;B2;0;1;3
+    - net3s;B2;9;8;6
+    - net3s;B2;0;2;3;color;white
+    - net3s;B2;9;7;6;color;white
+    - net3s;B2;8;4;2;firstthread;11;color;white
+    - net3s;B2;8;4;2;lastthread;10
+    - net3s;B2;1;5;7;firstthread;11;color;white
+    - net3s;B2;1;5;7;lastthread;10
