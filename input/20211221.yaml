@@ -1,0 +1,106 @@
+global:
+    threads: 20
+    background: darkgray
+    color: lightgray
+    colorgradient: CG_RY;8;red;yellow;CG_GG;18;lightgray;darkgreen
+planes:
+  - g_;grid;10;10
+  - Line;freeform;0;0;1;0;2;0;3;0;4;0;5;0;6;0;7;0;8;0;9;0;10;0
+  - L;connected;1;3;0;0;Line;10;0
+  - R;connected;1;3;2;0;Line;10;0
+pages:
+  -
+    - pagename;2021 12 21 | 1 | Pine shaped flame
+    - net3;L;0;R;1;L;2;color;CG_RY_00
+    - net3;R;1;L;2;R;3;color;CG_RY_01
+    - net3;L;2;R;3;L;4;color;CG_RY_02
+    - net3;R;3;L;4;R;5;color;CG_RY_03
+    - net3;L;4;R;5;L;6;color;CG_RY_04
+    - net3;R;5;L;6;R;7;color;CG_RY_05
+    - net3;L;6;R;7;L;8;color;CG_RY_06
+    - net3;R;7;L;8;R;9;color;CG_RY_07
+    - net3;L;8;R;9;L;10;color;CG_RY_08
+  -
+    - pagename;2021 12 21 | 2 | Siver pine
+    - net3;L;0;R;1;L;2
+    - net3;R;1;L;2;R;3
+    - net3;L;2;R;3;L;4
+    - net3;R;3;L;4;R;5
+    - net3;L;4;R;5;L;6
+    - net3;R;5;L;6;R;7
+    - net3;L;6;R;7;L;8
+    - net3;R;7;L;8;R;9
+    - net3;L;8;R;9;L;10
+
+    - net3;R;0;L;1;R;2;color;green
+    - net3;L;1;R;2;L;3;color;green
+    - net3;R;2;L;3;R;4;color;green
+    - net3;L;3;R;4;L;5;color;green
+    - net3;R;4;L;5;R;6;color;green
+    - net3;L;5;R;6;L;7;color;green
+    - net3;R;6;L;7;R;8;color;green
+    - net3;L;7;R;8;L;9;color;green
+    - net3;R;8;L;9;R;10;color;green
+  -
+    - pagename;2021 12 21 | 3 | Siver pine
+    - background;black
+    - net3;L;0;R;0;L;1;color;CG_GG_00
+    - net3;R;0;L;1;R;1;color;CG_GG_01
+    - net3;L;1;R;1;L;2;color;CG_GG_02
+    - net3;R;1;L;2;R;2;color;CG_GG_03
+    - net3;L;2;R;2;L;3;color;CG_GG_04
+    - net3;R;2;L;3;R;3;color;CG_GG_05
+    - net3;L;3;R;3;L;4;color;CG_GG_06
+    - net3;R;3;L;4;R;4;color;CG_GG_07
+    - net3;L;4;R;4;L;5;color;CG_GG_08
+    - net3;R;4;L;5;R;5;color;CG_GG_09
+    - net3;L;5;R;5;L;6;color;CG_GG_10
+    - net3;R;5;L;6;R;6;color;CG_GG_11
+    - net3;L;6;R;6;L;7;color;CG_GG_12
+    - net3;R;6;L;7;R;7;color;CG_GG_13
+    - net3;L;7;R;7;L;8;color;CG_GG_14
+    - net3;R;7;L;8;R;8;color;CG_GG_15
+    - net3;L;8;R;8;L;9;color;CG_GG_16
+    - net3;R;8;L;9;R;9;color;CG_GG_17
+    - net3;L;9;R;9;L;10;color;CG_GG_18
+  -
+    - pagename;2021 12 21 | 4 | Siver pine
+    - net3;L;0;R;0;L;1
+    - net3;R;0;L;1;R;1
+    - net3;L;1;R;1;L;2
+    - net3;R;1;L;2;R;2
+    - net3;L;2;R;2;L;3
+    - net3;R;2;L;3;R;3
+    - net3;L;3;R;3;L;4
+    - net3;R;3;L;4;R;4
+    - net3;L;4;R;4;L;5
+    - net3;R;4;L;5;R;5
+    - net3;L;5;R;5;L;6
+    - net3;R;5;L;6;R;6
+    - net3;L;6;R;6;L;7
+    - net3;R;6;L;7;R;7
+    - net3;L;7;R;7;L;8
+    - net3;R;7;L;8;R;8
+    - net3;L;8;R;8;L;9
+    - net3;R;8;L;9;R;9
+    - net3;L;9;R;9;L;10
+
+    - net3;R;0;L;0;R;1;color;green
+    - net3;L;0;R;1;L;1;color;green
+    - net3;R;1;L;1;R;2;color;green
+    - net3;L;1;R;2;L;2;color;green
+    - net3;R;2;L;2;R;3;color;green
+    - net3;L;2;R;3;L;3;color;green
+    - net3;R;3;L;3;R;4;color;green
+    - net3;L;3;R;4;L;4;color;green
+    - net3;R;4;L;4;R;5;color;green
+    - net3;L;4;R;5;L;5;color;green
+    - net3;R;5;L;5;R;6;color;green
+    - net3;L;5;R;6;L;6;color;green
+    - net3;R;6;L;6;R;7;color;green
+    - net3;L;6;R;7;L;7;color;green
+    - net3;R;7;L;7;R;8;color;green
+    - net3;L;7;R;8;L;8;color;green
+    - net3;R;8;L;8;R;9;color;green
+    - net3;L;8;R;9;L;9;color;green
+    - net3;R;9;L;9;R;10;color;green
