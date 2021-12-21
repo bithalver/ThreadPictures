@@ -3,6 +3,7 @@ global:
     background: darkgray
     color: lightgray
     colorgradient: CG_RY;8;red;yellow;CG_GG;18;lightgray;darkgreen
+    style: filledcurve
 planes:
   - g_;grid;10;10
   - Line;freeform;0;0;1;0;2;0;3;0;4;0;5;0;6;0;7;0;8;0;9;0;10;0
