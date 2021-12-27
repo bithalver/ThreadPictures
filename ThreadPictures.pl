@@ -167,7 +167,7 @@ if (defined $config->{planes}) {
       # @AP should be : $TOx1,$TOy1,$TOx2,$TOy2,plane-to-connect,nth1,nth2
       $TP_planes{$planename}=create_connected_plane(@AP);
     }
-    when (/^g/i){ # grid for triangles; two mandatory options: sizeX, sizeY
+    when (/^gr/i){ # grid for triangles; two mandatory options: sizeX, sizeY
       my @w=grid3plane(@AP); $TP_planes{$planename}=\@w;
     }
     when (/^4/i){ # grid for squares; two mandatory options: sizeX, sizeY
