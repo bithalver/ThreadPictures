@@ -7,7 +7,7 @@ use 5.10.0;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
-our @EXPORT = qw( basicplane create_connected_plane connectplane2points pointsfromplanesordirect grid3plane grid4plane smaller_plane_1 );
+our @EXPORT = qw( basicplane create_connected_plane connectplane2points pointsfromplanesordirect grid3plane grid4plane smaller_plane_1 geometric_line );
 
 # rotates a vector counterclockwise (left) by angle
 # parameter: x,y,angle
@@ -146,6 +146,23 @@ sub smaller_plane_1 { my @input=@_;
   my $my_magnification=$magnification**($iteration-1);
   while (@originalplane) {
     push @output, addvector(scalevector(splice(@originalplane,0,2),$my_magnification),scalevector($centerX,$centerY,1-$my_magnification));
+  }
+  return @output;
+}
+
+sub geometric_line { my($startX, $startY, $endX, $endY, $slices, $magnitude)=@_;
+  my @output;
+  # print 1024**(1/5) ; exit 0 ; # output is 4 
+  my @sections=(0);
+  for my $i (1 .. $slices) {
+  my $AM;
+    $AM=$magnitude**$i; # Actual Magnitude
+    push @sections, $sections[$i-1]+$AM;
+  }
+#  warnarray @sections;
+  for my $i (0 .. $slices) {
+    my $AM=$sections[$i]/$sections[$slices] ;
+    push @output,addvector(scalevector($endX, $endY,$AM),scalevector($startX, $startY,1-$AM));
   }
   return @output;
 }
