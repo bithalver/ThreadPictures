@@ -193,6 +193,9 @@ if (defined $config->{planes}) {
         $TP_planes{sprintf("%s_%02d",$planename,$i)}=create_connected_plane($mybasicplane[$i*2] , $mybasicplane[$i*2+1], $mybasicplane[$i1*2] , $mybasicplane[$i1*2+1], $plane_to_spin, $nth1, $nth2);
 	  }
     }
+    when (/^ge/i){ # geometric_line; startX, startY, endX, endY, sections, magnitude (for 1 section)
+      my @w=geometric_line(@AP); $TP_planes{$planename}=\@w;
+    }
     default {warn "plane type '$_' is not (yet) supported (but processing goes on)\n";}
     }
   }
