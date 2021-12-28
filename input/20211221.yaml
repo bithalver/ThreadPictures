@@ -17,8 +17,12 @@ planes:
   - GL;geometric_line;9;2
   - GL1;geometric_line;9;1
 # ./debug 20211221 2>&1| grep -EA1 "'GL'|'GL1'"
-# plane name: 'GL' content:
-# 0;0;2;0;6;0;14;0;30;0;62;0;126;0;254;0;510;0;1022;0
+  - ET;connected;L12;8;R12;7;Line;1;2
+  - EB;connected;L12;0;R12;1;Line;1;2
+  - ERR;connected;ET;3;EB;3;Line;7;1
+  - ERL;connected;R12;7;R12;1;Line;8;0
+  - ELL;connected;ET;0;EB;0;Line;8;0
+  - ELR;connected;L12;8;L12;0;Line;7;1
 pages:
   -
     - pagename;2021 12 21 | 1 | Pine shaped flame
@@ -156,6 +160,53 @@ pages:
     - net3;L12;4;R12;6;L12;8;color;lightgray
     
     - net3;L12;0;R12;4;L12;8;color;white
+  -
+    - pagename;2021 12 21 | 5a | Pine with 8 steps out of 12 | extended left&right
+    - xymirror
+    - background;black
+    - fontcolor;lightgray
+    - net3;L12;0;R12;1;L12;2;color;darkgray
+    - net3;R12;1;L12;2;R12;3;color;darkgray
+    - net3;L12;2;R12;3;L12;4;color;darkgray
+    - net3;R12;3;L12;4;R12;5;color;darkgray
+    - net3;L12;4;R12;5;L12;6;color;darkgray
+    - net3;R12;5;L12;6;R12;7;color;darkgray
+    - net3;L12;6;R12;7;L12;8;color;darkgray
+
+    - net3;L12;0;R12;2;L12;4;color;lightgray
+    - net3;R12;2;L12;4;R12;6;color;lightgray
+    - net3;L12;4;R12;6;L12;8;color;lightgray
+
+    - net3;L12;0;R12;4;L12;8;color;white
+#
+    - net3;ERL;0;ERR;1;ERL;2;color;darkgray
+    - net3;ERR;1;ERL;2;ERR;3;color;darkgray
+    - net3;ERL;2;ERR;3;ERL;4;color;darkgray
+    - net3;ERR;3;ERL;4;ERR;5;color;darkgray
+    - net3;ERL;4;ERR;5;ERL;6;color;darkgray
+    - net3;ERR;5;ERL;6;ERR;7;color;darkgray
+    - net3;ERL;6;ERR;7;ERL;8;color;darkgray
+
+    - net3;ERL;0;ERR;2;ERL;4;color;lightgray
+    - net3;ERR;2;ERL;4;ERR;6;color;lightgray
+    - net3;ERL;4;ERR;6;ERL;8;color;lightgray
+
+    - net3;ERL;0;ERR;4;ERL;8;color;white
+#
+    - net3;ELL;0;ELR;1;ELL;2;color;darkgray
+    - net3;ELR;1;ELL;2;ELR;3;color;darkgray
+    - net3;ELL;2;ELR;3;ELL;4;color;darkgray
+    - net3;ELR;3;ELL;4;ELR;5;color;darkgray
+    - net3;ELL;4;ELR;5;ELL;6;color;darkgray
+    - net3;ELR;5;ELL;6;ELR;7;color;darkgray
+    - net3;ELL;6;ELR;7;ELL;8;color;darkgray
+
+    - net3;ELL;0;ELR;2;ELL;4;color;lightgray
+    - net3;ELR;2;ELL;4;ELR;6;color;lightgray
+    - net3;ELL;4;ELR;6;ELL;8;color;lightgray
+
+    - net3;ELL;0;ELR;4;ELL;8;color;white
+
   -
     - pagename;2021 12 21 | 6 | Pine with 8 steps
     - background;black
