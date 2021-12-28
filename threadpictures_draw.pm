@@ -449,7 +449,7 @@ sub draw_all {
   if (defined $TP_PARAMS{pagename}) {$pagename=$TP_PARAMS{pagename};}
   if (defined $TP_PARAMS{background}) {$bg=$TP_PARAMS{background};} $bg=colorconvert($bg);
   if ($minX == $maxX or $minY == $maxY ) {
-    warn "even X or Y minimum or maximum values are the same, can not draw\n";
+    warn "even X or Y minimum and maximum values are the same, can not draw\n";
     exit 1;
   }
 
