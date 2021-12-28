@@ -4,7 +4,7 @@ global:
     background: darkgray
     color: lightgray
     colorgradient: CG_RY;8;red;yellow;CG_GG;18;lightgray;darkgreen
-#    style: filledcurve
+    style: filledcurve
 planes:
   - g_;grid;10;10
   - Line;freeform;0;0;1;0;2;0;3;0;4;0;5;0;6;0;7;0;8;0;9;0;10;0;11;0;12;0
@@ -23,6 +23,11 @@ planes:
   - ERL;connected;R12;7;R12;1;Line;8;0
   - ELL;connected;ET;0;EB;0;Line;8;0
   - ELR;connected;L12;8;L12;0;Line;7;1
+
+  - ERL1;connected;ET;3;EB;3;Line;8;0
+  - ERR1;connected;R12;7;R12;1;Line;7;1
+  - ELR1;connected;ET;0;EB;0;Line;7;1
+  - ELL1;connected;L12;8;L12;0;Line;8;0
 pages:
   -
     - pagename;2021 12 21 | 1 | Pine shaped flame
@@ -161,8 +166,8 @@ pages:
     
     - net3;L12;0;R12;4;L12;8;color;white
   -
-    - pagename;2021 12 21 | 5a | Pine with 8 steps out of 12 | extended left&right
-    - xymirror
+    - pagename;2021 12 21 | 5a | Pine with 8 steps out of 12 | extended left&right and rotated
+    - xymirror;1
     - background;black
     - fontcolor;lightgray
     - net3;L12;0;R12;1;L12;2;color;darkgray
@@ -177,7 +182,7 @@ pages:
     - net3;R12;2;L12;4;R12;6;color;lightgray
     - net3;L12;4;R12;6;L12;8;color;lightgray
 
-    - net3;L12;0;R12;4;L12;8;color;white
+#    - net3;L12;0;R12;4;L12;8;color;white
 #
     - net3;ERL;0;ERR;1;ERL;2;color;darkgray
     - net3;ERR;1;ERL;2;ERR;3;color;darkgray
@@ -191,7 +196,7 @@ pages:
     - net3;ERR;2;ERL;4;ERR;6;color;lightgray
     - net3;ERL;4;ERR;6;ERL;8;color;lightgray
 
-    - net3;ERL;0;ERR;4;ERL;8;color;white
+#    - net3;ERL;0;ERR;4;ERL;8;color;white
 #
     - net3;ELL;0;ELR;1;ELL;2;color;darkgray
     - net3;ELR;1;ELL;2;ELR;3;color;darkgray
@@ -205,8 +210,53 @@ pages:
     - net3;ELR;2;ELL;4;ELR;6;color;lightgray
     - net3;ELL;4;ELR;6;ELL;8;color;lightgray
 
-    - net3;ELL;0;ELR;4;ELL;8;color;white
+#    - net3;ELL;0;ELR;4;ELL;8;color;white
+  -
+    - pagename;2021 12 21 | 5b | Pine with 8 steps out of 12 | extended mirrored left&right and rotated
+    - xymirror;1
+    - background;black
+    - fontcolor;lightgray
+    - net3;L12;0;R12;1;L12;2;color;darkgray
+    - net3;R12;1;L12;2;R12;3;color;darkgray
+    - net3;L12;2;R12;3;L12;4;color;darkgray
+    - net3;R12;3;L12;4;R12;5;color;darkgray
+    - net3;L12;4;R12;5;L12;6;color;darkgray
+    - net3;R12;5;L12;6;R12;7;color;darkgray
+    - net3;L12;6;R12;7;L12;8;color;darkgray
 
+    - net3;L12;0;R12;2;L12;4;color;lightgray
+    - net3;R12;2;L12;4;R12;6;color;lightgray
+    - net3;L12;4;R12;6;L12;8;color;lightgray
+
+#    - net3;L12;0;R12;4;L12;8;color;white
+#
+    - net3;ERL1;0;ERR1;1;ERL1;2;color;darkgray
+    - net3;ERR1;1;ERL1;2;ERR1;3;color;darkgray
+    - net3;ERL1;2;ERR1;3;ERL1;4;color;darkgray
+    - net3;ERR1;3;ERL1;4;ERR1;5;color;darkgray
+    - net3;ERL1;4;ERR1;5;ERL1;6;color;darkgray
+    - net3;ERR1;5;ERL1;6;ERR1;7;color;darkgray
+    - net3;ERL1;6;ERR1;7;ERL1;8;color;darkgray
+
+    - net3;ERL1;0;ERR1;2;ERL1;4;color;lightgray
+    - net3;ERR1;2;ERL1;4;ERR1;6;color;lightgray
+    - net3;ERL1;4;ERR1;6;ERL1;8;color;lightgray
+
+#    - net3;ERL1;0;ERR1;4;ERL1;8;color;white
+#
+    - net3;ELL1;0;ELR1;1;ELL1;2;color;darkgray
+    - net3;ELR1;1;ELL1;2;ELR1;3;color;darkgray
+    - net3;ELL1;2;ELR1;3;ELL1;4;color;darkgray
+    - net3;ELR1;3;ELL1;4;ELR1;5;color;darkgray
+    - net3;ELL1;4;ELR1;5;ELL1;6;color;darkgray
+    - net3;ELR1;5;ELL1;6;ELR1;7;color;darkgray
+    - net3;ELL1;6;ELR1;7;ELL1;8;color;darkgray
+
+    - net3;ELL1;0;ELR1;2;ELL1;4;color;lightgray
+    - net3;ELR1;2;ELL1;4;ELR1;6;color;lightgray
+    - net3;ELL1;4;ELR1;6;ELL1;8;color;lightgray
+
+#    - net3;ELL1;0;ELR1;4;ELL1;8;color;white
   -
     - pagename;2021 12 21 | 6 | Pine with 8 steps
     - background;black
