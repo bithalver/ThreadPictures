@@ -246,6 +246,11 @@ sub draw_net {
   $AN{moon1}//=$TP_GLOBAL{moon1}; if ($TP_PARAMS{moon1}) {$AN{moon1}=$TP_PARAMS{moon1};}
   $AN{moon2}//=$TP_GLOBAL{moon2}; if ($TP_PARAMS{moon2}) {$AN{moon2}=$TP_PARAMS{moon2};}
 
+  if ($TP_GLOBAL{xymirror}) {
+    ($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY}) = ($AN{line1oY},$AN{line1oX},$AN{line1iY},$AN{line1iX}) ;
+    ($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY}) = ($AN{line2oY},$AN{line2oX},$AN{line2iY},$AN{line2iX}) ;
+  }
+
   for ($AN{'style'}) { # if ($opts_debug) { warn 'AN style: ',$AN{'style'},"\n";}
   when (/^normal$/i){ # old style was 0
     for my $weight ($AN{'firstthread'} .. $AN{'lastthread'}) {
@@ -407,7 +412,10 @@ sub process_element {
       }
       when (/^style$/i){
         $TP_all[@TP_all] = { type => 'style', string => splice(@AE,0,1) }
-	  }
+	    }
+      when (/^xymirror$/i){
+        $TP_all[@TP_all] = { type => 'xymirror', string => splice(@AE,0,1) }
+	    }
       default {warn "element '$_' is not (yet) supported (but processing goes on)\n";}
       }
 }
@@ -444,8 +452,11 @@ sub draw_all {
       when (/^color$/) { $TP_GLOBAL{color}=$ATPAE{color}}
       when (/^fontcolor$/) { $TP_GLOBAL{fontcolor}=$ATPAE{color}}
       when (/^style$/) { $TP_GLOBAL{style}=$ATPAE{string}}
+      when (/^xymirror$/) { $TP_GLOBAL{xymirror}=$ATPAE{string}}
     }
   }
+#  if (defined $TP_GLOBAL{xymirror}) { ($minX, $maxX, $minY, $maxY)=($minY, $maxY, $minX, $maxX) }
+  if ($TP_GLOBAL{xymirror} ) { ($minX, $maxX, $minY, $maxY)=($minY, $maxY, $minX, $maxX) }
   if (defined $TP_PARAMS{pagename}) {$pagename=$TP_PARAMS{pagename};}
   if (defined $TP_PARAMS{background}) {$bg=$TP_PARAMS{background};} $bg=colorconvert($bg);
   if ($minX == $maxX or $minY == $maxY ) {
@@ -500,6 +511,7 @@ sub draw_all {
       when (/^color$/) { }
       when (/^fontcolor$/) { }
       when (/^style$/) { }
+      when (/^xymirror$/) { }
 	  default {warn "type '$_' not implemented (yet); parameters were:\n".join(", ", map { "$_ => $ATPAE{$_}" } keys %ATPAE)."\n" ;}
     } ;
   }
@@ -511,6 +523,7 @@ sub draw_all {
   say "%%EndPage: \"$TP_GLOBAL{pagenumber}\" $TP_GLOBAL{pagenumber}";
 # prepare for the next page:empty @TP_all and increase page number
   undef @TP_all; $TP_GLOBAL{pagenumber}++;
+  delete $TP_GLOBAL{xymirror}; # mirroring is always for one page only
 }
 
 1;
