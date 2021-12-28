@@ -14,6 +14,11 @@ planes:
   - R12;connected;1;3;2;0;Line;12;0
   - L8;connected;1;3;0;0;Line;8;0
   - R8;connected;1;3;2;0;Line;8;0
+  - GL;geometric_line;9;2
+  - GL1;geometric_line;9;1
+# ./debug 20211221 2>&1| grep -EA1 "'GL'|'GL1'"
+# plane name: 'GL' content:
+# 0;0;2;0;6;0;14;0;30;0;62;0;126;0;254;0;510;0;1022;0
 pages:
   -
     - pagename;2021 12 21 | 1 | Pine shaped flame

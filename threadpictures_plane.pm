@@ -150,7 +150,7 @@ sub smaller_plane_1 { my @input=@_;
   return @output;
 }
 
-sub geometric_line { my($startX, $startY, $endX, $endY, $slices, $magnitude)=@_;
+sub geometric_line { my($slices, $magnitude)=@_;
   my @output;
   # print 1024**(1/5) ; exit 0 ; # output is 4 
   my @sections=(0);
@@ -162,7 +162,8 @@ sub geometric_line { my($startX, $startY, $endX, $endY, $slices, $magnitude)=@_;
 #  warnarray @sections;
   for my $i (0 .. $slices) {
     my $AM=$sections[$i]/$sections[$slices] ;
-    push @output,addvector(scalevector($endX, $endY,$AM),scalevector($startX, $startY,1-$AM));
+    # push @output,addvector(scalevector($startX, $endX, $AM),scalevector($startY, $endY, 1-$AM));
+    push @output,addvector(scalevector(0,1,$AM), 0);
   }
   return @output;
 }
