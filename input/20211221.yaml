@@ -413,6 +413,16 @@ pages:
   -
     - pagename;2021 12 21 | 1c | Pine shaped flame - Pac-Man
 
+    - net3;R12_1;0;R12_2;1;R12_1;2;color;CG_RY_00
+    - net3;R12_2;1;R12_1;2;R12_2;3;color;CG_RY_01
+    - net3;R12_1;2;R12_2;3;R12_1;4;color;CG_RY_02
+    - net3;R12_2;3;R12_1;4;R12_2;5;color;CG_RY_03
+    - net3;R12_1;4;R12_2;5;R12_1;6;color;CG_RY_04
+    - net3;R12_2;5;R12_1;6;R12_2;7;color;CG_RY_05
+    - net3;R12_1;6;R12_2;7;R12_1;8;color;CG_RY_06
+    - net3;R12_2;7;R12_1;8;R12_2;9;color;CG_RY_07
+    - net3;R12_1;8;R12_2;9;R12_1;10;color;CG_RY_08
+
     - net3;R12_3;0;R12_2;1;R12_3;2;color;CG_RY_00
     - net3;R12_2;1;R12_3;2;R12_2;3;color;CG_RY_01
     - net3;R12_3;2;R12_2;3;R12_3;4;color;CG_RY_02
@@ -483,26 +493,6 @@ pages:
     - net3;R12_8;7;R12_9;8;R12_8;9;color;CG_RY_07
     - net3;R12_9;8;R12_8;9;R12_9;10;color;CG_RY_08
 
-    - net3;R12_9;0;R12_10;1;R12_9;2;color;CG_RY_00
-    - net3;R12_10;1;R12_9;2;R12_10;3;color;CG_RY_01
-    - net3;R12_9;2;R12_10;3;R12_9;4;color;CG_RY_02
-    - net3;R12_10;3;R12_9;4;R12_10;5;color;CG_RY_03
-    - net3;R12_9;4;R12_10;5;R12_9;6;color;CG_RY_04
-    - net3;R12_10;5;R12_9;6;R12_10;7;color;CG_RY_05
-    - net3;R12_9;6;R12_10;7;R12_9;8;color;CG_RY_06
-    - net3;R12_10;7;R12_9;8;R12_10;9;color;CG_RY_07
-    - net3;R12_9;8;R12_10;9;R12_9;10;color;CG_RY_08
-
-    - net3;R12_11;0;R12_10;1;R12_11;2;color;CG_RY_00
-    - net3;R12_10;1;R12_11;2;R12_10;3;color;CG_RY_01
-    - net3;R12_11;2;R12_10;3;R12_11;4;color;CG_RY_02
-    - net3;R12_10;3;R12_11;4;R12_10;5;color;CG_RY_03
-    - net3;R12_11;4;R12_10;5;R12_11;6;color;CG_RY_04
-    - net3;R12_10;5;R12_11;6;R12_10;7;color;CG_RY_05
-    - net3;R12_11;6;R12_10;7;R12_11;8;color;CG_RY_06
-    - net3;R12_10;7;R12_11;8;R12_10;9;color;CG_RY_07
-    - net3;R12_11;8;R12_10;9;R12_11;10;color;CG_RY_08
-
     - net3;R12_11;0;R12_12;1;R12_11;2;color;CG_RY_00
     - net3;R12_12;1;R12_11;2;R12_12;3;color;CG_RY_01
     - net3;R12_11;2;R12_12;3;R12_11;4;color;CG_RY_02
@@ -512,6 +502,16 @@ pages:
     - net3;R12_11;6;R12_12;7;R12_11;8;color;CG_RY_06
     - net3;R12_12;7;R12_11;8;R12_12;9;color;CG_RY_07
     - net3;R12_11;8;R12_12;9;R12_11;10;color;CG_RY_08
+
+    - net3;R12_1;0;R12_12;1;R12_1;2;color;CG_RY_00
+    - net3;R12_12;1;R12_1;2;R12_12;3;color;CG_RY_01
+    - net3;R12_1;2;R12_12;3;R12_1;4;color;CG_RY_02
+    - net3;R12_12;3;R12_1;4;R12_12;5;color;CG_RY_03
+    - net3;R12_1;4;R12_12;5;R12_1;6;color;CG_RY_04
+    - net3;R12_12;5;R12_1;6;R12_12;7;color;CG_RY_05
+    - net3;R12_1;6;R12_12;7;R12_1;8;color;CG_RY_06
+    - net3;R12_12;7;R12_1;8;R12_12;9;color;CG_RY_07
+    - net3;R12_1;8;R12_12;9;R12_1;10;color;CG_RY_08
   -
     - pagename;2021 12 21 | 1e | Pine shaped flame - Alien radiation
 
