@@ -3,7 +3,7 @@ global:
     lastthread: 10
     background: darkgray
     color: lightgray
-    colorgradient: CG_RY;8;red;yellow;CG_GG;18;lightgray;darkgreen
+    colorgradient: CG_RY;8;red;yellow;CG_GG;18;lightgray;darkgreen;CG_AR1;8;darkgray;lightblue;CG_AR2;8;orange;darkgray
     style: filledcurve
     fontcolor: white
 planes:
@@ -290,6 +290,127 @@ pages:
     
     - net3;L8;0;R8;4;L8;8;color;white
   -
+    - pagename;2021 12 21 | 1d | Pine shaped flame - around the clock
+    - net3;R12_1;0;R12_2;1;R12_1;2;color;CG_RY_00
+    - net3;R12_2;1;R12_1;2;R12_2;3;color;CG_RY_01
+    - net3;R12_1;2;R12_2;3;R12_1;4;color;CG_RY_02
+    - net3;R12_2;3;R12_1;4;R12_2;5;color;CG_RY_03
+    - net3;R12_1;4;R12_2;5;R12_1;6;color;CG_RY_04
+    - net3;R12_2;5;R12_1;6;R12_2;7;color;CG_RY_05
+    - net3;R12_1;6;R12_2;7;R12_1;8;color;CG_RY_06
+    - net3;R12_2;7;R12_1;8;R12_2;9;color;CG_RY_07
+    - net3;R12_1;8;R12_2;9;R12_1;10;color;CG_RY_08
+
+    - net3;R12_2;0;R12_3;1;R12_2;2;color;CG_RY_00
+    - net3;R12_3;1;R12_2;2;R12_3;3;color;CG_RY_01
+    - net3;R12_2;2;R12_3;3;R12_2;4;color;CG_RY_02
+    - net3;R12_3;3;R12_2;4;R12_3;5;color;CG_RY_03
+    - net3;R12_2;4;R12_3;5;R12_2;6;color;CG_RY_04
+    - net3;R12_3;5;R12_2;6;R12_3;7;color;CG_RY_05
+    - net3;R12_2;6;R12_3;7;R12_2;8;color;CG_RY_06
+    - net3;R12_3;7;R12_2;8;R12_3;9;color;CG_RY_07
+    - net3;R12_2;8;R12_3;9;R12_2;10;color;CG_RY_08
+
+    - net3;R12_3;0;R12_4;1;R12_3;2;color;CG_RY_00
+    - net3;R12_4;1;R12_3;2;R12_4;3;color;CG_RY_01
+    - net3;R12_3;2;R12_4;3;R12_3;4;color;CG_RY_02
+    - net3;R12_4;3;R12_3;4;R12_4;5;color;CG_RY_03
+    - net3;R12_3;4;R12_4;5;R12_3;6;color;CG_RY_04
+    - net3;R12_4;5;R12_3;6;R12_4;7;color;CG_RY_05
+    - net3;R12_3;6;R12_4;7;R12_3;8;color;CG_RY_06
+    - net3;R12_4;7;R12_3;8;R12_4;9;color;CG_RY_07
+    - net3;R12_3;8;R12_4;9;R12_3;10;color;CG_RY_08
+
+    - net3;R12_4;0;R12_5;1;R12_4;2;color;CG_RY_00
+    - net3;R12_5;1;R12_4;2;R12_5;3;color;CG_RY_01
+    - net3;R12_4;2;R12_5;3;R12_4;4;color;CG_RY_02
+    - net3;R12_5;3;R12_4;4;R12_5;5;color;CG_RY_03
+    - net3;R12_4;4;R12_5;5;R12_4;6;color;CG_RY_04
+    - net3;R12_5;5;R12_4;6;R12_5;7;color;CG_RY_05
+    - net3;R12_4;6;R12_5;7;R12_4;8;color;CG_RY_06
+    - net3;R12_5;7;R12_4;8;R12_5;9;color;CG_RY_07
+    - net3;R12_4;8;R12_5;9;R12_4;10;color;CG_RY_08
+
+    - net3;R12_5;0;R12_6;1;R12_5;2;color;CG_RY_00
+    - net3;R12_6;1;R12_5;2;R12_6;3;color;CG_RY_01
+    - net3;R12_5;2;R12_6;3;R12_5;4;color;CG_RY_02
+    - net3;R12_6;3;R12_5;4;R12_6;5;color;CG_RY_03
+    - net3;R12_5;4;R12_6;5;R12_5;6;color;CG_RY_04
+    - net3;R12_6;5;R12_5;6;R12_6;7;color;CG_RY_05
+    - net3;R12_5;6;R12_6;7;R12_5;8;color;CG_RY_06
+    - net3;R12_6;7;R12_5;8;R12_6;9;color;CG_RY_07
+    - net3;R12_5;8;R12_6;9;R12_5;10;color;CG_RY_08
+
+    - net3;R12_6;0;R12_7;1;R12_6;2;color;CG_RY_00
+    - net3;R12_7;1;R12_6;2;R12_7;3;color;CG_RY_01
+    - net3;R12_6;2;R12_7;3;R12_6;4;color;CG_RY_02
+    - net3;R12_7;3;R12_6;4;R12_7;5;color;CG_RY_03
+    - net3;R12_6;4;R12_7;5;R12_6;6;color;CG_RY_04
+    - net3;R12_7;5;R12_6;6;R12_7;7;color;CG_RY_05
+    - net3;R12_6;6;R12_7;7;R12_6;8;color;CG_RY_06
+    - net3;R12_7;7;R12_6;8;R12_7;9;color;CG_RY_07
+    - net3;R12_6;8;R12_7;9;R12_6;10;color;CG_RY_08
+
+    - net3;R12_7;0;R12_8;1;R12_7;2;color;CG_RY_00
+    - net3;R12_8;1;R12_7;2;R12_8;3;color;CG_RY_01
+    - net3;R12_7;2;R12_8;3;R12_7;4;color;CG_RY_02
+    - net3;R12_8;3;R12_7;4;R12_8;5;color;CG_RY_03
+    - net3;R12_7;4;R12_8;5;R12_7;6;color;CG_RY_04
+    - net3;R12_8;5;R12_7;6;R12_8;7;color;CG_RY_05
+    - net3;R12_7;6;R12_8;7;R12_7;8;color;CG_RY_06
+    - net3;R12_8;7;R12_7;8;R12_8;9;color;CG_RY_07
+    - net3;R12_7;8;R12_8;9;R12_7;10;color;CG_RY_08
+
+    - net3;R12_8;0;R12_9;1;R12_8;2;color;CG_RY_00
+    - net3;R12_9;1;R12_8;2;R12_9;3;color;CG_RY_01
+    - net3;R12_8;2;R12_9;3;R12_8;4;color;CG_RY_02
+    - net3;R12_9;3;R12_8;4;R12_9;5;color;CG_RY_03
+    - net3;R12_8;4;R12_9;5;R12_8;6;color;CG_RY_04
+    - net3;R12_9;5;R12_8;6;R12_9;7;color;CG_RY_05
+    - net3;R12_8;6;R12_9;7;R12_8;8;color;CG_RY_06
+    - net3;R12_9;7;R12_8;8;R12_9;9;color;CG_RY_07
+    - net3;R12_8;8;R12_9;9;R12_8;10;color;CG_RY_08
+
+    - net3;R12_9;0;R12_10;1;R12_9;2;color;CG_RY_00
+    - net3;R12_10;1;R12_9;2;R12_10;3;color;CG_RY_01
+    - net3;R12_9;2;R12_10;3;R12_9;4;color;CG_RY_02
+    - net3;R12_10;3;R12_9;4;R12_10;5;color;CG_RY_03
+    - net3;R12_9;4;R12_10;5;R12_9;6;color;CG_RY_04
+    - net3;R12_10;5;R12_9;6;R12_10;7;color;CG_RY_05
+    - net3;R12_9;6;R12_10;7;R12_9;8;color;CG_RY_06
+    - net3;R12_10;7;R12_9;8;R12_10;9;color;CG_RY_07
+    - net3;R12_9;8;R12_10;9;R12_9;10;color;CG_RY_08
+
+    - net3;R12_10;0;R12_11;1;R12_10;2;color;CG_RY_00
+    - net3;R12_11;1;R12_10;2;R12_11;3;color;CG_RY_01
+    - net3;R12_10;2;R12_11;3;R12_10;4;color;CG_RY_02
+    - net3;R12_11;3;R12_10;4;R12_11;5;color;CG_RY_03
+    - net3;R12_10;4;R12_11;5;R12_10;6;color;CG_RY_04
+    - net3;R12_11;5;R12_10;6;R12_11;7;color;CG_RY_05
+    - net3;R12_10;6;R12_11;7;R12_10;8;color;CG_RY_06
+    - net3;R12_11;7;R12_10;8;R12_11;9;color;CG_RY_07
+    - net3;R12_10;8;R12_11;9;R12_10;10;color;CG_RY_08
+
+    - net3;R12_11;0;R12_12;1;R12_11;2;color;CG_RY_00
+    - net3;R12_12;1;R12_11;2;R12_12;3;color;CG_RY_01
+    - net3;R12_11;2;R12_12;3;R12_11;4;color;CG_RY_02
+    - net3;R12_12;3;R12_11;4;R12_12;5;color;CG_RY_03
+    - net3;R12_11;4;R12_12;5;R12_11;6;color;CG_RY_04
+    - net3;R12_12;5;R12_11;6;R12_12;7;color;CG_RY_05
+    - net3;R12_11;6;R12_12;7;R12_11;8;color;CG_RY_06
+    - net3;R12_12;7;R12_11;8;R12_12;9;color;CG_RY_07
+    - net3;R12_11;8;R12_12;9;R12_11;10;color;CG_RY_08
+
+    - net3;R12_12;0;R12_1;1;R12_12;2;color;CG_RY_00
+    - net3;R12_1;1;R12_12;2;R12_1;3;color;CG_RY_01
+    - net3;R12_12;2;R12_1;3;R12_12;4;color;CG_RY_02
+    - net3;R12_1;3;R12_12;4;R12_1;5;color;CG_RY_03
+    - net3;R12_12;4;R12_1;5;R12_12;6;color;CG_RY_04
+    - net3;R12_1;5;R12_12;6;R12_1;7;color;CG_RY_05
+    - net3;R12_12;6;R12_1;7;R12_12;8;color;CG_RY_06
+    - net3;R12_1;7;R12_12;8;R12_1;9;color;CG_RY_07
+    - net3;R12_12;8;R12_1;9;R12_12;10;color;CG_RY_08
+  -
     - pagename;2021 12 21 | 1b | Pine shaped flame - around the clock
     - net3;R12_1;0;R12_2;1;R12_1;2;color;CG_RY_00
     - net3;R12_2;1;R12_1;2;R12_2;3;color;CG_RY_01
@@ -514,6 +635,7 @@ pages:
     - net3;R12_1;8;R12_12;9;R12_1;10;color;CG_RY_08
   -
     - pagename;2021 12 21 | 1e | Pine shaped flame - Alien radiation
+    - background;black
 
     - net3;R12_2;0;R12_1;1;R12_2;2;color;CG_RY_00
     - net3;R12_1;1;R12_2;2;R12_1;3;color;CG_RY_01
@@ -535,16 +657,15 @@ pages:
     - net3;R12_1;7;R12_12;8;R12_1;9;color;CG_RY_07
     - net3;R12_12;8;R12_1;9;R12_12;10;color;CG_RY_08
 
-
-    - net3;R12_3;0;R12_2;1;R12_3;2;color;CG_RY_00
-    - net3;R12_2;1;R12_3;2;R12_2;3;color;CG_RY_01
-    - net3;R12_3;2;R12_2;3;R12_3;4;color;CG_RY_02
-    - net3;R12_2;3;R12_3;4;R12_2;5;color;CG_RY_03
-    - net3;R12_3;4;R12_2;5;R12_3;6;color;CG_RY_04
-    - net3;R12_2;5;R12_3;6;R12_2;7;color;CG_RY_05
-    - net3;R12_3;6;R12_2;7;R12_3;8;color;CG_RY_06
-    - net3;R12_2;7;R12_3;8;R12_2;9;color;CG_RY_07
-    - net3;R12_3;8;R12_2;9;R12_3;10;color;CG_RY_08
+    - net3;R12_3;0;R12_2;1;R12_3;2;color;CG_AR1_00
+    - net3;R12_2;1;R12_3;2;R12_2;3;color;CG_AR1_01
+    - net3;R12_3;2;R12_2;3;R12_3;4;color;CG_AR1_02
+    - net3;R12_2;3;R12_3;4;R12_2;5;color;CG_AR1_03
+    - net3;R12_3;4;R12_2;5;R12_3;6;color;CG_AR1_04
+    - net3;R12_2;5;R12_3;6;R12_2;7;color;CG_AR1_05
+    - net3;R12_3;6;R12_2;7;R12_3;8;color;CG_AR1_06
+    - net3;R12_2;7;R12_3;8;R12_2;9;color;CG_AR1_07
+    - net3;R12_3;8;R12_2;9;R12_3;10;color;CG_AR1_08
 
     - net3;R12_4;0;R12_3;1;R12_4;2;color;CG_RY_00
     - net3;R12_3;1;R12_4;2;R12_3;3;color;CG_RY_01
@@ -566,15 +687,15 @@ pages:
     - net3;R12_5;7;R12_4;8;R12_5;9;color;CG_RY_07
     - net3;R12_4;8;R12_5;9;R12_4;10;color;CG_RY_08
 
-    - net3;R12_5;0;R12_6;1;R12_5;2;color;CG_RY_00
-    - net3;R12_6;1;R12_5;2;R12_6;3;color;CG_RY_01
-    - net3;R12_5;2;R12_6;3;R12_5;4;color;CG_RY_02
-    - net3;R12_6;3;R12_5;4;R12_6;5;color;CG_RY_03
-    - net3;R12_5;4;R12_6;5;R12_5;6;color;CG_RY_04
-    - net3;R12_6;5;R12_5;6;R12_6;7;color;CG_RY_05
-    - net3;R12_5;6;R12_6;7;R12_5;8;color;CG_RY_06
-    - net3;R12_6;7;R12_5;8;R12_6;9;color;CG_RY_07
-    - net3;R12_5;8;R12_6;9;R12_5;10;color;CG_RY_08
+    - net3;R12_5;0;R12_6;1;R12_5;2;color;CG_AR1_00
+    - net3;R12_6;1;R12_5;2;R12_6;3;color;CG_AR1_01
+    - net3;R12_5;2;R12_6;3;R12_5;4;color;CG_AR1_02
+    - net3;R12_6;3;R12_5;4;R12_6;5;color;CG_AR1_03
+    - net3;R12_5;4;R12_6;5;R12_5;6;color;CG_AR1_04
+    - net3;R12_6;5;R12_5;6;R12_6;7;color;CG_AR1_05
+    - net3;R12_5;6;R12_6;7;R12_5;8;color;CG_AR1_06
+    - net3;R12_6;7;R12_5;8;R12_6;9;color;CG_AR1_07
+    - net3;R12_5;8;R12_6;9;R12_5;10;color;CG_AR1_08
 
     - net3;R12_6;0;R12_7;1;R12_6;2;color;CG_RY_00
     - net3;R12_7;1;R12_6;2;R12_7;3;color;CG_RY_01
@@ -596,15 +717,15 @@ pages:
     - net3;R12_7;7;R12_8;8;R12_7;9;color;CG_RY_07
     - net3;R12_8;8;R12_7;9;R12_8;10;color;CG_RY_08
 
-    - net3;R12_9;0;R12_8;1;R12_9;2;color;CG_RY_00
-    - net3;R12_8;1;R12_9;2;R12_8;3;color;CG_RY_01
-    - net3;R12_9;2;R12_8;3;R12_9;4;color;CG_RY_02
-    - net3;R12_8;3;R12_9;4;R12_8;5;color;CG_RY_03
-    - net3;R12_9;4;R12_8;5;R12_9;6;color;CG_RY_04
-    - net3;R12_8;5;R12_9;6;R12_8;7;color;CG_RY_05
-    - net3;R12_9;6;R12_8;7;R12_9;8;color;CG_RY_06
-    - net3;R12_8;7;R12_9;8;R12_8;9;color;CG_RY_07
-    - net3;R12_9;8;R12_8;9;R12_9;10;color;CG_RY_08
+    - net3;R12_9;0;R12_8;1;R12_9;2;color;CG_AR1_00
+    - net3;R12_8;1;R12_9;2;R12_8;3;color;CG_AR1_01
+    - net3;R12_9;2;R12_8;3;R12_9;4;color;CG_AR1_02
+    - net3;R12_8;3;R12_9;4;R12_8;5;color;CG_AR1_03
+    - net3;R12_9;4;R12_8;5;R12_9;6;color;CG_AR1_04
+    - net3;R12_8;5;R12_9;6;R12_8;7;color;CG_AR1_05
+    - net3;R12_9;6;R12_8;7;R12_9;8;color;CG_AR1_06
+    - net3;R12_8;7;R12_9;8;R12_8;9;color;CG_AR1_07
+    - net3;R12_9;8;R12_8;9;R12_9;10;color;CG_AR1_08
 
     - net3;R12_10;0;R12_9;1;R12_10;2;color;CG_RY_00
     - net3;R12_9;1;R12_10;2;R12_9;3;color;CG_RY_01
@@ -626,258 +747,261 @@ pages:
     - net3;R12_11;7;R12_10;8;R12_11;9;color;CG_RY_07
     - net3;R12_10;8;R12_11;9;R12_10;10;color;CG_RY_08
 
-    - net3;R12_11;0;R12_12;1;R12_11;2;color;CG_RY_00
-    - net3;R12_12;1;R12_11;2;R12_12;3;color;CG_RY_01
-    - net3;R12_11;2;R12_12;3;R12_11;4;color;CG_RY_02
-    - net3;R12_12;3;R12_11;4;R12_12;5;color;CG_RY_03
-    - net3;R12_11;4;R12_12;5;R12_11;6;color;CG_RY_04
-    - net3;R12_12;5;R12_11;6;R12_12;7;color;CG_RY_05
-    - net3;R12_11;6;R12_12;7;R12_11;8;color;CG_RY_06
-    - net3;R12_12;7;R12_11;8;R12_12;9;color;CG_RY_07
-    - net3;R12_11;8;R12_12;9;R12_11;10;color;CG_RY_08
+    - net3;R12_11;0;R12_12;1;R12_11;2;color;CG_AR1_00
+    - net3;R12_12;1;R12_11;2;R12_12;3;color;CG_AR1_01
+    - net3;R12_11;2;R12_12;3;R12_11;4;color;CG_AR1_02
+    - net3;R12_12;3;R12_11;4;R12_12;5;color;CG_AR1_03
+    - net3;R12_11;4;R12_12;5;R12_11;6;color;CG_AR1_04
+    - net3;R12_12;5;R12_11;6;R12_12;7;color;CG_AR1_05
+    - net3;R12_11;6;R12_12;7;R12_11;8;color;CG_AR1_06
+    - net3;R12_12;7;R12_11;8;R12_12;9;color;CG_AR1_07
+    - net3;R12_11;8;R12_12;9;R12_11;10;color;CG_AR1_08
   -
-    - pagename;2021 12 21 | 1d | Pine shaped flame - around the clock
-    - net3;R12_1;0;R12_2;1;R12_1;2;color;CG_RY_00
-    - net3;R12_2;1;R12_1;2;R12_2;3;color;CG_RY_01
-    - net3;R12_1;2;R12_2;3;R12_1;4;color;CG_RY_02
-    - net3;R12_2;3;R12_1;4;R12_2;5;color;CG_RY_03
-    - net3;R12_1;4;R12_2;5;R12_1;6;color;CG_RY_04
-    - net3;R12_2;5;R12_1;6;R12_2;7;color;CG_RY_05
-    - net3;R12_1;6;R12_2;7;R12_1;8;color;CG_RY_06
-    - net3;R12_2;7;R12_1;8;R12_2;9;color;CG_RY_07
-    - net3;R12_1;8;R12_2;9;R12_1;10;color;CG_RY_08
+    - pagename;2021 12 21 | 1f | Pine shaped flame - Alien radiation - opposite rotation
+    - background;black
 
-    - net3;R12_2;0;R12_3;1;R12_2;2;color;CG_RY_00
-    - net3;R12_3;1;R12_2;2;R12_3;3;color;CG_RY_01
-    - net3;R12_2;2;R12_3;3;R12_2;4;color;CG_RY_02
-    - net3;R12_3;3;R12_2;4;R12_3;5;color;CG_RY_03
-    - net3;R12_2;4;R12_3;5;R12_2;6;color;CG_RY_04
-    - net3;R12_3;5;R12_2;6;R12_3;7;color;CG_RY_05
-    - net3;R12_2;6;R12_3;7;R12_2;8;color;CG_RY_06
-    - net3;R12_3;7;R12_2;8;R12_3;9;color;CG_RY_07
-    - net3;R12_2;8;R12_3;9;R12_2;10;color;CG_RY_08
+    - net3;R12_2;0;R12_1;1;R12_2;2;color;CG_AR1_00
+    - net3;R12_1;1;R12_2;2;R12_1;3;color;CG_AR1_01
+    - net3;R12_2;2;R12_1;3;R12_2;4;color;CG_AR1_02
+    - net3;R12_1;3;R12_2;4;R12_1;5;color;CG_AR1_03
+    - net3;R12_2;4;R12_1;5;R12_2;6;color;CG_AR1_04
+    - net3;R12_1;5;R12_2;6;R12_1;7;color;CG_AR1_05
+    - net3;R12_2;6;R12_1;7;R12_2;8;color;CG_AR1_06
+    - net3;R12_1;7;R12_2;8;R12_1;9;color;CG_AR1_07
+    - net3;R12_2;8;R12_1;9;R12_2;10;color;CG_AR1_08
 
-    - net3;R12_3;0;R12_4;1;R12_3;2;color;CG_RY_00
-    - net3;R12_4;1;R12_3;2;R12_4;3;color;CG_RY_01
-    - net3;R12_3;2;R12_4;3;R12_3;4;color;CG_RY_02
-    - net3;R12_4;3;R12_3;4;R12_4;5;color;CG_RY_03
-    - net3;R12_3;4;R12_4;5;R12_3;6;color;CG_RY_04
-    - net3;R12_4;5;R12_3;6;R12_4;7;color;CG_RY_05
-    - net3;R12_3;6;R12_4;7;R12_3;8;color;CG_RY_06
-    - net3;R12_4;7;R12_3;8;R12_4;9;color;CG_RY_07
-    - net3;R12_3;8;R12_4;9;R12_3;10;color;CG_RY_08
+    - net3;R12_12;0;R12_1;1;R12_12;2;color;CG_AR2_00
+    - net3;R12_1;1;R12_12;2;R12_1;3;color;CG_AR2_01
+    - net3;R12_12;2;R12_1;3;R12_12;4;color;CG_AR2_02
+    - net3;R12_1;3;R12_12;4;R12_1;5;color;CG_AR2_03
+    - net3;R12_12;4;R12_1;5;R12_12;6;color;CG_AR2_04
+    - net3;R12_1;5;R12_12;6;R12_1;7;color;CG_AR2_05
+    - net3;R12_12;6;R12_1;7;R12_12;8;color;CG_AR2_06
+    - net3;R12_1;7;R12_12;8;R12_1;9;color;CG_AR2_07
+    - net3;R12_12;8;R12_1;9;R12_12;10;color;CG_AR2_08
 
-    - net3;R12_4;0;R12_5;1;R12_4;2;color;CG_RY_00
-    - net3;R12_5;1;R12_4;2;R12_5;3;color;CG_RY_01
-    - net3;R12_4;2;R12_5;3;R12_4;4;color;CG_RY_02
-    - net3;R12_5;3;R12_4;4;R12_5;5;color;CG_RY_03
-    - net3;R12_4;4;R12_5;5;R12_4;6;color;CG_RY_04
-    - net3;R12_5;5;R12_4;6;R12_5;7;color;CG_RY_05
-    - net3;R12_4;6;R12_5;7;R12_4;8;color;CG_RY_06
-    - net3;R12_5;7;R12_4;8;R12_5;9;color;CG_RY_07
-    - net3;R12_4;8;R12_5;9;R12_4;10;color;CG_RY_08
+    - net3;R12_3;0;R12_2;1;R12_3;2;color;CG_AR1_00
+    - net3;R12_2;1;R12_3;2;R12_2;3;color;CG_AR1_01
+    - net3;R12_3;2;R12_2;3;R12_3;4;color;CG_AR1_02
+    - net3;R12_2;3;R12_3;4;R12_2;5;color;CG_AR1_03
+    - net3;R12_3;4;R12_2;5;R12_3;6;color;CG_AR1_04
+    - net3;R12_2;5;R12_3;6;R12_2;7;color;CG_AR1_05
+    - net3;R12_3;6;R12_2;7;R12_3;8;color;CG_AR1_06
+    - net3;R12_2;7;R12_3;8;R12_2;9;color;CG_AR1_07
+    - net3;R12_3;8;R12_2;9;R12_3;10;color;CG_AR1_08
 
-    - net3;R12_5;0;R12_6;1;R12_5;2;color;CG_RY_00
-    - net3;R12_6;1;R12_5;2;R12_6;3;color;CG_RY_01
-    - net3;R12_5;2;R12_6;3;R12_5;4;color;CG_RY_02
-    - net3;R12_6;3;R12_5;4;R12_6;5;color;CG_RY_03
-    - net3;R12_5;4;R12_6;5;R12_5;6;color;CG_RY_04
-    - net3;R12_6;5;R12_5;6;R12_6;7;color;CG_RY_05
-    - net3;R12_5;6;R12_6;7;R12_5;8;color;CG_RY_06
-    - net3;R12_6;7;R12_5;8;R12_6;9;color;CG_RY_07
-    - net3;R12_5;8;R12_6;9;R12_5;10;color;CG_RY_08
+    - net3;R12_4;0;R12_3;1;R12_4;2;color;CG_AR1_00
+    - net3;R12_3;1;R12_4;2;R12_3;3;color;CG_AR1_01
+    - net3;R12_4;2;R12_3;3;R12_4;4;color;CG_AR1_02
+    - net3;R12_3;3;R12_4;4;R12_3;5;color;CG_AR1_03
+    - net3;R12_4;4;R12_3;5;R12_4;6;color;CG_AR1_04
+    - net3;R12_3;5;R12_4;6;R12_3;7;color;CG_AR1_05
+    - net3;R12_4;6;R12_3;7;R12_4;8;color;CG_AR1_06
+    - net3;R12_3;7;R12_4;8;R12_3;9;color;CG_AR1_07
+    - net3;R12_4;8;R12_3;9;R12_4;10;color;CG_AR1_08
 
-    - net3;R12_6;0;R12_7;1;R12_6;2;color;CG_RY_00
-    - net3;R12_7;1;R12_6;2;R12_7;3;color;CG_RY_01
-    - net3;R12_6;2;R12_7;3;R12_6;4;color;CG_RY_02
-    - net3;R12_7;3;R12_6;4;R12_7;5;color;CG_RY_03
-    - net3;R12_6;4;R12_7;5;R12_6;6;color;CG_RY_04
-    - net3;R12_7;5;R12_6;6;R12_7;7;color;CG_RY_05
-    - net3;R12_6;6;R12_7;7;R12_6;8;color;CG_RY_06
-    - net3;R12_7;7;R12_6;8;R12_7;9;color;CG_RY_07
-    - net3;R12_6;8;R12_7;9;R12_6;10;color;CG_RY_08
+    - net3;R12_4;0;R12_5;1;R12_4;2;color;CG_AR2_00
+    - net3;R12_5;1;R12_4;2;R12_5;3;color;CG_AR2_01
+    - net3;R12_4;2;R12_5;3;R12_4;4;color;CG_AR2_02
+    - net3;R12_5;3;R12_4;4;R12_5;5;color;CG_AR2_03
+    - net3;R12_4;4;R12_5;5;R12_4;6;color;CG_AR2_04
+    - net3;R12_5;5;R12_4;6;R12_5;7;color;CG_AR2_05
+    - net3;R12_4;6;R12_5;7;R12_4;8;color;CG_AR2_06
+    - net3;R12_5;7;R12_4;8;R12_5;9;color;CG_AR2_07
+    - net3;R12_4;8;R12_5;9;R12_4;10;color;CG_AR2_08
 
-    - net3;R12_7;0;R12_8;1;R12_7;2;color;CG_RY_00
-    - net3;R12_8;1;R12_7;2;R12_8;3;color;CG_RY_01
-    - net3;R12_7;2;R12_8;3;R12_7;4;color;CG_RY_02
-    - net3;R12_8;3;R12_7;4;R12_8;5;color;CG_RY_03
-    - net3;R12_7;4;R12_8;5;R12_7;6;color;CG_RY_04
-    - net3;R12_8;5;R12_7;6;R12_8;7;color;CG_RY_05
-    - net3;R12_7;6;R12_8;7;R12_7;8;color;CG_RY_06
-    - net3;R12_8;7;R12_7;8;R12_8;9;color;CG_RY_07
-    - net3;R12_7;8;R12_8;9;R12_7;10;color;CG_RY_08
+    - net3;R12_5;0;R12_6;1;R12_5;2;color;CG_AR2_00
+    - net3;R12_6;1;R12_5;2;R12_6;3;color;CG_AR2_01
+    - net3;R12_5;2;R12_6;3;R12_5;4;color;CG_AR2_02
+    - net3;R12_6;3;R12_5;4;R12_6;5;color;CG_AR2_03
+    - net3;R12_5;4;R12_6;5;R12_5;6;color;CG_AR2_04
+    - net3;R12_6;5;R12_5;6;R12_6;7;color;CG_AR2_05
+    - net3;R12_5;6;R12_6;7;R12_5;8;color;CG_AR2_06
+    - net3;R12_6;7;R12_5;8;R12_6;9;color;CG_AR2_07
+    - net3;R12_5;8;R12_6;9;R12_5;10;color;CG_AR2_08
 
-    - net3;R12_8;0;R12_9;1;R12_8;2;color;CG_RY_00
-    - net3;R12_9;1;R12_8;2;R12_9;3;color;CG_RY_01
-    - net3;R12_8;2;R12_9;3;R12_8;4;color;CG_RY_02
-    - net3;R12_9;3;R12_8;4;R12_9;5;color;CG_RY_03
-    - net3;R12_8;4;R12_9;5;R12_8;6;color;CG_RY_04
-    - net3;R12_9;5;R12_8;6;R12_9;7;color;CG_RY_05
-    - net3;R12_8;6;R12_9;7;R12_8;8;color;CG_RY_06
-    - net3;R12_9;7;R12_8;8;R12_9;9;color;CG_RY_07
-    - net3;R12_8;8;R12_9;9;R12_8;10;color;CG_RY_08
+    - net3;R12_6;0;R12_7;1;R12_6;2;color;CG_AR2_00
+    - net3;R12_7;1;R12_6;2;R12_7;3;color;CG_AR2_01
+    - net3;R12_6;2;R12_7;3;R12_6;4;color;CG_AR2_02
+    - net3;R12_7;3;R12_6;4;R12_7;5;color;CG_AR2_03
+    - net3;R12_6;4;R12_7;5;R12_6;6;color;CG_AR2_04
+    - net3;R12_7;5;R12_6;6;R12_7;7;color;CG_AR2_05
+    - net3;R12_6;6;R12_7;7;R12_6;8;color;CG_AR2_06
+    - net3;R12_7;7;R12_6;8;R12_7;9;color;CG_AR2_07
+    - net3;R12_6;8;R12_7;9;R12_6;10;color;CG_AR2_08
 
-    - net3;R12_9;0;R12_10;1;R12_9;2;color;CG_RY_00
-    - net3;R12_10;1;R12_9;2;R12_10;3;color;CG_RY_01
-    - net3;R12_9;2;R12_10;3;R12_9;4;color;CG_RY_02
-    - net3;R12_10;3;R12_9;4;R12_10;5;color;CG_RY_03
-    - net3;R12_9;4;R12_10;5;R12_9;6;color;CG_RY_04
-    - net3;R12_10;5;R12_9;6;R12_10;7;color;CG_RY_05
-    - net3;R12_9;6;R12_10;7;R12_9;8;color;CG_RY_06
-    - net3;R12_10;7;R12_9;8;R12_10;9;color;CG_RY_07
-    - net3;R12_9;8;R12_10;9;R12_9;10;color;CG_RY_08
+    - net3;R12_8;0;R12_7;1;R12_8;2;color;CG_AR1_00
+    - net3;R12_7;1;R12_8;2;R12_7;3;color;CG_AR1_01
+    - net3;R12_8;2;R12_7;3;R12_8;4;color;CG_AR1_02
+    - net3;R12_7;3;R12_8;4;R12_7;5;color;CG_AR1_03
+    - net3;R12_8;4;R12_7;5;R12_8;6;color;CG_AR1_04
+    - net3;R12_7;5;R12_8;6;R12_7;7;color;CG_AR1_05
+    - net3;R12_8;6;R12_7;7;R12_8;8;color;CG_AR1_06
+    - net3;R12_7;7;R12_8;8;R12_7;9;color;CG_AR1_07
+    - net3;R12_8;8;R12_7;9;R12_8;10;color;CG_AR1_08
 
-    - net3;R12_10;0;R12_11;1;R12_10;2;color;CG_RY_00
-    - net3;R12_11;1;R12_10;2;R12_11;3;color;CG_RY_01
-    - net3;R12_10;2;R12_11;3;R12_10;4;color;CG_RY_02
-    - net3;R12_11;3;R12_10;4;R12_11;5;color;CG_RY_03
-    - net3;R12_10;4;R12_11;5;R12_10;6;color;CG_RY_04
-    - net3;R12_11;5;R12_10;6;R12_11;7;color;CG_RY_05
-    - net3;R12_10;6;R12_11;7;R12_10;8;color;CG_RY_06
-    - net3;R12_11;7;R12_10;8;R12_11;9;color;CG_RY_07
-    - net3;R12_10;8;R12_11;9;R12_10;10;color;CG_RY_08
+    - net3;R12_9;0;R12_8;1;R12_9;2;color;CG_AR1_00
+    - net3;R12_8;1;R12_9;2;R12_8;3;color;CG_AR1_01
+    - net3;R12_9;2;R12_8;3;R12_9;4;color;CG_AR1_02
+    - net3;R12_8;3;R12_9;4;R12_8;5;color;CG_AR1_03
+    - net3;R12_9;4;R12_8;5;R12_9;6;color;CG_AR1_04
+    - net3;R12_8;5;R12_9;6;R12_8;7;color;CG_AR1_05
+    - net3;R12_9;6;R12_8;7;R12_9;8;color;CG_AR1_06
+    - net3;R12_8;7;R12_9;8;R12_8;9;color;CG_AR1_07
+    - net3;R12_9;8;R12_8;9;R12_9;10;color;CG_AR1_08
 
-    - net3;R12_11;0;R12_12;1;R12_11;2;color;CG_RY_00
-    - net3;R12_12;1;R12_11;2;R12_12;3;color;CG_RY_01
-    - net3;R12_11;2;R12_12;3;R12_11;4;color;CG_RY_02
-    - net3;R12_12;3;R12_11;4;R12_12;5;color;CG_RY_03
-    - net3;R12_11;4;R12_12;5;R12_11;6;color;CG_RY_04
-    - net3;R12_12;5;R12_11;6;R12_12;7;color;CG_RY_05
-    - net3;R12_11;6;R12_12;7;R12_11;8;color;CG_RY_06
-    - net3;R12_12;7;R12_11;8;R12_12;9;color;CG_RY_07
-    - net3;R12_11;8;R12_12;9;R12_11;10;color;CG_RY_08
+    - net3;R12_10;0;R12_9;1;R12_10;2;color;CG_AR1_00
+    - net3;R12_9;1;R12_10;2;R12_9;3;color;CG_AR1_01
+    - net3;R12_10;2;R12_9;3;R12_10;4;color;CG_AR1_02
+    - net3;R12_9;3;R12_10;4;R12_9;5;color;CG_AR1_03
+    - net3;R12_10;4;R12_9;5;R12_10;6;color;CG_AR1_04
+    - net3;R12_9;5;R12_10;6;R12_9;7;color;CG_AR1_05
+    - net3;R12_10;6;R12_9;7;R12_10;8;color;CG_AR1_06
+    - net3;R12_9;7;R12_10;8;R12_9;9;color;CG_AR1_07
+    - net3;R12_10;8;R12_9;9;R12_10;10;color;CG_AR1_08
 
-    - net3;R12_12;0;R12_1;1;R12_12;2;color;CG_RY_00
-    - net3;R12_1;1;R12_12;2;R12_1;3;color;CG_RY_01
-    - net3;R12_12;2;R12_1;3;R12_12;4;color;CG_RY_02
-    - net3;R12_1;3;R12_12;4;R12_1;5;color;CG_RY_03
-    - net3;R12_12;4;R12_1;5;R12_12;6;color;CG_RY_04
-    - net3;R12_1;5;R12_12;6;R12_1;7;color;CG_RY_05
-    - net3;R12_12;6;R12_1;7;R12_12;8;color;CG_RY_06
-    - net3;R12_1;7;R12_12;8;R12_1;9;color;CG_RY_07
-    - net3;R12_12;8;R12_1;9;R12_12;10;color;CG_RY_08
+    - net3;R12_10;0;R12_11;1;R12_10;2;color;CG_AR2_00
+    - net3;R12_11;1;R12_10;2;R12_11;3;color;CG_AR2_01
+    - net3;R12_10;2;R12_11;3;R12_10;4;color;CG_AR2_02
+    - net3;R12_11;3;R12_10;4;R12_11;5;color;CG_AR2_03
+    - net3;R12_10;4;R12_11;5;R12_10;6;color;CG_AR2_04
+    - net3;R12_11;5;R12_10;6;R12_11;7;color;CG_AR2_05
+    - net3;R12_10;6;R12_11;7;R12_10;8;color;CG_AR2_06
+    - net3;R12_11;7;R12_10;8;R12_11;9;color;CG_AR2_07
+    - net3;R12_10;8;R12_11;9;R12_10;10;color;CG_AR2_08
+
+    - net3;R12_11;0;R12_12;1;R12_11;2;color;CG_AR2_00
+    - net3;R12_12;1;R12_11;2;R12_12;3;color;CG_AR2_01
+    - net3;R12_11;2;R12_12;3;R12_11;4;color;CG_AR2_02
+    - net3;R12_12;3;R12_11;4;R12_12;5;color;CG_AR2_03
+    - net3;R12_11;4;R12_12;5;R12_11;6;color;CG_AR2_04
+    - net3;R12_12;5;R12_11;6;R12_12;7;color;CG_AR2_05
+    - net3;R12_11;6;R12_12;7;R12_11;8;color;CG_AR2_06
+    - net3;R12_12;7;R12_11;8;R12_12;9;color;CG_AR2_07
+    - net3;R12_11;8;R12_12;9;R12_11;10;color;CG_AR2_08
   -
     - pagename;2021 12 21 | 1a | Pine shaped flame - around - half-face
+    - background;black
 
-    - net3;R12_5;0;R12_4;1;R12_5;2;color;CG_RY_00
-    - net3;R12_4;1;R12_5;2;R12_4;3;color;CG_RY_01
-    - net3;R12_5;2;R12_4;3;R12_5;4;color;CG_RY_02
-    - net3;R12_4;3;R12_5;4;R12_4;5;color;CG_RY_03
-    - net3;R12_5;4;R12_4;5;R12_5;6;color;CG_RY_04
-    - net3;R12_4;5;R12_5;6;R12_4;7;color;CG_RY_05
-    - net3;R12_5;6;R12_4;7;R12_5;8;color;CG_RY_06
-    - net3;R12_4;7;R12_5;8;R12_4;9;color;CG_RY_07
-    - net3;R12_5;8;R12_4;9;R12_5;10;color;CG_RY_08
+    - net3;R12_5;0;R12_4;1;R12_5;2;color;CG_AR1_00
+    - net3;R12_4;1;R12_5;2;R12_4;3;color;CG_AR1_01
+    - net3;R12_5;2;R12_4;3;R12_5;4;color;CG_AR1_02
+    - net3;R12_4;3;R12_5;4;R12_4;5;color;CG_AR1_03
+    - net3;R12_5;4;R12_4;5;R12_5;6;color;CG_AR1_04
+    - net3;R12_4;5;R12_5;6;R12_4;7;color;CG_AR1_05
+    - net3;R12_5;6;R12_4;7;R12_5;8;color;CG_AR1_06
+    - net3;R12_4;7;R12_5;8;R12_4;9;color;CG_AR1_07
+    - net3;R12_5;8;R12_4;9;R12_5;10;color;CG_AR1_08
 
-    - net3;R12_5;0;R12_6;1;R12_5;2;color;CG_RY_00
-    - net3;R12_6;1;R12_5;2;R12_6;3;color;CG_RY_01
-    - net3;R12_5;2;R12_6;3;R12_5;4;color;CG_RY_02
-    - net3;R12_6;3;R12_5;4;R12_6;5;color;CG_RY_03
-    - net3;R12_5;4;R12_6;5;R12_5;6;color;CG_RY_04
-    - net3;R12_6;5;R12_5;6;R12_6;7;color;CG_RY_05
-    - net3;R12_5;6;R12_6;7;R12_5;8;color;CG_RY_06
-    - net3;R12_6;7;R12_5;8;R12_6;9;color;CG_RY_07
-    - net3;R12_5;8;R12_6;9;R12_5;10;color;CG_RY_08
+    - net3;R12_5;0;R12_6;1;R12_5;2;color;CG_AR1_00
+    - net3;R12_6;1;R12_5;2;R12_6;3;color;CG_AR1_01
+    - net3;R12_5;2;R12_6;3;R12_5;4;color;CG_AR1_02
+    - net3;R12_6;3;R12_5;4;R12_6;5;color;CG_AR1_03
+    - net3;R12_5;4;R12_6;5;R12_5;6;color;CG_AR1_04
+    - net3;R12_6;5;R12_5;6;R12_6;7;color;CG_AR1_05
+    - net3;R12_5;6;R12_6;7;R12_5;8;color;CG_AR1_06
+    - net3;R12_6;7;R12_5;8;R12_6;9;color;CG_AR1_07
+    - net3;R12_5;8;R12_6;9;R12_5;10;color;CG_AR1_08
 
-    - net3;R12_7;0;R12_6;1;R12_7;2;color;CG_RY_00
-    - net3;R12_6;1;R12_7;2;R12_6;3;color;CG_RY_01
-    - net3;R12_7;2;R12_6;3;R12_7;4;color;CG_RY_02
-    - net3;R12_6;3;R12_7;4;R12_6;5;color;CG_RY_03
-    - net3;R12_7;4;R12_6;5;R12_7;6;color;CG_RY_04
-    - net3;R12_6;5;R12_7;6;R12_6;7;color;CG_RY_05
-    - net3;R12_7;6;R12_6;7;R12_7;8;color;CG_RY_06
-    - net3;R12_6;7;R12_7;8;R12_6;9;color;CG_RY_07
-    - net3;R12_7;8;R12_6;9;R12_7;10;color;CG_RY_08
+    - net3;R12_7;0;R12_6;1;R12_7;2;color;CG_AR1_00
+    - net3;R12_6;1;R12_7;2;R12_6;3;color;CG_AR1_01
+    - net3;R12_7;2;R12_6;3;R12_7;4;color;CG_AR1_02
+    - net3;R12_6;3;R12_7;4;R12_6;5;color;CG_AR1_03
+    - net3;R12_7;4;R12_6;5;R12_7;6;color;CG_AR1_04
+    - net3;R12_6;5;R12_7;6;R12_6;7;color;CG_AR1_05
+    - net3;R12_7;6;R12_6;7;R12_7;8;color;CG_AR1_06
+    - net3;R12_6;7;R12_7;8;R12_6;9;color;CG_AR1_07
+    - net3;R12_7;8;R12_6;9;R12_7;10;color;CG_AR1_08
 
-    - net3;R12_7;0;R12_8;1;R12_7;2;color;CG_RY_00
-    - net3;R12_8;1;R12_7;2;R12_8;3;color;CG_RY_01
-    - net3;R12_7;2;R12_8;3;R12_7;4;color;CG_RY_02
-    - net3;R12_8;3;R12_7;4;R12_8;5;color;CG_RY_03
-    - net3;R12_7;4;R12_8;5;R12_7;6;color;CG_RY_04
-    - net3;R12_8;5;R12_7;6;R12_8;7;color;CG_RY_05
-    - net3;R12_7;6;R12_8;7;R12_7;8;color;CG_RY_06
-    - net3;R12_8;7;R12_7;8;R12_8;9;color;CG_RY_07
-    - net3;R12_7;8;R12_8;9;R12_7;10;color;CG_RY_08
+    - net3;R12_7;0;R12_8;1;R12_7;2;color;CG_AR1_00
+    - net3;R12_8;1;R12_7;2;R12_8;3;color;CG_AR1_01
+    - net3;R12_7;2;R12_8;3;R12_7;4;color;CG_AR1_02
+    - net3;R12_8;3;R12_7;4;R12_8;5;color;CG_AR1_03
+    - net3;R12_7;4;R12_8;5;R12_7;6;color;CG_AR1_04
+    - net3;R12_8;5;R12_7;6;R12_8;7;color;CG_AR1_05
+    - net3;R12_7;6;R12_8;7;R12_7;8;color;CG_AR1_06
+    - net3;R12_8;7;R12_7;8;R12_8;9;color;CG_AR1_07
+    - net3;R12_7;8;R12_8;9;R12_7;10;color;CG_AR1_08
 
-    - net3;R12_9;0;R12_8;1;R12_9;2;color;CG_RY_00
-    - net3;R12_8;1;R12_9;2;R12_8;3;color;CG_RY_01
-    - net3;R12_9;2;R12_8;3;R12_9;4;color;CG_RY_02
-    - net3;R12_8;3;R12_9;4;R12_8;5;color;CG_RY_03
-    - net3;R12_9;4;R12_8;5;R12_9;6;color;CG_RY_04
-    - net3;R12_8;5;R12_9;6;R12_8;7;color;CG_RY_05
-    - net3;R12_9;6;R12_8;7;R12_9;8;color;CG_RY_06
-    - net3;R12_8;7;R12_9;8;R12_8;9;color;CG_RY_07
-    - net3;R12_9;8;R12_8;9;R12_9;10;color;CG_RY_08
+    - net3;R12_9;0;R12_8;1;R12_9;2;color;CG_AR1_00
+    - net3;R12_8;1;R12_9;2;R12_8;3;color;CG_AR1_01
+    - net3;R12_9;2;R12_8;3;R12_9;4;color;CG_AR1_02
+    - net3;R12_8;3;R12_9;4;R12_8;5;color;CG_AR1_03
+    - net3;R12_9;4;R12_8;5;R12_9;6;color;CG_AR1_04
+    - net3;R12_8;5;R12_9;6;R12_8;7;color;CG_AR1_05
+    - net3;R12_9;6;R12_8;7;R12_9;8;color;CG_AR1_06
+    - net3;R12_8;7;R12_9;8;R12_8;9;color;CG_AR1_07
+    - net3;R12_9;8;R12_8;9;R12_9;10;color;CG_AR1_08
 
-    - net3;R12_9;0;R12_10;1;R12_9;2;color;CG_RY_00
-    - net3;R12_10;1;R12_9;2;R12_10;3;color;CG_RY_01
-    - net3;R12_9;2;R12_10;3;R12_9;4;color;CG_RY_02
-    - net3;R12_10;3;R12_9;4;R12_10;5;color;CG_RY_03
-    - net3;R12_9;4;R12_10;5;R12_9;6;color;CG_RY_04
-    - net3;R12_10;5;R12_9;6;R12_10;7;color;CG_RY_05
-    - net3;R12_9;6;R12_10;7;R12_9;8;color;CG_RY_06
-    - net3;R12_10;7;R12_9;8;R12_10;9;color;CG_RY_07
-    - net3;R12_9;8;R12_10;9;R12_9;10;color;CG_RY_08
+    - net3;R12_9;0;R12_10;1;R12_9;2;color;CG_AR1_00
+    - net3;R12_10;1;R12_9;2;R12_10;3;color;CG_AR1_01
+    - net3;R12_9;2;R12_10;3;R12_9;4;color;CG_AR1_02
+    - net3;R12_10;3;R12_9;4;R12_10;5;color;CG_AR1_03
+    - net3;R12_9;4;R12_10;5;R12_9;6;color;CG_AR1_04
+    - net3;R12_10;5;R12_9;6;R12_10;7;color;CG_AR1_05
+    - net3;R12_9;6;R12_10;7;R12_9;8;color;CG_AR1_06
+    - net3;R12_10;7;R12_9;8;R12_10;9;color;CG_AR1_07
+    - net3;R12_9;8;R12_10;9;R12_9;10;color;CG_AR1_08
 
 
 
-    - net3;R12_1;0;R12_2;1;R12_1;2;color;CG_RY_00
-    - net3;R12_2;1;R12_1;2;R12_2;3;color;CG_RY_01
-    - net3;R12_1;2;R12_2;3;R12_1;4;color;CG_RY_02
-    - net3;R12_2;3;R12_1;4;R12_2;5;color;CG_RY_03
-    - net3;R12_1;4;R12_2;5;R12_1;6;color;CG_RY_04
-    - net3;R12_2;5;R12_1;6;R12_2;7;color;CG_RY_05
-    - net3;R12_1;6;R12_2;7;R12_1;8;color;CG_RY_06
-    - net3;R12_2;7;R12_1;8;R12_2;9;color;CG_RY_07
-    - net3;R12_1;8;R12_2;9;R12_1;10;color;CG_RY_08
+    - net3;R12_1;0;R12_2;1;R12_1;2;color;CG_AR2_00
+    - net3;R12_2;1;R12_1;2;R12_2;3;color;CG_AR2_01
+    - net3;R12_1;2;R12_2;3;R12_1;4;color;CG_AR2_02
+    - net3;R12_2;3;R12_1;4;R12_2;5;color;CG_AR2_03
+    - net3;R12_1;4;R12_2;5;R12_1;6;color;CG_AR2_04
+    - net3;R12_2;5;R12_1;6;R12_2;7;color;CG_AR2_05
+    - net3;R12_1;6;R12_2;7;R12_1;8;color;CG_AR2_06
+    - net3;R12_2;7;R12_1;8;R12_2;9;color;CG_AR2_07
+    - net3;R12_1;8;R12_2;9;R12_1;10;color;CG_AR2_08
 
-    - net3;R12_2;0;R12_3;1;R12_2;2;color;CG_RY_00
-    - net3;R12_3;1;R12_2;2;R12_3;3;color;CG_RY_01
-    - net3;R12_2;2;R12_3;3;R12_2;4;color;CG_RY_02
-    - net3;R12_3;3;R12_2;4;R12_3;5;color;CG_RY_03
-    - net3;R12_2;4;R12_3;5;R12_2;6;color;CG_RY_04
-    - net3;R12_3;5;R12_2;6;R12_3;7;color;CG_RY_05
-    - net3;R12_2;6;R12_3;7;R12_2;8;color;CG_RY_06
-    - net3;R12_3;7;R12_2;8;R12_3;9;color;CG_RY_07
-    - net3;R12_2;8;R12_3;9;R12_2;10;color;CG_RY_08
+    - net3;R12_2;0;R12_3;1;R12_2;2;color;CG_AR2_00
+    - net3;R12_3;1;R12_2;2;R12_3;3;color;CG_AR2_01
+    - net3;R12_2;2;R12_3;3;R12_2;4;color;CG_AR2_02
+    - net3;R12_3;3;R12_2;4;R12_3;5;color;CG_AR2_03
+    - net3;R12_2;4;R12_3;5;R12_2;6;color;CG_AR2_04
+    - net3;R12_3;5;R12_2;6;R12_3;7;color;CG_AR2_05
+    - net3;R12_2;6;R12_3;7;R12_2;8;color;CG_AR2_06
+    - net3;R12_3;7;R12_2;8;R12_3;9;color;CG_AR2_07
+    - net3;R12_2;8;R12_3;9;R12_2;10;color;CG_AR2_08
 
-    - net3;R12_3;0;R12_4;1;R12_3;2;color;CG_RY_00
-    - net3;R12_4;1;R12_3;2;R12_4;3;color;CG_RY_01
-    - net3;R12_3;2;R12_4;3;R12_3;4;color;CG_RY_02
-    - net3;R12_4;3;R12_3;4;R12_4;5;color;CG_RY_03
-    - net3;R12_3;4;R12_4;5;R12_3;6;color;CG_RY_04
-    - net3;R12_4;5;R12_3;6;R12_4;7;color;CG_RY_05
-    - net3;R12_3;6;R12_4;7;R12_3;8;color;CG_RY_06
-    - net3;R12_4;7;R12_3;8;R12_4;9;color;CG_RY_07
-    - net3;R12_3;8;R12_4;9;R12_3;10;color;CG_RY_08
+    - net3;R12_3;0;R12_4;1;R12_3;2;color;CG_AR2_00
+    - net3;R12_4;1;R12_3;2;R12_4;3;color;CG_AR2_01
+    - net3;R12_3;2;R12_4;3;R12_3;4;color;CG_AR2_02
+    - net3;R12_4;3;R12_3;4;R12_4;5;color;CG_AR2_03
+    - net3;R12_3;4;R12_4;5;R12_3;6;color;CG_AR2_04
+    - net3;R12_4;5;R12_3;6;R12_4;7;color;CG_AR2_05
+    - net3;R12_3;6;R12_4;7;R12_3;8;color;CG_AR2_06
+    - net3;R12_4;7;R12_3;8;R12_4;9;color;CG_AR2_07
+    - net3;R12_3;8;R12_4;9;R12_3;10;color;CG_AR2_08
 
-    - net3;R12_10;0;R12_11;1;R12_10;2;color;CG_RY_00
-    - net3;R12_11;1;R12_10;2;R12_11;3;color;CG_RY_01
-    - net3;R12_10;2;R12_11;3;R12_10;4;color;CG_RY_02
-    - net3;R12_11;3;R12_10;4;R12_11;5;color;CG_RY_03
-    - net3;R12_10;4;R12_11;5;R12_10;6;color;CG_RY_04
-    - net3;R12_11;5;R12_10;6;R12_11;7;color;CG_RY_05
-    - net3;R12_10;6;R12_11;7;R12_10;8;color;CG_RY_06
-    - net3;R12_11;7;R12_10;8;R12_11;9;color;CG_RY_07
-    - net3;R12_10;8;R12_11;9;R12_10;10;color;CG_RY_08
+    - net3;R12_10;0;R12_11;1;R12_10;2;color;CG_AR2_00
+    - net3;R12_11;1;R12_10;2;R12_11;3;color;CG_AR2_01
+    - net3;R12_10;2;R12_11;3;R12_10;4;color;CG_AR2_02
+    - net3;R12_11;3;R12_10;4;R12_11;5;color;CG_AR2_03
+    - net3;R12_10;4;R12_11;5;R12_10;6;color;CG_AR2_04
+    - net3;R12_11;5;R12_10;6;R12_11;7;color;CG_AR2_05
+    - net3;R12_10;6;R12_11;7;R12_10;8;color;CG_AR2_06
+    - net3;R12_11;7;R12_10;8;R12_11;9;color;CG_AR2_07
+    - net3;R12_10;8;R12_11;9;R12_10;10;color;CG_AR2_08
 
-    - net3;R12_11;0;R12_12;1;R12_11;2;color;CG_RY_00
-    - net3;R12_12;1;R12_11;2;R12_12;3;color;CG_RY_01
-    - net3;R12_11;2;R12_12;3;R12_11;4;color;CG_RY_02
-    - net3;R12_12;3;R12_11;4;R12_12;5;color;CG_RY_03
-    - net3;R12_11;4;R12_12;5;R12_11;6;color;CG_RY_04
-    - net3;R12_12;5;R12_11;6;R12_12;7;color;CG_RY_05
-    - net3;R12_11;6;R12_12;7;R12_11;8;color;CG_RY_06
-    - net3;R12_12;7;R12_11;8;R12_12;9;color;CG_RY_07
-    - net3;R12_11;8;R12_12;9;R12_11;10;color;CG_RY_08
+    - net3;R12_11;0;R12_12;1;R12_11;2;color;CG_AR2_00
+    - net3;R12_12;1;R12_11;2;R12_12;3;color;CG_AR2_01
+    - net3;R12_11;2;R12_12;3;R12_11;4;color;CG_AR2_02
+    - net3;R12_12;3;R12_11;4;R12_12;5;color;CG_AR2_03
+    - net3;R12_11;4;R12_12;5;R12_11;6;color;CG_AR2_04
+    - net3;R12_12;5;R12_11;6;R12_12;7;color;CG_AR2_05
+    - net3;R12_11;6;R12_12;7;R12_11;8;color;CG_AR2_06
+    - net3;R12_12;7;R12_11;8;R12_12;9;color;CG_AR2_07
+    - net3;R12_11;8;R12_12;9;R12_11;10;color;CG_AR2_08
 
-    - net3;R12_12;0;R12_1;1;R12_12;2;color;CG_RY_00
-    - net3;R12_1;1;R12_12;2;R12_1;3;color;CG_RY_01
-    - net3;R12_12;2;R12_1;3;R12_12;4;color;CG_RY_02
-    - net3;R12_1;3;R12_12;4;R12_1;5;color;CG_RY_03
-    - net3;R12_12;4;R12_1;5;R12_12;6;color;CG_RY_04
-    - net3;R12_1;5;R12_12;6;R12_1;7;color;CG_RY_05
-    - net3;R12_12;6;R12_1;7;R12_12;8;color;CG_RY_06
-    - net3;R12_1;7;R12_12;8;R12_1;9;color;CG_RY_07
-    - net3;R12_12;8;R12_1;9;R12_12;10;color;CG_RY_08
+    - net3;R12_12;0;R12_1;1;R12_12;2;color;CG_AR2_00
+    - net3;R12_1;1;R12_12;2;R12_1;3;color;CG_AR2_01
+    - net3;R12_12;2;R12_1;3;R12_12;4;color;CG_AR2_02
+    - net3;R12_1;3;R12_12;4;R12_1;5;color;CG_AR2_03
+    - net3;R12_12;4;R12_1;5;R12_12;6;color;CG_AR2_04
+    - net3;R12_1;5;R12_12;6;R12_1;7;color;CG_AR2_05
+    - net3;R12_12;6;R12_1;7;R12_12;8;color;CG_AR2_06
+    - net3;R12_1;7;R12_12;8;R12_1;9;color;CG_AR2_07
+    - net3;R12_12;8;R12_1;9;R12_12;10;color;CG_AR2_08
 
