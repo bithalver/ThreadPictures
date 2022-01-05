@@ -246,6 +246,12 @@ sub draw_net {
   $AN{moon1}//=$TP_GLOBAL{moon1}; if ($TP_PARAMS{moon1}) {$AN{moon1}=$TP_PARAMS{moon1};}
   $AN{moon2}//=$TP_GLOBAL{moon2}; if ($TP_PARAMS{moon2}) {$AN{moon2}=$TP_PARAMS{moon2};}
 
+  { # Handling shiftX and shiftY parameters for a net
+    no warnings 'uninitialized';
+    ($AN{line1oX},$AN{line1iX},$AN{line2oX},$AN{line2iX})=($AN{line1oX}+$AN{shiftX},$AN{line1iX}+$AN{shiftX},$AN{line2oX}+$AN{shiftX},$AN{line2iX}+$AN{shiftX});
+    ($AN{line1oY},$AN{line1iY},$AN{line2oY},$AN{line2iY})=($AN{line1oY}+$AN{shiftY},$AN{line1iY}+$AN{shiftY},$AN{line2oY}+$AN{shiftY},$AN{line2iY}+$AN{shiftY});
+  }
+
   if ($TP_GLOBAL{xymirror}) {
     ($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY}) = ($AN{line1oY},$AN{line1oX},$AN{line1iY},$AN{line1iX}) ;
     ($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY}) = ($AN{line2oY},$AN{line2oX},$AN{line2iY},$AN{line2iX}) ;
@@ -443,9 +449,10 @@ sub draw_all {
     if ($opts_debug) { warnhash %ATPAE };
     for ($ATPAE{'type'}) {
       when (/^net$/) {
-        $minX//=$ATPAE{line1oX}; $maxX//=$ATPAE{line1oX}; $minY//=$ATPAE{line1oY}; $maxY//=$ATPAE{line1oY};
-	    ($minX,$maxX)=minmax($minX,$maxX,$ATPAE{line1oX},$ATPAE{line1iX},$ATPAE{line2oX},$ATPAE{line2iX});
-        ($minY,$maxY)=minmax($minY,$maxY,$ATPAE{line1oY},$ATPAE{line1iY},$ATPAE{line2oY},$ATPAE{line2iY});
+        no warnings 'uninitialized';  # Handling shiftX and shiftY parameters for a net; they are default to zero.
+        $minX//=$ATPAE{line1oX}+$ATPAE{shiftX}; $maxX//=$ATPAE{line1oX}+$ATPAE{shiftX}; $minY//=$ATPAE{line1oY}+$ATPAE{shiftY}; $maxY//=$ATPAE{line1oY}+$ATPAE{shiftY};
+	    ($minX,$maxX)=minmax($minX,$maxX,$ATPAE{line1oX}+$ATPAE{shiftX},$ATPAE{line1iX}+$ATPAE{shiftX},$ATPAE{line2oX}+$ATPAE{shiftX},$ATPAE{line2iX}+$ATPAE{shiftX});
+        ($minY,$maxY)=minmax($minY,$maxY,$ATPAE{line1oY}+$ATPAE{shiftY},$ATPAE{line1iY}+$ATPAE{shiftY},$ATPAE{line2oY}+$ATPAE{shiftY},$ATPAE{line2iY}+$ATPAE{shiftY});
       }
       when (/^pagename$/) { $pagename=$ATPAE{string} ;}
       when (/^background$/) { $bg=$ATPAE{color} ;}
