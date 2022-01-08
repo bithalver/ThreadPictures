@@ -742,6 +742,7 @@ pages:
   -
     - pagename;2021 12 21 | 1e | Pine shaped flame - Alien radiation
     - background;black
+    - xymirror;1
 
     - net3;R12_2;0;R12_1;1;R12_2;2;color;CG_RY_00
     - net3;R12_1;1;R12_2;2;R12_1;3;color;CG_RY_01
