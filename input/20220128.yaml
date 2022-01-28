@@ -1,0 +1,55 @@
+global:
+    threads: 10
+    lastthread: 10
+    background: darkgray
+    color: lightgray
+#    style: filledcurve
+    fontcolor: white
+planes:
+#  - g_;grid;10;10
+  - Line;freeform;0;0;1;0;2;0;3;0;4;0;5;0;6;0;7;0;8;0;9;0;10;0;11;0;12;0
+  - R3;regular;3;90
+  - R3_12;connected;R3;1;R3;2;Line;0;12
+  - R3_31;connected;R3;3;R3;1;Line;0;12
+  - R3_01;connected;R3;0;R3;1;Line;0;10
+  - R3_02;connected;R3;0;R3;2;Line;0;10
+  - R3_03;connected;R3;0;R3;3;Line;0;10
+  - R3_1231;connected;R3_12;6;R3_31;6;Line;0;12
+  - R3_full;freeform;R3;0;R3;1;R3_12;6;R3_31;6;R3_1231;3;R3_1231;9
+  - R3_f_i1;connected;R3_01;0;R3_01;10;R3_full;0;1
+  - R3_f_i2;connected;R3_02;0;R3_02;10;R3_full;0;1
+  - R3_f_i3;connected;R3_03;0;R3_03;10;R3_full;0;1
+  - R3_f_o1;connected;R3_01;2;R3_01;12;R3_full;0;1
+  - R3_f_o2;connected;R3_02;2;R3_02;12;R3_full;0;1
+  - R3_f_o3;connected;R3_03;2;R3_03;12;R3_full;0;1
+
+pages:
+  -
+    - pagename;2022 01 28 | all 3
+    - net3s;R3_f_i1;0;2;1 #;style;0,1,2,3,4,5,10
+    - net3s;R3_f_i1;0;3;1
+    - net3s;R3_f_i2;0;2;1
+    - net3s;R3_f_i2;0;3;1
+    - net3s;R3_f_i3;0;2;1
+    - net3s;R3_f_i3;0;3;1
+
+    - net3s;R3_f_o1;0;2;1;shiftY;-2.5
+    - net3s;R3_f_o1;0;3;1;shiftY;-2.5
+    - net3s;R3_f_o2;0;2;1;shiftY;-2.5
+    - net3s;R3_f_o2;0;3;1;shiftY;-2.5
+    - net3s;R3_f_o3;0;2;1;shiftY;-2.5
+    - net3s;R3_f_o3;0;3;1;shiftY;-2.5
+
+    - net3s;R3_f_o1;0;4;1;shiftY;-5
+    - net3s;R3_f_o1;0;5;1;shiftY;-5
+    - net3s;R3_f_o2;0;4;1;shiftY;-5
+    - net3s;R3_f_o2;0;5;1;shiftY;-5
+    - net3s;R3_f_o3;0;4;1;shiftY;-5
+    - net3s;R3_f_o3;0;5;1;shiftY;-5
+
+    - net3s;R3_f_i1;0;4;1;shiftY;-7.5
+    - net3s;R3_f_i1;0;5;1;shiftY;-7.5
+    - net3s;R3_f_i2;0;4;1;shiftY;-7.5
+    - net3s;R3_f_i2;0;5;1;shiftY;-7.5
+    - net3s;R3_f_i3;0;4;1;shiftY;-7.5
+    - net3s;R3_f_i3;0;5;1;shiftY;-7.5
