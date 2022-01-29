@@ -15,15 +15,136 @@ planes:
   - R3_02;connected;R3;0;R3;2;Line;0;10
   - R3_03;connected;R3;0;R3;3;Line;0;10
   - R3_1231;connected;R3_12;6;R3_31;6;Line;0;12
-  - R3_full;freeform;R3;0;R3;1;R3_12;6;R3_31;6;R3_1231;3;R3_1231;9
+  - R3_full;freeform;R3;0;R3;1;R3_1231;0;R3_1231;12;R3_1231;2;R3_1231;10
+#   - R3_full;freeform;R3;0;R3;1;R3_12;6;R3_31;6;R3_1231;3;R3_1231;9 # This is the same as the previous
   - R3_f_i1;connected;R3_01;0;R3_01;10;R3_full;0;1
   - R3_f_i2;connected;R3_02;0;R3_02;10;R3_full;0;1
   - R3_f_i3;connected;R3_03;0;R3_03;10;R3_full;0;1
   - R3_f_o1;connected;R3_01;2;R3_01;12;R3_full;0;1
   - R3_f_o2;connected;R3_02;2;R3_02;12;R3_full;0;1
   - R3_f_o3;connected;R3_03;2;R3_03;12;R3_full;0;1
+  
+  - R4;regular;4;45
+  - R4_12;connected;R4;1;R4;2;Line;0;12
+  - R4_41;connected;R4;4;R4;1;Line;0;12
+  - R4_01;connected;R4;0;R4;1;Line;0;10
+  - R4_02;connected;R4;0;R4;2;Line;0;10
+  - R4_03;connected;R4;0;R4;3;Line;0;10
+  - R4_04;connected;R4;0;R4;4;Line;0;10
+  - R4_1241;connected;R4_12;6;R4_41;6;Line;0;12
+  - R4_full;freeform;R4;0;R4;1;R4_1241;0;R4_1241;12;R4_1241;2;R4_1241;10
+  - R4_f_i1;connected;R4_01;0;R4_01;10;R4_full;0;1
+  - R4_f_i2;connected;R4_02;0;R4_02;10;R4_full;0;1
+  - R4_f_i3;connected;R4_03;0;R4_03;10;R4_full;0;1
+  - R4_f_i4;connected;R4_04;0;R4_04;10;R4_full;0;1
+  - R4_f_o1;connected;R4_01;2;R4_01;12;R4_full;0;1
+  - R4_f_o2;connected;R4_02;2;R4_02;12;R4_full;0;1
+  - R4_f_o3;connected;R4_03;2;R4_03;12;R4_full;0;1
+  - R4_f_o4;connected;R4_04;2;R4_04;12;R4_full;0;1
 
 pages:
+  -
+    - pagename;all
+    - net3s;R3_f_i1;0;2;1 #;style;0,1,2,3,4,5,10
+    - net3s;R3_f_i1;0;3;1
+    - net3s;R3_f_i2;0;2;1
+    - net3s;R3_f_i2;0;3;1
+    - net3s;R3_f_i3;0;2;1
+    - net3s;R3_f_i3;0;3;1
+
+    - net3s;R3_f_o1;0;2;1;shiftY;-2.5
+    - net3s;R3_f_o1;0;3;1;shiftY;-2.5
+    - net3s;R3_f_o2;0;2;1;shiftY;-2.5
+    - net3s;R3_f_o2;0;3;1;shiftY;-2.5
+    - net3s;R3_f_o3;0;2;1;shiftY;-2.5
+    - net3s;R3_f_o3;0;3;1;shiftY;-2.5
+
+    - net3s;R3_f_o1;0;4;1;shiftY;-5
+    - net3s;R3_f_o1;0;5;1;shiftY;-5
+    - net3s;R3_f_o2;0;4;1;shiftY;-5
+    - net3s;R3_f_o2;0;5;1;shiftY;-5
+    - net3s;R3_f_o3;0;4;1;shiftY;-5
+    - net3s;R3_f_o3;0;5;1;shiftY;-5
+
+    - net3s;R3_f_i1;0;4;1;shiftY;-7.5
+    - net3s;R3_f_i1;0;5;1;shiftY;-7.5
+    - net3s;R3_f_i2;0;4;1;shiftY;-7.5
+    - net3s;R3_f_i2;0;5;1;shiftY;-7.5
+    - net3s;R3_f_i3;0;4;1;shiftY;-7.5
+    - net3s;R3_f_i3;0;5;1;shiftY;-7.5
+
+    - net3s;R4_f_i1;0;2;1;shiftX;4
+    - net3s;R4_f_i1;0;3;1;shiftX;4
+    - net3s;R4_f_i2;0;2;1;shiftX;4
+    - net3s;R4_f_i2;0;3;1;shiftX;4
+    - net3s;R4_f_i3;0;2;1;shiftX;4
+    - net3s;R4_f_i3;0;3;1;shiftX;4
+    - net3s;R4_f_i4;0;2;1;shiftX;4
+    - net3s;R4_f_i4;0;3;1;shiftX;4
+
+    - net3s;R4_f_o1;0;2;1;shiftY;-2.5;shiftX;4
+    - net3s;R4_f_o1;0;3;1;shiftY;-2.5;shiftX;4
+    - net3s;R4_f_o2;0;2;1;shiftY;-2.5;shiftX;4
+    - net3s;R4_f_o2;0;3;1;shiftY;-2.5;shiftX;4
+    - net3s;R4_f_o3;0;2;1;shiftY;-2.5;shiftX;4
+    - net3s;R4_f_o3;0;3;1;shiftY;-2.5;shiftX;4
+    - net3s;R4_f_o4;0;2;1;shiftY;-2.5;shiftX;4
+    - net3s;R4_f_o4;0;3;1;shiftY;-2.5;shiftX;4
+
+    - net3s;R4_f_o1;0;4;1;shiftY;-5;shiftX;4
+    - net3s;R4_f_o1;0;5;1;shiftY;-5;shiftX;4
+    - net3s;R4_f_o2;0;4;1;shiftY;-5;shiftX;4
+    - net3s;R4_f_o2;0;5;1;shiftY;-5;shiftX;4
+    - net3s;R4_f_o3;0;4;1;shiftY;-5;shiftX;4
+    - net3s;R4_f_o3;0;5;1;shiftY;-5;shiftX;4
+    - net3s;R4_f_o4;0;4;1;shiftY;-5;shiftX;4
+    - net3s;R4_f_o4;0;5;1;shiftY;-5;shiftX;4
+
+    - net3s;R4_f_i1;0;4;1;shiftY;-7.5;shiftX;4
+    - net3s;R4_f_i1;0;5;1;shiftY;-7.5;shiftX;4
+    - net3s;R4_f_i2;0;4;1;shiftY;-7.5;shiftX;4
+    - net3s;R4_f_i2;0;5;1;shiftY;-7.5;shiftX;4
+    - net3s;R4_f_i3;0;4;1;shiftY;-7.5;shiftX;4
+    - net3s;R4_f_i3;0;5;1;shiftY;-7.5;shiftX;4
+    - net3s;R4_f_i4;0;4;1;shiftY;-7.5;shiftX;4
+    - net3s;R4_f_i4;0;5;1;shiftY;-7.5;shiftX;4
+  -
+    - pagename;2022 01 28 | all 4
+    - net3s;R4_f_i1;0;2;1;style;0,1,2,3,4,5,10
+    - net3s;R4_f_i1;0;3;1
+    - net3s;R4_f_i2;0;2;1
+    - net3s;R4_f_i2;0;3;1
+    - net3s;R4_f_i3;0;2;1
+    - net3s;R4_f_i3;0;3;1
+    - net3s;R4_f_i4;0;2;1
+    - net3s;R4_f_i4;0;3;1
+
+    - net3s;R4_f_o1;0;2;1;shiftY;-2.5
+    - net3s;R4_f_o1;0;3;1;shiftY;-2.5
+    - net3s;R4_f_o2;0;2;1;shiftY;-2.5
+    - net3s;R4_f_o2;0;3;1;shiftY;-2.5
+    - net3s;R4_f_o3;0;2;1;shiftY;-2.5
+    - net3s;R4_f_o3;0;3;1;shiftY;-2.5
+    - net3s;R4_f_o4;0;2;1;shiftY;-2.5
+    - net3s;R4_f_o4;0;3;1;shiftY;-2.5
+
+    - net3s;R4_f_o1;0;4;1;shiftY;-5
+    - net3s;R4_f_o1;0;5;1;shiftY;-5
+    - net3s;R4_f_o2;0;4;1;shiftY;-5
+    - net3s;R4_f_o2;0;5;1;shiftY;-5
+    - net3s;R4_f_o3;0;4;1;shiftY;-5
+    - net3s;R4_f_o3;0;5;1;shiftY;-5
+    - net3s;R4_f_o4;0;4;1;shiftY;-5
+    - net3s;R4_f_o4;0;5;1;shiftY;-5
+
+    - net3s;R4_f_i1;0;4;1;shiftY;-7.5
+    - net3s;R4_f_i1;0;5;1;shiftY;-7.5
+    - net3s;R4_f_i2;0;4;1;shiftY;-7.5
+    - net3s;R4_f_i2;0;5;1;shiftY;-7.5
+    - net3s;R4_f_i3;0;4;1;shiftY;-7.5
+    - net3s;R4_f_i3;0;5;1;shiftY;-7.5
+    - net3s;R4_f_i4;0;4;1;shiftY;-7.5
+    - net3s;R4_f_i4;0;5;1;shiftY;-7.5
   -
     - pagename;2022 01 28 | all 3
     - net3s;R3_f_i1;0;2;1 #;style;0,1,2,3,4,5,10
