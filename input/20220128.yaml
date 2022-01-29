@@ -1,4 +1,4 @@
-global:
+global: #  _([io])([123456789])  -> _\10\2     notepad++ regexp replace _i1 to _i01 and so on
     threads: 10
     lastthread: 10
     background: darkgray
@@ -16,12 +16,12 @@ planes:
   - R3_1231;connected;R3_12;6;R3_31;6;Line;0;12
   - R3_full;freeform;R3;0;R3;1;R3_1231;0;R3_1231;12;R3_1231;2;R3_1231;10
 #   - R3_full;freeform;R3;0;R3;1;R3_12;6;R3_31;6;R3_1231;3;R3_1231;9 # This is the same as the previous
-  - R3_f_i1;connected;R3_01;0;R3_01;10;R3_full;0;1
-  - R3_f_i2;connected;R3_02;0;R3_02;10;R3_full;0;1
-  - R3_f_i3;connected;R3_03;0;R3_03;10;R3_full;0;1
-  - R3_f_o1;connected;R3_01;2;R3_01;12;R3_full;0;1
-  - R3_f_o2;connected;R3_02;2;R3_02;12;R3_full;0;1
-  - R3_f_o3;connected;R3_03;2;R3_03;12;R3_full;0;1
+  - R3_f_i01;connected;R3_01;0;R3_01;10;R3_full;0;1
+  - R3_f_i02;connected;R3_02;0;R3_02;10;R3_full;0;1
+  - R3_f_i03;connected;R3_03;0;R3_03;10;R3_full;0;1
+  - R3_f_o01;connected;R3_01;2;R3_01;12;R3_full;0;1
+  - R3_f_o02;connected;R3_02;2;R3_02;12;R3_full;0;1
+  - R3_f_o03;connected;R3_03;2;R3_03;12;R3_full;0;1
   
   - R4;regular;4;45
   - R4_12;connected;R4;1;R4;2;Line;0;12
@@ -32,14 +32,14 @@ planes:
   - R4_04;connected;R4;0;R4;4;Line;0;10
   - R4_1241;connected;R4_12;6;R4_41;6;Line;0;12
   - R4_full;freeform;R4;0;R4;1;R4_1241;0;R4_1241;12;R4_1241;2;R4_1241;10
-  - R4_f_i1;connected;R4_01;0;R4_01;10;R4_full;0;1
-  - R4_f_i2;connected;R4_02;0;R4_02;10;R4_full;0;1
-  - R4_f_i3;connected;R4_03;0;R4_03;10;R4_full;0;1
-  - R4_f_i4;connected;R4_04;0;R4_04;10;R4_full;0;1
-  - R4_f_o1;connected;R4_01;2;R4_01;12;R4_full;0;1
-  - R4_f_o2;connected;R4_02;2;R4_02;12;R4_full;0;1
-  - R4_f_o3;connected;R4_03;2;R4_03;12;R4_full;0;1
-  - R4_f_o4;connected;R4_04;2;R4_04;12;R4_full;0;1
+  - R4_f_i01;connected;R4_01;0;R4_01;10;R4_full;0;1
+  - R4_f_i02;connected;R4_02;0;R4_02;10;R4_full;0;1
+  - R4_f_i03;connected;R4_03;0;R4_03;10;R4_full;0;1
+  - R4_f_i04;connected;R4_04;0;R4_04;10;R4_full;0;1
+  - R4_f_o01;connected;R4_01;2;R4_01;12;R4_full;0;1
+  - R4_f_o02;connected;R4_02;2;R4_02;12;R4_full;0;1
+  - R4_f_o03;connected;R4_03;2;R4_03;12;R4_full;0;1
+  - R4_f_o04;connected;R4_04;2;R4_04;12;R4_full;0;1
 
   - R5;regular;5;90
   - R5_12;connected;R5;1;R5;2;Line;0;12
@@ -51,18 +51,18 @@ planes:
   - R5_05;connected;R5;0;R5;5;Line;0;10
   - R5_1251;connected;R5_12;6;R5_51;6;Line;0;12
   - R5_full;freeform;R5;0;R5;1;R5_1251;0;R5_1251;12;R5_1251;2;R5_1251;10
-  - R5_f_i1;connected;R5_01;0;R5_01;10;R5_full;0;1
-  - R5_f_i2;connected;R5_02;0;R5_02;10;R5_full;0;1
-  - R5_f_i3;connected;R5_03;0;R5_03;10;R5_full;0;1
-  - R5_f_i4;connected;R5_04;0;R5_04;10;R5_full;0;1
-  - R5_f_i5;connected;R5_05;0;R5_05;10;R5_full;0;1
-  - R5_f_o1;connected;R5_01;2;R5_01;12;R5_full;0;1
-  - R5_f_o2;connected;R5_02;2;R5_02;12;R5_full;0;1
-  - R5_f_o3;connected;R5_03;2;R5_03;12;R5_full;0;1
-  - R5_f_o4;connected;R5_04;2;R5_04;12;R5_full;0;1
-  - R5_f_o5;connected;R5_05;2;R5_05;12;R5_full;0;1
+  - R5_f_i01;connected;R5_01;0;R5_01;10;R5_full;0;1
+  - R5_f_i02;connected;R5_02;0;R5_02;10;R5_full;0;1
+  - R5_f_i03;connected;R5_03;0;R5_03;10;R5_full;0;1
+  - R5_f_i04;connected;R5_04;0;R5_04;10;R5_full;0;1
+  - R5_f_i05;connected;R5_05;0;R5_05;10;R5_full;0;1
+  - R5_f_o01;connected;R5_01;2;R5_01;12;R5_full;0;1
+  - R5_f_o02;connected;R5_02;2;R5_02;12;R5_full;0;1
+  - R5_f_o03;connected;R5_03;2;R5_03;12;R5_full;0;1
+  - R5_f_o04;connected;R5_04;2;R5_04;12;R5_full;0;1
+  - R5_f_o05;connected;R5_05;2;R5_05;12;R5_full;0;1
 
-  - R6;regular;6;30
+  - R6;regular;6;0
   - R6_12;connected;R6;1;R6;2;Line;0;12
   - R6_61;connected;R6;6;R6;1;Line;0;12
   - R6_01;connected;R6;0;R6;1;Line;0;10
@@ -73,18 +73,18 @@ planes:
   - R6_06;connected;R6;0;R6;6;Line;0;10
   - R6_1261;connected;R6_12;6;R6_61;6;Line;0;12
   - R6_full;freeform;R6;0;R6;1;R6_1261;0;R6_1261;12;R6_1261;2;R6_1261;10
-  - R6_f_i1;connected;R6_01;0;R6_01;10;R6_full;0;1
-  - R6_f_i2;connected;R6_02;0;R6_02;10;R6_full;0;1
-  - R6_f_i3;connected;R6_03;0;R6_03;10;R6_full;0;1
-  - R6_f_i4;connected;R6_04;0;R6_04;10;R6_full;0;1
-  - R6_f_i5;connected;R6_05;0;R6_05;10;R6_full;0;1
-  - R6_f_i6;connected;R6_06;0;R6_06;10;R6_full;0;1
-  - R6_f_o1;connected;R6_01;2;R6_01;12;R6_full;0;1
-  - R6_f_o2;connected;R6_02;2;R6_02;12;R6_full;0;1
-  - R6_f_o3;connected;R6_03;2;R6_03;12;R6_full;0;1
-  - R6_f_o4;connected;R6_04;2;R6_04;12;R6_full;0;1
-  - R6_f_o5;connected;R6_05;2;R6_05;12;R6_full;0;1
-  - R6_f_o6;connected;R6_06;2;R6_06;12;R6_full;0;1
+  - R6_f_i01;connected;R6_01;0;R6_01;10;R6_full;0;1
+  - R6_f_i02;connected;R6_02;0;R6_02;10;R6_full;0;1
+  - R6_f_i03;connected;R6_03;0;R6_03;10;R6_full;0;1
+  - R6_f_i04;connected;R6_04;0;R6_04;10;R6_full;0;1
+  - R6_f_i05;connected;R6_05;0;R6_05;10;R6_full;0;1
+  - R6_f_i06;connected;R6_06;0;R6_06;10;R6_full;0;1
+  - R6_f_o01;connected;R6_01;2;R6_01;12;R6_full;0;1
+  - R6_f_o02;connected;R6_02;2;R6_02;12;R6_full;0;1
+  - R6_f_o03;connected;R6_03;2;R6_03;12;R6_full;0;1
+  - R6_f_o04;connected;R6_04;2;R6_04;12;R6_full;0;1
+  - R6_f_o05;connected;R6_05;2;R6_05;12;R6_full;0;1
+  - R6_f_o06;connected;R6_06;2;R6_06;12;R6_full;0;1
 
   - R7;regular;7;90
   - R7_12;connected;R7;1;R7;2;Line;0;12
@@ -98,379 +98,166 @@ planes:
   - R7_07;connected;R7;0;R7;7;Line;0;10
   - R7_1271;connected;R7_12;6;R7_71;6;Line;0;12
   - R7_full;freeform;R7;0;R7;1;R7_1271;0;R7_1271;12;R7_1271;2;R7_1271;10
-  - R7_f_i1;connected;R7_01;0;R7_01;10;R7_full;0;1
-  - R7_f_i2;connected;R7_02;0;R7_02;10;R7_full;0;1
-  - R7_f_i3;connected;R7_03;0;R7_03;10;R7_full;0;1
-  - R7_f_i4;connected;R7_04;0;R7_04;10;R7_full;0;1
-  - R7_f_i5;connected;R7_05;0;R7_05;10;R7_full;0;1
-  - R7_f_i6;connected;R7_06;0;R7_06;10;R7_full;0;1
-  - R7_f_i7;connected;R7_07;0;R7_07;10;R7_full;0;1
-  - R7_f_o1;connected;R7_01;2;R7_01;12;R7_full;0;1
-  - R7_f_o2;connected;R7_02;2;R7_02;12;R7_full;0;1
-  - R7_f_o3;connected;R7_03;2;R7_03;12;R7_full;0;1
-  - R7_f_o4;connected;R7_04;2;R7_04;12;R7_full;0;1
-  - R7_f_o5;connected;R7_05;2;R7_05;12;R7_full;0;1
-  - R7_f_o6;connected;R7_06;2;R7_06;12;R7_full;0;1
-  - R7_f_o7;connected;R7_07;2;R7_07;12;R7_full;0;1
+  - R7_f_i01;connected;R7_01;0;R7_01;10;R7_full;0;1
+  - R7_f_i02;connected;R7_02;0;R7_02;10;R7_full;0;1
+  - R7_f_i03;connected;R7_03;0;R7_03;10;R7_full;0;1
+  - R7_f_i04;connected;R7_04;0;R7_04;10;R7_full;0;1
+  - R7_f_i05;connected;R7_05;0;R7_05;10;R7_full;0;1
+  - R7_f_i06;connected;R7_06;0;R7_06;10;R7_full;0;1
+  - R7_f_i07;connected;R7_07;0;R7_07;10;R7_full;0;1
+  - R7_f_o01;connected;R7_01;2;R7_01;12;R7_full;0;1
+  - R7_f_o02;connected;R7_02;2;R7_02;12;R7_full;0;1
+  - R7_f_o03;connected;R7_03;2;R7_03;12;R7_full;0;1
+  - R7_f_o04;connected;R7_04;2;R7_04;12;R7_full;0;1
+  - R7_f_o05;connected;R7_05;2;R7_05;12;R7_full;0;1
+  - R7_f_o06;connected;R7_06;2;R7_06;12;R7_full;0;1
+  - R7_f_o07;connected;R7_07;2;R7_07;12;R7_full;0;1
+
+  - R8;regular;8;22.5
+  - R8_12;connected;R8;1;R8;2;Line;0;12
+  - R8_81;connected;R8;8;R8;1;Line;0;12
+  - R8_01;connected;R8;0;R8;1;Line;0;10
+  - R8_02;connected;R8;0;R8;2;Line;0;10
+  - R8_03;connected;R8;0;R8;3;Line;0;10
+  - R8_04;connected;R8;0;R8;4;Line;0;10
+  - R8_05;connected;R8;0;R8;5;Line;0;10
+  - R8_06;connected;R8;0;R8;6;Line;0;10
+  - R8_07;connected;R8;0;R8;7;Line;0;10
+  - R8_08;connected;R8;0;R8;8;Line;0;10
+  - R8_1281;connected;R8_12;6;R8_81;6;Line;0;12
+  - R8_full;freeform;R8;0;R8;1;R8_1281;0;R8_1281;12;R8_1281;2;R8_1281;10
+  - R8_f_i01;connected;R8_01;0;R8_01;10;R8_full;0;1
+  - R8_f_i02;connected;R8_02;0;R8_02;10;R8_full;0;1
+  - R8_f_i03;connected;R8_03;0;R8_03;10;R8_full;0;1
+  - R8_f_i04;connected;R8_04;0;R8_04;10;R8_full;0;1
+  - R8_f_i05;connected;R8_05;0;R8_05;10;R8_full;0;1
+  - R8_f_i06;connected;R8_06;0;R8_06;10;R8_full;0;1
+  - R8_f_i07;connected;R8_07;0;R8_07;10;R8_full;0;1
+  - R8_f_i08;connected;R8_08;0;R8_08;10;R8_full;0;1
+  - R8_f_o01;connected;R8_01;2;R8_01;12;R8_full;0;1
+  - R8_f_o02;connected;R8_02;2;R8_02;12;R8_full;0;1
+  - R8_f_o03;connected;R8_03;2;R8_03;12;R8_full;0;1
+  - R8_f_o04;connected;R8_04;2;R8_04;12;R8_full;0;1
+  - R8_f_o05;connected;R8_05;2;R8_05;12;R8_full;0;1
+  - R8_f_o06;connected;R8_06;2;R8_06;12;R8_full;0;1
+  - R8_f_o07;connected;R8_07;2;R8_07;12;R8_full;0;1
+  - R8_f_o08;connected;R8_08;2;R8_08;12;R8_full;0;1
 pages:
   -
     - pagename;all
-    - net3s;R3_f_i1;0;2;1 #;style;0,1,2,3,4,5,10
-    - net3s;R3_f_i1;0;3;1
-    - net3s;R3_f_i2;0;2;1
-    - net3s;R3_f_i2;0;3;1
-    - net3s;R3_f_i3;0;2;1
-    - net3s;R3_f_i3;0;3;1
+#    - net3s;R3_f_i01;0;2;1 #;style;0,1,2,3,4,5,10
+#    - net3s;R3_f_i01;0;3;1
+#    - net3s;R3_f_i02;0;2;1
+#    - net3s;R3_f_i02;0;3;1
+#    - net3s;R3_f_i03;0;2;1
+#    - net3s;R3_f_i03;0;3;1
+    - circular;1;3;net3s;R3_f_i{};0;2;1 #;style;0,1,2,3,4,5,10
+    - circular;1;3;net3s;R3_f_i{};0;3;1
 
-    - net3s;R3_f_o1;0;2;1;shiftX;3
-    - net3s;R3_f_o1;0;3;1;shiftX;3
-    - net3s;R3_f_o2;0;2;1;shiftX;3
-    - net3s;R3_f_o2;0;3;1;shiftX;3
-    - net3s;R3_f_o3;0;2;1;shiftX;3
-    - net3s;R3_f_o3;0;3;1;shiftX;3
+    - circular;1;3;net3s;R3_f_o{};0;2;1;shiftX;3
+    - circular;1;3;net3s;R3_f_o{};0;3;1;shiftX;3
 
-    - net3s;R3_f_o1;0;4;1;shiftX;6
-    - net3s;R3_f_o1;0;5;1;shiftX;6
-    - net3s;R3_f_o2;0;4;1;shiftX;6
-    - net3s;R3_f_o2;0;5;1;shiftX;6
-    - net3s;R3_f_o3;0;4;1;shiftX;6
-    - net3s;R3_f_o3;0;5;1;shiftX;6
+    - circular;1;3;net3s;R3_f_o{};0;4;1;shiftX;6
+    - circular;1;3;net3s;R3_f_o{};0;5;1;shiftX;6
 
-    - net3s;R3_f_i1;0;4;1;shiftX;9
-    - net3s;R3_f_i1;0;5;1;shiftX;9
-    - net3s;R3_f_i2;0;4;1;shiftX;9
-    - net3s;R3_f_i2;0;5;1;shiftX;9
-    - net3s;R3_f_i3;0;4;1;shiftX;9
-    - net3s;R3_f_i3;0;5;1;shiftX;9
+    - circular;1;3;net3s;R3_f_i{};0;4;1;shiftX;9
+    - circular;1;3;net3s;R3_f_i{};0;5;1;shiftX;9
 
-    - net3s;R4_f_i1;0;2;1;shiftY;-3
-    - net3s;R4_f_i1;0;3;1;shiftY;-3
-    - net3s;R4_f_i2;0;2;1;shiftY;-3
-    - net3s;R4_f_i2;0;3;1;shiftY;-3
-    - net3s;R4_f_i3;0;2;1;shiftY;-3
-    - net3s;R4_f_i3;0;3;1;shiftY;-3
-    - net3s;R4_f_i4;0;2;1;shiftY;-3
-    - net3s;R4_f_i4;0;3;1;shiftY;-3
+    - circular;1;4;net3s;R4_f_i{};0;2;1;shiftY;-3
+    - circular;1;4;net3s;R4_f_i{};0;3;1;shiftY;-3
 
-    - net3s;R4_f_o1;0;2;1;shiftX;3;shiftY;-3
-    - net3s;R4_f_o1;0;3;1;shiftX;3;shiftY;-3
-    - net3s;R4_f_o2;0;2;1;shiftX;3;shiftY;-3
-    - net3s;R4_f_o2;0;3;1;shiftX;3;shiftY;-3
-    - net3s;R4_f_o3;0;2;1;shiftX;3;shiftY;-3
-    - net3s;R4_f_o3;0;3;1;shiftX;3;shiftY;-3
-    - net3s;R4_f_o4;0;2;1;shiftX;3;shiftY;-3
-    - net3s;R4_f_o4;0;3;1;shiftX;3;shiftY;-3
+    - circular;1;4;net3s;R4_f_o{};0;2;1;shiftX;3;shiftY;-3
+    - circular;1;4;net3s;R4_f_o{};0;3;1;shiftX;3;shiftY;-3
 
-    - net3s;R4_f_o1;0;4;1;shiftX;6;shiftY;-3
-    - net3s;R4_f_o1;0;5;1;shiftX;6;shiftY;-3
-    - net3s;R4_f_o2;0;4;1;shiftX;6;shiftY;-3
-    - net3s;R4_f_o2;0;5;1;shiftX;6;shiftY;-3
-    - net3s;R4_f_o3;0;4;1;shiftX;6;shiftY;-3
-    - net3s;R4_f_o3;0;5;1;shiftX;6;shiftY;-3
-    - net3s;R4_f_o4;0;4;1;shiftX;6;shiftY;-3
-    - net3s;R4_f_o4;0;5;1;shiftX;6;shiftY;-3
+    - circular;1;4;net3s;R4_f_o{};0;4;1;shiftX;6;shiftY;-3
+    - circular;1;4;net3s;R4_f_o{};0;5;1;shiftX;6;shiftY;-3
 
-    - net3s;R4_f_i1;0;4;1;shiftX;9;shiftY;-3
-    - net3s;R4_f_i1;0;5;1;shiftX;9;shiftY;-3
-    - net3s;R4_f_i2;0;4;1;shiftX;9;shiftY;-3
-    - net3s;R4_f_i2;0;5;1;shiftX;9;shiftY;-3
-    - net3s;R4_f_i3;0;4;1;shiftX;9;shiftY;-3
-    - net3s;R4_f_i3;0;5;1;shiftX;9;shiftY;-3
-    - net3s;R4_f_i4;0;4;1;shiftX;9;shiftY;-3
-    - net3s;R4_f_i4;0;5;1;shiftX;9;shiftY;-3
+    - circular;1;4;net3s;R4_f_i{};0;4;1;shiftX;9;shiftY;-3
+    - circular;1;4;net3s;R4_f_i{};0;5;1;shiftX;9;shiftY;-3
 
-    - net3s;R5_f_i1;0;2;1;shiftY;-6
-    - net3s;R5_f_i1;0;3;1;shiftY;-6
-    - net3s;R5_f_i2;0;2;1;shiftY;-6
-    - net3s;R5_f_i2;0;3;1;shiftY;-6
-    - net3s;R5_f_i3;0;2;1;shiftY;-6
-    - net3s;R5_f_i3;0;3;1;shiftY;-6
-    - net3s;R5_f_i4;0;2;1;shiftY;-6
-    - net3s;R5_f_i4;0;3;1;shiftY;-6
-    - net3s;R5_f_i5;0;2;1;shiftY;-6
-    - net3s;R5_f_i5;0;3;1;shiftY;-6
+    - circular;1;5;net3s;R5_f_i{};0;2;1;shiftY;-6
+    - circular;1;5;net3s;R5_f_i{};0;3;1;shiftY;-6
 
-    - net3s;R5_f_o1;0;2;1;shiftX;3;shiftY;-6
-    - net3s;R5_f_o1;0;3;1;shiftX;3;shiftY;-6
-    - net3s;R5_f_o2;0;2;1;shiftX;3;shiftY;-6
-    - net3s;R5_f_o2;0;3;1;shiftX;3;shiftY;-6
-    - net3s;R5_f_o3;0;2;1;shiftX;3;shiftY;-6
-    - net3s;R5_f_o3;0;3;1;shiftX;3;shiftY;-6
-    - net3s;R5_f_o4;0;2;1;shiftX;3;shiftY;-6
-    - net3s;R5_f_o4;0;3;1;shiftX;3;shiftY;-6
-    - net3s;R5_f_o5;0;2;1;shiftX;3;shiftY;-6
-    - net3s;R5_f_o5;0;3;1;shiftX;3;shiftY;-6
+    - circular;1;5;net3s;R5_f_o{};0;2;1;shiftX;3;shiftY;-6
+    - circular;1;5;net3s;R5_f_o{};0;3;1;shiftX;3;shiftY;-6
 
-    - net3s;R5_f_o1;0;4;1;shiftX;6;shiftY;-6
-    - net3s;R5_f_o1;0;5;1;shiftX;6;shiftY;-6
-    - net3s;R5_f_o2;0;4;1;shiftX;6;shiftY;-6
-    - net3s;R5_f_o2;0;5;1;shiftX;6;shiftY;-6
-    - net3s;R5_f_o3;0;4;1;shiftX;6;shiftY;-6
-    - net3s;R5_f_o3;0;5;1;shiftX;6;shiftY;-6
-    - net3s;R5_f_o4;0;4;1;shiftX;6;shiftY;-6
-    - net3s;R5_f_o4;0;5;1;shiftX;6;shiftY;-6
-    - net3s;R5_f_o5;0;4;1;shiftX;6;shiftY;-6
-    - net3s;R5_f_o5;0;5;1;shiftX;6;shiftY;-6
+    - circular;1;5;net3s;R5_f_o{};0;4;1;shiftX;6;shiftY;-6
+    - circular;1;5;net3s;R5_f_o{};0;5;1;shiftX;6;shiftY;-6
 
-    - net3s;R5_f_i1;0;4;1;shiftX;9;shiftY;-6
-    - net3s;R5_f_i1;0;5;1;shiftX;9;shiftY;-6
-    - net3s;R5_f_i2;0;4;1;shiftX;9;shiftY;-6
-    - net3s;R5_f_i2;0;5;1;shiftX;9;shiftY;-6
-    - net3s;R5_f_i3;0;4;1;shiftX;9;shiftY;-6
-    - net3s;R5_f_i3;0;5;1;shiftX;9;shiftY;-6
-    - net3s;R5_f_i4;0;4;1;shiftX;9;shiftY;-6
-    - net3s;R5_f_i4;0;5;1;shiftX;9;shiftY;-6
-    - net3s;R5_f_i5;0;4;1;shiftX;9;shiftY;-6
-    - net3s;R5_f_i5;0;5;1;shiftX;9;shiftY;-6
+    - circular;1;5;net3s;R5_f_i{};0;4;1;shiftX;9;shiftY;-6
+    - circular;1;5;net3s;R5_f_i{};0;5;1;shiftX;9;shiftY;-6
 
-    - net3s;R6_f_i1;0;2;1;shiftY;-9
-    - net3s;R6_f_i1;0;3;1;shiftY;-9
-    - net3s;R6_f_i2;0;2;1;shiftY;-9
-    - net3s;R6_f_i2;0;3;1;shiftY;-9
-    - net3s;R6_f_i3;0;2;1;shiftY;-9
-    - net3s;R6_f_i3;0;3;1;shiftY;-9
-    - net3s;R6_f_i4;0;2;1;shiftY;-9
-    - net3s;R6_f_i4;0;3;1;shiftY;-9
-    - net3s;R6_f_i5;0;2;1;shiftY;-9
-    - net3s;R6_f_i5;0;3;1;shiftY;-9
-    - net3s;R6_f_i6;0;2;1;shiftY;-9
-    - net3s;R6_f_i6;0;3;1;shiftY;-9
+    - circular;1;6;net3s;R6_f_i{};0;2;1;shiftY;-9
+    - circular;1;6;net3s;R6_f_i{};0;3;1;shiftY;-9
 
-    - net3s;R6_f_o1;0;2;1;shiftX;3;shiftY;-9
-    - net3s;R6_f_o1;0;3;1;shiftX;3;shiftY;-9
-    - net3s;R6_f_o2;0;2;1;shiftX;3;shiftY;-9
-    - net3s;R6_f_o2;0;3;1;shiftX;3;shiftY;-9
-    - net3s;R6_f_o3;0;2;1;shiftX;3;shiftY;-9
-    - net3s;R6_f_o3;0;3;1;shiftX;3;shiftY;-9
-    - net3s;R6_f_o4;0;2;1;shiftX;3;shiftY;-9
-    - net3s;R6_f_o4;0;3;1;shiftX;3;shiftY;-9
-    - net3s;R6_f_o5;0;2;1;shiftX;3;shiftY;-9
-    - net3s;R6_f_o5;0;3;1;shiftX;3;shiftY;-9
-    - net3s;R6_f_o6;0;2;1;shiftX;3;shiftY;-9
-    - net3s;R6_f_o6;0;3;1;shiftX;3;shiftY;-9
+    - circular;1;6;net3s;R6_f_o{};0;2;1;shiftX;3;shiftY;-9
+    - circular;1;6;net3s;R6_f_o{};0;3;1;shiftX;3;shiftY;-9
 
-    - net3s;R6_f_o1;0;4;1;shiftX;6;shiftY;-9
-    - net3s;R6_f_o1;0;5;1;shiftX;6;shiftY;-9
-    - net3s;R6_f_o2;0;4;1;shiftX;6;shiftY;-9
-    - net3s;R6_f_o2;0;5;1;shiftX;6;shiftY;-9
-    - net3s;R6_f_o3;0;4;1;shiftX;6;shiftY;-9
-    - net3s;R6_f_o3;0;5;1;shiftX;6;shiftY;-9
-    - net3s;R6_f_o4;0;4;1;shiftX;6;shiftY;-9
-    - net3s;R6_f_o4;0;5;1;shiftX;6;shiftY;-9
-    - net3s;R6_f_o5;0;4;1;shiftX;6;shiftY;-9
-    - net3s;R6_f_o5;0;5;1;shiftX;6;shiftY;-9
-    - net3s;R6_f_o6;0;4;1;shiftX;6;shiftY;-9
-    - net3s;R6_f_o6;0;5;1;shiftX;6;shiftY;-9
+    - circular;1;6;net3s;R6_f_o{};0;4;1;shiftX;6;shiftY;-9
+    - circular;1;6;net3s;R6_f_o{};0;5;1;shiftX;6;shiftY;-9
 
-    - net3s;R6_f_i1;0;4;1;shiftX;9;shiftY;-9
-    - net3s;R6_f_i1;0;5;1;shiftX;9;shiftY;-9
-    - net3s;R6_f_i2;0;4;1;shiftX;9;shiftY;-9
-    - net3s;R6_f_i2;0;5;1;shiftX;9;shiftY;-9
-    - net3s;R6_f_i3;0;4;1;shiftX;9;shiftY;-9
-    - net3s;R6_f_i3;0;5;1;shiftX;9;shiftY;-9
-    - net3s;R6_f_i4;0;4;1;shiftX;9;shiftY;-9
-    - net3s;R6_f_i4;0;5;1;shiftX;9;shiftY;-9
-    - net3s;R6_f_i5;0;4;1;shiftX;9;shiftY;-9
-    - net3s;R6_f_i5;0;5;1;shiftX;9;shiftY;-9
-    - net3s;R6_f_i6;0;4;1;shiftX;9;shiftY;-9
-    - net3s;R6_f_i6;0;5;1;shiftX;9;shiftY;-9
+    - circular;1;6;net3s;R6_f_i{};0;4;1;shiftX;9;shiftY;-9
+    - circular;1;6;net3s;R6_f_i{};0;5;1;shiftX;9;shiftY;-9
 
-    - net3s;R7_f_i1;0;2;1;shiftY;-12
-    - net3s;R7_f_i1;0;3;1;shiftY;-12
-    - net3s;R7_f_i2;0;2;1;shiftY;-12
-    - net3s;R7_f_i2;0;3;1;shiftY;-12
-    - net3s;R7_f_i3;0;2;1;shiftY;-12
-    - net3s;R7_f_i3;0;3;1;shiftY;-12
-    - net3s;R7_f_i4;0;2;1;shiftY;-12
-    - net3s;R7_f_i4;0;3;1;shiftY;-12
-    - net3s;R7_f_i5;0;2;1;shiftY;-12
-    - net3s;R7_f_i5;0;3;1;shiftY;-12
-    - net3s;R7_f_i6;0;2;1;shiftY;-12
-    - net3s;R7_f_i6;0;3;1;shiftY;-12
-    - net3s;R7_f_i7;0;2;1;shiftY;-12
-    - net3s;R7_f_i7;0;3;1;shiftY;-12
+    - circular;1;7;net3s;R7_f_i{};0;2;1;shiftY;-12
+    - circular;1;7;net3s;R7_f_i{};0;3;1;shiftY;-12
 
-    - net3s;R7_f_o1;0;2;1;shiftX;3;shiftY;-12
-    - net3s;R7_f_o1;0;3;1;shiftX;3;shiftY;-12
-    - net3s;R7_f_o2;0;2;1;shiftX;3;shiftY;-12
-    - net3s;R7_f_o2;0;3;1;shiftX;3;shiftY;-12
-    - net3s;R7_f_o3;0;2;1;shiftX;3;shiftY;-12
-    - net3s;R7_f_o3;0;3;1;shiftX;3;shiftY;-12
-    - net3s;R7_f_o4;0;2;1;shiftX;3;shiftY;-12
-    - net3s;R7_f_o4;0;3;1;shiftX;3;shiftY;-12
-    - net3s;R7_f_o5;0;2;1;shiftX;3;shiftY;-12
-    - net3s;R7_f_o5;0;3;1;shiftX;3;shiftY;-12
-    - net3s;R7_f_o6;0;2;1;shiftX;3;shiftY;-12
-    - net3s;R7_f_o6;0;3;1;shiftX;3;shiftY;-12
-    - net3s;R7_f_o7;0;2;1;shiftX;3;shiftY;-12
-    - net3s;R7_f_o7;0;3;1;shiftX;3;shiftY;-12
+    - circular;1;7;net3s;R7_f_o{};0;2;1;shiftX;3;shiftY;-12
+    - circular;1;7;net3s;R7_f_o{};0;3;1;shiftX;3;shiftY;-12
 
-    - net3s;R7_f_o1;0;4;1;shiftX;6;shiftY;-12
-    - net3s;R7_f_o1;0;5;1;shiftX;6;shiftY;-12
-    - net3s;R7_f_o2;0;4;1;shiftX;6;shiftY;-12
-    - net3s;R7_f_o2;0;5;1;shiftX;6;shiftY;-12
-    - net3s;R7_f_o3;0;4;1;shiftX;6;shiftY;-12
-    - net3s;R7_f_o3;0;5;1;shiftX;6;shiftY;-12
-    - net3s;R7_f_o4;0;4;1;shiftX;6;shiftY;-12
-    - net3s;R7_f_o4;0;5;1;shiftX;6;shiftY;-12
-    - net3s;R7_f_o5;0;4;1;shiftX;6;shiftY;-12
-    - net3s;R7_f_o5;0;5;1;shiftX;6;shiftY;-12
-    - net3s;R7_f_o6;0;4;1;shiftX;6;shiftY;-12
-    - net3s;R7_f_o6;0;5;1;shiftX;6;shiftY;-12
-    - net3s;R7_f_o7;0;4;1;shiftX;6;shiftY;-12
-    - net3s;R7_f_o7;0;5;1;shiftX;6;shiftY;-12
+    - circular;1;7;net3s;R7_f_o{};0;4;1;shiftX;6;shiftY;-12
+    - circular;1;7;net3s;R7_f_o{};0;5;1;shiftX;6;shiftY;-12
 
-    - net3s;R7_f_i1;0;4;1;shiftX;9;shiftY;-12
-    - net3s;R7_f_i1;0;5;1;shiftX;9;shiftY;-12
-    - net3s;R7_f_i2;0;4;1;shiftX;9;shiftY;-12
-    - net3s;R7_f_i2;0;5;1;shiftX;9;shiftY;-12
-    - net3s;R7_f_i3;0;4;1;shiftX;9;shiftY;-12
-    - net3s;R7_f_i3;0;5;1;shiftX;9;shiftY;-12
-    - net3s;R7_f_i4;0;4;1;shiftX;9;shiftY;-12
-    - net3s;R7_f_i4;0;5;1;shiftX;9;shiftY;-12
-    - net3s;R7_f_i5;0;4;1;shiftX;9;shiftY;-12
-    - net3s;R7_f_i5;0;5;1;shiftX;9;shiftY;-12
-    - net3s;R7_f_i6;0;4;1;shiftX;9;shiftY;-12
-    - net3s;R7_f_i6;0;5;1;shiftX;9;shiftY;-12
-    - net3s;R7_f_i7;0;4;1;shiftX;9;shiftY;-12
-    - net3s;R7_f_i7;0;5;1;shiftX;9;shiftY;-12
-  -
-    - pagename;2022 01 28 | all 5
-    - net3s;R5_f_i1;0;2;1;shiftX;8
-    - net3s;R5_f_i1;0;3;1;shiftX;8
-    - net3s;R5_f_i2;0;2;1;shiftX;8
-    - net3s;R5_f_i2;0;3;1;shiftX;8
-    - net3s;R5_f_i3;0;2;1;shiftX;8
-    - net3s;R5_f_i3;0;3;1;shiftX;8
-    - net3s;R5_f_i4;0;2;1;shiftX;8
-    - net3s;R5_f_i4;0;3;1;shiftX;8
-    - net3s;R5_f_i5;0;2;1;shiftX;8
-    - net3s;R5_f_i5;0;3;1;shiftX;8
+    - circular;1;7;net3s;R7_f_i{};0;4;1;shiftX;9;shiftY;-12
+    - circular;1;7;net3s;R7_f_i{};0;5;1;shiftX;9;shiftY;-12
 
-    - net3s;R5_f_o1;0;2;1;shiftY;-2.5;shiftX;8
-    - net3s;R5_f_o1;0;3;1;shiftY;-2.5;shiftX;8
-    - net3s;R5_f_o2;0;2;1;shiftY;-2.5;shiftX;8
-    - net3s;R5_f_o2;0;3;1;shiftY;-2.5;shiftX;8
-    - net3s;R5_f_o3;0;2;1;shiftY;-2.5;shiftX;8
-    - net3s;R5_f_o3;0;3;1;shiftY;-2.5;shiftX;8
-    - net3s;R5_f_o4;0;2;1;shiftY;-2.5;shiftX;8
-    - net3s;R5_f_o4;0;3;1;shiftY;-2.5;shiftX;8
-    - net3s;R5_f_o5;0;2;1;shiftY;-2.5;shiftX;8
-    - net3s;R5_f_o5;0;3;1;shiftY;-2.5;shiftX;8
+    - circular;1;8;net3s;R8_f_i{};0;2;1;shiftY;-15
+    - circular;1;8;net3s;R8_f_i{};0;3;1;shiftY;-15
 
-    - net3s;R5_f_o1;0;4;1;shiftY;-5;shiftX;8
-    - net3s;R5_f_o1;0;5;1;shiftY;-5;shiftX;8
-    - net3s;R5_f_o2;0;4;1;shiftY;-5;shiftX;8
-    - net3s;R5_f_o2;0;5;1;shiftY;-5;shiftX;8
-    - net3s;R5_f_o3;0;4;1;shiftY;-5;shiftX;8
-    - net3s;R5_f_o3;0;5;1;shiftY;-5;shiftX;8
-    - net3s;R5_f_o4;0;4;1;shiftY;-5;shiftX;8
-    - net3s;R5_f_o4;0;5;1;shiftY;-5;shiftX;8
-    - net3s;R5_f_o5;0;4;1;shiftY;-5;shiftX;8
-    - net3s;R5_f_o5;0;5;1;shiftY;-5;shiftX;8
+    - circular;1;8;net3s;R8_f_o{};0;2;1;shiftX;3;shiftY;-15
+    - circular;1;8;net3s;R8_f_o{};0;3;1;shiftX;3;shiftY;-15
 
-    - net3s;R5_f_i1;0;4;1;shiftY;-7.5;shiftX;8
-    - net3s;R5_f_i1;0;5;1;shiftY;-7.5;shiftX;8
-    - net3s;R5_f_i2;0;4;1;shiftY;-7.5;shiftX;8
-    - net3s;R5_f_i2;0;5;1;shiftY;-7.5;shiftX;8
-    - net3s;R5_f_i3;0;4;1;shiftY;-7.5;shiftX;8
-    - net3s;R5_f_i3;0;5;1;shiftY;-7.5;shiftX;8
-    - net3s;R5_f_i4;0;4;1;shiftY;-7.5;shiftX;8
-    - net3s;R5_f_i4;0;5;1;shiftY;-7.5;shiftX;8
-    - net3s;R5_f_i5;0;4;1;shiftY;-7.5;shiftX;8
-    - net3s;R5_f_i5;0;5;1;shiftY;-7.5;shiftX;8
-  -
-    - pagename;2022 01 28 | all 4
-    - net3s;R4_f_i1;0;2;1;style;0,1,2,3,4,5,10
-    - net3s;R4_f_i1;0;3;1
-    - net3s;R4_f_i2;0;2;1
-    - net3s;R4_f_i2;0;3;1
-    - net3s;R4_f_i3;0;2;1
-    - net3s;R4_f_i3;0;3;1
-    - net3s;R4_f_i4;0;2;1
-    - net3s;R4_f_i4;0;3;1
+    - circular;1;8;net3s;R8_f_o{};0;4;1;shiftX;6;shiftY;-15
+    - circular;1;8;net3s;R8_f_o{};0;5;1;shiftX;6;shiftY;-15
 
-    - net3s;R4_f_o1;0;2;1;shiftY;-2.5
-    - net3s;R4_f_o1;0;3;1;shiftY;-2.5
-    - net3s;R4_f_o2;0;2;1;shiftY;-2.5
-    - net3s;R4_f_o2;0;3;1;shiftY;-2.5
-    - net3s;R4_f_o3;0;2;1;shiftY;-2.5
-    - net3s;R4_f_o3;0;3;1;shiftY;-2.5
-    - net3s;R4_f_o4;0;2;1;shiftY;-2.5
-    - net3s;R4_f_o4;0;3;1;shiftY;-2.5
-
-    - net3s;R4_f_o1;0;4;1;shiftY;-5
-    - net3s;R4_f_o1;0;5;1;shiftY;-5
-    - net3s;R4_f_o2;0;4;1;shiftY;-5
-    - net3s;R4_f_o2;0;5;1;shiftY;-5
-    - net3s;R4_f_o3;0;4;1;shiftY;-5
-    - net3s;R4_f_o3;0;5;1;shiftY;-5
-    - net3s;R4_f_o4;0;4;1;shiftY;-5
-    - net3s;R4_f_o4;0;5;1;shiftY;-5
-
-    - net3s;R4_f_i1;0;4;1;shiftY;-7.5
-    - net3s;R4_f_i1;0;5;1;shiftY;-7.5
-    - net3s;R4_f_i2;0;4;1;shiftY;-7.5
-    - net3s;R4_f_i2;0;5;1;shiftY;-7.5
-    - net3s;R4_f_i3;0;4;1;shiftY;-7.5
-    - net3s;R4_f_i3;0;5;1;shiftY;-7.5
-    - net3s;R4_f_i4;0;4;1;shiftY;-7.5
-    - net3s;R4_f_i4;0;5;1;shiftY;-7.5
+    - circular;1;8;net3s;R8_f_i{};0;4;1;shiftX;9;shiftY;-15
+    - circular;1;8;net3s;R8_f_i{};0;5;1;shiftX;9;shiftY;-15
   -
     - pagename;2022 01 28 | all 3
-    - net3s;R3_f_i1;0;2;1 #;style;0,1,2,3,4,5,10
-    - net3s;R3_f_i1;0;3;1
-    - net3s;R3_f_i2;0;2;1
-    - net3s;R3_f_i2;0;3;1
-    - net3s;R3_f_i3;0;2;1
-    - net3s;R3_f_i3;0;3;1
+    - circular;1;3;net3s;R3_f_i{};0;2;1 #;style;0,1,2,3,4,5,10
+    - circular;1;3;net3s;R3_f_i{};0;3;1
 
-    - net3s;R3_f_o1;0;2;1;shiftY;-2.5
-    - net3s;R3_f_o1;0;3;1;shiftY;-2.5
-    - net3s;R3_f_o2;0;2;1;shiftY;-2.5
-    - net3s;R3_f_o2;0;3;1;shiftY;-2.5
-    - net3s;R3_f_o3;0;2;1;shiftY;-2.5
-    - net3s;R3_f_o3;0;3;1;shiftY;-2.5
+    - circular;1;3;net3s;R3_f_o{};0;2;1;shiftY;-3
+    - circular;1;3;net3s;R3_f_o{};0;3;1;shiftY;-3
 
-    - net3s;R3_f_o1;0;4;1;shiftY;-5
-    - net3s;R3_f_o1;0;5;1;shiftY;-5
-    - net3s;R3_f_o2;0;4;1;shiftY;-5
-    - net3s;R3_f_o2;0;5;1;shiftY;-5
-    - net3s;R3_f_o3;0;4;1;shiftY;-5
-    - net3s;R3_f_o3;0;5;1;shiftY;-5
+    - circular;1;3;net3s;R3_f_o{};0;4;1;shiftY;-6
+    - circular;1;3;net3s;R3_f_o{};0;5;1;shiftY;-6
 
-    - net3s;R3_f_i1;0;4;1;shiftY;-7.5
-    - net3s;R3_f_i1;0;5;1;shiftY;-7.5
-    - net3s;R3_f_i2;0;4;1;shiftY;-7.5
-    - net3s;R3_f_i2;0;5;1;shiftY;-7.5
-    - net3s;R3_f_i3;0;4;1;shiftY;-7.5
-    - net3s;R3_f_i3;0;5;1;shiftY;-7.5
+    - circular;1;3;net3s;R3_f_i{};0;4;1;shiftY;-9
+    - circular;1;3;net3s;R3_f_i{};0;5;1;shiftY;-9
   -
     - pagename;2022 01 28 | all 3, version 2
-    - net3s;R3_f_i1;2;1;3 #;style;0,1,2,3,4,5,10
-    - net3s;R3_f_i1;2;0;3
-    - net3s;R3_f_i2;2;1;3
-    - net3s;R3_f_i2;2;0;3
-    - net3s;R3_f_i3;2;1;3
-    - net3s;R3_f_i3;2;0;3
+    - circular;1;3;net3s;R3_f_i{};2;1;3
+    - circular;1;3;net3s;R3_f_i{};2;0;3
 
-    - net3s;R3_f_o1;2;1;3;shiftY;-2.5
-    - net3s;R3_f_o1;2;0;3;shiftY;-2.5
-    - net3s;R3_f_o2;2;1;3;shiftY;-2.5
-    - net3s;R3_f_o2;2;0;3;shiftY;-2.5
-    - net3s;R3_f_o3;2;1;3;shiftY;-2.5
-    - net3s;R3_f_o3;2;0;3;shiftY;-2.5
+    - circular;1;3;net3s;R3_f_o{};2;1;3;shiftY;-3
+    - circular;1;3;net3s;R3_f_o{};2;0;3;shiftY;-3
 
-    - net3s;R3_f_o1;4;0;5;shiftY;-5
-    - net3s;R3_f_o1;4;1;5;shiftY;-5
-    - net3s;R3_f_o2;4;0;5;shiftY;-5
-    - net3s;R3_f_o2;4;1;5;shiftY;-5
-    - net3s;R3_f_o3;4;0;5;shiftY;-5
-    - net3s;R3_f_o3;4;1;5;shiftY;-5
+    - circular;1;3;net3s;R3_f_o{};4;1;5;shiftY;-6
+    - circular;1;3;net3s;R3_f_o{};4;0;5;shiftY;-6
 
-    - net3s;R3_f_i1;4;0;5;shiftY;-7.5
-    - net3s;R3_f_i1;4;1;5;shiftY;-7.5
-    - net3s;R3_f_i2;4;0;5;shiftY;-7.5
-    - net3s;R3_f_i2;4;1;5;shiftY;-7.5
-    - net3s;R3_f_i3;4;0;5;shiftY;-7.5
-    - net3s;R3_f_i3;4;1;5;shiftY;-7.5
+    - circular;1;3;net3s;R3_f_i{};4;1;5;shiftY;-9
+    - circular;1;3;net3s;R3_f_i{};4;0;5;shiftY;-9
+  -
+    - pagename;2022 01 28 | all 4
+    - circular;1;4;net3s;R4_f_i{};0;2;1;shiftY;-3
+    - circular;1;4;net3s;R4_f_i{};0;3;1;shiftY;-3
+
+    - circular;1;4;net3s;R4_f_o{};0;2;1;shiftY;-6
+    - circular;1;4;net3s;R4_f_o{};0;3;1;shiftY;-6
+
+    - circular;1;4;net3s;R4_f_o{};0;4;1;shiftY;-9
+    - circular;1;4;net3s;R4_f_o{};0;5;1;shiftY;-9
+
+    - circular;1;4;net3s;R4_f_i{};0;4;1;shiftY;-12
+    - circular;1;4;net3s;R4_f_i{};0;5;1;shiftY;-12
