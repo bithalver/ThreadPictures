@@ -227,37 +227,37 @@ pages:
     - circular;1;3;net3s;R3_f_i{};0;2;1 #;style;0,1,2,3,4,5,10
     - circular;1;3;net3s;R3_f_i{};0;3;1
 
-    - circular;1;3;net3s;R3_f_o{};0;2;1;shiftY;-3
-    - circular;1;3;net3s;R3_f_o{};0;3;1;shiftY;-3
+    - circular;1;3;net3s;R3_f_o{};0;2;1;shiftX;3
+    - circular;1;3;net3s;R3_f_o{};0;3;1;shiftX;3
 
-    - circular;1;3;net3s;R3_f_o{};0;4;1;shiftY;-6
-    - circular;1;3;net3s;R3_f_o{};0;5;1;shiftY;-6
+    - circular;1;3;net3s;R3_f_o{};0;4;1;shiftY;-3;shiftX;3
+    - circular;1;3;net3s;R3_f_o{};0;5;1;shiftY;-3;shiftX;3
 
-    - circular;1;3;net3s;R3_f_i{};0;4;1;shiftY;-9
-    - circular;1;3;net3s;R3_f_i{};0;5;1;shiftY;-9
+    - circular;1;3;net3s;R3_f_i{};0;4;1;shiftY;-3
+    - circular;1;3;net3s;R3_f_i{};0;5;1;shiftY;-3
   -
     - pagename;2022 01 28 | all 3, version 2
     - circular;1;3;net3s;R3_f_i{};2;1;3
     - circular;1;3;net3s;R3_f_i{};2;0;3
 
-    - circular;1;3;net3s;R3_f_o{};2;1;3;shiftY;-3
-    - circular;1;3;net3s;R3_f_o{};2;0;3;shiftY;-3
+    - circular;1;3;net3s;R3_f_o{};2;1;3;shiftX;3
+    - circular;1;3;net3s;R3_f_o{};2;0;3;shiftX;3
 
-    - circular;1;3;net3s;R3_f_o{};4;1;5;shiftY;-6
-    - circular;1;3;net3s;R3_f_o{};4;0;5;shiftY;-6
+    - circular;1;3;net3s;R3_f_o{};4;1;5;shiftY;-3;shiftX;3
+    - circular;1;3;net3s;R3_f_o{};4;0;5;shiftY;-3;shiftX;3
 
-    - circular;1;3;net3s;R3_f_i{};4;1;5;shiftY;-9
-    - circular;1;3;net3s;R3_f_i{};4;0;5;shiftY;-9
+    - circular;1;3;net3s;R3_f_i{};4;1;5;shiftY;-3
+    - circular;1;3;net3s;R3_f_i{};4;0;5;shiftY;-3
   -
     - pagename;2022 01 28 | all 4
-    - circular;1;4;net3s;R4_f_i{};0;2;1;shiftY;-3
-    - circular;1;4;net3s;R4_f_i{};0;3;1;shiftY;-3
+    - circular;1;4;net3s;R4_f_i{};0;2;1
+    - circular;1;4;net3s;R4_f_i{};0;3;1
 
-    - circular;1;4;net3s;R4_f_o{};0;2;1;shiftY;-6
-    - circular;1;4;net3s;R4_f_o{};0;3;1;shiftY;-6
+    - circular;1;4;net3s;R4_f_o{};0;2;1;shiftX;3
+    - circular;1;4;net3s;R4_f_o{};0;3;1;shiftX;3
 
-    - circular;1;4;net3s;R4_f_o{};0;4;1;shiftY;-9
-    - circular;1;4;net3s;R4_f_o{};0;5;1;shiftY;-9
+    - circular;1;4;net3s;R4_f_o{};0;4;1;shiftY;-3;shiftX;3
+    - circular;1;4;net3s;R4_f_o{};0;5;1;shiftY;-3;shiftX;3
 
-    - circular;1;4;net3s;R4_f_i{};0;4;1;shiftY;-12
-    - circular;1;4;net3s;R4_f_i{};0;5;1;shiftY;-12
+    - circular;1;4;net3s;R4_f_i{};0;4;1;shiftY;-3
+    - circular;1;4;net3s;R4_f_i{};0;5;1;shiftY;-3
