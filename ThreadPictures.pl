@@ -173,7 +173,7 @@ if (defined $config->{planes}) {
     when (/^4/i){ # grid for squares; two mandatory options: sizeX, sizeY
       my @w=grid4plane(@AP); $TP_planes{$planename}=\@w;
     }
-    when (/^s/i){ # smaller: create a series from points , gravity point and magnification
+    when (/^sm/i){ # smaller: create a series from points , gravity point and magnification
       my $iterations=splice @AP,0,1;
 	    for my $i (1..$iterations) {
         my @w=smaller_plane_1($i,@AP);
@@ -191,6 +191,14 @@ if (defined $config->{planes}) {
 	  for my $i (1..$basicplaneinfo[0]) { # 1 .. sides
 	    my $i1=( $i ==  $basicplaneinfo[0] ? 1 : $i+1);
         $TP_planes{sprintf("%s_%02d",$planename,$i)}=create_connected_plane($mybasicplane[$i*2] , $mybasicplane[$i*2+1], $mybasicplane[$i1*2] , $mybasicplane[$i1*2+1], $plane_to_spin, $nth1, $nth2);
+	  }
+    }
+    when (/^spin/i){ # spin: plane-to-spin (mandatory), nth1 (mandatory), nth2 (mandatory), circle_sides (mandatory), circle_initial_angle (optional), circle_size (optional)
+	  # create a series of planes around a "circle"; freshly created plane names will be planes-to-spin_01 and so on
+	  my ($plane_to_spin, $nth1, $nth2)=@AP;
+	  my @basicplaneinfo=splice @AP,3;  my @mybasicplane=basicplane(@basicplaneinfo);
+	  for my $i (1..$basicplaneinfo[0]) { # 1 .. sides
+        $TP_planes{sprintf("%s_%02d",$planename,$i)}=create_connected_plane($mybasicplane[0] , $mybasicplane[1], $mybasicplane[$i*2] , $mybasicplane[$i*2+1], $plane_to_spin, $nth1, $nth2);
 	  }
     }
     when (/^ge/i){ # geometric_line; startX, startY, endX, endY, sections, magnitude (for 1 section)
