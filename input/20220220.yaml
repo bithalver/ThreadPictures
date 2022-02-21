@@ -1,22 +1,21 @@
 global:
-    threads: 10
-    lastthread: 10
+    threads: 8
+    lastthread: 8
     background: darkgray
-    color: red
-    colorgradient: CG_RY;8;red;yellow;CG_GG;18;lightgray;darkgreen;CG_AR1;8;darkgray;lightblue;CG_AR2;8;orange;darkgray;CG_WB;3;white;0,0.4,0.8
+    colorgradient: CG_RY;9;red;yellow;CG_BG;9;lightblue;green
     style: filledcurve
     fontcolor: white
 planes:
   - T;freeform;0;0;0;10;-2;10;2;10;0;6;-1.5;5;1.5;5;0;1;0;5
-  - RO;spin;T;0;1;9;90;10
+  - RO;spin;T;0;1;9;290;10
   - RI;spin;T;0;1;9;110;8
 pages:
   -
-    - pagename;2022 02 20 | 1
-    - circular;1;9;net3s;RO_{};4;1;2
-    - circular;1;9;net3s;RO_{};4;1;3
-    - circular;1;9;net3s;RO_{};7;8;5
-    - circular;1;9;net3s;RO_{};7;8;6
+    - pagename;2022 02 20 | Corona virus
+    - circular;1;9;net3s;RO_{};4;1;2;color;CG_RY_{}
+    - circular;1;9;net3s;RO_{};4;1;3;color;CG_RY_{}
+    - circular;1;9;net3s;RO_{};7;8;5;color;CG_RY_{}
+    - circular;1;9;net3s;RO_{};7;8;6;color;CG_RY_{}
 
-    - circular;1;9;net3s;RI_{};4;1;2
-    - circular;1;9;net3s;RI_{};4;1;3
+    - circular;1;9;net3s;RI_{};4;1;2;color;CG_BG_{}
+    - circular;1;9;net3s;RI_{};4;1;3;color;CG_BG_{}
