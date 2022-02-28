@@ -1,0 +1,101 @@
+global:
+    threads: 10
+    lastthread: 10
+    background: darkgray
+    colorgradient: CG_YR;15;yellow;red;CG_BG;3;lightblue;green
+    style: filledcurve
+    fontcolor: white
+planes:
+  - T;freeform;0;0;0;10;-2;10;2;10;0;6;-1.5;5;1.5;5;0;1;0;5
+  - RO;spin;T;0;1;9;290;10
+  - RI;spin;T;0;1;9;110;8
+pages:
+  -
+    - pagename;2022 02 28 | 1
+    - net3;0;8;0;0;8;0;color;CG_BG_03
+    - net3;0;8;0;0;6;0;color;CG_BG_02
+    - net3;0;8;0;0;4;0;color;CG_BG_01
+    - net3;0;8;0;0;2;0;color;CG_BG_00
+  -
+    - pagename;2022 02 28 | 2
+    - net3;0;8;0;0;8;-8;color;CG_BG_03
+    - net3;0;8;0;0;6;-5;color;CG_BG_02
+    - net3;0;8;0;0;4;-2;color;CG_BG_01
+    - net3;0;8;0;0;2;0;color;CG_BG_00
+  -
+    - pagename;2022 02 28 | 3
+    - net3;0;8;0;0;8;8;color;CG_BG_03
+    - net3;0;8;0;0;6;5;color;CG_BG_02
+    - net3;0;8;0;0;4;2;color;CG_BG_01
+    - net3;0;8;0;0;2;0;color;CG_BG_00
+
+    - net3;0;8;0;0;-8;8;color;CG_BG_03
+    - net3;0;8;0;0;-6;5;color;CG_BG_02
+    - net3;0;8;0;0;-4;2;color;CG_BG_01
+    - net3;0;8;0;0;-2;0;color;CG_BG_00
+
+    - net3;0;-8;0;0;8;-8;color;CG_BG_03
+    - net3;0;-8;0;0;6;-5;color;CG_BG_02
+    - net3;0;-8;0;0;4;-2;color;CG_BG_01
+    - net3;0;-8;0;0;2;-0;color;CG_BG_00
+
+    - net3;0;-8;0;0;-8;-8;color;CG_BG_03
+    - net3;0;-8;0;0;-6;-5;color;CG_BG_02
+    - net3;0;-8;0;0;-4;-2;color;CG_BG_01
+    - net3;0;-8;0;0;-2;-0;color;CG_BG_00
+  -
+    - pagename;2022 02 28 | 4
+
+    - net3;0;8;0;0;8;0;color;CG_YR_08
+    - net3;0;8;0;0;8;2;color;CG_YR_09
+    - net3;0;8;0;0;8;4;color;CG_YR_10
+    - net3;0;8;0;0;8;6;color;CG_YR_11
+    - net3;0;8;0;0;8;8;color;CG_YR_12
+    - net3;0;8;0;0;6;8;color;CG_YR_13
+    - net3;0;8;0;0;4;8;color;CG_YR_14
+    - net3;0;8;0;0;2;8;color;CG_YR_15
+    - net3;0;-8;0;0;8;-0;color;CG_YR_07
+    - net3;0;-8;0;0;8;-2;color;CG_YR_06
+    - net3;0;-8;0;0;8;-4;color;CG_YR_05
+    - net3;0;-8;0;0;8;-6;color;CG_YR_04
+    - net3;0;-8;0;0;8;-8;color;CG_YR_03
+    - net3;0;-8;0;0;6;-8;color;CG_YR_02
+    - net3;0;-8;0;0;4;-8;color;CG_YR_01
+    - net3;0;-8;0;0;2;-8;color;CG_YR_00
+
+    - net3;0;8;0;0;-8;0;color;CG_YR_08
+    - net3;0;8;0;0;-8;2;color;CG_YR_09
+    - net3;0;8;0;0;-8;4;color;CG_YR_10
+    - net3;0;8;0;0;-8;6;color;CG_YR_11
+    - net3;0;8;0;0;-8;8;color;CG_YR_12
+    - net3;0;8;0;0;-6;8;color;CG_YR_13
+    - net3;0;8;0;0;-4;8;color;CG_YR_14
+    - net3;0;8;0;0;-2;8;color;CG_YR_15
+    - net3;0;-8;0;0;-8;-0;color;CG_YR_07
+    - net3;0;-8;0;0;-8;-2;color;CG_YR_06
+    - net3;0;-8;0;0;-8;-4;color;CG_YR_05
+    - net3;0;-8;0;0;-8;-6;color;CG_YR_04
+    - net3;0;-8;0;0;-8;-8;color;CG_YR_03
+    - net3;0;-8;0;0;-6;-8;color;CG_YR_02
+    - net3;0;-8;0;0;-4;-8;color;CG_YR_01
+    - net3;0;-8;0;0;-2;-8;color;CG_YR_00
+  -
+    - pagename;2022 02 28 | 5
+
+    - net3;0;8;0;0;8;0;color;CG_YR_08
+    - net3;0;8;0;0;8;4;color;CG_YR_10
+    - net3;0;8;0;0;8;8;color;CG_YR_12
+    - net3;0;8;0;0;4;8;color;CG_YR_14
+    - net3;0;-8;0;0;8;-0;color;CG_YR_07
+    - net3;0;-8;0;0;8;-4;color;CG_YR_05
+    - net3;0;-8;0;0;8;-8;color;CG_YR_03
+    - net3;0;-8;0;0;4;-8;color;CG_YR_01
+
+    - net3;0;8;0;0;-8;0;color;CG_YR_08
+    - net3;0;8;0;0;-8;4;color;CG_YR_10
+    - net3;0;8;0;0;-8;8;color;CG_YR_12
+    - net3;0;8;0;0;-4;8;color;CG_YR_14
+    - net3;0;-8;0;0;-8;-0;color;CG_YR_07
+    - net3;0;-8;0;0;-8;-4;color;CG_YR_05
+    - net3;0;-8;0;0;-8;-8;color;CG_YR_03
+    - net3;0;-8;0;0;-4;-8;color;CG_YR_01
