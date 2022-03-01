@@ -1,6 +1,6 @@
 global:
-    threads: 10
-    lastthread: 10
+    threads: 20
+    lastthread: 20
     background: darkgray
     colorgradient: CG_YR;15;yellow;red;CG_BG;3;lightblue;green
     style: filledcurve
