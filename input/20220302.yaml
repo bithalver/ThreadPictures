@@ -1,0 +1,184 @@
+global:
+    threads: 20
+    lastthread: 20
+    background: darkgray
+    colorgradient: CG_RY;9;red;yellow;CG_BG;9;lightblue;green
+#    style: filledcurve
+    style: normal
+    fontcolor: white
+planes:
+  - A;angle;36
+  - R;regular;5;270
+  - A12;connected;R;1;R;2;A;2;1
+  - A23;connected;R;2;R;3;A;2;1
+  - A34;connected;R;3;R;4;A;2;1
+  - A45;connected;R;4;R;5;A;2;1
+  - A51;connected;R;5;R;1;A;2;1
+  - F;freeform;R;0;R;1;R;2;R;3;R;4;R;5;A12;0;A23;0;A34;0;A45;0;A51;0
+pages:
+  -
+    - pagename;2022 03 02 | 1
+    - net3s;F;6;0;7;color;white
+    - net3s;F;7;0;8;color;white
+    - net3s;F;8;0;9;color;white
+    - net3s;F;9;0;10;color;white
+    - net3s;F;10;0;6;color;white
+    - net3s;F;1;0;2;color;black;threads;10;lastthread;10
+    - net3s;F;2;0;3;color;black;threads;10;lastthread;10
+    - net3s;F;3;0;4;color;black;threads;10;lastthread;10
+    - net3s;F;4;0;5;color;black;threads;10;lastthread;10
+    - net3s;F;5;0;1;color;black;threads;10;lastthread;10
+  -
+    - pagename;2022 03 02 | 2
+    - net3s;F;7;8;2
+    - net3s;F;8;9;3
+    - net3s;F;9;10;4
+    - net3s;F;10;6;5
+    - net3s;F;6;7;1
+  -
+    - pagename;2022 03 02 | 3
+    - net3s;F;7;8;2
+    - net3s;F;8;9;3
+    - net3s;F;9;10;4
+    - net3s;F;10;6;5
+    - net3s;F;6;7;1
+
+    - net3s;F;10;6;2
+    - net3s;F;6;7;3
+    - net3s;F;7;8;4
+    - net3s;F;8;9;5
+    - net3s;F;9;10;1
+  -
+    - pagename;2022 03 02 | 3a
+    - net3s;F;7;8;2;color;white
+    - net3s;F;8;9;3;color;white
+    - net3s;F;9;10;4;color;white
+    - net3s;F;10;6;5;color;white
+    - net3s;F;6;7;1;color;white
+
+    - net3s;F;10;6;3;color;brown
+    - net3s;F;6;7;4;color;brown
+    - net3s;F;7;8;5;color;brown
+    - net3s;F;8;9;1;color;brown
+    - net3s;F;9;10;2;color;brown
+  -
+    - pagename;2022 03 02 | 4
+    - net3s;F;10;6;2
+    - net3s;F;6;7;3
+    - net3s;F;7;8;4
+    - net3s;F;8;9;5
+    - net3s;F;9;10;1
+  -
+    - pagename;2022 03 02 | 5
+    - net3s;F;7;8;2
+    - net3s;F;8;9;3
+    - net3s;F;9;10;4
+    - net3s;F;10;6;5
+    - net3s;F;6;7;1
+
+    - net3s;F;4;7;8
+    - net3s;F;5;8;9
+    - net3s;F;1;9;10
+    - net3s;F;2;10;6
+    - net3s;F;3;6;7
+  -
+    - pagename;2022 03 02 | 6
+    - net3s;F;7;8;6
+    - net3s;F;8;9;7
+    - net3s;F;9;10;8
+    - net3s;F;10;6;9
+    - net3s;F;6;7;10
+
+    - net3s;F;4;7;8
+    - net3s;F;5;8;9
+    - net3s;F;1;9;10
+    - net3s;F;2;10;6
+    - net3s;F;3;6;7
+  -
+    - pagename;2022 03 02 | 7a
+    - net3s;F;7;8;6
+    - net3s;F;8;9;7
+    - net3s;F;9;10;8
+    - net3s;F;10;6;9
+    - net3s;F;6;7;10
+
+    - net3s;F;9;7;8;color;lightgray
+    - net3s;F;10;8;9;color;lightgray
+    - net3s;F;6;9;10;color;lightgray
+    - net3s;F;7;10;6;color;lightgray
+    - net3s;F;8;6;7;color;lightgray
+  -
+    - pagename;2022 03 02 | 7b
+    - net3s;F;6;8;7;color;blue;threads;20;firstthread;13;lastthread;20
+    - net3s;F;7;9;8;color;blue;threads;20;firstthread;13;lastthread;20
+    - net3s;F;8;10;9;color;blue;threads;20;firstthread;13;lastthread;20
+    - net3s;F;9;6;10;color;blue;threads;20;firstthread;13;lastthread;20
+    - net3s;F;10;7;6;color;blue;threads;20;firstthread;13;lastthread;20
+
+    - net3s;F;6;8;7;color;yellow;threads;20;firstthread;0;lastthread;12
+    - net3s;F;7;9;8;color;yellow;threads;20;firstthread;0;lastthread;12
+    - net3s;F;8;10;9;color;yellow;threads;20;firstthread;0;lastthread;12
+    - net3s;F;9;6;10;color;yellow;threads;20;firstthread;0;lastthread;12
+    - net3s;F;10;7;6;color;yellow;threads;20;firstthread;0;lastthread;12
+
+    - net3s;F;9;7;8;color;blue;threads;20;firstthread;13;lastthread;20
+    - net3s;F;10;8;9;color;blue;threads;20;firstthread;13;lastthread;20
+    - net3s;F;6;9;10;color;blue;threads;20;firstthread;13;lastthread;20
+    - net3s;F;7;10;6;color;blue;threads;20;firstthread;13;lastthread;20
+    - net3s;F;8;6;7;color;blue;threads;20;firstthread;13;lastthread;20
+
+    - net3s;F;9;7;8;color;yellow;threads;20;firstthread;0;lastthread;12
+    - net3s;F;10;8;9;color;yellow;threads;20;firstthread;0;lastthread;12
+    - net3s;F;6;9;10;color;yellow;threads;20;firstthread;0;lastthread;12
+    - net3s;F;7;10;6;color;yellow;threads;20;firstthread;0;lastthread;12
+    - net3s;F;8;6;7;color;yellow;threads;20;firstthread;0;lastthread;12
+  -
+    - pagename;2022 03 02 | 7b1 | True nature of communism
+    - net3s;F;6;8;7;color;brown;threads;20;firstthread;0;lastthread;10
+    - net3s;F;7;9;8;color;brown;threads;20;firstthread;0;lastthread;10
+    - net3s;F;8;10;9;color;brown;threads;20;firstthread;0;lastthread;10
+    - net3s;F;9;6;10;color;brown;threads;20;firstthread;0;lastthread;10
+    - net3s;F;10;7;6;color;brown;threads;20;firstthread;0;lastthread;10
+
+    - net3s;F;9;7;8;color;brown;threads;20;firstthread;0;lastthread;10
+    - net3s;F;10;8;9;color;brown;threads;20;firstthread;0;lastthread;10
+    - net3s;F;6;9;10;color;brown;threads;20;firstthread;0;lastthread;10
+    - net3s;F;7;10;6;color;brown;threads;20;firstthread;0;lastthread;10
+    - net3s;F;8;6;7;color;brown;threads;20;firstthread;0;lastthread;10
+
+    - net3s;F;6;8;7;color;red;style;10
+    - net3s;F;7;9;8;color;red;style;10
+    - net3s;F;8;10;9;color;red;style;10
+    - net3s;F;9;6;10;color;red;style;10
+    - net3s;F;10;7;6;color;red;style;10
+
+    - net3s;F;9;7;8;color;red;style;10
+    - net3s;F;10;8;9;color;red;style;10
+    - net3s;F;6;9;10;color;red;style;10
+    - net3s;F;7;10;6;color;red;style;10
+    - net3s;F;8;6;7;color;red;style;10
+  -
+    - pagename;2022 03 02 | 7c
+    - net3s;F;6;8;7;color;orange;threads;20;firstthread;13;lastthread;20
+    - net3s;F;7;9;8;color;orange;threads;20;firstthread;13;lastthread;20
+    - net3s;F;8;10;9;color;orange;threads;20;firstthread;13;lastthread;20
+    - net3s;F;9;6;10;color;orange;threads;20;firstthread;13;lastthread;20
+    - net3s;F;10;7;6;color;orange;threads;20;firstthread;13;lastthread;20
+
+    - net3s;F;6;8;7;color;brown;threads;20;firstthread;0;lastthread;12
+    - net3s;F;7;9;8;color;brown;threads;20;firstthread;0;lastthread;12
+    - net3s;F;8;10;9;color;brown;threads;20;firstthread;0;lastthread;12
+    - net3s;F;9;6;10;color;brown;threads;20;firstthread;0;lastthread;12
+    - net3s;F;10;7;6;color;brown;threads;20;firstthread;0;lastthread;12
+
+    - net3s;F;9;7;8;color;orange;threads;20;firstthread;13;lastthread;20
+    - net3s;F;10;8;9;color;orange;threads;20;firstthread;13;lastthread;20
+    - net3s;F;6;9;10;color;orange;threads;20;firstthread;13;lastthread;20
+    - net3s;F;7;10;6;color;orange;threads;20;firstthread;13;lastthread;20
+    - net3s;F;8;6;7;color;orange;threads;20;firstthread;13;lastthread;20
+
+    - net3s;F;9;7;8;color;brown;threads;20;firstthread;0;lastthread;12
+    - net3s;F;10;8;9;color;brown;threads;20;firstthread;0;lastthread;12
+    - net3s;F;6;9;10;color;brown;threads;20;firstthread;0;lastthread;12
+    - net3s;F;7;10;6;color;brown;threads;20;firstthread;0;lastthread;12
+    - net3s;F;8;6;7;color;brown;threads;20;firstthread;0;lastthread;12
