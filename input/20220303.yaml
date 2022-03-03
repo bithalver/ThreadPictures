@@ -1,0 +1,96 @@
+global:
+    threads: 8
+    lastthread: 8
+    background: darkgray
+    style: filledcurve
+    fontcolor: white
+    color: lightgray
+planes:
+  - g;grid;50;50
+  - L;freeform;0;0;1;0;2;0;4;0
+  - L1;freeform;0;0;1;0;2;0
+  - R;regular;6
+  - L56;connected;R;5;R;6;L1;0;2
+  - L561;connected;R;5;L56;1;L;0;3
+  - L562;connected;R;0;L56;1;L;0;3
+  - L563;connected;R;6;L56;1;L;0;3
+  - L45;connected;R;4;R;5;L1;0;2
+  - L451;connected;R;4;L45;1;L;0;3
+  - L452;connected;R;0;L45;1;L;0;3
+  - L453;connected;R;5;L45;1;L;0;3
+  - L34;connected;R;3;R;4;L1;0;2
+  - L341;connected;R;3;L34;1;L;0;3
+  - L342;connected;R;0;L34;1;L;0;3
+  - L343;connected;R;4;L34;1;L;0;3
+  - L23;connected;R;2;R;3;L1;0;2
+  - L231;connected;R;2;L23;1;L;0;3
+  - L232;connected;R;0;L23;1;L;0;3
+  - L233;connected;R;3;L23;1;L;0;3
+  - L12;connected;R;1;R;2;L1;0;2
+  - L121;connected;R;1;L12;1;L;0;3
+  - L122;connected;R;0;L12;1;L;0;3
+  - L123;connected;R;2;L12;1;L;0;3
+  - L61;connected;R;6;R;1;L1;0;2
+  - L611;connected;R;6;L61;1;L;0;3
+  - L612;connected;R;0;L61;1;L;0;3
+  - L613;connected;R;1;L61;1;L;0;3
+pages:
+  -
+    - pagename;2022 03 03 | 1
+    - net3s;g;602;1205;608;color;black
+    - net3s;g;603;1005;607
+    - net3s;g;604;0805;606;color;white
+
+    - net3s;g;602;0005;608;color;black
+    - net3s;g;602;0205;608
+    - net3s;g;602;0405;608;color;white
+  -
+    - pagename;2022 03 03 | 4 | Cyberpunk feeling B&W
+    - net3;L561;0;L562;0;L563;0;color;black
+    - net3;L561;1;L562;1;L563;1;color;gray
+    - net3;L561;2;L562;2;L563;2;color;white
+
+    - net3;L451;0;L452;0;L453;0;color;white
+    - net3;L451;1;L452;1;L453;1;color;black
+    - net3;L451;2;L452;2;L453;2;color;gray
+
+    - net3;L341;0;L342;0;L343;0;color;gray
+    - net3;L341;1;L342;1;L343;1;color;white
+    - net3;L341;2;L342;2;L343;2;color;black
+
+    - net3;L231;0;L232;0;L233;0;color;black
+    - net3;L231;1;L232;1;L233;1;color;gray
+    - net3;L231;2;L232;2;L233;2;color;white
+
+    - net3;L121;0;L122;0;L123;0;color;white
+    - net3;L121;1;L122;1;L123;1;color;black
+    - net3;L121;2;L122;2;L123;2;color;gray
+
+    - net3;L611;0;L612;0;L613;0;color;gray
+    - net3;L611;1;L612;1;L613;1;color;white
+    - net3;L611;2;L612;2;L613;2;color;black
+  -
+    - pagename;2022 03 03 | 5 | Cyberpunk feeling
+    - net3;L561;0;L562;0;L563;0;color;green
+    - net3;L561;1;L562;1;L563;1;color;lightpurple
+    - net3;L561;2;L562;2;L563;2;color;orange
+
+    - net3;L451;0;L452;0;L453;0;color;orange
+    - net3;L451;1;L452;1;L453;1;color;green
+    - net3;L451;2;L452;2;L453;2;color;lightpurple
+
+    - net3;L341;0;L342;0;L343;0;color;lightpurple
+    - net3;L341;1;L342;1;L343;1;color;orange
+    - net3;L341;2;L342;2;L343;2;color;green
+
+    - net3;L231;0;L232;0;L233;0;color;green
+    - net3;L231;1;L232;1;L233;1;color;lightpurple
+    - net3;L231;2;L232;2;L233;2;color;orange
+
+    - net3;L121;0;L122;0;L123;0;color;orange
+    - net3;L121;1;L122;1;L123;1;color;green
+    - net3;L121;2;L122;2;L123;2;color;lightpurple
+
+    - net3;L611;0;L612;0;L613;0;color;lightpurple
+    - net3;L611;1;L612;1;L613;1;color;orange
+    - net3;L611;2;L612;2;L613;2;color;green
