@@ -45,30 +45,56 @@ pages:
     - net3s;g;602;0205;608
     - net3s;g;602;0405;608;color;white
   -
-    - pagename;2022 03 03 | 4 | Cyberpunk feeling B&W
+    - pagename;2022 03 03 | 4 | Cyberpunk feeling nearly B&W
     - net3;L561;0;L562;0;L563;0;color;black
-    - net3;L561;1;L562;1;L563;1;color;gray
+    - net3;L561;1;L562;1;L563;1;color;lightblue
     - net3;L561;2;L562;2;L563;2;color;white
 
     - net3;L451;0;L452;0;L453;0;color;white
     - net3;L451;1;L452;1;L453;1;color;black
-    - net3;L451;2;L452;2;L453;2;color;gray
+    - net3;L451;2;L452;2;L453;2;color;lightblue
 
-    - net3;L341;0;L342;0;L343;0;color;gray
+    - net3;L341;0;L342;0;L343;0;color;lightblue
     - net3;L341;1;L342;1;L343;1;color;white
     - net3;L341;2;L342;2;L343;2;color;black
 
     - net3;L231;0;L232;0;L233;0;color;black
-    - net3;L231;1;L232;1;L233;1;color;gray
+    - net3;L231;1;L232;1;L233;1;color;lightblue
     - net3;L231;2;L232;2;L233;2;color;white
 
     - net3;L121;0;L122;0;L123;0;color;white
     - net3;L121;1;L122;1;L123;1;color;black
-    - net3;L121;2;L122;2;L123;2;color;gray
+    - net3;L121;2;L122;2;L123;2;color;lightblue
 
-    - net3;L611;0;L612;0;L613;0;color;gray
+    - net3;L611;0;L612;0;L613;0;color;lightblue
     - net3;L611;1;L612;1;L613;1;color;white
     - net3;L611;2;L612;2;L613;2;color;black
+  -
+    - pagename;2022 03 03 | 4a
+    - background;lightgray
+    - net3;L561;2;L562;0;L563;2;color;white
+    - net3;L561;1;L562;1;L563;1;color;lightblue
+    - net3;L561;0;L562;2;L563;0;color;black
+
+    - net3;L451;2;L452;0;L453;2;color;lightblue
+    - net3;L451;1;L452;1;L453;1;color;black
+    - net3;L451;0;L452;2;L453;0;color;white
+
+    - net3;L341;0;L342;2;L343;0;color;lightblue
+    - net3;L341;1;L342;1;L343;1;color;white
+    - net3;L341;2;L342;0;L343;2;color;black
+
+    - net3;L231;0;L232;2;L233;0;color;black
+    - net3;L231;1;L232;1;L233;1;color;lightblue
+    - net3;L231;2;L232;0;L233;2;color;white
+
+    - net3;L121;0;L122;2;L123;0;color;white
+    - net3;L121;1;L122;1;L123;1;color;black
+    - net3;L121;2;L122;0;L123;2;color;lightblue
+
+    - net3;L611;2;L612;0;L613;2;color;black
+    - net3;L611;1;L612;1;L613;1;color;white
+    - net3;L611;0;L612;2;L613;0;color;lightblue
   -
     - pagename;2022 03 03 | 5 | Cyberpunk feeling
     - net3;L561;0;L562;0;L563;0;color;green
