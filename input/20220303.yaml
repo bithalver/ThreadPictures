@@ -41,9 +41,9 @@ pages:
     - net3s;g;603;1005;607
     - net3s;g;604;0805;606;color;white
 
-    - net3s;g;602;0005;608;color;black
-    - net3s;g;602;0205;608
-    - net3s;g;602;0405;608;color;white
+    - net3s;g;604;0005;606;color;white
+    - net3s;g;603;0205;607
+    - net3s;g;602;0405;608;color;black
   -
     - pagename;2022 03 03 | 4 | Cyberpunk feeling nearly B&W
     - net3;L561;0;L562;0;L563;0;color;black
