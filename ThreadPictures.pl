@@ -107,12 +107,12 @@ if ($opts_debug) {use Data::Dumper; warn "Full input structure ---[BEGIN]---\n";
 
 global_init;
 
-print_ps_filestart();
-
 for my $AK (keys %{$config->{global}}) {
   $TP_GLOBAL{$AK}=$config->{global}->{$AK}; # Always overwrite values defined as defaults or by environment variables
   # if ($opts_debug) { warn "TP_GLOBAL{$AK} => $TP_GLOBAL{$AK}\n";} # These are written with Data::Dumper ~17 lines earlier ...
 }
+
+print_ps_filestart();
 
 if ($TP_PARAMS{BW}) {$TP_GLOBAL{BW}=1;} # Being black'n'white is global: even all pages are BW or not
 
