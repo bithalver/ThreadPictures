@@ -1,5 +1,3 @@
-# TP_pageXsize=29.7 TP_pageYsize=21 perl ThreadPictures.pl -i input/20220424.yaml -o 20220424.ps -p BW=1 -p style=holes ; ps2pdf 20220424.ps  /20220424.pdf ; rm 20220424.ps
-#  TP_pageXsize=29.7 TP_pageYsize=21 perl ThreadPictures.pl -i input/20220424.yaml -o 20220424.ps -p BW=1 -p style=holes ; ps2pdf 20220424.ps paper/20220424_holes.pdf ; rm 20220424.ps
 ---
 global:
     threads: 10
@@ -7,6 +5,8 @@ global:
     color: lightgray
     fontcolor: lightgray
     style: filledcurve
+    pageXsize: 842
+    pageYsize: 595
 planes:
   - pa3;regular;3;90
   - p4;regular;4
