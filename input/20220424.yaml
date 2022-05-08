@@ -9,8 +9,10 @@ global:
     pageYsize: 595
 planes:
   - pa3;regular;3;90
+  - pa3_BL;regular;3;270
   - p4;regular;4
   - pa4;connected;pa3;1;pa3;2;p4;2;1
+  - pa4_BL;connected;pa3_BL;1;pa3_BL;2;p4;2;1
   - pa4_;connected;pa3;3;pa3;1;p4;1;4
 
   - S_01;freeform;pa4;3;pa3;1;pa3;2;pa3;3
@@ -26,6 +28,13 @@ planes:
   - R_04;connected;R_03;2;R_03;3;R_03;0;2
   - R_05;connected;R_04;2;R_04;3;R_04;0;2
   - R_06;connected;R_05;2;R_05;3;R_05;0;2
+
+  - BL_01;freeform;pa4_BL;3;pa3_BL;1;pa3_BL;2;pa3_BL;3
+  - BL_02;connected;BL_01;2;BL_01;3;BL_01;0;2
+  - BL_03;connected;BL_02;2;BL_02;3;BL_02;0;2
+  - BL_04;connected;BL_03;2;BL_03;3;BL_03;0;2
+  - BL_05;connected;BL_04;2;BL_04;3;BL_04;0;2
+  - BL_06;connected;BL_05;2;BL_05;3;BL_05;0;2
 
 pages:
   -
@@ -140,3 +149,19 @@ pages:
 
     - circular;1;6;net3s;R_{};0;1;2;color;yellow;shiftX;2.5
     - circular;1;6;net3s;R_{};1;2;3;color;yellow;shiftX;2.5
+  -
+    - pagename;Snails of opposite
+    - xymirror;1
+    - circular;1;6;net3s;S_{};0;1;2;color;lightblue
+    - circular;1;6;net3s;S_{};1;2;3;color;lightblue
+
+    - circular;1;6;net3s;BL_{};0;1;2;color;yellow;shiftY;-1
+    - circular;1;6;net3s;BL_{};1;2;3;color;yellow;shiftY;-1
+  -
+    - pagename;Snails of the mirror world
+    - xymirror;1
+    - circular;1;6;net3s;S_{};0;1;2;color;lightblue
+    - circular;1;6;net3s;S_{};1;2;3;color;lightblue
+
+    - circular;1;6;net3s;BL_{};0;1;2;color;yellow;shiftY;2.865;shiftX;-1.5
+    - circular;1;6;net3s;BL_{};1;2;3;color;yellow;shiftY;2.865;shiftX;-1.5
