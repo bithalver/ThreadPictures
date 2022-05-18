@@ -13,12 +13,12 @@ planes:
   - pa4_BL;connected;pa3_BL;1;pa3_BL;2;p4;2;1
   - pa4_;connected;pa3;3;pa3;1;p4;1;4
 
-  - S_01;freeform;pa4;3;pa3;1;pa3;2;pa3;3
-  - S_02;connected;S_01;2;S_01;3;S_01;0;2
-  - S_03;connected;S_02;2;S_02;3;S_02;0;2
-  - S_04;connected;S_03;2;S_03;3;S_03;0;2
-  - S_05;connected;S_04;2;S_04;3;S_04;0;2
-  - S_06;connected;S_05;2;S_05;3;S_05;0;2
+  - S1_01;freeform;pa4;3;pa3;1;pa3;2;pa3;3
+  - S1_02;connected;S1_01;2;S1_01;3;S1_01;0;2
+  - S1_03;connected;S1_02;2;S1_02;3;S1_02;0;2
+  - S1_04;connected;S1_03;2;S1_03;3;S1_03;0;2
+  - S1_05;connected;S1_04;2;S1_04;3;S1_04;0;2
+  - S1_06;connected;S1_05;2;S1_05;3;S1_05;0;2
 
   - R_01;freeform;pa4_;3;pa3;1;pa3;3;pa3;2
   - R_02;connected;R_01;2;R_01;3;R_01;0;2
@@ -27,32 +27,69 @@ planes:
   - R_05;connected;R_04;2;R_04;3;R_04;0;2
   - R_06;connected;R_05;2;R_05;3;R_05;0;2
 
-  - BL_01;freeform;pa4_BL;3;pa3_BL;1;pa3_BL;2;pa3_BL;3
-  - BL_02;connected;BL_01;2;BL_01;3;BL_01;0;2
-  - BL_03;connected;BL_02;2;BL_02;3;BL_02;0;2
-  - BL_04;connected;BL_03;2;BL_03;3;BL_03;0;2
-  - BL_05;connected;BL_04;2;BL_04;3;BL_04;0;2
-  - BL_06;connected;BL_05;2;BL_05;3;BL_05;0;2
+  - S2_01;connected;S1_01;0;S1_01;1;S1_01;1;0
+  - S2_02;connected;S2_01;2;S2_01;3;S2_01;0;2
+  - S2_03;connected;S2_02;2;S2_02;3;S2_02;0;2
+  - S2_04;connected;S2_03;2;S2_03;3;S2_03;0;2
+  - S2_05;connected;S2_04;2;S2_04;3;S2_04;0;2
+  - S2_06;connected;S2_05;2;S2_05;3;S2_05;0;2
+
+  - S3_01;connected;S2_01;2;S2_01;3;S1_01;3;2
+  - S3_02;connected;S3_01;2;S3_01;3;S3_01;0;2
+  - S3_03;connected;S3_02;2;S3_02;3;S3_02;0;2
+  - S3_04;connected;S3_03;2;S3_03;3;S3_03;0;2
+  - S3_05;connected;S3_04;2;S3_04;3;S3_04;0;2
+  - S3_06;connected;S3_05;2;S3_05;3;S3_05;0;2
+
+  - S4_01;connected;S3_01;0;S3_01;1;S1_01;1;0
+  - S4_02;connected;S4_01;2;S4_01;3;S4_01;0;2
+  - S4_03;connected;S4_02;2;S4_02;3;S4_02;0;2
+  - S4_04;connected;S4_03;2;S4_03;3;S4_03;0;2
+  - S4_05;connected;S4_04;2;S4_04;3;S4_04;0;2
+  - S4_06;connected;S4_05;2;S4_05;3;S4_05;0;2
+
+  - S5_01;connected;S4_01;2;S4_01;3;S1_01;3;2
+  - S5_02;connected;S5_01;2;S5_01;3;S5_01;0;2
+  - S5_03;connected;S5_02;2;S5_02;3;S5_02;0;2
+  - S5_04;connected;S5_03;2;S5_03;3;S5_03;0;2
+  - S5_05;connected;S5_04;2;S5_04;3;S5_04;0;2
+  - S5_06;connected;S5_05;2;S5_05;3;S5_05;0;2
 
 pages:
   -
     - pagename;Snails of mating
-    - circular;1;5;net3s;S_{};0;1;2;color;lightblue
-    - circular;1;5;net3s;S_{};1;2;3;color;lightblue
+    - circular;1;5;net3s;S1_{};0;1;2;color;lightblue
+    - circular;1;5;net3s;S1_{};1;2;3;color;lightblue
 
     - circular;1;5;net3s;R_{};0;1;2;color;yellow
     - circular;1;5;net3s;R_{};1;2;3;color;yellow
   -
     - pagename;Snails of opposite
-    - circular;1;6;net3s;S_{};0;1;2;color;lightblue
-    - circular;1;6;net3s;S_{};1;2;3;color;lightblue
-
-    - circular;1;6;net3s;BL_{};0;1;2;color;yellow;shiftY;-1
-    - circular;1;6;net3s;BL_{};1;2;3;color;yellow;shiftY;-1
+    - circular;1;6;net3s;S2_{};0;1;2;color;yellow
+    - circular;1;6;net3s;S2_{};1;2;3;color;yellow
+    
+    - circular;1;6;net3s;S3_{};0;1;2;color;lightblue
+    - circular;1;6;net3s;S3_{};1;2;3;color;lightblue
   -
     - pagename;Snails of the mirror world
-    - circular;1;6;net3s;S_{};0;1;2;color;lightblue
-    - circular;1;6;net3s;S_{};1;2;3;color;lightblue
+    - circular;1;6;net3s;S1_{};0;1;2;color;lightblue
+    - circular;1;6;net3s;S1_{};1;2;3;color;lightblue
 
-    - circular;1;6;net3s;BL_{};0;1;2;color;yellow;shiftY;2.865;shiftX;-1.5
-    - circular;1;6;net3s;BL_{};1;2;3;color;yellow;shiftY;2.865;shiftX;-1.5
+    - circular;1;6;net3s;S2_{};0;1;2;color;yellow
+    - circular;1;6;net3s;S2_{};1;2;3;color;yellow
+  -
+    - pagename;Snails of steps | Caracole | Csigalepcso
+    - circular;1;6;net3s;S1_{};0;1;2;color;lightblue
+    - circular;1;6;net3s;S1_{};1;2;3;color;lightblue
+
+    - circular;1;6;net3s;S2_{};0;1;2;color;yellow
+    - circular;1;6;net3s;S2_{};1;2;3;color;yellow
+    
+    - circular;1;6;net3s;S3_{};0;1;2;color;lightblue
+    - circular;1;6;net3s;S3_{};1;2;3;color;lightblue
+
+    - circular;1;6;net3s;S4_{};0;1;2;color;yellow
+    - circular;1;6;net3s;S4_{};1;2;3;color;yellow
+    
+    - circular;1;6;net3s;S5_{};0;1;2;color;lightblue
+    - circular;1;6;net3s;S5_{};1;2;3;color;lightblue
