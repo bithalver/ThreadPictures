@@ -1,0 +1,95 @@
+---
+global:
+    threads: 20
+    background: black
+    color: yellow
+    fontcolor: darkgray
+#    style: filledcurve
+pages:
+  -
+    - pagename;2022 12 31 | 1 | Bird vanishing
+    - net3;0;0;4;4;0;8
+    - net3;0;0;-4;4;0;8
+    - net3;4;4;0;0;0;8
+    - net3;-4;4;0;0;0;8
+
+    - net3;0;8;4;12;0;16;lastthread;15
+    - net3;0;8;-4;12;0;16;lastthread;15
+    - net3;4;12;0;8;0;16;lastthread;15
+    - net3;-4;12;0;8;0;16;lastthread;15
+
+    - net3;0;16;4;20;0;24;lastthread;10
+    - net3;0;16;-4;20;0;24;lastthread;10
+    - net3;4;20;0;16;0;24;lastthread;10
+    - net3;-4;20;0;16;0;24;lastthread;10
+
+    - net3;0;24;4;28;0;32;lastthread;5
+    - net3;0;24;-4;28;0;32;lastthread;5
+    - net3;4;28;0;24;0;32;lastthread;5
+    - net3;-4;28;0;24;0;32;lastthread;5
+  -
+    - pagename;2022 12 31 | 2 | Bird materializing
+    - net3;0;24;4;28;0;32
+    - net3;0;24;-4;28;0;32
+    - net3;4;28;0;24;0;32
+    - net3;-4;28;0;24;0;32
+
+    - net3;0;16;4;20;0;24;color;darkgray
+    - net3;0;16;-4;20;0;24;color;darkgray
+    - net3;4;20;0;16;0;24;color;darkgray
+    - net3;-4;20;0;16;0;24;color;darkgray
+    - net3;0;16;4;20;0;24;lastthread;15
+    - net3;0;16;-4;20;0;24;lastthread;15
+    - net3;4;20;0;16;0;24;lastthread;15
+    - net3;-4;20;0;16;0;24;lastthread;15
+
+    - net3;0;8;4;12;0;16;color;darkgray
+    - net3;0;8;-4;12;0;16;color;darkgray
+    - net3;4;12;0;8;0;16;color;darkgray
+    - net3;-4;12;0;8;0;16;color;darkgray
+    - net3;0;8;4;12;0;16;lastthread;10
+    - net3;0;8;-4;12;0;16;lastthread;10
+    - net3;4;12;0;8;0;16;lastthread;10
+    - net3;-4;12;0;8;0;16;lastthread;10
+
+    - net3;0;0;4;4;0;8;color;darkgray
+    - net3;0;0;-4;4;0;8;color;darkgray
+    - net3;4;4;0;0;0;8;color;darkgray
+    - net3;-4;4;0;0;0;8;color;darkgray
+    - net3;0;0;4;4;0;8;lastthread;5
+    - net3;0;0;-4;4;0;8;lastthread;5
+    - net3;4;4;0;0;0;8;lastthread;5
+    - net3;-4;4;0;0;0;8;lastthread;5
+  -
+    - pagename;2022 12 31 | 3 | Bird materializing version 2
+    - net3;0;24;4;28;0;32
+    - net3;0;24;-4;28;0;32
+    - net3;4;28;0;24;0;32
+    - net3;-4;28;0;24;0;32
+
+    - net3;0;16;4;20;0;24;color;darkgray
+    - net3;0;16;-4;20;0;24;color;darkgray
+    - net3;4;20;0;16;0;24;color;darkgray
+    - net3;-4;20;0;16;0;24;color;darkgray
+    - net3;0;16;4;20;0;24;firstthread;5
+    - net3;0;16;-4;20;0;24;firstthread;5
+    - net3;4;20;0;16;0;24;firstthread;5
+    - net3;-4;20;0;16;0;24;firstthread;5
+
+    - net3;0;8;4;12;0;16;color;darkgray
+    - net3;0;8;-4;12;0;16;color;darkgray
+    - net3;4;12;0;8;0;16;color;darkgray
+    - net3;-4;12;0;8;0;16;color;darkgray
+    - net3;0;8;4;12;0;16;firstthread;10
+    - net3;0;8;-4;12;0;16;firstthread;10
+    - net3;4;12;0;8;0;16;firstthread;10
+    - net3;-4;12;0;8;0;16;firstthread;10
+
+    - net3;0;0;4;4;0;8;color;darkgray
+    - net3;0;0;-4;4;0;8;color;darkgray
+    - net3;4;4;0;0;0;8;color;darkgray
+    - net3;-4;4;0;0;0;8;color;darkgray
+    - net3;0;0;4;4;0;8;firstthread;15
+    - net3;0;0;-4;4;0;8;firstthread;15
+    - net3;4;4;0;0;0;8;firstthread;15
+    - net3;-4;4;0;0;0;8;firstthread;15
