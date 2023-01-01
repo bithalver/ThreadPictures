@@ -28,34 +28,34 @@ pages:
     - net3;4;28;0;24;0;32;lastthread;5
     - net3;-4;28;0;24;0;32;lastthread;5
   -
-    - pagename;2022 12 31 | 2 | Bird materializing
+    - pagename;2022 12 31 | 2 | Phoenix rising
     - net3;0;24;4;28;0;32
     - net3;0;24;-4;28;0;32
     - net3;4;28;0;24;0;32
     - net3;-4;28;0;24;0;32
 
-    - net3;0;16;4;20;0;24;color;darkgray
-    - net3;0;16;-4;20;0;24;color;darkgray
-    - net3;4;20;0;16;0;24;color;darkgray
-    - net3;-4;20;0;16;0;24;color;darkgray
+    - net3;0;16;4;20;0;24;color;darkred
+    - net3;0;16;-4;20;0;24;color;darkred
+    - net3;4;20;0;16;0;24;color;darkred
+    - net3;-4;20;0;16;0;24;color;darkred
     - net3;0;16;4;20;0;24;lastthread;15
     - net3;0;16;-4;20;0;24;lastthread;15
     - net3;4;20;0;16;0;24;lastthread;15
     - net3;-4;20;0;16;0;24;lastthread;15
 
-    - net3;0;8;4;12;0;16;color;darkgray
-    - net3;0;8;-4;12;0;16;color;darkgray
-    - net3;4;12;0;8;0;16;color;darkgray
-    - net3;-4;12;0;8;0;16;color;darkgray
+    - net3;0;8;4;12;0;16;color;darkred
+    - net3;0;8;-4;12;0;16;color;darkred
+    - net3;4;12;0;8;0;16;color;darkred
+    - net3;-4;12;0;8;0;16;color;darkred
     - net3;0;8;4;12;0;16;lastthread;10
     - net3;0;8;-4;12;0;16;lastthread;10
     - net3;4;12;0;8;0;16;lastthread;10
     - net3;-4;12;0;8;0;16;lastthread;10
 
-    - net3;0;0;4;4;0;8;color;darkgray
-    - net3;0;0;-4;4;0;8;color;darkgray
-    - net3;4;4;0;0;0;8;color;darkgray
-    - net3;-4;4;0;0;0;8;color;darkgray
+    - net3;0;0;4;4;0;8;color;darkred
+    - net3;0;0;-4;4;0;8;color;darkred
+    - net3;4;4;0;0;0;8;color;darkred
+    - net3;-4;4;0;0;0;8;color;darkred
     - net3;0;0;4;4;0;8;lastthread;5
     - net3;0;0;-4;4;0;8;lastthread;5
     - net3;4;4;0;0;0;8;lastthread;5
@@ -93,3 +93,36 @@ pages:
     - net3;0;0;-4;4;0;8;firstthread;15
     - net3;4;4;0;0;0;8;firstthread;15
     - net3;-4;4;0;0;0;8;firstthread;15
+  -
+    - pagename;2022 12 31 | 4 | Bird vanishing & materializing
+    - net3;2;1;10;1;10;9;color;darkred;firstthread;6
+    - net3;2;1;2;9;10;9;color;darkred;firstthread;6
+    - net3;10;1;2;1;10;9;color;darkred;firstthread;6
+    - net3;2;9;2;1;10;9;color;darkred;firstthread;6
+    - net3;2;1;10;1;10;9;lastthread;5
+    - net3;2;1;2;9;10;9;lastthread;5
+    - net3;10;1;2;1;10;9;lastthread;5
+    - net3;2;9;2;1;10;9;lastthread;5
+
+    - net3;1;-1;9;-1;9;-9;color;darkred;firstthread;11
+    - net3;1;-1;1;-9;9;-9;color;darkred;firstthread;11
+    - net3;9;-1;1;-1;9;-9;color;darkred;firstthread;11
+    - net3;1;-9;1;-1;9;-9;color;darkred;firstthread;11
+    - net3;1;-1;9;-1;9;-9;lastthread;10
+    - net3;1;-1;1;-9;9;-9;lastthread;10
+    - net3;9;-1;1;-1;9;-9;lastthread;10
+    - net3;1;-9;1;-1;9;-9;lastthread;10
+
+    - net3;-1;-1;-9;-1;-9;-9;color;darkred;firstthread;16
+    - net3;-1;-1;-1;-9;-9;-9;color;darkred;firstthread;16
+    - net3;-9;-1;-1;-1;-9;-9;color;darkred;firstthread;16
+    - net3;-1;-9;-1;-1;-9;-9;color;darkred;firstthread;16
+    - net3;-1;-1;-9;-1;-9;-9;lastthread;15
+    - net3;-1;-1;-1;-9;-9;-9;lastthread;15
+    - net3;-9;-1;-1;-1;-9;-9;lastthread;15
+    - net3;-1;-9;-1;-1;-9;-9;lastthread;15
+
+    - net3;-2;1;-10;1;-10;9;lastthread;20
+    - net3;-2;1;-2;9;-10;9;lastthread;20
+    - net3;-10;1;-2;1;-10;9;lastthread;20
+    - net3;-2;9;-2;1;-10;9;lastthread;20
