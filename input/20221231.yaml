@@ -126,3 +126,79 @@ pages:
     - net3;-2;1;-2;9;-10;9;lastthread;20
     - net3;-10;1;-2;1;-10;9;lastthread;20
     - net3;-2;9;-2;1;-10;9;lastthread;20
+  -
+    - pagename;2022 12 31 | 4a
+    - net3;1;-1;9;-1;9;-9;color;darkred
+    - net3;1;-1;1;-9;9;-9;color;darkred
+    - net3;9;-1;1;-1;9;-9;color;darkred
+    - net3;1;-9;1;-1;9;-9;color;darkred
+
+    - net3;-1;-1;-9;-1;-9;-9;lastthread;15
+    - net3;-1;-1;-1;-9;-9;-9;lastthread;15
+    - net3;-9;-1;-1;-1;-9;-9;lastthread;15
+    - net3;-1;-9;-1;-1;-9;-9;lastthread;15
+    - net3;-1;-1;-9;-1;-9;-9;color;darkred;firstthread;16
+    - net3;-1;-1;-1;-9;-9;-9;color;darkred;firstthread;16
+    - net3;-9;-1;-1;-1;-9;-9;color;darkred;firstthread;16
+    - net3;-1;-9;-1;-1;-9;-9;color;darkred;firstthread;16
+
+    - net3;-1;1;-9;1;-9;9;lastthread;20
+    - net3;-1;1;-1;9;-9;9;lastthread;20
+    - net3;-9;1;-1;1;-9;9;lastthread;20
+    - net3;-1;9;-1;1;-9;9;lastthread;20
+
+    - net3;1;1;9;1;9;9;color;darkred;firstthread;16
+    - net3;1;1;1;9;9;9;color;darkred;firstthread;16
+    - net3;9;1;1;1;9;9;color;darkred;firstthread;16
+    - net3;1;9;1;1;9;9;color;darkred;firstthread;16
+    - net3;1;1;9;1;9;9;lastthread;15
+    - net3;1;1;1;9;9;9;lastthread;15
+    - net3;9;1;1;1;9;9;lastthread;15
+    - net3;1;9;1;1;9;9;lastthread;15
+
+  -
+    - pagename;2022 12 31 | 5
+    - net3;0;0;4;4;0;8;color;silver
+    - net3;0;0;-4;4;0;8;color;silver
+    - net3;4;4;0;0;0;8;color;silver
+    - net3;-4;4;0;0;0;8;color;silver
+
+    - net3;0;8;4;12;0;16;lastthread;10;color;silver
+    - net3;0;8;-4;12;0;16;lastthread;10;color;silver
+    - net3;4;12;0;8;0;16;lastthread;15;color;silver
+    - net3;-4;12;0;8;0;16;lastthread;15;color;silver
+
+    - net3;0;8;4;12;0;16;firstthread;11;color;0.1,0.1,0.1
+    - net3;0;8;-4;12;0;16;firstthread;11;color;0.1,0.1,0.1
+    - net3;4;12;0;8;0;16;firstthread;16;color;0.1,0.1,0.1
+    - net3;-4;12;0;8;0;16;firstthread;16;color;0.1,0.1,0.1
+  -
+    - pagename;2022 12 31 | 6
+    - net3;0;0;4;4;0;8
+    - net3;0;0;-4;4;0;8
+    - net3;4;4;0;0;0;8
+    - net3;-4;4;0;0;0;8
+
+    - net3;8;8;12;12;8;16;lastthread;10
+    - net3;8;8;4;12;8;16;lastthread;10
+    - net3;12;12;8;8;8;16;lastthread;10
+    - net3;4;12;8;8;8;16;lastthread;10
+    - net3;8;8;12;12;8;16;firstthread;11;color;red
+    - net3;8;8;4;12;8;16;firstthread;11;color;red
+    - net3;12;12;8;8;8;16;firstthread;11;color;red
+    - net3;4;12;8;8;8;16;firstthread;11;color;red
+
+    - net3;-8;8;-12;12;-8;16;firstthread;11;color;red
+    - net3;-8;8;-4;12;-8;16;firstthread;11;color;red
+    - net3;-12;12;-8;8;-8;16;firstthread;11;color;red
+    - net3;-4;12;-8;8;-8;16;firstthread;11;color;red
+    - net3;-8;8;-12;12;-8;16;lastthread;10
+    - net3;-8;8;-4;12;-8;16;lastthread;10
+    - net3;-12;12;-8;8;-8;16;lastthread;10
+    - net3;-4;12;-8;8;-8;16;lastthread;10
+
+    - net3;0;16;4;20;0;24;color;red
+    - net3;0;16;-4;20;0;24;color;red
+    - net3;4;20;0;16;0;24;color;red
+    - net3;-4;20;0;16;0;24;color;red
+
