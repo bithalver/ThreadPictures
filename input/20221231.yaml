@@ -4,7 +4,7 @@ global:
     background: black
     color: yellow
     fontcolor: darkgray
-#    style: filledcurve
+#    style: curve
 pages:
   -
     - pagename;2022 12 31 | 1 | Bird vanishing
@@ -155,7 +155,100 @@ pages:
     - net3;1;1;1;9;9;9;lastthread;15
     - net3;9;1;1;1;9;9;lastthread;15
     - net3;1;9;1;1;9;9;lastthread;15
+  -
+    - pagename;2022 12 31 | 4b
+    - net3;0;-0;8;-0;8;-8;color;darkred
+    - net3;0;-0;0;-8;8;-8;color;darkred
+    - net3;8;-0;0;-0;8;-8;color;darkred
+    - net3;0;-8;0;-0;8;-8;color;darkred
 
+    - net3;8;0;0;0;0;8;lastthread;20
+    - net3;8;0;8;8;0;8;lastthread;20
+    - net3;0;0;8;0;0;8;lastthread;20
+    - net3;8;8;8;0;0;8;lastthread;20
+  -
+    - pagename;2022 12 31 | 4c1
+    - net3;0;-0;8;-0;8;-8;lastthread;10;color;yellow;shiftX;-10
+    - net3;0;-0;0;-8;8;-8;lastthread;10;color;yellow;shiftX;-10
+    - net3;8;-0;0;-0;8;-8;lastthread;15;color;yellow;shiftX;-10
+    - net3;0;-8;0;-0;8;-8;lastthread;15;color;yellow;shiftX;-10
+
+    - net3;0;-0;8;-0;8;-8;firstthread;11;color;darkred;shiftX;-10
+    - net3;0;-0;0;-8;8;-8;firstthread;11;color;darkred;shiftX;-10
+    - net3;8;-0;0;-0;8;-8;firstthread;16;color;darkred;shiftX;-10
+    - net3;0;-8;0;-0;8;-8;firstthread;16;color;darkred;shiftX;-10
+
+    - net3;8;0;0;0;0;8;lastthread;10;color;yellow;shiftX;-10
+    - net3;8;0;8;8;0;8;lastthread;10;color;yellow;shiftX;-10
+    - net3;0;0;8;0;0;8;lastthread;15;color;yellow;shiftX;-10
+    - net3;8;8;8;0;0;8;lastthread;15;color;yellow;shiftX;-10
+
+    - net3;8;0;0;0;0;8;firstthread;10;color;darkred;shiftX;-10
+    - net3;8;0;8;8;0;8;firstthread;10;color;darkred;shiftX;-10
+    - net3;0;0;8;0;0;8;firstthread;15;color;darkred;shiftX;-10
+    - net3;8;8;8;0;0;8;firstthread;15;color;darkred;shiftX;-10
+  -
+    - pagename;2022 12 31 | 4c2
+    - net3;0;-0;8;-0;8;-8;lastthread;10;color;darkred
+    - net3;0;-0;0;-8;8;-8;lastthread;10;color;darkred
+    - net3;8;-0;0;-0;8;-8;lastthread;15;color;darkred
+    - net3;0;-8;0;-0;8;-8;lastthread;15;color;darkred
+
+    - net3;0;-0;8;-0;8;-8;firstthread;11;color;yellow
+    - net3;0;-0;0;-8;8;-8;firstthread;11;color;yellow
+    - net3;8;-0;0;-0;8;-8;firstthread;16;color;yellow
+    - net3;0;-8;0;-0;8;-8;firstthread;16;color;yellow
+
+    - net3;8;0;0;0;0;8;lastthread;10;color;yellow
+    - net3;8;0;8;8;0;8;lastthread;10;color;yellow
+    - net3;0;0;8;0;0;8;lastthread;15;color;yellow
+    - net3;8;8;8;0;0;8;lastthread;15;color;yellow
+
+    - net3;8;0;0;0;0;8;firstthread;10;color;darkred
+    - net3;8;0;8;8;0;8;firstthread;10;color;darkred
+    - net3;0;0;8;0;0;8;firstthread;15;color;darkred
+    - net3;8;8;8;0;0;8;firstthread;15;color;darkred
+  -
+    - pagename;2022 12 31 | 4cA
+    - net3;0;-0;8;-0;8;-8;lastthread;10;color;darkred
+    - net3;0;-0;0;-8;8;-8;lastthread;10;color;darkred
+    - net3;8;-0;0;-0;8;-8;lastthread;15;color;darkred
+    - net3;0;-8;0;-0;8;-8;lastthread;15;color;darkred
+
+    - net3;0;-0;8;-0;8;-8;firstthread;11;color;yellow
+    - net3;0;-0;0;-8;8;-8;firstthread;11;color;yellow
+    - net3;8;-0;0;-0;8;-8;firstthread;16;color;yellow
+    - net3;0;-8;0;-0;8;-8;firstthread;16;color;yellow
+
+    - net3;8;0;0;0;0;8;lastthread;10;color;yellow
+    - net3;8;0;8;8;0;8;lastthread;10;color;yellow
+    - net3;0;0;8;0;0;8;lastthread;15;color;yellow
+    - net3;8;8;8;0;0;8;lastthread;15;color;yellow
+
+    - net3;8;0;0;0;0;8;firstthread;10;color;darkred
+    - net3;8;0;8;8;0;8;firstthread;10;color;darkred
+    - net3;0;0;8;0;0;8;firstthread;15;color;darkred
+    - net3;8;8;8;0;0;8;firstthread;15;color;darkred
+
+    - net3;0;-0;8;-0;8;-8;lastthread;10;color;yellow;shiftX;-10
+    - net3;0;-0;0;-8;8;-8;lastthread;10;color;yellow;shiftX;-10
+    - net3;8;-0;0;-0;8;-8;lastthread;15;color;yellow;shiftX;-10
+    - net3;0;-8;0;-0;8;-8;lastthread;15;color;yellow;shiftX;-10
+
+    - net3;0;-0;8;-0;8;-8;firstthread;11;color;darkred;shiftX;-10
+    - net3;0;-0;0;-8;8;-8;firstthread;11;color;darkred;shiftX;-10
+    - net3;8;-0;0;-0;8;-8;firstthread;16;color;darkred;shiftX;-10
+    - net3;0;-8;0;-0;8;-8;firstthread;16;color;darkred;shiftX;-10
+
+    - net3;8;0;0;0;0;8;lastthread;10;color;yellow;shiftX;-10
+    - net3;8;0;8;8;0;8;lastthread;10;color;yellow;shiftX;-10
+    - net3;0;0;8;0;0;8;lastthread;15;color;yellow;shiftX;-10
+    - net3;8;8;8;0;0;8;lastthread;15;color;yellow;shiftX;-10
+
+    - net3;8;0;0;0;0;8;firstthread;10;color;darkred;shiftX;-10
+    - net3;8;0;8;8;0;8;firstthread;10;color;darkred;shiftX;-10
+    - net3;0;0;8;0;0;8;firstthread;15;color;darkred;shiftX;-10
+    - net3;8;8;8;0;0;8;firstthread;15;color;darkred;shiftX;-10
   -
     - pagename;2022 12 31 | 5
     - net3;0;0;4;4;0;8;color;silver
@@ -172,6 +265,82 @@ pages:
     - net3;0;8;-4;12;0;16;firstthread;11;color;0.1,0.1,0.1
     - net3;4;12;0;8;0;16;firstthread;16;color;0.1,0.1,0.1
     - net3;-4;12;0;8;0;16;firstthread;16;color;0.1,0.1,0.1
+  -
+    - pagename;2022 12 31 | 5a
+
+    - net3;0;8;4;12;0;16;lastthread;10;color;silver
+    - net3;0;8;-4;12;0;16;lastthread;10;color;silver
+    - net3;4;12;0;8;0;16;lastthread;15;color;silver
+    - net3;-4;12;0;8;0;16;lastthread;15;color;silver
+
+    - net3;0;8;4;12;0;16;firstthread;11;color;0.1,0.1,0.1
+    - net3;0;8;-4;12;0;16;firstthread;11;color;0.1,0.1,0.1
+    - net3;4;12;0;8;0;16;firstthread;16;color;0.1,0.1,0.1
+    - net3;-4;12;0;8;0;16;firstthread;16;color;0.1,0.1,0.1
+
+    - net3;0;12;4;8;0;4;lastthread;10;color;silver
+    - net3;0;12;-4;8;0;4;lastthread;10;color;silver
+    - net3;4;8;0;12;0;4;lastthread;15;color;silver
+    - net3;-4;8;0;12;0;4;lastthread;15;color;silver
+
+    - net3;0;12;4;8;0;4;firstthread;11;color;0.2,0,0
+    - net3;0;12;-4;8;0;4;firstthread;11;color;0.2,0,0
+    - net3;4;8;0;12;0;4;firstthread;16;color;0.2,0,0
+    - net3;-4;8;0;12;0;4;firstthread;16;color;0.2,0,0
+  -
+    - pagename;2022 12 31 | 5b
+
+    - net3;0;8;4;12;0;16;lastthread;10;color;silver
+    - net3;0;8;-4;12;0;16;lastthread;10;color;silver
+    - net3;4;12;0;8;0;16;lastthread;15;color;silver
+    - net3;-4;12;0;8;0;16;lastthread;15;color;silver
+
+    - net3;0;8;4;12;0;16;firstthread;11;color;0.1,0.1,0.1
+    - net3;0;8;-4;12;0;16;firstthread;11;color;0.1,0.1,0.1
+    - net3;4;12;0;8;0;16;firstthread;16;color;0.1,0.1,0.1
+    - net3;-4;12;0;8;0;16;firstthread;16;color;0.1,0.1,0.1
+
+    - net3;4;12;8;8;4;4;lastthread;10;color;silver
+    - net3;4;12;0;8;4;4;lastthread;10;color;silver
+    - net3;8;8;4;12;4;4;lastthread;15;color;silver
+    - net3;0;8;4;12;4;4;lastthread;15;color;silver
+
+    - net3;4;12;8;8;4;4;firstthread;11;color;0.2,0,0
+    - net3;4;12;0;8;4;4;firstthread;11;color;0.2,0,0
+    - net3;8;8;4;12;4;4;firstthread;16;color;0.2,0,0
+    - net3;0;8;4;12;4;4;firstthread;16;color;0.2,0,0
+  -
+    - pagename;2022 12 31 | 5c
+
+    - net3;0;8;4;12;0;16;lastthread;10;color;silver
+    - net3;0;8;-4;12;0;16;lastthread;10;color;silver
+    - net3;4;12;0;8;0;16;lastthread;15;color;silver
+    - net3;-4;12;0;8;0;16;lastthread;15;color;silver
+
+    - net3;0;8;4;12;0;16;firstthread;11;color;0.1,0.1,0.1
+    - net3;0;8;-4;12;0;16;firstthread;11;color;0.1,0.1,0.1
+    - net3;4;12;0;8;0;16;firstthread;16;color;0.1,0.1,0.1
+    - net3;-4;12;0;8;0;16;firstthread;16;color;0.1,0.1,0.1
+
+    - net3;4;12;8;8;4;4;lastthread;10;color;silver
+    - net3;4;12;0;8;4;4;lastthread;10;color;silver
+    - net3;8;8;4;12;4;4;lastthread;15;color;silver
+    - net3;0;8;4;12;4;4;lastthread;15;color;silver
+
+    - net3;4;12;8;8;4;4;firstthread;11;color;0.2,0,0
+    - net3;4;12;0;8;4;4;firstthread;11;color;0.2,0,0
+    - net3;8;8;4;12;4;4;firstthread;16;color;0.2,0,0
+    - net3;0;8;4;12;4;4;firstthread;16;color;0.2,0,0
+
+    - net3;4;20;8;16;4;12;lastthread;10;color;silver
+    - net3;4;20;0;16;4;12;lastthread;10;color;silver
+    - net3;8;16;4;20;4;12;lastthread;15;color;silver
+    - net3;0;16;4;20;4;12;lastthread;15;color;silver
+
+    - net3;4;20;8;16;4;12;firstthread;11;color;0.2,0,0
+    - net3;4;20;0;16;4;12;firstthread;11;color;0.2,0,0
+    - net3;8;16;4;20;4;12;firstthread;16;color;0.2,0,0
+    - net3;0;16;4;20;4;12;firstthread;16;color;0.2,0,0
   -
     - pagename;2022 12 31 | 6
     - net3;0;0;4;4;0;8
