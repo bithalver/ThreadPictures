@@ -30,6 +30,11 @@ planes:
   - sn;smaller;5;0.8;360;1;0;0;0;1;2;2;0
 pages:
   -
+    - pagename;2023 01 21 test for % in firstthread and lastthread
+    - background;black
+    - net3;0;1;0;0;1;0;color;red
+    - net3;0;1;0;0;1;0;color;white;firstthread;6%;lastthread;94%
+  -
     - pagename; 3rd ever 'smaller' plane test
     - circular;1;5;net3s;sn_{};0;1;2
 # previous line could be replaced with the following 5:

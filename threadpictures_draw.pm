@@ -232,14 +232,27 @@ sub add_circular {
   }
 }
 
+sub percent_thread {
+  # first and last thread could be given az absolute values _or_ percents
+  # this functions "converts" percents: firstthread rounded up, lastthread rounded down
+  my ($percentornot,$all,$upordown)=@_;
+  if ($percentornot =~ /%$/) {
+	  chop $percentornot; # Let's cut the percent sign
+	  $upordown=($upordown?0.99999999:0); # Zero means getting the integer under; any other means above
+	  return int($percentornot*$all/100+$upordown);
+  } else {
+    return $percentornot;
+  }
+}
+
 # To draw one element of the 'net' type
 sub draw_net {
   my (%AN)=@_; # AN like Actual Net
   $AN{threads} //= $TP_GLOBAL{threads}; if ($TP_PARAMS{threads}) {$AN{threads}=$TP_PARAMS{threads};}
   $AN{firstthread} //= $TP_GLOBAL{firstthread}; if ($TP_PARAMS{firstthread}) {$AN{firstthread}=$TP_PARAMS{firstthread};}
   $AN{lastthread} //= $TP_GLOBAL{lastthread}; if ($TP_PARAMS{lastthread}) {$AN{lastthread}=$TP_PARAMS{lastthread};}
-  $AN{firstthread} //= 0;
-  $AN{lastthread} //= $AN{threads};
+  $AN{firstthread} //= 0;           $AN{firstthread} = percent_thread($AN{firstthread},$AN{threads},1);
+  $AN{lastthread} //= $AN{threads}; $AN{lastthread} = percent_thread($AN{lastthread},$AN{threads},0);
   $AN{style}//=$TP_GLOBAL{style}; if ($TP_PARAMS{style}) {$AN{style}=$TP_PARAMS{style};}
   $AN{color} //= $TP_GLOBAL{color}; if ($TP_PARAMS{color}) {$AN{color}=$TP_PARAMS{color}} ; $AN{color}=colorconvert($AN{color});
   if (! $TP_GLOBAL{BW} and $AN{color} ne $TP_GLOBAL{lastcolor} ) { say "$AN{color} setrgbcolor\n"; $TP_GLOBAL{lastcolor}=$AN{color}}
