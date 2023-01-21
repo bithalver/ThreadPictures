@@ -238,6 +238,7 @@ sub draw_net {
   $AN{threads} //= $TP_GLOBAL{threads}; if ($TP_PARAMS{threads}) {$AN{threads}=$TP_PARAMS{threads};}
   $AN{firstthread} //= $TP_GLOBAL{firstthread}; if ($TP_PARAMS{firstthread}) {$AN{firstthread}=$TP_PARAMS{firstthread};}
   $AN{lastthread} //= $TP_GLOBAL{lastthread}; if ($TP_PARAMS{lastthread}) {$AN{lastthread}=$TP_PARAMS{lastthread};}
+  $AN{firstthread} //= 0;
   $AN{lastthread} //= $AN{threads};
   $AN{style}//=$TP_GLOBAL{style}; if ($TP_PARAMS{style}) {$AN{style}=$TP_PARAMS{style};}
   $AN{color} //= $TP_GLOBAL{color}; if ($TP_PARAMS{color}) {$AN{color}=$TP_PARAMS{color}} ; $AN{color}=colorconvert($AN{color});
