@@ -251,15 +251,15 @@ pages:
     - net3;8;8;8;0;0;8;firstthread;15;color;darkred;shiftX;-10
   -
     - pagename;2022 12 31 | 5
-    - net3;0;0;4;4;0;8;color;silver
-    - net3;0;0;-4;4;0;8;color;silver
-    - net3;4;4;0;0;0;8;color;silver
-    - net3;-4;4;0;0;0;8;color;silver
+    - net3;0;0;4;4;0;8;color;darkred
+    - net3;0;0;-4;4;0;8;color;darkred
+    - net3;4;4;0;0;0;8;color;darkred
+    - net3;-4;4;0;0;0;8;color;darkred
 
-    - net3;0;8;4;12;0;16;lastthread;10;color;silver
-    - net3;0;8;-4;12;0;16;lastthread;10;color;silver
-    - net3;4;12;0;8;0;16;lastthread;15;color;silver
-    - net3;-4;12;0;8;0;16;lastthread;15;color;silver
+    - net3;0;8;4;12;0;16;lastthread;10;color;darkred
+    - net3;0;8;-4;12;0;16;lastthread;10;color;darkred
+    - net3;4;12;0;8;0;16;lastthread;15;color;darkred
+    - net3;-4;12;0;8;0;16;lastthread;15;color;darkred
 
     - net3;0;8;4;12;0;16;firstthread;11;color;0.1,0.1,0.1
     - net3;0;8;-4;12;0;16;firstthread;11;color;0.1,0.1,0.1
