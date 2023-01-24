@@ -10,8 +10,6 @@ no warnings 'experimental::smartmatch';
 use Getopt::Long qw(GetOptions);
 Getopt::Long::Configure qw(gnu_getopt);
 
-# use threadpictures_global;
-
 use List::Util qw(shuffle);
 
 my $sides=6;
