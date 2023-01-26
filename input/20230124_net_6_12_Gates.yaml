@@ -1,0 +1,59 @@
+---
+planes:
+  - net12;regular;12;-75
+  - net10;regular;10;-72
+  - net8;regular;8;-67.5
+  - net6;regular;6;-60
+pages:
+  -
+    - fontcolor;white
+    - background;darkgray
+    - pagename;net - sides 6, angle -60, points 1,3,5,6,4,2
+    - net3s;net6;2;1;3;color;yellow;style;filledcurve;threads;20
+    - net3s;net6;1;3;5;color;yellow;style;filledcurve;threads;20
+    - net3s;net6;3;5;6;color;yellow;style;filledcurve;threads;20
+    - net3s;net6;5;6;4;color;lightblue;threads;20
+    - net3s;net6;6;4;2;color;lightblue;threads;20
+    - net3s;net6;4;2;1;color;lightblue;threads;20
+  -
+    - fontcolor;white
+    - background;darkgray
+    - pagename;net - sides 8, angle -67.5, points 1,3,5,7,8,6,4,2
+    - net3s;net8;2;1;3;color;yellow;style;filledcurve;threads;20
+    - net3s;net8;1;3;5;color;yellow;style;filledcurve;threads;20
+    - net3s;net8;3;5;7;color;yellow;style;filledcurve;threads;20
+    - net3s;net8;5;7;8;color;yellow;style;filledcurve;threads;20
+    - net3s;net8;7;8;6;color;lightblue;threads;20
+    - net3s;net8;8;6;4;color;lightblue;threads;20
+    - net3s;net8;6;4;2;color;lightblue;threads;20
+    - net3s;net8;4;2;1;color;lightblue;threads;20
+  -
+    - fontcolor;white
+    - background;darkgray
+    - pagename;net - sides 10, angle -72, points 1,3,5,7,9,10,8,6,4,2
+    - net3s;net10;2;1;3;color;yellow;style;filledcurve;threads;10
+    - net3s;net10;1;3;5;color;yellow;style;filledcurve;threads;10
+    - net3s;net10;3;5;7;color;yellow;style;filledcurve;threads;10
+    - net3s;net10;5;7;9;color;yellow;style;filledcurve;threads;10
+    - net3s;net10;7;9;10;color;yellow;style;filledcurve;threads;10
+    - net3s;net10;9;10;8;color;lightblue;threads;10
+    - net3s;net10;10;8;6;color;lightblue;threads;10
+    - net3s;net10;8;6;4;color;lightblue;threads;10
+    - net3s;net10;6;4;2;color;lightblue;threads;10
+    - net3s;net10;4;2;1;color;lightblue;threads;10
+  -
+    - fontcolor;white
+    - background;darkgray
+    - pagename;net - sides 12, angle -75, points 1,3,5,7,9,11,12,10,8,6,4,2
+    - net3s;net12;1;3;5;color;yellow;style;filledcurve;threads;10
+    - net3s;net12;3;5;7;color;yellow;style;filledcurve;threads;10
+    - net3s;net12;5;7;9;color;yellow;style;filledcurve;threads;10
+    - net3s;net12;7;9;11;color;yellow;style;filledcurve;threads;10
+    - net3s;net12;9;11;12;color;yellow;style;filledcurve;threads;10
+    - net3s;net12;2;1;3;color;yellow;style;filledcurve;threads;10
+    - net3s;net12;12;10;8;color;lightblue;threads;10
+    - net3s;net12;10;8;6;color;lightblue;threads;10
+    - net3s;net12;8;6;4;color;lightblue;threads;10
+    - net3s;net12;6;4;2;color;lightblue;threads;10
+    - net3s;net12;4;2;1;color;lightblue;threads;10
+    - net3s;net12;11;12;10;color;lightblue;threads;10
