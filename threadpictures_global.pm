@@ -37,7 +37,7 @@ sub global_init {
   # 'threads' is how many segment should exist in a net
   $TP_GLOBAL{threads} = $ENV{TP_threads} //=20;
   $TP_GLOBAL{firstthread} = $ENV{TP_firstthread} //=0;
-  $TP_GLOBAL{lastthread} = $ENV{TP_lastthread} //= $TP_GLOBAL{threads};
+  $TP_GLOBAL{lastthread} = $ENV{TP_lastthread} //= '100%';
 
   $TP_GLOBAL{style} = $ENV{TP_style} //='normal';
   if ($opts_debug) {warn 'global style is '.$TP_GLOBAL{style}."\n\n"}
