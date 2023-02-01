@@ -24,14 +24,14 @@ pages:
     - net3s;net8s07;6;4;2;color;darkgray;threads;10;firstthread;1%;lastthread;99%
     - net3s;net8s07;4;2;1;color;darkgray;threads;10;firstthread;1%;lastthread;99%
 
-    - net3s;net8s07;2;1;3;color;yellow;style;0
-    - net3s;net8s07;1;3;5;color;yellow;style;0
-    - net3s;net8s07;3;5;7;color;yellow;style;0
-    - net3s;net8s07;5;7;8;color;yellow;style;0
-    - net3s;net8s07;7;8;6;color;yellow;style;0
-    - net3s;net8s07;8;6;4;color;yellow;style;0
-    - net3s;net8s07;6;4;2;color;yellow;style;0
-    - net3s;net8s07;4;2;1;color;yellow;style;0
+    - net3s;net8s07;2;1;3;color;yellow;style;0;threads;10
+    - net3s;net8s07;1;3;5;color;yellow;style;0;threads;10
+    - net3s;net8s07;3;5;7;color;yellow;style;0;threads;10
+    - net3s;net8s07;5;7;8;color;yellow;style;0;threads;10
+    - net3s;net8s07;7;8;6;color;yellow;style;0;threads;10
+    - net3s;net8s07;8;6;4;color;yellow;style;0;threads;10
+    - net3s;net8s07;6;4;2;color;yellow;style;0;threads;10
+    - net3s;net8s07;4;2;1;color;yellow;style;0;threads;10
 
 
     - net3s;net8r1125s07;2;1;3;color;darkgray;threads;10;shiftY;-0.6;shiftX;0.45
@@ -43,14 +43,14 @@ pages:
     - net3s;net8r1125s07;6;4;2;color;darkgray;threads;10;shiftY;-0.6;shiftX;0.45
     - net3s;net8r1125s07;4;2;1;color;darkgray;threads;10;shiftY;-0.6;shiftX;0.45
 
-    - net3s;net8r1125s07;2;1;3;color;darkred;style;0;shiftY;-0.6;shiftX;0.45
-    - net3s;net8r1125s07;1;3;5;color;darkred;style;0;shiftY;-0.6;shiftX;0.45
-    - net3s;net8r1125s07;3;5;7;color;darkred;style;0;shiftY;-0.6;shiftX;0.45
-    - net3s;net8r1125s07;5;7;8;color;darkred;style;0;shiftY;-0.6;shiftX;0.45
-    - net3s;net8r1125s07;7;8;6;color;darkred;style;0;shiftY;-0.6;shiftX;0.45
-    - net3s;net8r1125s07;8;6;4;color;darkred;style;0;shiftY;-0.6;shiftX;0.45
-    - net3s;net8r1125s07;6;4;2;color;darkred;style;0;shiftY;-0.6;shiftX;0.45
-    - net3s;net8r1125s07;4;2;1;color;darkred;style;0;shiftY;-0.6;shiftX;0.45
+    - net3s;net8r1125s07;2;1;3;color;darkred;style;0;threads;10;shiftY;-0.6;shiftX;0.45
+    - net3s;net8r1125s07;1;3;5;color;darkred;style;0;threads;10;shiftY;-0.6;shiftX;0.45
+    - net3s;net8r1125s07;3;5;7;color;darkred;style;0;threads;10;shiftY;-0.6;shiftX;0.45
+    - net3s;net8r1125s07;5;7;8;color;darkred;style;0;threads;10;shiftY;-0.6;shiftX;0.45
+    - net3s;net8r1125s07;7;8;6;color;darkred;style;0;threads;10;shiftY;-0.6;shiftX;0.45
+    - net3s;net8r1125s07;8;6;4;color;darkred;style;0;threads;10;shiftY;-0.6;shiftX;0.45
+    - net3s;net8r1125s07;6;4;2;color;darkred;style;0;threads;10;shiftY;-0.6;shiftX;0.45
+    - net3s;net8r1125s07;4;2;1;color;darkred;style;0;threads;10;shiftY;-0.6;shiftX;0.45
   -
     - fontcolor;white
     - background;black
@@ -69,18 +69,18 @@ pages:
     - net3s;net12;4;2;1;color;darkgray;threads;8
     - net3s;net12;11;12;10;color;darkgray;threads;8
 
-    - net3s;net12;1;3;5;color;yellow;style;0
-    - net3s;net12;3;5;7;color;yellow;style;0
-    - net3s;net12;5;7;9;color;yellow;style;0
-    - net3s;net12;7;9;11;color;yellow;style;0
-    - net3s;net12;9;11;12;color;yellow;style;0
-    - net3s;net12;2;1;3;color;yellow;style;0
-    - net3s;net12;12;10;8;color;yellow;style;0
-    - net3s;net12;10;8;6;color;yellow;style;0
-    - net3s;net12;8;6;4;color;yellow;style;0
-    - net3s;net12;6;4;2;color;yellow;style;0
-    - net3s;net12;4;2;1;color;yellow;style;0
-    - net3s;net12;11;12;10;color;yellow;style;0
+    - net3s;net12;1;3;5;color;yellow;style;0;threads;8
+    - net3s;net12;3;5;7;color;yellow;style;0;threads;8
+    - net3s;net12;5;7;9;color;yellow;style;0;threads;8
+    - net3s;net12;7;9;11;color;yellow;style;0;threads;8
+    - net3s;net12;9;11;12;color;yellow;style;0;threads;8
+    - net3s;net12;2;1;3;color;yellow;style;0;threads;8
+    - net3s;net12;12;10;8;color;yellow;style;0;threads;8
+    - net3s;net12;10;8;6;color;yellow;style;0;threads;8
+    - net3s;net12;8;6;4;color;yellow;style;0;threads;8
+    - net3s;net12;6;4;2;color;yellow;style;0;threads;8
+    - net3s;net12;4;2;1;color;yellow;style;0;threads;8
+    - net3s;net12;11;12;10;color;yellow;style;0;threads;8
 
 
     - net3s;net12R105;1;3;5;color;darkgray;threads;8;shiftY;-0.7;shiftX;0.835
@@ -96,18 +96,18 @@ pages:
     - net3s;net12R105;4;2;1;color;darkgray;threads;8;shiftY;-0.7;shiftX;0.835
     - net3s;net12R105;11;12;10;color;darkgray;threads;8;shiftY;-0.7;shiftX;0.835
 
-    - net3s;net12R105;1;3;5;color;darkred;style;0;shiftY;-0.7;shiftX;0.835
-    - net3s;net12R105;3;5;7;color;darkred;style;0;shiftY;-0.7;shiftX;0.835
-    - net3s;net12R105;5;7;9;color;darkred;style;0;shiftY;-0.7;shiftX;0.835
-    - net3s;net12R105;7;9;11;color;darkred;style;0;shiftY;-0.7;shiftX;0.835
-    - net3s;net12R105;9;11;12;color;darkred;style;0;shiftY;-0.7;shiftX;0.835
-    - net3s;net12R105;2;1;3;color;darkred;style;0;shiftY;-0.7;shiftX;0.835
-    - net3s;net12R105;12;10;8;color;darkred;style;0;shiftY;-0.7;shiftX;0.835
-    - net3s;net12R105;10;8;6;color;darkred;style;0;shiftY;-0.7;shiftX;0.835
-    - net3s;net12R105;8;6;4;color;darkred;style;0;shiftY;-0.7;shiftX;0.835
-    - net3s;net12R105;6;4;2;color;darkred;style;0;shiftY;-0.7;shiftX;0.835
-    - net3s;net12R105;4;2;1;color;darkred;style;0;shiftY;-0.7;shiftX;0.835
-    - net3s;net12R105;11;12;10;color;darkred;style;0;shiftY;-0.7;shiftX;0.835
+    - net3s;net12R105;1;3;5;color;darkred;style;0;threads;8;shiftY;-0.7;shiftX;0.835
+    - net3s;net12R105;3;5;7;color;darkred;style;0;threads;8;shiftY;-0.7;shiftX;0.835
+    - net3s;net12R105;5;7;9;color;darkred;style;0;threads;8;shiftY;-0.7;shiftX;0.835
+    - net3s;net12R105;7;9;11;color;darkred;style;0;threads;8;shiftY;-0.7;shiftX;0.835
+    - net3s;net12R105;9;11;12;color;darkred;style;0;threads;8;shiftY;-0.7;shiftX;0.835
+    - net3s;net12R105;2;1;3;color;darkred;style;0;threads;8;shiftY;-0.7;shiftX;0.835
+    - net3s;net12R105;12;10;8;color;darkred;style;0;threads;8;shiftY;-0.7;shiftX;0.835
+    - net3s;net12R105;10;8;6;color;darkred;style;0;threads;8;shiftY;-0.7;shiftX;0.835
+    - net3s;net12R105;8;6;4;color;darkred;style;0;threads;8;shiftY;-0.7;shiftX;0.835
+    - net3s;net12R105;6;4;2;color;darkred;style;0;threads;8;shiftY;-0.7;shiftX;0.835
+    - net3s;net12R105;4;2;1;color;darkred;style;0;threads;8;shiftY;-0.7;shiftX;0.835
+    - net3s;net12R105;11;12;10;color;darkred;style;0;threads;8;shiftY;-0.7;shiftX;0.835
 
   -
     - fontcolor;white
@@ -122,14 +122,14 @@ pages:
     - net3s;net8s07;6;4;2;color;darkgray;threads;10;firstthread;1%;lastthread;99%
     - net3s;net8s07;4;2;1;color;darkgray;threads;10;firstthread;1%;lastthread;99%
 
-    - net3s;net8s07;2;1;3;color;yellow;style;0
-    - net3s;net8s07;1;3;5;color;yellow;style;0
-    - net3s;net8s07;3;5;7;color;yellow;style;0
-    - net3s;net8s07;5;7;8;color;yellow;style;0
-    - net3s;net8s07;7;8;6;color;yellow;style;0
-    - net3s;net8s07;8;6;4;color;yellow;style;0
-    - net3s;net8s07;6;4;2;color;yellow;style;0
-    - net3s;net8s07;4;2;1;color;yellow;style;0
+    - net3s;net8s07;2;1;3;color;yellow;style;0;threads;10
+    - net3s;net8s07;1;3;5;color;yellow;style;0;threads;10
+    - net3s;net8s07;3;5;7;color;yellow;style;0;threads;10
+    - net3s;net8s07;5;7;8;color;yellow;style;0;threads;10
+    - net3s;net8s07;7;8;6;color;yellow;style;0;threads;10
+    - net3s;net8s07;8;6;4;color;yellow;style;0;threads;10
+    - net3s;net8s07;6;4;2;color;yellow;style;0;threads;10
+    - net3s;net8s07;4;2;1;color;yellow;style;0;threads;10
 
 
     - net3s;net12;1;3;5;color;darkgray;threads;10
@@ -145,18 +145,18 @@ pages:
     - net3s;net12;4;2;1;color;darkgray;threads;10
     - net3s;net12;11;12;10;color;darkgray;threads;10
 
-    - net3s;net12;1;3;5;color;yellow;style;0
-    - net3s;net12;3;5;7;color;yellow;style;0
-    - net3s;net12;5;7;9;color;yellow;style;0
-    - net3s;net12;7;9;11;color;yellow;style;0
-    - net3s;net12;9;11;12;color;yellow;style;0
-    - net3s;net12;2;1;3;color;yellow;style;0
-    - net3s;net12;12;10;8;color;yellow;style;0
-    - net3s;net12;10;8;6;color;yellow;style;0
-    - net3s;net12;8;6;4;color;yellow;style;0
-    - net3s;net12;6;4;2;color;yellow;style;0
-    - net3s;net12;4;2;1;color;yellow;style;0
-    - net3s;net12;11;12;10;color;yellow;style;0
+    - net3s;net12;1;3;5;color;yellow;style;0;threads;10
+    - net3s;net12;3;5;7;color;yellow;style;0;threads;10
+    - net3s;net12;5;7;9;color;yellow;style;0;threads;10
+    - net3s;net12;7;9;11;color;yellow;style;0;threads;10
+    - net3s;net12;9;11;12;color;yellow;style;0;threads;10
+    - net3s;net12;2;1;3;color;yellow;style;0;threads;10
+    - net3s;net12;12;10;8;color;yellow;style;0;threads;10
+    - net3s;net12;10;8;6;color;yellow;style;0;threads;10
+    - net3s;net12;8;6;4;color;yellow;style;0;threads;10
+    - net3s;net12;6;4;2;color;yellow;style;0;threads;10
+    - net3s;net12;4;2;1;color;yellow;style;0;threads;10
+    - net3s;net12;11;12;10;color;yellow;style;0;threads;10
 
 
     - net3s;net12R105;1;3;5;color;darkred;style;0;shiftY;-2.2
