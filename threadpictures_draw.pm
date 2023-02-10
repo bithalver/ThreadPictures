@@ -260,6 +260,12 @@ sub draw_net {
   $AN{moon1}//=$TP_GLOBAL{moon1}; if ($TP_PARAMS{moon1}) {$AN{moon1}=$TP_PARAMS{moon1};}
   $AN{moon2}//=$TP_GLOBAL{moon2}; if ($TP_PARAMS{moon2}) {$AN{moon2}=$TP_PARAMS{moon2};}
 
+  $AN{hollowmooncolor1}//=$TP_GLOBAL{hollowmooncolor1}; if ($TP_PARAMS{hollowmooncolor1}) {$AN{hollowmooncolor1}=$TP_PARAMS{hollowmooncolor1}}
+  $AN{hollowmooncolor2}//=$TP_GLOBAL{hollowmooncolor2}; if ($TP_PARAMS{hollowmooncolor2}) {$AN{hollowmooncolor2}=$TP_PARAMS{hollowmooncolor2}}
+
+  $AN{hollowmooncolor1}//=$AN{color};$AN{hollowmooncolor1}=colorconvert($AN{hollowmooncolor1});
+  $AN{hollowmooncolor2}//=$AN{color};$AN{hollowmooncolor2}=colorconvert($AN{hollowmooncolor2});
+
   { # Handling shiftX and shiftY parameters for a net
     no warnings 'uninitialized';
     ($AN{line1oX},$AN{line1iX},$AN{line2oX},$AN{line2iX})=($AN{line1oX}+$AN{shiftX},$AN{line1iX}+$AN{shiftX},$AN{line2oX}+$AN{shiftX},$AN{line2iX}+$AN{shiftX});
@@ -370,6 +376,23 @@ sub draw_net {
       TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$AN{moon2},1),
       $AN{line1oX},$AN{line1oY});
     my_fill; my_stroke;
+  }
+  when (/^hollowmoon$/i) { # added on 20200621; based on style 'moon'
+    # This kind is NOT interested in the value of threads, firstthread, lastthread
+    if (! $TP_GLOBAL{BW} and $AN{hollowmooncolor1} ne $TP_GLOBAL{lastcolor} ) { say "$AN{hollowmooncolor1} setrgbcolor\n"; $TP_GLOBAL{lastcolor}=$AN{hollowmooncolor1}}
+    my_moveto($AN{line1oX},$AN{line1oY});
+    my_curveto(
+      TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$AN{moon1},1),
+      TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},$AN{moon1},1),
+      $AN{line2oX},$AN{line2oY});
+    my_stroke;
+    if (! $TP_GLOBAL{BW} and $AN{hollowmooncolor2} ne $TP_GLOBAL{lastcolor} ) { say "$AN{hollowmooncolor2} setrgbcolor\n"; $TP_GLOBAL{lastcolor}=$AN{hollowmooncolor2}}
+    my_moveto($AN{line2oX},$AN{line2oY});
+    my_curveto(
+      TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},$AN{moon2},1),
+      TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$AN{moon2},1),
+      $AN{line1oX},$AN{line1oY});
+    my_stroke;
   }
   default {warn "style $AN{'style'} is not (yet) implemented (but processing goes on)\n";return}
   }

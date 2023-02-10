@@ -61,6 +61,9 @@ sub global_init {
   $TP_GLOBAL{moon1} = $ENV{TP_moon1} //=0.6666666; # this is the curve the lines draw
   $TP_GLOBAL{moon2} = $ENV{TP_moon2} //=0.5;
 
+  $TP_GLOBAL{hollowmooncolor1} = $ENV{TP_hollowmooncolor1};
+  $TP_GLOBAL{hollowmooncolor2} = $ENV{TP_hollowmooncolor2};
+
   # Every page has to have a name in PS; because it does not matter, it is an automatically incremented number
   $TP_GLOBAL{pagenumber} = 1;
   
