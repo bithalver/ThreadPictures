@@ -248,6 +248,10 @@ sub percent_thread {
 # To draw one element of the 'net' type
 sub draw_net {
   my (%AN)=@_; # AN like Actual Net
+
+  # style dummy creates a line with threads 2 if you make holes (unless threads are explicitly defined)
+  if ( $AN{'style'} and $AN{'style'} =~ m/^dnd$|^donotdraw$|^dummy$/i ) { $AN{threads} //= 2; }
+
   $AN{threads} //= $TP_GLOBAL{threads}; if ($TP_PARAMS{threads}) {$AN{threads}=$TP_PARAMS{threads};}
   $AN{firstthread} //= $TP_GLOBAL{firstthread}; if ($TP_PARAMS{firstthread}) {$AN{firstthread}=$TP_PARAMS{firstthread};}
   $AN{lastthread} //= $TP_GLOBAL{lastthread}; if ($TP_PARAMS{lastthread}) {$AN{lastthread}=$TP_PARAMS{lastthread};}
@@ -394,7 +398,7 @@ sub draw_net {
       $AN{line1oX},$AN{line1oY});
     my_stroke;
   }
-  when (/^dnd$|^donotdraw$|^dummy$/i) { } # added on 20230222 ; goal is to have a net for sizing but not for drawing
+  when (/^dnd$|^donotdraw$|^dummy$/i) { } # added on 20230222 ; goal is to have a net for sizing but not for drawing; holes overwrites it, as usual
   default {warn "style $AN{'style'} is not (yet) implemented (but processing goes on)\n";return}
   }
 }
