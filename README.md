@@ -38,6 +38,6 @@ Requirements:
 
 Tested with/on:
   - windows 7 and 10 using cygwin 2.880 - 2.924
-  - perl 5.22.4 - v5.26.2
-  - ghostscript 9.19 - 9.23
+  - perl 5.22.4 - v5.32.1
+  - ghostscript 9.19 - 9.56.1
   - bash and xterm (I do not think their version matter)
