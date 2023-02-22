@@ -377,7 +377,7 @@ sub draw_net {
       $AN{line1oX},$AN{line1oY});
     my_fill; my_stroke;
   }
-  when (/^hollowmoon$/i) { # added on 20200621; based on style 'moon'
+  when (/^hollowmoon$/i) { # based on style 'moon'
     # This kind is NOT interested in the value of threads, firstthread, lastthread
     if (! $TP_GLOBAL{BW} and $AN{hollowmooncolor1} ne $TP_GLOBAL{lastcolor} ) { say "$AN{hollowmooncolor1} setrgbcolor\n"; $TP_GLOBAL{lastcolor}=$AN{hollowmooncolor1}}
     my_moveto($AN{line1oX},$AN{line1oY});
@@ -394,6 +394,7 @@ sub draw_net {
       $AN{line1oX},$AN{line1oY});
     my_stroke;
   }
+  when (/^dnd$|^donotdraw$|^dummy$/i) { } # added on 20230222 ; goal is to have a net for sizing but not for drawing
   default {warn "style $AN{'style'} is not (yet) implemented (but processing goes on)\n";return}
   }
 }
