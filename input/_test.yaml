@@ -30,8 +30,9 @@ planes:
   - sn;smaller;5;0.8;360;1;0;0;0;1;2;2;0
 pages:
   -
-    - pagename;2023 01 21 test for % in firstthread and lastthread
+    - pagename;2023 01 21 test for % in firstthread and lastthread | also test for DoNotDraw
     - background;black
+    - net3;0;2;0;0;2;0;style;dummy;threads;2
     - net3;0;1;0;0;1;0;color;lightblue
     - net3;0;1;0;0;1;0;color;white;firstthread;6%;lastthread;94%
   -
