@@ -27,7 +27,7 @@ Usage:
   ./TP --help_plane   # help on plane types and their parameters
 ```
 
-See attached yaml files for examples.
+See attached yaml files for examples in the 'input' folder.
 
 Requirements:
  - perl 5.10
@@ -37,7 +37,7 @@ Requirements:
  - ps2pdf command (part of ghostscript): only if you want a pdf output
 
 Tested with/on:
-  - windows 7 and 10 using cygwin 2.880 - 2.891
+  - windows 7 and 10 using cygwin 2.880 - 2.924
   - perl 5.22.4 - v5.26.2
   - ghostscript 9.19 - 9.23
   - bash and xterm (I do not think their version matter)
