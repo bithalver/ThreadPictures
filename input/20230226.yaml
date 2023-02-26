@@ -1,0 +1,21 @@
+---
+global:
+    threads: 20
+    color: yellow
+    background: gray
+planes:
+  - r5;regular;5;90
+pages:
+  -
+    - pagename; 5 | +-3
+    - loop4;r5;1;2;3;4;5;color;green;style;0
+    - loop4;r5;1;2;3;4;5;color;black;style;1,2,3,17,18,19
+    - loop4;r5;1;2;3;4;5;color;yellow;style;7,8,9
+    - loop4;r5;1;2;3;4;5;color;red;style;10
+    - loop4;r5;1;2;3;4;5;color;yellow;style;11,12,13
+  -
+    - pagename; 5 | +-4
+    - loop4;r5;1;2;3;4;5;color;black;style;0,1,2,3,4,5,15,16,17,18,19
+    - loop4;r5;1;2;3;4;5;firstthread;6;lastthread;9;color;yellow
+    - loop4;r5;1;2;3;4;5;firstthread;10;lastthread;10;color;red
+    - loop4;r5;1;2;3;4;5;firstthread;11;lastthread;14;color;yellow
