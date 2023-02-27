@@ -82,9 +82,8 @@ my @shuffled = (@points?@points:shuffle(1..$sides));
 print "# This is a generated yaml from $0
 ---
 global:
-    threads: 20
 planes:
-  - b;regular;$sides;$angle
+  - b$sides;regular;$sides;$angle
 pages:
   -
     - pagename;net";
@@ -92,14 +91,8 @@ print "4" if ($net4);
 print " - sides $sides, angle $angle";
 # if ($srand_init) { print ", srand init $srand_init"}
 
-print ", points ";
-printf "%d,", $_  for @shuffled[0..$#shuffled-1]; printf "%d" , $shuffled[-1];
-print "\n" ;
+print ", points ",join(",",@shuffled),"\n" ;
 
-for my $i (1 .. $sides) {
-  if ( $net4 ) {
-    print "    - net4s;b;",$shuffled[($i) % $sides],";",$shuffled[($i+1) % $sides],";",$shuffled[($i+2) % $sides],";",$shuffled[($i+3) % $sides],"\n";
-  } else {
-    print "    - net3s;b;",$shuffled[($i-1) % $sides],";",$shuffled[$i % $sides],";",$shuffled[($i+1) % $sides],"\n";
-  }
-}
+print "    - loop";
+print "4" if ( $net4 ) ;
+print ";b$sides;",join(";",@shuffled),"\n";
