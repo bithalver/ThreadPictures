@@ -11,14 +11,48 @@ pages:
     - loop4;r5;1;2;3;4;5;color;green;style;0
     - loop4;r5;1;2;3;4;5;color;black;style;1,2,3,17,18,19
     - loop4;r5;1;2;3;4;5;color;yellow;style;7,8,9
-    - loop4;r5;1;2;3;4;5;color;red;style;10
+    - loop4;r5;1;2;3;4;5;color;blue;style;10
     - loop4;r5;1;2;3;4;5;color;yellow;style;11,12,13
   -
     - pagename; 5 | +-4
     - loop4;r5;1;2;3;4;5;color;black;style;0,1,2,3,4,5,15,16,17,18,19
     - loop4;r5;1;2;3;4;5;firstthread;6;lastthread;9;color;yellow
-    - loop4;r5;1;2;3;4;5;firstthread;10;lastthread;10;color;red
+    - loop4;r5;1;2;3;4;5;firstthread;10;lastthread;10;color;blue
     - loop4;r5;1;2;3;4;5;firstthread;11;lastthread;14;color;yellow
+  -
+    - pagename; 5 | test all with effective threads 10
+    - loop;r5;1;2;3;4;5;style;2,18;color;black
+    - loop;r5;1;2;3;4;5;style;0;color;yellow
+    - loop;r5;1;2;3;4;5;style;10,8,12;color;blue
+
+    - loop;r5;1;2;4;3;5;style;2,18;color;black;shiftX;2.5
+    - loop;r5;1;2;4;3;5;style;0;color;yellow;shiftX;2.5
+    - loop;r5;1;2;4;3;5;style;10,8,12;color;blue;shiftX;2.5
+
+    - loop;r5;1;3;2;5;4;style;2,18;color;black;shiftY;-2.5
+    - loop;r5;1;3;2;5;4;style;0;color;yellow;shiftY;-2.5
+    - loop;r5;1;3;2;5;4;style;10,8,12;color;blue;shiftY;-2.5
+
+    - loop;r5;1;3;5;2;4;style;2,18;color;black;shiftY;-2.5;shiftX;2.5
+    - loop;r5;1;3;5;2;4;style;0;color;yellow;shiftY;-2.5;shiftX;2.5
+    - loop;r5;1;3;5;2;4;style;10,8,12;color;blue;shiftY;-2.5;shiftX;2.5
+  -
+    - pagename; 5 | test all with effective threads 20
+    - loop;r5;1;2;3;4;5;style;1,2,3,17,18,19;color;black
+    - loop;r5;1;2;3;4;5;style;0;color;yellow
+    - loop;r5;1;2;3;4;5;style;10,9,11,8,12;color;blue
+
+    - loop;r5;1;2;4;3;5;style;1,2,3,17,18,19;color;black;shiftX;2.5
+    - loop;r5;1;2;4;3;5;style;0;color;yellow;shiftX;2.5
+    - loop;r5;1;2;4;3;5;style;10,9,11,8,12;color;blue;shiftX;2.5
+
+    - loop;r5;1;3;2;5;4;style;1,2,3,17,18,19;color;black;shiftY;-2.5
+    - loop;r5;1;3;2;5;4;style;0;color;yellow;shiftY;-2.5
+    - loop;r5;1;3;2;5;4;style;10,9,11,8,12;color;blue;shiftY;-2.5
+
+    - loop;r5;1;3;5;2;4;style;1,2,3,17,18,19;color;black;shiftY;-2.5;shiftX;2.5
+    - loop;r5;1;3;5;2;4;style;0;color;yellow;shiftY;-2.5;shiftX;2.5
+    - loop;r5;1;3;5;2;4;style;10,9,11,8,12;color;blue;shiftY;-2.5;shiftX;2.5
   -
     - pagename; 5 | just for printing holes
     - loop4;r5;1;2;3;4;5;style;0
