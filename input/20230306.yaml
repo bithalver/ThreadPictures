@@ -1,0 +1,73 @@
+---
+global:
+    threads: 10
+    color: yellow
+    background: gray
+planes:
+  - A1;freeform;0;0;2;0;1;1;0;1
+  - B1;freeform;3;1;1;1;2;0;3;0
+  - A2;freeform;0;0;1;0;2;1;0;1
+  - B2;freeform;3;1;2;1;1;0;3;0
+pages:
+  -
+    - pagename; 2023 03 06 | 5
+    - loop;A1;0;1;2;3;color;black
+    - loop;B1;0;1;2;3;color;black
+    - loop;A2;0;1;2;3;color;black;shiftY;1
+    - loop;B2;0;1;2;3;color;black;shiftY;1
+    - loop;A1;0;1;2;3;color;black;shiftY;2
+    - loop;B1;0;1;2;3;color;black;shiftY;2
+
+    - loop;A1;0;1;2;3;color;yellow;style;4,5,6
+    - loop;B1;0;1;2;3;color;yellow;style;4,5,6
+    - loop;A2;0;1;2;3;color;yellow;shiftY;1;style;4,5,6
+    - loop;B2;0;1;2;3;color;yellow;shiftY;1;style;4,5,6
+    - loop;A1;0;1;2;3;color;yellow;shiftY;2;style;4,5,6
+    - loop;B1;0;1;2;3;color;yellow;shiftY;2;style;4,5,6
+  -
+    - pagename; 2023 03 06 | 4
+    - loop;A1;0;1;2;3;color;yellow
+    - loop;B1;0;1;2;3;color;black
+    - loop;A2;0;1;2;3;color;yellow;shiftY;1
+    - loop;B2;0;1;2;3;color;black;shiftY;1
+    - loop;A1;0;1;2;3;color;yellow;shiftY;2
+    - loop;B1;0;1;2;3;color;black;shiftY;2
+
+    - loop;A1;0;1;2;3;color;black;style;4,5,6
+    - loop;B1;0;1;2;3;color;yellow;style;4,5,6
+    - loop;A2;0;1;2;3;color;black;shiftY;1;style;4,5,6
+    - loop;B2;0;1;2;3;color;yellow;shiftY;1;style;4,5,6
+    - loop;A1;0;1;2;3;color;black;shiftY;2;style;4,5,6
+    - loop;B1;0;1;2;3;color;yellow;shiftY;2;style;4,5,6
+  -
+    - pagename; 2023 03 06 | 3
+    - loop;A1;0;1;2;3;color;yellow
+    - loop;B1;0;1;2;3;color;black
+    - loop;A2;0;1;2;3;color;yellow;shiftY;1
+    - loop;B2;0;1;2;3;color;black;shiftY;1
+    - loop;A1;0;1;2;3;color;yellow;shiftY;2
+    - loop;B1;0;1;2;3;color;black;shiftY;2
+  -
+    - pagename; 2023 03 06 | 2
+    - loop;A1;0;1;2;3
+    - loop;B1;0;1;2;3;color;black
+    - loop;A2;0;1;2;3;shiftY;1
+    - loop;B1;0;1;2;3;color;black;shiftY;1
+    - loop;A1;0;1;2;3;shiftY;2
+    - loop;B1;0;1;2;3;color;black;shiftY;2
+    - loop;A2;0;1;2;3;shiftY;3
+    - loop;B1;0;1;2;3;color;black;shiftY;3
+    - loop;A1;0;1;2;3;shiftY;4
+    - loop;B1;0;1;2;3;color;black;shiftY;4
+  -
+    - pagename; 2023 03 06 | 1
+    - loop;A1;0;1;2;3
+    - loop;B1;0;1;2;3;color;black
+    - loop;A1;0;1;2;3;shiftY;1
+    - loop;B1;0;1;2;3;color;black;shiftY;1
+    - loop;A1;0;1;2;3;shiftY;2
+    - loop;B1;0;1;2;3;color;black;shiftY;2
+    - loop;A1;0;1;2;3;shiftY;3
+    - loop;B1;0;1;2;3;color;black;shiftY;3
+    - loop;A1;0;1;2;3;shiftY;4
+    - loop;B1;0;1;2;3;color;black;shiftY;4
