@@ -114,3 +114,26 @@ pages:
     - loop;B2;0;1;2;3;color;yellow;shiftY;3;style;4,5,6
     - loop;A1;0;1;2;3;color;yellow;shiftY;4;style;4,5,6
     - loop;B1;0;1;2;3;color;yellow;shiftY;4;style;4,5,6
+  -
+    - pagename; 2023 03 06 | 8
+    - loop;A1;0;1;2;3;color;black
+    - loop;B1;0;1;2;3;color;black
+    - loop;A2;0;1;2;3;color;black;shiftY;1
+    - loop;B2;0;1;2;3;color;black;shiftY;1
+    - loop;A1;0;1;2;3;color;black;shiftY;2
+    - loop;B1;0;1;2;3;color;black;shiftY;2
+    - loop;A2;0;1;2;3;color;black;shiftY;3
+    - loop;B2;0;1;2;3;color;black;shiftY;3
+    - loop;A1;0;1;2;3;color;black;shiftY;4
+    - loop;B1;0;1;2;3;color;black;shiftY;4
+
+    - loop;A1;0;1;2;3;color;yellow;style;0,1,9,10
+    - loop;B1;0;1;2;3;color;yellow;style;0,1,9,10
+    - loop;A2;0;1;2;3;color;yellow;shiftY;1;style;0,1,9,10
+    - loop;B2;0;1;2;3;color;yellow;shiftY;1;style;0,1,9,10
+    - loop;A1;0;1;2;3;color;yellow;shiftY;2;style;0,1,9,10
+    - loop;B1;0;1;2;3;color;yellow;shiftY;2;style;0,1,9,10
+    - loop;A2;0;1;2;3;color;yellow;shiftY;3;style;0,1,9,10
+    - loop;B2;0;1;2;3;color;yellow;shiftY;3;style;0,1,9,10
+    - loop;A1;0;1;2;3;color;yellow;shiftY;4;style;0,1,9,10
+    - loop;B1;0;1;2;3;color;yellow;shiftY;4;style;0,1,9,10
