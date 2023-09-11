@@ -197,6 +197,108 @@ pages:
     - net3;32;4;40;0;32;-4;color;yellow
     - net3;32;12;40;8;32;4;color;yellow
   -
+    - pagename;2023 09 06 | 5a
+    - xymirror;1
+    - background;darkgray
+
+    - net3;-10;4;-22;0;-10;-4;color;0,0,0.8
+
+    - net3;0;8;-10;4;0;0;color;0.1,0.1,0.8
+    - net3;0;0;-10;-4;0;-8;color;lightgray
+
+    - net3;8;-4;0;-8;8;-12;color;yellow
+    - net3;8;4;0;0;8;-4;color;lightgray
+    - net3;8;12;0;8;8;4;color;0.2,0.2,0.8
+
+    - net3;14;16;8;12;14;8;color;0.3,0.3,0.8
+    - net3;14;8;8;4;14;0;color;lightgray
+    - net3;14;0;8;-4;14;-8;color;yellow
+    - net3;14;-8;8;-12;14;-16;color;lightgray
+
+    - net3;18;20;14;16;18;12;color;0.4,0.4,0.8
+    - net3;18;12;14;8;18;4;color;lightgray
+    - net3;18;4;14;0;18;-4;color;yellow
+    - net3;18;-4;14;-8;18;-12;color;lightgray
+    - net3;18;-12;14;-16;18;-20;color;yellow
+
+    - net3;20;24;18;20;20;16;color;0.5,0.5,0.8
+    - net3;20;16;18;12;20;8;color;lightgray
+    - net3;20;8;18;4;20;0;color;yellow
+    - net3;20;0;18;-4;20;-8;color;lightgray
+    - net3;20;-8;18;-12;20;-16;color;yellow
+    - net3;20;-16;18;-20;20;-24;color;lightgray
+
+    - net3;20;24;22;20;20;16;color;0.5,0.5,0.8
+    - net3;20;16;22;12;20;8;color;lightgray
+    - net3;20;8;22;4;20;0;color;yellow
+    - net3;20;0;22;-4;20;-8;color;lightgray
+    - net3;20;-8;22;-12;20;-16;color;yellow
+    - net3;20;-16;22;-20;20;-24;color;lightgray
+
+    - net3;22;20;26;16;22;12;color;lightgray
+    - net3;22;12;26;8;22;4;color;yellow
+    - net3;22;4;26;0;22;-4;color;lightgray
+    - net3;22;-4;26;-8;22;-12;color;yellow
+    - net3;22;-12;26;-16;22;-20;color;lightgray
+
+    - net3;26;16;32;12;26;8;color;yellow
+    - net3;26;8;32;4;26;0;color;lightgray
+    - net3;26;0;32;-4;26;-8;color;yellow
+    - net3;26;-8;32;-12;26;-16;color;lightgray
+
+    - net3;32;-4;40;-8;32;-12;color;lightgray
+    - net3;32;4;40;0;32;-4;color;yellow
+    - net3;32;12;40;8;32;4;color;lightgray
+
+    - net3;40;-8;50;-4;40;0;color;lightgray
+    - net3;40;0;50;4;40;8;color;yellow
+
+    - net3;50;-4;62;0;50;4;color;lightgray
+  -
+    - pagename;2023 09 06 | 5b
+    - xymirror;1
+    - background;darkgray
+
+    - net3;0;0;-10;-4;0;-8;color;lightgray
+
+    - net3;8;-4;0;-8;8;-12;color;yellow
+    - net3;8;4;0;0;8;-4;color;lightgray
+
+    - net3;14;8;8;4;14;0;color;lightgray
+    - net3;14;0;8;-4;14;-8;color;yellow
+    - net3;14;-8;8;-12;14;-16;color;lightgray
+
+    - net3;18;12;14;8;18;4;color;lightgray
+    - net3;18;4;14;0;18;-4;color;yellow
+    - net3;18;-4;14;-8;18;-12;color;lightgray
+    - net3;18;-12;14;-16;18;-20;color;yellow
+
+    - net3;20;16;18;12;20;8;color;lightgray
+    - net3;20;8;18;4;20;0;color;yellow
+    - net3;20;0;18;-4;20;-8;color;lightgray
+    - net3;20;-8;18;-12;20;-16;color;yellow
+    - net3;20;-16;18;-20;20;-24;color;lightgray
+
+    - net3;20;16;22;12;20;8;color;lightgray
+    - net3;20;8;22;4;20;0;color;yellow
+    - net3;20;0;22;-4;20;-8;color;lightgray
+    - net3;20;-8;22;-12;20;-16;color;yellow
+    - net3;20;-16;22;-20;20;-24;color;lightgray
+
+    - net3;22;12;26;8;22;4;color;yellow
+    - net3;22;4;26;0;22;-4;color;lightgray
+    - net3;22;-4;26;-8;22;-12;color;yellow
+    - net3;22;-12;26;-16;22;-20;color;lightgray
+
+    - net3;26;8;32;4;26;0;color;lightgray
+    - net3;26;0;32;-4;26;-8;color;yellow
+    - net3;26;-8;32;-12;26;-16;color;lightgray
+
+    - net3;32;-4;40;-8;32;-12;color;lightgray
+    - net3;32;4;40;0;32;-4;color;yellow
+
+    - net3;40;-8;50;-4;40;0;color;lightgray
+  -
     - pagename;2023 09 06 | 6
 #    - xymirror;1
     - background;darkgray
