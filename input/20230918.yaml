@@ -1,0 +1,60 @@
+---
+global:
+    threads: 8
+
+pages:
+  -
+    - pagename;2023 09 18 | 1
+    - background;darkgray
+    - net3;-1;1;-1;-1;0;-1;color;lightgray
+    - net3;-1;-1;1;-1;1;0;color;lightgray
+    - net3;1;-1;1;1;0;1;color;lightgray
+    - net3;1;1;-1;1;-1;0;color;lightgray
+
+    - net3;-1;1;-1;-1;0;-1;color;lightgray;shiftX;2;shiftY;3
+    - net3;-1;-1;1;-1;1;0;color;lightgray;shiftX;2;shiftY;3
+    - net3;1;-1;1;1;0;1;color;lightgray;shiftX;2;shiftY;3
+    - net3;1;1;-1;1;-1;0;color;lightgray;shiftX;2;shiftY;3
+
+    - net3;-1;1;-1;-1;0;-1;color;lightgray;shiftX;-3;shiftY;2
+    - net3;-1;-1;1;-1;1;0;color;lightgray;shiftX;-3;shiftY;2
+    - net3;1;-1;1;1;0;1;color;lightgray;shiftX;-3;shiftY;2
+    - net3;1;1;-1;1;-1;0;color;lightgray;shiftX;-3;shiftY;2
+
+    - net3;-1;1;-1;-1;0;-1;color;lightgray;shiftX;-2;shiftY;-3
+    - net3;-1;-1;1;-1;1;0;color;lightgray;shiftX;-2;shiftY;-3
+    - net3;1;-1;1;1;0;1;color;lightgray;shiftX;-2;shiftY;-3
+    - net3;1;1;-1;1;-1;0;color;lightgray;shiftX;-2;shiftY;-3
+
+    - net3;-1;1;-1;-1;0;-1;color;lightgray;shiftX;3;shiftY;-2
+    - net3;-1;-1;1;-1;1;0;color;lightgray;shiftX;3;shiftY;-2
+    - net3;1;-1;1;1;0;1;color;lightgray;shiftX;3;shiftY;-2
+    - net3;1;1;-1;1;-1;0;color;lightgray;shiftX;3;shiftY;-2
+
+    - net3;-2;3;-2;1;-1;1;color;lightblue
+    - net3;-1;1;1;1;1;2;color;lightblue
+    - net3;1;2;1;4;0;4;color;lightblue
+    - net3;0;4;-2;4;-2;3;color;lightblue
+    
+    - net3;-2;3;-2;1;-1;1;color;lightblue;shiftX;1;shiftY;-5
+    - net3;-1;1;1;1;1;2;color;lightblue;shiftX;1;shiftY;-5
+    - net3;1;2;1;4;0;4;color;lightblue;shiftX;1;shiftY;-5
+    - net3;0;4;-2;4;-2;3;color;lightblue;shiftX;1;shiftY;-5
+
+    - net3;-2;3;-2;1;-1;1;color;yellow;shiftX;-2;shiftY;-3
+    - net3;-1;1;1;1;1;2;color;yellow;shiftX;-2;shiftY;-3
+    - net3;1;2;1;4;0;4;color;yellow;shiftX;-2;shiftY;-3
+    - net3;0;4;-2;4;-2;3;color;yellow;shiftX;-2;shiftY;-3
+
+    - net3;-2;3;-2;1;-1;1;color;yellow;shiftX;3;shiftY;-2
+    - net3;-1;1;1;1;1;2;color;yellow;shiftX;3;shiftY;-2
+    - net3;1;2;1;4;0;4;color;yellow;shiftX;3;shiftY;-2
+    - net3;0;4;-2;4;-2;3;color;yellow;shiftX;3;shiftY;-2
+
+    - net3;-2;3;-2;1;-1;1;color;lightblue;shiftX;5;shiftY;1
+
+    - net3;1;2;1;4;0;4;color;lightblue;shiftX;-4;shiftY;-6
+
+    - net3;-1;1;1;1;1;2;color;yellow;shiftX;-3;shiftY;2
+
+    - net3;0;4;-2;4;-2;3;color;yellow;shiftX;4;shiftY;-7
