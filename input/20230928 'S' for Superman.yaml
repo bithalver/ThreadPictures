@@ -1,0 +1,17 @@
+---
+global:
+    threads: 16
+    color: white
+    fontcolor: white
+
+pages:
+  -
+    - pagename;2023 09 28 | "S" for Superman
+    - background;darkgray
+    - net3;-1;-2;1;-2;1;0
+    - net3;1;-2;1;0;-1;0
+
+    - net3;1;2;-1;2;-1;0;style;1,3,5,7,9,11,13,15;color;white
+    - net3;1;2;-1;2;-1;0;style;0,2,4,6,8,10,12,14,16;color;orange
+    - net3;-1;2;-1;0;1;0
+
