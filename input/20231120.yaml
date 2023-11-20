@@ -1,0 +1,72 @@
+---
+global:
+    threads: 16
+    color: red
+    fontcolor: white
+pages:
+  -
+    - pagename;2023 11 20 | 1
+    - background;darkgray
+    - net3;-2;0;0;2;2;0;shiftY;0;style;0,16,1,15
+    - net3;-2;0;0;2;2;0;shiftY;1;style;0,16,1,15,2,14,3,13
+    - net3;-2;0;0;2;2;0;shiftY;2;style;0,16,1,15,2,14,3,13,4,12,5,11
+    - net3;-2;0;0;2;2;0;shiftY;3;style;0,16,1,15,2,14,3,13,4,12,5,11,6,10,7,9
+    - net3;-2;0;0;2;2;0;shiftY;4;style;2,14,3,13,4,12,5,11,6,10,7,9
+    - net3;-2;0;0;2;2;0;shiftY;5;style;4,12,5,11,6,10,7,9
+    - net3;-2;0;0;2;2;0;shiftY;6;style;6,10,7,9
+  -
+    - pagename;2023 11 20 | 2
+    - background;darkgray
+    - net3;-2;0;0;2;2;0;shiftY;0;style;0,16,1,15,2,14
+    - net3;-2;0;0;2;2;0;shiftY;1;style;0,16,1,15,2,14,3,13,4,12
+    - net3;-2;0;0;2;2;0;shiftY;2;style;0,16,1,15,2,14,3,13,4,12,5,11,6,10
+    - net3;-2;0;0;2;2;0;shiftY;3;style;0,16,1,15,2,14,3,13,4,12,5,11,6,10,7,9,8
+    - net3;-2;0;0;2;2;0;shiftY;4;style;2,14,3,13,4,12,5,11,6,10,7,9,8
+    - net3;-2;0;0;2;2;0;shiftY;5;style;4,12,5,11,6,10,7,9,8
+    - net3;-2;0;0;2;2;0;shiftY;6;style;6,10,7,9,8
+
+    - net3;-2;0;0;2;2;0;shiftY;0;color;black;style;3,13,4,12,5,11,6,10,7,9,8
+    - net3;-2;0;0;2;2;0;shiftY;1;color;black;style;5,11,6,10,7,9,8
+    - net3;-2;0;0;2;2;0;shiftY;2;color;black;style;7,9,8
+#    - net3;-2;0;0;2;2;0;shiftY;3;color;black
+    - net3;-2;0;0;2;2;0;shiftY;4;color;black;style;0,16,1,15
+    - net3;-2;0;0;2;2;0;shiftY;5;color;black;style;0,16,1,15,2,14,3,13
+    - net3;-2;0;0;2;2;0;shiftY;6;color;black;style;0,16,1,15,2,14,3,13,4,12,5,11
+  -
+    - pagename;2023 11 20 | 3
+    - background;darkgray
+    - net3;-2;0;0;2;2;0;shiftY;0.0;style;0,16,1,15,2,14
+    - net3;-2;0;0;2;2;0;shiftY;1.2;style;0,16,1,15,2,14,3,13,4,12
+    - net3;-2;0;0;2;2;0;shiftY;2.4;style;0,16,1,15,2,14,3,13,4,12,5,11,6,10
+    - net3;-2;0;0;2;2;0;shiftY;3.6;style;0,16,1,15,2,14,3,13,4,12,5,11,6,10,7,9,8
+    - net3;-2;0;0;2;2;0;shiftY;4.8;style;2,14,3,13,4,12,5,11,6,10,7,9,8
+    - net3;-2;0;0;2;2;0;shiftY;6.0;style;4,12,5,11,6,10,7,9,8
+    - net3;-2;0;0;2;2;0;shiftY;7.2;style;6,10,7,9,8
+    - net3;-2;0;0;2;2;0;shiftY;8.4;style;8
+
+    - net3;-2;0;0;2;2;0;shiftY;0.0;color;black;style;3,13,4,12,5,11,6,10,7,9,8
+    - net3;-2;0;0;2;2;0;shiftY;1.2;color;black;style;5,11,6,10,7,9,8
+    - net3;-2;0;0;2;2;0;shiftY;2.4;color;black;style;7,9,8
+#    - net3;-2;0;0;2;2;0;shiftY;3.6;color;black
+    - net3;-2;0;0;2;2;0;shiftY;4.8;color;black;style;0,16,1,15
+    - net3;-2;0;0;2;2;0;shiftY;6.0;color;black;style;0,16,1,15,2,14,3,13
+    - net3;-2;0;0;2;2;0;shiftY;7.2;color;black;style;0,16,1,15,2,14,3,13,4,12,5,11
+    - net3;-2;0;0;2;2;0;shiftY;8.4;color;black;style;0,16,1,15,2,14,3,13,4,12,5,11,6,10,7,9
+    
+    - net3;0;2;2;0;4;2;shiftY;0.0;style;0,16,1,15,2,14
+    - net3;0;2;2;0;4;2;shiftY;1.2;style;0,16,1,15,2,14,3,13,4,12
+    - net3;0;2;2;0;4;2;shiftY;2.4;style;0,16,1,15,2,14,3,13,4,12,5,11,6,10
+    - net3;0;2;2;0;4;2;shiftY;3.6;style;0,16,1,15,2,14,3,13,4,12,5,11,6,10,7,9,8
+    - net3;0;2;2;0;4;2;shiftY;4.8;style;2,14,3,13,4,12,5,11,6,10,7,9,8
+    - net3;0;2;2;0;4;2;shiftY;6.0;style;4,12,5,11,6,10,7,9,8
+    - net3;0;2;2;0;4;2;shiftY;7.2;style;6,10,7,9,8
+    - net3;0;2;2;0;4;2;shiftY;8.4;style;8
+
+    - net3;0;2;2;0;4;2;shiftY;0.0;color;black;style;3,13,4,12,5,11,6,10,7,9,8
+    - net3;0;2;2;0;4;2;shiftY;1.2;color;black;style;5,11,6,10,7,9,8
+    - net3;0;2;2;0;4;2;shiftY;2.4;color;black;style;7,9,8
+#    - net3;0;2;2;0;4;2;shiftY;3.6;color;black
+    - net3;0;2;2;0;4;2;shiftY;4.8;color;black;style;0,16,1,15
+    - net3;0;2;2;0;4;2;shiftY;6.0;color;black;style;0,16,1,15,2,14,3,13
+    - net3;0;2;2;0;4;2;shiftY;7.2;color;black;style;0,16,1,15,2,14,3,13,4,12,5,11
+    - net3;0;2;2;0;4;2;shiftY;8.4;color;black;style;0,16,1,15,2,14,3,13,4,12,5,11,6,10,7,9
