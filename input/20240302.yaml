@@ -1,0 +1,43 @@
+---
+global:
+    threads: 20
+    color: white
+    fontcolor: white
+planes:
+  - g;grid;7;3
+
+pages:
+  -
+    - pagename;2024 03 02 | 1
+    - xymirror;1
+    - background;darkgray
+    - net3s;g;203;102;003;color;silver
+    - net3s;g;003;004;104;color;silver
+    - net3s;g;102;003;004;color;lightblue
+    - net3s;g;101;102;003;color;lightblue
+    - net3s;g;201;101;102;color;lightblue
+    - net3s;g;200;201;101;color;lightblue
+
+    - net3s;g;102;203;204;color;yellow
+    - net3s;g;004;104;204;color;yellow
+    - net3s;g;203;204;104;color;red
+    - net3s;g;204;104;105;color;red
+    - net3s;g;104;105;006;color;red
+    - net3s;g;105;006;007;color;red
+  -
+    - pagename;2024 03 02 | 2
+    - xymirror;1
+    - background;darkgray
+    - net3s;g;203;102;003;color;white
+    - net3s;g;003;004;104;color;white
+    - net3s;g;102;003;004;color;green
+    - net3s;g;101;102;003;color;green
+    - net3s;g;201;101;102;color;green
+    - net3s;g;200;201;101;color;green
+
+    - net3s;g;102;203;204;color;white
+    - net3s;g;004;104;204;color;white
+    - net3s;g;203;204;104;color;red
+    - net3s;g;204;104;105;color;red
+    - net3s;g;104;105;006;color;red
+    - net3s;g;105;006;007;color;red
