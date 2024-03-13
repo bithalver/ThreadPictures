@@ -1,0 +1,53 @@
+---
+global:
+    threads: 20
+    fontcolor: white
+pages:
+  -
+    - pagename;2024 03 13 | 0
+    - background;orange
+    - net3;0;-6;6;0;0;6;color;silver
+    - net3;0;6;-6;0;0;-6;color;black
+  -
+    - pagename;2024 03 13 | 1
+    - background;orange
+    - net3;-1;-5;5;1;-1;7;color;silver
+    - net3;1;5;-5;-1;1;-7;color;black
+  -
+    - pagename;2024 03 13 | 2
+    - background;orange
+    - net3;-2;-4;4;2;-2;8;color;silver
+    - net3;2;4;-4;-2;2;-8;color;black
+  -
+    - pagename;2024 03 13 | 3
+    - background;orange
+    - net3;-3;-3;3;3;-3;9;color;silver
+    - net3;3;3;-3;-3;3;-9;color;black
+  -
+    - pagename;2024 03 13 | All-in-one
+    - background;orange
+    - net3;0;-6;6;0;0;6;color;silver
+    - net3;0;6;-6;0;0;-6;color;black
+
+    - net3;-1;-5;5;1;-1;7;color;silver
+    - net3;1;5;-5;-1;1;-7;color;black
+
+    - net3;-2;-4;4;2;-2;8;color;silver
+    - net3;2;4;-4;-2;2;-8;color;black
+
+    - net3;-3;-3;3;3;-3;9;color;silver
+    - net3;3;3;-3;-3;3;-9;color;black
+  -
+    - pagename;2024 03 13 | All
+    - background;orange
+    - net3;0;-6;6;0;0;6;color;silver;shiftX;3.99;shiftY;5.99
+    - net3;0;6;-6;0;0;-6;color;black;shiftX;3.99;shiftY;5.99
+
+    - net3;-1;-5;5;1;-1;7;color;silver;shiftX;-10;shiftY;5.99
+    - net3;1;5;-5;-1;1;-7;color;black;shiftX;-10;shiftY;5.99
+
+    - net3;-2;-4;4;2;-2;8;color;silver;shiftX;-10;shiftY;-10
+    - net3;2;4;-4;-2;2;-8;color;black;shiftX;-10;shiftY;-10
+
+    - net3;-3;-3;3;3;-3;9;color;silver;shiftX;3.99;shiftY;-10
+    - net3;3;3;-3;-3;3;-9;color;black;shiftX;3.99;shiftY;-10
