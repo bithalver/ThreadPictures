@@ -1,6 +1,6 @@
 ---
 global:
-    threads: 20
+    threads: 18
     fontcolor: white
 pages:
   -
