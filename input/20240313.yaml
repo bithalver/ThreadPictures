@@ -38,7 +38,7 @@ pages:
     - net3;-3;-3;3;3;-3;9;color;silver
     - net3;3;3;-3;-3;3;-9;color;black
   -
-    - pagename;2024 03 13 | All
+    - pagename;2024 03 13 | All | spread out
     - background;orange
     - net3;0;-6;6;0;0;6;color;silver;shiftX;3.99;shiftY;5.99
     - net3;0;6;-6;0;0;-6;color;black;shiftX;3.99;shiftY;5.99
@@ -51,3 +51,57 @@ pages:
 
     - net3;-3;-3;3;3;-3;9;color;silver;shiftX;3.99;shiftY;-10
     - net3;3;3;-3;-3;3;-9;color;black;shiftX;3.99;shiftY;-10
+  -
+    - pagename;2024 03 13 | All-in-one | 1
+    - background;orange
+    - net3;0;-6;6;0;0;6;color;silver
+    - net3;0;6;-6;0;0;-6;color;black
+
+    - net3;0;-5;6;1;0;7;color;silver
+    - net3;0;5;-6;-1;0;-7;color;black
+
+    - net3;0;-4;6;2;0;8;color;silver
+    - net3;0;4;-6;-2;0;-8;color;black
+
+    - net3;0;-3;6;3;0;9;color;silver
+    - net3;0;3;-6;-3;0;-9;color;black
+
+    - net3;0;-2;6;4;0;10;color;silver
+    - net3;0;2;-6;-4;0;-10;color;black
+  -
+    - pagename;2024 03 13 | All-in-one | 1 | 6
+    - background;orange
+    - net3;0;-6;6;0;0;6;color;white
+    - net3;0;6;-6;0;0;-6;color;white
+
+    - net3;0;-3;6;3;0;9;color;white
+    - net3;0;3;-6;-3;0;-9;color;white
+
+    - net3;0;0;6;6;0;12;color;white
+    - net3;0;0;-6;-6;0;-12;color;white
+
+    - net3;0;-5;6;1;0;7;color;black;threads;9
+    - net3;0;5;-6;-1;0;-7;color;black;threads;9
+
+    - net3;0;-4;6;2;0;8;color;black;threads;9
+    - net3;0;4;-6;-2;0;-8;color;black;threads;9
+
+    - net3;0;-2;6;4;0;10;color;black;threads;9
+    - net3;0;2;-6;-4;0;-10;color;black;threads;9
+
+    - net3;0;-1;6;5;0;11;color;black;threads;9
+    - net3;0;1;-6;-5;0;-11;color;black;threads;9
+  -
+    - pagename;2024 03 13 | All-in-one | 3
+    - background;orange
+    - net3;0;-6;6;0;0;6;color;silver
+    - net3;0;6;-6;0;0;-6;color;black
+
+    - net3;0;-3;6;3;0;9;color;silver
+    - net3;0;3;-6;-3;0;-9;color;black
+
+    - net3;0;0;6;6;0;12;color;silver
+    - net3;0;0;-6;-6;0;-12;color;black
+
+    - net3;0;3;6;9;0;15;color;silver
+    - net3;0;-3;-6;-9;0;-15;color;black
