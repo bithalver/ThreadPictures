@@ -1,0 +1,122 @@
+---
+global:
+    threads: 20
+    fontcolor: white
+planes:
+  - g;grid;50;50
+pages:
+  -
+    - pagename;2024 03 26 | 1
+    - background;gray
+#    - xymirror;1
+    - net3s;g;0400;0802;0404;color;white
+    - net3s;g;0601;1003;0605;color;white
+    - net3s;g;0802;1204;0806;color;white
+    - net3s;g;1003;1405;1007;color;white
+  -
+    - pagename;2024 03 26 | 2
+    - background;gray
+    - net3s;g;0803;1205;0807;color;white
+    - net3s;g;1002;1404;1006;color;white
+    - net3s;g;1201;1603;1205;color;white
+    - net3s;g;1400;1802;1404;color;white
+
+    - net3s;g;1205;0807;1209;color;white
+    - net3s;g;1006;0608;1010;color;white
+    - net3s;g;0807;0409;0811;color;white
+    - net3s;g;0608;0210;0612;color;white
+  -
+    - pagename;2024 03 26 | 2a
+    - background;gray
+    - net3s;g;0803;1205;0807;color;white
+    - net3s;g;1003;1405;1007;color;orange;style;1,3,5,7,9,11,13,15,17,19
+    - net3s;g;1003;1405;1007;color;white;style;0,2,4,6,8,10,12,14,16,18,20
+    - net3s;g;1201;1603;1205;color;orange
+    - net3s;g;1403;1805;1407;color;white
+
+    - net3s;g;1205;0807;1209;color;white
+    - net3s;g;1005;0607;1009;color;orange;style;1,3,5,7,9,11,13,15,17,19
+    - net3s;g;1005;0607;1009;color;white;style;0,2,4,6,8,10,12,14,16,18,20
+    - net3s;g;0807;0409;0811;color;orange
+    - net3s;g;0605;0207;0609;color;white
+  -
+    - pagename;2024 03 26 | 2b1
+    - background;gray
+    - net3s;g;0803;1205;0807;color;orange
+    - net3s;g;1003;1405;1007;color;white
+    - net3s;g;1203;1605;1207;color;orange
+    - net3s;g;1403;1805;1407;color;white
+
+    - net3s;g;1205;0807;1209;color;white
+    - net3s;g;1005;0607;1009;color;orange
+    - net3s;g;0805;0407;0809;color;white
+    - net3s;g;0605;0207;0609;color;orange
+  -
+    - pagename;2024 03 26 | 2b2
+    - background;gray
+    - net3s;g;0203;0605;0207;color;orange
+    - net3s;g;0403;0805;0407;color;white
+    - net3s;g;0603;1005;0607;color;orange
+    - net3s;g;0803;1205;0807;color;white
+
+    - net3s;g;1205;0807;1209;color;white
+    - net3s;g;1005;0607;1009;color;orange
+    - net3s;g;0805;0407;0809;color;white
+    - net3s;g;0605;0207;0609;color;orange
+  -
+    - pagename;2024 03 26 | 3
+    - background;gray
+    - xymirror;1
+    - net3s;g;0200;0602;0204;color;black
+    - net3s;g;0201;0603;0205;color;orange
+    - net3s;g;0202;0604;0206;color;black
+    - net3s;g;0203;0605;0207;color;orange
+
+    - net3s;g;0605;0207;0609;color;orange
+    - net3s;g;0606;0208;0610;color;black
+    - net3s;g;0607;0209;0611;color;orange
+    - net3s;g;0608;0210;0612;color;black
+  -
+    - pagename;2024 03 26 | 3a
+    - background;gray
+    - xymirror;1
+    - net3s;g;0501;0903;0505;color;black
+    - net3s;g;0402;0804;0406;color;orange
+    - net3s;g;0302;0704;0306;color;black
+    - net3s;g;0203;0605;0207;color;orange
+
+    - net3s;g;0605;0207;0609;color;orange
+    - net3s;g;0606;0208;0610;color;black
+    - net3s;g;0607;0209;0611;color;orange
+    - net3s;g;0608;0210;0612;color;black
+  -
+    - pagename;2024 03 26 | 3b
+    - background;gray
+    - xymirror;1
+    - net3s;g;0605;1007;0609;color;orange
+    - net3s;g;0604;1006;0608;color;black
+    - net3s;g;0603;1005;0607;color;orange
+    - net3s;g;0602;1004;0606;color;black
+
+    - net3s;g;0605;0207;0609;color;orange
+    - net3s;g;0606;0208;0610;color;black
+    - net3s;g;0607;0209;0611;color;orange
+    - net3s;g;0608;0210;0612;color;black
+  -
+    - pagename;2024 03 26 | 3b1
+    - background;gray
+    - xymirror;1
+    - net3s;g;0200;0602;0204;color;black
+    - net3s;g;0201;0603;0205;color;orange
+    - net3s;g;0202;0604;0206;color;black
+    - net3s;g;0203;0605;0207;color;orange
+
+    - net3s;g;0605;1007;0609;color;orange
+    - net3s;g;0604;1006;0608;color;black
+    - net3s;g;0603;1005;0607;color;orange
+    - net3s;g;0602;1004;0606;color;black
+
+    - net3s;g;0605;0207;0609;color;orange
+    - net3s;g;0606;0208;0610;color;black
+    - net3s;g;0607;0209;0611;color;orange
+    - net3s;g;0608;0210;0612;color;black
