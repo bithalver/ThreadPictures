@@ -1,0 +1,157 @@
+---
+global:
+    threads: 16
+    fontcolor: white
+planes:
+  - g;grid;50;50
+pages:
+  -
+    - pagename;2024 03 30 | 1
+    - background;gray
+    - net3s;g;1606;2008;2406;color;black
+    - net3s;g;1406;1808;2206;color;white
+    - net3s;g;1206;1608;2006;color;black
+    - net3s;g;1006;1408;1806;color;white
+    - net3s;g;1408;1006;0608;color;white
+    - net3s;g;1208;0806;0408;color;black
+    - net3s;g;1008;0606;0208;color;white
+    - net3s;g;0808;0406;0008;color;black
+  -
+    - pagename;2024 03 30 | 2
+    - background;gray
+    - net3s;g;1304;1706;2104;color;black
+    - net3s;g;1205;1607;2005;color;white
+    - net3s;g;1105;1507;1905;color;black
+    - net3s;g;1006;1408;1806;color;white
+    - net3s;g;1408;1006;0608;color;white
+    - net3s;g;1308;0906;0508;color;black
+    - net3s;g;1209;0807;0409;color;white
+    - net3s;g;1109;0707;0309;color;black
+  -
+    - pagename;2024 03 30 | 3
+    - background;gray
+    - net3s;g;1304;1706;2104;color;black
+    - net3s;g;1205;1607;2005;color;white
+    - net3s;g;1105;1507;1905;color;black
+    - net3s;g;1006;1408;1806;color;white
+    - net3s;g;1408;1006;0608;color;white
+    - net3s;g;1308;0906;0508;color;black
+    - net3s;g;1209;0807;0409;color;white
+    - net3s;g;1109;0707;0309;color;black
+
+    - net3s;g;0707;0309;0711;color;yellow
+    - net3s;g;0808;0410;0812;color;orange
+    - net3s;g;0908;0510;0912;color;yellow
+    - net3s;g;1009;0611;1013;color;orange
+  -
+    - pagename;2024 03 30 | 4
+    - background;gray
+    - net3s;g;1304;1706;2104;color;black
+    - net3s;g;1205;1607;2005;color;white
+    - net3s;g;1105;1507;1905;color;black
+    - net3s;g;1006;1408;1806;color;white
+    - net3s;g;1408;1006;0608;color;white
+    - net3s;g;1308;0906;0508;color;black
+    - net3s;g;1209;0807;0409;color;white
+    - net3s;g;1109;0707;0309;color;black
+
+    - net3s;g;0707;0711;0309;color;yellow
+    - net3s;g;0808;0812;0410;color;orange
+    - net3s;g;0908;0912;0510;color;yellow
+    - net3s;g;1009;1013;0611;color;orange
+
+    - net3s;g;1013;1009;1411;color;orange
+    - net3s;g;1113;1109;1511;color;yellow
+    - net3s;g;1214;1210;1612;color;orange
+    - net3s;g;1314;1310;1712;color;yellow
+  -
+    - pagename;2024 03 30 | 5
+    - background;gray
+    - net3s;g;1504;1906;2304;color;black
+    - net3s;g;1405;1807;2205;color;white
+    - net3s;g;1305;1707;2105;color;black
+    - net3s;g;1206;1608;2006;color;white
+    - net3s;g;1608;1206;0808;color;white
+    - net3s;g;1508;1106;0708;color;black
+    - net3s;g;1409;1007;0609;color;white
+    - net3s;g;1309;0907;0509;color;black
+
+    - net3s;g;0907;0911;0509;color;yellow
+    - net3s;g;1008;1012;0610;color;orange
+    - net3s;g;1108;1112;0710;color;yellow
+    - net3s;g;1209;1213;0811;color;orange
+    - net3s;g;1213;1209;1611;color;orange
+    - net3s;g;1313;1309;1711;color;yellow
+    - net3s;g;1414;1410;1812;color;orange
+    - net3s;g;1514;1510;1912;color;yellow
+
+    - net3s;g;1912;1514;1112;color;black
+    - net3s;g;1813;1415;1013;color;white
+    - net3s;g;1713;1315;0913;color;black
+    - net3s;g;1614;1216;0814;color;white
+    - net3s;g;1216;0814;0416;color;white
+    - net3s;g;1116;0714;0316;color;black
+    - net3s;g;1017;0615;0217;color;white
+    - net3s;g;0917;0515;0117;color;black
+  -
+    - pagename;2024 03 30 | 6
+    - background;gray
+
+    - net3s;g;1309;1213;0911;color;yellow
+    - net3s;g;1410;1414;1012;color;orange
+    - net3s;g;1510;1514;1112;color;yellow
+    - net3s;g;1611;1615;1213;color;orange
+
+    - net3s;g;1615;1611;2013;color;orange
+    - net3s;g;1715;1711;2113;color;yellow
+    - net3s;g;1816;1812;2214;color;orange
+    - net3s;g;1916;1912;2314;color;yellow
+
+    - net3s;g;1514;1916;2314;color;black
+    - net3s;g;1415;1817;2215;color;white
+    - net3s;g;1315;1717;2115;color;black
+    - net3s;g;1216;1618;2016;color;white
+    - net3s;g;1618;1216;0818;color;white
+    - net3s;g;1518;1116;0718;color;black
+    - net3s;g;1419;1017;0619;color;white
+    - net3s;g;1319;0917;0519;color;black
+
+    - net3s;g;0917;0921;0519;color;yellow
+    - net3s;g;1018;1022;0620;color;orange
+    - net3s;g;1118;1122;0720;color;yellow
+    - net3s;g;1219;1223;0821;color;orange
+    - net3s;g;1223;1219;1621;color;orange
+    - net3s;g;1323;1319;1721;color;yellow
+    - net3s;g;1424;1420;1822;color;orange
+    - net3s;g;1524;1520;1922;color;yellow
+  -
+    - pagename;2024 03 30 | 6a
+    - background;gray
+
+    - net3s;g;1309;1213;0911;color;yellow
+    - net3s;g;1410;1414;1012;color;orange
+    - net3s;g;1510;1514;1112;color;yellow
+    - net3s;g;1611;1615;1213;color;orange
+
+    - net3s;g;1615;1611;2013;color;orange
+    - net3s;g;1715;1711;2113;color;yellow
+    - net3s;g;1816;1812;2214;color;orange
+    - net3s;g;1916;1912;2314;color;yellow
+
+    - net3s;g;1514;1916;2314;color;black
+    - net3s;g;1415;1817;2215;color;white
+    - net3s;g;1315;1717;2115;color;black
+    - net3s;g;1216;1618;2016;color;white
+    - net3s;g;1618;1216;0818;color;white
+    - net3s;g;1518;1116;0718;color;black
+    - net3s;g;1419;1017;0619;color;white
+    - net3s;g;1319;0917;0519;color;black
+
+    - net3s;g;0907;0911;0509;color;yellow
+    - net3s;g;1008;1012;0610;color;orange
+    - net3s;g;1108;1112;0710;color;yellow
+    - net3s;g;1209;1213;0811;color;orange
+    - net3s;g;1213;1209;1611;color;orange
+    - net3s;g;1313;1309;1711;color;yellow
+    - net3s;g;1414;1410;1812;color;orange
+    - net3s;g;1514;1510;1912;color;yellow
