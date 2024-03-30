@@ -97,7 +97,7 @@ pages:
     - pagename;2024 03 30 | 6
     - background;gray
 
-    - net3s;g;1309;1213;0911;color;yellow
+    - net3s;g;1309;1313;0911;color;yellow
     - net3s;g;1410;1414;1012;color;orange
     - net3s;g;1510;1514;1112;color;yellow
     - net3s;g;1611;1615;1213;color;orange
@@ -128,11 +128,10 @@ pages:
     - pagename;2024 03 30 | 6a
     - background;gray
 
-    - net3s;g;1309;1213;0911;color;yellow
+    - net3s;g;1309;1313;0911;color;yellow
     - net3s;g;1410;1414;1012;color;orange
     - net3s;g;1510;1514;1112;color;yellow
     - net3s;g;1611;1615;1213;color;orange
-
     - net3s;g;1615;1611;2013;color;orange
     - net3s;g;1715;1711;2113;color;yellow
     - net3s;g;1816;1812;2214;color;orange
