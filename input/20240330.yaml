@@ -67,14 +67,6 @@ pages:
   -
     - pagename;2024 03 30 | 5
     - background;gray
-    - net3s;g;1504;1906;2304;color;black
-    - net3s;g;1405;1807;2205;color;white
-    - net3s;g;1305;1707;2105;color;black
-    - net3s;g;1206;1608;2006;color;white
-    - net3s;g;1608;1206;0808;color;white
-    - net3s;g;1508;1106;0708;color;black
-    - net3s;g;1409;1007;0609;color;white
-    - net3s;g;1309;0907;0509;color;black
 
     - net3s;g;0907;0911;0509;color;yellow
     - net3s;g;1008;1012;0610;color;orange
@@ -85,10 +77,21 @@ pages:
     - net3s;g;1414;1410;1812;color;orange
     - net3s;g;1514;1510;1912;color;yellow
 
-    - net3s;g;1912;1514;1112;color;black
-    - net3s;g;1813;1415;1013;color;white
-    - net3s;g;1713;1315;0913;color;black
+
+    - net3s;g;1206;1608;2006;color;white
+    - net3s;g;1305;1707;2105;color;black
+    - net3s;g;1405;1807;2205;color;white
+    - net3s;g;1504;1906;2304;color;black
+    - net3s;g;1608;1206;0808;color;white
+    - net3s;g;1508;1106;0708;color;black
+    - net3s;g;1409;1007;0609;color;white
+    - net3s;g;1309;0907;0509;color;black
+
     - net3s;g;1614;1216;0814;color;white
+    - net3s;g;1713;1315;0913;color;black
+    - net3s;g;1813;1415;1013;color;white
+    - net3s;g;1912;1514;1112;color;black
+
     - net3s;g;1216;0814;0416;color;white
     - net3s;g;1116;0714;0316;color;black
     - net3s;g;1017;0615;0217;color;white
