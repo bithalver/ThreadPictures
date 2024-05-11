@@ -1,0 +1,155 @@
+---
+global:
+    background: lightgray
+    color: yellow
+    fontcolor: white
+    threads: 16
+pages:
+  -
+    - pagename;2024 05 11 | 1
+
+    - net3;1;1;7;1;7;7
+    - net3;7;1;7;7;1;7
+    - net3;7;7;1;7;1;1
+    - net3;1;7;1;1;7;1
+
+    - net3;9;1;23;1;23;15
+    - net3;23;1;23;15;9;15
+    - net3;23;15;9;15;9;1
+    - net3;9;15;9;1;23;1
+
+    - net3;9;17;15;17;15;23
+    - net3;15;17;15;23;9;23
+    - net3;15;23;9;23;9;17
+    - net3;9;23;9;17;15;17
+
+    - net3;17;33;23;33;23;39
+    - net3;23;33;23;39;17;39
+    - net3;23;39;17;39;17;33
+    - net3;17;39;17;33;23;33
+
+    - net3;1;25;15;25;15;39
+    - net3;15;25;15;39;1;39
+    - net3;15;39;1;39;1;25
+    - net3;1;39;1;25;15;25
+
+    - net3;1;9;7;9;7;23
+    - net3;7;9;7;23;1;23
+    - net3;7;23;1;23;1;9
+    - net3;1;23;1;9;7;9
+
+    - net3;17;17;23;17;23;31
+    - net3;23;17;23;31;17;31
+    - net3;23;31;17;31;17;17
+    - net3;17;31;17;17;23;17
+
+
+    - net3;0;0;8;0;8;8;color;black
+    - net3;8;0;8;8;0;8;color;black
+    - net3;8;8;0;8;0;0;color;black
+    - net3;0;8;0;0;8;0;color;black
+
+    - net3;8;0;24;0;24;16;color;black
+    - net3;24;0;24;16;8;16;color;black
+    - net3;24;16;8;16;8;0;color;black
+    - net3;8;16;8;0;24;0;color;black
+
+    - net3;8;16;16;16;16;24;color;black
+    - net3;16;16;16;24;8;24;color;black
+    - net3;16;24;8;24;8;16;color;black
+    - net3;8;24;8;16;16;16;color;black
+
+    - net3;16;32;24;32;24;40;color;black
+    - net3;24;32;24;40;16;40;color;black
+    - net3;24;40;16;40;16;32;color;black
+    - net3;16;40;16;32;24;32;color;black
+
+    - net3;0;24;16;24;16;40;color;black
+    - net3;16;24;16;40;0;40;color;black
+    - net3;16;40;0;40;0;24;color;black
+    - net3;0;40;0;24;16;24;color;black
+
+    - net3;0;8;8;8;8;24;color;black
+    - net3;8;8;8;24;0;24;color;black
+    - net3;8;24;0;24;0;8;color;black
+    - net3;0;24;0;8;8;8;color;black
+
+    - net3;16;16;24;16;24;32;color;black
+    - net3;24;16;24;32;16;32;color;black
+    - net3;24;32;16;32;16;16;color;black
+    - net3;16;32;16;16;24;16;color;black
+  -
+    - pagename;2024 05 11 | 2
+
+    - net3;1;1;7;1;7;7
+    - net3;7;1;7;7;1;7
+    - net3;7;7;1;7;1;1
+    - net3;1;7;1;1;7;1
+
+    - net3;9;1;23;1;23;15
+    - net3;23;1;23;15;9;15
+    - net3;23;15;9;15;9;1
+    - net3;9;15;9;1;23;1
+
+    - net3;9;17;15;17;15;23
+    - net3;15;17;15;23;9;23
+    - net3;15;23;9;23;9;17
+    - net3;9;23;9;17;15;17
+
+    - net3;17;33;23;33;23;39
+    - net3;23;33;23;39;17;39
+    - net3;23;39;17;39;17;33
+    - net3;17;39;17;33;23;33
+
+    - net3;1;25;15;25;15;39
+    - net3;15;25;15;39;1;39
+    - net3;15;39;1;39;1;25
+    - net3;1;39;1;25;15;25
+
+    - net3;1;9;7;9;7;23
+    - net3;7;9;7;23;1;23
+    - net3;7;23;1;23;1;9
+    - net3;1;23;1;9;7;9
+
+    - net3;17;17;23;17;23;31
+    - net3;23;17;23;31;17;31
+    - net3;23;31;17;31;17;17
+    - net3;17;31;17;17;23;17
+
+  -
+    - pagename;2024 05 11 | 3
+
+    - net3;0;0;8;0;8;8;color;black
+    - net3;8;0;8;8;0;8;color;yellow
+    - net3;8;8;0;8;0;0;color;black
+    - net3;0;8;0;0;8;0;color;black
+
+    - net3;8;0;24;0;24;16;color;black
+    - net3;24;0;24;16;8;16;color;black
+    - net3;24;16;8;16;8;0;color;yellow
+    - net3;8;16;8;0;24;0;color;black
+
+    - net3;8;16;16;16;16;24;color;black
+    - net3;16;16;16;24;8;24;color;yellow
+    - net3;16;24;8;24;8;16;color;black
+    - net3;8;24;8;16;16;16;color;yellow
+
+    - net3;16;32;24;32;24;40;color;black
+    - net3;24;32;24;40;16;40;color;black
+    - net3;24;40;16;40;16;32;color;black
+    - net3;16;40;16;32;24;32;color;yellow
+
+    - net3;0;24;16;24;16;40;color;yellow
+    - net3;16;24;16;40;0;40;color;black
+    - net3;16;40;0;40;0;24;color;black
+    - net3;0;40;0;24;16;24;color;black
+
+    - net3;0;8;8;8;8;24;color;yellow
+    - net3;8;8;8;24;0;24;color;black
+    - net3;8;24;0;24;0;8;color;black
+    - net3;0;24;0;8;8;8;color;black
+
+    - net3;16;16;24;16;24;32;color;black
+    - net3;24;16;24;32;16;32;color;black
+    - net3;24;32;16;32;16;16;color;yellow
+    - net3;16;32;16;16;24;16;color;black
