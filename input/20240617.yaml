@@ -3,7 +3,7 @@ global:
     background: lightgray
     color: black
     fontcolor: black
-    threads: 16
+    threads: 18
 pages:
   -
     - pagename;2024 06 17 | 1
