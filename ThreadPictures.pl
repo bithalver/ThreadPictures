@@ -2,6 +2,8 @@
 use strict;
 use warnings;
 use 5.10.0;
+# use feature "switch";
+use Switch;
 no warnings 'experimental::smartmatch';
 
 use threadpictures_global;
@@ -156,44 +158,44 @@ if (defined $config->{planes}) {
     my @AP=split(';',$config->{planes}[$_]); # @AP like ActualPlane
     my $planename=splice @AP,0,1;
     if ( $planename !~ /^[a-z]/i ) { warn "Invalid plane name: $planename (should start with a letter), skipped\n"; next;} ;
-    given (splice @AP,0,1) {
-    when (/^r/i){ # regular: sides (mandatory), angle (optional), size (optional)
-      my @w=basicplane(@AP); $TP_planes{$planename}=\@w;
+    switch (splice @AP,0,1) {
+      case (/^r/i){ # regular: sides (mandatory), angle (optional), size (optional)
+        my @w=basicplane(@AP); $TP_planes{$planename}=\@w;
+      }
+      case (/^f/i){ # freeform: x1,y1,x2,y2 ... (any number of x,y pairs _and/or_ planeI,J pairs)
+        @AP=pointsfromplanesordirect(@AP); $TP_planes{$planename}=\@AP;
+      }
+      case (/^co/i){ # connected:
+        # @AP should be : $TOx1,$TOy1,$TOx2,$TOy2,plane-to-connect,nth1,nth2
+        $TP_planes{$planename}=create_connected_plane(@AP);
+      }
+      case (/^gr/i){ # grid for triangles; two mandatory options: sizeX, sizeY
+        my @w=grid3plane(@AP); $TP_planes{$planename}=\@w;
+      }
+      case (/^4/i){ # grid for squares; two mandatory options: sizeX, sizeY
+        my @w=grid4plane(@AP); $TP_planes{$planename}=\@w;
+      }
+      case (/^sm/i){ # smaller: create a series from points , gravity point and magnification
+        my $iterations=splice @AP,0,1;
+	      for my $i (1..$iterations) {
+          my @w=smaller_plane_1($i,@AP);
+          $TP_planes{sprintf("%s_%02d",$planename,$i)}=\@w;
+  	    }
+      }
+      case (/^a/i){ # angle: one mandatory option: angle in degrees (one full circle is 360 degrees)
+        my $angle=$AP[0]/180*pi();
+        $TP_planes{$planename}=[0,0,1,0,cos($angle),sin($angle)];
+      }
+      case (/^ci/i){ # circle: plane-to-spin (mandatory), nth1 (mandatory), nth2 (mandatory), circle_sides (mandatory), circle_initial_angle (optional), circle_size (optional)
+	    # create a series of planes around a "circle"; freshly created plane names will be planes-to-spin_01 and so on
+	    my ($plane_to_spin, $nth1, $nth2)=@AP;
+  	  my @basicplaneinfo=splice @AP,3;  my @mybasicplane=basicplane(@basicplaneinfo);
+	    for my $i (1..$basicplaneinfo[0]) { # 1 .. sides
+	      my $i1=( $i ==  $basicplaneinfo[0] ? 1 : $i+1);
+          $TP_planes{sprintf("%s_%02d",$planename,$i)}=create_connected_plane($mybasicplane[$i*2] , $mybasicplane[$i*2+1], $mybasicplane[$i1*2] , $mybasicplane[$i1*2+1], $plane_to_spin, $nth1, $nth2);
+  	  }
     }
-    when (/^f/i){ # freeform: x1,y1,x2,y2 ... (any number of x,y pairs _and/or_ planeI,J pairs)
-      @AP=pointsfromplanesordirect(@AP); $TP_planes{$planename}=\@AP;
-    }
-    when (/^co/i){ # connected:
-      # @AP should be : $TOx1,$TOy1,$TOx2,$TOy2,plane-to-connect,nth1,nth2
-      $TP_planes{$planename}=create_connected_plane(@AP);
-    }
-    when (/^gr/i){ # grid for triangles; two mandatory options: sizeX, sizeY
-      my @w=grid3plane(@AP); $TP_planes{$planename}=\@w;
-    }
-    when (/^4/i){ # grid for squares; two mandatory options: sizeX, sizeY
-      my @w=grid4plane(@AP); $TP_planes{$planename}=\@w;
-    }
-    when (/^sm/i){ # smaller: create a series from points , gravity point and magnification
-      my $iterations=splice @AP,0,1;
-	    for my $i (1..$iterations) {
-        my @w=smaller_plane_1($i,@AP);
-        $TP_planes{sprintf("%s_%02d",$planename,$i)}=\@w;
-	    }
-    }
-    when (/^a/i){ # angle: one mandatory option: angle in degrees (one full circle is 360 degrees)
-      my $angle=$AP[0]/180*pi();
-      $TP_planes{$planename}=[0,0,1,0,cos($angle),sin($angle)];
-    }
-    when (/^ci/i){ # circle: plane-to-spin (mandatory), nth1 (mandatory), nth2 (mandatory), circle_sides (mandatory), circle_initial_angle (optional), circle_size (optional)
-	  # create a series of planes around a "circle"; freshly created plane names will be planes-to-spin_01 and so on
-	  my ($plane_to_spin, $nth1, $nth2)=@AP;
-	  my @basicplaneinfo=splice @AP,3;  my @mybasicplane=basicplane(@basicplaneinfo);
-	  for my $i (1..$basicplaneinfo[0]) { # 1 .. sides
-	    my $i1=( $i ==  $basicplaneinfo[0] ? 1 : $i+1);
-        $TP_planes{sprintf("%s_%02d",$planename,$i)}=create_connected_plane($mybasicplane[$i*2] , $mybasicplane[$i*2+1], $mybasicplane[$i1*2] , $mybasicplane[$i1*2+1], $plane_to_spin, $nth1, $nth2);
-	  }
-    }
-    when (/^spin/i){ # spin: plane-to-spin (mandatory), nth1 (mandatory), nth2 (mandatory), circle_sides (mandatory), circle_initial_angle (optional), circle_size (optional)
+    case (/^spin/i){ # spin: plane-to-spin (mandatory), nth1 (mandatory), nth2 (mandatory), circle_sides (mandatory), circle_initial_angle (optional), circle_size (optional)
 	  # create a series of planes around a "circle"; freshly created plane names will be planes-to-spin_01 and so on
 	  my ($plane_to_spin, $nth1, $nth2)=@AP;
 	  my @basicplaneinfo=splice @AP,3;  my @mybasicplane=basicplane(@basicplaneinfo);
@@ -201,10 +203,10 @@ if (defined $config->{planes}) {
         $TP_planes{sprintf("%s_%02d",$planename,$i)}=create_connected_plane($mybasicplane[0] , $mybasicplane[1], $mybasicplane[$i*2] , $mybasicplane[$i*2+1], $plane_to_spin, $nth1, $nth2);
 	  }
     }
-    when (/^ge/i){ # geometric_line; startX, startY, endX, endY, sections, magnitude (for 1 section)
+    case (/^ge/i){ # geometric_line; startX, startY, endX, endY, sections, magnitude (for 1 section)
       my @w=geometric_line(@AP); $TP_planes{$planename}=\@w;
     }
-    default {warn "plane type '$_' is not (yet) supported (but processing goes on)\n";}
+    else {warn "plane type '$_' is not (yet) supported (but processing goes on)\n";}
     }
   }
   if ($opts_debug) {  warn "Planes data\n" ;

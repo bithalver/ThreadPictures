@@ -5,6 +5,7 @@ use threadpictures_global;
 use threadpictures_plane;
 use Exporter;
 use 5.10.0;
+use Switch ;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
@@ -151,8 +152,8 @@ sub add_path {
     my $OV_x=$SS_y-$SM_y; my $OV_y=$SM_x-$SS_x; #OV like OrthogonalVector
     my $OV_x2=$OV_x/2; my $OV_y2=$OV_y/2; #Half of the above
 
-    for ($AP{variant}) {
-    when (/^param$/i){
+    switch ($AP{variant}) {
+    case (/^param$/i){
       $SM_x+=$LR*$OV_x; $SM_y+=$LR*$OV_y;
       my $C=$AP{param};
 
@@ -163,7 +164,7 @@ sub add_path {
       add_net3($SS_x,$SS_y,$SM_x,$SM_y,$SE_x,$SE_y);
       $AP{variant}=$temp;
     }
-    when (/^asym/i){
+    case (/^asym/i){
       $SS_x-=$LR*$OV_x2; $SS_y-=$LR*$OV_y2;
       $SM_x+=$LR*$OV_x2; $SM_y+=$LR*$OV_y2;
       $SM_x+=$LR*$OV_x2; $SM_y+=$LR*$OV_y2;
@@ -171,7 +172,7 @@ sub add_path {
       add_net3($SS_x,$SS_y,$SM_x,$SM_y,$SE_x,$SE_y);
       $AP{variant}=$temp;
     }
-    when (/^wide$/i){
+    case (/^wide$/i){
       $SS_x-=$LR*$OV_x; $SS_y-=$LR*$OV_y;
       $SM_x+=$LR*$OV_x*2; $SM_y+=$LR*$OV_y*2;
       $SE_x-=$LR*$OV_x; $SE_y-=$LR*$OV_y;
@@ -179,7 +180,7 @@ sub add_path {
       add_net3($SS_x,$SS_y,$SM_x,$SM_y,$SE_x,$SE_y);
       $AP{variant}=$temp;
     }
-    default {warn "path variant $AP{variant} is not (yet) implemented\nSupported ones: out, cont, asym, wide, stair, param\n";return}
+    else {warn "path variant $AP{variant} is not (yet) implemented\nSupported ones: out, cont, asym, wide, stair, param\n";return}
     }
   }
   
@@ -281,8 +282,8 @@ sub draw_net {
     ($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY}) = ($AN{line2oY},$AN{line2oX},$AN{line2iY},$AN{line2iX}) ;
   }
 
-  for ($AN{'style'}) { # if ($opts_debug) { warn 'AN style: ',$AN{'style'},"\n";}
-  when (/^normal$/i){ # old style was 0
+  switch ($AN{'style'}) { # if ($opts_debug) { warn 'AN style: ',$AN{'style'},"\n";}
+  case (/^normal$/i){ # old style was 0
     for my $weight ($AN{'firstthread'} .. $AN{'lastthread'}) {
       # my ($fromX,$fromY,$toX,$toY);
       #($fromX,$fromY)=TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$weight);
@@ -290,7 +291,7 @@ sub draw_net {
       draw_line(TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$weight,$AN{threads}),TP_weight($AN{line2iX},$AN{line2iY},$AN{line2oX},$AN{line2oY},$weight,$AN{threads}));
 	}
   }
-  when (/^holes$/i) { # old style was 1
+  case (/^holes$/i) { # old style was 1
     # This kind is NOT interested in the value of firstthread, lastthread
     # Cross lines are 1/20 of the full length of the line EXCEPT if threads<6 then they are 1/10
     my $laddersize = $AN{'threads'} < 6 ? 10 : 20;
@@ -310,12 +311,12 @@ sub draw_net {
       draw_line($X+$line2vectorX,$Y+$line2vectorY,$X-$line2vectorX,$Y-$line2vectorY);
     }
   }
-  when (/^border$/i) { # old style was 4
+  case (/^border$/i) { # old style was 4
     # This kind is NOT interested in the value of threads, firstthread, lastthread
     draw_line($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY});
     draw_line($AN{line2iX},$AN{line2iY},$AN{line2oX},$AN{line2oY});
   }
-  when (/^triangle$/i) { # old style was 8
+  case (/^triangle$/i) { # old style was 8
     # This kind is NOT interested in the value of threads, firstthread, lastthread
     my_moveto($AN{line2oX},$AN{line2oY});
     my_lineto($AN{line2iX},$AN{line2iY});
@@ -323,7 +324,7 @@ sub draw_net {
     my_lineto($AN{line1oX},$AN{line1oY});
     my_lineto($AN{line2oX},$AN{line2oY}); my_stroke;
   }
-  when (/^filledtriangle$/i) { # old style was 7
+  case (/^filledtriangle$/i) { # old style was 7
     # This kind is NOT interested in the value of threads, firstthread, lastthread
     my_moveto($AN{line2oX},$AN{line2oY});
     my_lineto($AN{line2iX},$AN{line2iY});
@@ -331,7 +332,7 @@ sub draw_net {
     my_lineto($AN{line1oX},$AN{line1oY});
     my_lineto($AN{line2oX},$AN{line2oY}); my_fill; my_stroke;
   }
-  when (/^curve$/i) { # old style was 9, originally added on 20030312
+  case (/^curve$/i) { # old style was 9, originally added on 20030312
     # This kind is NOT interested in the value of threads, firstthread, lastthread
     my_moveto($AN{line1oX},$AN{line1oY});
     my_curveto(
@@ -339,7 +340,7 @@ sub draw_net {
       TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},2,3),
       $AN{line2oX},$AN{line2oY}); my_stroke;
   }
-  when (/^filledcurve$/i) { # old style was 10
+  case (/^filledcurve$/i) { # old style was 10
     # This kind is NOT interested in the value of threads, firstthread, lastthread
     my_moveto($AN{line2oX},$AN{line2oY});
     my_lineto($AN{line2iX},$AN{line2iY});
@@ -350,7 +351,7 @@ sub draw_net {
       TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},2,3),
       $AN{line2oX},$AN{line2oY}); my_fill; my_stroke;
   }
-  when (/^inversefilledcurve$/i) { # new
+  case (/^inversefilledcurve$/i) { # new
     # This kind is NOT interested in the value of threads, firstthread, lastthread
     my_moveto($AN{line1oX},$AN{line1oY});
     my_curveto(
@@ -358,17 +359,17 @@ sub draw_net {
       TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},2,3),
       $AN{line2oX},$AN{line2oY}); my_fill; my_stroke;
   }
-  when (/^parallel$/i){ # old style was 2
+  case (/^parallel$/i){ # old style was 2
     for my $weight ($AN{'firstthread'} .. $AN{'lastthread'}) {
       draw_line(TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$weight,$AN{threads}),TP_weight($AN{line2oX},$AN{line2oY},$AN{line2iX},$AN{line2iY},$weight,$AN{threads}));
 	}
   }
-  when (/^selected$|^[0-9-]/i){ # draw lines like normal, but only selected ones
+  case (/^selected$|^[0-9-]/i){ # draw lines like normal, but only selected ones
     # This kind is NOT interested in the value of firstthread, lastthread
      foreach my $weight (split(',',/selected/?$AN{'selection'}:$AN{'style'}))
        {draw_line(TP_weight($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY},$weight,$AN{threads}),TP_weight($AN{line2iX},$AN{line2iY},$AN{line2oX},$AN{line2oY},$weight,$AN{threads}));}
   }
-  when (/^moon$/i) { # added on 20200621; based on style 'curve'
+  case (/^moon$/i) { # added on 20200621; based on style 'curve'
     # This kind is NOT interested in the value of threads, firstthread, lastthread
     my_moveto($AN{line1oX},$AN{line1oY});
     my_curveto(
@@ -381,7 +382,7 @@ sub draw_net {
       $AN{line1oX},$AN{line1oY});
     my_fill; my_stroke;
   }
-  when (/^hollowmoon$/i) { # based on style 'moon'
+  case (/^hollowmoon$/i) { # based on style 'moon'
     # This kind is NOT interested in the value of threads, firstthread, lastthread
     if (! $TP_GLOBAL{BW} and $AN{hollowmooncolor1} ne $TP_GLOBAL{lastcolor} ) { say "$AN{hollowmooncolor1} setrgbcolor\n"; $TP_GLOBAL{lastcolor}=$AN{hollowmooncolor1}}
     my_moveto($AN{line1oX},$AN{line1oY});
@@ -398,8 +399,8 @@ sub draw_net {
       $AN{line1oX},$AN{line1oY});
     my_stroke;
   }
-  when (/^dnd$|^donotdraw$|^dummy$/i) { } # added on 20230222 ; goal is to have a net for sizing but not for drawing; holes overwrites it, as usual
-  default {warn "style $AN{'style'} is not (yet) implemented (but processing goes on)\n";return}
+  case (/^dnd$|^donotdraw$|^dummy$/i) { } # added on 20230222 ; goal is to have a net for sizing but not for drawing; holes overwrites it, as usual
+  else {warn "style $AN{'style'} is not (yet) implemented (but processing goes on)\n";return}
   }
 }
 
@@ -412,59 +413,59 @@ sub modify_lastelement {
 
 sub process_element {
   my @AE=@_; # AE like ActualElement
-      given (splice @AE,0,1) {
-      when (/^net$|^net4$/i){ # first line (startX startY endX endY) ; second line (startX startY endX endY)
+      switch (splice @AE,0,1) {
+      case (/^net$|^net4$/i){ # first line (startX startY endX endY) ; second line (startX startY endX endY)
         add_net4(splice @AE,0,8);
         while (@AE) {modify_lastelement(shift @AE,shift @AE)}
       }
-      when (/^net3$/i){ # start X and Y; center X and Y; end X and Y
+      case (/^net3$/i){ # start X and Y; center X and Y; end X and Y
         add_net3(splice @AE,0,6);
         while (@AE) {modify_lastelement(shift @AE,shift @AE)}
       }
-      when (/^net3s$/i){ # plane; first point, center point, last point
+      case (/^net3s$/i){ # plane; first point, center point, last point
         add_net3s(splice @AE,0,4);
         while (@AE) {modify_lastelement(shift @AE,shift @AE)}
       }
-      when (/^net4s$/i){ # plane; first line start and end point, second  line start and end point
+      case (/^net4s$/i){ # plane; first line start and end point, second  line start and end point
         add_net4s(splice @AE,0,5);
         while (@AE) {modify_lastelement(shift @AE,shift @AE)}
       }
-      when (/^loop$/i){ # plane; point list (0th point will not be used from plane !)
+      case (/^loop$/i){ # plane; point list (0th point will not be used from plane !)
         add_loop(@AE); # Provide the whole thing
         # Lot of nets, additional parameters handled inside
       }
-      when (/^loop4$/i){ # plane; point list (0th point will not be used from plane !)
+      case (/^loop4$/i){ # plane; point list (0th point will not be used from plane !)
         add_loop4(@AE); # Provide the whole thing
         # Lot of nets, additional parameters handled inside
       }
-      when (/^pagename$/i){
+      case (/^pagename$/i){
         $TP_all[@TP_all] = { type => 'pagename', string => splice(@AE,0,1) }
       }
-      when (/^background$/i){
+      case (/^background$/i){
         $TP_all[@TP_all] = { type => 'background', color => splice(@AE,0,1) }
       }
-      when (/^color$/i){
+      case (/^color$/i){
         $TP_all[@TP_all] = { type => 'color', color => splice(@AE,0,1) }
       }
-      when (/^fontcolor$/i){
+      case (/^fontcolor$/i){
         $TP_all[@TP_all] = { type => 'fontcolor', color => splice(@AE,0,1) }
       }
-      when (/^path$/i){
+      case (/^path$/i){
         add_path(@AE);
       }
-      when (/^recursive$/i){
+      case (/^recursive$/i){
         add_recursive(@AE);
       }
-      when (/^circular$/i){
+      case (/^circular$/i){
         add_circular(@AE);
       }
-      when (/^style$/i){
+      case (/^style$/i){
         $TP_all[@TP_all] = { type => 'style', string => splice(@AE,0,1) }
 	    }
-      when (/^xymirror$/i){
+      case (/^xymirror$/i){
         $TP_all[@TP_all] = { type => 'xymirror', string => splice(@AE,0,1) }
 	    }
-      default {warn "element '$_' is not (yet) supported (but processing goes on)\n";}
+      else {warn "element '$_' is not (yet) supported (but processing goes on)\n";}
       }
 }
 
@@ -489,19 +490,19 @@ sub draw_all {
   foreach my $ATPAE_ (@TP_all) { # ATPAE stands for Actual TP_all Element
     my %ATPAE=%{$ATPAE_};
     if ($opts_debug) { warnhash %ATPAE };
-    for ($ATPAE{'type'}) {
-      when (/^net$/) {
+    switch ($ATPAE{'type'}) {
+      case (/^net$/) {
         no warnings 'uninitialized';  # Handling shiftX and shiftY parameters for a net; they are default to zero.
         $minX//=$ATPAE{line1oX}+$ATPAE{shiftX}; $maxX//=$ATPAE{line1oX}+$ATPAE{shiftX}; $minY//=$ATPAE{line1oY}+$ATPAE{shiftY}; $maxY//=$ATPAE{line1oY}+$ATPAE{shiftY};
 	    ($minX,$maxX)=minmax($minX,$maxX,$ATPAE{line1oX}+$ATPAE{shiftX},$ATPAE{line1iX}+$ATPAE{shiftX},$ATPAE{line2oX}+$ATPAE{shiftX},$ATPAE{line2iX}+$ATPAE{shiftX});
         ($minY,$maxY)=minmax($minY,$maxY,$ATPAE{line1oY}+$ATPAE{shiftY},$ATPAE{line1iY}+$ATPAE{shiftY},$ATPAE{line2oY}+$ATPAE{shiftY},$ATPAE{line2iY}+$ATPAE{shiftY});
       }
-      when (/^pagename$/) { $pagename=$ATPAE{string} ;}
-      when (/^background$/) { $bg=$ATPAE{color} ;}
-      when (/^color$/) { $TP_GLOBAL{color}=$ATPAE{color}}
-      when (/^fontcolor$/) { $TP_GLOBAL{fontcolor}=$ATPAE{color}}
-      when (/^style$/) { $TP_GLOBAL{style}=$ATPAE{string}}
-      when (/^xymirror$/) { $TP_GLOBAL{xymirror}=$ATPAE{string}}
+      case (/^pagename$/) { $pagename=$ATPAE{string} ;}
+      case (/^background$/) { $bg=$ATPAE{color} ;}
+      case (/^color$/) { $TP_GLOBAL{color}=$ATPAE{color}}
+      case (/^fontcolor$/) { $TP_GLOBAL{fontcolor}=$ATPAE{color}}
+      case (/^style$/) { $TP_GLOBAL{style}=$ATPAE{string}}
+      case (/^xymirror$/) { $TP_GLOBAL{xymirror}=$ATPAE{string}}
     }
   }
 #  if (defined $TP_GLOBAL{xymirror}) { ($minX, $maxX, $minY, $maxY)=($minY, $maxY, $minX, $maxX) }
@@ -553,15 +554,15 @@ sub draw_all {
   # iterate over @TP_all to draw every piece
   foreach my $ATPAE (@TP_all) { # ATPAE stands for Actual TP_all Element
     my %ATPAE=%{$ATPAE};
-    given ($ATPAE{'type'}) {
-      when (/^net$/) { draw_net(%ATPAE); }
-      when (/^background$/) { }
-      when (/^pagename$/) { }
-      when (/^color$/) { }
-      when (/^fontcolor$/) { }
-      when (/^style$/) { }
-      when (/^xymirror$/) { }
-	  default {warn "type '$_' not implemented (yet); parameters were:\n".join(", ", map { "$_ => $ATPAE{$_}" } keys %ATPAE)."\n" ;}
+    switch ($ATPAE{'type'}) {
+      case (/^net$/) { draw_net(%ATPAE); }
+      case (/^background$/) { }
+      case (/^pagename$/) { }
+      case (/^color$/) { }
+      case (/^fontcolor$/) { }
+      case (/^style$/) { }
+      case (/^xymirror$/) { }
+	  else {warn "type '$_' not implemented (yet); parameters were:\n".join(", ", map { "$_ => $ATPAE{$_}" } keys %ATPAE)."\n" ;}
     } ;
   }
   $TP_GLOBAL{color}=$TMP_color; $TP_GLOBAL{fontcolor}=$TMP_fontcolor;
