@@ -32,6 +32,7 @@ See attached yaml files for examples in the 'input' folder.
 Requirements:
  - perl 5.10
    - YAML::XS module
+   - Switch module
    - Getopt::Long module
    - Data::Dumper (only for debug)
  - ps2pdf command (part of ghostscript): only if you want a pdf output
