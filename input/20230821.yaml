@@ -1,6 +1,7 @@
 ---
 global:
     threads: 20
+    fontcolor: lightgray
 planes:
   - r4;regular;4;135
   - ruler;freeform;0;0;1;0;2;0;3;0;4;0;5;0;6;0;7;0;8;0;9;0;10;0
@@ -8,6 +9,21 @@ planes:
   - r42;connected;r4;0;r4;2;ruler;0;10
   - s;freeform;r41;0;r42;8;r41;4;r41;5;r41;9
   - s2;freeform;r41;0;r42;10;r41;5;r41;5;r4;0
+
+  - Ar4;regular;4;315
+  - Ar41;connected;Ar4;0;Ar4;1;ruler;0;10
+  - Ar42;connected;Ar4;0;Ar4;2;ruler;0;10
+  - As2;freeform;Ar41;0;Ar42;10;Ar41;5;Ar41;5;Ar4;0
+
+  - Br4;regular;4;180
+  - Br41;connected;Br4;0;Br4;1;ruler;0;10
+  - Br42;connected;Br4;0;Br4;2;ruler;0;10
+  - Bs2;freeform;Br41;0;Br42;10;Br41;5;Br41;5;Br4;0
+
+  - Cr4;regular;4;0
+  - Cr41;connected;Cr4;0;Cr4;1;ruler;0;10
+  - Cr42;connected;Cr4;0;Cr4;4;ruler;0;10
+  - Cs2;freeform;Cr41;0;Cr42;10;Cr41;5;Cr41;5;Cr4;0
 
 pages:
   -
@@ -32,3 +48,13 @@ pages:
     - background;darkgray
     - recursive;s2;8;0;1;4;3;1,0,2;color;red
     - recursive;s2;8;0;1;3;4;1,0,2;color;lightgray
+  -
+    - pagename;2023 08 21 | 7 | Catch 22
+    - background;darkgray
+    - recursive;s2;8;0;1;3;4;1,0,2;color;lightgray
+    - recursive;As2;8;0;1;3;4;1,0,2;color;red;shiftX;-0.70710678;shiftY;-0.70710678
+  -
+    - pagename;2023 08 21 | 8 | "T"
+    - background;darkgray
+    - recursive;Bs2;8;0;1;3;4;1,0,2;color;lightgray
+    - recursive;Cs2;8;0;1;3;4;1,0,2;color;red
