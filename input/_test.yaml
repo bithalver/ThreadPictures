@@ -28,7 +28,16 @@ planes:
   - R;circle;r4;0;1;12;90 # needed for testing element "circular"
   - grid4;4;10;10
   - sn;smaller;5;0.8;360;1;0;0;0;1;2;2;0
+  - tp;freeform;0;0;1;0;*1,0,1,1,0.5
 pages:
+  -
+    - pagename; first percent-in-line test (both for plane and net)
+    - background;lightgray
+    - net3;0;0;1;0;*1,0,1,2,0.5;color;white
+    - net3;0;0;1;0;*1,0,1,2,0.25;color;yellow;style;filledcurve
+    - net3;0;0;1;0;*1,0,1,2,0.75;color;blue
+    - net3s;tp;0;1;2;color;green
+
   -
     - pagename;2023 01 21 test for % in firstthread and lastthread | also test for DoNotDraw
     - background;black
@@ -195,3 +204,4 @@ pages:
 # Next 2 line creates the same:
 #    - net;0;10;0;0;0;0;10;0;threads;10;style;selected;selection;0,2,4,5,6,8,10
 #    - net;0;10;0;0;0;0;10;0;threads;10;style;0,2,4,5,6,8,10
+
