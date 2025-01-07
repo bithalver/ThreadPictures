@@ -7,7 +7,7 @@ use 5.10.0;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
-our @EXPORT = qw( basicplane create_connected_plane connectplane2points pointsfromplanesordirect grid3plane grid4plane smaller_plane_1 geometric_line );
+our @EXPORT = qw( basicplane create_connected_plane connectplane2points grid3plane grid4plane smaller_plane_1 geometric_line );
 
 # rotates a vector counterclockwise (left) by angle
 # parameter: x,y,angle
@@ -90,22 +90,6 @@ sub connectplane2points { my ($TOx1,$TOy1,$TOx2,$TOy2,$nth1,$nth2,@plane)=@_;
   # round all the coordinates
   for my $i (0..$#output) {$output[$i]=my_round($output[$i]);}
   return @output;
-}
-
-# leaves 'direct' points (number pairs) unmodified, but transforms ones defined with planes to x,y pairs
-sub pointsfromplanesordirect {
-  my @input=@_; my @processedinput;
-  # ---[BEGIN]--- Specify points from predefined planes _or_ directly
-  while (@input) {
-    $_=shift @input;
-    if ( /^[0-9-]/) { push(@processedinput,$_);} # direct coordinate
-    else { # coordinate specified by a plane,point pair
-      my $planename=$_; my $planeindex=shift @input;
-      push @processedinput, ($TP_planes{$planename}[2*$planeindex],$TP_planes{$planename}[2*$planeindex+1]);
-    }
-  }
-  # ---[END]--- Specify points from predefined planes _or_ directly
-  return @processedinput;
 }
 
 # creates a triangular grid of wanted size

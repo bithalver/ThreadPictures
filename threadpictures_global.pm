@@ -7,7 +7,7 @@ use Exporter;
 
 our @ISA= qw( Exporter );
 
-our @EXPORT = qw( %TP_GLOBAL %TP_PARAMS @TP_all %TP_planes global_init minmax warnarray warnhash cm min max print_ps_filestart pi my_round colorconvert $opts_input $opts_output $opts_help $opts_help_plane $opts_version $opts_debug %TP_colors weight my_random_order);
+our @EXPORT = qw( %TP_GLOBAL %TP_PARAMS @TP_all %TP_planes global_init minmax warnarray warnhash cm min max print_ps_filestart pi my_round colorconvert $opts_input $opts_output $opts_help $opts_help_plane $opts_version $opts_debug %TP_colors weight my_random_order percent_on_line TP_weight percent_on_line pointsfromplanesordirect);
 
 # %TP_GLOBAL holds all global variables, has lowest priority; collected from 3 "sources":
 #   - built-in defaults
@@ -161,6 +161,50 @@ sub my_random_order {
 }
 # print my_random_order(4);print "\n";
 # print my_random_order(6);print "\n";
+
+# TP_weight returns an array consisting of X,Y coordinates of the weighted point between from and to coordinates; last parameter is the weight
+# test: 
+#    my ($a,$b)= TP_weight(10,10,20,20,3),"\n" ; print "$a,$b\n";
+sub TP_weight {
+  my ($fromX,$fromY,$toX,$toY,$weight,$threads)=@_;
+  my $fromRate=($threads-$weight)/$threads;
+  my $toRate=$weight/$threads;
+  return ($fromX*$fromRate+$toX*$toRate,$fromY*$fromRate+$toY*$toRate);
+}
+
+# leaves 'direct' points (number pairs) unmodified, but transforms ones defined with planes to x,y pairs
+sub pointsfromplanesordirect {
+  my @input=@_; my @processedinput;
+  # ---[BEGIN]--- Specify points from predefined planes _or_ directly
+  while (@input) {
+    $_=shift @input;
+    if ( /^[0-9-]/) { push(@processedinput,$_);} # direct coordinate
+    else { # coordinate specified by a plane,point pair
+      my $planename=$_; my $planeindex=shift @input;
+      push @processedinput, ($TP_planes{$planename}[2*$planeindex],$TP_planes{$planename}[2*$planeindex+1]);
+    }
+  }
+  # ---[END]--- Specify points from predefined planes _or_ directly
+  return @processedinput;
+}
+
+sub percent_on_line {
+  # if input does not start with "*" -> give it back as output
+  my $I=$_[0];
+  my @O;
+  # return $I if (substr($I , 0, 1) ne "*")
+  if (substr($I , 0, 1) ne "*") {
+    push (@O, $I);
+  } else {
+    my ($x1, $y1, $x2, $y2, $w) = split(',',substr($I,1));
+    ($x1, $y1)=pointsfromplanesordirect($x1, $y1);
+    ($x2, $y2)=pointsfromplanesordirect($x2, $y2);
+    push(@O,TP_weight($x1, $y1, $x2, $y2, $w, 1));
+  }
+  # warnarray(@O);
+  return @O;
+}
+
 
 1;
 

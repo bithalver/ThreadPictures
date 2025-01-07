@@ -28,16 +28,6 @@ sub draw_line {
   print( "$_[0] $_[1] moveto $_[2] $_[3] lineto stroke\n");
 }
 
-# TP_weight returns an array consisting of X,Y coordinates of the weighted point between from and to coordinates; last parameter is the weight
-# test: 
-#    my ($a,$b)= TP_weight(10,10,20,20,3),"\n" ; print "$a,$b\n";
-sub TP_weight {
-  my ($fromX,$fromY,$toX,$toY,$weight,$threads)=@_;
-  my $fromRate=($threads-$weight)/$threads;
-  my $toRate=$weight/$threads;
-  return ($fromX*$fromRate+$toX*$toRate,$fromY*$fromRate+$toY*$toRate);
-}
-
 # The basic function to add a net
 # Parameters: 
 #   1st line outer X,Y
@@ -412,7 +402,11 @@ sub modify_lastelement {
 }
 
 sub process_element {
-  my @AE=@_; # AE like ActualElement
+#  my @AE=@_; # AE like ActualElement
+  my @AE;
+  my @TEMP=@_;
+    while (@TEMP) {push(@AE,percent_on_line(splice(@TEMP,0,1)));}
+    # while (@TEMP) {push(@AE, splice(@TEMP,0,1));}
       switch (splice @AE,0,1) {
       case (/^net$|^net4$/i){ # first line (startX startY endX endY) ; second line (startX startY endX endY)
         add_net4(splice @AE,0,8);

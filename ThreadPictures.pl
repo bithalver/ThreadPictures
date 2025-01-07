@@ -155,8 +155,13 @@ if ($opts_debug) {  warn "Colors data (including predefined ones)\n" ;
 # read planes data
 if (defined $config->{planes}) {
   for (0 .. @{$config->{planes}}-1) {
-    my @AP=split(';',$config->{planes}[$_]); # @AP like ActualPlane
-    my $planename=splice @AP,0,1;
+    my @AP1=split(';',$config->{planes}[$_]); # @AP like ActualPlane
+    my $planename=splice @AP1,0,1;
+    my @AP;
+#    my @AP=@AP1;
+    while (@AP1) {push(@AP,percent_on_line(splice(@AP1,0,1)));}
+
+    
     if ( $planename !~ /^[a-z]/i ) { warn "Invalid plane name: $planename (should start with a letter), skipped\n"; next;} ;
     switch (splice @AP,0,1) {
       case (/^r/i){ # regular: sides (mandatory), angle (optional), size (optional)
