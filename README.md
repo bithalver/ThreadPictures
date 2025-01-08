@@ -1,6 +1,6 @@
 # ThreadPictures 
 
-Under construction !
+Under continous construction !
 
 These files help me to generate a very special graphic, which I call ThreadPictures (because I sew most of them on hard paper with real needle and sewing thread).
 
@@ -38,7 +38,7 @@ Requirements:
  - ps2pdf command (part of ghostscript): only if you want a pdf output
 
 Tested with/on:
-  - windows 7 and 10 using cygwin 2.880 - 2.924
-  - perl 5.22.4 - v5.32.1
-  - ghostscript 9.19 - 9.56.1
+  - windows 7 and 10 using cygwin 2.880, 2.924, 2.932
+  - perl 5.22.4, 5.32.1, 5.40.0
+  - ghostscript 9.19, 9.56.1, 10.03.1
   - bash and xterm (I do not think their version matter)
