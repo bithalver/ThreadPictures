@@ -32,6 +32,9 @@ sub HELP_MESSAGE { # TODO: meaningful help message
     #   (any number of key-value pair could be specified, each one needs it's own -p )
   $0 {-d|--debug}   # turns on debug messages EXPERIMENTAL
   $0 --help_plane   # help on plane types and their parameters
+  $0 --help_coords  # help on possible coordinate specifications
+  
+  Input yaml examples are in the 'input' directory.
 ";
   exit 0;
 }
@@ -68,12 +71,35 @@ sub HELP_PLANES {
   exit 0
 }
 
+sub HELP_COORDS {
+  warn "Possible coordinate specifications for one point:
+    X;Y
+      where both X and Y are numbers representing the X and Y coordinate
+    P;I
+      P is a plane name (defined already in the same yaml)
+      I is the index (which point to get; starts with zero)
+    *A1,A2,B1,B2,W
+      remember to use commas not semicolons; leading '*' is mandatory ! no space, tab or enter please !
+      A1,A2 are either numbers (direct) or Plane,Index pair (indirect)
+      B1,B2 works the same way
+      the point will be on the line A1,A2 - B1,B2
+      W is the weight, always specified by a number
+      when W is zero the point is A1,A2
+      when W is one the point is B1,B2
+      when W is 0.5 you got the point halfway between A1,A2 - B1,B2
+      W could be outside '0 - 1' range
+";
+  exit 0
+}
+
+
 GetOptions(
     'input|i=s' => \$opts_input,
     'output|o=s' => \$opts_output,
     'param|p=s' => \%TP_PARAMS,
     'help|h|?' => \$opts_help,
     'help_plane' => \$opts_help_plane,
+    'help_coords' => \$opts_help_coords,
     'version|v' => \$opts_version,
     'debug|d' => \$opts_debug,
 );
@@ -82,6 +108,7 @@ if ($opts_debug) { warn "CMD params are:\n"; warnhash %TP_PARAMS; }
 
 if ($opts_help) {HELP_MESSAGE;}
 if ($opts_help_plane) {HELP_PLANES;}
+if ($opts_help_coords) {HELP_COORDS;}
 if ($opts_version) {VERSION_MESSAGE;}
 
 # read from yaml file (specified by '-i' switch) _or_ STDIN
