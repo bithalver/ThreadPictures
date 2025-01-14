@@ -40,7 +40,7 @@ pages:
 
   -
     - pagename;2023 01 21 test for % in firstthread and lastthread | also test for DoNotDraw
-    - background;black
+    - background;darkgray
     - net3;0;2;0;0;2;0;style;dummy
     - net3;0;1;0;0;1;0;color;lightblue
     - net3;0;1;0;0;1;0;color;white;firstthread;6%;lastthread;94%
