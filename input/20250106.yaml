@@ -20,7 +20,6 @@ planes:
   - a50;angle;50
   - a40;angle;40
   - a30;angle;30
-  - v;freeform;0;0;1;0;2;0;3;0;4;0;5;0;6;0;7;0;8;0;9;0;10;0;11;0;12;0;13;0;14;0;15;0;16;0;17;0;18;0;19;0;20;0
 
   - a120c;connected;t;1;t;2;a120;2;1
   - p120;freeform;t;3;t;1;t;2;a120c;0
@@ -70,6 +69,15 @@ planes:
   - p7A9;connected;*e,0,e,7,0.5;*e,0,e,7,1.7;p90;0;1
   - p8A9;connected;*e,0,e,8,0.5;*e,0,e,8,1.7;p90;0;1
 
+  - p1A1a;connected;*e,0,e,1,0.47;*e,0,e,1,1.7;p90;0;1
+  - p2A1a;connected;*e,0,e,2,0.47;*e,0,e,2,1.7;p90;0;1
+  - p3A1a;connected;*e,0,e,3,0.47;*e,0,e,3,1.7;p90;0;1
+  - p4A1a;connected;*e,0,e,4,0.47;*e,0,e,4,1.7;p90;0;1
+  - p5A1a;connected;*e,0,e,5,0.47;*e,0,e,5,1.7;p90;0;1
+  - p6A1a;connected;*e,0,e,6,0.47;*e,0,e,6,1.7;p90;0;1
+  - p7A1a;connected;*e,0,e,7,0.47;*e,0,e,7,1.7;p90;0;1
+  - p8A1a;connected;*e,0,e,8,0.47;*e,0,e,8,1.7;p90;0;1
+
   - p1A3;connected;*e,0,e,1,0.4;*e,0,e,1,1.7;p30;0;1
   - p2A3;connected;*e,0,e,2,0.4;*e,0,e,2,1.7;p30;0;1
   - p3A3;connected;*e,0,e,3,0.5;*e,0,e,3,1.3;p30;0;1
@@ -87,23 +95,16 @@ planes:
   - p61;freeform;t;3;t;1;t;2;a61c;0
   - r61_2;connected;e;0;e;2;p61;0;1
 
-
-
 #  - p1B;connected;e;0;e;1;p90;0;1
   - p2B;connected;e;0;e;2;p80;0;1
   - p3B;connected;e;0;e;3;p70;0;1
-  #- p4B;connected;e;0;e;4;p60;0;1
   - p4B;connected;e;0;*e,0,e,4,0.6;p60;0;1
-  #- p5B;connected;e;0;e;5;p50;0;1
   - p5B;connected;e;0;*e,0,e,5,0.35;p50;0;1
   - p6B;connected;e;0;e;6;p40;0;1
   - p7B;connected;e;0;e;7;p30;0;1
-  #- p8B;connected;e;0;e;8;p100;0;1
   - p8B;connected;e;0;*e,0,e,8,1.5;p100;0;1
 
-  #- p6C;connected;e;0;e;6;p120;0;1
   - p6C;connected;e;0;*e,0,e,6,1.5;p120;0;1
-  #- p7C;connected;e;0;e;7;p110;0;1
   - p7C;connected;e;0;*e,0,e,7,1.5;p120;0;1
   
   - p4Bo;connected;e;0;e;4;p60;0;1
@@ -112,32 +113,38 @@ planes:
   - p6Co;connected;e;0;e;6;p120;0;1
   - p7Co;connected;e;0;e;7;p110;0;1
 
+  - p3B9;connected;*e,0,e,3,0.5;*e,0,e,3,1.5;p70;0;1
+  - p4B9;connected;*e,0,e,4,0.3;*e,0,e,4,0.9;p60;0;1
+  - p5B9;connected;*e,0,e,5,0.35;*e,0,e,5,0.7;p50;0;1
+
 pages:
-  -
-    - pagename;2025 01 06 | 9
-    - recursive;p3B;80;0;2;1;3;2,0,1;2,3,1
-    - recursive;p4B;10;0;2;1;3;2,0,1;2,3,1
-    - recursive;p5B;9;0;2;1;3;2,0,1;2,3,1
-  -
-    - pagename;2025 01 06 | 8
-    - recursive;r61_2;50;0;2;1;3;2,0,1;2,3,1;color;yellow
-    - recursive;r59_6;50;0;2;1;3;2,0,1;2,3,1;color;red
   -
     - pagename;2025 01 06 | 1
     - net3s;p90;2;0;1
     - net3s;p90;2;3;1
   -
-    - pagename;2025 01 06 | 2 | 8 times the Infinite
-    - recursive;p1A;8;0;2;1;3;2,0,1;2,3,1
-    - recursive;p2A;8;0;2;1;3;2,0,1;2,3,1
-    - recursive;p3A;8;0;2;1;3;2,0,1;2,3,1
-    - recursive;p4A;8;0;2;1;3;2,0,1;2,3,1
-    - recursive;p5A;8;0;2;1;3;2,0,1;2,3,1
-    - recursive;p6A;8;0;2;1;3;2,0,1;2,3,1
-    - recursive;p7A;8;0;2;1;3;2,0,1;2,3,1
-    - recursive;p8A;8;0;2;1;3;2,0,1;2,3,1
+    - pagename;2025 01 06 | 2 | 8 times the Infinity
+    - recursive;p1A;20;0;2;1;3;2,0,1;2,3,1
+    - recursive;p2A;20;0;2;1;3;2,0,1;2,3,1
+    - recursive;p3A;20;0;2;1;3;2,0,1;2,3,1
+    - recursive;p4A;20;0;2;1;3;2,0,1;2,3,1
+    - recursive;p5A;20;0;2;1;3;2,0,1;2,3,1
+    - recursive;p6A;20;0;2;1;3;2,0,1;2,3,1
+    - recursive;p7A;20;0;2;1;3;2,0,1;2,3,1
+    - recursive;p8A;20;0;2;1;3;2,0,1;2,3,1
   -
-    - pagename;2025 01 06 | 2 1 | 8 times the Infinite - asimetric variant
+    - pagename;2025 01 06 | 1a | 8 times the Infinity
+    - background;lightgray
+    - recursive;p1A1a;8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
+    - recursive;p2A1a;8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
+    - recursive;p3A1a;8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
+    - recursive;p4A1a;8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
+    - recursive;p5A1a;8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
+    - recursive;p6A1a;8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
+    - recursive;p7A1a;8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
+    - recursive;p8A1a;8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
+  -
+    - pagename;2025 01 06 | 2 1 | 8 times the Infinity - asimetric variant
     - recursive;p2A;8;0;2;1;3;0,1,3;3,2,0;style;inversefilledcurve;color;yellow
     - recursive;p4A;8;0;2;1;3;0,1,3;3,2,0;style;inversefilledcurve;color;yellow
     - recursive;p6A;8;0;2;1;3;0,1,3;3,2,0;style;inversefilledcurve;color;yellow
@@ -146,19 +153,8 @@ pages:
     - recursive;p3A;8;0;2;1;3;0,1,3;3,2,0;style;filledcurve;color;lightblue
     - recursive;p5A;8;0;2;1;3;0,1,3;3,2,0;style;filledcurve;color;lightblue
     - recursive;p7A;8;0;2;1;3;0,1,3;3,2,0;style;filledcurve;color;lightblue
-#  -
-#    - pagename;2025 01 06 | 2a | 8 times the Infinite - variant - 90
-#    - background;lightgray
-#    - recursive;p1A9;8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
-#    - recursive;p2A9;8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
-#    - recursive;p3A9;8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
-#    - recursive;p4A9;8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
-#    - recursive;p5A9;8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
-#    - recursive;p6A9;8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
-#    - recursive;p7A9;8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
-#    - recursive;p8A9;8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
   -
-    - pagename;2025 01 06 | 2a1 | 8 times the Infinite - variant - 90
+    - pagename;2025 01 06 | 2a1 | 8 times the Infinity - variant - 90
     - recursive;p1A9;8;0;2;1;3;0,1,3;3,2,0;color;green;firstthread;51%
     - recursive;p2A9;8;0;2;1;3;2,0,1;2,3,1;color;green;firstthread;51%
     - recursive;p3A9;8;0;2;1;3;0,1,3;3,2,0;color;green;firstthread;51%
@@ -177,7 +173,7 @@ pages:
     - recursive;p7A9;8;0;2;1;3;0,1,3;3,2,0;color;white;lastthread;50%
     - recursive;p8A9;8;0;2;1;3;2,0,1;2,3,1;color;white;lastthread;50%
 #  -
-#    - pagename;2025 01 06 | 2b | 8 times the Infinite - variant - 30
+#    - pagename;2025 01 06 | 2b | 8 times the Infinity - variant - 30
 #    - recursive;p1A3;8;0;2;1;3;2,0,1;2,3,1
 #    - recursive;p2A3;8;0;2;1;3;2,0,1;2,3,1
 #    - recursive;p3A3;8;0;2;1;3;2,0,1;2,3,1
@@ -187,7 +183,7 @@ pages:
 #    - recursive;p7A3;8;0;2;1;3;2,0,1;2,3,1
 #    - recursive;p8A3;8;0;2;1;3;2,0,1;2,3,1
   -
-    - pagename;2025 01 06 | 2b1 | 8 times the Infinite - variant - 30
+    - pagename;2025 01 06 | 2b1 | 8 times the Infinity - variant - 30
     - recursive;p1A3;8;0;2;1;3;0,1,3;3,2,0;firstthread;51%;color;yellow
     - recursive;p2A3;8;0;2;1;3;2,0,1;2,3,1;firstthread;51%;color;yellow
     - recursive;p3A3;8;0;2;1;3;0,1,3;3,2,0;firstthread;51%;color;yellow
@@ -337,3 +333,12 @@ pages:
     - recursive;p6Co;8;0;2;1;3;2,0,1;2,3,1;firstthread;76%;lastthread;100%;color;0.25,0.25,1
     - recursive;p7Co;8;0;2;1;3;2,0,1;2,3,1;firstthread;76%;lastthread;100%;color;0.25,0.25,1
     - recursive;p8Bo;8;0;2;1;3;2,0,1;2,3,1;firstthread;76%;lastthread;100%;color;0.25,0.25,1
+  -
+    - pagename;2025 01 06 | 8
+    - recursive;r61_2;50;0;2;1;3;2,0,1;2,3,1;color;yellow
+    - recursive;r59_6;50;0;2;1;3;2,0,1;2,3,1;color;red
+  -
+    - pagename;2025 01 06 | 9 | Tentacles
+    - recursive;p3B9;80;0;2;1;3;2,0,1;2,3,1;threads;8
+    - recursive;p4B9;10;0;2;1;3;2,0,1;2,3,1;threads;8
+    - recursive;p5B9;9;0;2;1;3;2,0,1;2,3,1;threads;8
