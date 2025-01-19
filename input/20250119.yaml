@@ -1,0 +1,38 @@
+---
+global:
+    background: darkgray
+    color: red
+    fontcolor: 1,1,1
+#    threads: 16
+planes:
+  - A1;angle;ENV[Angle1]60
+  - e;regular;8;-45
+  - A2;angle;ENV[Angle2]90
+
+  - A2c;connected;A1;1;A1;2;A2;2;1
+  - P2;freeform;A1;0;A1;1;A1;2;A2c;0
+
+  - p1A1a;connected;*e,0,e,1,ENV[Dist1]0.47;*e,0,e,1,ENV[Dist2]1.7;P2;0;1
+  - p2A1a;connected;*e,0,e,2,ENV[Dist1]0.47;*e,0,e,2,ENV[Dist2]1.7;P2;0;1
+  - p3A1a;connected;*e,0,e,3,ENV[Dist1]0.47;*e,0,e,3,ENV[Dist2]1.7;P2;0;1
+  - p4A1a;connected;*e,0,e,4,ENV[Dist1]0.47;*e,0,e,4,ENV[Dist2]1.7;P2;0;1
+  - p5A1a;connected;*e,0,e,5,ENV[Dist1]0.47;*e,0,e,5,ENV[Dist2]1.7;P2;0;1
+  - p6A1a;connected;*e,0,e,6,ENV[Dist1]0.47;*e,0,e,6,ENV[Dist2]1.7;P2;0;1
+  - p7A1a;connected;*e,0,e,7,ENV[Dist1]0.47;*e,0,e,7,ENV[Dist2]1.7;P2;0;1
+  - p8A1a;connected;*e,0,e,8,ENV[Dist1]0.47;*e,0,e,8,ENV[Dist2]1.7;P2;0;1
+
+pages:
+  -
+    - pagename;2025 01 19 | 8 times the Infinity | A1 ENV[Angle1]60 and A2 ENV[Angle2]90 Iter ENV[Iter]8 D1 ENV[Dist1]0.47 D2 ENV[Dist2]1.7
+    - background;lightgray
+    - recursive;p1A1a;ENV[Iter]8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
+    - recursive;p2A1a;ENV[Iter]8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
+    - recursive;p3A1a;ENV[Iter]8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
+    - recursive;p4A1a;ENV[Iter]8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
+    - recursive;p5A1a;ENV[Iter]8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
+    - recursive;p6A1a;ENV[Iter]8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
+    - recursive;p7A1a;ENV[Iter]8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
+    - recursive;p8A1a;ENV[Iter]8;0;2;1;3;2,0,1;2,3,1;color;darkgreen
+# Angle1=60 Angle2=261.77 Dist1=1.5 Dist2=3 Iter=8 ./normal 20250119
+# TP_style=curve Angle1=60 Angle2=303 Dist1=1.5 Dist2=3 Iter=20 ./normal 20250119
+# TP_style=curve Angle1=60 Angle2=350 Dist1=1.5 Dist2=3 Iter=20 ./normal 20250119
