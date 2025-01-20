@@ -12,6 +12,10 @@ if grep 'ENV\[' $INPUT_YAML >/dev/null ; then
 fi
 
 
+if [ `basename $0` == 'debug' ] ; then
+  export PARAM='-d'
+fi
+
 if [ `basename $0` == 'holes' ] ; then
   export PARAM='-p BW=1 -p style=holes'
   export OUTPUT_PDF=paper/${NAME}_holes.pdf
