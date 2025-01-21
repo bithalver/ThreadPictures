@@ -23,29 +23,29 @@ planes:
   - C_;connected;A2;0;A2;2;A1;2;0
   - NewBase;freeform;A2;1;A2;0;A2;2;C_;1
 
-  - p1R;connected;*e,0,e,1,ENV[Dist1]0.47;*e,0,e,1,ENV[Dist2]1.7;NewBase;0;1
-  - p2R;connected;*e,0,e,2,ENV[Dist1]0.47;*e,0,e,2,ENV[Dist2]1.7;NewBase;0;1
-  - p3R;connected;*e,0,e,3,ENV[Dist1]0.47;*e,0,e,3,ENV[Dist2]1.7;NewBase;0;1
-  - p4R;connected;*e,0,e,4,ENV[Dist1]0.47;*e,0,e,4,ENV[Dist2]1.7;NewBase;0;1
-  - p5R;connected;*e,0,e,5,ENV[Dist1]0.47;*e,0,e,5,ENV[Dist2]1.7;NewBase;0;1
-  - p6R;connected;*e,0,e,6,ENV[Dist1]0.47;*e,0,e,6,ENV[Dist2]1.7;NewBase;0;1
-  - p7R;connected;*e,0,e,7,ENV[Dist1]0.47;*e,0,e,7,ENV[Dist2]1.7;NewBase;0;1
-  - p8R;connected;*e,0,e,8,ENV[Dist1]0.47;*e,0,e,8,ENV[Dist2]1.7;NewBase;0;1
+  - p1R;connected;*e,0,e,1,ENV[DistA1]0.47;*e,0,e,1,ENV[DistA2]1.7;NewBase;0;1
+  - p2R;connected;*e,0,e,2,ENV[DistA1]0.47;*e,0,e,2,ENV[DistA2]1.7;NewBase;0;1
+  - p3R;connected;*e,0,e,3,ENV[DistB1]0.47;*e,0,e,3,ENV[DistB2]1.7;NewBase;0;1
+  - p4R;connected;*e,0,e,4,ENV[DistB1]0.47;*e,0,e,4,ENV[DistB2]1.7;NewBase;0;1
+  - p5R;connected;*e,0,e,5,ENV[DistA1]0.47;*e,0,e,5,ENV[DistA2]1.7;NewBase;0;1
+  - p6R;connected;*e,0,e,6,ENV[DistA1]0.47;*e,0,e,6,ENV[DistA2]1.7;NewBase;0;1
+  - p7R;connected;*e,0,e,7,ENV[DistB1]0.47;*e,0,e,7,ENV[DistB2]1.7;NewBase;0;1
+  - p8R;connected;*e,0,e,8,ENV[DistB1]0.47;*e,0,e,8,ENV[DistB2]1.7;NewBase;0;1
 
 
 pages:
   -
     - pagename;2025 01 20
     - background;darkgray
-    - recursive;p1R;ENV[Iter]8;0;2;1;3;0,1,2;1,2,3;color;orange
+    - recursive;p1R;ENV[Iter]8;0;2;1;3;0,1,2;1,2,3;color;yellow
     - recursive;p2R;ENV[Iter]8;0;2;1;3;0,1,2;1,2,3;color;yellow
-    - recursive;p3R;ENV[Iter]8;0;2;1;3;0,1,2;1,2,3;color;yellow
-    - recursive;p4R;ENV[Iter]8;0;2;1;3;0,1,2;1,2,3;color;yellow
+    - recursive;p3R;ENV[Iter]8;0;2;1;3;0,1,2;1,2,3;color;green
+    - recursive;p4R;ENV[Iter]8;0;2;1;3;0,1,2;1,2,3;color;green
     - recursive;p5R;ENV[Iter]8;0;2;1;3;0,1,2;1,2,3;color;yellow
     - recursive;p6R;ENV[Iter]8;0;2;1;3;0,1,2;1,2,3;color;yellow
-    - recursive;p7R;ENV[Iter]8;0;2;1;3;0,1,2;1,2,3;color;yellow
-    - recursive;p8R;ENV[Iter]8;0;2;1;3;0,1,2;1,2,3;color;yellow
-# TP_style=filledcurve Sides=8 InitAngle=0 Dist1=0.5 Dist2=3.7 Iter=8 ./normal 20250119
+    - recursive;p7R;ENV[Iter]8;0;2;1;3;0,1,2;1,2,3;color;green
+    - recursive;p8R;ENV[Iter]8;0;2;1;3;0,1,2;1,2,3;color;green
+# TP_style=filledcurve Sides=8 InitAngle=-45 DistB1=0.5 DistB2=4.5 DistA1=0.47 DistA2=1.7 Iter=20 ./normal 20250119
 
 # 0.4 -> 1.3
 # 0.5 -> 1.7
