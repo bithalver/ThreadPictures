@@ -45,7 +45,7 @@ pages:
     - recursive;p6R;ENV[Iter]8;0;2;1;3;0,1,2;1,2,3;color;yellow
     - recursive;p7R;ENV[Iter]8;0;2;1;3;0,1,2;1,2,3;color;green
     - recursive;p8R;ENV[Iter]8;0;2;1;3;0,1,2;1,2,3;color;green
-# TP_style=filledcurve Sides=8 InitAngle=-45 DistB1=0.5 DistB2=4.5 DistA1=0.47 DistA2=1.7 Iter=20 ./normal 20250119
+# TP_threads=8 TP_style=normal Sides=8 InitAngle=-45 DistB1=0.7 DistB2=4.5 DistA1=0.47 DistA2=1.7 Iter=20 Angle1=60 Angle2=90 ./normal 20250119
 
 # 0.4 -> 1.3
 # 0.5 -> 1.7
