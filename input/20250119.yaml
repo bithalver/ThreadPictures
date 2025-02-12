@@ -20,18 +20,20 @@ planes:
   - p7;connected;*e,0,e,7,ENV[Dist1]0.47;*e,0,e,7,ENV[Dist2]1.7;Base;0;1
   - p8;connected;*e,0,e,8,ENV[Dist1]0.47;*e,0,e,8,ENV[Dist2]1.7;Base;0;1
 
+  - RA2c;connected;A1;2;A1;0;A2;2;1
+  - RBase;freeform;A1;1;A1;0;A1;2;A2c;0
+
   - C_;connected;A2;0;A2;2;A1;2;0
   - NewBase;freeform;A2;1;A2;0;A2;2;C_;1
 
-  - p1R;connected;*e,0,e,1,ENV[DistA1]0.47;*e,0,e,1,ENV[DistA2]1.7;NewBase;0;1
-  - p2R;connected;*e,0,e,2,ENV[DistA1]0.47;*e,0,e,2,ENV[DistA2]1.7;NewBase;0;1
-  - p3R;connected;*e,0,e,3,ENV[DistB1]0.47;*e,0,e,3,ENV[DistB2]1.7;NewBase;0;1
-  - p4R;connected;*e,0,e,4,ENV[DistB1]0.47;*e,0,e,4,ENV[DistB2]1.7;NewBase;0;1
-  - p5R;connected;*e,0,e,5,ENV[DistA1]0.47;*e,0,e,5,ENV[DistA2]1.7;NewBase;0;1
-  - p6R;connected;*e,0,e,6,ENV[DistA1]0.47;*e,0,e,6,ENV[DistA2]1.7;NewBase;0;1
-  - p7R;connected;*e,0,e,7,ENV[DistB1]0.47;*e,0,e,7,ENV[DistB2]1.7;NewBase;0;1
-  - p8R;connected;*e,0,e,8,ENV[DistB1]0.47;*e,0,e,8,ENV[DistB2]1.7;NewBase;0;1
-
+  - p1R;connected;*e,0,e,1,ENV[DistA1]0.47;*e,0,e,1,ENV[DistA2]1.7;NewBase;1;0
+  - p2R;connected;*e,0,e,2,ENV[DistA1]0.47;*e,0,e,2,ENV[DistA2]1.7;NewBase;1;0
+  - p3R;connected;*e,0,e,3,ENV[DistB1]0.47;*e,0,e,3,ENV[DistB2]1.7;NewBase;1;0
+  - p4R;connected;*e,0,e,4,ENV[DistB1]0.47;*e,0,e,4,ENV[DistB2]1.7;NewBase;1;0
+  - p5R;connected;*e,0,e,5,ENV[DistA1]0.47;*e,0,e,5,ENV[DistA2]1.7;NewBase;1;0
+  - p6R;connected;*e,0,e,6,ENV[DistA1]0.47;*e,0,e,6,ENV[DistA2]1.7;NewBase;1;0
+  - p7R;connected;*e,0,e,7,ENV[DistB1]0.47;*e,0,e,7,ENV[DistB2]1.7;NewBase;1;0
+  - p8R;connected;*e,0,e,8,ENV[DistB1]0.47;*e,0,e,8,ENV[DistB2]1.7;NewBase;1;0
 
 pages:
   -
@@ -52,6 +54,14 @@ pages:
   -
     - pagename;2025 01 19 | 8 times the Infinity | A1 ENV[Angle1]60 and A2 ENV[Angle2]90 Iter ENV[Iter]8 D1 ENV[Dist1]0.47 D2 ENV[Dist2]1.7
     - background;darkgray
+    - recursive;p1;ENV[Iter]8;0;1;2;3;2,0,1;2,3,1;color;lightgray
+    - recursive;p2;ENV[Iter]8;0;1;2;3;2,0,1;2,3,1;color;lightgray
+    - recursive;p3;ENV[Iter]8;0;1;2;3;2,0,1;2,3,1;color;lightgray
+    - recursive;p4;ENV[Iter]8;0;1;2;3;2,0,1;2,3,1;color;lightgray
+    - recursive;p5;ENV[Iter]8;0;1;2;3;2,0,1;2,3,1;color;lightgray
+    - recursive;p6;ENV[Iter]8;0;1;2;3;2,0,1;2,3,1;color;lightgray
+    - recursive;p7;ENV[Iter]8;0;1;2;3;2,0,1;2,3,1;color;lightgray
+    - recursive;p8;ENV[Iter]8;0;1;2;3;2,0,1;2,3,1;color;lightgray
     - recursive;p1;ENV[Iter]8;0;2;1;3;2,0,1;2,3,1;color;orange
     - recursive;p2;ENV[Iter]8;0;2;1;3;2,0,1;2,3,1;color;yellow
     - recursive;p3;ENV[Iter]8;0;2;1;3;2,0,1;2,3,1;color;yellow
@@ -60,6 +70,23 @@ pages:
     - recursive;p6;ENV[Iter]8;0;2;1;3;2,0,1;2,3,1;color;yellow
     - recursive;p7;ENV[Iter]8;0;2;1;3;2,0,1;2,3,1;color;yellow
     - recursive;p8;ENV[Iter]8;0;2;1;3;2,0,1;2,3,1;color;yellow
+
+# The crown of the King in Yellow:
+# TP_pageXsize=29.7 TP_pageYsize=21 TP_style=filledcurve Sides=32 InitAngle=45 Dist1=3 Dist2=3.7 Iter=20 ./normal 20250119
+
+# TP_threads=8 InitAngle=-94 ./normal 20250119
+  -
+    - pagename;2025 01 19 | 8 times the Infinity variant | The crown of the King in Yellow
+    - background;darkgray
+    - recursive;p5;ENV[Iter]8;0;1;2;3;2,0,1;2,3,1;color;yellow
+    - recursive;p6;ENV[Iter]8;0;1;2;3;2,0,1;2,3,1;color;red
+    - recursive;p7;ENV[Iter]8;0;1;2;3;2,0,1;2,3,1;color;yellow
+    - recursive;p8;ENV[Iter]8;0;1;2;3;2,0,1;2,3,1;color;yellow
+    - recursive;p1;ENV[Iter]8;0;2;1;3;2,0,1;2,3,1;color;yellow
+    - recursive;p2;ENV[Iter]8;0;2;1;3;2,0,1;2,3,1;color;yellow
+    - recursive;p3;ENV[Iter]8;0;2;1;3;2,0,1;2,3,1;color;red
+    - recursive;p4;ENV[Iter]8;0;2;1;3;2,0,1;2,3,1;color;yellow
+
 # Angle1=60 Angle2=261.77 Dist1=1.5 Dist2=3 Iter=8 ./normal 20250119
 
 # TP_style=curve Angle1=60 Angle2=303 Dist1=1.5 Dist2=3 Iter=20 ./normal 20250119
@@ -71,3 +98,8 @@ pages:
 
 # The crown of the King in Yellow:
 # TP_pageXsize=29.7 TP_pageYsize=21 TP_style=filledcurve Sides=32 InitAngle=45 Dist1=3 Dist2=3.7 Iter=20 ./normal 20250119
+  -
+    - pagename;2025 01 19 | 8 times the Infinity variant | p4 only with 2 colors
+    - background;darkgray
+    - recursive;p4;ENV[Iter]8;2;0;1;3;2,3,1;color;yellow;threads;8
+    - recursive;p4;ENV[Iter]8;2;0;1;3;2,0,1;color;orange;threads;8
