@@ -238,6 +238,10 @@ if (defined $config->{planes}) {
     case (/^ge/i){ # geometric_line; startX, startY, endX, endY, sections, magnitude (for 1 section)
       my @w=geometric_line(@AP); $TP_planes{$planename}=\@w;
     }
+    case (/^shiftXY/i){ # shift an already existing plane;  X,Y,original_plane
+      my @w=shiftXYplane(@AP);
+      $TP_planes{$planename}=\@w;
+    }
     else {warn "plane type '$_' is not (yet) supported (but processing goes on)\n";}
     }
   }

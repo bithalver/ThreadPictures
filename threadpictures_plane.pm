@@ -7,7 +7,7 @@ use 5.10.0;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
-our @EXPORT = qw( basicplane create_connected_plane connectplane2points grid3plane grid4plane smaller_plane_1 geometric_line );
+our @EXPORT = qw( basicplane create_connected_plane connectplane2points grid3plane grid4plane smaller_plane_1 geometric_line shiftXYplane );
 
 # rotates a vector counterclockwise (left) by angle
 # parameter: x,y,angle
@@ -150,6 +150,12 @@ sub geometric_line { my($slices, $magnitude)=@_;
     push @output,addvector(scalevector(0,1,$AM), 0);
   }
   return @output;
+}
+
+sub shiftXYplane { my @input=@_;
+  my ($TOx,$TOy)=splice(@input,0,2);
+  my @P2M=@{$TP_planes{splice(@input,0,1)}}; # P2M like plane-to-move
+  return moveplane($TOx,$TOy,@P2M);
 }
 
 1;

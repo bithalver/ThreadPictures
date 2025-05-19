@@ -30,7 +30,13 @@ planes:
   - sn;smaller;5;0.8;360;1;0;0;0;1;2;2;0
   - tp;freeform;0;0;1;0;*1,0,1,1,0.5
   - E;regular;ENV[Sides]4;90  # ENV var Sides used if exists; otherwise it is 4
+  - Test2Shift;regular;4
+  - Shifted;shiftXY;1;0;Test2Shift
 pages:
+  -
+    - pagename; first shiftXY test
+    - net3s;Test2Shift;1;2;3
+    - net3s;Shifted;1;2;3;color;red
   -
     - pagename; first ENV test | run it with Threads=500 and Sides=20
     - background;lightgray # Threads=500 Sides=20 ./normal _test
