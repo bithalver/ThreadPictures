@@ -1,0 +1,66 @@
+global:
+    background: darkgray
+    fontcolor: 1,1,1
+    color: 0.75,0.75,0.75
+    threads: 8
+    style: filledcurve
+planes:
+  - o;regular;12;0;2
+  - i;regular;12;91;0.5
+  - i2;regular;12;-61;0.5
+pages:
+  -
+    - pagename;2025 05 19 | 2
+    - net3;o;01;i;01;o;02
+    - net3;o;03;i;03;o;04
+    - net3;o;04;i;04;o;05
+    - net3;o;06;i;06;o;07
+    - net3;o;07;i;07;o;08
+    - net3;o;09;i;09;o;10
+    - net3;o;10;i;10;o;11
+    - net3;o;12;i;12;o;01
+
+    - net3;o;01;i2;01;o;02
+    - net3;o;02;i2;02;o;03
+    - net3;o;04;i2;04;o;05
+    - net3;o;05;i2;05;o;06
+    - net3;o;07;i2;07;o;08
+    - net3;o;08;i2;08;o;09
+    - net3;o;10;i2;10;o;11
+    - net3;o;11;i2;11;o;12
+
+    - net3;o;02;i;02;o;03;color;yellow
+    - net3;o;05;i;05;o;06;color;yellow
+    - net3;o;08;i;08;o;09;color;yellow
+    - net3;o;11;i;11;o;12;color;yellow
+    - net3;o;03;i2;03;o;04;color;orange
+    - net3;o;06;i2;06;o;07;color;orange
+    - net3;o;09;i2;09;o;10;color;orange
+    - net3;o;12;i2;12;o;01;color;orange
+  -
+    - pagename;2025 05 19 | 1
+    - net3;o;01;i;01;o;02
+    - net3;o;02;i;02;o;03
+    - net3;o;03;i;03;o;04
+    - net3;o;04;i;04;o;05
+    - net3;o;05;i;05;o;06
+    - net3;o;06;i;06;o;07
+    - net3;o;07;i;07;o;08
+    - net3;o;08;i;08;o;09
+    - net3;o;09;i;09;o;10
+    - net3;o;10;i;10;o;11
+    - net3;o;11;i;11;o;12
+    - net3;o;12;i;12;o;01
+
+    - net3;o;01;i2;01;o;02
+    - net3;o;02;i2;02;o;03
+    - net3;o;03;i2;03;o;04;color;orange
+    - net3;o;04;i2;04;o;05
+    - net3;o;05;i2;05;o;06
+    - net3;o;06;i2;06;o;07;color;orange
+    - net3;o;07;i2;07;o;08
+    - net3;o;08;i2;08;o;09
+    - net3;o;09;i2;09;o;10;color;orange
+    - net3;o;10;i2;10;o;11
+    - net3;o;11;i2;11;o;12
+    - net3;o;12;i2;12;o;01;color;orange
