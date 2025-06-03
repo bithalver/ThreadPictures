@@ -35,31 +35,31 @@ pages:
     - net3;o;11;j000;11;o;12
     - net3;o;12;j000;12;o;01
 
-    - net3;j000;01;k001;01;j000;02
-    - net3;j000;02;k001;02;j000;03
-    - net3;j000;03;k001;03;j000;04;color;red
-    - net3;j000;04;k001;04;j000;05
-    - net3;j000;05;k001;05;j000;06
-    - net3;j000;06;k001;06;j000;07;color;red
-    - net3;j000;07;k001;07;j000;08
-    - net3;j000;08;k001;08;j000;09
-    - net3;j000;09;k001;09;j000;10;color;red
-    - net3;j000;10;k001;10;j000;11
-    - net3;j000;11;k001;11;j000;12
-    - net3;j000;12;k001;12;j000;01;color;red
+    - net3;j000;01;k001;01;j000;02;threads;6
+    - net3;j000;02;k001;02;j000;03;threads;6
+    - net3;j000;03;k001;03;j000;04;threads;6;color;red
+    - net3;j000;04;k001;04;j000;05;threads;6
+    - net3;j000;05;k001;05;j000;06;threads;6
+    - net3;j000;06;k001;06;j000;07;threads;6;color;red
+    - net3;j000;07;k001;07;j000;08;threads;6
+    - net3;j000;08;k001;08;j000;09;threads;6
+    - net3;j000;09;k001;09;j000;10;threads;6;color;red
+    - net3;j000;10;k001;10;j000;11;threads;6
+    - net3;j000;11;k001;11;j000;12;threads;6
+    - net3;j000;12;k001;12;j000;01;threads;6;color;red
 
     - net3;k001;01;k010;01;k001;02;threads;4
-    - net3;k001;02;k010;02;k001;03
-    - net3;k001;03;k010;03;k001;04;color;red
-    - net3;k001;04;k010;04;k001;05
-    - net3;k001;05;k010;05;k001;06
-    - net3;k001;06;k010;06;k001;07;color;red
-    - net3;k001;07;k010;07;k001;08
-    - net3;k001;08;k010;08;k001;09
-    - net3;k001;09;k010;09;k001;10;color;red
-    - net3;k001;10;k010;10;k001;11
-    - net3;k001;11;k010;11;k001;12
-    - net3;k001;12;k010;12;k001;01;color;red
+    - net3;k001;02;k010;02;k001;03;threads;4
+    - net3;k001;03;k010;03;k001;04;threads;4;color;red
+    - net3;k001;04;k010;04;k001;05;threads;4
+    - net3;k001;05;k010;05;k001;06;threads;4
+    - net3;k001;06;k010;06;k001;07;threads;4;color;red
+    - net3;k001;07;k010;07;k001;08;threads;4
+    - net3;k001;08;k010;08;k001;09;threads;4
+    - net3;k001;09;k010;09;k001;10;threads;4;color;red
+    - net3;k001;10;k010;10;k001;11;threads;4
+    - net3;k001;11;k010;11;k001;12;threads;4
+    - net3;k001;12;k010;12;k001;01;threads;4;color;red
   -
     - pagename;2025 05 19 | 3 layers straight
     - net3;o;01;j000;01;o;02;color;red
@@ -75,31 +75,31 @@ pages:
     - net3;o;11;j000;11;o;12
     - net3;o;12;j000;12;o;01
 
-    - net3;j000;01;k000;01;j000;02
-    - net3;j000;02;k000;02;j000;03
-    - net3;j000;03;k000;03;j000;04;color;red
-    - net3;j000;04;k000;04;j000;05
-    - net3;j000;05;k000;05;j000;06
-    - net3;j000;06;k000;06;j000;07;color;red
-    - net3;j000;07;k000;07;j000;08
-    - net3;j000;08;k000;08;j000;09
-    - net3;j000;09;k000;09;j000;10;color;red
-    - net3;j000;10;k000;10;j000;11
-    - net3;j000;11;k000;11;j000;12
-    - net3;j000;12;k000;12;j000;01;color;red
+    - net3;j000;01;k000;01;j000;02;threads;6
+    - net3;j000;02;k000;02;j000;03;threads;6
+    - net3;j000;03;k000;03;j000;04;threads;6;color;red
+    - net3;j000;04;k000;04;j000;05;threads;6
+    - net3;j000;05;k000;05;j000;06;threads;6
+    - net3;j000;06;k000;06;j000;07;threads;6;color;red
+    - net3;j000;07;k000;07;j000;08;threads;6
+    - net3;j000;08;k000;08;j000;09;threads;6
+    - net3;j000;09;k000;09;j000;10;threads;6;color;red
+    - net3;j000;10;k000;10;j000;11;threads;6
+    - net3;j000;11;k000;11;j000;12;threads;6
+    - net3;j000;12;k000;12;j000;01;threads;6;color;red
 
-    - net3;k001;01;k010;01;k001;02
-    - net3;k001;02;k010;02;k001;03;color;red
-    - net3;k001;03;k010;03;k001;04
-    - net3;k001;04;k010;04;k001;05
-    - net3;k001;05;k010;05;k001;06;color;red
-    - net3;k001;06;k010;06;k001;07
-    - net3;k001;07;k010;07;k001;08
-    - net3;k001;08;k010;08;k001;09;color;red
-    - net3;k001;09;k010;09;k001;10
-    - net3;k001;10;k010;10;k001;11
-    - net3;k001;11;k010;11;k001;12;color;red
-    - net3;k001;12;k010;12;k001;01
+    - net3;k001;01;k010;01;k001;02;threads;4
+    - net3;k001;02;k010;02;k001;03;threads;4;color;red
+    - net3;k001;03;k010;03;k001;04;threads;4
+    - net3;k001;04;k010;04;k001;05;threads;4
+    - net3;k001;05;k010;05;k001;06;threads;4;color;red
+    - net3;k001;06;k010;06;k001;07;threads;4
+    - net3;k001;07;k010;07;k001;08;threads;4
+    - net3;k001;08;k010;08;k001;09;threads;4;color;red
+    - net3;k001;09;k010;09;k001;10;threads;4
+    - net3;k001;10;k010;10;k001;11;threads;4
+    - net3;k001;11;k010;11;k001;12;threads;4;color;red
+    - net3;k001;12;k010;12;k001;01;threads;4
   -
     - pagename;2025 05 19 | 0.00
     - net3;o;01;i000;01;o;02;color;red
