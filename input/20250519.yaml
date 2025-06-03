@@ -7,25 +7,155 @@ global:
 planes:
   - o;regular;12;0;2
   - i;regular;12;91;0.5
-  - i4;regular;12;60;0.5
-  - i3;shiftXY;0;0.75;i4
+
+  - i000;regular;12;60;0.5
+  - i025;shiftXY;0;0.25;i000
+  - i050;shiftXY;0;0.5;i000
+  - i075;shiftXY;0;0.75;i000
+
+  - j000;regular;12;60;1.4
+  - k000;regular;12;120;0.98
+  - k001;regular;12;30;0.98
+  - k010;regular;12;90;0.686
+
   - i2;regular;12;-61;0.5
 pages:
   -
-    - pagename;2025 05 19 | 3
-    - net3;o;01;i3;01;o;02
-    - net3;o;02;i3;02;o;03
-    - net3;o;03;i3;03;o;04
-    - net3;o;04;i3;04;o;05
-    - net3;o;05;i3;05;o;06
-    - net3;o;06;i3;06;o;07
-    - net3;o;07;i3;07;o;08
-    - net3;o;08;i3;08;o;09
-    - net3;o;09;i3;09;o;10
-    - net3;o;10;i3;10;o;11
-    - net3;o;11;i3;11;o;12
-    - net3;o;12;i3;12;o;01
+    - pagename;2025 05 19 | 3 layers cross
+    - net3;o;01;j000;01;o;02;color;red
+    - net3;o;02;j000;02;o;03
+    - net3;o;03;j000;03;o;04
+    - net3;o;04;j000;04;o;05;color;red
+    - net3;o;05;j000;05;o;06
+    - net3;o;06;j000;06;o;07
+    - net3;o;07;j000;07;o;08;color;red
+    - net3;o;08;j000;08;o;09
+    - net3;o;09;j000;09;o;10
+    - net3;o;10;j000;10;o;11;color;red
+    - net3;o;11;j000;11;o;12
+    - net3;o;12;j000;12;o;01
 
+    - net3;j000;01;k001;01;j000;02
+    - net3;j000;02;k001;02;j000;03
+    - net3;j000;03;k001;03;j000;04;color;red
+    - net3;j000;04;k001;04;j000;05
+    - net3;j000;05;k001;05;j000;06
+    - net3;j000;06;k001;06;j000;07;color;red
+    - net3;j000;07;k001;07;j000;08
+    - net3;j000;08;k001;08;j000;09
+    - net3;j000;09;k001;09;j000;10;color;red
+    - net3;j000;10;k001;10;j000;11
+    - net3;j000;11;k001;11;j000;12
+    - net3;j000;12;k001;12;j000;01;color;red
+
+    - net3;k001;01;k010;01;k001;02;threads;4
+    - net3;k001;02;k010;02;k001;03
+    - net3;k001;03;k010;03;k001;04;color;red
+    - net3;k001;04;k010;04;k001;05
+    - net3;k001;05;k010;05;k001;06
+    - net3;k001;06;k010;06;k001;07;color;red
+    - net3;k001;07;k010;07;k001;08
+    - net3;k001;08;k010;08;k001;09
+    - net3;k001;09;k010;09;k001;10;color;red
+    - net3;k001;10;k010;10;k001;11
+    - net3;k001;11;k010;11;k001;12
+    - net3;k001;12;k010;12;k001;01;color;red
+  -
+    - pagename;2025 05 19 | 3 layers straight
+    - net3;o;01;j000;01;o;02;color;red
+    - net3;o;02;j000;02;o;03
+    - net3;o;03;j000;03;o;04
+    - net3;o;04;j000;04;o;05;color;red
+    - net3;o;05;j000;05;o;06
+    - net3;o;06;j000;06;o;07
+    - net3;o;07;j000;07;o;08;color;red
+    - net3;o;08;j000;08;o;09
+    - net3;o;09;j000;09;o;10
+    - net3;o;10;j000;10;o;11;color;red
+    - net3;o;11;j000;11;o;12
+    - net3;o;12;j000;12;o;01
+
+    - net3;j000;01;k000;01;j000;02
+    - net3;j000;02;k000;02;j000;03
+    - net3;j000;03;k000;03;j000;04;color;red
+    - net3;j000;04;k000;04;j000;05
+    - net3;j000;05;k000;05;j000;06
+    - net3;j000;06;k000;06;j000;07;color;red
+    - net3;j000;07;k000;07;j000;08
+    - net3;j000;08;k000;08;j000;09
+    - net3;j000;09;k000;09;j000;10;color;red
+    - net3;j000;10;k000;10;j000;11
+    - net3;j000;11;k000;11;j000;12
+    - net3;j000;12;k000;12;j000;01;color;red
+
+    - net3;k001;01;k010;01;k001;02
+    - net3;k001;02;k010;02;k001;03;color;red
+    - net3;k001;03;k010;03;k001;04
+    - net3;k001;04;k010;04;k001;05
+    - net3;k001;05;k010;05;k001;06;color;red
+    - net3;k001;06;k010;06;k001;07
+    - net3;k001;07;k010;07;k001;08
+    - net3;k001;08;k010;08;k001;09;color;red
+    - net3;k001;09;k010;09;k001;10
+    - net3;k001;10;k010;10;k001;11
+    - net3;k001;11;k010;11;k001;12;color;red
+    - net3;k001;12;k010;12;k001;01
+  -
+    - pagename;2025 05 19 | 0.00
+    - net3;o;01;i000;01;o;02;color;red
+    - net3;o;02;i000;02;o;03
+    - net3;o;03;i000;03;o;04
+    - net3;o;04;i000;04;o;05;color;red
+    - net3;o;05;i000;05;o;06
+    - net3;o;06;i000;06;o;07
+    - net3;o;07;i000;07;o;08;color;red
+    - net3;o;08;i000;08;o;09
+    - net3;o;09;i000;09;o;10
+    - net3;o;10;i000;10;o;11;color;red
+    - net3;o;11;i000;11;o;12
+    - net3;o;12;i000;12;o;01
+  -
+    - pagename;2025 05 19 | 0.25
+    - net3;o;01;i025;01;o;02;color;red
+    - net3;o;02;i025;02;o;03
+    - net3;o;03;i025;03;o;04
+    - net3;o;04;i025;04;o;05;color;red
+    - net3;o;05;i025;05;o;06
+    - net3;o;06;i025;06;o;07
+    - net3;o;07;i025;07;o;08;color;red
+    - net3;o;08;i025;08;o;09
+    - net3;o;09;i025;09;o;10
+    - net3;o;10;i025;10;o;11;color;red
+    - net3;o;11;i025;11;o;12
+    - net3;o;12;i025;12;o;01
+  -
+    - pagename;2025 05 19 | 0.50
+    - net3;o;01;i050;01;o;02;color;red
+    - net3;o;02;i050;02;o;03
+    - net3;o;03;i050;03;o;04
+    - net3;o;04;i050;04;o;05;color;red
+    - net3;o;05;i050;05;o;06
+    - net3;o;06;i050;06;o;07
+    - net3;o;07;i050;07;o;08;color;red
+    - net3;o;08;i050;08;o;09
+    - net3;o;09;i050;09;o;10
+    - net3;o;10;i050;10;o;11;color;red
+    - net3;o;11;i050;11;o;12
+    - net3;o;12;i050;12;o;01
+  -
+    - pagename;2025 05 19 | 0.75
+    - net3;o;01;i075;01;o;02;color;red
+    - net3;o;02;i075;02;o;03
+    - net3;o;03;i075;03;o;04
+    - net3;o;04;i075;04;o;05;color;red
+    - net3;o;05;i075;05;o;06
+    - net3;o;06;i075;06;o;07
+    - net3;o;07;i075;07;o;08;color;red
+    - net3;o;08;i075;08;o;09
+    - net3;o;09;i075;09;o;10
+    - net3;o;10;i075;10;o;11;color;red
+    - net3;o;11;i075;11;o;12
+    - net3;o;12;i075;12;o;01
   -
     - pagename;2025 05 19 | 2
     - net3;o;01;i;01;o;02
