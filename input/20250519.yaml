@@ -13,6 +13,17 @@ planes:
   - i050;shiftXY;0;0.5;i000
   - i075;shiftXY;0;0.75;i000
 
+  - in50;shiftXY;0;-0.5;i000
+  - in75;shiftXY;0;-0.75;i000
+
+  - i033;shiftXY;0;0.3333;i000
+  - in33;shiftXY;0;-0.3333;i000
+
+
+  - ip33_33;shiftXY;0.2;0.3333;i000
+  - in33_33;shiftXY;-0.2;-0.3333;i000
+
+
   - j000;regular;12;60;1.4
   - k000;regular;12;120;0.98
   - k001;regular;12;30;0.98
@@ -20,6 +31,160 @@ planes:
 
   - i2;regular;12;-61;0.5
 pages:
+  -
+    - pagename;2025 05 19 | 0.00
+    - net3;o;01;i000;01;o;02;color;red
+    - net3;o;02;i000;02;o;03
+    - net3;o;03;i000;03;o;04
+    - net3;o;04;i000;04;o;05;color;red
+    - net3;o;05;i000;05;o;06
+    - net3;o;06;i000;06;o;07
+    - net3;o;07;i000;07;o;08;color;red
+    - net3;o;08;i000;08;o;09
+    - net3;o;09;i000;09;o;10
+    - net3;o;10;i000;10;o;11;color;red
+    - net3;o;11;i000;11;o;12
+    - net3;o;12;i000;12;o;01
+  -
+    - pagename;2025 05 19 | 0.25
+    - net3;o;01;i025;01;o;02;color;red
+    - net3;o;02;i025;02;o;03
+    - net3;o;03;i025;03;o;04
+    - net3;o;04;i025;04;o;05;color;red
+    - net3;o;05;i025;05;o;06
+    - net3;o;06;i025;06;o;07
+    - net3;o;07;i025;07;o;08;color;red
+    - net3;o;08;i025;08;o;09
+    - net3;o;09;i025;09;o;10
+    - net3;o;10;i025;10;o;11;color;red
+    - net3;o;11;i025;11;o;12
+    - net3;o;12;i025;12;o;01
+  -
+    - pagename;2025 05 19 | 0.50
+    - net3;o;01;i050;01;o;02;color;red
+    - net3;o;02;i050;02;o;03
+    - net3;o;03;i050;03;o;04
+    - net3;o;04;i050;04;o;05;color;red
+    - net3;o;05;i050;05;o;06
+    - net3;o;06;i050;06;o;07
+    - net3;o;07;i050;07;o;08;color;red
+    - net3;o;08;i050;08;o;09
+    - net3;o;09;i050;09;o;10
+    - net3;o;10;i050;10;o;11;color;red
+    - net3;o;11;i050;11;o;12
+    - net3;o;12;i050;12;o;01
+  -
+    - pagename;2025 05 19 | 0.75
+    - net3;o;01;i075;01;o;02;color;red
+    - net3;o;02;i075;02;o;03
+    - net3;o;03;i075;03;o;04
+    - net3;o;04;i075;04;o;05;color;red
+    - net3;o;05;i075;05;o;06
+    - net3;o;06;i075;06;o;07
+    - net3;o;07;i075;07;o;08;color;red
+    - net3;o;08;i075;08;o;09
+    - net3;o;09;i075;09;o;10
+    - net3;o;10;i075;10;o;11;color;red
+    - net3;o;11;i075;11;o;12
+    - net3;o;12;i075;12;o;01
+  -
+    - pagename;2025 05 19 | 2025 06 12 | +0.33
+    - net3;o;01;in33;01;o;02;color;yellow
+    - net3;o;02;in33;02;o;03;color;yellow
+    - net3;o;03;i033;03;o;04;color;red
+    - net3;o;04;i033;04;o;05;color;red
+    - net3;o;05;i033;05;o;06;color;red
+    - net3;o;06;i033;06;o;07;color;red
+    - net3;o;07;i033;07;o;08;color;red
+    - net3;o;08;i033;08;o;09;color;red
+    - net3;o;09;in33;09;o;10;color;yellow
+    - net3;o;10;in33;10;o;11;color;yellow
+    - net3;o;11;in33;11;o;12;color;yellow
+    - net3;o;12;in33;12;o;01;color;yellow
+  -
+    - pagename;2025 05 19 | 2025 06 12 | -0.33
+    - net3;o;01;i033;01;o;02;color;yellow
+    - net3;o;02;i033;02;o;03;color;yellow
+    - net3;o;03;in33;03;o;04;color;red
+    - net3;o;04;in33;04;o;05;color;red
+    - net3;o;05;in33;05;o;06;color;red
+    - net3;o;06;in33;06;o;07;color;red
+    - net3;o;07;in33;07;o;08;color;red
+    - net3;o;08;in33;08;o;09;color;red
+    - net3;o;09;i033;09;o;10;color;yellow
+    - net3;o;10;i033;10;o;11;color;yellow
+    - net3;o;11;i033;11;o;12;color;yellow
+    - net3;o;12;i033;12;o;01;color;yellow
+  -
+    - pagename;2025 05 19 | 2025 06 12 | +0.33 0.33
+    - net3;o;01;in33_33;01;o;02;color;yellow
+    - net3;o;02;in33_33;02;o;03;color;yellow
+    - net3;o;03;ip33_33;03;o;04;color;red
+    - net3;o;04;ip33_33;04;o;05;color;red
+    - net3;o;05;ip33_33;05;o;06;color;red
+    - net3;o;06;ip33_33;06;o;07;color;red
+    - net3;o;07;ip33_33;07;o;08;color;red
+    - net3;o;08;ip33_33;08;o;09;color;red
+    - net3;o;09;in33_33;09;o;10;color;yellow
+    - net3;o;10;in33_33;10;o;11;color;yellow
+    - net3;o;11;in33_33;11;o;12;color;yellow
+    - net3;o;12;in33_33;12;o;01;color;yellow
+  -
+    - pagename;2025 05 19 | 2025 06 12 | -0.33 -0.33
+    - net3;o;01;ip33_33;01;o;02;color;yellow
+    - net3;o;02;ip33_33;02;o;03;color;yellow
+    - net3;o;03;in33_33;03;o;04;color;red
+    - net3;o;04;in33_33;04;o;05;color;red
+    - net3;o;05;in33_33;05;o;06;color;red
+    - net3;o;06;in33_33;06;o;07;color;red
+    - net3;o;07;in33_33;07;o;08;color;red
+    - net3;o;08;in33_33;08;o;09;color;red
+    - net3;o;09;ip33_33;09;o;10;color;yellow
+    - net3;o;10;ip33_33;10;o;11;color;yellow
+    - net3;o;11;ip33_33;11;o;12;color;yellow
+    - net3;o;12;ip33_33;12;o;01;color;yellow
+  -
+    - pagename;2025 05 19 | 2025 06 12 | +0.50
+    - net3;o;01;in50;01;o;02;color;yellow
+    - net3;o;02;in50;02;o;03;color;yellow
+    - net3;o;03;i050;03;o;04;color;red
+    - net3;o;04;i050;04;o;05;color;red
+    - net3;o;05;i050;05;o;06;color;red
+    - net3;o;06;i050;06;o;07;color;red
+    - net3;o;07;i050;07;o;08;color;red
+    - net3;o;08;i050;08;o;09;color;red
+    - net3;o;09;in50;09;o;10;color;yellow
+    - net3;o;10;in50;10;o;11;color;yellow
+    - net3;o;11;in50;11;o;12;color;yellow
+    - net3;o;12;in50;12;o;01;color;yellow
+  -
+    - pagename;2025 05 19 | 2025 06 12 | +0.75
+    - net3;o;01;in75;01;o;02;color;yellow
+    - net3;o;02;in75;02;o;03;color;yellow
+    - net3;o;03;i075;03;o;04;color;red
+    - net3;o;04;i075;04;o;05;color;red
+    - net3;o;05;i075;05;o;06;color;red
+    - net3;o;06;i075;06;o;07;color;red
+    - net3;o;07;i075;07;o;08;color;red
+    - net3;o;08;i075;08;o;09;color;red
+    - net3;o;09;in75;09;o;10;color;yellow
+    - net3;o;10;in75;10;o;11;color;yellow
+    - net3;o;11;in75;11;o;12;color;yellow
+    - net3;o;12;in75;12;o;01;color;yellow
+  -
+    - pagename;2025 05 19 | 2025 06 12 | -0.75
+    - net3;o;01;i075;01;o;02;color;yellow
+    - net3;o;02;i075;02;o;03;color;yellow
+    - net3;o;03;in75;03;o;04;color;red
+    - net3;o;04;in75;04;o;05;color;red
+    - net3;o;05;in75;05;o;06;color;red
+    - net3;o;06;in75;06;o;07;color;red
+    - net3;o;07;in75;07;o;08;color;red
+    - net3;o;08;in75;08;o;09;color;red
+    - net3;o;09;i075;09;o;10;color;yellow
+    - net3;o;10;i075;10;o;11;color;yellow
+    - net3;o;11;i075;11;o;12;color;yellow
+    - net3;o;12;i075;12;o;01;color;yellow
   -
     - pagename;2025 05 19 | 3 layers cross
     - net3;o;01;j000;01;o;02;color;red
@@ -100,62 +265,6 @@ pages:
     - net3;k001;10;k010;10;k001;11;threads;4
     - net3;k001;11;k010;11;k001;12;threads;4;color;red
     - net3;k001;12;k010;12;k001;01;threads;4
-  -
-    - pagename;2025 05 19 | 0.00
-    - net3;o;01;i000;01;o;02;color;red
-    - net3;o;02;i000;02;o;03
-    - net3;o;03;i000;03;o;04
-    - net3;o;04;i000;04;o;05;color;red
-    - net3;o;05;i000;05;o;06
-    - net3;o;06;i000;06;o;07
-    - net3;o;07;i000;07;o;08;color;red
-    - net3;o;08;i000;08;o;09
-    - net3;o;09;i000;09;o;10
-    - net3;o;10;i000;10;o;11;color;red
-    - net3;o;11;i000;11;o;12
-    - net3;o;12;i000;12;o;01
-  -
-    - pagename;2025 05 19 | 0.25
-    - net3;o;01;i025;01;o;02;color;red
-    - net3;o;02;i025;02;o;03
-    - net3;o;03;i025;03;o;04
-    - net3;o;04;i025;04;o;05;color;red
-    - net3;o;05;i025;05;o;06
-    - net3;o;06;i025;06;o;07
-    - net3;o;07;i025;07;o;08;color;red
-    - net3;o;08;i025;08;o;09
-    - net3;o;09;i025;09;o;10
-    - net3;o;10;i025;10;o;11;color;red
-    - net3;o;11;i025;11;o;12
-    - net3;o;12;i025;12;o;01
-  -
-    - pagename;2025 05 19 | 0.50
-    - net3;o;01;i050;01;o;02;color;red
-    - net3;o;02;i050;02;o;03
-    - net3;o;03;i050;03;o;04
-    - net3;o;04;i050;04;o;05;color;red
-    - net3;o;05;i050;05;o;06
-    - net3;o;06;i050;06;o;07
-    - net3;o;07;i050;07;o;08;color;red
-    - net3;o;08;i050;08;o;09
-    - net3;o;09;i050;09;o;10
-    - net3;o;10;i050;10;o;11;color;red
-    - net3;o;11;i050;11;o;12
-    - net3;o;12;i050;12;o;01
-  -
-    - pagename;2025 05 19 | 0.75
-    - net3;o;01;i075;01;o;02;color;red
-    - net3;o;02;i075;02;o;03
-    - net3;o;03;i075;03;o;04
-    - net3;o;04;i075;04;o;05;color;red
-    - net3;o;05;i075;05;o;06
-    - net3;o;06;i075;06;o;07
-    - net3;o;07;i075;07;o;08;color;red
-    - net3;o;08;i075;08;o;09
-    - net3;o;09;i075;09;o;10
-    - net3;o;10;i075;10;o;11;color;red
-    - net3;o;11;i075;11;o;12
-    - net3;o;12;i075;12;o;01
   -
     - pagename;2025 05 19 | 2
     - net3;o;01;i;01;o;02
