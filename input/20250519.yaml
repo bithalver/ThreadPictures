@@ -30,7 +30,37 @@ planes:
   - k010;regular;12;90;0.686
 
   - i2;regular;12;-61;0.5
+  
+  - B;regular;12;-60;8
+  - BS;shiftXY;0;-2;B
 pages:
+  -
+    - pagename;2025 05 19 | 0.50 | B 8 2.0 | 2025 08 12
+    - net3;o;01;i050;01;o;02;threads;4;color;red
+    - net3;o;02;i050;02;o;03;threads;4
+    - net3;o;03;i050;03;o;04;threads;4
+    - net3;o;04;i050;04;o;05;threads;4;color;red
+    - net3;o;05;i050;05;o;06;threads;4
+    - net3;o;06;i050;06;o;07;threads;4
+    - net3;o;07;i050;07;o;08;threads;4;color;red
+    - net3;o;08;i050;08;o;09;threads;4
+    - net3;o;09;i050;09;o;10;threads;4
+    - net3;o;10;i050;10;o;11;threads;4;color;red
+    - net3;o;11;i050;11;o;12;threads;4
+    - net3;o;12;i050;12;o;01;threads;4
+    
+    - net3;BS;01;o;01;BS;02
+    - net3;BS;02;o;02;BS;03
+    - net3;BS;03;o;03;BS;04;color;red
+    - net3;BS;04;o;04;BS;05
+    - net3;BS;05;o;05;BS;06
+    - net3;BS;06;o;06;BS;07;color;red
+    - net3;BS;07;o;07;BS;08
+    - net3;BS;08;o;08;BS;09
+    - net3;BS;09;o;09;BS;10;color;red
+    - net3;BS;10;o;10;BS;11
+    - net3;BS;11;o;11;BS;12
+    - net3;BS;12;o;12;BS;01;color;red
   -
     - pagename;2025 05 19 | 0.00
     - net3;o;01;i000;01;o;02;color;red
