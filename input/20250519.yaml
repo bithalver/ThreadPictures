@@ -19,10 +19,16 @@ planes:
   - i033;shiftXY;0;0.3333;i000
   - in33;shiftXY;0;-0.3333;i000
 
+  - iA1_33;shiftXY;-0.057735;0.1;i000
+  - iA2_33;shiftXY;-0.057735;-0.1;i000
+  - iA3_33;shiftXY;0.11547;0;i000
+
+  - iB2_33;shiftXY;-0.057735;0.1;i000
+  - iB3_33;shiftXY;-0.057735;-0.1;i000
+  - iB1_33;shiftXY;0.11547;0;i000
 
   - ip33_33;shiftXY;0.2;0.3333;i000
   - in33_33;shiftXY;-0.2;-0.3333;i000
-
 
   - j000;regular;12;60;1.4
   - k000;regular;12;120;0.98
@@ -34,6 +40,34 @@ planes:
   - B;regular;12;-60;8
   - BS;shiftXY;0;-2;B
 pages:
+  -
+    - pagename;2025 05 19 | 2025 11 13 | 1
+    - net3;o;01;iA1_33;01;o;02;color;red
+    - net3;o;02;iA1_33;02;o;03;color;red
+    - net3;o;03;iA2_33;03;o;04;color;lightgreen
+    - net3;o;04;iA2_33;04;o;05;color;lightgreen
+    - net3;o;05;iA2_33;05;o;06;color;lightgreen
+    - net3;o;06;iA2_33;06;o;07;color;lightgreen
+    - net3;o;07;iA3_33;07;o;08;color;lightblue
+    - net3;o;08;iA3_33;08;o;09;color;lightblue
+    - net3;o;09;iA3_33;09;o;10;color;lightblue
+    - net3;o;10;iA3_33;10;o;11;color;lightblue
+    - net3;o;11;iA1_33;11;o;12;color;red
+    - net3;o;12;iA1_33;12;o;01;color;red
+  -
+    - pagename;2025 05 19 | 2025 11 13 | 2 | For Emil at Lime Ears
+    - net3;o;01;iB1_33;01;o;02;color;red
+    - net3;o;02;iB1_33;02;o;03;color;red
+    - net3;o;03;iB2_33;03;o;04;color;lightgreen
+    - net3;o;04;iB2_33;04;o;05;color;lightgreen
+    - net3;o;05;iB2_33;05;o;06;color;lightgreen
+    - net3;o;06;iB2_33;06;o;07;color;lightgreen
+    - net3;o;07;iB3_33;07;o;08;color;lightblue
+    - net3;o;08;iB3_33;08;o;09;color;lightblue
+    - net3;o;09;iB3_33;09;o;10;color;lightblue
+    - net3;o;10;iB3_33;10;o;11;color;lightblue
+    - net3;o;11;iB1_33;11;o;12;color;red
+    - net3;o;12;iB1_33;12;o;01;color;red
   -
     - pagename;2025 05 19 | 0.50 | B 8 2.0 | 2025 08 12
     - net3;o;01;i050;01;o;02;threads;4;color;red
