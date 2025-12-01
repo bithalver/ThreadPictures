@@ -8,6 +8,8 @@ global:
     colorgradient2: CG2;11;0.35 0.45 1;white
 planes:
   - o;regular;12;0;2
+  - o_;regular;12;0;1.6
+  - o3;shiftXY;0;-0.4;o_
   - i;regular;12;91;0.5
 
   - i000;regular;12;60;0.5
@@ -49,6 +51,34 @@ planes:
   - B;regular;12;-60;8
   - BS;shiftXY;0;-2;B
 pages:
+  -
+    - pagename;2025 05 19 | 0.00 | right 0.75
+    - net3;o;01;i000;01;o;02;color;silver;shiftY;-0.75
+    - net3;o;02;i000;02;o;03;shiftY;-0.75;color;silver
+    - net3;o;03;i000;03;o;04;color;red
+    - net3;o;04;i000;04;o;05;color;red
+    - net3;o;05;i000;05;o;06;color;silver
+    - net3;o;06;i000;06;o;07;color;silver
+    - net3;o;07;i000;07;o;08;color;red
+    - net3;o;08;i000;08;o;09;color;red
+    - net3;o;09;i000;09;o;10;shiftY;-0.75;color;silver
+    - net3;o;10;i000;10;o;11;color;silver;shiftY;-0.75
+    - net3;o;11;i000;11;o;12;shiftY;-0.75;color;red
+    - net3;o;12;i000;12;o;01;shiftY;-0.75;color;red
+  -
+    - pagename;2025 11 27 | 0.5 and 0.4 | Frozen 6 | right outer size 0.8
+    - net3;o3;01;i004_S;01;o3;02;color;CG2_11
+    - net3;o;02;i000;02;o;03;color;CG2_00
+    - net3;o;03;i000;03;o;04;color;CG2_01
+    - net3;o;04;i000;04;o;05;color;CG2_02
+    - net3;o;05;i000;05;o;06;color;CG2_03
+    - net3;o;06;i000;06;o;07;color;CG2_04
+    - net3;o;07;i000;07;o;08;color;CG2_05
+    - net3;o3;08;i004_S;08;o3;09;color;CG2_06
+    - net3;o3;09;i004_S;09;o3;10;color;CG2_07
+    - net3;o3;10;i004_S;10;o3;11;color;CG2_08
+    - net3;o3;11;i004_S;11;o3;12;color;CG2_09
+    - net3;o3;12;i004_S;12;o3;01;color;CG2_10
   -
     - pagename;2025 11 27 | 0.5 and 0.4 | Frozen 6
     - net3;o;01;i004_S;01;o;02;color;CG2_11
