@@ -52,6 +52,20 @@ planes:
   - BS;shiftXY;0;-2;B
 pages:
   -
+    - pagename;2025 05 19 | 2025 12 14
+    - net3;o;01;i000;01;o;02;shiftY;-2.23;shiftX;-1;color;green
+    - net3;o;02;i000;02;o;03;shiftY;-2.23;shiftX;-1;color;green
+    - net3;o;03;i000;03;o;04;color;0.75,0,0.75
+    - net3;o;04;i000;04;o;05;color;0.75,0,0.75
+    - net3;o;05;i000;05;o;06;color;0.75,0,0.75
+    - net3;o;06;i000;06;o;07;color;0.75,0,0.75
+    - net3;o;07;i000;07;o;08;color;0.75,0,0.75
+    - net3;o;08;i000;08;o;09;color;0.75,0,0.75
+    - net3;o;09;i000;09;o;10;shiftY;-2.23;shiftX;-1;color;green
+    - net3;o;10;i000;10;o;11;shiftY;-2.23;shiftX;-1;color;green
+    - net3;o;11;i000;11;o;12;shiftY;-2.23;shiftX;-1;color;green
+    - net3;o;12;i000;12;o;01;shiftY;-2.23;shiftX;-1;color;green
+  -
     - pagename;2025 05 19 | 0.00 | right 0.75
     - net3;o;01;i000;01;o;02;color;silver;shiftY;-0.75
     - net3;o;02;i000;02;o;03;shiftY;-0.75;color;silver
