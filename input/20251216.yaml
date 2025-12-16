@@ -1,0 +1,71 @@
+global:
+    background: darkgray
+    fontcolor: white
+    color: white
+    threads: 4
+#    style: filledcurve
+planes:
+  - g;grid3;80;80
+  - g_;connected;0;0;0;1;g;0;1
+pages:
+  -
+    - pagename;2025 12 16 | 1
+    - net3s;g;100;000;001;color;lightgreen
+    - net3s;g;001;002;101;color;lightgreen
+    - net3s;g;101;201;100;color;lightgreen
+
+    - net3s;g;102;002;003;color;lightgreen
+    - net3s;g;003;004;103;color;lightgreen
+    - net3s;g;103;203;102;color;lightgreen
+
+    - net3s;g;301;201;202;color;lightgreen
+    - net3s;g;202;203;302;color;lightgreen
+    - net3s;g;302;402;301;color;lightgreen
+
+    - net3s;g;100;000;001;shiftX;4;color;lightgreen
+    - net3s;g;001;002;101;shiftX;4;color;lightgreen
+    - net3s;g;101;201;100;shiftX;4;color;lightgreen
+
+    - net3s;g;102;002;003;shiftX;4;color;lightgreen
+    - net3s;g;003;004;103;shiftX;4;color;lightgreen
+    - net3s;g;103;203;102;shiftX;4;color;lightgreen
+
+    - net3s;g;301;201;202;shiftX;4;color;lightgreen
+    - net3s;g;202;203;302;shiftX;4;color;lightgreen
+    - net3s;g;302;402;301;shiftX;4;color;lightgreen
+
+    - net3s;g;100;000;001;shiftX;2;shiftY;3.4641;color;lightgreen
+    - net3s;g;001;002;101;shiftX;2;shiftY;3.4641;color;lightgreen
+    - net3s;g;101;201;100;shiftX;2;shiftY;3.4641;color;lightgreen
+
+    - net3s;g;102;002;003;shiftX;2;shiftY;3.4641;color;lightgreen
+    - net3s;g;003;004;103;shiftX;2;shiftY;3.4641;color;lightgreen
+    - net3s;g;103;203;102;shiftX;2;shiftY;3.4641;color;lightgreen
+
+    - net3s;g;301;201;202;shiftX;2;shiftY;3.4641;color;lightgreen
+    - net3s;g;202;203;302;shiftX;2;shiftY;3.4641;color;lightgreen
+    - net3s;g;302;402;301;shiftX;2;shiftY;3.4641;color;lightgreen
+
+
+    - net3s;g;100;000;001;shiftX;2;shiftY;5.19615
+    - net3s;g;001;002;101;shiftX;2;shiftY;5.19615
+    - net3s;g;101;201;100;shiftX;2;shiftY;5.19615
+
+    - net3s;g;102;002;003;shiftX;2;shiftY;5.19615
+    - net3s;g;003;004;103;shiftX;2;shiftY;5.19615
+    - net3s;g;103;203;102;shiftX;2;shiftY;5.19615
+
+    - net3s;g;301;201;202;shiftX;2;shiftY;5.19615
+    - net3s;g;202;203;302;shiftX;2;shiftY;5.19615
+    - net3s;g;302;402;301;shiftX;2;shiftY;5.19615
+
+    - net3s;g;100;000;001;color;red;shiftX;3;shiftY;7.7942
+    - net3s;g;001;002;101;color;red;shiftX;3;shiftY;7.7942
+    - net3s;g;101;201;100;color;red;shiftX;3;shiftY;7.7942
+
+
+  -
+    - pagename;2025 12 16 | 2
+    - net3s;g;401;000;002
+    - net3s;g;002;004;403
+    - net3s;g;401;802;403
