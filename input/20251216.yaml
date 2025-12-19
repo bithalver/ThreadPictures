@@ -62,10 +62,64 @@ pages:
     - net3s;g;100;000;001;color;red;shiftX;3;shiftY;7.7942
     - net3s;g;001;002;101;color;red;shiftX;3;shiftY;7.7942
     - net3s;g;101;201;100;color;red;shiftX;3;shiftY;7.7942
-
-
   -
     - pagename;2025 12 16 | 2
     - net3s;g;401;000;002
     - net3s;g;002;004;403
     - net3s;g;401;802;403
+  -
+    - pagename;2025 12 16 | 3
+    - net3s;g;000;402;004;color;red;threads;18;lastthread;5
+    - net3s;g;000;402;004;color;red;threads;18;firstthread;13
+    - net3s;g;601;402;603;color;red;threads;18;lastthread;5
+    - net3s;g;601;402;603;color;red;threads;18;firstthread;13
+    - net3s;g;601;402;000;color;red;threads;18;lastthread;5
+    - net3s;g;601;402;000;color;red;threads;18;firstthread;13
+    - net3s;g;004;402;603;color;red;threads;18;lastthread;5
+    - net3s;g;004;402;603;color;red;threads;18;firstthread;13
+    - net3s;g;000;402;004;color;white;threads;18;style;6,7,11,12
+    - net3s;g;601;402;603;color;white;threads;18;style;6,7,11,12
+    - net3s;g;601;402;000;color;white;threads;18;style;6,7,11,12
+    - net3s;g;004;402;603;color;white;threads;18;style;6,7,11,12
+    - net3s;g;000;402;004;color;black;threads;18;style;8,9,10
+    - net3s;g;601;402;603;color;black;threads;18;style;8,9,10
+    - net3s;g;601;402;000;color;black;threads;18;style;8,9,10
+    - net3s;g;004;402;603;color;black;threads;18;style;8,9,10
+  -
+    - pagename;2025 12 16 | 4
+    - net3s;g;000;402;004;color;red;threads;18;lastthread;5
+    - net3s;g;000;402;004;color;white;threads;18;style;6,7,11,12
+    - net3s;g;000;402;004;color;red;threads;18;firstthread;13
+    - net3s;g;800;402;603;color;red;threads;18;lastthread;5
+    - net3s;g;800;402;603;color;white;threads;18;style;6,7,11,12
+    - net3s;g;800;402;603;color;red;threads;18;firstthread;13
+    - net3s;g;000;402;004;color;black;threads;18;firstthread;8;lastthread;10
+    - net3s;g;800;402;603;color;black;threads;18;firstthread;8;lastthread;10
+
+    - net3s;g;000;402;800;color;lightblue;threads;18;lastthread;5
+    - net3s;g;000;402;800;color;white;threads;18;style;6,7,11,12
+    - net3s;g;000;402;800;color;lightblue;threads;18;firstthread;13
+    - net3s;g;004;402;603;color;lightblue;threads;18;lastthread;5
+    - net3s;g;004;402;603;color;white;threads;18;style;6,7,11,12
+    - net3s;g;004;402;603;color;lightblue;threads;18;firstthread;13
+    - net3s;g;000;402;800;color;black;threads;18;firstthread;8;lastthread;10
+    - net3s;g;004;402;603;color;black;threads;18;firstthread;8;lastthread;10
+  -
+    - pagename;2025 12 16 | 5
+    - net3s;g;201;402;004;color;red;threads;18;lastthread;5
+    - net3s;g;201;402;004;color;white;threads;18;style;6,7,11,12
+    - net3s;g;201;402;004;color;red;threads;18;firstthread;13
+    - net3s;g;800;402;603;color;red;threads;18;lastthread;5
+    - net3s;g;800;402;603;color;white;threads;18;style;6,7,11,12
+    - net3s;g;800;402;603;color;red;threads;18;firstthread;13
+    - net3s;g;201;402;004;color;black;threads;18;firstthread;8;lastthread;10
+    - net3s;g;800;402;603;color;black;threads;18;firstthread;8;lastthread;10
+
+    - net3s;g;201;402;800;color;lightblue;threads;18;lastthread;5
+    - net3s;g;201;402;800;color;white;threads;18;style;6,7,11,12
+    - net3s;g;201;402;800;color;lightblue;threads;18;firstthread;13
+    - net3s;g;004;402;603;color;lightblue;threads;18;lastthread;5
+    - net3s;g;004;402;603;color;white;threads;18;style;6,7,11,12
+    - net3s;g;004;402;603;color;lightblue;threads;18;firstthread;13
+    - net3s;g;201;402;800;color;black;threads;18;firstthread;8;lastthread;10
+    - net3s;g;004;402;603;color;black;threads;18;firstthread;8;lastthread;10
