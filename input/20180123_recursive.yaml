@@ -7,6 +7,13 @@ planes:
   - r4r;regular;4;45
   - r4s;connected;r3;3;r3;2;r4;1;2
   - s;freeform;r3;0;r3;1;r3;2;r3;3;r4s;3;r4s;4
+  - s20251231_1;freeform;r3;0;r3;1;r3;2;r3;3;r4s;3;r4s;4
+  
+  - aI;angle;ENV[aI]-15
+  - aM;angle;ENV[aM]120
+  - a_;connected;aI;0;aI;2;aM;2;0
+  - s20251231_2;freeform;a_;0;a_;1;a_;2;*a_,1,a_,2,0.5
+#  - s20251231_2;freeform;a_;0;a_;1;a_;2
 
   - w;freeform;0;0;0;20;20;20;20;0;1;19;19;19;20;19;1;18;19;18
 
@@ -35,6 +42,64 @@ planes:
   - sB2;freeform;r3B2;0;r3B2;1;r3B2;2;r3B2;3;r4B2;3;r4B2;4
 
 pages:
+  -
+    - pagename;2025 12 31 | 2e
+    - background;white
+    - recursive;s20251231_2;24;2;0;3;1;2,0,1;style;triangle
+  -
+    - pagename;2025 12 31 | 2d
+    - background;white
+    - recursive;s20251231_2;24;2;0;3;1;2,0,1;threads;2
+    - recursive;s20251231_2;24;2;0;3;1;1,2,0;threads;2
+  -
+    - pagename;2025 12 31 | 3b
+    - background;darkgray
+#    - recursive;s20251231_2;24;2;0;3;1;2,0,1;color;yellow;style;filledcurve
+    - recursive;s20251231_2;24;2;0;3;1;3,2,0;color;orange;style;filledcurve
+    - recursive;s20251231_2;24;2;0;3;1;3,1,0;color;orange;style;filledcurve
+  -
+    - pagename;2025 12 31 | 3a
+    - background;darkgray
+    - recursive;s20251231_2;24;2;0;3;1;2,0,1;color;yellow;style;filledcurve
+    - recursive;s20251231_2;24;2;0;3;1;1,2,0;color;orange;style;filledcurve
+  -
+    - pagename;2025 12 31 | 3
+    - background;darkgray
+    - recursive;s20251231_2;24;2;0;3;1;2,0,1;color;yellow;style;filledcurve
+    - recursive;s20251231_2;24;2;0;3;1;2,1,0;color;orange;style;filledcurve
+  -
+    - pagename;2025 12 31 | 2b | Korberohogtelek ! | A laughed around you
+    - background;white
+    - recursive;s20251231_2;24;2;0;3;1;2,0,1;color;0 0 0;style;moon;moon1;0.95;moon2;0.25
+    - recursive;s20251231_2;24;2;0;3;1;2,0,1;color;0.333 0.333 0.333;style;moon;moon1;0.85;moon2;0.35
+    - recursive;s20251231_2;24;2;0;3;1;2,0,1;color;0.666 0.666 0.666;style;moon;moon1;0.75;moon2;0.45
+    - recursive;s20251231_2;24;2;0;3;1;2,0,1;color;1 1 1;style;moon;moon1;0.65;moon2;0.55
+  -
+    - pagename;2025 12 31 | 2a
+    - background;darkgray
+    - recursive;s20251231_2;24;2;0;3;1;2,0,1;color;lightblue;style;moon;moon1;0.95;moon2;0.25
+    - recursive;s20251231_2;24;2;0;3;1;2,0,1;color;blue;style;moon;moon1;0.85;moon2;0.35
+    - recursive;s20251231_2;24;2;0;3;1;2,0,1;color;0.666 0 1;style;moon;moon1;0.75;moon2;0.45
+    - recursive;s20251231_2;24;2;0;3;1;2,0,1;color;black;style;moon;moon1;0.65;moon2;0.55
+  -
+    - pagename;2025 12 31 | 2
+    - background;darkgray
+    - recursive;s20251231_2;24;2;0;3;1;2,0,1;color;yellow;style;moon;moon1;0.95;moon2;0.25
+    - recursive;s20251231_2;24;2;0;3;1;2,0,1;color;orange;style;moon;moon1;0.85;moon2;0.35
+    - recursive;s20251231_2;24;2;0;3;1;2,0,1;color;red;style;moon;moon1;0.75;moon2;0.45
+    - recursive;s20251231_2;24;2;0;3;1;2,0,1;color;black;style;moon;moon1;0.65;moon2;0.55
+  -
+    - pagename;2025 12 31 | 2c | just for holes
+    - background;white
+    - recursive;s20251231_2;24;2;0;3;1;2,0,1;color;black;style;holes;threads;8
+    - recursive;s20251231_2;24;2;0;3;1;2,0,1;color;black;style;holes;threads;4
+
+    - recursive;s20251231_2;24;2;0;3;1;1,2,0;color;black;style;holes;threads;8
+    - recursive;s20251231_2;24;2;0;3;1;1,2,0;color;black;style;holes;threads;4
+  -
+    - pagename;2025 12 31 | 1 | Smoke
+    - background;darkgray
+    - recursive;s20251231_1;12;1;2;3;4;1,2,3;2,3,4;color;lightgray
   -
     - pagename;Cradle of infinity variant 2
     - background;darkgray
