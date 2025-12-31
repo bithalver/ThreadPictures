@@ -220,29 +220,29 @@ if (defined $config->{planes}) {
       }
       case (/^ci/i){ # circle: plane-to-spin (mandatory), nth1 (mandatory), nth2 (mandatory), circle_sides (mandatory), circle_initial_angle (optional), circle_size (optional)
 	    # create a series of planes around a "circle"; freshly created plane names will be planes-to-spin_01 and so on
-	    my ($plane_to_spin, $nth1, $nth2)=@AP;
-  	  my @basicplaneinfo=splice @AP,3;  my @mybasicplane=basicplane(@basicplaneinfo);
-	    for my $i (1..$basicplaneinfo[0]) { # 1 .. sides
+	      my ($plane_to_spin, $nth1, $nth2)=@AP;
+  	    my @basicplaneinfo=splice @AP,3;  my @mybasicplane=basicplane(@basicplaneinfo);
+	      for my $i (1..$basicplaneinfo[0]) { # 1 .. sides
 	      my $i1=( $i ==  $basicplaneinfo[0] ? 1 : $i+1);
           $TP_planes{sprintf("%s_%02d",$planename,$i)}=create_connected_plane($mybasicplane[$i*2] , $mybasicplane[$i*2+1], $mybasicplane[$i1*2] , $mybasicplane[$i1*2+1], $plane_to_spin, $nth1, $nth2);
-  	  }
-    }
-    case (/^spin/i){ # spin: plane-to-spin (mandatory), nth1 (mandatory), nth2 (mandatory), circle_sides (mandatory), circle_initial_angle (optional), circle_size (optional)
-	  # create a series of planes around a "circle"; freshly created plane names will be planes-to-spin_01 and so on
-	  my ($plane_to_spin, $nth1, $nth2)=@AP;
-	  my @basicplaneinfo=splice @AP,3;  my @mybasicplane=basicplane(@basicplaneinfo);
-	  for my $i (1..$basicplaneinfo[0]) { # 1 .. sides
-        $TP_planes{sprintf("%s_%02d",$planename,$i)}=create_connected_plane($mybasicplane[0] , $mybasicplane[1], $mybasicplane[$i*2] , $mybasicplane[$i*2+1], $plane_to_spin, $nth1, $nth2);
-	  }
-    }
-    case (/^ge/i){ # geometric_line; startX, startY, endX, endY, sections, magnitude (for 1 section)
-      my @w=geometric_line(@AP); $TP_planes{$planename}=\@w;
-    }
-    case (/^shiftXY/i){ # shift an already existing plane;  X,Y,original_plane
-      my @w=shiftXYplane(@AP);
-      $TP_planes{$planename}=\@w;
-    }
-    else {warn "plane type '$_' is not (yet) supported (but processing goes on)\n";}
+  	    }
+      }
+      case (/^spin/i){ # spin: plane-to-spin (mandatory), nth1 (mandatory), nth2 (mandatory), circle_sides (mandatory), circle_initial_angle (optional), circle_size (optional)
+	      # create a series of planes around a "circle"; freshly created plane names will be planes-to-spin_01 and so on
+	      my ($plane_to_spin, $nth1, $nth2)=@AP;
+  	    my @basicplaneinfo=splice @AP,3;  my @mybasicplane=basicplane(@basicplaneinfo);
+  	    for my $i (1..$basicplaneinfo[0]) { # 1 .. sides
+          $TP_planes{sprintf("%s_%02d",$planename,$i)}=create_connected_plane($mybasicplane[0] , $mybasicplane[1], $mybasicplane[$i*2] , $mybasicplane[$i*2+1], $plane_to_spin, $nth1, $nth2);
+    	  }
+      }
+      case (/^ge/i){ # geometric_line; startX, startY, endX, endY, sections, magnitude (for 1 section)
+        my @w=geometric_line(@AP); $TP_planes{$planename}=\@w;
+      }
+      case (/^shiftXY/i){ # shift an already existing plane;  X,Y,original_plane
+        my @w=shiftXYplane(@AP);
+        $TP_planes{$planename}=\@w;
+      }
+      else {warn "plane type '$_' is not (yet) supported (but processing goes on)\n";}
     }
   }
   if ($opts_debug) {  warn "Planes data\n" ;
