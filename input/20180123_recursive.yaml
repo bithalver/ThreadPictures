@@ -43,6 +43,11 @@ planes:
 
 pages:
   -
+    - pagename;2025 12 31 | Inside out | 1
+    - background;darkgray
+    - recursive;s20251231_2;ENV[iter]12;3;1;2;0;2,0,1;color;yellow;style;filledcurve
+    - recursive;s20251231_2;4;3;1;2;0;3,2,0;color;orange;style;filledcurve
+  -
     - pagename;2025 12 31 | 2e
     - background;white
     - recursive;s20251231_2;ENV[iter]24;2;0;3;1;2,0,1;style;triangle
