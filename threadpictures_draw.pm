@@ -239,6 +239,8 @@ sub percent_thread {
 # To draw one element of the 'net' type
 sub draw_net {
   my (%AN)=@_; # AN like Actual Net
+  
+  if ($opts_debug) { print STDERR "Drawing net: "; warnhash %AN };
 
   # style dummy creates a line with threads 2 if you make holes (unless threads are explicitly defined)
   if ( $AN{'style'} and $AN{'style'} =~ m/^dnd$|^donotdraw$|^dummy$/i ) { $AN{threads} //= 2; }
@@ -405,62 +407,63 @@ sub process_element {
 #  my @AE=@_; # AE like ActualElement
   my @AE;
   my @TEMP=@_;
-    while (@TEMP) {push(@AE,percent_on_line(splice(@TEMP,0,1)));}
-    # while (@TEMP) {push(@AE, splice(@TEMP,0,1));}
-      switch (splice @AE,0,1) {
-      case (/^net$|^net4$/i){ # first line (startX startY endX endY) ; second line (startX startY endX endY)
-        add_net4(splice @AE,0,8);
-        while (@AE) {modify_lastelement(shift @AE,shift @AE)}
-      }
-      case (/^net3$/i){ # start X and Y; center X and Y; end X and Y
-        add_net3(splice @AE,0,6);
-        while (@AE) {modify_lastelement(shift @AE,shift @AE)}
-      }
-      case (/^net3s$/i){ # plane; first point, center point, last point
-        add_net3s(splice @AE,0,4);
-        while (@AE) {modify_lastelement(shift @AE,shift @AE)}
-      }
-      case (/^net4s$/i){ # plane; first line start and end point, second  line start and end point
-        add_net4s(splice @AE,0,5);
-        while (@AE) {modify_lastelement(shift @AE,shift @AE)}
-      }
-      case (/^loop$/i){ # plane; point list (0th point will not be used from plane !)
-        add_loop(@AE); # Provide the whole thing
-        # Lot of nets, additional parameters handled inside
-      }
-      case (/^loop4$/i){ # plane; point list (0th point will not be used from plane !)
-        add_loop4(@AE); # Provide the whole thing
-        # Lot of nets, additional parameters handled inside
-      }
-      case (/^pagename$/i){
-        $TP_all[@TP_all] = { type => 'pagename', string => splice(@AE,0,1) }
-      }
-      case (/^background$/i){
-        $TP_all[@TP_all] = { type => 'background', color => splice(@AE,0,1) }
-      }
-      case (/^color$/i){
-        $TP_all[@TP_all] = { type => 'color', color => splice(@AE,0,1) }
-      }
-      case (/^fontcolor$/i){
-        $TP_all[@TP_all] = { type => 'fontcolor', color => splice(@AE,0,1) }
-      }
-      case (/^path$/i){
-        add_path(@AE);
-      }
-      case (/^recursive$/i){
-        add_recursive(@AE);
-      }
-      case (/^circular$/i){
-        add_circular(@AE);
-      }
-      case (/^style$/i){
-        $TP_all[@TP_all] = { type => 'style', string => splice(@AE,0,1) }
-	    }
-      case (/^xymirror$/i){
-        $TP_all[@TP_all] = { type => 'xymirror', string => splice(@AE,0,1) }
-	    }
-      else {warn "element '$_' is not (yet) supported (but processing goes on)\n";}
-      }
+  while (@TEMP) {push(@AE,percent_on_line(splice(@TEMP,0,1)));}
+  # while (@TEMP) {push(@AE, splice(@TEMP,0,1));}
+
+  switch (splice @AE,0,1) {
+    case (/^net$|^net4$/i){ # first line (startX startY endX endY) ; second line (startX startY endX endY)
+      add_net4(splice @AE,0,8);
+      while (@AE) {modify_lastelement(shift @AE,shift @AE)}
+    }
+    case (/^net3$/i){ # start X and Y; center X and Y; end X and Y
+      add_net3(splice @AE,0,6);
+      while (@AE) {modify_lastelement(shift @AE,shift @AE)}
+    }
+    case (/^net3s$/i){ # plane; first point, center point, last point
+      add_net3s(splice @AE,0,4);
+      while (@AE) {modify_lastelement(shift @AE,shift @AE)}
+    }
+    case (/^net4s$/i){ # plane; first line start and end point, second  line start and end point
+      add_net4s(splice @AE,0,5);
+      while (@AE) {modify_lastelement(shift @AE,shift @AE)}
+    }
+    case (/^loop$/i){ # plane; point list (0th point will not be used from plane !)
+      add_loop(@AE); # Provide the whole thing
+      # Lot of nets, additional parameters handled inside
+    }
+    case (/^loop4$/i){ # plane; point list (0th point will not be used from plane !)
+      add_loop4(@AE); # Provide the whole thing
+      # Lot of nets, additional parameters handled inside
+    }
+    case (/^pagename$/i){
+      $TP_all[@TP_all] = { type => 'pagename', string => splice(@AE,0,1) }
+    }
+    case (/^background$/i){
+      $TP_all[@TP_all] = { type => 'background', color => splice(@AE,0,1) }
+    }
+    case (/^color$/i){
+      $TP_all[@TP_all] = { type => 'color', color => splice(@AE,0,1) }
+    }
+    case (/^fontcolor$/i){
+      $TP_all[@TP_all] = { type => 'fontcolor', color => splice(@AE,0,1) }
+    }
+    case (/^path$/i){
+      add_path(@AE);
+    }
+    case (/^recursive$/i){
+      add_recursive(@AE);
+    }
+    case (/^circular$/i){
+      add_circular(@AE);
+    }
+    case (/^style$/i){
+      $TP_all[@TP_all] = { type => 'style', string => splice(@AE,0,1) }
+   }
+    case (/^xymirror$/i){
+      $TP_all[@TP_all] = { type => 'xymirror', string => splice(@AE,0,1) }
+   }
+    else {warn "element '$_' is not (yet) supported (but processing goes on)\n";}
+  }
 }
 
 # This is the main function to draw a page from the collected info in @TP_all
@@ -483,7 +486,7 @@ sub draw_all {
   if ($opts_debug) { warn "TP_all elements are:\n"};
   foreach my $ATPAE_ (@TP_all) { # ATPAE stands for Actual TP_all Element
     my %ATPAE=%{$ATPAE_};
-    if ($opts_debug) { warnhash %ATPAE };
+    # if ($opts_debug) { warnhash %ATPAE }; # This moved to draw_net() function
     switch ($ATPAE{'type'}) {
       case (/^net$/) {
         no warnings 'uninitialized';  # Handling shiftX and shiftY parameters for a net; they are default to zero.
