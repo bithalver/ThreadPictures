@@ -462,7 +462,7 @@ sub process_element {
     case (/^xymirror$/i){
       $TP_all[@TP_all] = { type => 'xymirror', string => splice(@AE,0,1) }
    }
-    else {warn "element '$_' is not (yet) supported (but processing goes on)\n";}
+    else {warn "type '$_' is not (yet) supported (but processing goes on)\n";}
   }
 }
 
