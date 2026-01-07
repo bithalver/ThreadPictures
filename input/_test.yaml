@@ -32,6 +32,14 @@ planes:
   - E;regular;ENV[Sides]4;90  # ENV var Sides used if exists; otherwise it is 4
   - Test2Shift;regular;4
   - Shifted;shiftXY;1;0;Test2Shift
+
+# for condensed tests
+  - aI;angle;ENV[aI]-15
+  - aM;angle;ENV[aM]120
+  - a_;connected;aI;0;aI;2;aM;2;0
+  - s20251231_2;freeform;a_;0;a_;1;a_;2;*a_,1,a_,2,0.5
+
+
 pages:
   -
     - pagename; first shiftXY test
@@ -225,3 +233,14 @@ pages:
     - pagename;39
     - net3;0;0;-1;1;0;2;threads;39
 
+  -
+    - pagename;First ever condensed test
+    - fontcolor;white
+    - background;darkgray
+    - net3;0;1;0;0;1;0;color;lightgray;threads;20
+    - condensed;net3;0;1;0;0;1;0|color;yellow;style;moon;moon1;0.95;moon2;0.25|color;orange;style;moon;moon1;0.85;moon2;0.35|color;red;style;moon;moon1;0.75;moon2;0.45|color;black;style;moon;moon1;0.65;moon2;0.55
+  -
+    - pagename;First ever condensed test for recursive
+    - fontcolor;white
+    - background;darkgray
+    - condensed;recursive;s20251231_2;4;2;0;3;1;2,0,1|color;yellow;style;moon;moon1;0.95;moon2;0.25|color;orange;style;moon;moon1;0.85;moon2;0.35|color;red;style;moon;moon1;0.75;moon2;0.45|color;black;style;moon;moon1;0.65;moon2;0.55

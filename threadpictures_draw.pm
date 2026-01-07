@@ -462,6 +462,19 @@ sub process_element {
     case (/^xymirror$/i){
       $TP_all[@TP_all] = { type => 'xymirror', string => splice(@AE,0,1) }
    }
+    case (/^condensed$/i){ # Created on 2026 Jan 07
+      if ($opts_debug) { print STDERR ("Condensed All: ", join (";",@AE), "\n" ); }
+      my @CA=split (/\|/,join (";",@AE));
+      # warn join(' XXX ',@CA),"\n";
+      my @CMain=split (';',splice(@CA,0,1));
+      if ($opts_debug) { print STDERR ("Condensed Main: "); warnarray (@CMain); }
+      while (my $CAdd=splice(@CA,0,1)) {
+       my @Cadd=split (';',$CAdd) ;
+        #if ($opts_debug) { print STDERR "Condensed Add: " ;  warnarray (@Cadd) ; }
+        if ($opts_debug) { print STDERR "Condensed Add: " ;  warnarray (@Cadd) ; }
+        process_element ( (@CMain,@Cadd) );
+      }
+    }
     else {warn "type '$_' is not (yet) supported (but processing goes on)\n";}
   }
 }

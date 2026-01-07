@@ -67,6 +67,7 @@ sub HELP_PLANES {
                circle_sides (mandatory), circle_initial_angle (optional), circle_size (optional)
     freshly created plane names will be planes-to-spin_01 and so on
   smaller: create a series of planes from an original one, a gravity center, magnitude and iterations count
+  condensed: when you like to create the same nets but different side parameters (see examples in _test.yaml)
 ";
   exit 0
 }
