@@ -187,7 +187,7 @@ if (defined $config->{planes}) {
     my $planename=splice @AP1,0,1;
     my @AP;
 #    my @AP=@AP1;
-    while (@AP1) {push(@AP,percent_on_line(splice(@AP1,0,1)));}
+    while (@AP1) {push(@AP,PXP(splice(@AP1,0,1)));}
 
     
     if ( $planename !~ /^[a-z]/i ) { warn "Invalid plane name: $planename (should start with a letter), skipped\n"; next;} ;

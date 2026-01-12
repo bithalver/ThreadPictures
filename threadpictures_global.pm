@@ -1,13 +1,14 @@
 package threadpictures_global;
 use strict;
 use warnings;
+use Switch ;
 use 5.10.0;
 
 use Exporter;
 
 our @ISA= qw( Exporter );
 
-our @EXPORT = qw( %TP_GLOBAL %TP_PARAMS @TP_all %TP_planes global_init minmax warnarray warnhash cm min max print_ps_filestart pi my_round colorconvert $opts_input $opts_output $opts_help $opts_help_coords $opts_help_plane $opts_version $opts_debug %TP_colors weight my_random_order percent_on_line TP_weight pointsfromplanesordirect);
+our @EXPORT = qw( %TP_GLOBAL %TP_PARAMS @TP_all %TP_planes global_init minmax warnarray warnhash cm min max print_ps_filestart pi my_round colorconvert $opts_input $opts_output $opts_help $opts_help_coords $opts_help_plane $opts_version $opts_debug %TP_colors weight my_random_order TP_weight pointsfromplanesordirect PXP);
 
 # %TP_GLOBAL holds all global variables, has lowest priority; collected from 3 "sources":
 #   - built-in defaults
@@ -188,23 +189,35 @@ sub pointsfromplanesordirect {
   return @processedinput;
 }
 
-sub percent_on_line {
-  # if input does not start with "*" -> give it back as output
+sub PXP { # Process eXtra Parameters
+  # if input start with
+  #   "*" -> from "x1,y1,x2,y2,weight" output counted in percents between first point (0%) and second point (100%)
+  #   "^" -> from "x1,y1,x2,y2,x3,y3,x4,y4" output the intersection on lines (x1y1-x2y2) - (x3y3-x4y4)
+  #       any input line is zero lenght _or_ lines are parallel -> starting point of line1 is the result
   my $I=$_[0];
-  my @O;
-  # return $I if (substr($I , 0, 1) ne "*")
-  if (substr($I , 0, 1) ne "*") {
-    push (@O, $I);
-  } else {
+
+  switch ( substr($I,0,1) ) {
+  case (/^[*%]/) {
     my ($x1, $y1, $x2, $y2, $w) = split(',',substr($I,1));
     ($x1, $y1)=pointsfromplanesordirect($x1, $y1);
     ($x2, $y2)=pointsfromplanesordirect($x2, $y2);
-    push(@O,TP_weight($x1, $y1, $x2, $y2, $w, 1));
+    return TP_weight($x1, $y1, $x2, $y2, $w, 1);
   }
-  # warnarray(@O);
-  return @O;
+  case (/^[\^]/) {
+    my ($x1, $y1, $x2, $y2, $x3, $y3, $x4, $y4) = split(',',substr($I,1));
+    ($x1, $y1)=pointsfromplanesordirect($x1, $y1);
+    ($x2, $y2)=pointsfromplanesordirect($x2, $y2);
+    ($x3, $y3)=pointsfromplanesordirect($x3, $y3);
+    ($x4, $y4)=pointsfromplanesordirect($x4, $y4);
+    if ( ( $x1==$x2 and $y1==$y2 ) or ( $x3==$x4 and $y3==$y4 ) ) { return ($x1, $y1); } # One of the lines are zero lenght
+    my $denominator = (($y4 - $y3) * ($x2 - $x1) - ($x4 - $x3) * ($y2 - $y1));
+    if ($denominator == 0) { return ($x1, $y1) ; } # Lines are parallel
+    my $U = (($x4 - $x3) * ($y1 - $y3) - ($y4 - $y3) * ($x1 - $x3)) / $denominator ;
+    return ( ( $x1 + $U * ($x2 - $x1) , $y1 + $U * ($y2 - $y1) ) );
+  }
+  else {return ( ($I) );}
+  }
 }
-
 
 1;
 

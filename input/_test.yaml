@@ -55,10 +55,10 @@ pages:
     - net3s;E;4;0;1;firstthread;50.0001%;lastthread;75%;color;0.5 0 0
     - net3s;E;4;0;1;firstthread;75.0001%;color;0.25 0 0
   -
-    - pagename; first percent-in-line test (both for plane and net)
+    - pagename; first percent-on-line test (both for plane and net) (both "*" and "%" are used)
     - background;lightgray
     - net3;0;0;1;0;*1,0,1,2,0.5;color;white
-    - net3;0;0;1;0;*1,0,1,2,0.25;color;yellow;style;filledcurve
+    - net3;0;0;1;0;%1,0,1,2,0.25;color;yellow;style;filledcurve
     - net3;0;0;1;0;*1,0,1,2,0.75;color;blue
     - net3s;tp;0;1;2;color;green
 
@@ -244,3 +244,13 @@ pages:
     - fontcolor;white
     - background;darkgray
     - condensed;recursive;s20251231_2;4;2;0;3;1;2,0,1|color;yellow;style;moon;moon1;0.95;moon2;0.25|color;orange;style;moon;moon1;0.85;moon2;0.35|color;red;style;moon;moon1;0.75;moon2;0.45|color;black;style;moon;moon1;0.65;moon2;0.55
+  -
+    - pagename;First ever intersection test
+    - background;lightgray
+    - color;darkgray
+    - condensed;net3;^r5,5,r5,3,r5,1,r5,4;r5;1;r5;5|style;filledtriangle;color;yellow|style;filledcurve
+    - condensed;net3;^r5,1,r5,4,r5,2,r5,5;r5;2;r5;1|style;filledtriangle;color;white|style;filledcurve
+    - net3;r5;2;r5;3;^r5,2,r5,5,r5,3,r5,1;style;filledcurve
+    - net3;r5;3;r5;4;^r5,3,r5,1,r5,4,r5,2;style;filledcurve
+    - net3;r5;4;r5;5;^r5,4,r5,2,r5,5,r5,3;style;filledcurve
+

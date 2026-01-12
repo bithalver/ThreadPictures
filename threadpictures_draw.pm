@@ -407,7 +407,7 @@ sub process_element {
 #  my @AE=@_; # AE like ActualElement
   my @AE;
   my @TEMP=@_;
-  while (@TEMP) {push(@AE,percent_on_line(splice(@TEMP,0,1)));}
+  while (@TEMP) {push(@AE,PXP(splice(@TEMP,0,1)));}
   # while (@TEMP) {push(@AE, splice(@TEMP,0,1));}
 
   switch (splice @AE,0,1) {
