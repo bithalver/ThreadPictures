@@ -7,7 +7,7 @@ use Exporter;
 
 our @ISA= qw( Exporter );
 
-our @EXPORT = qw( %TP_GLOBAL %TP_PARAMS @TP_all %TP_planes global_init minmax warnarray warnhash cm min max print_ps_filestart pi my_round colorconvert $opts_input $opts_output $opts_help $opts_help_coords $opts_help_plane $opts_version $opts_debug %TP_colors weight my_random_order percent_on_line TP_weight percent_on_line pointsfromplanesordirect);
+our @EXPORT = qw( %TP_GLOBAL %TP_PARAMS @TP_all %TP_planes global_init minmax warnarray warnhash cm min max print_ps_filestart pi my_round colorconvert $opts_input $opts_output $opts_help $opts_help_coords $opts_help_plane $opts_version $opts_debug %TP_colors weight my_random_order percent_on_line TP_weight pointsfromplanesordirect);
 
 # %TP_GLOBAL holds all global variables, has lowest priority; collected from 3 "sources":
 #   - built-in defaults
