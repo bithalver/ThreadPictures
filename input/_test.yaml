@@ -28,7 +28,7 @@ planes:
   - R;circle;r4;0;1;12;90 # needed for testing element "circular"
   - grid4;4;10;10
   - sn;smaller;5;0.8;360;1;0;0;0;1;2;2;0
-  - tp;freeform;0;0;1;0;*1,0,1,1,0.5
+  - tp;freeform;0;0;1;0;%1,0,1,1,0.5
   - E;regular;ENV[Sides]4;90  # ENV var Sides used if exists; otherwise it is 4
   - Test2Shift;regular;4
   - Shifted;shiftXY;1;0;Test2Shift
@@ -37,7 +37,7 @@ planes:
   - aI;angle;ENV[aI]-15
   - aM;angle;ENV[aM]120
   - a_;connected;aI;0;aI;2;aM;2;0
-  - s20251231_2;freeform;a_;0;a_;1;a_;2;*a_,1,a_,2,0.5
+  - s20251231_2;freeform;a_;0;a_;1;a_;2;%a_,1,a_,2,0.5
 
 
 pages:
@@ -55,11 +55,11 @@ pages:
     - net3s;E;4;0;1;firstthread;50.0001%;lastthread;75%;color;0.5 0 0
     - net3s;E;4;0;1;firstthread;75.0001%;color;0.25 0 0
   -
-    - pagename; first percent-on-line test (both for plane and net) (both "*" and "%" are used)
+    - pagename; first percent-on-line test (both for plane and net)
     - background;lightgray
-    - net3;0;0;1;0;*1,0,1,2,0.5;color;white
+    - net3;0;0;1;0;%1,0,1,2,0.5;color;white
     - net3;0;0;1;0;%1,0,1,2,0.25;color;yellow;style;filledcurve
-    - net3;0;0;1;0;*1,0,1,2,0.75;color;blue
+    - net3;0;0;1;0;%1,0,1,2,0.75;color;blue
     - net3s;tp;0;1;2;color;green
 
   -

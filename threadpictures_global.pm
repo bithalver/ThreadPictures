@@ -191,19 +191,19 @@ sub pointsfromplanesordirect {
 
 sub PXP { # Process eXtra Parameters
   # if input start with
-  #   "*" or "%" -> from "x1,y1,x2,y2,weight" output counted in percents between first point (0%) and second point (100%)
+  #   "%" -> from "x1,y1,x2,y2,weight" output counted in percents between first point (0%) and second point (100%)
   #   "^" -> from "x1,y1,x2,y2,x3,y3,x4,y4" output is the intersection on lines (x1y1-x2y2) - (x3y3-x4y4)
   #       any input line is zero lenght _or_ lines are parallel -> starting point of line1 is the result
   #   anything else -> do not touch input
   my $I=$_[0];
   my (@O,$ADD);
 
-  # If there is any "|" in input, cut it at the first, and add it back at the end
+  # If there is any "|" in input, cut it at the first, and add it back at the very end of the function
   my @TEMP=split(/\|/,$I,2);
   if ( $#TEMP ) { $I=$TEMP[0] ; $ADD=$TEMP[1]; } # if the last element of @TEMP array is one -> we found an "|"
 
   switch ( substr($I,0,1) ) {
-  case (/^[*%]/) {
+  case (/^[%]/) {
     my ($x1, $y1, $x2, $y2, $w) = split(',',substr($I,1));
     ($x1, $y1)=pointsfromplanesordirect($x1, $y1);
     ($x2, $y2)=pointsfromplanesordirect($x2, $y2);

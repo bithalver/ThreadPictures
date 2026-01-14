@@ -13,22 +13,22 @@ planes:
   - aI;angle;ENV[aI]-15
   - aM;angle;ENV[aM]120
   - a_;connected;aI;0;aI;2;aM;2;0
-  - s20251231_2;freeform;a_;0;a_;1;a_;2;*a_,1,a_,2,0.5
+  - s20251231_2;freeform;a_;0;a_;1;a_;2;%a_,1,a_,2,0.5
 #  - s20251231_2;freeform;a_;0;a_;1;a_;2
 #
-  - a_1;freeform;aM;0;aM;1;aM;2;*aM,1,aM,2,0.5
+  - a_1;freeform;aM;0;aM;1;aM;2;%aM,1,aM,2,0.5
 
   - aInnerAngle;angle;-120
   - aInnerAngle2;angle;-30
 
-  - aInner0;connected;*aInnerAngle,0,aInnerAngle,2,2.2;*aInnerAngle,0,aInnerAngle,2,3;a_1;3;0
-  - aInner180;connected;*aInnerAngle,0,aInnerAngle,2,-2.2;*aInnerAngle,0,aInnerAngle,2,-3;a_1;3;0
+  - aInner0;connected;%aInnerAngle,0,aInnerAngle,2,2.2;%aInnerAngle,0,aInnerAngle,2,3;a_1;3;0
+  - aInner180;connected;%aInnerAngle,0,aInnerAngle,2,-2.2;%aInnerAngle,0,aInnerAngle,2,-3;a_1;3;0
 
-  - aInner90;connected;*aInnerAngle2,0,aInnerAngle2,2,2.2;*aInnerAngle2,0,aInnerAngle2,2,3;a_1;3;0
-  - aInner270;connected;*aInnerAngle2,0,aInnerAngle2,2,-2.2;*aInnerAngle2,0,aInnerAngle2,2,-3;a_1;3;0
+  - aInner90;connected;%aInnerAngle2,0,aInnerAngle2,2,2.2;%aInnerAngle2,0,aInnerAngle2,2,3;a_1;3;0
+  - aInner270;connected;%aInnerAngle2,0,aInnerAngle2,2,-2.2;%aInnerAngle2,0,aInnerAngle2,2,-3;a_1;3;0
 #
-#  - a_2;freeform;aM;0;*aM,0,aM,1,1;*aM,0,aM,2,1;*aM,1,aM,2,0.5
-  - a_2;freeform;aM;0;*aM,0,aM,1,ENV[SideSize1]1;*aM,0,aM,2,ENV[SideSize2]1;*aM,1,aM,2,ENV[SideSize3]0.5
+#  - a_2;freeform;aM;0;%aM,0,aM,1,1;%aM,0,aM,2,1;%aM,1,aM,2,0.5
+  - a_2;freeform;aM;0;%aM,0,aM,1,ENV[SideSize1]1;%aM,0,aM,2,ENV[SideSize2]1;%aM,1,aM,2,ENV[SideSize3]0.5
 # SideSize1=1 SideSize2=1 SideSize3=0.5 ./normal 20251231 # this is he starting point
 # SideSize2=0.792 ./normal 20251231
 # SideSize3=0.7 ./normal 2025123
@@ -36,11 +36,11 @@ planes:
   - a_2InnerAngle;angle;-120
   - a_2InnerAngle2;angle;-30
 
-  - a_2Inner0;connected;*a_2InnerAngle,0,a_2InnerAngle,2,2.2;*a_2InnerAngle,0,a_2InnerAngle,2,3;a_2;3;0
-  - a_2Inner180;connected;*a_2InnerAngle,0,a_2InnerAngle,2,-2.2;*a_2InnerAngle,0,a_2InnerAngle,2,-3;a_2;3;0
+  - a_2Inner0;connected;%a_2InnerAngle,0,a_2InnerAngle,2,2.2;%a_2InnerAngle,0,a_2InnerAngle,2,3;a_2;3;0
+  - a_2Inner180;connected;%a_2InnerAngle,0,a_2InnerAngle,2,-2.2;%a_2InnerAngle,0,a_2InnerAngle,2,-3;a_2;3;0
 
-  - a_2Inner90;connected;*a_2InnerAngle2,0,a_2InnerAngle2,2,2.2;*a_2InnerAngle2,0,a_2InnerAngle2,2,3;a_2;3;0
-  - a_2Inner270;connected;*a_2InnerAngle2,0,a_2InnerAngle2,2,-2.2;*a_2InnerAngle2,0,a_2InnerAngle2,2,-3;a_2;3;0
+  - a_2Inner90;connected;%a_2InnerAngle2,0,a_2InnerAngle2,2,2.2;%a_2InnerAngle2,0,a_2InnerAngle2,2,3;a_2;3;0
+  - a_2Inner270;connected;%a_2InnerAngle2,0,a_2InnerAngle2,2,-2.2;%a_2InnerAngle2,0,a_2InnerAngle2,2,-3;a_2;3;0
 pages:
   -
     - pagename;2025 12 31 | 1 | Smoke
