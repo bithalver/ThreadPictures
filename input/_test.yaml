@@ -259,3 +259,16 @@ pages:
     - color;darkgray
     - net3;1;0;2;2;^1,1,1,0,1,1,1,0
     - net3;1;0;2;2;^1,1,1,0,0,0,0,0;shiftY;2
+  -
+    - pagename;First ever weight test
+    - background;lightgray
+    - color;darkgray
+    - net3;0;0;0.5;0.866;1;0
+    - net3;0;0;*0,0,1, 0.5,0.866,1, 1,0,1;1;0;color;yellow
+#    - net3;0;0;*0,0,1,0.5,0.866,0.5,1,0,1;1;0;color;blue
+#    - net3;0;0;*0,0,1,0.5,0.866,1.5,1,0,1;1;0;color;red
+#    - net3;0;0;*0,0,1,0.5,0.866,0,1,0,1;1;0;color;blue
+
+    - net3;0;0;*0,0,1, 0.5,0.866,-0.5, 1,0,1;1;0;color;yellow
+#    - net3;0;0;*0,0,1,0.5,0.866,-1.5,1,0,1;1;0;color;red
+    - net3;0;0;*0,0,1, 0.5,0.866,-1, 1,0,1;1;0

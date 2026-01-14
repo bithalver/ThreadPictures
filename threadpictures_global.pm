@@ -191,9 +191,10 @@ sub pointsfromplanesordirect {
 
 sub PXP { # Process eXtra Parameters
   # if input start with
-  #   "%" -> from "x1,y1,x2,y2,weight" output counted in percents between first point (0%) and second point (100%)
-  #   "^" -> from "x1,y1,x2,y2,x3,y3,x4,y4" output is the intersection on lines (x1y1-x2y2) - (x3y3-x4y4)
+  #   "%" from "x1,y1,x2,y2,weight" output counted in percents between first point (0%) and second point (100%)
+  #   "^" from "x1,y1,x2,y2,x3,y3,x4,y4" output is the intersection on lines (x1y1-x2y2) - (x3y3-x4y4)
   #       any input line is zero lenght _or_ lines are parallel -> starting point of line1 is the result
+  #   "*" from any amount of x,y,weight calculates a weighted point
   #   anything else -> do not touch input
   my $I=$_[0];
   my (@O,$ADD);
@@ -223,6 +224,15 @@ sub PXP { # Process eXtra Parameters
       my $U = (($x4 - $x3) * ($y1 - $y3) - ($y4 - $y3) * ($x1 - $x3)) / $denominator ;
       @O=( ( $x1 + $U * ($x2 - $x1) , $y1 + $U * ($y2 - $y1) ) );
     }
+  }
+  case (/\*/) {
+    my @W=split(',',substr($I,1));
+	my ($TotalWeight, $finalX, $finalY)=(0,0,0);
+	while (@W) {
+	  my $tempX=shift @W; my $tempY=shift @W; my $tempW=shift @W; # warnarray(("Weight elements: ",$tempX,$tempY,$tempW));
+	  $TotalWeight+=$tempW; $finalX+=$tempX*$tempW; $finalY+=$tempY*$tempW;
+	} # warnarray( "Weight result: ",$finalX / $TotalWeight , $finalY / $TotalWeight );
+	@O=( $finalX / $TotalWeight , $finalY / $TotalWeight ); # TODO: protect output for TotalWeight=0
   }
   else {@O=($I);}
   }
