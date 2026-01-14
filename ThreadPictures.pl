@@ -79,8 +79,8 @@ sub HELP_COORDS {
     P;I
       P is a plane name (defined already in the same yaml)
       I is the index (which point to get; starts with zero)
-    *A1,A2,B1,B2,W
-      remember to use commas not semicolons; leading '*' is mandatory ! no space, tab or enter please !
+    %A1,A2,B1,B2,W
+      remember to use commas not semicolons; leading '%' is mandatory ! no space, tab or enter please !
       A1,A2 are either numbers (direct) or Plane,Index pair (indirect)
       B1,B2 works the same way
       the point will be on the line A1,A2 - B1,B2
