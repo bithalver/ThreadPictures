@@ -173,7 +173,7 @@ sub TP_weight {
   return ($fromX*$fromRate+$toX*$toRate,$fromY*$fromRate+$toY*$toRate);
 }
 
-# leaves 'direct' points (number pairs) unmodified, but transforms ones defined with planes to x,y pairs
+# leaves 'direct' points (number pairs) unmodified, but transforms ones defined with (planes,nth_point) to x,y pairs
 sub pointsfromplanesordirect {
   my @input=@_; my @processedinput;
   # ---[BEGIN]--- Specify points from predefined planes _or_ directly
@@ -191,32 +191,43 @@ sub pointsfromplanesordirect {
 
 sub PXP { # Process eXtra Parameters
   # if input start with
-  #   "*" -> from "x1,y1,x2,y2,weight" output counted in percents between first point (0%) and second point (100%)
-  #   "^" -> from "x1,y1,x2,y2,x3,y3,x4,y4" output the intersection on lines (x1y1-x2y2) - (x3y3-x4y4)
+  #   "*" or "%" -> from "x1,y1,x2,y2,weight" output counted in percents between first point (0%) and second point (100%)
+  #   "^" -> from "x1,y1,x2,y2,x3,y3,x4,y4" output is the intersection on lines (x1y1-x2y2) - (x3y3-x4y4)
   #       any input line is zero lenght _or_ lines are parallel -> starting point of line1 is the result
+  #   anything else -> do not touch input
   my $I=$_[0];
+  my (@O,$ADD);
+
+  # If there is any "|" in input, cut it at the first, and add it back at the end
+  my @TEMP=split(/\|/,$I,2);
+  if ( $#TEMP ) { $I=$TEMP[0] ; $ADD=$TEMP[1]; } # if the last element of @TEMP array is one -> we found an "|"
 
   switch ( substr($I,0,1) ) {
   case (/^[*%]/) {
     my ($x1, $y1, $x2, $y2, $w) = split(',',substr($I,1));
     ($x1, $y1)=pointsfromplanesordirect($x1, $y1);
     ($x2, $y2)=pointsfromplanesordirect($x2, $y2);
-    return TP_weight($x1, $y1, $x2, $y2, $w, 1);
+    @O=TP_weight($x1, $y1, $x2, $y2, $w, 1);
   }
   case (/^[\^]/) {
     my ($x1, $y1, $x2, $y2, $x3, $y3, $x4, $y4) = split(',',substr($I,1));
-    ($x1, $y1)=pointsfromplanesordirect($x1, $y1);
-    ($x2, $y2)=pointsfromplanesordirect($x2, $y2);
-    ($x3, $y3)=pointsfromplanesordirect($x3, $y3);
-    ($x4, $y4)=pointsfromplanesordirect($x4, $y4);
-    if ( ( $x1==$x2 and $y1==$y2 ) or ( $x3==$x4 and $y3==$y4 ) ) { return ($x1, $y1); } # One of the lines are zero lenght
-    my $denominator = (($y4 - $y3) * ($x2 - $x1) - ($x4 - $x3) * ($y2 - $y1));
-    if ($denominator == 0) { return ($x1, $y1) ; } # Lines are parallel
-    my $U = (($x4 - $x3) * ($y1 - $y3) - ($y4 - $y3) * ($x1 - $x3)) / $denominator ;
-    return ( ( $x1 + $U * ($x2 - $x1) , $y1 + $U * ($y2 - $y1) ) );
+    my $denominator;
+    ($x1, $y1)=pointsfromplanesordirect($x1, $y1); ($x2, $y2)=pointsfromplanesordirect($x2, $y2);
+    ($x3, $y3)=pointsfromplanesordirect($x3, $y3); ($x4, $y4)=pointsfromplanesordirect($x4, $y4);
+    if (
+      ( $x1==$x2 and $y1==$y2 ) or ( $x3==$x4 and $y3==$y4 )                        # one of the lines are zero lenght ...
+      or                                                                            # ... or ...
+      ($denominator = (($y4 - $y3) * ($x2 - $x1) - ($x4 - $x3) * ($y2 - $y1))) == 0 # lines are parallel ...
+    ) { @O=($x1, $y1); } # ... return the starting point of the first line
+    else {
+      my $U = (($x4 - $x3) * ($y1 - $y3) - ($y4 - $y3) * ($x1 - $x3)) / $denominator ;
+      @O=( ( $x1 + $U * ($x2 - $x1) , $y1 + $U * ($y2 - $y1) ) );
+    }
   }
-  else {return ( ($I) );}
+  else {@O=($I);}
   }
+  if ( $#TEMP ) { $O[-1].="|".$ADD; }
+  return @O;
 }
 
 1;

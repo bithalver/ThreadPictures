@@ -248,9 +248,14 @@ pages:
     - pagename;First ever intersection test
     - background;lightgray
     - color;darkgray
-    - condensed;net3;^r5,5,r5,3,r5,1,r5,4;r5;1;r5;5|style;filledtriangle;color;yellow|style;filledcurve
+    - condensed;net3;r5;5;r5;1;^r5,5,r5,3,r5,1,r5,4|style;filledtriangle;color;yellow|style;filledcurve
     - condensed;net3;^r5,1,r5,4,r5,2,r5,5;r5;2;r5;1|style;filledtriangle;color;white|style;filledcurve
     - net3;r5;2;r5;3;^r5,2,r5,5,r5,3,r5,1;style;filledcurve
     - net3;r5;3;r5;4;^r5,3,r5,1,r5,4,r5,2;style;filledcurve
     - net3;r5;4;r5;5;^r5,4,r5,2,r5,5,r5,3;style;filledcurve
-
+  -
+    - pagename;Intersection test for parallel lines and zero length line
+    - background;lightgray
+    - color;darkgray
+    - net3;1;0;2;2;^1,1,1,0,1,1,1,0
+    - net3;1;0;2;2;^1,1,1,0,0,0,0,0;shiftY;2
