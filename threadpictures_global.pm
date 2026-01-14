@@ -203,13 +203,13 @@ sub PXP { # Process eXtra Parameters
   if ( $#TEMP ) { $I=$TEMP[0] ; $ADD=$TEMP[1]; } # if the last element of @TEMP array is one -> we found an "|"
 
   switch ( substr($I,0,1) ) {
-  case (/^[%]/) {
+  case (/%/) {
     my ($x1, $y1, $x2, $y2, $w) = split(',',substr($I,1));
     ($x1, $y1)=pointsfromplanesordirect($x1, $y1);
     ($x2, $y2)=pointsfromplanesordirect($x2, $y2);
     @O=TP_weight($x1, $y1, $x2, $y2, $w, 1);
   }
-  case (/^[\^]/) {
+  case (/\^/) {
     my ($x1, $y1, $x2, $y2, $x3, $y3, $x4, $y4) = split(',',substr($I,1));
     my $denominator;
     ($x1, $y1)=pointsfromplanesordirect($x1, $y1); ($x2, $y2)=pointsfromplanesordirect($x2, $y2);
