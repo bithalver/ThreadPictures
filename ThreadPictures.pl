@@ -19,7 +19,7 @@ Getopt::Long::Configure qw(gnu_getopt);
 
 # ---[END] test section
 
-sub VERSION_MESSAGE { warn "ThreadPictures version 1.2\n"; exit 0}
+sub VERSION_MESSAGE { warn "ThreadPictures version 1.3\n"; exit 0}
 
 sub HELP_MESSAGE { # TODO: meaningful help message
   warn "Usage:
@@ -89,6 +89,14 @@ sub HELP_COORDS {
       when W is one the point is B1,B2
       when W is 0.5 you got the point halfway between A1,A2 - B1,B2
       W could be outside '0 - 1' range
+    ^x1,y1,x2,y2,x3,y3,x4,y4
+      returns the intersection point of lines (x1y1-x2y2) and (x3y3-x4y4)
+      any line is zero length _or_ they are parallel -> (x1,y1) is the result
+      all x,y pairs could be specified with plane,point pairs
+    *x1,y1,w1,x2,y2,w2 ...any number of triplets
+      result is a weigthed point
+      all weight should be >=0
+      all x,y pairs could be specified with plane,point pairs
 ";
   exit 0
 }
@@ -139,7 +147,6 @@ global_init;
 
 for my $AK (keys %{$config->{global}}) {
   $TP_GLOBAL{$AK}=$config->{global}->{$AK}; # Always overwrite values defined as defaults or by environment variables
-  # if ($opts_debug) { warn "TP_GLOBAL{$AK} => $TP_GLOBAL{$AK}\n";} # These are written with Data::Dumper ~17 lines earlier ...
 }
 
 print_ps_filestart();
@@ -176,7 +183,7 @@ for my $k ( grep { $_ =~ /^colorarray/i } keys %TP_GLOBAL ) {
 #}
 
 if ($opts_debug) {  warn "Colors data (including predefined ones)\n" ;
-  for my $i (keys %TP_colors) { warn "color name: '",$i,"' value: $TP_colors{$i}\n"; }
+  for my $i (keys %TP_colors) { warn "$i: $TP_colors{$i}\n"; }
   warn "\n";
 }
 
@@ -247,7 +254,7 @@ if (defined $config->{planes}) {
     }
   }
   if ($opts_debug) {  warn "Planes data\n" ;
-    for my $i (keys %TP_planes) { warn "plane name: '",$i,"' content:\n"; warnarray @{$TP_planes{$i}}; }
+    for my $i (keys %TP_planes) { print STDERR $i,": "; warnarray @{$TP_planes{$i}}; }
   }
 }
 
