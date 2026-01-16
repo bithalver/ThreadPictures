@@ -253,6 +253,8 @@ pages:
     - net3;r5;2;r5;3;^r5,2,r5,5,r5,3,r5,1;style;filledcurve
     - net3;r5;3;r5;4;^r5,3,r5,1,r5,4,r5,2;style;filledcurve
     - net3;r5;4;r5;5;^r5,4,r5,2,r5,5,r5,3;style;filledcurve
+
+    - condensed;net3;r5;3;^r5,2,r5,3,r5,5,r5,4;r5;4|style;filledtriangle;color;0.375 0.75 1|style;filledcurve
   -
     - pagename;Intersection test for parallel lines and zero length line
     - background;lightgray
@@ -264,11 +266,16 @@ pages:
     - background;lightgray
     - color;darkgray
     - net3;0;0;0.5;0.866;1;0
-    - net3;0;0;*0,0,1, 0.5,0.866,1, 1,0,1;1;0;color;yellow
+    - net3;0;0;*0,0,1,0.5,0.866,1,1,0,1;1;0;color;yellow
 #    - net3;0;0;*0,0,1,0.5,0.866,0.5,1,0,1;1;0;color;blue
 #    - net3;0;0;*0,0,1,0.5,0.866,1.5,1,0,1;1;0;color;red
 #    - net3;0;0;*0,0,1,0.5,0.866,0,1,0,1;1;0;color;blue
 
-    - net3;0;0;*0,0,1, 0.5,0.866,-0.5, 1,0,1;1;0;color;yellow
+    - net3;0;0;*0,0,1,0.5,0.866,-0.5,1,0,1;1;0;color;yellow
 #    - net3;0;0;*0,0,1,0.5,0.866,-1.5,1,0,1;1;0;color;red
-    - net3;0;0;*0,0,1, 0.5,0.866,-1, 1,0,1;1;0
+    - net3;0;0;*0,0,1,0.5,0.866,-1,1,0,1;1;0
+  -
+    - pagename;First ever random test | RANDOM[10] | RANDOM[10] | RANDOM[10] | RANDOM[]
+    - background;lightgray
+    - color;darkgray
+    - net3;0;5;RANDOM[10];0;10;5
