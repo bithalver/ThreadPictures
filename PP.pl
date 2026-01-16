@@ -4,9 +4,12 @@ use warnings;
 use 5.10.0;
 no warnings 'uninitialized';
 
+srand();
+
 while (my $input = <> ) {
   # while ($input =~ s!ENV\[(\S*?)\](\S*)!$ENV{$1} // $2!e) { }
-  while ($input =~ s!ENV\[(\w*?)\]([a-zA-Z0-9_.-]*)!$ENV{$1} // $2!e) { }
+  while ($input =~ s!ENV\[(\w*?)\]([a-zA-Z0-9_.-]*)!$ENV{$1} // $2!ae) { }
+  no warnings 'numeric' ; while ($input =~ s!RANDOM\[([0-9.]*?)\]!rand($1)!ae) { }
   print ($input);
 }
 
