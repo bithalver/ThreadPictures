@@ -229,7 +229,8 @@ sub PXP { # Process eXtra Parameters
     my @W=split(',',substr($I,1));
 	my ($TotalWeight, $finalX, $finalY)=(0,0,0);
 	while (@W) {
-	  my $tempX=shift @W; my $tempY=shift @W; my $tempW=shift @W; # warnarray(("Weight elements: ",$tempX,$tempY,$tempW));
+	  my $tempX=shift @W; my $tempY=shift @W; my $tempW=shift @W; # print STDERR ("Weight elements: ",$tempX," ",$tempY," ",$tempW,"\n");
+    ($tempX,$tempY)=pointsfromplanesordirect($tempX,$tempY);
 	  $TotalWeight+=$tempW; $finalX+=$tempX*$tempW; $finalY+=$tempY*$tempW;
 	} # warnarray( "Weight result: ",$finalX / $TotalWeight , $finalY / $TotalWeight );
 	@O=( $finalX / $TotalWeight , $finalY / $TotalWeight ); # TODO: protect output for TotalWeight=0
