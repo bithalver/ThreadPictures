@@ -22,3 +22,7 @@ ENV[abc] will be replaced by the value of the env var 'abc'
 ENV[abc]def is the same, but: if env var 'abc' is not defined the default value is 'def'.
 env var name can contain only [a-zA-Z0-9_]
 default value can contain only [a-zA-Z0-9_.-] ; set is expendable but never add the following: ",|;" !
+
+RANDOM[abc] will be replaced by a random value
+  if abc is given, value is 0<= x < abc
+  if not, value is 0< x < 1
