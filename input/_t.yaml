@@ -1,0 +1,11 @@
+---
+global:
+    threads: ENV[Threads]20 # Set by the ENV var Threads if exists; 20 otherwise
+    color: lightgray
+    background: darkgray
+    fontcolor: white
+# this file is really for short tests only
+pages:
+  -
+    - pagename; 20260119 | 1 | RANDOM[A,5] | RANDOM[A,6]
+    - net3;0;1;0;0;1;0

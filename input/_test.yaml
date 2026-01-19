@@ -279,3 +279,8 @@ pages:
     - background;lightgray
     - color;darkgray
     - net3;0;5;RANDOM[10];0;10;5
+  -
+    - pagename;Second ever random test with stored numbers | RANDOM[RA,10] | RANDOM[RA,6.54]
+    - background;lightgray
+    - color;darkgray
+    - net3;0;5;RANDOM[RA];0;10;5
