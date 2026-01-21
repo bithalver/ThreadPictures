@@ -14,6 +14,13 @@ planes:
 
 pages:
   -
+    - pagename; 20260119 | 1 | RANDOM[R1] | RANDOM[R2] | RANDOM[R3]
+    - net3s;r3;2;1;3;style;triangle
+#    - net3s;c3;2;1;3
+    - net3;r3;1;c3;2;r3;3
+    - net3;r3;2;c3;3;r3;1
+    - net3;r3;3;c3;1;r3;2
+  -
     - pagename; 20260119 | 2 | RANDOM[R1] | RANDOM[R2] | RANDOM[R3]
 #    - net3s;r3;2;1;3;style;triangle
     
@@ -37,9 +44,31 @@ pages:
     - net3s;c3;2;3;1;color;yellow;style;moon;moon1;0.9;moon2;1.1
     - net3s;c3;3;1;2;color;yellow;style;moon;moon1;0.9;moon2;1.1
   -
-    - pagename; 20260119 | 1 | RANDOM[R1] | RANDOM[R2] | RANDOM[R3]
+    - pagename; 20260119 | 3 | RANDOM[R1] | RANDOM[R2] | RANDOM[R3]
     - net3s;r3;2;1;3;style;triangle
-    - net3s;c3;2;1;3
-    - net3;r3;1;c3;2;r3;3
-    - net3;r3;2;c3;3;r3;1
-    - net3;r3;3;c3;1;r3;2
+
+    - net3;r3;1;c3;1;c3;2
+    - net3;r3;2;c3;2;c3;1
+
+    - net3;r3;2;c3;2;c3;3
+    - net3;r3;3;c3;3;c3;2
+
+    - net3;r3;3;c3;3;c3;1
+    - net3;r3;1;c3;1;c3;3
+    - condensed;net3s;c3|1;2;3|2;3;1|3;1;2
+  -
+    - pagename; 20260119 | 4 | RANDOM[R1] | RANDOM[R2] | RANDOM[R3]
+#    - net3s;r3;2;1;3;style;triangle
+
+    - style;curve
+    - color;yellow
+    - net3;r3;1;r3;2;c3;2
+    - net3;r3;2;r3;1;c3;1
+
+    - net3;r3;2;r3;3;c3;3
+    - net3;r3;3;r3;2;c3;2
+    
+    - net3;r3;3;r3;1;c3;1
+    - net3;r3;1;r3;3;c3;3
+
+    - condensed;net3s;c3|1;2;3|2;3;1|3;1;2
