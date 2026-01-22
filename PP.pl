@@ -28,7 +28,7 @@ env var name can contain only [a-zA-Z0-9_]
 default value can contain only [a-zA-Z0-9_.-] ; set is expendable but never add the following: ",|;" !
 
 RANDOM[value] will be replaced by a random value
-  if value is given, return value is 0<= x < abc
+  if value is given, return value is 0<= x < value
   if not, return value is 0< x < 1
 
 RANDOM[name,value] will be replaced by a random value _and_ stored in the hash %RA with name
