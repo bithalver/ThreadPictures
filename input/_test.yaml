@@ -2,7 +2,7 @@
 global:
 #    firstthread: -10
 #    lastthread: 30
-    threads: ENV[Threads]20 # Set by the ENV var Threads if exists; 20 otherwise
+    threads: ENV[Threads,20] # Set by the ENV var Threads if exists; 20 otherwise
     color: darkgray
     definecolor1: my1color;0.1 0.9 0.1;my2color;0.3 0.7 0.3;my3color;white
     definecolor2: my4color;orange
@@ -29,13 +29,13 @@ planes:
   - grid4;4;10;10
   - sn;smaller;5;0.8;360;1;0;0;0;1;2;2;0
   - tp;freeform;0;0;1;0;%1,0,1,1,0.5
-  - E;regular;ENV[Sides]4;90  # ENV var Sides used if exists; otherwise it is 4
+  - E;regular;ENV[Sides,4];90  # ENV var Sides used if exists; otherwise it is 4
   - Test2Shift;regular;4
   - Shifted;shiftXY;1;0;Test2Shift
 
 # for condensed tests
-  - aI;angle;ENV[aI]-15
-  - aM;angle;ENV[aM]120
+  - aI;angle;ENV[aI,-15]
+  - aM;angle;ENV[aM,120]
   - a_;connected;aI;0;aI;2;aM;2;0
   - s20251231_2;freeform;a_;0;a_;1;a_;2;%a_,1,a_,2,0.5
 
@@ -259,8 +259,8 @@ pages:
     - pagename;Intersection test for parallel lines and zero length line
     - background;lightgray
     - color;darkgray
-    - net3;1;0;2;2;^1,1,1,0,1,1,1,0
-    - net3;1;0;2;2;^1,1,1,0,0,0,0,0;shiftY;2
+    - net3;1;0;2;2;^1,1,1,0,1,1,1,0 # parallel
+    - net3;1;0;2;2;^1,1,1,0,0,0,0,0;shiftY;2 # zero length
   -
     - pagename;First ever weight test
     - background;lightgray
@@ -274,13 +274,14 @@ pages:
     - net3;0;0;*0,0,1,0.5,0.866,-0.5,1,0,1;1;0;color;yellow
 #    - net3;0;0;*0,0,1,0.5,0.866,-1.5,1,0,1;1;0;color;red
     - net3;0;0;*0,0,1,0.5,0.866,-1,1,0,1;1;0
-  -
-    - pagename;First ever random test | RANDOM[10] | RANDOM[10] | RANDOM[10] | RANDOM[]
-    - background;lightgray
-    - color;darkgray
-    - net3;0;5;RANDOM[10];0;10;5
+# Next format is not supported anymore 20260123
+#  -
+#    - pagename;First ever random test | RANDOM[10] | RANDOM[10] | RANDOM[10] | RANDOM[]
+#   - background;lightgray
+#    - color;darkgray
+#    - net3;0;5;RANDOM[10];0;10;5
   -
     - pagename;Second ever random test with stored numbers | RANDOM[RA,10] | RANDOM[RA,6.54]
     - background;lightgray
     - color;darkgray
-    - net3;0;5;RANDOM[RA];0;10;5
+    - net3;0;5;RANDOM[RA];0;10;5 # adfgafsdg
