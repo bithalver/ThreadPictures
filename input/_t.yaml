@@ -1,12 +1,11 @@
 # this file is really for short tests only
 ---
 global:
-    threads: ENV[Threads,20] # Set by the ENV var Threads if exists; 20 otherwise
-    firstthread: ENV[FT,3]
+    threads: 20
     color: lightgray
     background: darkgray
     fontcolor: white
 pages:
   -
     - pagename; 20260119 | 1 | RANDOM[A,5] | RANDOM[A,6] | RANDOM[A] | RANDOM[B]
-    - net3;0;1;0;0;1;0;color;ENV[mycolor,yellow]
+    - net3;0;1;0;0;1;0;color;yellow;firstthread;ENV[FT]

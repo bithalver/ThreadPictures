@@ -5,7 +5,7 @@ export NAME=`basename "$1" .yaml`
 export INPUT_YAML=input/${NAME}.yaml
 export OUTPUT_PS=${NAME}.ps
 
-if grep 'ENV\[' $INPUT_YAML >/dev/null ; then 
+if grep -E 'ENV\[|RANDOM\[' $INPUT_YAML >/dev/null ; then 
   export TMP_INPUT="/tmp/`mktemp -u XXXXXXXX_${NAME}`.yaml" ; 
   cat $INPUT_YAML | `dirname $0`/PP.pl > $TMP_INPUT ;
   export INPUT_YAML=$TMP_INPUT ;

@@ -46,8 +46,8 @@ pages:
     - net3s;Test2Shift;1;2;3
     - net3s;Shifted;1;2;3;color;red
   -
-    - pagename; first ENV test | run it with Threads=500 and Sides=20
-    - background;lightgray # Threads=500 Sides=20 ./normal _test
+    - pagename; first ENV test | run it with Threads=ENV[Threads,20] and Sides=ENV[Sides,4]
+    - background;lightgray # Threads=50 Sides=20 ./normal _test
     - net3s;E;1;2;3;
     - net3s;E;2;3;4
     - net3s;E;4;0;1;lastthread;25%;color;1 0 0
