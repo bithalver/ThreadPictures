@@ -1,6 +1,6 @@
 ---
 global:
-    threads: ENV[Threads,20]
+    threads: 12
     color: lightblue
     background: darkgray
 
