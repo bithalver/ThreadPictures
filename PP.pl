@@ -9,10 +9,10 @@ srand();
 my %RA; # RandomArray: named randoms are stored inside
 
 while (my $input = <> ) {
-  print STDERR "< ",$input;
+#  print STDERR "< ",$input;
   no warnings 'numeric' ; $input =~ s!ENV\[([a-zA-Z][a-zA-Z0-9_-]*),?([0-9.\-_ a-zA-Z ,]*?)\]!$ENV{$1} // ($2 eq "" ? 1 : $2)!aeg ;
   no warnings 'numeric' ; $input =~ s!RANDOM\[([a-zA-Z][a-zA-Z0-9_-]*),?([0-9.]*)\]!$ENV{$1} // $RA{$1} // ($RA{$1}=int(rand($2) * 10**6) / 10**6)!aeg ;
-  print STDERR "> ",$input;
+#  print STDERR "> ",$input;
   print ($input);
 }
 
