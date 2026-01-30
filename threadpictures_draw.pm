@@ -466,7 +466,7 @@ sub process_element {
       # if ($opts_debug) { print STDERR ("Condensed All: ", join (";",@AE), "\n" ); }
       my $AE=join (";",@AE);
       my @CParam;
-      if ( $AE =~ /\|\|/) {
+      if ( $AE =~ /\|\|/) { # One || could separate the params added to all variant at the end of line
         my @Param=split(/\|\|/,$AE); $AE=$Param[0]; @CParam=split(/;/,$Param[1] );
         if ($opts_debug) { print STDERR ("Condensed Param: "); warnarray (@CParam); }
       }
