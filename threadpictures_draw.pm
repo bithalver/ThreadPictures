@@ -464,14 +464,19 @@ sub process_element {
    }
     case (/^condensed$/i){ # Created on 2026 Jan 07
       # if ($opts_debug) { print STDERR ("Condensed All: ", join (";",@AE), "\n" ); }
-      my @CA=split (/\|/,join (";",@AE));
-      # warn join(' XXX ',@CA),"\n";
+      my $AE=join (";",@AE);
+      my @CParam;
+      if ( $AE =~ /\|\|/) {
+        my @Param=split(/\|\|/,$AE); $AE=$Param[0]; @CParam=split(/;/,$Param[1] );
+        if ($opts_debug) { print STDERR ("Condensed Param: "); warnarray (@CParam); }
+      }
+      my @CA=split (/\|/,$AE);
       my @CMain=split (';',splice(@CA,0,1));
       if ($opts_debug) { print STDERR ("Condensed Main: "); warnarray (@CMain); }
       while (my $CAdd=splice(@CA,0,1)) {
        my @Cadd=split (';',$CAdd) ;
         if ($opts_debug) { print STDERR "Condensed Add: " ;  warnarray (@Cadd) ; }
-        process_element ( (@CMain,@Cadd) );
+        process_element ( (@CMain,@Cadd,@CParam) );
       }
     }
     else {warn "type '$_' is not (yet) supported (but processing goes on)\n";}
