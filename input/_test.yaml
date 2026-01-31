@@ -240,6 +240,13 @@ pages:
     - net3;0;1;0;0;1;0;color;lightgray;threads;20
     - condensed;net3;0;1;0;0;1;0|color;yellow;moon1;0.95;moon2;0.25|color;orange;moon1;0.85;moon2;0.35|color;red;moon1;0.75;moon2;0.45|color;black;moon1;0.65;moon2;0.55||style;moon
   -
+    - pagename;Condensed test with many || parameters
+    - fontcolor;white
+    - background;darkgray
+    - net3;0;1;0;0;1;0;color;lightgray;threads;20
+    - condensed;net3|0;1;0;0;1;0|1;0;2;0;2;1||color;yellow;style;inversefilledcurve
+    - condensed;net3|0;1;0;0;1;0|1;0;2;0;2;1||color;red;style;normal;threads;60;firstthread;15;lastthread;45
+  -
     - pagename;First ever condensed test for recursive
     - fontcolor;white
     - background;darkgray
