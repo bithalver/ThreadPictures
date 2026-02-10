@@ -35,3 +35,4 @@ RANDOM[name,value] will be replaced by a random value _and_ stored in the hash %
   generates a random number between 0<= x < value ; if value is omitted, end is '1'
   name has to start with a letter and can contain [a-zA-Z0-9_-]
   value can contain only [0-9.]
+  for setting the seed for random, use the PERL_RAND_SEED environment variable (standard perl feature)
