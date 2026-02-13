@@ -1,0 +1,74 @@
+---
+global:
+    threads: ENV[Threads,16]
+    color: darkred
+    background: lightgray
+    style: filledcurve
+planes:
+  - r61;regular;6;0;1
+  - r63;regular;6;0;3
+  - r62;regular;6;30;2
+  - r64;regular;6;30;4
+
+pages:
+  -
+    - pagename; 20260213 | 2 | Possible random
+    - condensed;net3s;r61|1;2;3|2;3;4|4;5;6|5;6;1||color;1,1,0.75;style;filledcurve
+    - condensed;net3s;r63|1;2;3|2;3;4|4;5;6|5;6;1||color;1,1,0.75;style;filledcurve
+    - condensed;net3s;r64|2;3;4|3;4;5|5;6;1|6;1;2||color;yellow;style;filledcurve
+    - condensed;net3s;r62|2;3;4|3;4;5|5;6;1|6;1;2||color;yellow;style;filledcurve
+
+    - net3;%r64,1,r62,1,RANDOM[RO1,0.7];%r61,2,r63,2,RANDOM[RI2,0.7];%r64,2,r62,2,RANDOM[RO2,0.7];color;black
+    - net3;%r64,2,r62,2,RANDOM[RO2,0.7];%r61,3,r63,3,RANDOM[RI3,0.7];%r64,3,r62,3,RANDOM[RO3,0.7];color;black
+    - net3;%r64,3,r62,3,RANDOM[RO3,0.7];%r61,4,r63,4,RANDOM[RI1,0.7];%r64,4,r62,4,RANDOM[RO1,0.7];color;black
+    - net3;%r64,4,r62,4,RANDOM[RO1,0.7];%r61,5,r63,5,RANDOM[RI2,0.7];%r64,5,r62,5,RANDOM[RO2,0.7];color;black
+    - net3;%r64,5,r62,5,RANDOM[RO2,0.7];%r61,6,r63,6,RANDOM[RI3,0.7];%r64,6,r62,6,RANDOM[RO3,0.7];color;black
+    - net3;%r64,6,r62,6,RANDOM[RO3,0.7];%r61,1,r63,1,RANDOM[RI1,0.7];%r64,1,r62,1,RANDOM[RO1,0.7];color;black
+
+    - net3;%r61,1,r63,1,RANDOM[RI1,0.7];%r64,1,r62,1,RANDOM[RO1,0.7];%r61,2,r63,2,RANDOM[RI2,0.7];color;1,0,0
+    - net3;%r61,2,r63,2,RANDOM[RI2,0.7];%r64,2,r62,2,RANDOM[RO2,0.7];%r61,3,r63,3,RANDOM[RI3,0.7];color;0.5,0,0
+    - net3;%r61,3,r63,3,RANDOM[RI3,0.7];%r64,3,r62,3,RANDOM[RO3,0.7];%r61,4,r63,4,RANDOM[RI1,0.7];color;0.75,0,0
+    - net3;%r61,4,r63,4,RANDOM[RI1,0.7];%r64,4,r62,4,RANDOM[RO1,0.7];%r61,5,r63,5,RANDOM[RI2,0.7];color;1,0,0
+    - net3;%r61,5,r63,5,RANDOM[RI2,0.7];%r64,5,r62,5,RANDOM[RO2,0.7];%r61,6,r63,6,RANDOM[RI3,0.7];color;0.5,0,0
+    - net3;%r61,6,r63,6,RANDOM[RI3,0.7];%r64,6,r62,6,RANDOM[RO3,0.7];%r61,1,r63,1,RANDOM[RI1,0.7];color;0.75,0,0
+  -
+    - pagename; 20260213 | 2 | Fixed values
+    - condensed;net3s;r61|1;2;3|2;3;4|4;5;6|5;6;1||color;1,1,0.75;style;filledcurve
+    - condensed;net3s;r63|1;2;3|2;3;4|4;5;6|5;6;1||color;1,1,0.75;style;filledcurve
+    - condensed;net3s;r64|2;3;4|3;4;5|5;6;1|6;1;2||color;yellow;style;filledcurve
+    - condensed;net3s;r62|2;3;4|3;4;5|5;6;1|6;1;2||color;yellow;style;filledcurve
+
+    - net3;%r64,1,r62,1,ENV[RO1,1.0];%r61,2,r63,2,ENV[RI2,1.0];%r64,2,r62,2,ENV[RO2,0.0];color;black
+    - net3;%r64,2,r62,2,ENV[RO2,0.0];%r61,3,r63,3,ENV[RI3,0.5];%r64,3,r62,3,ENV[RO3,0.5];color;black
+    - net3;%r64,3,r62,3,ENV[RO3,0.5];%r61,4,r63,4,ENV[RI1,0.0];%r64,4,r62,4,ENV[RO1,1.0];color;black
+    - net3;%r64,4,r62,4,ENV[RO1,1.0];%r61,5,r63,5,ENV[RI2,1.0];%r64,5,r62,5,ENV[RO2,0.0];color;black
+    - net3;%r64,5,r62,5,ENV[RO2,0.0];%r61,6,r63,6,ENV[RI3,0.5];%r64,6,r62,6,ENV[RO3,0.5];color;black
+    - net3;%r64,6,r62,6,ENV[RO3,0.5];%r61,1,r63,1,ENV[RI1,0.0];%r64,1,r62,1,ENV[RO1,1.0];color;black
+
+    - net3;%r61,1,r63,1,ENV[RI1,0.0];%r64,1,r62,1,ENV[RO1,1.0];%r61,2,r63,2,ENV[RI2,1.0];color;1,0,0
+    - net3;%r61,2,r63,2,ENV[RI2,1.0];%r64,2,r62,2,ENV[RO2,0.0];%r61,3,r63,3,ENV[RI3,0.5];color;0.5,0,0
+    - net3;%r61,3,r63,3,ENV[RI3,0.5];%r64,3,r62,3,ENV[RO3,0.5];%r61,4,r63,4,ENV[RI1,0.0];color;0.75,0,0
+    - net3;%r61,4,r63,4,ENV[RI1,0.0];%r64,4,r62,4,ENV[RO1,1.0];%r61,5,r63,5,ENV[RI2,1.0];color;1,0,0
+    - net3;%r61,5,r63,5,ENV[RI2,1.0];%r64,5,r62,5,ENV[RO2,0.0];%r61,6,r63,6,ENV[RI3,0.5];color;0.5,0,0
+    - net3;%r61,6,r63,6,ENV[RI3,0.5];%r64,6,r62,6,ENV[RO3,0.5];%r61,1,r63,1,ENV[RI1,0.0];color;0.75,0,0
+  -
+    - pagename; 20260213 | 2 | Fixed values, inside only
+    - condensed;net3s;r61|1;2;3|2;3;4|4;5;6|5;6;1||color;1,1,0.75;style;filledcurve
+    - condensed;net3s;r62|2;3;4|3;4;5|5;6;1|6;1;2||color;yellow;style;filledcurve
+
+    - net3;%r64,1,r62,1,ENV[RO1,1.0];%r61,2,r63,2,ENV[RI2,1.0];%r64,2,r62,2,ENV[RO2,0.0];color;black
+    - net3;%r64,2,r62,2,ENV[RO2,0.0];%r61,3,r63,3,ENV[RI3,0.5];%r64,3,r62,3,ENV[RO3,0.5];color;black
+    - net3;%r64,3,r62,3,ENV[RO3,0.5];%r61,4,r63,4,ENV[RI1,0.0];%r64,4,r62,4,ENV[RO1,1.0];color;black
+    - net3;%r64,4,r62,4,ENV[RO1,1.0];%r61,5,r63,5,ENV[RI2,1.0];%r64,5,r62,5,ENV[RO2,0.0];color;black
+    - net3;%r64,5,r62,5,ENV[RO2,0.0];%r61,6,r63,6,ENV[RI3,0.5];%r64,6,r62,6,ENV[RO3,0.5];color;black
+    - net3;%r64,6,r62,6,ENV[RO3,0.5];%r61,1,r63,1,ENV[RI1,0.0];%r64,1,r62,1,ENV[RO1,1.0];color;black
+
+    - net3;%r61,1,r63,1,ENV[RI1,0.0];%r64,1,r62,1,ENV[RO1,1.0];%r61,2,r63,2,ENV[RI2,1.0];color;1,0,0
+    - net3;%r61,2,r63,2,ENV[RI2,1.0];%r64,2,r62,2,ENV[RO2,0.0];%r61,3,r63,3,ENV[RI3,0.5];color;0.5,0,0
+    - net3;%r61,3,r63,3,ENV[RI3,0.5];%r64,3,r62,3,ENV[RO3,0.5];%r61,4,r63,4,ENV[RI1,0.0];color;0.75,0,0
+    - net3;%r61,4,r63,4,ENV[RI1,0.0];%r64,4,r62,4,ENV[RO1,1.0];%r61,5,r63,5,ENV[RI2,1.0];color;1,0,0
+    - net3;%r61,5,r63,5,ENV[RI2,1.0];%r64,5,r62,5,ENV[RO2,0.0];%r61,6,r63,6,ENV[RI3,0.5];color;0.5,0,0
+    - net3;%r61,6,r63,6,ENV[RI3,0.5];%r64,6,r62,6,ENV[RO3,0.5];%r61,1,r63,1,ENV[RI1,0.0];color;0.75,0,0
+
+# RO1=1.0 RO2=0.0 RO3=0.5 RI1=0.0 RI2=1.0 RI3=0.5 ./normal 20260213 
+# PERL_RAND_SEED=24 ./normal 20260213
