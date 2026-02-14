@@ -10,7 +10,28 @@ planes:
   - r62;regular;6;30;2
   - r64;regular;6;30;4
 
+  - r41;regular;4;0;1
+  - r42;regular;4;45;3.5
+  - r43;regular;4;0;6
+  - r44;regular;4;45;8.5
+
 pages:
+  -
+    - pagename; 20260213 | 3 | Fixed values
+    - condensed;net3s;r41|1;2;3|3;4;1||color;1,1,0.75;style;filledcurve;threads;8
+    - condensed;net3s;r42|1;2;3|3;4;1||color;yellow;style;filledcurve;threads;8
+    - condensed;net3s;r44|1;2;3|3;4;1||color;yellow;style;filledcurve;threads;8
+    - condensed;net3s;r43|1;2;3|3;4;1||color;1,1,0.75;style;filledcurve;threads;8
+
+    - net3;%r44,1,r42,1,ENV[RO1,1.5];%r41,2,r43,2,ENV[RI2,1.0];%r44,2,r42,2,ENV[RO2,0.5];color;black;threads;8
+    - net3;%r44,2,r42,2,ENV[RO2,0.5];%r41,3,r43,3,ENV[RI1,1.0];%r44,3,r42,3,ENV[RO1,1.5];color;white;threads;8
+    - net3;%r44,3,r42,3,ENV[RO1,1.5];%r41,4,r43,4,ENV[RI2,1.0];%r44,4,r42,4,ENV[RO2,0.5];color;black;threads;8
+    - net3;%r44,4,r42,4,ENV[RO2,0.5];%r41,1,r43,1,ENV[RI1,1.0];%r44,1,r42,1,ENV[RO1,1.5];color;white;threads;8
+
+    - net3;%r41,1,r43,1,ENV[RI1,1.0];%r44,1,r42,1,ENV[RO1,1.5];%r41,2,r43,2,ENV[RI2,1.0];color;1,0,0;threads;8
+    - net3;%r41,2,r43,2,ENV[RI2,1.0];%r44,2,r42,2,ENV[RO2,0.5];%r41,3,r43,3,ENV[RI1,1.0];color;0.5,0,0;threads;8
+    - net3;%r41,3,r43,3,ENV[RI1,1.0];%r44,3,r42,3,ENV[RO1,1.5];%r41,4,r43,4,ENV[RI2,1.0];color;1,0,0;threads;8
+    - net3;%r41,4,r43,4,ENV[RI2,1.0];%r44,4,r42,4,ENV[RO2,0.5];%r41,1,r43,1,ENV[RI1,1.0];color;0.5,0,0;threads;8
   -
     - pagename; 20260213 | 2 | Possible random
     - condensed;net3s;r61|1;2;3|2;3;4|4;5;6|5;6;1||color;1,1,0.75;style;filledcurve
