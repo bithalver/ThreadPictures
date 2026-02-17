@@ -40,20 +40,6 @@ planes:
   - R12O;freeform;0;0;%r124,1,r122,1,ENV[RO1,1.0];%r124,2,r122,2,ENV[RO2,0.0];%r124,3,r122,3,ENV[RO3,0.5];%r124,4,r122,4,ENV[RO1,1.0];%r124,5,r122,5,ENV[RO2,0.0];%r124,6,r122,6,ENV[RO3,0.5];%r124,7,r122,7,ENV[RO1,1.0];%r124,8,r122,8,ENV[RO2,0.0];%r124,9,r122,9,ENV[RO3,0.5];%r124,10,r122,10,ENV[RO1,1.0];%r124,11,r122,11,ENV[RO2,0.0];%r124,12,r122,12,ENV[RO3,0.5]
 pages:
   -
-    - pagename; 20260213 | 12b | Fixed values
-    - condensed;net3s;r121|12;1;2|2;3;4|4;5;6|6;7;8|8;9;10|10;11;12||color;1,1,0.75;threads;2;moon1;0;moon2;1
-    - condensed;net3s;r123|2;3;4|3;4;5|4;5;6|8;9;10|9;10;11|10;11;12||color;1,1,0.75;threads;4
-    - condensed;net3s;r124|2;3;5|2;4;5|8;9;11|8;10;11||color;yellow;threads;8;moon1;0.5;moon2;0.66
-    - condensed;net3s;r122|2;3;5|2;4;5|8;9;11|8;10;11||color;yellow;threads;8;moon1;0.5;moon2;0.66
-
-    - condensed;net3|R12O;1;R12I;2;R12O;2|R12O;4;R12I;5;R12O;5|R12O;7;R12I;8;R12O;8|R12O;10;R12I;11;R12O;11||color;white
-    - condensed;net3|R12O;2;R12I;3;R12O;3|R12O;5;R12I;6;R12O;6|R12O;8;R12I;9;R12O;9|R12O;11;R12I;12;R12O;12||color;0.5,0.5,0.5
-    - condensed;net3|R12O;3;R12I;4;R12O;4|R12O;6;R12I;7;R12O;7|R12O;9;R12I;10;R12O;10|R12O;12;R12I;1;R12O;1||color;black
-
-    - condensed;net3|R12I;1;R12O;1;R12I;2|R12I;4;R12O;4;R12I;5|R12I;7;R12O;7;R12I;8|R12I;10;R12O;10;R12I;11||color;1,0,0
-    - condensed;net3|R12I;2;R12O;2;R12I;3|R12I;5;R12O;5;R12I;6|R12I;8;R12O;8;R12I;9|R12I;11;R12O;11;R12I;12||color;0.5,0,0
-    - condensed;net3|R12I;3;R12O;3;R12I;4|R12I;6;R12O;6;R12I;7|R12I;9;R12O;9;R12I;10|R12I;12;R12O;12;R12I;1||color;0.75,0,0
-  -
     - pagename; 20260213 | 4 | Fixed values
     - condensed;net3s;r41|1;2;3|3;4;1||color;1,1,0.75;style;filledcurve;threads;8
     - condensed;net3s;r42|1;2;3|3;4;1||color;yellow;style;filledcurve;threads;8
@@ -69,6 +55,7 @@ pages:
     - net3;R4I;2;R4O;2;R4I;3;color;0.5,0,0;threads;8
     - net3;R4I;3;R4O;3;R4I;4;color;1,0,0;threads;8
     - net3;R4I;4;R4O;4;R4I;1;color;0.5,0,0;threads;8
+
   -
     - pagename; 20260213 | 4a | 45 degree rotated | Fixed values
 #    - condensed;net3s;r41a|1;2;3|3;4;1||color;1,1,0.75;threads;8
@@ -112,5 +99,72 @@ pages:
     - condensed;net3|R6I;1;R6O;1;R6I;2|R6I;4;R6O;4;R6I;5||color;1,0,0
     - condensed;net3|R6I;2;R6O;2;R6I;3|R6I;5;R6O;5;R6I;6||color;0.5,0,0
     - condensed;net3|R6I;3;R6O;3;R6I;4|R6I;6;R6O;6;R6I;1||color;0.75,0,0
+  -
+    - pagename; 20260213 | 12b | Fixed values
+    - condensed;net3s;r121|12;1;2|2;3;4|4;5;6|6;7;8|8;9;10|10;11;12||color;1,1,0.75;threads;2;moon1;0;moon2;1
+    - condensed;net3s;r123|2;3;4|3;4;5|4;5;6|8;9;10|9;10;11|10;11;12||color;1,1,0.75;threads;4
+    - condensed;net3s;r124|2;3;5|2;4;5|8;9;11|8;10;11||color;yellow;threads;8;moon1;0.5;moon2;0.66
+    - condensed;net3s;r122|2;3;5|2;4;5|8;9;11|8;10;11||color;yellow;threads;8;moon1;0.5;moon2;0.66
 
+    - condensed;net3|R12O;1;R12I;2;R12O;2|R12O;4;R12I;5;R12O;5|R12O;7;R12I;8;R12O;8|R12O;10;R12I;11;R12O;11||color;white
+    - condensed;net3|R12O;2;R12I;3;R12O;3|R12O;5;R12I;6;R12O;6|R12O;8;R12I;9;R12O;9|R12O;11;R12I;12;R12O;12||color;0.5,0.5,0.5
+    - condensed;net3|R12O;3;R12I;4;R12O;4|R12O;6;R12I;7;R12O;7|R12O;9;R12I;10;R12O;10|R12O;12;R12I;1;R12O;1||color;black
+
+    - condensed;net3|R12I;1;R12O;1;R12I;2|R12I;4;R12O;4;R12I;5|R12I;7;R12O;7;R12I;8|R12I;10;R12O;10;R12I;11||color;1,0,0
+    - condensed;net3|R12I;2;R12O;2;R12I;3|R12I;5;R12O;5;R12I;6|R12I;8;R12O;8;R12I;9|R12I;11;R12O;11;R12I;12||color;0.5,0,0
+    - condensed;net3|R12I;3;R12O;3;R12I;4|R12I;6;R12O;6;R12I;7|R12I;9;R12O;9;R12I;10|R12I;12;R12O;12;R12I;1||color;0.75,0,0
+  -
+    - pagename; 20260213 | 12c | Fixed values + center Inner
+    - condensed;net3|R12O;1;R12I;2;R12O;2|R12O;4;R12I;5;R12O;5|R12O;7;R12I;8;R12O;8|R12O;10;R12I;11;R12O;11||color;white
+    - condensed;net3|R12O;2;R12I;3;R12O;3|R12O;5;R12I;6;R12O;6|R12O;8;R12I;9;R12O;9|R12O;11;R12I;12;R12O;12||color;0.5,0.5,0.5
+    - condensed;net3|R12O;3;R12I;4;R12O;4|R12O;6;R12I;7;R12O;7|R12O;9;R12I;10;R12O;10|R12O;12;R12I;1;R12O;1||color;black
+
+    - condensed;net3|R12I;1;R12O;1;R12I;2|R12I;4;R12O;4;R12I;5|R12I;7;R12O;7;R12I;8|R12I;10;R12O;10;R12I;11||color;1,0,0
+    - condensed;net3|R12I;2;R12O;2;R12I;3|R12I;5;R12O;5;R12I;6|R12I;8;R12O;8;R12I;9|R12I;11;R12O;11;R12I;12||color;0.5,0,0
+    - condensed;net3|R12I;3;R12O;3;R12I;4|R12I;6;R12O;6;R12I;7|R12I;9;R12O;9;R12I;10|R12I;12;R12O;12;R12I;1||color;0.75,0,0
+
+    - condensed;net3s;R12I|1;0;2|3;0;4|5;0;6|7;0;8|9;0;10|11;0;12||color;yellow
+    - condensed;net3s;R12I|2;0;3|4;0;5|6;0;7|8;0;9|10;0;11|12;0;1||color;green
+  -
+    - pagename; 20260213 | 12c1 | Fixed values + center Inner every second
+    - condensed;net3|R12O;1;R12I;2;R12O;2|R12O;4;R12I;5;R12O;5|R12O;7;R12I;8;R12O;8|R12O;10;R12I;11;R12O;11||color;white
+    - condensed;net3|R12O;2;R12I;3;R12O;3|R12O;5;R12I;6;R12O;6|R12O;8;R12I;9;R12O;9|R12O;11;R12I;12;R12O;12||color;0.5,0.5,0.5
+    - condensed;net3|R12O;3;R12I;4;R12O;4|R12O;6;R12I;7;R12O;7|R12O;9;R12I;10;R12O;10|R12O;12;R12I;1;R12O;1||color;black
+
+    - condensed;net3|R12I;1;R12O;1;R12I;2|R12I;4;R12O;4;R12I;5|R12I;7;R12O;7;R12I;8|R12I;10;R12O;10;R12I;11||color;1,0,0
+    - condensed;net3|R12I;2;R12O;2;R12I;3|R12I;5;R12O;5;R12I;6|R12I;8;R12O;8;R12I;9|R12I;11;R12O;11;R12I;12||color;0.5,0,0
+    - condensed;net3|R12I;3;R12O;3;R12I;4|R12I;6;R12O;6;R12I;7|R12I;9;R12O;9;R12I;10|R12I;12;R12O;12;R12I;1||color;0.75,0,0
+
+    - condensed;net3s;R12I|1;0;3|3;0;5|5;0;7|7;0;9|9;0;11|11;0;1||color;yellow;style;normal
+    - condensed;net3s;R12I|2;0;4|4;0;6|6;0;8|8;0;10|10;0;12|12;0;2||color;green;style;normal
+  -
+    - pagename; 20260213 | 12c2 | Fixed values + center Inner every third
+    - background;black
+    - fontcolor;lightgray
+
+    - condensed;net3|R12O;1;R12I;2;R12O;2|R12O;4;R12I;5;R12O;5|R12O;7;R12I;8;R12O;8|R12O;10;R12I;11;R12O;11||color;lightgray
+    - condensed;net3|R12O;2;R12I;3;R12O;3|R12O;5;R12I;6;R12O;6|R12O;8;R12I;9;R12O;9|R12O;11;R12I;12;R12O;12||color;lightgray
+    - condensed;net3|R12O;3;R12I;4;R12O;4|R12O;6;R12I;7;R12O;7|R12O;9;R12I;10;R12O;10|R12O;12;R12I;1;R12O;1||color;lightgray
+
+    - condensed;net3|R12I;1;R12O;1;R12I;2|R12I;4;R12O;4;R12I;5|R12I;7;R12O;7;R12I;8|R12I;10;R12O;10;R12I;11||color;lightblue
+    - condensed;net3|R12I;2;R12O;2;R12I;3|R12I;5;R12O;5;R12I;6|R12I;8;R12O;8;R12I;9|R12I;11;R12O;11;R12I;12||color;lightblue
+    - condensed;net3|R12I;3;R12O;3;R12I;4|R12I;6;R12O;6;R12I;7|R12I;9;R12O;9;R12I;10|R12I;12;R12O;12;R12I;1||color;lightblue
+
+    - condensed;net3s;R12I|2;0;5|5;0;8|8;0;11|11;0;2||color;white;style;normal;threads;16
+    - condensed;net3s;R12I|3;0;6|6;0;9|9;0;12|12;0;3||color;yellow;style;normal;threads;12
+    - condensed;net3s;R12I|1;0;4|4;0;7|7;0;10|10;0;1||color;red;style;normal
+  -
+    - pagename; 20260213 | 12d | Fixed values + center Outer
+    - background;black
+    - fontcolor;lightgray
+    - condensed;net3|R12O;1;R12I;2;R12O;2|R12O;4;R12I;5;R12O;5|R12O;7;R12I;8;R12O;8|R12O;10;R12I;11;R12O;11||color;silver
+    - condensed;net3|R12O;2;R12I;3;R12O;3|R12O;5;R12I;6;R12O;6|R12O;8;R12I;9;R12O;9|R12O;11;R12I;12;R12O;12||color;silver
+    - condensed;net3|R12O;3;R12I;4;R12O;4|R12O;6;R12I;7;R12O;7|R12O;9;R12I;10;R12O;10|R12O;12;R12I;1;R12O;1||color;silver
+
+    - condensed;net3|R12I;1;R12O;1;R12I;2|R12I;4;R12O;4;R12I;5|R12I;7;R12O;7;R12I;8|R12I;10;R12O;10;R12I;11||color;1,0,0
+    - condensed;net3|R12I;2;R12O;2;R12I;3|R12I;5;R12O;5;R12I;6|R12I;8;R12O;8;R12I;9|R12I;11;R12O;11;R12I;12||color;1,0,0
+    - condensed;net3|R12I;3;R12O;3;R12I;4|R12I;6;R12O;6;R12I;7|R12I;9;R12O;9;R12I;10|R12I;12;R12O;12;R12I;1||color;1,0,0
+
+    - condensed;net3s;R12O|1;0;2|3;0;4|5;0;6|7;0;8|9;0;10|11;0;12||color;yellow;style;normal
+    - condensed;net3s;R12O|2;0;3|4;0;5|6;0;7|8;0;9|10;0;11|12;0;1||color;white;style;normal
 # PERL_RAND_SEED=24 ./normal 20260213
