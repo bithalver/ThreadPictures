@@ -30,14 +30,13 @@ planes:
   - R4aI;freeform;0;0;%r41a,1,r43a,1,ENV[RI1,1.0];%r41a,2,r43a,2,ENV[RI2,1.0];%r41a,3,r43a,3,ENV[RI1,1.0];%r41a,4,r43a,4,ENV[RI2,1.0]
   - R4aO;freeform;0;0;%r44a,1,r42a,1,ENV[RO1,1.5];%r44a,2,r42a,2,ENV[RO2,0.5];%r44a,3,r42a,3,ENV[RO1,1.5];%r44a,4,r42a,4,ENV[RO2,0.5]
 
-
   - r121;regular;12;0;1
   - r123;regular;12;0;3
   - r122;regular;12;15;2
   - r124;regular;12;15;4
 
-  - R12I;freeform;0;0;%r121,1,r123,1,ENV[RI1,0.0];%r121,2,r123,2,ENV[RI2,1.0];%r121,3,r123,3,ENV[RI3,0.5];%r121,4,r123,4,ENV[RI1,0.0];%r121,5,r123,5,ENV[RI2,1.0];%r121,6,r123,6,ENV[RI3,0.5];%r121,7,r123,7,ENV[RI1,0.0];%r121,8,r123,8,ENV[RI2,1.0];%r121,9,r123,9,ENV[RI3,0.5];%r121,10,r123,10,ENV[RI1,0.0];%r121,11,r123,11,ENV[RI2,1.0];%r121,12,r123,12,ENV[RI3,0.5]
-  - R12O;freeform;0;0;%r124,1,r122,1,ENV[RO1,1.0];%r124,2,r122,2,ENV[RO2,0.0];%r124,3,r122,3,ENV[RO3,0.5];%r124,4,r122,4,ENV[RO1,1.0];%r124,5,r122,5,ENV[RO2,0.0];%r124,6,r122,6,ENV[RO3,0.5];%r124,7,r122,7,ENV[RO1,1.0];%r124,8,r122,8,ENV[RO2,0.0];%r124,9,r122,9,ENV[RO3,0.5];%r124,10,r122,10,ENV[RO1,1.0];%r124,11,r122,11,ENV[RO2,0.0];%r124,12,r122,12,ENV[RO3,0.5]
+  - R12I;freeform;0;0;%r121,1,r123,1,ENV[RI1,0.0];%r121,2,r123,2,ENV[RI2,1.0];%r121,3,r123,3,ENV[RI3,0.5];%r121,4,r123,4,ENV[RI4,0.0];%r121,5,r123,5,ENV[RI5,1.0];%r121,6,r123,6,ENV[RI6,0.5];%r121,7,r123,7,ENV[RI7,0.0];%r121,8,r123,8,ENV[RI8,1.0];%r121,9,r123,9,ENV[RI9,0.5];%r121,10,r123,10,ENV[RI10,0.0];%r121,11,r123,11,ENV[RI11,1.0];%r121,12,r123,12,ENV[RI12,0.5]
+  - R12O;freeform;0;0;%r124,1,r122,1,ENV[RO1,1.0];%r124,2,r122,2,ENV[RO2,0.0];%r124,3,r122,3,ENV[RO3,0.5];%r124,4,r122,4,ENV[RO4,1.0];%r124,5,r122,5,ENV[RO5,0.0];%r124,6,r122,6,ENV[RO6,0.5];%r124,7,r122,7,ENV[RO7,1.0];%r124,8,r122,8,ENV[RO8,0.0];%r124,9,r122,9,ENV[RO9,0.5];%r124,10,r122,10,ENV[RO10,1.0];%r124,11,r122,11,ENV[RO11,0.0];%r124,12,r122,12,ENV[RO12,0.5]
 pages:
   -
     - pagename; 20260213 | 4 | Fixed values
@@ -99,6 +98,15 @@ pages:
     - condensed;net3|R6I;1;R6O;1;R6I;2|R6I;4;R6O;4;R6I;5||color;1,0,0
     - condensed;net3|R6I;2;R6O;2;R6I;3|R6I;5;R6O;5;R6I;6||color;0.5,0,0
     - condensed;net3|R6I;3;R6O;3;R6I;4|R6I;6;R6O;6;R6I;1||color;0.75,0,0
+  -
+    - pagename; 20260213 | 12a | Fixed values
+    - condensed;net3|R12O;1;R12I;2;R12O;2|R12O;4;R12I;5;R12O;5|R12O;7;R12I;8;R12O;8|R12O;10;R12I;11;R12O;11||color;white
+    - condensed;net3|R12O;2;R12I;3;R12O;3|R12O;5;R12I;6;R12O;6|R12O;8;R12I;9;R12O;9|R12O;11;R12I;12;R12O;12||color;0.5,0.5,0.5
+    - condensed;net3|R12O;3;R12I;4;R12O;4|R12O;6;R12I;7;R12O;7|R12O;9;R12I;10;R12O;10|R12O;12;R12I;1;R12O;1||color;black
+
+    - condensed;net3|R12I;1;R12O;1;R12I;2|R12I;4;R12O;4;R12I;5|R12I;7;R12O;7;R12I;8|R12I;10;R12O;10;R12I;11||color;1,0,0
+    - condensed;net3|R12I;2;R12O;2;R12I;3|R12I;5;R12O;5;R12I;6|R12I;8;R12O;8;R12I;9|R12I;11;R12O;11;R12I;12||color;0.5,0,0
+    - condensed;net3|R12I;3;R12O;3;R12I;4|R12I;6;R12O;6;R12I;7|R12I;9;R12O;9;R12I;10|R12I;12;R12O;12;R12I;1||color;0.75,0,0
   -
     - pagename; 20260213 | 12b | Fixed values
     - condensed;net3s;r121|12;1;2|2;3;4|4;5;6|6;7;8|8;9;10|10;11;12||color;1,1,0.75;threads;2;moon1;0;moon2;1
@@ -168,3 +176,4 @@ pages:
     - condensed;net3s;R12O|1;0;2|3;0;4|5;0;6|7;0;8|9;0;10|11;0;12||color;yellow;style;normal
     - condensed;net3s;R12O|2;0;3|4;0;5|6;0;7|8;0;9|10;0;11|12;0;1||color;white;style;normal
 # PERL_RAND_SEED=24 ./normal 20260213
+# PERL_RAND_SEED=24 RI4=1.0 RI10=1.0 RI5=0.5 RI11=0.5 RI3=1.5 RI9=1.5 RI2=0.5 RI8=0.5 RO1=0.5 RO7=0.5 RI1=-0.25 RI7=-0.25 ./normal 20260213
