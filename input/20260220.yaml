@@ -41,11 +41,11 @@ pages:
 #    - net3;r5;3;r5;2;r5D;5
 #    - net3;r5;1;r5;5;r5B;5
     - condensed;net4s;r5X|6;7;9;10|7;8;10;6|8;9;6;7|9;10;7;8||color;yellow
-    - condensed;net3s;r5X|1;2;3|2;3;4|4;5;1||style;border;color;lightgray
-    - condensed;net3s;r5A|1;2;3|2;3;4|4;5;1||style;border;color;lightgray
-    - condensed;net3s;r5B|1;2;3|2;3;4|4;5;1||style;border;color;lightgray
-    - condensed;net3s;r5C|1;2;3|2;3;4|4;5;1||style;border;color;lightgray
-    - condensed;net3s;r5D|1;2;3|2;3;4|4;5;1||style;border;color;lightgray
+    - condensed;net3s;r5X|1;2;3|2;3;4|4;5;1||style;border;color;lightgray;threads;1
+    - condensed;net3s;r5A|1;2;3|2;3;4|4;5;1||style;border;color;lightgray;threads;1
+    - condensed;net3s;r5B|1;2;3|2;3;4|4;5;1||style;border;color;lightgray;threads;1
+    - condensed;net3s;r5C|1;2;3|2;3;4|4;5;1||style;border;color;lightgray;threads;1
+    - condensed;net3s;r5D|1;2;3|2;3;4|4;5;1||style;border;color;lightgray;threads;1
 
     - condensed;net3s;r5A|7;8;9|9;10;6||color;white
     - condensed;net3s;r5B|7;8;9|9;10;6||color;white
