@@ -1,0 +1,26 @@
+global:
+    threads: ENV[Threads,12]
+    color: lightblue
+    background: black
+    fontcolor: white
+pages:
+  -
+    - pagename; 20260225 | 1
+    - net3;-1;1;1;1;1;-1;color;yellow
+    - net3;-1;1;-1;-1;1;-1;color;yellow
+    - net3;-2;-2;2;-2;2;2;color;lightblue
+    - net3;-2;-2;-2;2;2;2;color;lightblue
+    - net3;-3;3;3;3;3;-3;color;yellow
+    - net3;-3;3;-3;-3;3;-3;color;yellow
+    - net3;-4;-4;4;-4;4;4;color;lightblue
+    - net3;-4;-4;-4;4;4;4;color;lightblue
+  -
+    - pagename; 20260225 | 2
+    - net3;-1;1;1;1;1;-1;color;yellow
+    - net3;-1;1;-1;-1;1;-1;color;yellow
+    - net3;-1.5;-1.5;1.5;-1.5;1.5;1.5;color;lightblue
+    - net3;-1.5;-1.5;-1.5;1.5;1.5;1.5;color;lightblue
+    - net3;-2.25;2.25;2.25;2.25;2.25;-2.25;color;yellow
+    - net3;-2.25;2.25;-2.25;-2.25;2.25;-2.25;color;yellow
+    - net3;-3.375;-3.375;3.375;-3.375;3.375;3.375;color;lightblue
+    - net3;-3.375;-3.375;-3.375;3.375;3.375;3.375;color;lightblue
