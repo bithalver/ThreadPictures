@@ -1,7 +1,7 @@
 # this file is really for short tests only
 ---
 global:
-    threads: 20
+    threads: 16
     color: lightgray
     background: darkgray
     fontcolor: white
