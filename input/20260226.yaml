@@ -1,0 +1,92 @@
+---
+global:
+    threads: 16
+    color: lightgray
+    background: darkgray
+    fontcolor: white
+#    moon1: 0.5
+#    moon2: 0.7
+planes:
+  - piptestA;planeinplane;4;45;1;8;1.5;0;-0.707;3.5355
+  - piptestB;planeinplane;4;45;1;12;1.2;0;0;-0.707
+  - piptestC;planeinplane;4;45;1;12;1.1;0;0;-0.707
+pages:
+  -
+    - pagename; 20260226 | 1 | First ever plane in plane test
+    - condensed;net3s;piptestA_01|1;2;3|3;4;1||color;0.24,0.78,1;threads;4
+    - condensed;net3s;piptestA_03|1;2;3|3;4;1||color;lightblue;threads;8
+    - condensed;net3s;piptestA_05|1;2;3|3;4;1||color;0.24,0.78,1;threads;12
+    - condensed;net3s;piptestA_07|1;2;3|3;4;1||color;lightblue;threads;16
+    - condensed;net3s;piptestA_02|2;3;4|4;1;2||color;yellow;threads;6
+    - condensed;net3s;piptestA_04|2;3;4|4;1;2||color;yellow;threads;10
+    - condensed;net3s;piptestA_06|2;3;4|4;1;2||color;yellow;threads;14
+    - condensed;net3s;piptestA_08|2;3;4|4;1;2||color;yellow;threads;18
+  -
+    - pagename; 20260226 | 1a
+    - condensed;net3s|piptestA_02|piptestA_04|piptestA_06|piptestA_08||4;1;2;color;yellow;threads;12
+    - condensed;net3s|piptestA_01|piptestA_03|piptestA_05|piptestA_07||2;3;4;color;yellow;threads;12
+    - condensed;net3s|piptestA_02|piptestA_04|piptestA_06|piptestA_08||2;3;4;color;lightblue;threads;12
+    - condensed;net3s|piptestA_01|piptestA_03|piptestA_05|piptestA_07||4;1;2;color;lightblue;threads;12
+  -
+    - pagename; 20260226 | 2
+    - net3s;piptestB_12;3;2;1;color;yellow;style;moon;moon1;0.55;moon2;0.75
+    - net3s;piptestB_11;4;1;2;color;lightgreen;style;moon;moon1;0.55;moon2;0.75
+    - net3s;piptestB_10;3;2;1;color;yellow;style;moon;moon1;0.55;moon2;0.75
+    - net3s;piptestB_09;4;1;2;color;lightgreen;style;moon;moon1;0.55;moon2;0.75
+    - net3s;piptestB_08;3;2;1;color;yellow;style;moon;moon1;0.55;moon2;0.75
+    - net3s;piptestB_07;4;1;2;color;lightgreen;style;moon;moon1;0.55;moon2;0.75
+    - net3s;piptestB_06;3;2;1;color;yellow;style;moon;moon1;0.55;moon2;0.75
+    - net3s;piptestB_05;4;1;2;color;lightgreen;style;moon;moon1;0.55;moon2;0.75
+    - net3s;piptestB_04;3;2;1;color;yellow;style;moon;moon1;0.55;moon2;0.75
+    - net3s;piptestB_03;4;1;2;color;lightgreen;style;moon;moon1;0.55;moon2;0.75
+    - net3s;piptestB_02;3;2;1;color;yellow;style;moon;moon1;0.55;moon2;0.75
+    - net3s;piptestB_01;4;1;2;color;lightgreen;style;moon;moon1;0.55;moon2;0.75
+  -
+    - pagename; 20260226 | 2a
+    - net3s;piptestB_12;3;2;1;color;yellow;style;moon;moon1;0.75;moon2;1
+    - net3s;piptestB_11;4;1;2;color;lightgreen;style;moon;moon1;0.75;moon2;1
+    - net3s;piptestB_10;3;2;1;color;yellow;style;moon;moon1;0.75;moon2;1
+    - net3s;piptestB_09;4;1;2;color;lightgreen;style;moon;moon1;0.75;moon2;1
+    - net3s;piptestB_08;3;2;1;color;yellow;style;moon;moon1;0.75;moon2;1
+    - net3s;piptestB_07;4;1;2;color;lightgreen;style;moon;moon1;0.75;moon2;1
+    - net3s;piptestB_06;3;2;1;color;yellow;style;moon;moon1;0.75;moon2;1
+    - net3s;piptestB_05;4;1;2;color;lightgreen;style;moon;moon1;0.75;moon2;1
+    - net3s;piptestB_04;3;2;1;color;yellow;style;moon;moon1;0.75;moon2;1
+    - net3s;piptestB_03;4;1;2;color;lightgreen;style;moon;moon1;0.75;moon2;1
+    - net3s;piptestB_02;3;2;1;color;yellow;style;moon;moon1;0.75;moon2;1
+    - net3s;piptestB_01;4;1;2;color;lightgreen;style;moon;moon1;0.75;moon2;1
+  -
+    - pagename; 20260226 | 2b
+    - net3s;piptestB_12;3;2;1;color;yellow;style;moon;moon1;1;moon2;1.3
+    - net3s;piptestB_11;4;1;2;color;lightgreen;style;moon;moon1;1;moon2;1.3
+    - net3s;piptestB_10;3;2;1;color;yellow;style;moon;moon1;1;moon2;1.3
+    - net3s;piptestB_09;4;1;2;color;lightgreen;style;moon;moon1;1;moon2;1.3
+    - net3s;piptestB_08;3;2;1;color;yellow;style;moon;moon1;1;moon2;1.3
+    - net3s;piptestB_07;4;1;2;color;lightgreen;style;moon;moon1;1;moon2;1.3
+    - net3s;piptestB_06;3;2;1;color;yellow;style;moon;moon1;1;moon2;1.3
+    - net3s;piptestB_05;4;1;2;color;lightgreen;style;moon;moon1;1;moon2;1.3
+    - net3s;piptestB_04;3;2;1;color;yellow;style;moon;moon1;1;moon2;1.3
+    - net3s;piptestB_03;4;1;2;color;lightgreen;style;moon;moon1;1;moon2;1.3
+    - net3s;piptestB_02;3;2;1;color;yellow;style;moon;moon1;1;moon2;1.3
+    - net3s;piptestB_01;4;1;2;color;lightgreen;style;moon;moon1;1;moon2;1.3
+  -
+    - pagename; 20260226 | 2c
+    - background;black
+    - condensed;net3s;piptestB_12;3;2;1;style;moon|moon1;0.55;moon2;0.75;color;brown|moon1;0.75;moon2;1;color;orange|moon1;1;moon2;1.3;color;yellow
+    - condensed;net3s;piptestB_11;4;1;2;style;moon|moon1;0.55;moon2;0.75;color;lightgreen|moon1;0.75;moon2;1;color;green|moon1;1;moon2;1.3;color;darkgreen
+    - condensed;net3s;piptestB_10;3;2;1;style;moon|moon1;0.55;moon2;0.75;color;brown|moon1;0.75;moon2;1;color;orange|moon1;1;moon2;1.3;color;yellow
+    - condensed;net3s;piptestB_09;4;1;2;style;moon|moon1;0.55;moon2;0.75;color;lightgreen|moon1;0.75;moon2;1;color;green|moon1;1;moon2;1.3;color;darkgreen
+    - condensed;net3s;piptestB_08;3;2;1;style;moon|moon1;0.55;moon2;0.75;color;brown|moon1;0.75;moon2;1;color;orange|moon1;1;moon2;1.3;color;yellow
+    - condensed;net3s;piptestB_07;4;1;2;style;moon|moon1;0.55;moon2;0.75;color;lightgreen|moon1;0.75;moon2;1;color;green|moon1;1;moon2;1.3;color;darkgreen
+    - condensed;net3s;piptestB_06;3;2;1;style;moon|moon1;0.55;moon2;0.75;color;brown|moon1;0.75;moon2;1;color;orange|moon1;1;moon2;1.3;color;yellow
+    - condensed;net3s;piptestB_05;4;1;2;style;moon|moon1;0.55;moon2;0.75;color;lightgreen|moon1;0.75;moon2;1;color;green|moon1;1;moon2;1.3;color;darkgreen
+    - condensed;net3s;piptestB_04;3;2;1;style;moon|moon1;0.55;moon2;0.75;color;brown|moon1;0.75;moon2;1;color;orange|moon1;1;moon2;1.3;color;yellow
+    - condensed;net3s;piptestB_03;4;1;2;style;moon|moon1;0.55;moon2;0.75;color;lightgreen|moon1;0.75;moon2;1;color;green|moon1;1;moon2;1.3;color;darkgreen
+    - condensed;net3s;piptestB_02;3;2;1;style;moon|moon1;0.55;moon2;0.75;color;brown|moon1;0.75;moon2;1;color;orange|moon1;1;moon2;1.3;color;yellow
+    - condensed;net3s;piptestB_01;4;1;2;style;moon|moon1;0.55;moon2;0.75;color;lightgreen|moon1;0.75;moon2;1;color;green|moon1;1;moon2;1.3;color;darkgreen
+  -
+    - pagename; 20260226 | 3
+    - condensed;net3s|piptestC_02|piptestC_04|piptestC_06|piptestC_08|piptestC_10|piptestC_12||3;2;1;color;green;lastthread;50%
+    - condensed;net3s|piptestC_01|piptestC_03|piptestC_05|piptestC_07|piptestC_09|piptestC_11||4;1;2;color;green;lastthread;50%
+    - condensed;net3s|piptestC_02|piptestC_04|piptestC_06|piptestC_08|piptestC_10|piptestC_12||3;2;1;color;white;firstthread;50%
+    - condensed;net3s|piptestC_01|piptestC_03|piptestC_05|piptestC_07|piptestC_09|piptestC_11||4;1;2;color;white;firstthread;50%
