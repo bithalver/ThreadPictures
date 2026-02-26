@@ -222,6 +222,15 @@ if (defined $config->{planes}) {
           $TP_planes{sprintf("%s_%02d",$planename,$i)}=\@w;
   	    }
       }
+      case (/^pip|^planeinplane/i){ # plane in plane
+        my @w=basicplane(splice @AP,0,3); # side,angle,size : for initial plane
+        # iteration,magnification,rotation,centerX,centerY
+        my $iterations=splice @AP,0,1;
+	      for my $i (1..$iterations) {
+          my @w=smaller_plane_1($i,@AP,@w);
+          $TP_planes{sprintf("%s_%02d",$planename,$i)}=\@w;
+        }
+      }
       case (/^a/i){ # angle: one mandatory option: angle in degrees (one full circle is 360 degrees)
         my $angle=$AP[0]/180*pi();
         $TP_planes{$planename}=[0,0,1,0,cos($angle),sin($angle)];
