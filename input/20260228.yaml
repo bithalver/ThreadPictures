@@ -31,6 +31,22 @@ pages:
     - net3;-4;16;-2;18;-4;20;color;silver;threads;4
     - net3;-3;19;-4;20;-3;21;color;silver;threads;2
   -
+    - pagename; 20260228 | 2c | Blue cyclops
+    - net3;8;0;0;8;-8;0;color;yellow;threads;16;firstthread;50%
+    - net3;8;0;0;8;-8;0;color;blue;threads;16;lastthread;49%
+    - net3;8;0;0;-8;-8;0;color;yellow;threads;16;firstthread;50%
+    - net3;8;0;0;-8;-8;0;color;blue;threads;16;lastthread;49%
+
+    - net3;6;2;0;8;6;14;color;blue;threads;12
+    - net3;2;10;6;14;2;18;color;blue;threads;8
+    - net3;4;16;2;18;4;20;color;blue;threads;4
+    - net3;3;19;4;20;3;21;color;blue;threads;2
+
+    - net3;-6;02;-0;08;-6;14;color;yellow;threads;12
+    - net3;-2;10;-6;14;-2;18;color;yellow;threads;8
+    - net3;-4;16;-2;18;-4;20;color;yellow;threads;4
+    - net3;-3;19;-4;20;-3;21;color;yellow;threads;2
+  -
     - pagename; 20260228 | 2a
     - net3;0;-8;8;0;0;8;color;red;threads;16
     - net3;6;2;0;8;6;14;color;red;threads;12
