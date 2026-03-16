@@ -40,6 +40,17 @@ pages:
     - condensed;net3s|piptestA1_02|piptestA1_04|piptestA1_06||2;3;4;color;lightblue;threads;8
     - condensed;net3s|piptestA1_03|piptestA1_05||4;1;2;color;lightblue;threads;8
   -
+    - pagename; 20260226 | 1c
+    - condensed;net3s|piptestA_02|piptestA_04|piptestA_06||4;1;2;color;yellow;threads;8
+    - condensed;net3s|piptestA_01|piptestA_03|piptestA_05||2;3;4;color;yellow;threads;8
+    - condensed;net3s|piptestA_02|piptestA_04|piptestA_06||2;3;4;color;lightblue;threads;8
+    - condensed;net3s|piptestA_01|piptestA_03|piptestA_05||4;1;2;color;lightblue;threads;8
+
+    - condensed;net3s|piptestA1_02|piptestA1_04|piptestA1_06||4;1;2;color;lightblue;threads;8;shiftX;16;shiftY;-28
+    - condensed;net3s|piptestA1_01|piptestA1_03|piptestA1_05||2;3;4;color;lightblue;threads;8;shiftX;16;shiftY;-28
+    - condensed;net3s|piptestA1_02|piptestA1_04|piptestA1_06||2;3;4;color;yellow;threads;8;shiftX;16;shiftY;-28
+    - condensed;net3s|piptestA1_01|piptestA1_03|piptestA1_05||4;1;2;color;yellow;threads;8;shiftX;16;shiftY;-28
+  -
     - pagename; 20260226 | 2
     - net3s;piptestB_12;3;2;1;color;yellow;style;moon;moon1;0.55;moon2;0.75
     - net3s;piptestB_11;4;1;2;color;lightgreen;style;moon;moon1;0.55;moon2;0.75
