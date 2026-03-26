@@ -128,3 +128,16 @@ pages:
     - net3;2;10;6;14;2;18;color;red;threads;8
     - net3;4;16;2;18;4;20;color;red;threads;4
     - net3;3;19;4;20;3;21;color;red;threads;2
+  -
+    - pagename; 20260228 | 3b
+    - net3;0;8;-8;0;0;-8;color;white;threads;16;lastthread;49%
+    - net3;-6;02;-0;08;-6;14;color;white;threads;12
+    - net3;-2;10;-6;14;-2;18;color;white;threads;8
+    - net3;-4;16;-2;18;-4;20;color;white;threads;4
+    - net3;-3;19;-4;20;-3;21;color;white;threads;2
+
+    - net3;0;8;-8;0;0;-8;color;lightblue;threads;16;firstthread;50%
+    - net3;-6;-02;-0;-08;-6;-14;color;lightblue;threads;12
+    - net3;-2;-10;-6;-14;-2;-18;color;lightblue;threads;8
+    - net3;-4;-16;-2;-18;-4;-20;color;lightblue;threads;4
+    - net3;-3;-19;-4;-20;-3;-21;color;lightblue;threads;2

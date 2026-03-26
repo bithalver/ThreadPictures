@@ -6,7 +6,7 @@ global:
     fontcolor: white
 pages:
   -
-    - pagename; 20260325 | Viki es Mate eskuvojere
+    - pagename; 20260325 | 1 | Viki es Mate eskuvojere
     - net3;8;8;0;0;8;-8;lastthread;49%;color;white
     - net3;-8;-8;0;0;-8;8;color;white;shiftX;10;lastthread;49%
     - net3;8;8;0;0;8;-8;firstthread;50%;color;lightblue
