@@ -1,0 +1,54 @@
+---
+global:
+    color: lightgray
+    background: darkgray
+    fontcolor: white
+planes:
+  - piptestA;planeinplane;4;45;1;8;1.5;0;-0.707;3.5355
+  - S;regular;3;240
+
+  - Sa1;connected;S;1;%S,1,S,2,0.75;S;2;1
+  - Sa2;connected;%Sa1,3,Sa1,2,0.66666;Sa1;3;S;3;2
+  - Sa3;connected;Sa2;1;%Sa2,1,Sa2,2,0.5;S;2;1
+
+  - Sb1;connected;S;3;%S,3,S,1,0.75;S;2;1
+  - Sb2;connected;%Sb1,3,Sb1,2,0.66666;Sb1;3;S;3;2
+  - Sb3;connected;Sb2;1;%Sb2,1,Sb2,2,0.5;S;2;1
+
+  - Sc1;connected;S;2;%S,2,S,3,0.75;S;2;1
+  - Sc2;connected;%Sc1,3,Sc1,2,0.66666;Sc1;3;S;3;2
+  - Sc3;connected;Sc2;1;%Sc2,1,Sc2,2,0.5;S;2;1
+pages:
+  -
+    - pagename; 20260412 | 1
+    - net3s;S;1;2;3;color;green;threads;16
+    - net3s;Sa1;1;2;3;color;green;threads;12
+    - net3s;Sa2;1;2;3;color;green;threads;8
+    - net3s;Sa3;1;2;3;color;green;threads;4
+
+    - net3s;S;3;1;2;color;gray;threads;16
+    - net3s;Sb1;1;2;3;color;gray;threads;12
+    - net3s;Sb2;1;2;3;color;gray;threads;8
+    - net3s;Sb3;1;2;3;color;gray;threads;4
+
+    - net3s;S;2;3;1;color;lightblue;threads;16
+    - net3s;Sc1;1;2;3;color;lightblue;threads;12
+    - net3s;Sc2;1;2;3;color;lightblue;threads;8
+    - net3s;Sc3;1;2;3;color;lightblue;threads;4
+  -
+    - pagename; 20260412 | 2
+    - net3s;S;1;2;3;color;green;threads;16
+    - net3s;Sa1;1;2;3;color;green;threads;12
+    - net3s;Sa2;1;2;3;color;green;threads;8
+    - net3s;Sa3;1;2;3;color;green;threads;4
+
+    - net3s;S;2;3;1;color;lightblue;threads;16
+    - net3s;Sc1;1;2;3;color;lightblue;threads;12
+    - net3s;Sc2;1;2;3;color;lightblue;threads;8
+    - net3s;Sc3;1;2;3;color;lightblue;threads;4
+  -
+    - pagename; 20260412 | 3
+    - net3s;S;1;2;3;color;green;threads;16
+    - net3s;Sa1;1;2;3;color;green;threads;12
+    - net3s;Sa2;1;2;3;color;green;threads;8
+    - net3s;Sa3;1;2;3;color;green;threads;4
