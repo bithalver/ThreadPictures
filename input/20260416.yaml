@@ -1,0 +1,22 @@
+global:
+    background: darkgray
+    fontcolor: white
+    color: white
+    threads: 16
+planes:
+  - g;grid3;80;80
+  - g_;connected;0;0;0;1;g;0;1
+pages:
+  -
+    - pagename;2026 04 16 | 1
+    - net3s;g_;000;201;002
+    - net3s;g_;201;002;203
+    - net3s;g_;002;203;004
+    - net3s;g_;203;004;205
+    - net3s;g_;004;205;006
+
+    - net3s;g_;600;401;602
+    - net3s;g_;401;602;403
+    - net3s;g_;602;403;604
+    - net3s;g_;403;604;405
+    - net3s;g_;604;405;606
