@@ -27,6 +27,18 @@ planes:
   - Sc4;connected;Sc3;2;%Sc3,2,Sc3,3,2;S;3;2
   - Sc5;connected;%Sc4,2,Sc4,1,1.5;Sc4;2;S;2;1
   - Sc6;connected;Sc5;2;%Sc5,2,Sc5,3,1.333333;S;3;2
+
+  - SA1;connected;S;1;%S,1,S,2,0.75;S;2;3
+  - SA2;connected;SA1;1;%SA1,1,SA1,2,0.66666;S;2;3
+  - SA3;connected;SA2;1;%SA2,1,SA2,2,0.5;S;2;3
+
+  - SB1;connected;S;3;%S,3,S,1,0.75;S;2;3
+  - SB2;connected;SB1;1;%SB1,1,SB1,2,0.66666;S;2;3
+  - SB3;connected;SB2;1;%SB2,1,SB2,2,0.5;S;2;3
+
+  - SC1;connected;S;2;%S,2,S,3,0.75;S;2;3
+  - SC2;connected;SC1;1;%SC1,1,SC1,2,0.66666;S;2;3
+  - SC3;connected;SC2;1;%SC2,1,SC2,2,0.5;S;2;3
 pages:
   -
     - pagename; 20260412 | 1
@@ -165,3 +177,181 @@ pages:
     - net3s;Sc1;1;2;3;color;lightblue;threads;6;shiftY;2.3
     - net3s;Sc2;1;2;3;color;lightblue;threads;4;shiftY;2.3
     - net3s;Sc3;1;2;3;color;lightblue;threads;2;shiftY;2.3
+  -
+    - pagename; 20260412 | 4b | Just for 50x70cm print
+    - net3s;S;1;2;3;color;green;threads;24
+    - net3s;Sa1;1;2;3;color;green;threads;18
+    - net3s;Sa2;1;2;3;color;green;threads;12
+    - net3s;Sa3;1;2;3;color;green;threads;6
+    - net3s;Sa4;1;2;3;color;green;threads;12
+    - net3s;Sa5;1;2;3;color;green;threads;18
+    - net3s;Sa6;1;2;3;color;green;threads;24
+
+    - net3s;S;3;1;2;color;gray;threads;24
+    - net3s;Sb1;1;2;3;color;gray;threads;18
+    - net3s;Sb2;1;2;3;color;gray;threads;12
+    - net3s;Sb3;1;2;3;color;gray;threads;6
+    - net3s;Sb4;1;2;3;color;gray;threads;12
+    - net3s;Sb5;1;2;3;color;gray;threads;18
+    - net3s;Sb6;1;2;3;color;gray;threads;24
+
+    - net3s;S;2;3;1;color;lightblue;threads;24
+    - net3s;Sc1;1;2;3;color;lightblue;threads;18
+    - net3s;Sc2;1;2;3;color;lightblue;threads;12
+    - net3s;Sc3;1;2;3;color;lightblue;threads;6
+    - net3s;Sc4;1;2;3;color;lightblue;threads;12
+    - net3s;Sc5;1;2;3;color;lightblue;threads;18
+    - net3s;Sc6;1;2;3;color;lightblue;threads;24
+
+    - net3s;S;1;2;3;color;green;threads;24;shiftX;-2;shiftY;-1.15
+    - net3s;Sa1;1;2;3;color;green;threads;18;shiftX;-2;shiftY;-1.15
+    - net3s;Sa2;1;2;3;color;green;threads;12;shiftX;-2;shiftY;-1.15
+    - net3s;Sa3;1;2;3;color;green;threads;6;shiftX;-2;shiftY;-1.15
+    - net3s;S;3;1;2;color;gray;threads;24;shiftX;-2;shiftY;-1.15
+    - net3s;Sb1;1;2;3;color;gray;threads;18;shiftX;-2;shiftY;-1.15
+    - net3s;Sb2;1;2;3;color;gray;threads;12;shiftX;-2;shiftY;-1.15
+    - net3s;Sb3;1;2;3;color;gray;threads;6;shiftX;-2;shiftY;-1.15
+
+    - net3s;S;1;2;3;color;green;threads;24;shiftX;2;shiftY;-1.15
+    - net3s;Sa1;1;2;3;color;green;threads;18;shiftX;2;shiftY;-1.15
+    - net3s;Sa2;1;2;3;color;green;threads;12;shiftX;2;shiftY;-1.15
+    - net3s;Sa3;1;2;3;color;green;threads;6;shiftX;2;shiftY;-1.15
+    - net3s;S;2;3;1;color;lightblue;threads;24;shiftX;2;shiftY;-1.15
+    - net3s;Sc1;1;2;3;color;lightblue;threads;18;shiftX;2;shiftY;-1.15
+    - net3s;Sc2;1;2;3;color;lightblue;threads;12;shiftX;2;shiftY;-1.15
+    - net3s;Sc3;1;2;3;color;lightblue;threads;6;shiftX;2;shiftY;-1.15
+
+    - net3s;S;3;1;2;color;gray;threads;24;shiftY;2.3
+    - net3s;Sb1;1;2;3;color;gray;threads;18;shiftY;2.3
+    - net3s;Sb2;1;2;3;color;gray;threads;12;shiftY;2.3
+    - net3s;Sb3;1;2;3;color;gray;threads;6;shiftY;2.3
+    - net3s;S;2;3;1;color;lightblue;threads;24;shiftY;2.3
+    - net3s;Sc1;1;2;3;color;lightblue;threads;18;shiftY;2.3
+    - net3s;Sc2;1;2;3;color;lightblue;threads;12;shiftY;2.3
+    - net3s;Sc3;1;2;3;color;lightblue;threads;6;shiftY;2.3
+  -
+    - pagename; 20260412 | 5
+    - net3s;S;1;2;3;color;green;threads;16
+    - net3s;Sa1;1;2;3;color;green;threads;12
+    - net3s;Sa2;1;2;3;color;green;threads;8
+    - net3s;Sa3;1;2;3;color;green;threads;4
+    - net3s;Sa4;1;2;3;color;green;threads;8
+    - net3s;Sa5;1;2;3;color;green;threads;12
+    - net3s;Sa6;1;2;3;color;green;threads;16
+
+    - net3s;S;3;1;2;color;gray;threads;16
+    - net3s;Sb1;1;2;3;color;gray;threads;12
+    - net3s;Sb2;1;2;3;color;gray;threads;8
+    - net3s;Sb3;1;2;3;color;gray;threads;4
+    - net3s;Sb4;1;2;3;color;gray;threads;8
+    - net3s;Sb5;1;2;3;color;gray;threads;12
+    - net3s;Sb6;1;2;3;color;gray;threads;16
+
+    - net3s;S;2;3;1;color;lightblue;threads;16
+    - net3s;Sc1;1;2;3;color;lightblue;threads;12
+    - net3s;Sc2;1;2;3;color;lightblue;threads;8
+    - net3s;Sc3;1;2;3;color;lightblue;threads;4
+    - net3s;Sc4;1;2;3;color;lightblue;threads;8
+    - net3s;Sc5;1;2;3;color;lightblue;threads;12
+    - net3s;Sc6;1;2;3;color;lightblue;threads;16
+
+    - net3s;S;1;2;3;color;green;threads;16;shiftX;-2;shiftY;-1.15
+    - net3s;Sa1;1;2;3;color;green;threads;12;shiftX;-2;shiftY;-1.15
+    - net3s;Sa2;1;2;3;color;green;threads;8;shiftX;-2;shiftY;-1.15
+    - net3s;Sa3;1;2;3;color;green;threads;4;shiftX;-2;shiftY;-1.15
+    - net3s;Sa4;1;2;3;color;green;threads;8;shiftX;-2;shiftY;-1.15
+    - net3s;Sa5;1;2;3;color;green;threads;12;shiftX;-2;shiftY;-1.15
+    - net3s;Sa6;1;2;3;color;green;threads;16;shiftX;-2;shiftY;-1.15
+    - net3s;S;3;1;2;color;gray;threads;16;shiftX;-2;shiftY;-1.15
+    - net3s;Sb1;1;2;3;color;gray;threads;12;shiftX;-2;shiftY;-1.15
+    - net3s;Sb2;1;2;3;color;gray;threads;8;shiftX;-2;shiftY;-1.15
+    - net3s;Sb3;1;2;3;color;gray;threads;4;shiftX;-2;shiftY;-1.15
+    - net3s;Sb4;1;2;3;color;gray;threads;8;shiftX;-2;shiftY;-1.15
+    - net3s;Sb5;1;2;3;color;gray;threads;12;shiftX;-2;shiftY;-1.15
+    - net3s;Sb6;1;2;3;color;gray;threads;16;shiftX;-2;shiftY;-1.15
+
+    - net3s;S;1;2;3;color;green;threads;16;shiftX;2;shiftY;-1.15
+    - net3s;Sa1;1;2;3;color;green;threads;12;shiftX;2;shiftY;-1.15
+    - net3s;Sa2;1;2;3;color;green;threads;8;shiftX;2;shiftY;-1.15
+    - net3s;Sa3;1;2;3;color;green;threads;4;shiftX;2;shiftY;-1.15
+    - net3s;Sa4;1;2;3;color;green;threads;8;shiftX;2;shiftY;-1.15
+    - net3s;Sa5;1;2;3;color;green;threads;12;shiftX;2;shiftY;-1.15
+    - net3s;Sa6;1;2;3;color;green;threads;16;shiftX;2;shiftY;-1.15
+    - net3s;S;2;3;1;color;lightblue;threads;16;shiftX;2;shiftY;-1.15
+    - net3s;Sc1;1;2;3;color;lightblue;threads;12;shiftX;2;shiftY;-1.15
+    - net3s;Sc2;1;2;3;color;lightblue;threads;8;shiftX;2;shiftY;-1.15
+    - net3s;Sc3;1;2;3;color;lightblue;threads;4;shiftX;2;shiftY;-1.15
+    - net3s;Sc4;1;2;3;color;lightblue;threads;8;shiftX;2;shiftY;-1.15
+    - net3s;Sc5;1;2;3;color;lightblue;threads;12;shiftX;2;shiftY;-1.15
+    - net3s;Sc6;1;2;3;color;lightblue;threads;16;shiftX;2;shiftY;-1.15
+
+    - net3s;S;3;1;2;color;gray;threads;16;shiftY;2.3
+    - net3s;Sb1;1;2;3;color;gray;threads;12;shiftY;2.3
+    - net3s;Sb2;1;2;3;color;gray;threads;8;shiftY;2.3
+    - net3s;Sb3;1;2;3;color;gray;threads;4;shiftY;2.3
+    - net3s;Sb4;1;2;3;color;gray;threads;8;shiftY;2.3
+    - net3s;Sb5;1;2;3;color;gray;threads;12;shiftY;2.3
+    - net3s;Sb6;1;2;3;color;gray;threads;16;shiftY;2.3
+    - net3s;S;2;3;1;color;lightblue;threads;16;shiftY;2.3
+    - net3s;Sc1;1;2;3;color;lightblue;threads;12;shiftY;2.3
+    - net3s;Sc2;1;2;3;color;lightblue;threads;8;shiftY;2.3
+    - net3s;Sc3;1;2;3;color;lightblue;threads;4;shiftY;2.3
+    - net3s;Sc4;1;2;3;color;lightblue;threads;8;shiftY;2.3
+    - net3s;Sc5;1;2;3;color;lightblue;threads;12;shiftY;2.3
+    - net3s;Sc6;1;2;3;color;lightblue;threads;16;shiftY;2.3
+  -
+    - pagename; 20260412 | 6
+    - net3s;SB3;1;2;3;color;gray;threads;4
+    - net3s;SA3;1;2;3;color;green;threads;4
+    - net3s;SC3;1;2;3;color;lightblue;threads;8
+
+    - net3s;SB2;1;2;3;color;gray;threads;8
+    - net3s;SA2;1;2;3;color;green;threads;8
+    - net3s;SC2;1;2;3;color;lightblue;threads;16
+
+    - net3s;SA1;1;2;3;color;green;threads;12
+    - net3s;SB1;1;2;3;color;gray;threads;12
+    - net3s;SC1;1;2;3;color;lightblue;threads;24
+
+    - net3s;SB3;1;2;3;color;gray;threads;4;shiftY;2
+    - net3s;SA3;1;2;3;color;green;threads;4;shiftY;2
+    - net3s;SC3;1;2;3;color;lightblue;threads;8;shiftY;2
+
+    - net3s;SB2;1;2;3;color;gray;threads;8;shiftY;2
+    - net3s;SA2;1;2;3;color;green;threads;8;shiftY;2
+    - net3s;SC2;1;2;3;color;lightblue;threads;16;shiftY;2
+
+    - net3s;SB3;1;2;3;color;gray;threads;4;shiftY;1;shiftX;0.6
+    - net3s;SA3;1;2;3;color;green;threads;4;shiftY;1;shiftX;0.6
+    - net3s;SC3;1;2;3;color;lightblue;threads;8;shiftY;1;shiftX;0.6
+  -
+    - pagename; 20260412 | 7
+    - net3s;SC3;1;2;3;color;white;threads;4;lastthread;50%
+    - net3s;SC2;1;2;3;color;white;threads;8;lastthread;50%
+    - net3s;SC1;1;2;3;color;white;threads;12;lastthread;50%
+    - net3s;S;2;3;1;color;white;threads;16;lastthread;50%
+
+    - net3s;SC3;1;2;3;color;red;threads;4;firstthread;51%
+    - net3s;SC2;1;2;3;color;red;threads;8;firstthread;51%
+    - net3s;SC1;1;2;3;color;red;threads;12;firstthread;51%
+    - net3s;S;2;3;1;color;red;threads;16;firstthread;51%
+
+    - net3s;SC3;1;2;3;color;white;threads;4;lastthread;50%;shiftY;-2
+    - net3s;SC2;1;2;3;color;white;threads;8;lastthread;50%;shiftY;-2
+    - net3s;SC1;1;2;3;color;white;threads;12;lastthread;50%;shiftY;-2
+    - net3s;S;2;3;1;color;white;threads;16;lastthread;50%;shiftY;-2
+
+    - net3s;SC3;1;2;3;color;black;threads;4;firstthread;51%;shiftY;-2
+    - net3s;SC2;1;2;3;color;black;threads;8;firstthread;51%;shiftY;-2
+    - net3s;SC1;1;2;3;color;black;threads;12;firstthread;51%;shiftY;-2
+    - net3s;S;2;3;1;color;black;threads;16;firstthread;51%;shiftY;-2
+
+    - net3s;SC3;1;2;3;color;red;threads;4;firstthread;51%;shiftY;2
+    - net3s;SC2;1;2;3;color;red;threads;8;firstthread;51%;shiftY;2
+    - net3s;SC1;1;2;3;color;red;threads;12;firstthread;51%;shiftY;2
+    - net3s;S;2;3;1;color;red;threads;16;firstthread;51%;shiftY;2
+
+    - net3s;SC3;1;2;3;color;black;threads;4;lastthread;50%;shiftY;2
+    - net3s;SC2;1;2;3;color;black;threads;8;lastthread;50%;shiftY;2
+    - net3s;SC1;1;2;3;color;black;threads;12;lastthread;50%;shiftY;2
+    - net3s;S;2;3;1;color;black;threads;16;lastthread;50%;shiftY;2
