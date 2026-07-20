@@ -1,0 +1,39 @@
+global:
+    background: darkgray
+    fontcolor: white
+    color: white
+    threads: 36
+planes:
+  - g;grid3;80;80
+  - g_;connected;0;0;0;1;g;0;1
+pages:
+  -
+    - pagename;2026 07 20 | 1
+    - net3s;g_;0000;1206;0012;color;white;threads;36
+    - net3s;g_;1206;0012;1218;color;white;threads;36
+
+    - net3s;g_;0402;1206;0410;color;red;threads;24
+    - net3s;g_;0808;0012;0816;color;red;threads;24
+
+    - net3s;g_;0804;1206;0808;color;black;threads;12
+    - net3s;g_;0410;0012;0414;color;black;threads;12
+  -
+    - pagename;2026 07 20 | 2
+    - net3s;g_;0000;1206;0012;color;white;threads;36
+    - net3s;g_;1206;0012;1218;color;black;threads;36
+
+    - net3s;g_;0402;1206;0410;color;red;threads;24
+    - net3s;g_;0808;0012;0816;color;red;threads;24
+
+    - net3s;g_;0804;1206;0808;color;black;threads;12
+    - net3s;g_;0410;0012;0414;color;white;threads;12
+  -
+    - pagename;2026 07 20 | 3
+    - net3s;g_;0000;1206;0012;color;white;threads;36
+    - net3s;g_;1206;0012;1218;color;white;threads;36
+
+    - net3s;g_;0201;1206;0211;color;red;threads;30
+    - net3s;g_;1007;0012;1017;color;red;threads;30
+
+    - net3s;g_;0402;1206;0410;color;black;threads;24
+    - net3s;g_;0808;0012;0816;color;black;threads;24
