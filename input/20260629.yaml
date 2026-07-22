@@ -14,6 +14,14 @@ planes:
   - r8S;regular;8;22.5;1.4
   - r12B;regular;12;15;2
   - r12S;regular;12;15;1.6
+
+  - r4S2;regular;4;90;1
+  - r6S2;regular;6;90;1.25
+  - r8S2;regular;8;90;1.4
+  - r12S2;regular;12;90;1.6
+
+
+
 pages:
   -
     - pagename; 20260629 | 1 | When lightning strikes the red sky
@@ -28,3 +36,33 @@ pages:
 
     - condensed;net3s;r12B|1;2;3|2;3;4|3;4;5|4;5;6|5;6;7|6;7;8|7;8;9|8;9;10|9;10;11|10;11;12|11;12;1|12;1;2||shiftX;-2.25;shiftY;-2.25;threads;8
     - condensed;net3s;r12S|4;3;9|3;9;10|9;10;8|10;8;11|8;11;7|11;7;12|7;12;6|12;6;1|6;1;5|1;5;2|5;2;4|2;4;3||shiftX;-2.25;shiftY;-2.25;threads;8;color;silver
+  -
+    - pagename; 20260629 | 2 | 20260722 | Do not spring on it !
+    - condensed;net3s;r4B|1;2;3|2;3;4|3;4;1|4;1;2||shiftX;-2.25;shiftY;2.25;threads;20
+    - condensed;net3s;r4S2|1;2;4|4;3;1||shiftX;-2.25;shiftY;2.25;threads;20;color;silver
+    - condensed;net3s;r4S2|2;4;3|3;1;2||shiftX;-2.25;shiftY;2.25;threads;20;color;yellow
+#    - condensed;net3s;r4S2|1;2;4|2;4;3|4;3;1|3;1;2||shiftX;-2.25;shiftY;2.25;threads;20;color;silver
+
+    - condensed;net3s;r6B|1;2;3|2;3;4|3;4;5|4;5;6|5;6;1|6;1;2||shiftX;2.25;shiftY;2.25;threads;16
+    - condensed;net3s;r6S2|1;2;5|5;4;3|3;6;1||shiftX;2.25;shiftY;2.25;threads;16;color;silver
+    - condensed;net3s;r6S2|2;5;4|4;3;6|6;1;2||shiftX;2.25;shiftY;2.25;threads;16;color;yellow
+#    - condensed;net3s;r6S2|1;2;5|2;5;4|5;4;3|4;3;6|3;6;1|6;1;2||shiftX;2.25;shiftY;2.25;threads;16;color;silver
+
+    - condensed;net3s;r8B|1;2;3|2;3;4|3;4;5|4;5;6|5;6;7|6;7;8|7;8;1|8;1;2||shiftX;2.25;shiftY;-2.25;threads;12
+    - condensed;net3s;r8S2|1;2;7|7;4;5|5;6;3|3;8;1||shiftX;2.25;shiftY;-2.25;threads;12;color;silver
+    - condensed;net3s;r8S2|2;7;4|4;5;6|6;3;8|8;1;2||shiftX;2.25;shiftY;-2.25;threads;12;color;yellow
+#    - condensed;net3s;r8S2|1;2;7|2;7;4|7;4;5|4;5;6|5;6;3|6;3;8|3;8;1|8;1;2||shiftX;2.25;shiftY;-2.25;threads;12;color;silver
+
+    - condensed;net3s;r12B|1;2;3|2;3;4|3;4;5|4;5;6|5;6;7|6;7;8|7;8;9|8;9;10|9;10;11|10;11;12|11;12;1|12;1;2||shiftX;-2.25;shiftY;-2.25;threads;8
+    - condensed;net3s;r12S2|1;2;11|11;4;9|9;6;7|7;8;5|5;10;3|3;12;1||shiftX;-2.25;shiftY;-2.25;threads;8;color;silver
+    - condensed;net3s;r12S2|2;11;4|4;9;6|6;7;8|8;5;10|10;3;12|12;1;2||shiftX;-2.25;shiftY;-2.25;threads;8;color;yellow
+#    - condensed;net3s;r12S2|1;2;11|2;11;4|11;4;9|4;9;6|9;6;7|6;7;8|7;8;5|8;5;10|5;10;3|10;3;12|3;12;1|12;1;2||shiftX;-2.25;shiftY;-2.25;threads;8;color;silver
+  -
+    - pagename; 20260629 | 3 | 20260722 | 6-spring dissected
+#    - condensed;net3s;r6B|1;2;3|2;3;4|3;4;5|4;5;6|5;6;1|6;1;2||shiftX;2.25;shiftY;2.25;threads;16
+    - condensed;net3s;r6S|1;2;5|5;4;3|3;6;1||shiftY;2.5;threads;16;color;silver
+
+    - condensed;net3s;r6S|1;2;5|5;4;3|3;6;1||threads;16;color;silver
+    - condensed;net3s;r6S|2;5;4|4;3;6|6;1;2||threads;16;color;yellow
+
+    - condensed;net3s;r6S|2;5;4|4;3;6|6;1;2||shiftY;-2.5;threads;16;color;yellow
