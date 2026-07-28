@@ -131,3 +131,27 @@ pages:
     - condensed;net3s;r8S3|1;2;7|2;7;4|7;4;5|8;1;2||shiftY;0;threads;12;color;yellow
     - condensed;net3s;r8S3|4;5;6|5;6;3|6;3;8|3;8;1||shiftY;0;threads;12;color;silver
     - condensed;net3s;r8S3|4;5;6|5;6;3|6;3;8|3;8;1||shiftY;0;threads;12;color;silver;shiftX;3.2
+  -
+    - pagename; 20260629 | 7 | 20260728 | Springs dissected, 6 only
+    - xymirror;1
+    - condensed;net3s;r6S3|1;2;5|2;5;4|5;4;3|6;1;2||shiftY;10.5;threads;16;color;yellow;shiftX;-3.2
+    - condensed;net3s;r6S3|1;2;5|2;5;4|5;4;3|6;1;2||shiftY;10.5;threads;16;color;yellow
+    - condensed;net3s;r6S3|4;3;6|3;6;1||shiftY;10.5;threads;16;color;silver
+    - condensed;net3s;r6S3|4;3;6|3;6;1||shiftY;10.5;threads;16;color;silver;shiftX;3.2
+
+    - condensed;net3s;r6S3|6;1;2|1;2;5|2;5;4||shiftY;7;threads;16;color;yellow;shiftX;-3.2
+    - condensed;net3s;r6S3|6;1;2|1;2;5|2;5;4||shiftY;7;threads;16;color;yellow
+    - condensed;net3s;r6S3|5;4;3|4;3;6|3;6;1||shiftY;7;threads;16;color;silver
+    - condensed;net3s;r6S3|5;4;3|4;3;6|3;6;1||shiftY;7;threads;16;color;silver;shiftX;3.2
+  -
+    - pagename; 20260629 | 8 | 20260728 | Springs dissected, 8 only
+    - xymirror;1
+    - condensed;net3s;r8S3|1;2;7|2;7;4|7;4;5|4;5;6|8;1;2||shiftY;3.5;threads;12;color;yellow;shiftX;-3.2
+    - condensed;net3s;r8S3|1;2;7|2;7;4|7;4;5|4;5;6|8;1;2||shiftY;3.5;threads;12;color;yellow
+    - condensed;net3s;r8S3|5;6;3|6;3;8|3;8;1||shiftY;3.5;threads;12;color;silver
+    - condensed;net3s;r8S3|5;6;3|6;3;8|3;8;1||shiftY;3.5;threads;12;color;silver;shiftX;3.2
+
+    - condensed;net3s;r8S3|1;2;7|2;7;4|7;4;5|8;1;2||shiftY;0;threads;12;color;yellow;shiftX;-3.2
+    - condensed;net3s;r8S3|1;2;7|2;7;4|7;4;5|8;1;2||shiftY;0;threads;12;color;yellow
+    - condensed;net3s;r8S3|4;5;6|5;6;3|6;3;8|3;8;1||shiftY;0;threads;12;color;silver
+    - condensed;net3s;r8S3|4;5;6|5;6;3|6;3;8|3;8;1||shiftY;0;threads;12;color;silver;shiftX;3.2
