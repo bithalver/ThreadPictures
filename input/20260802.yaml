@@ -1,0 +1,61 @@
+---
+global:
+#    threads: ENV[Threads,20]
+    color: lightgray
+    background: darkgray
+    fontcolor: white
+planes:
+  - r12A;regular;12;45;12
+  - r12B;regular;12;45;8
+  - r12C;regular;12;45;4
+pages:
+  -
+    - pagename; 20260802 | 1
+    - net3s;r12A;1;0;10;color;yellow
+    - net3s;r12B;11;0;8;color;yellow
+    - net3s;r12C;12;0;9;color;yellow
+
+    - net3s;r12A;4;0;1;color;red
+    - net3s;r12B;2;0;11;color;red
+    - net3s;r12C;3;0;12;color;red
+
+    - net3s;r12A;7;0;4;color;yellow
+    - net3s;r12B;5;0;2;color;yellow
+    - net3s;r12C;6;0;3;color;yellow
+
+    - net3s;r12A;10;0;7;color;red
+    - net3s;r12B;8;0;5;color;red
+    - net3s;r12C;9;0;6;color;red
+  -
+    - pagename; 20260802 | 2
+    - net3s;r12A;1;0;10;color;silver;threads;24
+    - net3s;r12A;4;0;1;color;silver;threads;24
+    - net3s;r12A;7;0;4;color;silver;threads;24
+    - net3s;r12A;10;0;7;color;silver;threads;24
+
+    - net3s;r12B;11;0;8;color;red;threads;18
+    - net3s;r12B;2;0;11;color;red;threads;18
+    - net3s;r12B;5;0;2;color;red;threads;18
+    - net3s;r12B;8;0;5;color;red;threads;18
+
+    - net3s;r12C;12;0;9;color;black;threads;12
+    - net3s;r12C;3;0;12;color;black;threads;12
+    - net3s;r12C;6;0;3;color;black;threads;12
+    - net3s;r12C;9;0;6;color;black;threads;12
+
+  -
+    - pagename; 20260802 | 3
+    - net3s;r12A;1;0;10;color;silver
+    - net3s;r12A;4;0;1;color;silver
+    - net3s;r12A;7;0;4;color;silver
+    - net3s;r12A;10;0;7;color;silver
+
+    - net3s;r12B;2;0;11;color;red
+    - net3s;r12C;11;0;8;color;red
+    - net3s;r12B;8;0;5;color;red
+    - net3s;r12C;5;0;2;color;red
+
+    - net3s;r12B;12;0;9;color;black
+    - net3s;r12B;6;0;3;color;black
+    - net3s;r12C;3;0;12;color;black
+    - net3s;r12C;9;0;6;color;black
