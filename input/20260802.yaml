@@ -8,6 +8,16 @@ planes:
   - r12A;regular;12;45;12
   - r12B;regular;12;45;8
   - r12C;regular;12;45;4
+
+  - r12a;regular;12;60;12
+  - r12b;regular;12;90;10
+  - r12c;regular;12;120;8
+  - r12d;regular;12;150;6
+
+  - r3a;regular;3;60;12
+  - r3b;regular;3;90;10
+  - r3c;regular;3;120;8
+  - r3d;regular;3;150;6
 pages:
   -
     - pagename; 20260802 | 1
@@ -42,7 +52,6 @@ pages:
     - net3s;r12C;3;0;12;color;black;threads;12
     - net3s;r12C;6;0;3;color;black;threads;12
     - net3s;r12C;9;0;6;color;black;threads;12
-
   -
     - pagename; 20260802 | 3
     - net3s;r12A;1;0;10;color;silver
@@ -59,3 +68,14 @@ pages:
     - net3s;r12B;6;0;3;color;black
     - net3s;r12C;3;0;12;color;black
     - net3s;r12C;9;0;6;color;black
+  -
+    - pagename; 20260802 | 4
+    - condensed;net3s;r3a|1;0;3|3;0;2|2;0;1||color;silver;threads;24
+    - condensed;net3s;r3b|1;0;3|3;0;2|2;0;1||color;red;threads;20
+    - condensed;net3s;r3c|1;0;3|3;0;2|2;0;1||color;yellow;threads;16
+    - condensed;net3s;r3d|1;0;3|3;0;2|2;0;1||color;black;threads;12
+  -
+    - pagename; 20260802 | 5
+    - condensed;net3s|r3a|r3b|r3c|r3d||1;0;3;color;silver;threads;24
+    - condensed;net3s|r3a|r3b|r3c|r3d||3;0;2;color;red;threads;24
+    - condensed;net3s|r3a|r3b|r3c|r3d||2;0;1;color;yellow;threads;24
