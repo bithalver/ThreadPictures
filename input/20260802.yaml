@@ -18,6 +18,18 @@ planes:
   - r3b;regular;3;90;10
   - r3c;regular;3;120;8
   - r3d;regular;3;150;6
+
+  - r12_a;regular;12;60;12
+  - r12_b;regular;12;120;10
+  - r12_c;regular;12;180;8
+  - r12_d;regular;12;240;6
+  - r12_e;regular;12;300;4
+  - r12_f;regular;12;360;2
+
+  - r12_a1;regular;12;45;12
+  - r12_b1;regular;12;135;10
+  - r12_c1;regular;12;225;8
+  - r12_d1;regular;12;315;6
 pages:
   -
     - pagename; 20260802 | 1
@@ -70,12 +82,55 @@ pages:
     - net3s;r12C;9;0;6;color;black
   -
     - pagename; 20260802 | 4
-    - condensed;net3s;r3a|1;0;3|3;0;2|2;0;1||color;silver;threads;24
-    - condensed;net3s;r3b|1;0;3|3;0;2|2;0;1||color;red;threads;20
-    - condensed;net3s;r3c|1;0;3|3;0;2|2;0;1||color;yellow;threads;16
-    - condensed;net3s;r3d|1;0;3|3;0;2|2;0;1||color;black;threads;12
+    - condensed;net3s;r12a|1;0;9|9;0;5|5;0;1||color;silver;threads;24
+    - condensed;net3s;r12b|1;0;9|9;0;5|5;0;1||color;red;threads;20
+    - condensed;net3s;r12c|1;0;9|9;0;5|5;0;1||color;yellow;threads;16
+    - condensed;net3s;r12d|1;0;9|9;0;5|5;0;1||color;black;threads;12
+  -
+    - pagename; 20260802 | 4b
+    - condensed;net3s;r12a|1;0;9|9;0;5|5;0;1||color;white;threads;24;shiftX;6;shiftY;-6
+    - condensed;net3s;r12b|1;0;9|9;0;5|5;0;1||color;yellow;threads;20;shiftX;-6;shiftY;-6
+    - condensed;net3s;r12c|1;0;9|9;0;5|5;0;1||color;orange;threads;16;shiftX;-6;shiftY;4
+    - condensed;net3s;r12d|1;0;9|9;0;5|5;0;1||color;red;threads;12;shiftX;2;shiftY;4
   -
     - pagename; 20260802 | 5
     - condensed;net3s|r3a|r3b|r3c|r3d||1;0;3;color;silver;threads;24
     - condensed;net3s|r3a|r3b|r3c|r3d||3;0;2;color;red;threads;24
     - condensed;net3s|r3a|r3b|r3c|r3d||2;0;1;color;yellow;threads;24
+  -
+    - pagename; 20260802 | 6
+    - condensed;net3s;r12_a|1;0;2|2;0;3|3;0;1||color;white;threads;12
+    - condensed;net3s;r12_b|1;0;2|2;0;3|3;0;1||color;yellow;threads;10
+    - condensed;net3s;r12_c|1;0;2|2;0;3|3;0;1||color;orange;threads;8
+    - condensed;net3s;r12_d|1;0;2|2;0;3|3;0;1||color;red;threads;6
+    - condensed;net3s;r12_e|1;0;2|2;0;3|3;0;1||color;brown;threads;4
+    - condensed;net3s;r12_f|1;0;2|2;0;3|3;0;1||color;black;threads;2
+  -
+    - pagename; 20260802 | 6b
+    - condensed;net3s;r12_a|1;0;2|2;0;3||color;white;threads;12
+    - condensed;net3s;r12_b|1;0;2|2;0;3||color;white;threads;10
+    - condensed;net3s;r12_c|1;0;2|2;0;3||color;white;threads;8
+    - condensed;net3s;r12_d|1;0;2|2;0;3||color;white;threads;6
+    - condensed;net3s;r12_e|1;0;2|2;0;3||color;white;threads;4
+    - condensed;net3s;r12_f|1;0;2|2;0;3||color;white;threads;2
+
+    - condensed;net3s;r12_a|3;0;1||color;black;threads;24
+    - condensed;net3s;r12_b|3;0;1||color;black;threads;20
+    - condensed;net3s;r12_c|3;0;1||color;black;threads;16
+    - condensed;net3s;r12_d|3;0;1||color;black;threads;12
+    - condensed;net3s;r12_e|3;0;1||color;black;threads;8
+    - condensed;net3s;r12_f|3;0;1||color;black;threads;4
+  -
+    - pagename; 20260802 | 6a
+    - condensed;net3s;r12_a|3;0;1||color;white;threads;24
+    - condensed;net3s;r12_b|3;0;1||color;yellow;threads;20
+    - condensed;net3s;r12_c|3;0;1||color;orange;threads;16
+    - condensed;net3s;r12_d|3;0;1||color;red;threads;12
+    - condensed;net3s;r12_e|3;0;1||color;brown;threads;8
+    - condensed;net3s;r12_f|3;0;1||color;black;threads;4
+  -
+    - pagename; 20260802 | 7
+    - condensed;net3s;r12_d1|1;0;2|2;0;4|4;0;1||color;black;threads;12
+    - condensed;net3s;r12_c1|1;0;2|2;0;4|4;0;1||color;green;threads;16
+    - condensed;net3s;r12_b1|1;0;2|2;0;4|4;0;1||color;purple;threads;20
+    - condensed;net3s;r12_a1|1;0;2|2;0;4|4;0;1||color;white;threads;24
