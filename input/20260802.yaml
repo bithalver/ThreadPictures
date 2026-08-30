@@ -90,8 +90,8 @@ pages:
     - pagename; 20260802 | 4b
     - condensed;net3s;r12a|1;0;9|9;0;5|5;0;1||color;white;threads;24;shiftX;6;shiftY;-6
     - condensed;net3s;r12b|1;0;9|9;0;5|5;0;1||color;yellow;threads;20;shiftX;-6;shiftY;-6
-    - condensed;net3s;r12c|1;0;9|9;0;5|5;0;1||color;orange;threads;16;shiftX;-6;shiftY;4
-    - condensed;net3s;r12d|1;0;9|9;0;5|5;0;1||color;red;threads;12;shiftX;2;shiftY;4
+    - condensed;net3s;r12c|1;0;9|9;0;5|5;0;1||color;lightblue;threads;16;shiftX;-6;shiftY;4
+    - condensed;net3s;r12d|1;0;9|9;0;5|5;0;1||color;blue;threads;12;shiftX;2;shiftY;4
   -
     - pagename; 20260802 | 5
     - condensed;net3s|r3a|r3b|r3c|r3d||1;0;3;color;silver;threads;24
