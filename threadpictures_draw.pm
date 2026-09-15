@@ -462,6 +462,9 @@ sub process_element {
     case (/^xymirror$/i){
       $TP_all[@TP_all] = { type => 'xymirror', string => splice(@AE,0,1) }
    }
+    case (/^rotatepage$/i){
+      $TP_all[@TP_all] = { type => 'rotatepage', string => splice(@AE,0,1) }
+   }
     case (/^condensed$/i){ # Created on 2026 Jan 07
       # if ($opts_debug) { print STDERR ("Condensed All: ", join (";",@AE), "\n" ); }
       my $AE=join (";",@AE);
@@ -517,6 +520,7 @@ sub draw_all {
       case (/^fontcolor$/) { $TP_GLOBAL{fontcolor}=$ATPAE{color}}
       case (/^style$/) { $TP_GLOBAL{style}=$ATPAE{string}}
       case (/^xymirror$/) { $TP_GLOBAL{xymirror}=$ATPAE{string}}
+      case (/^rotatepage$/) { $TP_GLOBAL{rotatepage}=$ATPAE{string}}
     }
   }
 #  if (defined $TP_GLOBAL{xymirror}) { ($minX, $maxX, $minY, $maxY)=($minY, $maxY, $minX, $maxX) }
@@ -576,6 +580,7 @@ sub draw_all {
       case (/^fontcolor$/) { }
       case (/^style$/) { }
       case (/^xymirror$/) { }
+      case (/^rotatepage$/) { }
 	  else {warn "type '$_' not implemented (yet); parameters were:\n".join(", ", map { "$_ => $ATPAE{$_}" } keys %ATPAE)."\n" ;}
     } ;
   }
@@ -588,6 +593,7 @@ sub draw_all {
 # prepare for the next page:empty @TP_all and increase page number
   undef @TP_all; $TP_GLOBAL{pagenumber}++;
   delete $TP_GLOBAL{xymirror}; # mirroring is always for one page only
+  delete $TP_GLOBAL{rotatepage}; # rotating a page is always for one page only
 }
 
 1;
