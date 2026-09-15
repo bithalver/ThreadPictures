@@ -231,9 +231,11 @@ if (defined $config->{planes}) {
           $TP_planes{sprintf("%s_%02d",$planename,$i)}=\@w;
         }
       }
-      case (/^a/i){ # angle: one mandatory option: angle in degrees (one full circle is 360 degrees)
+      case (/^a/i){ # angle: one mandatory option: angle in degrees (one full circle is 360 degrees) and one optional: inital angle
         my $angle=$AP[0]/180*pi();
-        $TP_planes{$planename}=[0,0,1,0,cos($angle),sin($angle)];
+        my $initangle=$AP[1] // 0; $initangle = $initangle/180*pi();
+        # $TP_planes{$planename}=[0,0,1,0,cos($angle),sin($angle)];
+        $TP_planes{$planename}=[0,0,cos($initangle),sin($initangle),cos($initangle+$angle),sin($initangle+$angle)];
       }
       case (/^ci/i){ # circle: plane-to-spin (mandatory), nth1 (mandatory), nth2 (mandatory), circle_sides (mandatory), circle_initial_angle (optional), circle_size (optional)
 	    # create a series of planes around a "circle"; freshly created plane names will be planes-to-spin_01 and so on
