@@ -67,6 +67,9 @@ sub global_init {
 
   # Every page has to have a name in PS; because it does not matter, it is an automatically incremented number
   $TP_GLOBAL{pagenumber} = 1;
+
+  # Should we rotate the page ? Zero means no.
+  $TP_GLOBAL{rotatepage} = 0;
   
   # color name -> value conversion table
   %TP_colors=(

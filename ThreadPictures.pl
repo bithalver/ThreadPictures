@@ -52,7 +52,8 @@ sub HELP_PLANES {
       will be connected to given points 
     all parameters are mandatory
   angle: one mandatory parameter: angle in degrees (where 360 degrees is full circle)
-    returns 3 points: 0,0  1,0  cos(angle),sin(angle)
+         one optional parameter: initial angle (defaults to zero)
+    returns 3 points: 0,0  cos(initialangle),sin(initialangle)  cos(initialangle+angle),sin(initialangle+angle)
   grid: regular triangles; two mandatory options: sizeX, sizeY
     result will look like when sizeX is 3, sizeY is 4:
 

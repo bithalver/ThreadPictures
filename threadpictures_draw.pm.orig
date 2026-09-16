@@ -263,11 +263,11 @@ sub draw_net {
   $AN{hollowmooncolor1}//=$AN{color};$AN{hollowmooncolor1}=colorconvert($AN{hollowmooncolor1});
   $AN{hollowmooncolor2}//=$AN{color};$AN{hollowmooncolor2}=colorconvert($AN{hollowmooncolor2});
 
-#  { # Handling shiftX and shiftY parameters for a net | 20260916: it was moved to draw_all in preparation of rotate_page
-#    no warnings 'uninitialized';
-#    ($AN{line1oX},$AN{line1iX},$AN{line2oX},$AN{line2iX})=($AN{line1oX}+$AN{shiftX},$AN{line1iX}+$AN{shiftX},$AN{line2oX}+$AN{shiftX},$AN{line2iX}+$AN{shiftX});
-#    ($AN{line1oY},$AN{line1iY},$AN{line2oY},$AN{line2iY})=($AN{line1oY}+$AN{shiftY},$AN{line1iY}+$AN{shiftY},$AN{line2oY}+$AN{shiftY},$AN{line2iY}+$AN{shiftY});
-#  }
+  { # Handling shiftX and shiftY parameters for a net
+    no warnings 'uninitialized';
+    ($AN{line1oX},$AN{line1iX},$AN{line2oX},$AN{line2iX})=($AN{line1oX}+$AN{shiftX},$AN{line1iX}+$AN{shiftX},$AN{line2oX}+$AN{shiftX},$AN{line2iX}+$AN{shiftX});
+    ($AN{line1oY},$AN{line1iY},$AN{line2oY},$AN{line2iY})=($AN{line1oY}+$AN{shiftY},$AN{line1iY}+$AN{shiftY},$AN{line2oY}+$AN{shiftY},$AN{line2iY}+$AN{shiftY});
+  }
 
   if ($TP_GLOBAL{xymirror}) {
     ($AN{line1oX},$AN{line1oY},$AN{line1iX},$AN{line1iY}) = ($AN{line1oY},$AN{line1oX},$AN{line1iY},$AN{line1iX}) ;
@@ -502,15 +502,17 @@ sub draw_all {
   my $TMP_style=$TP_GLOBAL{style};
 
 # find min and max X and Y; get the page name, if set; get background color, if set; get the page-wide color and fontcolor, if set
-  my ($minX,$maxX,$minY,$maxY); my @TP_all2;
+  my ($minX,$maxX,$minY,$maxY);
   if ($opts_debug) { warn "TP_all elements are:\n"};
   foreach my $ATPAE_ (@TP_all) { # ATPAE stands for Actual TP_all Element
-    my %ATPAE=%{$ATPAE_}; # warn("Before: \n"); warnhash(%ATPAE);
+    my %ATPAE=%{$ATPAE_};
+    # if ($opts_debug) { warnhash %ATPAE }; # This moved to draw_net() function
     switch ($ATPAE{'type'}) {
       case (/^net$/) {
         no warnings 'uninitialized';  # Handling shiftX and shiftY parameters for a net; they are default to zero.
-        $ATPAE{line1oX}+=$ATPAE{shiftX};$ATPAE{line1iX}+=$ATPAE{shiftX};$ATPAE{line2oX}+=$ATPAE{shiftX};$ATPAE{line2iX}+=$ATPAE{shiftX};
-        $ATPAE{line1oY}+=$ATPAE{shiftY};$ATPAE{line1iY}+=$ATPAE{shiftY};$ATPAE{line2oY}+=$ATPAE{shiftY};$ATPAE{line2iY}+=$ATPAE{shiftY};
+        $minX//=$ATPAE{line1oX}+$ATPAE{shiftX}; $maxX//=$ATPAE{line1oX}+$ATPAE{shiftX}; $minY//=$ATPAE{line1oY}+$ATPAE{shiftY}; $maxY//=$ATPAE{line1oY}+$ATPAE{shiftY};
+	    ($minX,$maxX)=minmax($minX,$maxX,$ATPAE{line1oX}+$ATPAE{shiftX},$ATPAE{line1iX}+$ATPAE{shiftX},$ATPAE{line2oX}+$ATPAE{shiftX},$ATPAE{line2iX}+$ATPAE{shiftX});
+        ($minY,$maxY)=minmax($minY,$maxY,$ATPAE{line1oY}+$ATPAE{shiftY},$ATPAE{line1iY}+$ATPAE{shiftY},$ATPAE{line2oY}+$ATPAE{shiftY},$ATPAE{line2iY}+$ATPAE{shiftY});
       }
       case (/^pagename$/) { $pagename=$ATPAE{string} ;}
       case (/^background$/) { $bg=$ATPAE{color} ;}
@@ -518,38 +520,9 @@ sub draw_all {
       case (/^fontcolor$/) { $TP_GLOBAL{fontcolor}=$ATPAE{color}}
       case (/^style$/) { $TP_GLOBAL{style}=$ATPAE{string}}
       case (/^xymirror$/) { $TP_GLOBAL{xymirror}=$ATPAE{string}}
-      case (/^rotatepage$/) { $TP_GLOBAL{rotatepage}=$ATPAE{string}/180*pi()}
-    }
-    $TP_all2[@TP_all2] = { %ATPAE } ; # warn("After: \n");warnhash(%ATPAE);
-  }
-  @TP_all=();
-  if ($TP_GLOBAL{rotatepage}) { foreach my $ATPAE_ (@TP_all2) { # ATPAE stands for Actual TP_all Element
-    my %ATPAE=%{$ATPAE_};
-    switch ($ATPAE{'type'}) {
-      case (/^net$/) {
-        # warnarray(($ATPAE{line1oX},$ATPAE{line1oY},$ATPAE{line1iX},$ATPAE{line1iY},$ATPAE{line2oX},$ATPAE{line2oY},$ATPAE{line2iX},$ATPAE{line2iY}));
-        ($ATPAE{line1oX},$ATPAE{line1oY},$ATPAE{line1iX},$ATPAE{line1iY},$ATPAE{line2oX},$ATPAE{line2oY},$ATPAE{line2iX},$ATPAE{line2iY}) = rotateplane($TP_GLOBAL{rotatepage}, ($ATPAE{line1oX},$ATPAE{line1oY},$ATPAE{line1iX},$ATPAE{line1iY},$ATPAE{line2oX},$ATPAE{line2oY},$ATPAE{line2iX},$ATPAE{line2iY}) );
-        # warnarray(($ATPAE{line1oX},$ATPAE{line1oY},$ATPAE{line1iX},$ATPAE{line1iY},$ATPAE{line2oX},$ATPAE{line2oY},$ATPAE{line2iX},$ATPAE{line2iY}));
-      }
-    }
-    $TP_all[@TP_all] = { %ATPAE } ; # warn("After: \n");warnhash(%ATPAE);
-  } } else {
-    @TP_all = @TP_all2;
-  }
-  foreach my $ATPAE_ (@TP_all) { # ATPAE stands for Actual TP_all Element
-    my %ATPAE=%{$ATPAE_};
-    switch ($ATPAE{'type'}) {
-      case (/^net$/) {
-        no warnings 'uninitialized';  # Handling shiftX and shiftY parameters for a net; they are default to zero.
-        $minX//=$ATPAE{line1oX}; $maxX//=$ATPAE{line1oX}; $minY//=$ATPAE{line1oY}; $maxY//=$ATPAE{line1oY};
-        ($minX,$maxX)=minmax($minX,$maxX,$ATPAE{line1oX},$ATPAE{line1iX},$ATPAE{line2oX},$ATPAE{line2iX});
-        ($minY,$maxY)=minmax($minY,$maxY,$ATPAE{line1oY},$ATPAE{line1iY},$ATPAE{line2oY},$ATPAE{line2iY});
-        # warnarray ("X: ",$minX,$maxX,$ATPAE{line1oX},$ATPAE{line1iX},$ATPAE{line2oX},$ATPAE{line2iX});
-        # warnarray ("Y: ",$ATPAE{line1oY},$ATPAE{line1iY},$ATPAE{line2oY},$ATPAE{line2iY});
-      }
+      case (/^rotatepage$/) { $TP_GLOBAL{rotatepage}=$ATPAE{string}}
     }
   }
-#  @TP_all = @TP_all2;
 #  if (defined $TP_GLOBAL{xymirror}) { ($minX, $maxX, $minY, $maxY)=($minY, $maxY, $minX, $maxX) }
   if ($TP_GLOBAL{xymirror} ) { ($minX, $maxX, $minY, $maxY)=($minY, $maxY, $minX, $maxX) }
   if (defined $TP_PARAMS{pagename}) {$pagename=$TP_PARAMS{pagename};}
@@ -620,7 +593,7 @@ sub draw_all {
 # prepare for the next page:empty @TP_all and increase page number
   undef @TP_all; $TP_GLOBAL{pagenumber}++;
   delete $TP_GLOBAL{xymirror}; # mirroring is always for one page only
-  $TP_GLOBAL{rotatepage} = 0; # rotating a page is always for one page only
+  delete $TP_GLOBAL{rotatepage}; # rotating a page is always for one page only
 }
 
 1;

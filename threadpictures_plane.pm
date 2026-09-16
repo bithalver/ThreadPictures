@@ -7,7 +7,7 @@ use 5.10.0;
 no warnings 'experimental::smartmatch';
 
 our @ISA= qw( Exporter );
-our @EXPORT = qw( basicplane create_connected_plane connectplane2points grid3plane grid4plane smaller_plane_1 geometric_line shiftXYplane );
+our @EXPORT = qw( basicplane create_connected_plane connectplane2points grid3plane grid4plane smaller_plane_1 geometric_line shiftXYplane rotateplane);
 
 # rotates a vector counterclockwise (left) by angle
 # parameter: x,y,angle
