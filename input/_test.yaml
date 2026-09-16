@@ -33,6 +33,11 @@ planes:
   - Test2Shift;regular;4
   - Shifted;shiftXY;1;0;Test2Shift
 
+  - r60;angle;ENV[Angle1,60];ENV[InitAngle,0]
+  - r90;angle;ENV[Angle2,90]
+  - C;connected;r60;0;r60;2;r90;2;0
+  - A;freeform;r60;1;r60;0;r60;2;C;1
+
 # for condensed tests
   - aI;angle;ENV[aI,-15]
   - aM;angle;ENV[aM,120]
