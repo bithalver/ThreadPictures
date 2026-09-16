@@ -3,16 +3,25 @@ global:
     threads: 8
     fontcolor: lightgray
 planes:
-  - r60;angle;ENV[Angle1,60];ENV[InitAngle,90]
+  - r60;angle;ENV[Angle1,60];ENV[InitAngle,0]
   - r90;angle;ENV[Angle2,90]
   - C;connected;r60;0;r60;2;r90;2;0
   - A;freeform;r60;1;r60;0;r60;2;C;1
 pages:
   -
     - pagename;recursive blood snail
+    - rotatepage;0
     - background;darkgray
-    - recursive;A;12;1;3;0;1;0,1,2;1,2,3;color;red;threads;20
+    - recursive;A;12;1;3;0;1;0,1,2;1,2,3;color;red;threads;20;shiftX;1.5
+#    - recursive;A;12;1;3;0;1;0,1,2;1,2,3;color;brown;threads;20;shiftY;1.5 # just for test
+  -
+    - pagename;recursive blood snail - 2 colors
+    - rotatepage;0
+    - background;darkgray
+    - recursive;A;12;1;3;0;1;0,1,2;color;red;style;filledcurve;shiftX;1.5
+    - recursive;A;12;1;3;0;1;1,2,3;color;yellow;style;filledcurve;shiftX;1.5
   -
     - pagename;To infinity and beyond
+    - rotatepage;90
     - background;darkgray
     - recursive;A;12;1;3;0;2;0,1,2;1,2,3;color;yellow;threads;20
