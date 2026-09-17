@@ -10,6 +10,7 @@ global:
     background: black
     color: red
     style: filledcurve
+    fontcolor: lightgray
 planes:
   - p1;regular;3;60
   - p2;regular;4
@@ -57,3 +58,23 @@ pages:
     - net3;b8;1;b8;2;b8;3
     - net3;b8;2;b8;1;b8;4
     - net3;b8;2;b8;3;b8;5
+  -
+    - pagename;8 Bats for mikaik
+    - condensed;net3s;b1|1;2;3|2;1;4|2;3;5||color;orange
+    - condensed;net3s;b2|1;2;3|2;1;4|2;3;5||color;red
+    - condensed;net3s;b3|1;2;3|2;1;4|2;3;5||color;red
+    - condensed;net3s;b4|1;2;3|2;1;4|2;3;5||color;red
+    - condensed;net3s;b5|1;2;3|2;1;4|2;3;5||color;orange
+    - condensed;net3s;b6|1;2;3|2;1;4|2;3;5||color;yellow
+    - condensed;net3s;b7|1;2;3|2;1;4|2;3;5||color;yellow
+    - condensed;net3s;b8|1;2;3|2;1;4|2;3;5||color;yellow
+  -
+    - pagename;8 Bats for szabb27
+    - condensed;net3s;b1|1;2;3|2;1;4|2;3;5||color;lightblue
+    - condensed;net3s;b2|1;2;3|2;1;4|2;3;5||color;red
+    - condensed;net3s;b3|1;2;3|2;1;4|2;3;5||color;red
+    - condensed;net3s;b4|1;2;3|2;1;4|2;3;5||color;red
+    - condensed;net3s;b5|1;2;3|2;1;4|2;3;5||color;lightblue
+    - condensed;net3s;b6|1;2;3|2;1;4|2;3;5||color;green
+    - condensed;net3s;b7|1;2;3|2;1;4|2;3;5||color;green
+    - condensed;net3s;b8|1;2;3|2;1;4|2;3;5||color;green
